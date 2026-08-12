@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-11T19:18:41.343998+00:00"
+    "generated_at": "2026-08-12T15:27:20.549512+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -16,9 +16,9 @@
           "season_ppg": 20.13,
           "last6_ppg": 27.15,
           "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
+          "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 24.44,
+          "edge_score": 24.14,
           "market_rank": 9.19,
           "our_rank": 1,
           "market_gap": 8.2
@@ -40,22 +40,6 @@
           "market_gap": 1.5
         },
         {
-          "player_id": "00-0034857",
-          "name": "Josh Allen",
-          "position": "QB",
-          "team": "BUF",
-          "baseline_ppg": 21.4,
-          "season_ppg": 22.91,
-          "last6_ppg": 19.88,
-          "games_played_2025": 16,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": true,
-          "edge_score": 21.9,
-          "market_rank": 1.02,
-          "our_rank": 3,
-          "market_gap": -2.0
-        },
-        {
           "player_id": "00-0026498",
           "name": "Matthew Stafford",
           "position": "QB",
@@ -68,8 +52,24 @@
           "same_head_coach": true,
           "edge_score": 21.9,
           "market_rank": 14.67,
+          "our_rank": 3,
+          "market_gap": 11.7
+        },
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "position": "QB",
+          "team": "BUF",
+          "baseline_ppg": 21.4,
+          "season_ppg": 22.91,
+          "last6_ppg": 19.88,
+          "games_played_2025": 16,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 21.9,
+          "market_rank": 1.02,
           "our_rank": 4,
-          "market_gap": 10.7
+          "market_gap": -3.0
         },
         {
           "player_id": "00-0037834",
@@ -970,22 +970,6 @@
           "market_gap": 5.0
         },
         {
-          "player_id": "00-0036973",
-          "name": "Travis Etienne",
-          "position": "RB",
-          "team": "JAX",
-          "baseline_ppg": 15.0,
-          "season_ppg": 14.94,
-          "last6_ppg": 15.07,
-          "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 15.8,
-          "market_rank": 17.73,
-          "our_rank": 11,
-          "market_gap": 6.7
-        },
-        {
           "player_id": "00-0040666",
           "name": "Omarion Hampton",
           "position": "RB",
@@ -998,8 +982,8 @@
           "same_head_coach": true,
           "edge_score": 15.71,
           "market_rank": 8.91,
-          "our_rank": 12,
-          "market_gap": -3.1
+          "our_rank": 11,
+          "market_gap": -2.1
         },
         {
           "player_id": "00-0036875",
@@ -1014,8 +998,24 @@
           "same_head_coach": true,
           "edge_score": 15.55,
           "market_rank": 29.33,
+          "our_rank": 12,
+          "market_gap": 17.3
+        },
+        {
+          "player_id": "00-0036973",
+          "name": "Travis Etienne",
+          "position": "RB",
+          "team": "JAX",
+          "baseline_ppg": 15.0,
+          "season_ppg": 14.94,
+          "last6_ppg": 15.07,
+          "games_played_2025": 17,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 15.5,
+          "market_rank": 17.73,
           "our_rank": 13,
-          "market_gap": 16.3
+          "market_gap": 4.7
         },
         {
           "player_id": "00-0036275",
@@ -1900,22 +1900,6 @@
           "market_gap": 19.7
         },
         {
-          "player_id": "00-0038606",
-          "name": "Parker Washington",
-          "position": "WR",
-          "team": "JAX",
-          "baseline_ppg": 13.33,
-          "season_ppg": 10.79,
-          "last6_ppg": 15.87,
-          "games_played_2025": 16,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 14.13,
-          "market_rank": 35.73,
-          "our_rank": 19,
-          "market_gap": 16.7
-        },
-        {
           "player_id": "00-0039337",
           "name": "Malik Nabers",
           "position": "WR",
@@ -1928,8 +1912,8 @@
           "same_head_coach": false,
           "edge_score": 14.08,
           "market_rank": 17.17,
-          "our_rank": 20,
-          "market_gap": -2.8
+          "our_rank": 19,
+          "market_gap": -1.8
         },
         {
           "player_id": "00-0038124",
@@ -1944,8 +1928,8 @@
           "same_head_coach": true,
           "edge_score": 13.9,
           "market_rank": 28.22,
-          "our_rank": 21,
-          "market_gap": 7.2
+          "our_rank": 20,
+          "market_gap": 8.2
         },
         {
           "player_id": "00-0037664",
@@ -1960,8 +1944,24 @@
           "same_head_coach": true,
           "edge_score": 13.88,
           "market_rank": 37.47,
+          "our_rank": 21,
+          "market_gap": 16.5
+        },
+        {
+          "player_id": "00-0038606",
+          "name": "Parker Washington",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 13.33,
+          "season_ppg": 10.79,
+          "last6_ppg": 15.87,
+          "games_played_2025": 16,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 13.83,
+          "market_rank": 35.73,
           "our_rank": 22,
-          "market_gap": 15.5
+          "market_gap": 13.7
         },
         {
           "player_id": "00-0037740",
@@ -2020,9 +2020,9 @@
           "season_ppg": 11.96,
           "last6_ppg": 12.35,
           "games_played_2025": 9,
-          "oline_continuity_pct": 1.0,
+          "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 12.95,
+          "edge_score": 12.65,
           "market_rank": 43.51,
           "our_rank": 26,
           "market_gap": 17.5
@@ -2252,22 +2252,6 @@
           "market_gap": -7.0
         },
         {
-          "player_id": "00-0039893",
-          "name": "Brian Thomas Jr.",
-          "position": "WR",
-          "team": "JAX",
-          "baseline_ppg": 9.39,
-          "season_ppg": 9.91,
-          "last6_ppg": 8.87,
-          "games_played_2025": 14,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 10.19,
-          "market_rank": 35.69,
-          "our_rank": 41,
-          "market_gap": -5.3
-        },
-        {
           "player_id": "00-0036613",
           "name": "Jaylen Waddle",
           "position": "WR",
@@ -2280,8 +2264,8 @@
           "same_head_coach": false,
           "edge_score": 10.1,
           "market_rank": 18.88,
-          "our_rank": 42,
-          "market_gap": -23.1
+          "our_rank": 41,
+          "market_gap": -22.1
         },
         {
           "player_id": "00-0039491",
@@ -2296,8 +2280,8 @@
           "same_head_coach": true,
           "edge_score": 10.08,
           "market_rank": 52.25,
-          "our_rank": 43,
-          "market_gap": 9.2
+          "our_rank": 42,
+          "market_gap": 10.2
         },
         {
           "player_id": "00-0034827",
@@ -2312,8 +2296,8 @@
           "same_head_coach": true,
           "edge_score": 10.06,
           "market_rank": 26.57,
-          "our_rank": 44,
-          "market_gap": -17.4
+          "our_rank": 43,
+          "market_gap": -16.4
         },
         {
           "player_id": "00-0035719",
@@ -2328,8 +2312,8 @@
           "same_head_coach": true,
           "edge_score": 10.0,
           "market_rank": 58.71,
-          "our_rank": 45,
-          "market_gap": 13.7
+          "our_rank": 44,
+          "market_gap": 14.7
         },
         {
           "player_id": "00-0039146",
@@ -2344,8 +2328,24 @@
           "same_head_coach": true,
           "edge_score": 9.9,
           "market_rank": 46.07,
+          "our_rank": 45,
+          "market_gap": 1.1
+        },
+        {
+          "player_id": "00-0039893",
+          "name": "Brian Thomas Jr.",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 9.39,
+          "season_ppg": 9.91,
+          "last6_ppg": 8.87,
+          "games_played_2025": 14,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 9.89,
+          "market_rank": 35.69,
           "our_rank": 46,
-          "market_gap": 0.1
+          "market_gap": -10.3
         },
         {
           "player_id": "00-0039868",
@@ -2590,22 +2590,6 @@
           "market_gap": -5.0
         },
         {
-          "player_id": "00-0038935",
-          "name": "Brenton Strange",
-          "position": "TE",
-          "team": "JAX",
-          "baseline_ppg": 10.19,
-          "season_ppg": 9.83,
-          "last6_ppg": 10.55,
-          "games_played_2025": 12,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 10.99,
-          "market_rank": 18.01,
-          "our_rank": 12,
-          "market_gap": 6.0
-        },
-        {
           "player_id": "00-0034383",
           "name": "Dalton Schultz",
           "position": "TE",
@@ -2618,8 +2602,8 @@
           "same_head_coach": true,
           "edge_score": 10.96,
           "market_rank": 21.19,
-          "our_rank": 13,
-          "market_gap": 8.2
+          "our_rank": 12,
+          "market_gap": 9.2
         },
         {
           "player_id": "00-0036040",
@@ -2634,8 +2618,24 @@
           "same_head_coach": true,
           "edge_score": 10.89,
           "market_rank": 17.27,
+          "our_rank": 13,
+          "market_gap": 4.3
+        },
+        {
+          "player_id": "00-0038935",
+          "name": "Brenton Strange",
+          "position": "TE",
+          "team": "JAX",
+          "baseline_ppg": 10.19,
+          "season_ppg": 9.83,
+          "last6_ppg": 10.55,
+          "games_played_2025": 12,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 10.69,
+          "market_rank": 18.01,
           "our_rank": 14,
-          "market_gap": 3.3
+          "market_gap": 4.0
         },
         {
           "player_id": "00-0038933",
@@ -3070,22 +3070,6 @@
           "market_gap": 0.9
         },
         {
-          "player_id": "00-0037004",
-          "name": "Hunter Long",
-          "position": "TE",
-          "team": "JAX",
-          "baseline_ppg": 4.4,
-          "season_ppg": 4.64,
-          "last6_ppg": 4.15,
-          "games_played_2025": 7,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 5.2,
-          "market_rank": 140.67,
-          "our_rank": 42,
-          "market_gap": 98.7
-        },
-        {
           "player_id": "00-0039356",
           "name": "Ja'Tavion Sanders",
           "position": "TE",
@@ -3098,8 +3082,8 @@
           "same_head_coach": true,
           "edge_score": 5.03,
           "market_rank": 42.19,
-          "our_rank": 43,
-          "market_gap": -0.8
+          "our_rank": 42,
+          "market_gap": 0.2
         },
         {
           "player_id": "00-0032392",
@@ -3114,8 +3098,8 @@
           "same_head_coach": true,
           "edge_score": 4.94,
           "market_rank": 54.8,
-          "our_rank": 44,
-          "market_gap": 10.8
+          "our_rank": 43,
+          "market_gap": 11.8
         },
         {
           "player_id": "00-0037838",
@@ -3130,8 +3114,24 @@
           "same_head_coach": false,
           "edge_score": 4.93,
           "market_rank": 13.46,
+          "our_rank": 44,
+          "market_gap": -30.5
+        },
+        {
+          "player_id": "00-0037004",
+          "name": "Hunter Long",
+          "position": "TE",
+          "team": "JAX",
+          "baseline_ppg": 4.4,
+          "season_ppg": 4.64,
+          "last6_ppg": 4.15,
+          "games_played_2025": 7,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 4.9,
+          "market_rank": 140.67,
           "our_rank": 45,
-          "market_gap": -31.5
+          "market_gap": 95.7
         },
         {
           "player_id": "00-0037005",
@@ -3230,28 +3230,28 @@
           "season_ppg": 20.13,
           "last6_ppg": 27.15,
           "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
+          "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 24.44,
+          "edge_score": 24.14,
           "market_rank": 9.19,
           "our_rank": 1,
           "market_gap": 8.2
         },
         {
-          "player_id": "00-0039851",
-          "name": "Drake Maye",
+          "player_id": "00-0026498",
+          "name": "Matthew Stafford",
           "position": "QB",
-          "team": "NE",
-          "baseline_ppg": 21.4,
-          "season_ppg": 21.0,
-          "last6_ppg": 21.8,
+          "team": "LA",
+          "baseline_ppg": 21.1,
+          "season_ppg": 20.85,
+          "last6_ppg": 21.35,
           "games_played_2025": 17,
-          "oline_continuity_pct": 0.8,
+          "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 21.9,
-          "market_rank": 3.51,
+          "market_rank": 14.67,
           "our_rank": 2,
-          "market_gap": 1.5
+          "market_gap": 12.7
         },
         {
           "player_id": "00-0034857",
@@ -3270,20 +3270,20 @@
           "market_gap": -2.0
         },
         {
-          "player_id": "00-0026498",
-          "name": "Matthew Stafford",
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
           "position": "QB",
-          "team": "LA",
-          "baseline_ppg": 21.1,
-          "season_ppg": 20.85,
-          "last6_ppg": 21.35,
+          "team": "NE",
+          "baseline_ppg": 21.4,
+          "season_ppg": 21.0,
+          "last6_ppg": 21.8,
           "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
+          "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 21.9,
-          "market_rank": 14.67,
+          "market_rank": 3.51,
           "our_rank": 4,
-          "market_gap": 10.7
+          "market_gap": -0.5
         },
         {
           "player_id": "00-0037834",
@@ -4192,9 +4192,9 @@
           "season_ppg": 12.82,
           "last6_ppg": 13.07,
           "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
+          "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 13.74,
+          "edge_score": 13.44,
           "market_rank": 17.73,
           "our_rank": 11,
           "market_gap": 6.7
@@ -4696,22 +4696,6 @@
           "market_gap": 42.6
         },
         {
-          "player_id": "00-0040719",
-          "name": "Bhayshul Tuten",
-          "position": "RB",
-          "team": "JAX",
-          "baseline_ppg": 5.79,
-          "season_ppg": 5.24,
-          "last6_ppg": 6.35,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 6.59,
-          "market_rank": 24.65,
-          "our_rank": 43,
-          "market_gap": -18.4
-        },
-        {
           "player_id": "00-0033923",
           "name": "Kareem Hunt",
           "position": "RB",
@@ -4724,8 +4708,8 @@
           "same_head_coach": true,
           "edge_score": 6.46,
           "market_rank": 94.88,
-          "our_rank": 44,
-          "market_gap": 50.9
+          "our_rank": 43,
+          "market_gap": 51.9
         },
         {
           "player_id": "00-0037263",
@@ -4740,8 +4724,24 @@
           "same_head_coach": true,
           "edge_score": 6.33,
           "market_rank": 45.6,
+          "our_rank": 44,
+          "market_gap": 1.6
+        },
+        {
+          "player_id": "00-0036555",
+          "name": "Chuba Hubbard",
+          "position": "RB",
+          "team": "CAR",
+          "baseline_ppg": 5.8,
+          "season_ppg": 6.36,
+          "last6_ppg": 5.23,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 6.3,
+          "market_rank": 30.16,
           "our_rank": 45,
-          "market_gap": 0.6
+          "market_gap": -14.8
         },
         {
           "player_id": "00-0040202",
@@ -4760,20 +4760,20 @@
           "market_gap": 33.9
         },
         {
-          "player_id": "00-0036555",
-          "name": "Chuba Hubbard",
+          "player_id": "00-0040719",
+          "name": "Bhayshul Tuten",
           "position": "RB",
-          "team": "CAR",
-          "baseline_ppg": 5.8,
-          "season_ppg": 6.36,
-          "last6_ppg": 5.23,
+          "team": "JAX",
+          "baseline_ppg": 5.79,
+          "season_ppg": 5.24,
+          "last6_ppg": 6.35,
           "games_played_2025": 15,
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 6.3,
-          "market_rank": 30.16,
+          "edge_score": 6.29,
+          "market_rank": 24.65,
           "our_rank": 47,
-          "market_gap": -16.8
+          "market_gap": -22.4
         },
         {
           "player_id": "00-0037157",
@@ -5082,22 +5082,6 @@
           "market_gap": -4.8
         },
         {
-          "player_id": "00-0038606",
-          "name": "Parker Washington",
-          "position": "WR",
-          "team": "JAX",
-          "baseline_ppg": 9.18,
-          "season_ppg": 7.17,
-          "last6_ppg": 11.2,
-          "games_played_2025": 16,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 9.98,
-          "market_rank": 35.73,
-          "our_rank": 17,
-          "market_gap": 18.7
-        },
-        {
           "player_id": "00-0039064",
           "name": "Zay Flowers",
           "position": "WR",
@@ -5110,8 +5094,24 @@
           "same_head_coach": false,
           "edge_score": 9.91,
           "market_rank": 15.8,
+          "our_rank": 17,
+          "market_gap": -1.2
+        },
+        {
+          "player_id": "00-0038606",
+          "name": "Parker Washington",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 9.18,
+          "season_ppg": 7.17,
+          "last6_ppg": 11.2,
+          "games_played_2025": 16,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 9.68,
+          "market_rank": 35.73,
           "our_rank": 18,
-          "market_gap": -2.2
+          "market_gap": 17.7
         },
         {
           "player_id": "00-0036259",
@@ -5242,22 +5242,6 @@
           "market_gap": -4.2
         },
         {
-          "player_id": "00-0034960",
-          "name": "Jakobi Meyers",
-          "position": "WR",
-          "team": "JAX",
-          "baseline_ppg": 7.32,
-          "season_ppg": 7.29,
-          "last6_ppg": 7.35,
-          "games_played_2025": 9,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 8.12,
-          "market_rank": 43.51,
-          "our_rank": 27,
-          "market_gap": 16.5
-        },
-        {
           "player_id": "00-0033040",
           "name": "Tyreek Hill",
           "position": "WR",
@@ -5270,8 +5254,8 @@
           "same_head_coach": false,
           "edge_score": 7.92,
           "market_rank": 92.04,
-          "our_rank": 28,
-          "market_gap": 64.0
+          "our_rank": 27,
+          "market_gap": 65.0
         },
         {
           "player_id": "00-0031408",
@@ -5286,8 +5270,24 @@
           "same_head_coach": true,
           "edge_score": 7.9,
           "market_rank": 25.73,
+          "our_rank": 28,
+          "market_gap": -2.3
+        },
+        {
+          "player_id": "00-0034960",
+          "name": "Jakobi Meyers",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 7.32,
+          "season_ppg": 7.29,
+          "last6_ppg": 7.35,
+          "games_played_2025": 9,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 7.82,
+          "market_rank": 43.51,
           "our_rank": 29,
-          "market_gap": -3.3
+          "market_gap": 14.5
         },
         {
           "player_id": "00-0038544",
@@ -5418,22 +5418,6 @@
           "market_gap": -23.6
         },
         {
-          "player_id": "00-0039893",
-          "name": "Brian Thomas Jr.",
-          "position": "WR",
-          "team": "JAX",
-          "baseline_ppg": 6.18,
-          "season_ppg": 6.49,
-          "last6_ppg": 5.87,
-          "games_played_2025": 14,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 6.98,
-          "market_rank": 35.69,
-          "our_rank": 38,
-          "market_gap": -2.3
-        },
-        {
           "player_id": "00-0039849",
           "name": "Marvin Harrison Jr.",
           "position": "WR",
@@ -5446,8 +5430,8 @@
           "same_head_coach": true,
           "edge_score": 6.93,
           "market_rank": 33.0,
-          "our_rank": 39,
-          "market_gap": -6.0
+          "our_rank": 38,
+          "market_gap": -5.0
         },
         {
           "player_id": "00-0040648",
@@ -5462,8 +5446,8 @@
           "same_head_coach": true,
           "edge_score": 6.76,
           "market_rank": 92.82,
-          "our_rank": 40,
-          "market_gap": 52.8
+          "our_rank": 39,
+          "market_gap": 53.8
         },
         {
           "player_id": "00-0039491",
@@ -5478,8 +5462,24 @@
           "same_head_coach": true,
           "edge_score": 6.74,
           "market_rank": 52.25,
+          "our_rank": 40,
+          "market_gap": 12.2
+        },
+        {
+          "player_id": "00-0039893",
+          "name": "Brian Thomas Jr.",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 6.18,
+          "season_ppg": 6.49,
+          "last6_ppg": 5.87,
+          "games_played_2025": 14,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 6.68,
+          "market_rank": 35.69,
           "our_rank": 41,
-          "market_gap": 11.2
+          "market_gap": -5.3
         },
         {
           "player_id": "00-0036613",
@@ -5788,22 +5788,6 @@
           "market_gap": -6.8
         },
         {
-          "player_id": "00-0038935",
-          "name": "Brenton Strange",
-          "position": "TE",
-          "team": "JAX",
-          "baseline_ppg": 6.53,
-          "season_ppg": 6.0,
-          "last6_ppg": 7.05,
-          "games_played_2025": 12,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 7.33,
-          "market_rank": 18.01,
-          "our_rank": 11,
-          "market_gap": 7.0
-        },
-        {
           "player_id": "00-0038933",
           "name": "Dalton Kincaid",
           "position": "TE",
@@ -5816,8 +5800,8 @@
           "same_head_coach": true,
           "edge_score": 7.3,
           "market_rank": 12.6,
-          "our_rank": 12,
-          "market_gap": 0.6
+          "our_rank": 11,
+          "market_gap": 1.6
         },
         {
           "player_id": "00-0040663",
@@ -5832,8 +5816,24 @@
           "same_head_coach": false,
           "edge_score": 7.14,
           "market_rank": 6.0,
+          "our_rank": 12,
+          "market_gap": -6.0
+        },
+        {
+          "player_id": "00-0038935",
+          "name": "Brenton Strange",
+          "position": "TE",
+          "team": "JAX",
+          "baseline_ppg": 6.53,
+          "season_ppg": 6.0,
+          "last6_ppg": 7.05,
+          "games_played_2025": 12,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 7.03,
+          "market_rank": 18.01,
           "our_rank": 13,
-          "market_gap": -7.0
+          "market_gap": 5.0
         },
         {
           "player_id": "00-0033110",
@@ -6220,22 +6220,6 @@
           "market_gap": -2.8
         },
         {
-          "player_id": "00-0037004",
-          "name": "Hunter Long",
-          "position": "TE",
-          "team": "JAX",
-          "baseline_ppg": 2.62,
-          "season_ppg": 2.93,
-          "last6_ppg": 2.32,
-          "games_played_2025": 7,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 3.42,
-          "market_rank": 140.67,
-          "our_rank": 38,
-          "market_gap": 102.7
-        },
-        {
           "player_id": "00-0032392",
           "name": "Austin Hooper",
           "position": "TE",
@@ -6248,8 +6232,8 @@
           "same_head_coach": true,
           "edge_score": 3.38,
           "market_rank": 54.8,
-          "our_rank": 39,
-          "market_gap": 15.8
+          "our_rank": 38,
+          "market_gap": 16.8
         },
         {
           "player_id": "00-0033885",
@@ -6264,8 +6248,8 @@
           "same_head_coach": false,
           "edge_score": 3.34,
           "market_rank": 29.28,
-          "our_rank": 40,
-          "market_gap": -10.7
+          "our_rank": 39,
+          "market_gap": -9.7
         },
         {
           "player_id": "00-0037005",
@@ -6280,8 +6264,8 @@
           "same_head_coach": true,
           "edge_score": 3.22,
           "market_rank": 53.2,
-          "our_rank": 41,
-          "market_gap": 12.2
+          "our_rank": 40,
+          "market_gap": 13.2
         },
         {
           "player_id": "00-0034613",
@@ -6296,8 +6280,24 @@
           "same_head_coach": true,
           "edge_score": 3.15,
           "market_rank": 62.6,
+          "our_rank": 41,
+          "market_gap": 21.6
+        },
+        {
+          "player_id": "00-0037004",
+          "name": "Hunter Long",
+          "position": "TE",
+          "team": "JAX",
+          "baseline_ppg": 2.62,
+          "season_ppg": 2.93,
+          "last6_ppg": 2.32,
+          "games_played_2025": 7,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 3.12,
+          "market_rank": 140.67,
           "our_rank": 42,
-          "market_gap": 20.6
+          "market_gap": 98.7
         },
         {
           "player_id": "00-0040194",
@@ -6316,22 +6316,6 @@
           "market_gap": 23.2
         },
         {
-          "player_id": "00-0039074",
-          "name": "Davis Allen",
-          "position": "TE",
-          "team": "LA",
-          "baseline_ppg": 2.16,
-          "season_ppg": 2.59,
-          "last6_ppg": 1.73,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 2.96,
-          "market_rank": 90.75,
-          "our_rank": 44,
-          "market_gap": 46.8
-        },
-        {
           "player_id": "00-0033357",
           "name": "Taysom Hill",
           "position": "TE",
@@ -6344,8 +6328,24 @@
           "same_head_coach": true,
           "edge_score": 2.96,
           "market_rank": 79.25,
+          "our_rank": 44,
+          "market_gap": 35.2
+        },
+        {
+          "player_id": "00-0039074",
+          "name": "Davis Allen",
+          "position": "TE",
+          "team": "LA",
+          "baseline_ppg": 2.16,
+          "season_ppg": 2.59,
+          "last6_ppg": 1.73,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 1.0,
+          "same_head_coach": true,
+          "edge_score": 2.96,
+          "market_rank": 90.75,
           "our_rank": 45,
-          "market_gap": 34.2
+          "market_gap": 45.8
         },
         {
           "player_id": "00-0034753",
