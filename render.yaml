@@ -2,7 +2,12 @@ services:
   # Gridiron Edge -- NFL fantasy + individual-game betting research. One
   # static site for the whole thing (home/fantasy/betting as pages, not
   # separate services) since everything's same-origin.
-  - type: static
+  #
+  # Render's blueprint spec changed at some point: static sites now need
+  # `type: web` + `runtime: static`, not the old `type: static` (which now
+  # fails blueprint validation with "unknown type \"static\"").
+  - type: web
     name: football-analytics
+    runtime: static
+    buildCommand: echo "static site, no build step"
     staticPublishPath: .
-    buildCommand: ""
