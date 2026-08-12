@@ -1,0 +1,35 @@
+name: Football Betting scan
+
+on:
+  schedule:
+    - cron: '30 15 * * 2'  # weekly, Tuesday ~10:30am ET -- staggered vs. the Fantasy scan; bump cadence closer to Week 1
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+      - name: Refresh nflverse data cache
+        run: python scripts/ingest_historical.py
+      - name: Run Betting scan
+        run: python scripts/betting_scan.py
+      - name: Commit results
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          git add data/betting
+          git diff --staged --quiet || git commit -m "chore: betting scan $(date -u +%Y-%m-%dT%H:%M)Z"
+          git pull --rebase -Xtheirs origin ${{ github.ref_name }}
+          git push origin HEAD:${{ github.ref_name }}
