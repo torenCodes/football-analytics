@@ -1,0 +1,781 @@
+{
+  "meta": {
+    "generated_at": "2026-08-11T19:18:41.343998+00:00"
+  },
+  "ppr": {
+    "season": 2025,
+    "leaders_by_position": {
+      "QB": [
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "points": 366.6,
+          "games": 16,
+          "ppg": 22.9
+        },
+        {
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
+          "team": "NE",
+          "points": 358.0,
+          "games": 17,
+          "ppg": 21.1
+        },
+        {
+          "player_id": "00-0026498",
+          "name": "Matthew Stafford",
+          "team": "LA",
+          "points": 354.4,
+          "games": 17,
+          "ppg": 20.8
+        },
+        {
+          "player_id": "00-0036971",
+          "name": "Trevor Lawrence",
+          "team": "JAX",
+          "points": 342.2,
+          "games": 17,
+          "ppg": 20.1
+        },
+        {
+          "player_id": "00-0039918",
+          "name": "Caleb Williams",
+          "team": "CHI",
+          "points": 320.2,
+          "games": 17,
+          "ppg": 18.8
+        },
+        {
+          "player_id": "00-0033077",
+          "name": "Dak Prescott",
+          "team": "DAL",
+          "points": 315.8,
+          "games": 17,
+          "ppg": 18.6
+        },
+        {
+          "player_id": "00-0039732",
+          "name": "Bo Nix",
+          "team": "DEN",
+          "points": 306.8,
+          "games": 17,
+          "ppg": 18.0
+        },
+        {
+          "player_id": "00-0036389",
+          "name": "Jalen Hurts",
+          "team": "PHI",
+          "points": 303.1,
+          "games": 16,
+          "ppg": 18.9
+        },
+        {
+          "player_id": "00-0033106",
+          "name": "Jared Goff",
+          "team": "DET",
+          "points": 303.1,
+          "games": 17,
+          "ppg": 17.8
+        },
+        {
+          "player_id": "00-0036355",
+          "name": "Justin Herbert",
+          "team": "LAC",
+          "points": 288.9,
+          "games": 16,
+          "ppg": 18.1
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0033280",
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "points": 416.6,
+          "games": 17,
+          "ppg": 24.5
+        },
+        {
+          "player_id": "00-0038542",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "points": 370.8,
+          "games": 17,
+          "ppg": 21.8
+        },
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 366.9,
+          "games": 17,
+          "ppg": 21.6
+        },
+        {
+          "player_id": "00-0036223",
+          "name": "Jonathan Taylor",
+          "team": "IND",
+          "points": 362.3,
+          "games": 17,
+          "ppg": 21.3
+        },
+        {
+          "player_id": "00-0039040",
+          "name": "De'Von Achane",
+          "team": "MIA",
+          "points": 322.8,
+          "games": 16,
+          "ppg": 20.2
+        },
+        {
+          "player_id": "00-0037248",
+          "name": "James Cook",
+          "team": "BUF",
+          "points": 302.2,
+          "games": 17,
+          "ppg": 17.8
+        },
+        {
+          "player_id": "00-0038597",
+          "name": "Chase Brown",
+          "team": "CIN",
+          "points": 282.6,
+          "games": 17,
+          "ppg": 16.6
+        },
+        {
+          "player_id": "00-0032764",
+          "name": "Derrick Henry",
+          "team": "BAL",
+          "points": 279.5,
+          "games": 17,
+          "ppg": 16.4
+        },
+        {
+          "player_id": "00-0037840",
+          "name": "Kyren Williams",
+          "team": "LA",
+          "points": 263.3,
+          "games": 17,
+          "ppg": 15.5
+        },
+        {
+          "player_id": "00-0036973",
+          "name": "Travis Etienne",
+          "team": "JAX",
+          "points": 253.9,
+          "games": 17,
+          "ppg": 14.9
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039075",
+          "name": "Puka Nacua",
+          "team": "LA",
+          "points": 375.0,
+          "games": 16,
+          "ppg": 23.4
+        },
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 359.9,
+          "games": 17,
+          "ppg": 21.2
+        },
+        {
+          "player_id": "00-0036963",
+          "name": "Amon-Ra St. Brown",
+          "team": "DET",
+          "points": 324.0,
+          "games": 17,
+          "ppg": 19.1
+        },
+        {
+          "player_id": "00-0036900",
+          "name": "Ja'Marr Chase",
+          "team": "CIN",
+          "points": 313.6,
+          "games": 16,
+          "ppg": 19.6
+        },
+        {
+          "player_id": "00-0037247",
+          "name": "George Pickens",
+          "team": "DAL",
+          "points": 291.9,
+          "games": 17,
+          "ppg": 17.2
+        },
+        {
+          "player_id": "00-0037239",
+          "name": "Chris Olave",
+          "team": "NO",
+          "points": 268.0,
+          "games": 16,
+          "ppg": 16.8
+        },
+        {
+          "player_id": "00-0039064",
+          "name": "Zay Flowers",
+          "team": "BAL",
+          "points": 243.3,
+          "games": 17,
+          "ppg": 14.3
+        },
+        {
+          "player_id": "00-0036554",
+          "name": "Nico Collins",
+          "team": "HOU",
+          "points": 226.2,
+          "games": 15,
+          "ppg": 15.1
+        },
+        {
+          "player_id": "00-0031381",
+          "name": "Davante Adams",
+          "team": "LA",
+          "points": 222.9,
+          "games": 14,
+          "ppg": 15.9
+        },
+        {
+          "player_id": "00-0038559",
+          "name": "Michael Wilson",
+          "team": "ARI",
+          "points": 220.6,
+          "games": 17,
+          "ppg": 13.0
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037744",
+          "name": "Trey McBride",
+          "team": "ARI",
+          "points": 315.9,
+          "games": 17,
+          "ppg": 18.6
+        },
+        {
+          "player_id": "00-0036970",
+          "name": "Kyle Pitts",
+          "team": "ATL",
+          "points": 210.8,
+          "games": 17,
+          "ppg": 12.4
+        },
+        {
+          "player_id": "00-0030506",
+          "name": "Travis Kelce",
+          "team": "KC",
+          "points": 193.2,
+          "games": 17,
+          "ppg": 11.4
+        },
+        {
+          "player_id": "00-0040128",
+          "name": "Tyler Warren",
+          "team": "IND",
+          "points": 188.5,
+          "games": 17,
+          "ppg": 11.1
+        },
+        {
+          "player_id": "00-0038041",
+          "name": "Jake Ferguson",
+          "team": "DAL",
+          "points": 188.1,
+          "games": 17,
+          "ppg": 11.1
+        },
+        {
+          "player_id": "00-0040663",
+          "name": "Harold Fannin Jr.",
+          "team": "CLE",
+          "points": 186.4,
+          "games": 16,
+          "ppg": 11.7
+        },
+        {
+          "player_id": "00-0034351",
+          "name": "Dallas Goedert",
+          "team": "PHI",
+          "points": 185.1,
+          "games": 15,
+          "ppg": 12.3
+        },
+        {
+          "player_id": "00-0036040",
+          "name": "Juwan Johnson",
+          "team": "NO",
+          "points": 179.9,
+          "games": 17,
+          "ppg": 10.6
+        },
+        {
+          "player_id": "00-0033090",
+          "name": "Hunter Henry",
+          "team": "NE",
+          "points": 178.8,
+          "games": 17,
+          "ppg": 10.5
+        },
+        {
+          "player_id": "00-0034383",
+          "name": "Dalton Schultz",
+          "team": "HOU",
+          "points": 177.7,
+          "games": 17,
+          "ppg": 10.5
+        }
+      ]
+    },
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "points": 366.6
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0033280",
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "points": 416.6
+        },
+        {
+          "player_id": "00-0038542",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "points": 370.8
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039075",
+          "name": "Puka Nacua",
+          "team": "LA",
+          "points": 375.0
+        },
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 359.9
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037744",
+          "name": "Trey McBride",
+          "team": "ARI",
+          "points": 315.9
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 366.9
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 2571.7
+  },
+  "standard": {
+    "season": 2025,
+    "leaders_by_position": {
+      "QB": [
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "points": 366.6,
+          "games": 16,
+          "ppg": 22.9
+        },
+        {
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
+          "team": "NE",
+          "points": 357.0,
+          "games": 17,
+          "ppg": 21.0
+        },
+        {
+          "player_id": "00-0026498",
+          "name": "Matthew Stafford",
+          "team": "LA",
+          "points": 354.4,
+          "games": 17,
+          "ppg": 20.8
+        },
+        {
+          "player_id": "00-0036971",
+          "name": "Trevor Lawrence",
+          "team": "JAX",
+          "points": 342.2,
+          "games": 17,
+          "ppg": 20.1
+        },
+        {
+          "player_id": "00-0039918",
+          "name": "Caleb Williams",
+          "team": "CHI",
+          "points": 318.2,
+          "games": 17,
+          "ppg": 18.7
+        },
+        {
+          "player_id": "00-0033077",
+          "name": "Dak Prescott",
+          "team": "DAL",
+          "points": 315.8,
+          "games": 17,
+          "ppg": 18.6
+        },
+        {
+          "player_id": "00-0039732",
+          "name": "Bo Nix",
+          "team": "DEN",
+          "points": 306.8,
+          "games": 17,
+          "ppg": 18.0
+        },
+        {
+          "player_id": "00-0036389",
+          "name": "Jalen Hurts",
+          "team": "PHI",
+          "points": 303.1,
+          "games": 16,
+          "ppg": 18.9
+        },
+        {
+          "player_id": "00-0033106",
+          "name": "Jared Goff",
+          "team": "DET",
+          "points": 303.1,
+          "games": 17,
+          "ppg": 17.8
+        },
+        {
+          "player_id": "00-0036355",
+          "name": "Justin Herbert",
+          "team": "LAC",
+          "points": 288.9,
+          "games": 16,
+          "ppg": 18.1
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0036223",
+          "name": "Jonathan Taylor",
+          "team": "IND",
+          "points": 316.3,
+          "games": 17,
+          "ppg": 18.6
+        },
+        {
+          "player_id": "00-0033280",
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "points": 314.6,
+          "games": 17,
+          "ppg": 18.5
+        },
+        {
+          "player_id": "00-0038542",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "points": 291.8,
+          "games": 17,
+          "ppg": 17.2
+        },
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 289.9,
+          "games": 17,
+          "ppg": 17.1
+        },
+        {
+          "player_id": "00-0037248",
+          "name": "James Cook",
+          "team": "BUF",
+          "points": 269.2,
+          "games": 17,
+          "ppg": 15.8
+        },
+        {
+          "player_id": "00-0032764",
+          "name": "Derrick Henry",
+          "team": "BAL",
+          "points": 264.5,
+          "games": 17,
+          "ppg": 15.6
+        },
+        {
+          "player_id": "00-0039040",
+          "name": "De'Von Achane",
+          "team": "MIA",
+          "points": 255.8,
+          "games": 16,
+          "ppg": 16.0
+        },
+        {
+          "player_id": "00-0037840",
+          "name": "Kyren Williams",
+          "team": "LA",
+          "points": 227.3,
+          "games": 17,
+          "ppg": 13.4
+        },
+        {
+          "player_id": "00-0036973",
+          "name": "Travis Etienne",
+          "team": "JAX",
+          "points": 217.9,
+          "games": 17,
+          "ppg": 12.8
+        },
+        {
+          "player_id": "00-0038597",
+          "name": "Chase Brown",
+          "team": "CIN",
+          "points": 213.6,
+          "games": 17,
+          "ppg": 12.6
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039075",
+          "name": "Puka Nacua",
+          "team": "LA",
+          "points": 246.0,
+          "games": 16,
+          "ppg": 15.4
+        },
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 240.9,
+          "games": 17,
+          "ppg": 14.2
+        },
+        {
+          "player_id": "00-0036963",
+          "name": "Amon-Ra St. Brown",
+          "team": "DET",
+          "points": 207.0,
+          "games": 17,
+          "ppg": 12.2
+        },
+        {
+          "player_id": "00-0037247",
+          "name": "George Pickens",
+          "team": "DAL",
+          "points": 198.9,
+          "games": 17,
+          "ppg": 11.7
+        },
+        {
+          "player_id": "00-0036900",
+          "name": "Ja'Marr Chase",
+          "team": "CIN",
+          "points": 188.6,
+          "games": 16,
+          "ppg": 11.8
+        },
+        {
+          "player_id": "00-0037239",
+          "name": "Chris Olave",
+          "team": "NO",
+          "points": 168.0,
+          "games": 16,
+          "ppg": 10.5
+        },
+        {
+          "player_id": "00-0031381",
+          "name": "Davante Adams",
+          "team": "LA",
+          "points": 162.9,
+          "games": 14,
+          "ppg": 11.6
+        },
+        {
+          "player_id": "00-0039064",
+          "name": "Zay Flowers",
+          "team": "BAL",
+          "points": 157.3,
+          "games": 17,
+          "ppg": 9.3
+        },
+        {
+          "player_id": "00-0036554",
+          "name": "Nico Collins",
+          "team": "HOU",
+          "points": 155.2,
+          "games": 15,
+          "ppg": 10.3
+        },
+        {
+          "player_id": "00-0037240",
+          "name": "Jameson Williams",
+          "team": "DET",
+          "points": 154.9,
+          "games": 17,
+          "ppg": 9.1
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037744",
+          "name": "Trey McBride",
+          "team": "ARI",
+          "points": 189.9,
+          "games": 17,
+          "ppg": 11.2
+        },
+        {
+          "player_id": "00-0034351",
+          "name": "Dallas Goedert",
+          "team": "PHI",
+          "points": 125.1,
+          "games": 15,
+          "ppg": 8.3
+        },
+        {
+          "player_id": "00-0036970",
+          "name": "Kyle Pitts",
+          "team": "ATL",
+          "points": 122.8,
+          "games": 17,
+          "ppg": 7.2
+        },
+        {
+          "player_id": "00-0033090",
+          "name": "Hunter Henry",
+          "team": "NE",
+          "points": 118.8,
+          "games": 17,
+          "ppg": 7.0
+        },
+        {
+          "player_id": "00-0030506",
+          "name": "Travis Kelce",
+          "team": "KC",
+          "points": 117.2,
+          "games": 17,
+          "ppg": 6.9
+        },
+        {
+          "player_id": "00-0040663",
+          "name": "Harold Fannin Jr.",
+          "team": "CLE",
+          "points": 114.4,
+          "games": 16,
+          "ppg": 7.2
+        },
+        {
+          "player_id": "00-0040128",
+          "name": "Tyler Warren",
+          "team": "IND",
+          "points": 112.5,
+          "games": 17,
+          "ppg": 6.6
+        },
+        {
+          "player_id": "00-0039338",
+          "name": "Brock Bowers",
+          "team": "LV",
+          "points": 112.2,
+          "games": 12,
+          "ppg": 9.4
+        },
+        {
+          "player_id": "00-0040126",
+          "name": "Colston Loveland",
+          "team": "CHI",
+          "points": 107.1,
+          "games": 16,
+          "ppg": 6.7
+        },
+        {
+          "player_id": "00-0038041",
+          "name": "Jake Ferguson",
+          "team": "DAL",
+          "points": 106.1,
+          "games": 17,
+          "ppg": 6.2
+        }
+      ]
+    },
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "points": 366.6
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0036223",
+          "name": "Jonathan Taylor",
+          "team": "IND",
+          "points": 316.3
+        },
+        {
+          "player_id": "00-0033280",
+          "name": "Christian McCaffrey",
+          "team": "SF",
+          "points": 314.6
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039075",
+          "name": "Puka Nacua",
+          "team": "LA",
+          "points": 246.0
+        },
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 240.9
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037744",
+          "name": "Trey McBride",
+          "team": "ARI",
+          "points": 189.9
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0038542",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "points": 291.8
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 1966.1
+  }
+}

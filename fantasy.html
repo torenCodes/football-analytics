@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantasy -- Gridiron Edge</title>
+<meta name="description" content="Perfect Team retrospective and 2026 Draft Board, scored under both PPR and Standard rules.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html" class="site-logo">Gridiron<span class="dot">•</span>Edge</a>
+    <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
+    <ul class="site-nav-links">
+      <li><a href="index.html" class="site-nav-link">Home</a></li>
+      <li><a href="fantasy.html" class="site-nav-link active">Fantasy</a></li>
+      <li><a href="betting.html" class="site-nav-link">Betting</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero" style="padding-bottom: 1rem;">
+    <div class="badge">scoring format</div>
+    <h1>Fantasy</h1>
+    <p>Perfect Team retrospective and the 2026 Draft Board. Lineups and rankings can genuinely flip
+       between formats -- toggle below.</p>
+    <div class="toggle-group" id="format-toggle">
+      <button class="toggle-btn active" data-format="ppr">PPR</button>
+      <button class="toggle-btn" data-format="standard">Standard</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2 id="perfect-team-title">Perfect Team</h2>
+      <span class="section-note" id="perfect-team-note"></span>
+    </div>
+    <div id="perfect-lineup" class="lineup-grid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Position Leaders</h2>
+    </div>
+    <div class="pos-tabs" id="leaders-pos-tabs"></div>
+    <div class="card table-scroll">
+      <table class="data-table" id="leaders-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>2026 Draft Board</h2>
+      <span class="section-note">Edge score = recency-weighted 2025 production + continuity adjustment. Market rank = FantasyPros consensus.</span>
+    </div>
+    <div class="pos-tabs" id="board-pos-tabs"></div>
+    <div class="card table-scroll">
+      <table class="data-table" id="board-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="disclaimer">
+    Educational research project, not financial or fantasy advice. Edge scores and rankings are one
+    tunable model's output, not a guarantee of results.
+  </p>
+</main>
+
+<script>
+function toggleSiteNav(btn) {
+  const links = document.querySelector('.site-nav-links');
+  const open = links.classList.toggle('open');
+  btn.innerHTML = open ? '&#10005;' : '&#9776;';
+}
+
+const SKILL_POS = ['QB', 'RB', 'WR', 'TE'];
+let perfectTeamData = null;
+let draftBoardData = null;
+let currentFormat = 'ppr';
+let currentLeadersPos = 'QB';
+let currentBoardPos = 'QB';
+
+function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
+
+function renderPerfectTeam() {
+  const data = perfectTeamData[currentFormat];
+  document.getElementById('perfect-team-title').textContent = `Perfect Team -- ${data.season} (${currentFormat.toUpperCase()})`;
+  document.getElementById('perfect-team-note').textContent = `Highest-scoring possible lineup, total ${fmt1(data.perfect_lineup_total_points)} pts`;
+
+  const slots = [];
+  for (const [slot, players] of Object.entries(data.perfect_lineup)) {
+    for (const p of players) slots.push({ slot, ...p });
+  }
+  const grid = document.getElementById('perfect-lineup');
+  grid.innerHTML = slots.map(p => `
+    <div class="lineup-slot">
+      <div class="slot-label">${p.slot}</div>
+      <div class="slot-name">${p.name}</div>
+      <div class="slot-team">${p.team}</div>
+      <div class="slot-pts">${fmt1(p.points)} pts</div>
+    </div>
+  `).join('');
+}
+
+function renderPosTabs(containerId, activePos, onSelect) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = SKILL_POS.map(pos =>
+    `<button class="pos-tab ${pos === activePos ? 'active' : ''}" data-pos="${pos}">${pos}</button>`
+  ).join('');
+  el.querySelectorAll('.pos-tab').forEach(btn => {
+    btn.addEventListener('click', () => onSelect(btn.dataset.pos));
+  });
+}
+
+function renderLeadersTable() {
+  const data = perfectTeamData[currentFormat];
+  const rows = data.leaders_by_position[currentLeadersPos] || [];
+  const thead = document.querySelector('#leaders-table thead');
+  const tbody = document.querySelector('#leaders-table tbody');
+  thead.innerHTML = `<tr><th>#</th><th>Player</th><th>Team</th><th class="num">Games</th><th class="num">Points</th><th class="num">PPG</th></tr>`;
+  tbody.innerHTML = rows.map((p, i) => `
+    <tr>
+      <td>${i + 1}</td>
+      <td>${p.name}</td>
+      <td><span class="pill pos">${p.team}</span></td>
+      <td class="num">${p.games}</td>
+      <td class="num">${fmt1(p.points)}</td>
+      <td class="num">${fmt1(p.ppg)}</td>
+    </tr>
+  `).join('') || `<tr><td colspan="6" class="empty-state">No data</td></tr>`;
+}
+
+function renderBoardTable() {
+  const data = draftBoardData[currentFormat];
+  const rows = data.rankings_by_position[currentBoardPos] || [];
+  const thead = document.querySelector('#board-table thead');
+  const tbody = document.querySelector('#board-table tbody');
+  thead.innerHTML = `<tr>
+    <th>Rank</th><th>Player</th><th>Team</th><th class="num">Edge Score</th>
+    <th class="num">O-Line Continuity</th><th>Same HC</th><th class="num">Market Rank</th><th class="num">Gap</th>
+  </tr>`;
+  tbody.innerHTML = rows.map(p => {
+    const gapPill = p.market_gap === null ? '--' :
+      p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` :
+      p.market_gap < 0 ? `<span class="pill down">${p.market_gap}</span>` : '0';
+    const coach = p.same_head_coach === null ? '--' : (p.same_head_coach ? 'Yes' : 'New HC');
+    const cont = p.oline_continuity_pct === null ? '--' : Math.round(p.oline_continuity_pct * 100) + '%';
+    return `<tr>
+      <td>${p.our_rank}</td>
+      <td>${p.name}</td>
+      <td><span class="pill pos">${p.team}</span></td>
+      <td class="num">${fmt1(p.edge_score)}</td>
+      <td class="num">${cont}</td>
+      <td>${coach}</td>
+      <td class="num">${p.market_rank !== null ? fmt1(p.market_rank) : '--'}</td>
+      <td class="num">${gapPill}</td>
+    </tr>`;
+  }).join('') || `<tr><td colspan="8" class="empty-state">No data</td></tr>`;
+}
+
+function renderAll() {
+  renderPerfectTeam();
+  renderLeadersTable();
+  renderBoardTable();
+}
+
+function selectLeadersPos(pos) {
+  currentLeadersPos = pos;
+  renderPosTabs('leaders-pos-tabs', currentLeadersPos, selectLeadersPos);
+  renderLeadersTable();
+}
+
+function selectBoardPos(pos) {
+  currentBoardPos = pos;
+  renderPosTabs('board-pos-tabs', currentBoardPos, selectBoardPos);
+  renderBoardTable();
+}
+
+async function init() {
+  try {
+    [perfectTeamData, draftBoardData] = await Promise.all([
+      fetch('data/fantasy/perfect_team.json').then(r => r.json()),
+      fetch('data/fantasy/draft_board.json').then(r => r.json()),
+    ]);
+  } catch (e) {
+    document.querySelector('main').insertAdjacentHTML('afterbegin', '<p class="empty-state">Could not load fantasy data. Run scripts/fantasy_scan.py.</p>');
+    return;
+  }
+
+  document.querySelectorAll('#format-toggle .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentFormat = btn.dataset.format;
+      document.querySelectorAll('#format-toggle .toggle-btn').forEach(b => b.classList.toggle('active', b === btn));
+      renderAll();
+    });
+  });
+
+  renderPosTabs('leaders-pos-tabs', currentLeadersPos, selectLeadersPos);
+  renderPosTabs('board-pos-tabs', currentBoardPos, selectBoardPos);
+
+  renderAll();
+}
+
+init();
+</script>
+</body>
+</html>

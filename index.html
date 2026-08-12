@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gridiron Edge -- NFL Fantasy &amp; Betting Research</title>
+<meta name="description" content="Data-driven NFL fantasy and individual-game research: efficiency stats, roster continuity, and situational edges the market overlooks.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html" class="site-logo">Gridiron<span class="dot">&bull;</span>Edge</a>
+    <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
+    <ul class="site-nav-links">
+      <li><a href="index.html" class="site-nav-link active">Home</a></li>
+      <li><a href="fantasy.html" class="site-nav-link">Fantasy</a></li>
+      <li><a href="betting.html" class="site-nav-link">Betting</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="masthead-strip">
+    <div>
+      <h1>Gridiron Edge</h1>
+      <div class="masthead-sub">Efficiency stats, roster &amp; coaching continuity, and situational edges the market overlooks.</div>
+    </div>
+    <div class="masthead-date" id="masthead-date"></div>
+  </div>
+
+  <div class="front-grid">
+    <!-- FANTASY (wider column) -->
+    <section class="front-col col-fantasy">
+      <div class="col-head">
+        <div class="col-kicker">Fantasy</div>
+        <h2 id="fantasy-col-title">Perfect Team &amp; Draft Board</h2>
+        <div class="col-sub" id="fantasy-col-sub">PPR scoring shown -- toggle formats on the full dashboard</div>
+      </div>
+
+      <div class="front-block">
+        <div class="front-block-title">2025 Perfect Lineup</div>
+        <div class="table-scroll">
+          <table class="tight-table" id="perfect-lineup-table">
+            <thead><tr><th>Slot</th><th>Player</th><th>Team</th><th class="num">Points</th></tr></thead>
+            <tbody><tr><td colspan="4" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="front-block">
+        <div class="front-block-title">Draft Board -- Biggest Value Gaps</div>
+        <div class="table-scroll">
+          <table class="tight-table" id="value-gap-table">
+            <thead><tr><th>Rank</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Edge</th><th class="num">Gap vs. Market</th></tr></thead>
+            <tbody><tr><td colspan="6" class="loading">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="front-block" style="margin-bottom: 0.5rem;">
+        <div class="front-block-title">Position Leaders</div>
+        <div class="mini-leader-grid" id="mini-leaders"></div>
+      </div>
+
+      <a href="fantasy.html" class="view-more">View full Fantasy dashboard -- lineups, rankings, PPR/Standard toggle &rarr;</a>
+    </section>
+
+    <!-- BETTING (narrower column) -->
+    <section class="front-col col-betting">
+      <div class="col-head">
+        <div class="col-kicker">Individual Games</div>
+        <h2 id="betting-col-title">This Week's Board</h2>
+        <div class="col-sub" id="betting-col-sub">Loading...</div>
+      </div>
+
+      <div id="game-list"></div>
+
+      <a href="betting.html" class="view-more">View full Betting dashboard -- factors &amp; backtest &rarr;</a>
+    </section>
+  </div>
+
+  <p class="disclaimer">
+    Gridiron Edge is a personal research project. Every number here comes from a documented, tunable
+    model built on public data (nflverse, FantasyPros consensus, NWS weather) -- nothing here is
+    professional betting or financial advice, and past model accuracy does not guarantee future results.
+  </p>
+</main>
+
+<script>
+function toggleSiteNav(btn) {
+  const links = document.querySelector('.site-nav-links');
+  const open = links.classList.toggle('open');
+  btn.innerHTML = open ? '&#10005;' : '&#9776;';
+}
+
+function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
+
+document.getElementById('masthead-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+async function loadFantasyColumn() {
+  try {
+    const [perfectTeam, draftBoard] = await Promise.all([
+      fetch('data/fantasy/perfect_team.json').then(r => r.json()),
+      fetch('data/fantasy/draft_board.json').then(r => r.json()),
+    ]);
+    const pt = perfectTeam.ppr;
+    const db = draftBoard.ppr;
+
+    document.getElementById('fantasy-col-title').textContent = `Perfect Team & Draft Board -- ${pt.season}/${db.draft_season}`;
+
+    // Perfect lineup table
+    const slots = [];
+    for (const [slot, players] of Object.entries(pt.perfect_lineup)) {
+      for (const p of players) slots.push({ slot, ...p });
+    }
+    document.querySelector('#perfect-lineup-table tbody').innerHTML = slots.map(p => `
+      <tr><td>${p.slot}</td><td>${p.name}</td><td>${p.team}</td><td class="num">${fmt1(p.points)}</td></tr>
+    `).join('');
+
+    // Biggest value gaps across RB/WR/TE, restricted to players we actually
+    // rank as relevant (our_rank <= 24) -- otherwise deep-bench players with
+    // near-zero market presence produce enormous but meaningless "gaps"
+    // (e.g. a 4 PPG TE we rank 42nd vs. a market that doesn't rank him at
+    // all isn't a sleeper story, it's two models agreeing he's irrelevant).
+    const RELEVANCE_CUTOFF = 24;
+    let gaps = [];
+    for (const pos of ['RB', 'WR', 'TE']) {
+      for (const p of (db.rankings_by_position[pos] || [])) {
+        if (p.market_gap !== null && p.our_rank <= RELEVANCE_CUTOFF) gaps.push(p);
+      }
+    }
+    gaps.sort((a, b) => b.market_gap - a.market_gap);
+    gaps = gaps.slice(0, 8);
+    document.querySelector('#value-gap-table tbody').innerHTML = gaps.map(p => {
+      const gapPill = p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` : `<span class="pill down">${p.market_gap}</span>`;
+      return `<tr><td>${p.our_rank}</td><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.edge_score)}</td><td class="num">${gapPill}</td></tr>`;
+    }).join('') || '<tr><td colspan="6" class="empty-state">No data</td></tr>';
+
+    // Position leader mini-columns
+    const positions = ['QB', 'RB', 'WR', 'TE'];
+    document.getElementById('mini-leaders').innerHTML = positions.map(pos => {
+      const top3 = (pt.leaders_by_position[pos] || []).slice(0, 3);
+      const items = top3.map(p => `<li><span class="mlname">${p.name}</span><span class="mlpts">${fmt1(p.points)}</span></li>`).join('');
+      return `<div class="mini-leader-col"><div class="mini-leader-pos">${pos}</div><ol>${items}</ol></div>`;
+    }).join('');
+  } catch (e) {
+    document.getElementById('fantasy-col-sub').textContent = 'Fantasy data not available yet -- run scripts/fantasy_scan.py.';
+  }
+}
+
+function gameRowHtml(g) {
+  const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
+  const pickText = pickTeam ? `Pick: ${pickTeam} ${g.model_margin_home > 0 ? '+' : ''}${fmt1(g.model_margin_home)}` : 'No pick yet';
+  const time = (g.weekday && g.gametime) ? `${g.weekday.slice(0, 3)} ${g.gametime}` : '';
+  const tags = [];
+  if (g.primetime) tags.push('<span class="mini-tag">Primetime</span>');
+  if (g.div_game) tags.push('<span class="mini-tag">Rivalry</span>');
+  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) tags.push('<span class="mini-tag">Revenge</span>');
+  if (g.international_site) tags.push('<span class="mini-tag">International</span>');
+  return `
+    <div class="game-row">
+      <div class="game-row-top">
+        <span class="game-row-matchup">${g.away_team} @ ${g.home_team}</span>
+        <span class="game-row-time">${time}</span>
+      </div>
+      <div class="game-row-pick">${pickText}</div>
+      ${tags.length ? `<div class="game-row-tags">${tags.join('')}</div>` : ''}
+    </div>
+  `;
+}
+
+async function loadBettingColumn() {
+  try {
+    const [backtest, gameBoard] = await Promise.all([
+      fetch('data/betting/best_calls_backtest.json').then(r => r.json()),
+      fetch('data/betting/game_board.json').then(r => r.json()),
+    ]);
+
+    let sub = '';
+    if (backtest.accuracy !== null && backtest.accuracy !== undefined) {
+      const pct = Math.round(backtest.accuracy * 1000) / 10;
+      sub += `${backtest.season} model: ${pct}% vs. the closing spread`;
+    }
+    if (gameBoard.games && gameBoard.games.length) {
+      document.getElementById('betting-col-title').textContent = `Week ${gameBoard.week} Board -- ${gameBoard.season}`;
+      sub = sub ? `${sub} &middot; ${gameBoard.games.length} games this week` : `${gameBoard.games.length} games this week`;
+      document.getElementById('game-list').innerHTML = gameBoard.games.map(gameRowHtml).join('');
+    } else {
+      document.getElementById('game-list').innerHTML = `<p class="empty-state">${gameBoard.note || 'No upcoming games in the current schedule window.'}</p>`;
+    }
+    document.getElementById('betting-col-sub').innerHTML = sub;
+  } catch (e) {
+    document.getElementById('betting-col-sub').textContent = 'Betting data not available yet -- run scripts/betting_scan.py.';
+  }
+}
+
+loadFantasyColumn();
+loadBettingColumn();
+</script>
+</body>
+</html>

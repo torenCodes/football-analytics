@@ -1,0 +1,781 @@
+{
+  "meta": {
+    "generated_at": "2026-08-12T14:04:19.205963+00:00"
+  },
+  "season": 2026,
+  "week": 1,
+  "games": [
+    {
+      "game_id": "2026_01_DEN_KC",
+      "week": 1,
+      "gameday": "2026-09-14",
+      "weekday": "Monday",
+      "gametime": "20:15",
+      "primetime": true,
+      "juice_score": 8,
+      "home_team": "KC",
+      "away_team": "DEN",
+      "div_game": true,
+      "model_margin_home": 5.6,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Andy Reid",
+          "coach_current": "Andy Reid",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Sean Payton",
+          "coach_current": "Sean Payton",
+          "same_coach": true
+        }
+      },
+      "revenge_game": {
+        "home": true,
+        "away": false,
+        "last_season": 2025
+      },
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_DAL_NYG",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "20:20",
+      "primetime": true,
+      "juice_score": 8,
+      "home_team": "NYG",
+      "away_team": "DAL",
+      "div_game": true,
+      "model_margin_home": -9.3,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Brian Daboll",
+          "coach_current": "John Harbaugh",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Brian Schottenheimer",
+          "coach_current": "Brian Schottenheimer",
+          "same_coach": true
+        }
+      },
+      "revenge_game": {
+        "home": false,
+        "away": true,
+        "last_season": 2025
+      },
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_SF_LA",
+      "week": 1,
+      "gameday": "2026-09-10",
+      "weekday": "Thursday",
+      "gametime": "20:35",
+      "primetime": true,
+      "juice_score": 8,
+      "home_team": "LA",
+      "away_team": "SF",
+      "div_game": true,
+      "model_margin_home": 0.1,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Sean McVay",
+          "coach_current": "Sean McVay",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Kyle Shanahan",
+          "coach_current": "Kyle Shanahan",
+          "same_coach": true
+        }
+      },
+      "revenge_game": {
+        "home": false,
+        "away": true,
+        "last_season": 2025
+      },
+      "roof": "dome",
+      "international_site": true,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_GB_MIN",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "16:25",
+      "primetime": false,
+      "juice_score": 4,
+      "home_team": "MIN",
+      "away_team": "GB",
+      "div_game": true,
+      "model_margin_home": -22.7,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Kevin O'Connell",
+          "coach_current": "Kevin O'Connell",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Matt LaFleur",
+          "coach_current": "Matt LaFleur",
+          "same_coach": true
+        }
+      },
+      "revenge_game": {
+        "home": false,
+        "away": true,
+        "last_season": 2025
+      },
+      "roof": "dome",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_WAS_PHI",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "16:25",
+      "primetime": false,
+      "juice_score": 4,
+      "home_team": "PHI",
+      "away_team": "WAS",
+      "div_game": true,
+      "model_margin_home": -11.5,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Nick Sirianni",
+          "coach_current": "Nick Sirianni",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Dan Quinn",
+          "coach_current": "Dan Quinn",
+          "same_coach": true
+        }
+      },
+      "revenge_game": {
+        "home": true,
+        "away": false,
+        "last_season": 2025
+      },
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_NE_SEA",
+      "week": 1,
+      "gameday": "2026-09-09",
+      "weekday": "Wednesday",
+      "gametime": "20:20",
+      "primetime": true,
+      "juice_score": 4,
+      "home_team": "SEA",
+      "away_team": "NE",
+      "div_game": false,
+      "model_margin_home": -3.0,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Mike Macdonald",
+          "coach_current": "Mike Macdonald",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Mike Vrabel",
+          "coach_current": "Mike Vrabel",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_ATL_PIT",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "PIT",
+      "away_team": "ATL",
+      "div_game": false,
+      "model_margin_home": 4.3,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Mike Tomlin",
+          "coach_current": "Mike McCarthy",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Raheem Morris",
+          "coach_current": "Raheem Morris",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_BAL_IND",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "IND",
+      "away_team": "BAL",
+      "div_game": false,
+      "model_margin_home": 3.0,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Shane Steichen",
+          "coach_current": "Shane Steichen",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "John Harbaugh",
+          "coach_current": "Jesse Minter",
+          "same_coach": false
+        }
+      },
+      "revenge_game": null,
+      "roof": null,
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_BUF_HOU",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "HOU",
+      "away_team": "BUF",
+      "div_game": false,
+      "model_margin_home": -18.6,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "DeMeco Ryans",
+          "coach_current": "DeMeco Ryans",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Sean McDermott",
+          "coach_current": "Sean McDermott",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": null,
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_CHI_CAR",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "CAR",
+      "away_team": "CHI",
+      "div_game": false,
+      "model_margin_home": -4.6,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Dave Canales",
+          "coach_current": "Dave Canales",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Ben Johnson",
+          "coach_current": "Ben Johnson",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_CLE_JAX",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "JAX",
+      "away_team": "CLE",
+      "div_game": false,
+      "model_margin_home": 17.0,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 0,
+          "total_starters": 5,
+          "continuity_pct": 0.0
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Liam Coen",
+          "coach_current": "Liam Coen",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Kevin Stefanski",
+          "coach_current": "Todd Monken",
+          "same_coach": false
+        }
+      },
+      "revenge_game": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_NO_DET",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "DET",
+      "away_team": "NO",
+      "div_game": false,
+      "model_margin_home": 15.3,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Dan Campbell",
+          "coach_current": "Dan Campbell",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Kellen Moore",
+          "coach_current": "Kellen Moore",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "dome",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_NYJ_TEN",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "TEN",
+      "away_team": "NYJ",
+      "div_game": false,
+      "model_margin_home": -3.0,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Brian Callahan",
+          "coach_current": "Robert Saleh",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Aaron Glenn",
+          "coach_current": "Aaron Glenn",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_TB_CIN",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "CIN",
+      "away_team": "TB",
+      "div_game": false,
+      "model_margin_home": 11.2,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "home",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Zac Taylor",
+          "coach_current": "Zac Taylor",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Todd Bowles",
+          "coach_current": "Todd Bowles",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_ARI_LAC",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "16:25",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "LAC",
+      "away_team": "ARI",
+      "div_game": false,
+      "model_margin_home": -11.2,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        },
+        "away": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Jim Harbaugh",
+          "coach_current": "Jim Harbaugh",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Jonathan Gannon",
+          "coach_current": "Jonathan Gannon",
+          "same_coach": true
+        }
+      },
+      "revenge_game": null,
+      "roof": "dome",
+      "international_site": false,
+      "weather": null
+    },
+    {
+      "game_id": "2026_01_MIA_LV",
+      "week": 1,
+      "gameday": "2026-09-13",
+      "weekday": "Sunday",
+      "gametime": "16:25",
+      "primetime": false,
+      "juice_score": 0,
+      "home_team": "LV",
+      "away_team": "MIA",
+      "div_game": false,
+      "model_margin_home": -18.1,
+      "efficiency_source": {
+        "home": "prior_season_fallback",
+        "away": "prior_season_fallback"
+      },
+      "our_pick": "away",
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Pete Carroll",
+          "coach_current": "Klint Kubliak",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Mike McDaniel",
+          "coach_current": "Jeff Hafley",
+          "same_coach": false
+        }
+      },
+      "revenge_game": null,
+      "roof": "dome",
+      "international_site": false,
+      "weather": null
+    }
+  ]
+}

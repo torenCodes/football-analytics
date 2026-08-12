@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betting -- Gridiron Edge</title>
+<meta name="description" content="Weekly game-by-game picks and a 2025 season backtest against the closing spread.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html" class="site-logo">Gridiron<span class="dot">•</span>Edge</a>
+    <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
+    <ul class="site-nav-links">
+      <li><a href="index.html" class="site-nav-link">Home</a></li>
+      <li><a href="fantasy.html" class="site-nav-link">Fantasy</a></li>
+      <li><a href="betting.html" class="site-nav-link active">Betting</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero" style="padding-bottom: 1rem;">
+    <div class="badge">individual game analysis</div>
+    <h1>Individual Game Betting</h1>
+    <p>Matchup efficiency (offense vs. defense EPA/play), continuity, situational factors, and weather --
+       weighed as explainable factors, not a black-box number.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Backtest: 2025 vs. the Closing Spread</h2>
+    </div>
+    <div class="card card-pad" id="backtest-summary">
+      <p class="loading">Loading...</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2 id="game-board-title">This Week's Game Board</h2>
+    </div>
+    <div id="game-board"></div>
+  </section>
+
+  <p class="disclaimer">
+    Educational research project, not betting advice. Model accuracy shown above is against the closing
+    spread on a leave-one-out backtest of the 2025 season -- past performance does not predict future
+    results, and this is not a recommendation to wager real money.
+  </p>
+</main>
+
+<script>
+function toggleSiteNav(btn) {
+  const links = document.querySelector('.site-nav-links');
+  const open = links.classList.toggle('open');
+  btn.innerHTML = open ? '&#10005;' : '&#9776;';
+}
+
+function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
+
+async function loadBacktest() {
+  const el = document.getElementById('backtest-summary');
+  try {
+    const bt = await fetch('data/betting/best_calls_backtest.json').then(r => r.json());
+    if (!bt.accuracy && bt.accuracy !== 0) {
+      el.innerHTML = '<p class="empty-state">No graded games yet.</p>';
+      return;
+    }
+    const pct = Math.round(bt.accuracy * 1000) / 10;
+    el.innerHTML = `
+      <div class="zone-stat-row"><span class="zone-stat-label">Season</span><span class="zone-stat-value">${bt.season}</span></div>
+      <div class="zone-stat-row"><span class="zone-stat-label">Games graded</span><span class="zone-stat-value">${bt.games_graded}</span></div>
+      <div class="zone-stat-row"><span class="zone-stat-label">Correct against the spread</span><span class="zone-stat-value">${bt.correct_picks} (${pct}%)</span></div>
+      <p class="section-note" style="margin-top:0.75rem; display:block;">${bt.method}</p>
+    `;
+  } catch (e) {
+    el.innerHTML = '<p class="empty-state">Backtest data not available yet -- run scripts/betting_scan.py.</p>';
+  }
+}
+
+function factorTags(g) {
+  const tags = [];
+  if (g.primetime) tags.push(`<span class="factor-tag flag">Primetime</span>`);
+  if (g.div_game) tags.push(`<span class="factor-tag flag">Division game</span>`);
+  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) {
+    const who = g.revenge_game.home ? g.home_team : g.away_team;
+    tags.push(`<span class="factor-tag flag">Revenge game: ${who} lost last meeting (${g.revenge_game.last_season})</span>`);
+  }
+  if (g.rest_days_edge_home !== null && g.rest_days_edge_home !== 0) {
+    const who = g.rest_days_edge_home > 0 ? g.home_team : g.away_team;
+    tags.push(`<span class="factor-tag">Rest edge: ${who} (+${Math.abs(g.rest_days_edge_home)}d)</span>`);
+  }
+  if (g.international_site) tags.push(`<span class="factor-tag flag">International site</span>`);
+  if (g.roof) tags.push(`<span class="factor-tag">${g.roof}</span>`);
+  if (g.weather) tags.push(`<span class="factor-tag">${g.weather.short_forecast}, ${g.weather.temperature_f}°F, wind ${g.weather.wind}</span>`);
+  const homeOl = g.oline_continuity && g.oline_continuity.home;
+  const awayOl = g.oline_continuity && g.oline_continuity.away;
+  if (homeOl) tags.push(`<span class="factor-tag">${g.home_team} O-line continuity: ${Math.round(homeOl.continuity_pct * 100)}%</span>`);
+  if (awayOl) tags.push(`<span class="factor-tag">${g.away_team} O-line continuity: ${Math.round(awayOl.continuity_pct * 100)}%</span>`);
+  const homeCoach = g.coach_continuity && g.coach_continuity.home;
+  const awayCoach = g.coach_continuity && g.coach_continuity.away;
+  if (homeCoach && homeCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${g.home_team} new HC</span>`);
+  if (awayCoach && awayCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${g.away_team} new HC</span>`);
+  return tags.join('');
+}
+
+async function loadGameBoard() {
+  const el = document.getElementById('game-board');
+  try {
+    const gb = await fetch('data/betting/game_board.json').then(r => r.json());
+    if (!gb.games || !gb.games.length) {
+      el.innerHTML = `<p class="empty-state">${gb.note || 'No upcoming games found.'}</p>`;
+      return;
+    }
+    document.getElementById('game-board-title').textContent = `Week ${gb.week} Game Board -- ${gb.season}`;
+    el.innerHTML = gb.games.map(g => {
+      const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
+      const pickText = pickTeam ? `Model pick: ${pickTeam} (${g.model_margin_home > 0 ? '+' : ''}${fmt1(g.model_margin_home)})` : 'Not enough data yet';
+      const time = (g.weekday && g.gametime) ? `${g.weekday} ${g.gametime}` : '';
+      return `
+        <div class="game-card">
+          <div class="game-card-top">
+            <div>
+              <div class="game-matchup">${g.away_team} @ ${g.home_team}</div>
+              <div class="section-note">${time}</div>
+            </div>
+            <div class="game-pick">${pickText}</div>
+          </div>
+          <div class="factor-tags">${factorTags(g)}</div>
+        </div>
+      `;
+    }).join('');
+  } catch (e) {
+    el.innerHTML = '<p class="empty-state">Game board data not available yet -- run scripts/betting_scan.py.</p>';
+  }
+}
+
+loadBacktest();
+loadGameBoard();
+</script>
+</body>
+</html>
