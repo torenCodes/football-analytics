@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-12T15:28:47.132936+00:00"
+    "generated_at": "2026-08-18T15:54:55.313456+00:00"
   },
   "season": 2026,
   "week": 1,
@@ -16,7 +16,7 @@
       "home_team": "KC",
       "away_team": "DEN",
       "div_game": true,
-      "model_margin_home": 5.6,
+      "model_margin_home": 5.7,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -67,7 +67,7 @@
       "home_team": "NYG",
       "away_team": "DAL",
       "div_game": true,
-      "model_margin_home": -9.3,
+      "model_margin_home": -9.4,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -169,7 +169,7 @@
       "home_team": "MIN",
       "away_team": "GB",
       "div_game": true,
-      "model_margin_home": -22.7,
+      "model_margin_home": -22.8,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -220,7 +220,7 @@
       "home_team": "PHI",
       "away_team": "WAS",
       "div_game": true,
-      "model_margin_home": -11.5,
+      "model_margin_home": -11.6,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -318,7 +318,7 @@
       "home_team": "PIT",
       "away_team": "ATL",
       "div_game": false,
-      "model_margin_home": 4.3,
+      "model_margin_home": 4.4,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -365,7 +365,7 @@
       "home_team": "IND",
       "away_team": "BAL",
       "div_game": false,
-      "model_margin_home": 3.0,
+      "model_margin_home": 2.9,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -553,7 +553,7 @@
       "home_team": "DET",
       "away_team": "NO",
       "div_game": false,
-      "model_margin_home": 15.3,
+      "model_margin_home": 15.4,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -600,7 +600,7 @@
       "home_team": "TEN",
       "away_team": "NYJ",
       "div_game": false,
-      "model_margin_home": -3.0,
+      "model_margin_home": -2.9,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"

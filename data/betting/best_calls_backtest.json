@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated_at": "2026-08-12T15:28:47.132936+00:00"
+    "generated_at": "2026-08-18T15:54:55.313456+00:00"
   },
   "season": 2025,
   "method": "Leave-one-out team offensive/defensive EPA-per-play model vs. the closing spread_line, home-field adjusted. Each game's efficiency inputs exclude that game itself.",
   "games_graded": 271,
-  "correct_picks": 131,
-  "accuracy": 0.483,
+  "correct_picks": 132,
+  "accuracy": 0.487,
   "picks": [
     {
       "game_id": "2025_01_ARI_NO",
@@ -39,7 +39,7 @@
       "away_team": "CAR",
       "spread_line": 4.5,
       "result": 16,
-      "model_margin_home": -2.6,
+      "model_margin_home": -2.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -63,7 +63,7 @@
       "away_team": "DAL",
       "spread_line": 8.5,
       "result": 4,
-      "model_margin_home": -21.0,
+      "model_margin_home": -21.1,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -111,7 +111,7 @@
       "away_team": "LV",
       "spread_line": 2.5,
       "result": -7,
-      "model_margin_home": 16.5,
+      "model_margin_home": 16.6,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -147,7 +147,7 @@
       "away_team": "NYG",
       "spread_line": 6.0,
       "result": 15,
-      "model_margin_home": 4.1,
+      "model_margin_home": 4.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -159,7 +159,7 @@
       "away_team": "PIT",
       "spread_line": -3.0,
       "result": -2,
-      "model_margin_home": -0.7,
+      "model_margin_home": -0.8,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -171,7 +171,7 @@
       "away_team": "SF",
       "spread_line": -2.5,
       "result": -4,
-      "model_margin_home": -13.1,
+      "model_margin_home": -13.0,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -195,7 +195,7 @@
       "away_team": "TEN",
       "spread_line": 8.5,
       "result": 8,
-      "model_margin_home": 1.7,
+      "model_margin_home": 1.6,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -243,7 +243,7 @@
       "away_team": "CHI",
       "spread_line": 6.0,
       "result": 31,
-      "model_margin_home": -0.6,
+      "model_margin_home": -0.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -255,7 +255,7 @@
       "away_team": "CLE",
       "spread_line": 12.5,
       "result": 24,
-      "model_margin_home": 26.1,
+      "model_margin_home": 26.2,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -279,7 +279,7 @@
       "away_team": "JAX",
       "spread_line": 3.5,
       "result": 4,
-      "model_margin_home": 16.0,
+      "model_margin_home": 15.9,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -303,7 +303,7 @@
       "away_team": "LA",
       "spread_line": -5.5,
       "result": -14,
-      "model_margin_home": -11.2,
+      "model_margin_home": -11.1,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -315,7 +315,7 @@
       "away_team": "NE",
       "spread_line": 1.5,
       "result": -6,
-      "model_margin_home": 7.1,
+      "model_margin_home": 7.0,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -339,7 +339,7 @@
       "away_team": "PHI",
       "spread_line": -1.5,
       "result": -3,
-      "model_margin_home": 5.9,
+      "model_margin_home": 6.0,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -387,7 +387,7 @@
       "away_team": "WAS",
       "spread_line": 3.5,
       "result": 9,
-      "model_margin_home": 2.3,
+      "model_margin_home": 2.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -435,7 +435,7 @@
       "away_team": "DAL",
       "spread_line": -1.5,
       "result": 17,
-      "model_margin_home": -9.8,
+      "model_margin_home": -9.9,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -471,7 +471,7 @@
       "away_team": "GB",
       "spread_line": -8.5,
       "result": 3,
-      "model_margin_home": -28.8,
+      "model_margin_home": -28.9,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -483,7 +483,7 @@
       "away_team": "HOU",
       "spread_line": 1.5,
       "result": 7,
-      "model_margin_home": 10.7,
+      "model_margin_home": 10.8,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -495,7 +495,7 @@
       "away_team": "IND",
       "spread_line": -6.0,
       "result": -21,
-      "model_margin_home": -9.6,
+      "model_margin_home": -9.5,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -507,7 +507,7 @@
       "away_team": "KC",
       "spread_line": -6.0,
       "result": -13,
-      "model_margin_home": 8.2,
+      "model_margin_home": 8.1,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -531,7 +531,7 @@
       "away_team": "LV",
       "spread_line": 2.5,
       "result": 17,
-      "model_margin_home": 26.4,
+      "model_margin_home": 26.6,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -555,7 +555,7 @@
       "away_team": "NO",
       "spread_line": 7.5,
       "result": 31,
-      "model_margin_home": 5.9,
+      "model_margin_home": 6.0,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -603,7 +603,7 @@
       "away_team": "CAR",
       "spread_line": 5.5,
       "result": 29,
-      "model_margin_home": 0.5,
+      "model_margin_home": 0.6,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -639,7 +639,7 @@
       "away_team": "CLE",
       "spread_line": 10.0,
       "result": 24,
-      "model_margin_home": 26.3,
+      "model_margin_home": 26.4,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -699,7 +699,7 @@
       "away_team": "MIN",
       "spread_line": -2.5,
       "result": 3,
-      "model_margin_home": 18.6,
+      "model_margin_home": 18.7,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -747,7 +747,7 @@
       "away_team": "SEA",
       "spread_line": -1.5,
       "result": -3,
-      "model_margin_home": 11.5,
+      "model_margin_home": 11.4,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -759,7 +759,7 @@
       "away_team": "TEN",
       "spread_line": 7.5,
       "result": 26,
-      "model_margin_home": -6.3,
+      "model_margin_home": -6.4,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -771,7 +771,7 @@
       "away_team": "WAS",
       "spread_line": 2.5,
       "result": 7,
-      "model_margin_home": -9.4,
+      "model_margin_home": -9.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -783,7 +783,7 @@
       "away_team": "DAL",
       "spread_line": 1.5,
       "result": -15,
-      "model_margin_home": -17.3,
+      "model_margin_home": -17.4,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -807,7 +807,7 @@
       "away_team": "DET",
       "spread_line": -10.5,
       "result": -13,
-      "model_margin_home": 7.5,
+      "model_margin_home": 7.4,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -819,7 +819,7 @@
       "away_team": "HOU",
       "spread_line": -2.5,
       "result": -34,
-      "model_margin_home": 18.5,
+      "model_margin_home": 18.6,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -879,7 +879,7 @@
       "away_team": "NE",
       "spread_line": 7.5,
       "result": -3,
-      "model_margin_home": 10.6,
+      "model_margin_home": 10.5,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -915,7 +915,7 @@
       "away_team": "TB",
       "spread_line": 3.5,
       "result": -3,
-      "model_margin_home": -3.9,
+      "model_margin_home": -3.8,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -927,7 +927,7 @@
       "away_team": "TEN",
       "spread_line": 7.5,
       "result": -1,
-      "model_margin_home": 11.0,
+      "model_margin_home": 10.9,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -939,7 +939,7 @@
       "away_team": "WAS",
       "spread_line": 2.5,
       "result": -17,
-      "model_margin_home": -17.0,
+      "model_margin_home": -17.1,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -975,7 +975,7 @@
       "away_team": "CHI",
       "spread_line": 5.5,
       "result": -1,
-      "model_margin_home": 4.1,
+      "model_margin_home": 4.3,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -999,7 +999,7 @@
       "away_team": "CLE",
       "spread_line": 5.5,
       "result": 14,
-      "model_margin_home": 23.3,
+      "model_margin_home": 23.4,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1011,7 +1011,7 @@
       "away_team": "DAL",
       "spread_line": -3.0,
       "result": 3,
-      "model_margin_home": -16.4,
+      "model_margin_home": -16.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1059,7 +1059,7 @@
       "away_team": "LA",
       "spread_line": -7.0,
       "result": -14,
-      "model_margin_home": -1.0,
+      "model_margin_home": -0.9,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1071,7 +1071,7 @@
       "away_team": "NE",
       "spread_line": -3.5,
       "result": -6,
-      "model_margin_home": -7.8,
+      "model_margin_home": -7.9,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -1155,7 +1155,7 @@
       "away_team": "GB",
       "spread_line": -7.0,
       "result": -4,
-      "model_margin_home": -4.4,
+      "model_margin_home": -4.5,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1167,7 +1167,7 @@
       "away_team": "HOU",
       "spread_line": 3.0,
       "result": 8,
-      "model_margin_home": 8.8,
+      "model_margin_home": 8.9,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1191,7 +1191,7 @@
       "away_team": "LA",
       "spread_line": -3.0,
       "result": -28,
-      "model_margin_home": -9.7,
+      "model_margin_home": -9.6,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -1227,7 +1227,7 @@
       "away_team": "NE",
       "spread_line": -6.5,
       "result": -18,
-      "model_margin_home": -2.8,
+      "model_margin_home": -2.7,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1275,7 +1275,7 @@
       "away_team": "PIT",
       "spread_line": -5.5,
       "result": 2,
-      "model_margin_home": 10.4,
+      "model_margin_home": 10.3,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1287,7 +1287,7 @@
       "away_team": "TB",
       "spread_line": 6.0,
       "result": 15,
-      "model_margin_home": 5.8,
+      "model_margin_home": 5.9,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1299,7 +1299,7 @@
       "away_team": "WAS",
       "spread_line": 1.5,
       "result": 22,
-      "model_margin_home": 10.3,
+      "model_margin_home": 10.2,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1323,7 +1323,7 @@
       "away_team": "CHI",
       "spread_line": 2.5,
       "result": 14,
-      "model_margin_home": -1.0,
+      "model_margin_home": -0.9,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1335,7 +1335,7 @@
       "away_team": "CLE",
       "spread_line": 7.0,
       "result": 19,
-      "model_margin_home": 20.6,
+      "model_margin_home": 20.7,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1347,7 +1347,7 @@
       "away_team": "DAL",
       "spread_line": 3.5,
       "result": 20,
-      "model_margin_home": -20.9,
+      "model_margin_home": -21.0,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1455,7 +1455,7 @@
       "away_team": "WAS",
       "spread_line": 10.5,
       "result": 21,
-      "model_margin_home": -7.9,
+      "model_margin_home": -8.0,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1467,7 +1467,7 @@
       "away_team": "ARI",
       "spread_line": 3.5,
       "result": -10,
-      "model_margin_home": 15.3,
+      "model_margin_home": 15.4,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1479,7 +1479,7 @@
       "away_team": "ATL",
       "spread_line": 5.5,
       "result": 1,
-      "model_margin_home": 2.2,
+      "model_margin_home": 2.3,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -1491,7 +1491,7 @@
       "away_team": "BAL",
       "spread_line": -7.5,
       "result": -22,
-      "model_margin_home": 2.5,
+      "model_margin_home": 2.4,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1539,7 +1539,7 @@
       "away_team": "IND",
       "spread_line": -3.5,
       "result": 7,
-      "model_margin_home": -3.0,
+      "model_margin_home": -2.9,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1551,7 +1551,7 @@
       "away_team": "JAX",
       "spread_line": -2.5,
       "result": -1,
-      "model_margin_home": -10.6,
+      "model_margin_home": -10.7,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1563,7 +1563,7 @@
       "away_team": "KC",
       "spread_line": -2.5,
       "result": 7,
-      "model_margin_home": 10.1,
+      "model_margin_home": 10.0,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1575,7 +1575,7 @@
       "away_team": "LAC",
       "spread_line": -10.0,
       "result": -7,
-      "model_margin_home": 5.6,
+      "model_margin_home": 5.7,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1587,7 +1587,7 @@
       "away_team": "MIN",
       "spread_line": 9.5,
       "result": -3,
-      "model_margin_home": 21.5,
+      "model_margin_home": 21.6,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1611,7 +1611,7 @@
       "away_team": "SEA",
       "spread_line": -2.5,
       "result": -24,
-      "model_margin_home": 16.2,
+      "model_margin_home": 16.3,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1635,7 +1635,7 @@
       "away_team": "ARI",
       "spread_line": 7.0,
       "result": 22,
-      "model_margin_home": -8.6,
+      "model_margin_home": -8.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1659,7 +1659,7 @@
       "away_team": "BAL",
       "spread_line": -4.5,
       "result": -8,
-      "model_margin_home": -18.3,
+      "model_margin_home": -18.4,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -1707,7 +1707,7 @@
       "away_team": "JAX",
       "spread_line": -1.5,
       "result": 7,
-      "model_margin_home": -7.4,
+      "model_margin_home": -7.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1743,7 +1743,7 @@
       "away_team": "NE",
       "spread_line": 2.5,
       "result": -5,
-      "model_margin_home": 2.5,
+      "model_margin_home": 2.4,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -1779,7 +1779,7 @@
       "away_team": "PHI",
       "spread_line": 1.5,
       "result": -3,
-      "model_margin_home": 16.2,
+      "model_margin_home": 16.3,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1791,7 +1791,7 @@
       "away_team": "PIT",
       "spread_line": 3.0,
       "result": 15,
-      "model_margin_home": -9.1,
+      "model_margin_home": -9.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1839,7 +1839,7 @@
       "away_team": "CIN",
       "spread_line": 5.5,
       "result": 22,
-      "model_margin_home": -7.7,
+      "model_margin_home": -7.6,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -1851,7 +1851,7 @@
       "away_team": "DAL",
       "spread_line": -3.5,
       "result": -17,
-      "model_margin_home": -32.1,
+      "model_margin_home": -32.2,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -1887,7 +1887,7 @@
       "away_team": "HOU",
       "spread_line": -5.5,
       "result": -3,
-      "model_margin_home": 9.4,
+      "model_margin_home": 9.5,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1899,7 +1899,7 @@
       "away_team": "KC",
       "spread_line": -3.5,
       "result": 3,
-      "model_margin_home": -2.8,
+      "model_margin_home": -2.9,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -1935,7 +1935,7 @@
       "away_team": "SEA",
       "spread_line": 3.0,
       "result": 2,
-      "model_margin_home": 14.2,
+      "model_margin_home": 14.1,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -1971,7 +1971,7 @@
       "away_team": "WAS",
       "spread_line": 2.5,
       "result": 3,
-      "model_margin_home": -2.4,
+      "model_margin_home": -2.6,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2055,7 +2055,7 @@
       "away_team": "MIN",
       "spread_line": 6.5,
       "result": 17,
-      "model_margin_home": 26.8,
+      "model_margin_home": 26.9,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2067,7 +2067,7 @@
       "away_team": "NE",
       "spread_line": -7.5,
       "result": -6,
-      "model_margin_home": 13.2,
+      "model_margin_home": 13.1,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2079,7 +2079,7 @@
       "away_team": "NYG",
       "spread_line": 14.0,
       "result": 7,
-      "model_margin_home": -0.6,
+      "model_margin_home": -0.5,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2091,7 +2091,7 @@
       "away_team": "NYJ",
       "spread_line": 14.0,
       "result": 13,
-      "model_margin_home": 6.2,
+      "model_margin_home": 6.3,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2103,7 +2103,7 @@
       "away_team": "PHI",
       "spread_line": -3.0,
       "result": 3,
-      "model_margin_home": 24.1,
+      "model_margin_home": 24.2,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2115,7 +2115,7 @@
       "away_team": "PIT",
       "spread_line": 3.0,
       "result": 3,
-      "model_margin_home": 6.6,
+      "model_margin_home": 6.5,
       "our_pick": "home",
       "push": true,
       "correct": null
@@ -2175,7 +2175,7 @@
       "away_team": "BUF",
       "spread_line": -3.0,
       "result": -19,
-      "model_margin_home": -5.3,
+      "model_margin_home": -5.2,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2199,7 +2199,7 @@
       "away_team": "CIN",
       "spread_line": 7.0,
       "result": -18,
-      "model_margin_home": -4.7,
+      "model_margin_home": -4.6,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2211,7 +2211,7 @@
       "away_team": "DEN",
       "spread_line": -6.5,
       "result": -1,
-      "model_margin_home": 15.3,
+      "model_margin_home": 15.4,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2235,7 +2235,7 @@
       "away_team": "HOU",
       "spread_line": 3.0,
       "result": -4,
-      "model_margin_home": 20.2,
+      "model_margin_home": 20.3,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -2295,7 +2295,7 @@
       "away_team": "MIN",
       "spread_line": 12.5,
       "result": 26,
-      "model_margin_home": 10.6,
+      "model_margin_home": 10.7,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2319,7 +2319,7 @@
       "away_team": "NYG",
       "spread_line": 7.0,
       "result": 18,
-      "model_margin_home": -5.9,
+      "model_margin_home": -5.8,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2343,7 +2343,7 @@
       "away_team": "CHI",
       "spread_line": 6.5,
       "result": 7,
-      "model_margin_home": 4.9,
+      "model_margin_home": 5.0,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2391,7 +2391,7 @@
       "away_team": "HOU",
       "spread_line": 4.5,
       "result": -10,
-      "model_margin_home": 14.5,
+      "model_margin_home": 14.6,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -2403,7 +2403,7 @@
       "away_team": "IND",
       "spread_line": -2.5,
       "result": 17,
-      "model_margin_home": -8.3,
+      "model_margin_home": -8.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2475,7 +2475,7 @@
       "away_team": "SEA",
       "spread_line": -7.0,
       "result": -28,
-      "model_margin_home": 5.8,
+      "model_margin_home": 5.7,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -2487,7 +2487,7 @@
       "away_team": "TEN",
       "spread_line": 4.5,
       "result": -2,
-      "model_margin_home": -13.6,
+      "model_margin_home": -13.7,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2499,7 +2499,7 @@
       "away_team": "WAS",
       "spread_line": -1.5,
       "result": 31,
-      "model_margin_home": -23.4,
+      "model_margin_home": -23.6,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2583,7 +2583,7 @@
       "away_team": "DET",
       "spread_line": 5.5,
       "result": 7,
-      "model_margin_home": 4.6,
+      "model_margin_home": 4.5,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2595,7 +2595,7 @@
       "away_team": "GB",
       "spread_line": -1.5,
       "result": 8,
-      "model_margin_home": -13.1,
+      "model_margin_home": -13.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2607,7 +2607,7 @@
       "away_team": "IND",
       "spread_line": 13.5,
       "result": 2,
-      "model_margin_home": -10.1,
+      "model_margin_home": -10.0,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2619,7 +2619,7 @@
       "away_team": "LAC",
       "spread_line": 5.5,
       "result": -3,
-      "model_margin_home": 10.6,
+      "model_margin_home": 10.7,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -2643,7 +2643,7 @@
       "away_team": "MIA",
       "spread_line": 3.0,
       "result": 13,
-      "model_margin_home": -2.3,
+      "model_margin_home": -2.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2667,7 +2667,7 @@
       "away_team": "NYJ",
       "spread_line": 13.5,
       "result": 28,
-      "model_margin_home": -1.9,
+      "model_margin_home": -1.8,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2679,7 +2679,7 @@
       "away_team": "TEN",
       "spread_line": 12.5,
       "result": 13,
-      "model_margin_home": 15.7,
+      "model_margin_home": 15.6,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2691,7 +2691,7 @@
       "away_team": "WAS",
       "spread_line": 2.5,
       "result": -8,
-      "model_margin_home": -1.2,
+      "model_margin_home": -1.4,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2739,7 +2739,7 @@
       "away_team": "GB",
       "spread_line": 1.5,
       "result": 6,
-      "model_margin_home": -2.1,
+      "model_margin_home": -2.2,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -2751,7 +2751,7 @@
       "away_team": "JAX",
       "spread_line": 3.5,
       "result": -14,
-      "model_margin_home": 0.9,
+      "model_margin_home": 0.8,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2775,7 +2775,7 @@
       "away_team": "LAC",
       "spread_line": 1.5,
       "result": -17,
-      "model_margin_home": 28.7,
+      "model_margin_home": 28.8,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -2787,7 +2787,7 @@
       "away_team": "LA",
       "spread_line": 1.5,
       "result": 1,
-      "model_margin_home": -12.0,
+      "model_margin_home": -11.9,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2847,7 +2847,7 @@
       "away_team": "PHI",
       "spread_line": -7.0,
       "result": -11,
-      "model_margin_home": 15.3,
+      "model_margin_home": 15.4,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -2859,7 +2859,7 @@
       "away_team": "PIT",
       "spread_line": 7.5,
       "result": -5,
-      "model_margin_home": 4.6,
+      "model_margin_home": 4.5,
       "our_pick": "away",
       "push": false,
       "correct": true
@@ -2931,7 +2931,7 @@
       "away_team": "DAL",
       "spread_line": -8.5,
       "result": -7,
-      "model_margin_home": -7.1,
+      "model_margin_home": -7.0,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2943,7 +2943,7 @@
       "away_team": "DEN",
       "spread_line": -13.5,
       "result": -7,
-      "model_margin_home": 5.6,
+      "model_margin_home": 5.7,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -2979,7 +2979,7 @@
       "away_team": "JAX",
       "spread_line": -3.5,
       "result": -6,
-      "model_margin_home": 11.2,
+      "model_margin_home": 11.1,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -3015,7 +3015,7 @@
       "away_team": "NO",
       "spread_line": -1.5,
       "result": -8,
-      "model_margin_home": 6.2,
+      "model_margin_home": 6.3,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -3051,7 +3051,7 @@
       "away_team": "PIT",
       "spread_line": -4.5,
       "result": 7,
-      "model_margin_home": -20.0,
+      "model_margin_home": -20.1,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -3063,7 +3063,7 @@
       "away_team": "SEA",
       "spread_line": -6.5,
       "result": -17,
-      "model_margin_home": 7.7,
+      "model_margin_home": 7.6,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -3099,7 +3099,7 @@
       "away_team": "BAL",
       "spread_line": -4.5,
       "result": 2,
-      "model_margin_home": -1.3,
+      "model_margin_home": -1.2,
       "our_pick": "home",
       "push": false,
       "correct": true
@@ -3147,10 +3147,10 @@
       "away_team": "DET",
       "spread_line": 3.5,
       "result": -3,
-      "model_margin_home": 3.5,
-      "our_pick": "home",
+      "model_margin_home": 3.4,
+      "our_pick": "away",
       "push": false,
-      "correct": false
+      "correct": true
     },
     {
       "game_id": "2025_18_GB_MIN",
@@ -3159,7 +3159,7 @@
       "away_team": "GB",
       "spread_line": 12.5,
       "result": 13,
-      "model_margin_home": -24.0,
+      "model_margin_home": -24.1,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -3183,7 +3183,7 @@
       "away_team": "KC",
       "spread_line": -3.5,
       "result": 2,
-      "model_margin_home": -14.0,
+      "model_margin_home": -14.1,
       "our_pick": "away",
       "push": false,
       "correct": false
@@ -3243,7 +3243,7 @@
       "away_team": "SEA",
       "spread_line": -2.5,
       "result": -10,
-      "model_margin_home": 15.8,
+      "model_margin_home": 15.7,
       "our_pick": "home",
       "push": false,
       "correct": false
@@ -3267,7 +3267,7 @@
       "away_team": "WAS",
       "spread_line": 3.0,
       "result": -7,
-      "model_margin_home": -12.3,
+      "model_margin_home": -12.4,
       "our_pick": "away",
       "push": false,
       "correct": true
