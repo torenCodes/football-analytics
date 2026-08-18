@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-12T15:27:20.549512+00:00"
+    "generated_at": "2026-08-18T15:34:11.848982+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -19,9 +19,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 24.14,
-          "market_rank": 9.19,
+          "market_rank": 9.48,
           "our_rank": 1,
-          "market_gap": 8.2
+          "market_gap": 8.5
         },
         {
           "player_id": "00-0039851",
@@ -35,25 +35,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 21.93,
-          "market_rank": 3.51,
+          "market_rank": 3.75,
           "our_rank": 2,
-          "market_gap": 1.5
-        },
-        {
-          "player_id": "00-0026498",
-          "name": "Matthew Stafford",
-          "position": "QB",
-          "team": "LA",
-          "baseline_ppg": 21.1,
-          "season_ppg": 20.85,
-          "last6_ppg": 21.35,
-          "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 21.9,
-          "market_rank": 14.67,
-          "our_rank": 3,
-          "market_gap": 11.7
+          "market_gap": 1.8
         },
         {
           "player_id": "00-0034857",
@@ -67,9 +51,25 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 21.9,
-          "market_rank": 1.02,
+          "market_rank": 1.03,
+          "our_rank": 3,
+          "market_gap": -2.0
+        },
+        {
+          "player_id": "00-0026498",
+          "name": "Matthew Stafford",
+          "position": "QB",
+          "team": "LA",
+          "baseline_ppg": 21.1,
+          "season_ppg": 20.85,
+          "last6_ppg": 21.35,
+          "games_played_2025": 17,
+          "oline_continuity_pct": 1.0,
+          "same_head_coach": true,
+          "edge_score": 21.9,
+          "market_rank": 14.55,
           "our_rank": 4,
-          "market_gap": -3.0
+          "market_gap": 10.6
         },
         {
           "player_id": "00-0037834",
@@ -83,9 +83,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 21.05,
-          "market_rank": 12.07,
+          "market_rank": 12.67,
           "our_rank": 5,
-          "market_gap": 7.1
+          "market_gap": 7.7
         },
         {
           "player_id": "00-0036442",
@@ -99,9 +99,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.79,
-          "market_rank": 4.62,
+          "market_rank": 4.42,
           "our_rank": 6,
-          "market_gap": -1.4
+          "market_gap": -1.6
         },
         {
           "player_id": "00-0039732",
@@ -115,9 +115,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 18.72,
-          "market_rank": 13.75,
+          "market_rank": 13.53,
           "our_rank": 7,
-          "market_gap": 6.8
+          "market_gap": 6.5
         },
         {
           "player_id": "00-0036389",
@@ -131,25 +131,25 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 18.67,
-          "market_rank": 6.1,
+          "market_rank": 5.77,
           "our_rank": 8,
-          "market_gap": -1.9
+          "market_gap": -2.2
         },
         {
           "player_id": "00-0039918",
           "name": "Caleb Williams",
           "position": "QB",
           "team": "CHI",
-          "baseline_ppg": 18.08,
-          "season_ppg": 18.83,
+          "baseline_ppg": 18.1,
+          "season_ppg": 18.86,
           "last6_ppg": 17.33,
           "games_played_2025": 17,
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 18.58,
-          "market_rank": 7.76,
+          "edge_score": 18.6,
+          "market_rank": 7.64,
           "our_rank": 9,
-          "market_gap": -1.2
+          "market_gap": -1.4
         },
         {
           "player_id": "00-0033873",
@@ -163,9 +163,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.18,
-          "market_rank": 13.85,
+          "market_rank": 13.89,
           "our_rank": 10,
-          "market_gap": 3.8
+          "market_gap": 3.9
         },
         {
           "player_id": "00-0033106",
@@ -179,9 +179,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 18.12,
-          "market_rank": 15.85,
+          "market_rank": 15.18,
           "our_rank": 11,
-          "market_gap": 4.8
+          "market_gap": 4.2
         },
         {
           "player_id": "00-0040743",
@@ -195,9 +195,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.73,
-          "market_rank": 19.14,
+          "market_rank": 18.95,
           "our_rank": 12,
-          "market_gap": 7.1
+          "market_gap": 6.9
         },
         {
           "player_id": "00-0033077",
@@ -211,9 +211,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.58,
-          "market_rank": 9.81,
+          "market_rank": 9.51,
           "our_rank": 13,
-          "market_gap": -3.2
+          "market_gap": -3.5
         },
         {
           "player_id": "00-0040691",
@@ -227,9 +227,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 17.46,
-          "market_rank": 12.08,
+          "market_rank": 12.51,
           "our_rank": 14,
-          "market_gap": -1.9
+          "market_gap": -1.5
         },
         {
           "player_id": "00-0035710",
@@ -243,9 +243,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.15,
-          "market_rank": 24.24,
+          "market_rank": 24.26,
           "our_rank": 15,
-          "market_gap": 9.2
+          "market_gap": 9.3
         },
         {
           "player_id": "00-0033119",
@@ -259,9 +259,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 16.97,
-          "market_rank": 27.05,
+          "market_rank": 27.0,
           "our_rank": 16,
-          "market_gap": 11.1
+          "market_gap": 11.0
         },
         {
           "player_id": "00-0039910",
@@ -275,7 +275,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 16.52,
-          "market_rank": 5.06,
+          "market_rank": 5.14,
           "our_rank": 17,
           "market_gap": -11.9
         },
@@ -291,9 +291,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 16.48,
-          "market_rank": 18.36,
+          "market_rank": 18.23,
           "our_rank": 18,
-          "market_gap": 0.4
+          "market_gap": 0.2
         },
         {
           "player_id": "00-0036355",
@@ -307,25 +307,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 16.1,
-          "market_rank": 7.82,
+          "market_rank": 7.96,
           "our_rank": 19,
-          "market_gap": -11.2
-        },
-        {
-          "player_id": "00-0036264",
-          "name": "Jordan Love",
-          "position": "QB",
-          "team": "GB",
-          "baseline_ppg": 15.26,
-          "season_ppg": 15.94,
-          "last6_ppg": 14.58,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 0.6,
-          "same_head_coach": true,
-          "edge_score": 15.46,
-          "market_rank": 18.52,
-          "our_rank": 20,
-          "market_gap": -1.5
+          "market_gap": -11.0
         },
         {
           "player_id": "00-0035228",
@@ -339,9 +323,25 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 15.46,
-          "market_rank": 16.65,
+          "market_rank": 17.08,
+          "our_rank": 20,
+          "market_gap": -2.9
+        },
+        {
+          "player_id": "00-0036264",
+          "name": "Jordan Love",
+          "position": "QB",
+          "team": "GB",
+          "baseline_ppg": 15.26,
+          "season_ppg": 15.94,
+          "last6_ppg": 14.58,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 0.6,
+          "same_head_coach": true,
+          "edge_score": 15.46,
+          "market_rank": 18.68,
           "our_rank": 21,
-          "market_gap": -4.4
+          "market_gap": -2.3
         },
         {
           "player_id": "00-0036945",
@@ -355,9 +355,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 15.07,
-          "market_rank": 39.88,
+          "market_rank": 40.63,
           "our_rank": 22,
-          "market_gap": 17.9
+          "market_gap": 18.6
         },
         {
           "player_id": "00-0039917",
@@ -371,9 +371,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.0,
-          "market_rank": 32.85,
+          "market_rank": 33.07,
           "our_rank": 23,
-          "market_gap": 9.9
+          "market_gap": 10.1
         },
         {
           "player_id": "00-0039150",
@@ -387,9 +387,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 14.88,
-          "market_rank": 25.67,
+          "market_rank": 25.78,
           "our_rank": 24,
-          "market_gap": 1.7
+          "market_gap": 1.8
         },
         {
           "player_id": "00-0039163",
@@ -403,9 +403,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 14.64,
-          "market_rank": 22.88,
+          "market_rank": 22.71,
           "our_rank": 25,
-          "market_gap": -2.1
+          "market_gap": -2.3
         },
         {
           "player_id": "00-0032950",
@@ -419,9 +419,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 14.57,
-          "market_rank": 74.29,
+          "market_rank": 67.14,
           "our_rank": 26,
-          "market_gap": 48.3
+          "market_gap": 41.1
         },
         {
           "player_id": "00-0034869",
@@ -435,9 +435,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 14.28,
-          "market_rank": 23.0,
+          "market_rank": 22.79,
           "our_rank": 27,
-          "market_gap": -4.0
+          "market_gap": -4.2
         },
         {
           "player_id": "00-0034796",
@@ -451,9 +451,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 14.24,
-          "market_rank": 2.51,
+          "market_rank": 2.58,
           "our_rank": 28,
-          "market_gap": -25.5
+          "market_gap": -25.4
         },
         {
           "player_id": "00-0023459",
@@ -467,9 +467,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 13.64,
-          "market_rank": 28.48,
+          "market_rank": 28.28,
           "our_rank": 29,
-          "market_gap": -0.5
+          "market_gap": -0.7
         },
         {
           "player_id": "00-0038128",
@@ -483,9 +483,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.99,
-          "market_rank": 20.46,
+          "market_rank": 20.22,
           "our_rank": 30,
-          "market_gap": -9.5
+          "market_gap": -9.8
         },
         {
           "player_id": "00-0032268",
@@ -499,9 +499,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.89,
-          "market_rank": 42.83,
+          "market_rank": 41.89,
           "our_rank": 31,
-          "market_gap": 11.8
+          "market_gap": 10.9
         },
         {
           "player_id": "00-0039923",
@@ -515,9 +515,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.69,
-          "market_rank": 36.23,
+          "market_rank": 36.97,
           "our_rank": 32,
-          "market_gap": 4.2
+          "market_gap": 5.0
         },
         {
           "player_id": "00-0029604",
@@ -531,9 +531,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.23,
-          "market_rank": 33.01,
+          "market_rank": 33.07,
           "our_rank": 33,
-          "market_gap": 0.0
+          "market_gap": 0.1
         },
         {
           "player_id": "00-0040676",
@@ -547,9 +547,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 11.96,
-          "market_rank": 24.33,
+          "market_rank": 24.37,
           "our_rank": 34,
-          "market_gap": -9.7
+          "market_gap": -9.6
         },
         {
           "player_id": "00-0026158",
@@ -563,9 +563,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.79,
-          "market_rank": 42.41,
+          "market_rank": 42.0,
           "our_rank": 35,
-          "market_gap": 7.4
+          "market_gap": 7.0
         },
         {
           "player_id": "00-0036972",
@@ -579,9 +579,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.47,
-          "market_rank": 38.69,
+          "market_rank": 38.81,
           "our_rank": 36,
-          "market_gap": 2.7
+          "market_gap": 2.8
         },
         {
           "player_id": "00-0036898",
@@ -595,9 +595,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 11.33,
-          "market_rank": 55.4,
+          "market_rank": 51.33,
           "our_rank": 37,
-          "market_gap": 18.4
+          "market_gap": 14.3
         },
         {
           "player_id": "00-0030565",
@@ -611,9 +611,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 11.31,
-          "market_rank": 28.65,
+          "market_rank": 28.52,
           "our_rank": 38,
-          "market_gap": -9.4
+          "market_gap": -9.5
         },
         {
           "player_id": "00-0039376",
@@ -627,9 +627,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.81,
-          "market_rank": 55.0,
+          "market_rank": 52.8,
           "our_rank": 39,
-          "market_gap": 16.0
+          "market_gap": 13.8
         },
         {
           "player_id": "00-0028118",
@@ -643,25 +643,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.44,
-          "market_rank": 50.0,
+          "market_rank": 50.17,
           "our_rank": 40,
-          "market_gap": 10.0
-        },
-        {
-          "player_id": "00-0036212",
-          "name": "Tua Tagovailoa",
-          "position": "QB",
-          "team": "MIA",
-          "baseline_ppg": 10.49,
-          "season_ppg": 11.62,
-          "last6_ppg": 9.36,
-          "games_played_2025": 14,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": false,
-          "edge_score": 10.29,
-          "market_rank": 30.95,
-          "our_rank": 41,
-          "market_gap": -10.1
+          "market_gap": 10.2
         },
         {
           "player_id": "00-0040668",
@@ -675,9 +659,25 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 10.29,
-          "market_rank": 33.76,
+          "market_rank": 33.94,
+          "our_rank": 41,
+          "market_gap": -7.1
+        },
+        {
+          "player_id": "00-0036212",
+          "name": "Tua Tagovailoa",
+          "position": "QB",
+          "team": "MIA",
+          "baseline_ppg": 10.49,
+          "season_ppg": 11.62,
+          "last6_ppg": 9.36,
+          "games_played_2025": 14,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": false,
+          "edge_score": 10.29,
+          "market_rank": 30.85,
           "our_rank": 42,
-          "market_gap": -8.2
+          "market_gap": -11.1
         },
         {
           "player_id": "00-0035100",
@@ -707,9 +707,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.28,
-          "market_rank": 58.29,
+          "market_rank": 62.13,
           "our_rank": 44,
-          "market_gap": 14.3
+          "market_gap": 18.1
         },
         {
           "player_id": "00-0029263",
@@ -739,9 +739,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 8.1,
-          "market_rank": 48.92,
+          "market_rank": 48.43,
           "our_rank": 46,
-          "market_gap": 2.9
+          "market_gap": 2.4
         },
         {
           "player_id": "00-0035993",
@@ -755,9 +755,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 7.23,
-          "market_rank": 54.4,
+          "market_rank": 53.11,
           "our_rank": 47,
-          "market_gap": 7.4
+          "market_gap": 6.1
         },
         {
           "player_id": "00-0040206",
@@ -771,9 +771,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.1,
-          "market_rank": 45.73,
+          "market_rank": 46.92,
           "our_rank": 48,
-          "market_gap": -2.3
+          "market_gap": -1.1
         },
         {
           "player_id": "00-0026158",
@@ -787,9 +787,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 6.81,
-          "market_rank": 42.41,
+          "market_rank": 42.0,
           "our_rank": 49,
-          "market_gap": -6.6
+          "market_gap": -7.0
         },
         {
           "player_id": "00-0040398",
@@ -803,9 +803,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 6.29,
-          "market_rank": 76.0,
+          "market_rank": 69.67,
           "our_rank": 50,
-          "market_gap": 26.0
+          "market_gap": 19.7
         }
       ],
       "RB": [
@@ -821,9 +821,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 23.81,
-          "market_rank": 3.51,
+          "market_rank": 3.78,
           "our_rank": 1,
-          "market_gap": 2.5
+          "market_gap": 2.8
         },
         {
           "player_id": "00-0038542",
@@ -837,9 +837,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 23.59,
-          "market_rank": 1.54,
+          "market_rank": 1.71,
           "our_rank": 2,
-          "market_gap": -0.5
+          "market_gap": -0.3
         },
         {
           "player_id": "00-0039139",
@@ -853,9 +853,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 19.98,
-          "market_rank": 1.54,
+          "market_rank": 1.34,
           "our_rank": 3,
-          "market_gap": -1.5
+          "market_gap": -1.7
         },
         {
           "player_id": "00-0038597",
@@ -869,9 +869,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 19.96,
-          "market_rank": 6.84,
+          "market_rank": 6.55,
           "our_rank": 4,
-          "market_gap": 2.8
+          "market_gap": 2.5
         },
         {
           "player_id": "00-0039040",
@@ -885,9 +885,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 19.0,
-          "market_rank": 7.79,
+          "market_rank": 7.97,
           "our_rank": 5,
-          "market_gap": 2.8
+          "market_gap": 3.0
         },
         {
           "player_id": "00-0036223",
@@ -901,7 +901,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.81,
-          "market_rank": 4.59,
+          "market_rank": 4.56,
           "our_rank": 6,
           "market_gap": -1.4
         },
@@ -917,9 +917,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.51,
-          "market_rank": 7.15,
+          "market_rank": 6.55,
           "our_rank": 7,
-          "market_gap": 0.2
+          "market_gap": -0.5
         },
         {
           "player_id": "00-0032764",
@@ -933,7 +933,7 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 17.39,
-          "market_rank": 13.44,
+          "market_rank": 13.45,
           "our_rank": 8,
           "market_gap": 5.4
         },
@@ -949,9 +949,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 17.02,
-          "market_rank": 19.26,
+          "market_rank": 19.48,
           "our_rank": 9,
-          "market_gap": 10.3
+          "market_gap": 10.5
         },
         {
           "player_id": "00-0037840",
@@ -965,9 +965,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 16.15,
-          "market_rank": 15.01,
+          "market_rank": 14.9,
           "our_rank": 10,
-          "market_gap": 5.0
+          "market_gap": 4.9
         },
         {
           "player_id": "00-0040666",
@@ -981,9 +981,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 15.71,
-          "market_rank": 8.91,
+          "market_rank": 9.36,
           "our_rank": 11,
-          "market_gap": -2.1
+          "market_gap": -1.6
         },
         {
           "player_id": "00-0036875",
@@ -997,9 +997,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.55,
-          "market_rank": 29.33,
+          "market_rank": 29.08,
           "our_rank": 12,
-          "market_gap": 17.3
+          "market_gap": 17.1
         },
         {
           "player_id": "00-0036973",
@@ -1013,9 +1013,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.5,
-          "market_rank": 17.73,
+          "market_rank": 18.47,
           "our_rank": 13,
-          "market_gap": 4.7
+          "market_gap": 5.5
         },
         {
           "player_id": "00-0036275",
@@ -1029,9 +1029,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.25,
-          "market_rank": 21.7,
+          "market_rank": 21.38,
           "our_rank": 14,
-          "market_gap": 7.7
+          "market_gap": 7.4
         },
         {
           "player_id": "00-0040730",
@@ -1045,9 +1045,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 15.1,
-          "market_rank": 32.62,
+          "market_rank": 32.92,
           "our_rank": 15,
-          "market_gap": 17.6
+          "market_gap": 17.9
         },
         {
           "player_id": "00-0034844",
@@ -1061,7 +1061,7 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 14.84,
-          "market_rank": 9.26,
+          "market_rank": 9.35,
           "our_rank": 16,
           "market_gap": -6.7
         },
@@ -1077,9 +1077,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 14.47,
-          "market_rank": 16.51,
+          "market_rank": 16.27,
           "our_rank": 17,
-          "market_gap": -0.5
+          "market_gap": -0.7
         },
         {
           "player_id": "00-0036919",
@@ -1093,9 +1093,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 13.87,
-          "market_rank": 34.37,
+          "market_rank": 34.51,
           "our_rank": 18,
-          "market_gap": 16.4
+          "market_gap": 16.5
         },
         {
           "player_id": "00-0039165",
@@ -1109,9 +1109,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 13.57,
-          "market_rank": 46.95,
+          "market_rank": 47.55,
           "our_rank": 19,
-          "market_gap": 28.0
+          "market_gap": 28.5
         },
         {
           "player_id": "00-0037228",
@@ -1125,9 +1125,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 13.43,
-          "market_rank": 26.82,
+          "market_rank": 26.96,
           "our_rank": 20,
-          "market_gap": 6.8
+          "market_gap": 7.0
         },
         {
           "player_id": "00-0040122",
@@ -1141,25 +1141,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 13.34,
-          "market_rank": 6.35,
+          "market_rank": 6.39,
           "our_rank": 21,
-          "market_gap": -14.7
-        },
-        {
-          "player_id": "00-0039361",
-          "name": "Bucky Irving",
-          "position": "RB",
-          "team": "TB",
-          "baseline_ppg": 12.47,
-          "season_ppg": 13.85,
-          "last6_ppg": 11.08,
-          "games_played_2025": 10,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 13.27,
-          "market_rank": 21.87,
-          "our_rank": 22,
-          "market_gap": -0.1
+          "market_gap": -14.6
         },
         {
           "player_id": "00-0040734",
@@ -1173,9 +1157,25 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.27,
-          "market_rank": 23.02,
+          "market_rank": 23.47,
+          "our_rank": 22,
+          "market_gap": 1.5
+        },
+        {
+          "player_id": "00-0039361",
+          "name": "Bucky Irving",
+          "position": "RB",
+          "team": "TB",
+          "baseline_ppg": 12.47,
+          "season_ppg": 13.85,
+          "last6_ppg": 11.08,
+          "games_played_2025": 10,
+          "oline_continuity_pct": 1.0,
+          "same_head_coach": true,
+          "edge_score": 13.27,
+          "market_rank": 21.18,
           "our_rank": 23,
-          "market_gap": 0.0
+          "market_gap": -1.8
         },
         {
           "player_id": "00-0035700",
@@ -1189,7 +1189,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 13.15,
-          "market_rank": 16.0,
+          "market_rank": 16.01,
           "our_rank": 24,
           "market_gap": -8.0
         },
@@ -1205,9 +1205,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 12.61,
-          "market_rank": 43.62,
+          "market_rank": 43.21,
           "our_rank": 25,
-          "market_gap": 18.6
+          "market_gap": 18.2
         },
         {
           "player_id": "00-0038120",
@@ -1221,9 +1221,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.41,
-          "market_rank": 14.1,
+          "market_rank": 14.6,
           "our_rank": 26,
-          "market_gap": -11.9
+          "market_gap": -11.4
         },
         {
           "player_id": "00-0038134",
@@ -1237,9 +1237,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.07,
-          "market_rank": 10.54,
+          "market_rank": 10.19,
           "our_rank": 27,
-          "market_gap": -16.5
+          "market_gap": -16.8
         },
         {
           "player_id": "00-0035261",
@@ -1253,9 +1253,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 11.86,
-          "market_rank": 29.46,
+          "market_rank": 28.88,
           "our_rank": 28,
-          "market_gap": 1.5
+          "market_gap": 0.9
         },
         {
           "player_id": "00-0036158",
@@ -1269,9 +1269,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 11.5,
-          "market_rank": 34.37,
+          "market_rank": 34.18,
           "our_rank": 29,
-          "market_gap": 5.4
+          "market_gap": 5.2
         },
         {
           "player_id": "00-0036139",
@@ -1285,9 +1285,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.39,
-          "market_rank": 31.37,
+          "market_rank": 31.29,
           "our_rank": 30,
-          "market_gap": 1.4
+          "market_gap": 1.3
         },
         {
           "player_id": "00-0039738",
@@ -1301,9 +1301,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 10.74,
-          "market_rank": 36.87,
+          "market_rank": 37.3,
           "our_rank": 31,
-          "market_gap": 5.9
+          "market_gap": 6.3
         },
         {
           "player_id": "00-0033293",
@@ -1317,9 +1317,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.19,
-          "market_rank": 37.09,
+          "market_rank": 38.36,
           "our_rank": 32,
-          "market_gap": 5.1
+          "market_gap": 6.4
         },
         {
           "player_id": "00-0039373",
@@ -1333,9 +1333,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.12,
-          "market_rank": 92.66,
+          "market_rank": 90.79,
           "our_rank": 33,
-          "market_gap": 59.7
+          "market_gap": 57.8
         },
         {
           "player_id": "00-0040784",
@@ -1349,9 +1349,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 9.89,
-          "market_rank": 21.89,
+          "market_rank": 21.81,
           "our_rank": 34,
-          "market_gap": -12.1
+          "market_gap": -12.2
         },
         {
           "player_id": "00-0040236",
@@ -1365,9 +1365,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.56,
-          "market_rank": 35.61,
+          "market_rank": 36.06,
           "our_rank": 35,
-          "market_gap": 0.6
+          "market_gap": 1.1
         },
         {
           "player_id": "00-0035685",
@@ -1381,9 +1381,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 9.29,
-          "market_rank": 22.3,
+          "market_rank": 22.04,
           "our_rank": 36,
-          "market_gap": -13.7
+          "market_gap": -14.0
         },
         {
           "player_id": "00-0038611",
@@ -1397,9 +1397,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 9.17,
-          "market_rank": 46.77,
+          "market_rank": 45.82,
           "our_rank": 37,
-          "market_gap": 9.8
+          "market_gap": 8.8
         },
         {
           "player_id": "00-0040242",
@@ -1413,9 +1413,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.88,
-          "market_rank": 40.33,
+          "market_rank": 39.18,
           "our_rank": 38,
-          "market_gap": 2.3
+          "market_gap": 1.2
         },
         {
           "player_id": "00-0039921",
@@ -1429,9 +1429,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 8.75,
-          "market_rank": 78.79,
+          "market_rank": 77.85,
           "our_rank": 39,
-          "market_gap": 39.8
+          "market_gap": 38.8
         },
         {
           "player_id": "00-0033906",
@@ -1445,9 +1445,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.72,
-          "market_rank": 47.83,
+          "market_rank": 48.71,
           "our_rank": 40,
-          "market_gap": 7.8
+          "market_gap": 8.7
         },
         {
           "player_id": "00-0040583",
@@ -1461,9 +1461,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 8.71,
-          "market_rank": 45.57,
+          "market_rank": 45.96,
           "our_rank": 41,
-          "market_gap": 4.6
+          "market_gap": 5.0
         },
         {
           "player_id": "00-0040202",
@@ -1477,9 +1477,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.41,
-          "market_rank": 79.87,
+          "market_rank": 81.36,
           "our_rank": 42,
-          "market_gap": 37.9
+          "market_gap": 39.4
         },
         {
           "player_id": "00-0036555",
@@ -1493,9 +1493,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.38,
-          "market_rank": 30.16,
+          "market_rank": 31.05,
           "our_rank": 43,
-          "market_gap": -12.8
+          "market_gap": -11.9
         },
         {
           "player_id": "00-0037157",
@@ -1509,9 +1509,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 8.35,
-          "market_rank": 95.11,
+          "market_rank": 91.24,
           "our_rank": 44,
-          "market_gap": 51.1
+          "market_gap": 47.2
         },
         {
           "player_id": "00-0039032",
@@ -1525,9 +1525,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 8.21,
-          "market_rank": 47.01,
+          "market_rank": 47.7,
           "our_rank": 45,
-          "market_gap": 2.0
+          "market_gap": 2.7
         },
         {
           "player_id": "00-0039391",
@@ -1541,7 +1541,7 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 8.12,
-          "market_rank": 60.42,
+          "market_rank": 60.43,
           "our_rank": 46,
           "market_gap": 14.4
         },
@@ -1557,9 +1557,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 7.96,
-          "market_rank": 84.56,
+          "market_rank": 85.08,
           "our_rank": 47,
-          "market_gap": 37.6
+          "market_gap": 38.1
         },
         {
           "player_id": "00-0036924",
@@ -1573,9 +1573,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 7.84,
-          "market_rank": 98.65,
+          "market_rank": 99.65,
           "our_rank": 48,
-          "market_gap": 50.7
+          "market_gap": 51.7
         },
         {
           "player_id": "00-0037256",
@@ -1589,9 +1589,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 7.82,
-          "market_rank": 35.71,
+          "market_rank": 36.12,
           "our_rank": 49,
-          "market_gap": -13.3
+          "market_gap": -12.9
         },
         {
           "player_id": "00-0035537",
@@ -1605,7 +1605,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.8,
-          "market_rank": 74.35,
+          "market_rank": 74.32,
           "our_rank": 50,
           "market_gap": 24.3
         }
@@ -1623,9 +1623,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 26.27,
-          "market_rank": 2.01,
+          "market_rank": 2.13,
           "our_rank": 1,
-          "market_gap": 1.0
+          "market_gap": 1.1
         },
         {
           "player_id": "00-0036900",
@@ -1639,9 +1639,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 20.29,
-          "market_rank": 1.3,
+          "market_rank": 1.19,
           "our_rank": 2,
-          "market_gap": -0.7
+          "market_gap": -0.8
         },
         {
           "player_id": "00-0038543",
@@ -1655,9 +1655,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 20.13,
-          "market_rank": 3.11,
+          "market_rank": 3.2,
           "our_rank": 3,
-          "market_gap": 0.1
+          "market_gap": 0.2
         },
         {
           "player_id": "00-0037239",
@@ -1671,9 +1671,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.87,
-          "market_rank": 12.42,
+          "market_rank": 12.09,
           "our_rank": 4,
-          "market_gap": 8.4
+          "market_gap": 8.1
         },
         {
           "player_id": "00-0036963",
@@ -1687,9 +1687,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 18.54,
-          "market_rank": 3.83,
+          "market_rank": 3.71,
           "our_rank": 5,
-          "market_gap": -1.2
+          "market_gap": -1.3
         },
         {
           "player_id": "00-0039067",
@@ -1703,9 +1703,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.33,
-          "market_rank": 11.53,
+          "market_rank": 12.64,
           "our_rank": 6,
-          "market_gap": 5.5
+          "market_gap": 6.6
         },
         {
           "player_id": "00-0035676",
@@ -1719,9 +1719,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 18.03,
-          "market_rank": 9.13,
+          "market_rank": 8.84,
           "our_rank": 7,
-          "market_gap": 2.1
+          "market_gap": 1.8
         },
         {
           "player_id": "00-0037238",
@@ -1735,9 +1735,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.83,
-          "market_rank": 7.72,
+          "market_rank": 7.46,
           "our_rank": 8,
-          "market_gap": -0.3
+          "market_gap": -0.5
         },
         {
           "player_id": "00-0031381",
@@ -1751,9 +1751,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 16.24,
-          "market_rank": 24.75,
+          "market_rank": 25.56,
           "our_rank": 9,
-          "market_gap": 15.8
+          "market_gap": 16.6
         },
         {
           "player_id": "00-0038559",
@@ -1767,9 +1767,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 15.9,
-          "market_rank": 40.07,
+          "market_rank": 40.28,
           "our_rank": 10,
-          "market_gap": 30.1
+          "market_gap": 30.3
         },
         {
           "player_id": "00-0036410",
@@ -1783,9 +1783,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.34,
-          "market_rank": 18.01,
+          "market_rank": 17.56,
           "our_rank": 11,
-          "market_gap": 7.0
+          "market_gap": 6.6
         },
         {
           "player_id": "00-0037240",
@@ -1799,7 +1799,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 15.14,
-          "market_rank": 27.61,
+          "market_rank": 27.65,
           "our_rank": 12,
           "market_gap": 15.6
         },
@@ -1815,9 +1815,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.04,
-          "market_rank": 11.24,
+          "market_rank": 11.33,
           "our_rank": 13,
-          "market_gap": -1.8
+          "market_gap": -1.7
         },
         {
           "player_id": "00-0036358",
@@ -1831,7 +1831,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.02,
-          "market_rank": 5.54,
+          "market_rank": 5.51,
           "our_rank": 14,
           "market_gap": -8.5
         },
@@ -1847,9 +1847,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 14.79,
-          "market_rank": 9.99,
+          "market_rank": 9.7,
           "our_rank": 15,
-          "market_gap": -5.0
+          "market_gap": -5.3
         },
         {
           "player_id": "00-0039064",
@@ -1863,9 +1863,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 14.77,
-          "market_rank": 15.8,
+          "market_rank": 15.51,
           "our_rank": 16,
-          "market_gap": -0.2
+          "market_gap": -0.5
         },
         {
           "player_id": "00-0038117",
@@ -1879,9 +1879,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 14.32,
-          "market_rank": 38.92,
+          "market_rank": 39.2,
           "our_rank": 17,
-          "market_gap": 21.9
+          "market_gap": 22.2
         },
         {
           "player_id": "00-0034348",
@@ -1895,9 +1895,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 14.25,
-          "market_rank": 37.66,
+          "market_rank": 38.68,
           "our_rank": 18,
-          "market_gap": 19.7
+          "market_gap": 20.7
         },
         {
           "player_id": "00-0039337",
@@ -1911,9 +1911,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 14.08,
-          "market_rank": 17.17,
+          "market_rank": 14.9,
           "our_rank": 19,
-          "market_gap": -1.8
+          "market_gap": -4.1
         },
         {
           "player_id": "00-0038124",
@@ -1927,9 +1927,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 13.9,
-          "market_rank": 28.22,
+          "market_rank": 28.01,
           "our_rank": 20,
-          "market_gap": 8.2
+          "market_gap": 8.0
         },
         {
           "player_id": "00-0037664",
@@ -1943,9 +1943,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.88,
-          "market_rank": 37.47,
+          "market_rank": 40.74,
           "our_rank": 21,
-          "market_gap": 16.5
+          "market_gap": 19.7
         },
         {
           "player_id": "00-0038606",
@@ -1959,9 +1959,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.83,
-          "market_rank": 35.73,
+          "market_rank": 32.03,
           "our_rank": 22,
-          "market_gap": 13.7
+          "market_gap": 10.0
         },
         {
           "player_id": "00-0037740",
@@ -1975,9 +1975,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 13.72,
-          "market_rank": 16.23,
+          "market_rank": 16.26,
           "our_rank": 23,
-          "market_gap": -6.8
+          "market_gap": -6.7
         },
         {
           "player_id": "00-0036259",
@@ -1991,9 +1991,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.4,
-          "market_rank": 60.89,
+          "market_rank": 62.52,
           "our_rank": 24,
-          "market_gap": 36.9
+          "market_gap": 38.5
         },
         {
           "player_id": "00-0033040",
@@ -2007,9 +2007,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 13.18,
-          "market_rank": 92.04,
+          "market_rank": 98.42,
           "our_rank": 25,
-          "market_gap": 67.0
+          "market_gap": 73.4
         },
         {
           "player_id": "00-0034960",
@@ -2023,9 +2023,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.65,
-          "market_rank": 43.51,
+          "market_rank": 44.53,
           "our_rank": 26,
-          "market_gap": 17.5
+          "market_gap": 18.5
         },
         {
           "player_id": "00-0031588",
@@ -2039,9 +2039,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.3,
-          "market_rank": 57.48,
+          "market_rank": 46.18,
           "our_rank": 27,
-          "market_gap": 30.5
+          "market_gap": 19.2
         },
         {
           "player_id": "00-0035659",
@@ -2055,9 +2055,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.15,
-          "market_rank": 21.82,
+          "market_rank": 22.31,
           "our_rank": 28,
-          "market_gap": -6.2
+          "market_gap": -5.7
         },
         {
           "player_id": "00-0035640",
@@ -2071,9 +2071,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 11.99,
-          "market_rank": 35.66,
+          "market_rank": 35.9,
           "our_rank": 29,
-          "market_gap": 6.7
+          "market_gap": 6.9
         },
         {
           "player_id": "00-0040124",
@@ -2087,9 +2087,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.83,
-          "market_rank": 17.27,
+          "market_rank": 17.53,
           "our_rank": 30,
-          "market_gap": -12.7
+          "market_gap": -12.5
         },
         {
           "player_id": "00-0031408",
@@ -2103,9 +2103,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 11.44,
-          "market_rank": 25.73,
+          "market_rank": 26.98,
           "our_rank": 31,
-          "market_gap": -5.3
+          "market_gap": -4.0
         },
         {
           "player_id": "00-0038544",
@@ -2119,9 +2119,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 11.36,
-          "market_rank": 43.33,
+          "market_rank": 44.08,
           "our_rank": 32,
-          "market_gap": 11.3
+          "market_gap": 12.1
         },
         {
           "player_id": "00-0039919",
@@ -2135,9 +2135,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.27,
-          "market_rank": 28.98,
+          "market_rank": 28.9,
           "our_rank": 33,
-          "market_gap": -4.0
+          "market_gap": -4.1
         },
         {
           "player_id": "00-0040735",
@@ -2151,9 +2151,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.21,
-          "market_rank": 22.73,
+          "market_rank": 23.25,
           "our_rank": 34,
-          "market_gap": -11.3
+          "market_gap": -10.8
         },
         {
           "player_id": "00-0036912",
@@ -2167,9 +2167,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 11.19,
-          "market_rank": 13.4,
+          "market_rank": 13.28,
           "our_rank": 35,
-          "market_gap": -21.6
+          "market_gap": -21.7
         },
         {
           "player_id": "00-0033921",
@@ -2183,9 +2183,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 11.15,
-          "market_rank": 36.54,
+          "market_rank": 37.36,
           "our_rank": 36,
-          "market_gap": 0.5
+          "market_gap": 1.4
         },
         {
           "player_id": "00-0036322",
@@ -2199,9 +2199,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.56,
-          "market_rank": 5.82,
+          "market_rank": 6.1,
           "our_rank": 37,
-          "market_gap": -31.2
+          "market_gap": -30.9
         },
         {
           "player_id": "00-0034960",
@@ -2215,9 +2215,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 10.55,
-          "market_rank": 43.51,
+          "market_rank": 44.53,
           "our_rank": 38,
-          "market_gap": 5.5
+          "market_gap": 6.5
         },
         {
           "player_id": "00-0037261",
@@ -2231,9 +2231,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.41,
-          "market_rank": 50.93,
+          "market_rank": 50.15,
           "our_rank": 39,
-          "market_gap": 11.9
+          "market_gap": 11.1
         },
         {
           "player_id": "00-0039849",
@@ -2247,7 +2247,7 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 10.22,
-          "market_rank": 33.0,
+          "market_rank": 32.98,
           "our_rank": 40,
           "market_gap": -7.0
         },
@@ -2263,9 +2263,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 10.1,
-          "market_rank": 18.88,
+          "market_rank": 19.03,
           "our_rank": 41,
-          "market_gap": -22.1
+          "market_gap": -22.0
         },
         {
           "player_id": "00-0039491",
@@ -2279,9 +2279,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.08,
-          "market_rank": 52.25,
+          "market_rank": 51.6,
           "our_rank": 42,
-          "market_gap": 10.2
+          "market_gap": 9.6
         },
         {
           "player_id": "00-0034827",
@@ -2295,9 +2295,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.06,
-          "market_rank": 26.57,
+          "market_rank": 25.69,
           "our_rank": 43,
-          "market_gap": -16.4
+          "market_gap": -17.3
         },
         {
           "player_id": "00-0035719",
@@ -2311,9 +2311,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.0,
-          "market_rank": 58.71,
+          "market_rank": 57.24,
           "our_rank": 44,
-          "market_gap": 14.7
+          "market_gap": 13.2
         },
         {
           "player_id": "00-0039146",
@@ -2327,9 +2327,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 9.9,
-          "market_rank": 46.07,
+          "market_rank": 46.64,
           "our_rank": 45,
-          "market_gap": 1.1
+          "market_gap": 1.6
         },
         {
           "player_id": "00-0039893",
@@ -2343,7 +2343,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.89,
-          "market_rank": 35.69,
+          "market_rank": 35.73,
           "our_rank": 46,
           "market_gap": -10.3
         },
@@ -2359,9 +2359,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 9.78,
-          "market_rank": 73.87,
+          "market_rank": 76.24,
           "our_rank": 47,
-          "market_gap": 26.9
+          "market_gap": 29.2
         },
         {
           "player_id": "00-0036252",
@@ -2375,9 +2375,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.68,
-          "market_rank": 37.33,
+          "market_rank": 37.75,
           "our_rank": 48,
-          "market_gap": -10.7
+          "market_gap": -10.2
         },
         {
           "player_id": "00-0037816",
@@ -2391,9 +2391,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 9.58,
-          "market_rank": 52.96,
+          "market_rank": 53.08,
           "our_rank": 49,
-          "market_gap": 4.0
+          "market_gap": 4.1
         },
         {
           "player_id": "00-0039410",
@@ -2407,9 +2407,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.51,
-          "market_rank": 70.44,
+          "market_rank": 69.54,
           "our_rank": 50,
-          "market_gap": 20.4
+          "market_gap": 19.5
         }
       ],
       "TE": [
@@ -2441,9 +2441,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 16.54,
-          "market_rank": 11.21,
+          "market_rank": 11.1,
           "our_rank": 2,
-          "market_gap": 9.2
+          "market_gap": 9.1
         },
         {
           "player_id": "00-0036970",
@@ -2457,9 +2457,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.86,
-          "market_rank": 6.96,
+          "market_rank": 7.11,
           "our_rank": 3,
-          "market_gap": 4.0
+          "market_gap": 4.1
         },
         {
           "player_id": "00-0038996",
@@ -2473,9 +2473,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 14.43,
-          "market_rank": 6.53,
+          "market_rank": 6.06,
           "our_rank": 4,
-          "market_gap": 2.5
+          "market_gap": 2.1
         },
         {
           "player_id": "00-0039338",
@@ -2489,7 +2489,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 13.98,
-          "market_rank": 1.67,
+          "market_rank": 1.72,
           "our_rank": 5,
           "market_gap": -3.3
         },
@@ -2505,9 +2505,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.93,
-          "market_rank": 13.76,
+          "market_rank": 13.51,
           "our_rank": 6,
-          "market_gap": 7.8
+          "market_gap": 7.5
         },
         {
           "player_id": "00-0039065",
@@ -2521,9 +2521,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.81,
-          "market_rank": 7.63,
+          "market_rank": 7.28,
           "our_rank": 7,
-          "market_gap": 0.6
+          "market_gap": 0.3
         },
         {
           "player_id": "00-0040126",
@@ -2537,7 +2537,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.43,
-          "market_rank": 3.24,
+          "market_rank": 3.23,
           "our_rank": 8,
           "market_gap": -4.8
         },
@@ -2553,9 +2553,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.31,
-          "market_rank": 19.29,
+          "market_rank": 19.46,
           "our_rank": 9,
-          "market_gap": 10.3
+          "market_gap": 10.5
         },
         {
           "player_id": "00-0036244",
@@ -2569,9 +2569,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 11.97,
-          "market_rank": 31.75,
+          "market_rank": 32.23,
           "our_rank": 10,
-          "market_gap": 21.8
+          "market_gap": 22.2
         },
         {
           "player_id": "00-0040663",
@@ -2585,9 +2585,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 11.72,
-          "market_rank": 6.0,
+          "market_rank": 6.37,
           "our_rank": 11,
-          "market_gap": -5.0
+          "market_gap": -4.6
         },
         {
           "player_id": "00-0034383",
@@ -2601,9 +2601,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 10.96,
-          "market_rank": 21.19,
+          "market_rank": 20.89,
           "our_rank": 12,
-          "market_gap": 9.2
+          "market_gap": 8.9
         },
         {
           "player_id": "00-0036040",
@@ -2617,9 +2617,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.89,
-          "market_rank": 17.27,
+          "market_rank": 16.49,
           "our_rank": 13,
-          "market_gap": 4.3
+          "market_gap": 3.5
         },
         {
           "player_id": "00-0038935",
@@ -2633,9 +2633,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.69,
-          "market_rank": 18.01,
+          "market_rank": 18.38,
           "our_rank": 14,
-          "market_gap": 4.0
+          "market_gap": 4.4
         },
         {
           "player_id": "00-0038933",
@@ -2649,9 +2649,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.43,
-          "market_rank": 12.6,
+          "market_rank": 12.45,
           "our_rank": 15,
-          "market_gap": -2.4
+          "market_gap": -2.6
         },
         {
           "player_id": "00-0030506",
@@ -2665,9 +2665,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.99,
-          "market_rank": 9.58,
+          "market_rank": 9.86,
           "our_rank": 16,
-          "market_gap": -6.4
+          "market_gap": -6.1
         },
         {
           "player_id": "00-0037112",
@@ -2681,25 +2681,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.9,
-          "market_rank": 36.61,
+          "market_rank": 36.57,
           "our_rank": 17,
           "market_gap": 19.6
-        },
-        {
-          "player_id": "00-0030061",
-          "name": "Zach Ertz",
-          "position": "TE",
-          "team": "WAS",
-          "baseline_ppg": 9.4,
-          "season_ppg": 9.72,
-          "last6_ppg": 9.08,
-          "games_played_2025": 13,
-          "oline_continuity_pct": 0.6,
-          "same_head_coach": true,
-          "edge_score": 9.6,
-          "market_rank": 53.6,
-          "our_rank": 18,
-          "market_gap": 35.6
         },
         {
           "player_id": "00-0040128",
@@ -2713,9 +2697,25 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.6,
-          "market_rank": 3.94,
+          "market_rank": 3.89,
+          "our_rank": 18,
+          "market_gap": -14.1
+        },
+        {
+          "player_id": "00-0030061",
+          "name": "Zach Ertz",
+          "position": "TE",
+          "team": "WAS",
+          "baseline_ppg": 9.4,
+          "season_ppg": 9.72,
+          "last6_ppg": 9.08,
+          "games_played_2025": 13,
+          "oline_continuity_pct": 0.6,
+          "same_head_coach": true,
+          "edge_score": 9.6,
+          "market_rank": 54.9,
           "our_rank": 19,
-          "market_gap": -15.1
+          "market_gap": 35.9
         },
         {
           "player_id": "00-0039793",
@@ -2729,9 +2729,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 9.37,
-          "market_rank": 23.71,
+          "market_rank": 23.77,
           "our_rank": 20,
-          "market_gap": 3.7
+          "market_gap": 3.8
         },
         {
           "player_id": "00-0033110",
@@ -2745,9 +2745,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 9.26,
-          "market_rank": 42.81,
+          "market_rank": 44.08,
           "our_rank": 21,
-          "market_gap": 21.8
+          "market_gap": 23.1
         },
         {
           "player_id": "00-0038041",
@@ -2761,9 +2761,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.12,
-          "market_rank": 12.14,
+          "market_rank": 12.39,
           "our_rank": 22,
-          "market_gap": -9.9
+          "market_gap": -9.6
         },
         {
           "player_id": "00-0035689",
@@ -2777,9 +2777,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.92,
-          "market_rank": 45.67,
+          "market_rank": 45.81,
           "our_rank": 23,
-          "market_gap": 22.7
+          "market_gap": 22.8
         },
         {
           "player_id": "00-0038129",
@@ -2793,9 +2793,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 8.8,
-          "market_rank": 28.62,
+          "market_rank": 28.44,
           "our_rank": 24,
-          "market_gap": 4.6
+          "market_gap": 4.4
         },
         {
           "player_id": "00-0031610",
@@ -2809,9 +2809,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 8.31,
-          "market_rank": 50.09,
+          "market_rank": 40.0,
           "our_rank": 25,
-          "market_gap": 25.1
+          "market_gap": 15.0
         },
         {
           "player_id": "00-0035229",
@@ -2825,7 +2825,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.07,
-          "market_rank": 22.23,
+          "market_rank": 22.25,
           "our_rank": 26,
           "market_gap": -3.8
         },
@@ -2841,9 +2841,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 8.05,
-          "market_rank": 35.23,
+          "market_rank": 35.91,
           "our_rank": 27,
-          "market_gap": 8.2
+          "market_gap": 8.9
         },
         {
           "player_id": "00-0034829",
@@ -2857,9 +2857,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.54,
-          "market_rank": 33.35,
+          "market_rank": 33.79,
           "our_rank": 28,
-          "market_gap": 5.4
+          "market_gap": 5.8
         },
         {
           "player_id": "00-0037809",
@@ -2873,9 +2873,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 7.42,
-          "market_rank": 17.28,
+          "market_rank": 17.69,
           "our_rank": 29,
-          "market_gap": -11.7
+          "market_gap": -11.3
         },
         {
           "player_id": "00-0033881",
@@ -2889,9 +2889,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 7.19,
-          "market_rank": 31.18,
+          "market_rank": 31.35,
           "our_rank": 30,
-          "market_gap": 1.2
+          "market_gap": 1.4
         },
         {
           "player_id": "00-0040736",
@@ -2905,9 +2905,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 7.13,
-          "market_rank": 34.18,
+          "market_rank": 34.76,
           "our_rank": 31,
-          "market_gap": 3.2
+          "market_gap": 3.8
         },
         {
           "player_id": "00-0037252",
@@ -2921,9 +2921,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 7.11,
-          "market_rank": 24.63,
+          "market_rank": 23.63,
           "our_rank": 32,
-          "market_gap": -7.4
+          "market_gap": -8.4
         },
         {
           "player_id": "00-0040189",
@@ -2937,9 +2937,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 7.09,
-          "market_rank": 20.4,
+          "market_rank": 20.94,
           "our_rank": 33,
-          "market_gap": -12.6
+          "market_gap": -12.1
         },
         {
           "player_id": "00-0036894",
@@ -2953,9 +2953,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 7.01,
-          "market_rank": 28.14,
+          "market_rank": 27.89,
           "our_rank": 34,
-          "market_gap": -5.9
+          "market_gap": -6.1
         },
         {
           "player_id": "00-0036290",
@@ -2969,9 +2969,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.98,
-          "market_rank": 43.03,
+          "market_rank": 43.53,
           "our_rank": 35,
-          "market_gap": 8.0
+          "market_gap": 8.5
         },
         {
           "player_id": "00-0033885",
@@ -2985,9 +2985,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 5.92,
-          "market_rank": 29.28,
+          "market_rank": 30.13,
           "our_rank": 36,
-          "market_gap": -6.7
+          "market_gap": -5.9
         },
         {
           "player_id": "00-0040584",
@@ -3001,9 +3001,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 5.71,
-          "market_rank": 25.45,
+          "market_rank": 25.66,
           "our_rank": 37,
-          "market_gap": -11.6
+          "market_gap": -11.3
         },
         {
           "player_id": "00-0034753",
@@ -3017,9 +3017,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 5.47,
-          "market_rank": 13.88,
+          "market_rank": 14.52,
           "our_rank": 38,
-          "market_gap": -24.1
+          "market_gap": -23.5
         },
         {
           "player_id": "00-0040737",
@@ -3033,9 +3033,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 5.44,
-          "market_rank": 28.09,
+          "market_rank": 27.77,
           "our_rank": 39,
-          "market_gap": -10.9
+          "market_gap": -11.2
         },
         {
           "player_id": "00-0035249",
@@ -3049,9 +3049,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.39,
-          "market_rank": 64.11,
+          "market_rank": 64.5,
           "our_rank": 40,
-          "market_gap": 24.1
+          "market_gap": 24.5
         },
         {
           "player_id": "00-0039066",
@@ -3065,9 +3065,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 5.2,
-          "market_rank": 41.9,
+          "market_rank": 41.43,
           "our_rank": 41,
-          "market_gap": 0.9
+          "market_gap": 0.4
         },
         {
           "player_id": "00-0039356",
@@ -3081,9 +3081,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.03,
-          "market_rank": 42.19,
+          "market_rank": 44.16,
           "our_rank": 42,
-          "market_gap": 0.2
+          "market_gap": 2.2
         },
         {
           "player_id": "00-0032392",
@@ -3097,9 +3097,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 4.94,
-          "market_rank": 54.8,
+          "market_rank": 55.83,
           "our_rank": 43,
-          "market_gap": 11.8
+          "market_gap": 12.8
         },
         {
           "player_id": "00-0037838",
@@ -3113,9 +3113,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 4.93,
-          "market_rank": 13.46,
+          "market_rank": 12.45,
           "our_rank": 44,
-          "market_gap": -30.5
+          "market_gap": -31.6
         },
         {
           "player_id": "00-0037004",
@@ -3129,9 +3129,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 4.9,
-          "market_rank": 140.67,
+          "market_rank": 124.25,
           "our_rank": 45,
-          "market_gap": 95.7
+          "market_gap": 79.2
         },
         {
           "player_id": "00-0037005",
@@ -3145,9 +3145,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 4.87,
-          "market_rank": 53.2,
+          "market_rank": 54.53,
           "our_rank": 46,
-          "market_gap": 7.2
+          "market_gap": 8.5
         },
         {
           "player_id": "00-0034613",
@@ -3161,9 +3161,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 4.85,
-          "market_rank": 62.6,
+          "market_rank": 72.4,
           "our_rank": 47,
-          "market_gap": 15.6
+          "market_gap": 25.4
         },
         {
           "player_id": "00-0039074",
@@ -3177,9 +3177,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 4.68,
-          "market_rank": 90.75,
+          "market_rank": 91.4,
           "our_rank": 48,
-          "market_gap": 42.8
+          "market_gap": 43.4
         },
         {
           "player_id": "00-0036754",
@@ -3193,9 +3193,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 4.58,
-          "market_rank": 67.6,
+          "market_rank": 76.2,
           "our_rank": 49,
-          "market_gap": 18.6
+          "market_gap": 27.2
         },
         {
           "player_id": "00-0038558",
@@ -3209,9 +3209,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 4.53,
-          "market_rank": 37.59,
+          "market_rank": 38.77,
           "our_rank": 50,
-          "market_gap": -12.4
+          "market_gap": -11.2
         }
       ]
     }
@@ -3233,41 +3233,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 24.14,
-          "market_rank": 9.19,
+          "market_rank": 9.48,
           "our_rank": 1,
-          "market_gap": 8.2
-        },
-        {
-          "player_id": "00-0026498",
-          "name": "Matthew Stafford",
-          "position": "QB",
-          "team": "LA",
-          "baseline_ppg": 21.1,
-          "season_ppg": 20.85,
-          "last6_ppg": 21.35,
-          "games_played_2025": 17,
-          "oline_continuity_pct": 1.0,
-          "same_head_coach": true,
-          "edge_score": 21.9,
-          "market_rank": 14.67,
-          "our_rank": 2,
-          "market_gap": 12.7
-        },
-        {
-          "player_id": "00-0034857",
-          "name": "Josh Allen",
-          "position": "QB",
-          "team": "BUF",
-          "baseline_ppg": 21.4,
-          "season_ppg": 22.91,
-          "last6_ppg": 19.88,
-          "games_played_2025": 16,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": true,
-          "edge_score": 21.9,
-          "market_rank": 1.02,
-          "our_rank": 3,
-          "market_gap": -2.0
+          "market_gap": 8.5
         },
         {
           "player_id": "00-0039851",
@@ -3281,9 +3249,41 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 21.9,
-          "market_rank": 3.51,
+          "market_rank": 3.75,
+          "our_rank": 2,
+          "market_gap": 1.8
+        },
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "position": "QB",
+          "team": "BUF",
+          "baseline_ppg": 21.4,
+          "season_ppg": 22.91,
+          "last6_ppg": 19.88,
+          "games_played_2025": 16,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 21.9,
+          "market_rank": 1.03,
+          "our_rank": 3,
+          "market_gap": -2.0
+        },
+        {
+          "player_id": "00-0026498",
+          "name": "Matthew Stafford",
+          "position": "QB",
+          "team": "LA",
+          "baseline_ppg": 21.1,
+          "season_ppg": 20.85,
+          "last6_ppg": 21.35,
+          "games_played_2025": 17,
+          "oline_continuity_pct": 1.0,
+          "same_head_coach": true,
+          "edge_score": 21.9,
+          "market_rank": 14.55,
           "our_rank": 4,
-          "market_gap": -0.5
+          "market_gap": 10.6
         },
         {
           "player_id": "00-0037834",
@@ -3297,9 +3297,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 21.05,
-          "market_rank": 12.07,
+          "market_rank": 12.67,
           "our_rank": 5,
-          "market_gap": 7.1
+          "market_gap": 7.7
         },
         {
           "player_id": "00-0036442",
@@ -3313,9 +3313,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.79,
-          "market_rank": 4.62,
+          "market_rank": 4.42,
           "our_rank": 6,
-          "market_gap": -1.4
+          "market_gap": -1.6
         },
         {
           "player_id": "00-0039732",
@@ -3329,9 +3329,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 18.72,
-          "market_rank": 13.75,
+          "market_rank": 13.53,
           "our_rank": 7,
-          "market_gap": 6.8
+          "market_gap": 6.5
         },
         {
           "player_id": "00-0036389",
@@ -3345,25 +3345,25 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 18.67,
-          "market_rank": 6.1,
+          "market_rank": 5.77,
           "our_rank": 8,
-          "market_gap": -1.9
+          "market_gap": -2.2
         },
         {
           "player_id": "00-0039918",
           "name": "Caleb Williams",
           "position": "QB",
           "team": "CHI",
-          "baseline_ppg": 18.02,
-          "season_ppg": 18.72,
+          "baseline_ppg": 18.04,
+          "season_ppg": 18.75,
           "last6_ppg": 17.33,
           "games_played_2025": 17,
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
-          "edge_score": 18.52,
-          "market_rank": 7.76,
+          "edge_score": 18.54,
+          "market_rank": 7.64,
           "our_rank": 9,
-          "market_gap": -1.2
+          "market_gap": -1.4
         },
         {
           "player_id": "00-0033106",
@@ -3377,9 +3377,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 18.12,
-          "market_rank": 15.85,
+          "market_rank": 15.18,
           "our_rank": 10,
-          "market_gap": 5.8
+          "market_gap": 5.2
         },
         {
           "player_id": "00-0033873",
@@ -3393,9 +3393,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.06,
-          "market_rank": 13.85,
+          "market_rank": 13.89,
           "our_rank": 11,
-          "market_gap": 2.8
+          "market_gap": 2.9
         },
         {
           "player_id": "00-0040743",
@@ -3409,9 +3409,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.73,
-          "market_rank": 19.14,
+          "market_rank": 18.95,
           "our_rank": 12,
-          "market_gap": 7.1
+          "market_gap": 6.9
         },
         {
           "player_id": "00-0033077",
@@ -3425,9 +3425,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.58,
-          "market_rank": 9.81,
+          "market_rank": 9.51,
           "our_rank": 13,
-          "market_gap": -3.2
+          "market_gap": -3.5
         },
         {
           "player_id": "00-0040691",
@@ -3441,9 +3441,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 17.46,
-          "market_rank": 12.08,
+          "market_rank": 12.51,
           "our_rank": 14,
-          "market_gap": -1.9
+          "market_gap": -1.5
         },
         {
           "player_id": "00-0035710",
@@ -3457,9 +3457,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 17.15,
-          "market_rank": 24.24,
+          "market_rank": 24.26,
           "our_rank": 15,
-          "market_gap": 9.2
+          "market_gap": 9.3
         },
         {
           "player_id": "00-0033119",
@@ -3473,9 +3473,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 16.97,
-          "market_rank": 27.05,
+          "market_rank": 27.0,
           "our_rank": 16,
-          "market_gap": 11.1
+          "market_gap": 11.0
         },
         {
           "player_id": "00-0039910",
@@ -3489,7 +3489,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 16.52,
-          "market_rank": 5.06,
+          "market_rank": 5.14,
           "our_rank": 17,
           "market_gap": -11.9
         },
@@ -3505,9 +3505,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 16.48,
-          "market_rank": 18.36,
+          "market_rank": 18.23,
           "our_rank": 18,
-          "market_gap": 0.4
+          "market_gap": 0.2
         },
         {
           "player_id": "00-0036355",
@@ -3521,25 +3521,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 16.1,
-          "market_rank": 7.82,
+          "market_rank": 7.96,
           "our_rank": 19,
-          "market_gap": -11.2
-        },
-        {
-          "player_id": "00-0036264",
-          "name": "Jordan Love",
-          "position": "QB",
-          "team": "GB",
-          "baseline_ppg": 15.26,
-          "season_ppg": 15.94,
-          "last6_ppg": 14.58,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 0.6,
-          "same_head_coach": true,
-          "edge_score": 15.46,
-          "market_rank": 18.52,
-          "our_rank": 20,
-          "market_gap": -1.5
+          "market_gap": -11.0
         },
         {
           "player_id": "00-0035228",
@@ -3553,9 +3537,25 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 15.46,
-          "market_rank": 16.65,
+          "market_rank": 17.08,
+          "our_rank": 20,
+          "market_gap": -2.9
+        },
+        {
+          "player_id": "00-0036264",
+          "name": "Jordan Love",
+          "position": "QB",
+          "team": "GB",
+          "baseline_ppg": 15.26,
+          "season_ppg": 15.94,
+          "last6_ppg": 14.58,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 0.6,
+          "same_head_coach": true,
+          "edge_score": 15.46,
+          "market_rank": 18.68,
           "our_rank": 21,
-          "market_gap": -4.4
+          "market_gap": -2.3
         },
         {
           "player_id": "00-0036945",
@@ -3569,9 +3569,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 15.07,
-          "market_rank": 39.88,
+          "market_rank": 40.63,
           "our_rank": 22,
-          "market_gap": 17.9
+          "market_gap": 18.6
         },
         {
           "player_id": "00-0039917",
@@ -3585,9 +3585,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.0,
-          "market_rank": 32.85,
+          "market_rank": 33.07,
           "our_rank": 23,
-          "market_gap": 9.9
+          "market_gap": 10.1
         },
         {
           "player_id": "00-0039150",
@@ -3601,9 +3601,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 14.88,
-          "market_rank": 25.67,
+          "market_rank": 25.78,
           "our_rank": 24,
-          "market_gap": 1.7
+          "market_gap": 1.8
         },
         {
           "player_id": "00-0039163",
@@ -3617,9 +3617,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 14.64,
-          "market_rank": 22.88,
+          "market_rank": 22.71,
           "our_rank": 25,
-          "market_gap": -2.1
+          "market_gap": -2.3
         },
         {
           "player_id": "00-0032950",
@@ -3633,9 +3633,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 14.57,
-          "market_rank": 74.29,
+          "market_rank": 67.14,
           "our_rank": 26,
-          "market_gap": 48.3
+          "market_gap": 41.1
         },
         {
           "player_id": "00-0034869",
@@ -3649,9 +3649,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 14.28,
-          "market_rank": 23.0,
+          "market_rank": 22.79,
           "our_rank": 27,
-          "market_gap": -4.0
+          "market_gap": -4.2
         },
         {
           "player_id": "00-0034796",
@@ -3665,9 +3665,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 14.24,
-          "market_rank": 2.51,
+          "market_rank": 2.58,
           "our_rank": 28,
-          "market_gap": -25.5
+          "market_gap": -25.4
         },
         {
           "player_id": "00-0023459",
@@ -3681,9 +3681,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 13.52,
-          "market_rank": 28.48,
+          "market_rank": 28.28,
           "our_rank": 29,
-          "market_gap": -0.5
+          "market_gap": -0.7
         },
         {
           "player_id": "00-0038128",
@@ -3697,9 +3697,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.99,
-          "market_rank": 20.46,
+          "market_rank": 20.22,
           "our_rank": 30,
-          "market_gap": -9.5
+          "market_gap": -9.8
         },
         {
           "player_id": "00-0032268",
@@ -3713,9 +3713,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 12.89,
-          "market_rank": 42.83,
+          "market_rank": 41.89,
           "our_rank": 31,
-          "market_gap": 11.8
+          "market_gap": 10.9
         },
         {
           "player_id": "00-0039923",
@@ -3729,9 +3729,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.69,
-          "market_rank": 36.23,
+          "market_rank": 36.97,
           "our_rank": 32,
-          "market_gap": 4.2
+          "market_gap": 5.0
         },
         {
           "player_id": "00-0029604",
@@ -3745,9 +3745,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.23,
-          "market_rank": 33.01,
+          "market_rank": 33.07,
           "our_rank": 33,
-          "market_gap": 0.0
+          "market_gap": 0.1
         },
         {
           "player_id": "00-0040676",
@@ -3761,9 +3761,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 11.96,
-          "market_rank": 24.33,
+          "market_rank": 24.37,
           "our_rank": 34,
-          "market_gap": -9.7
+          "market_gap": -9.6
         },
         {
           "player_id": "00-0026158",
@@ -3777,9 +3777,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.79,
-          "market_rank": 42.41,
+          "market_rank": 42.0,
           "our_rank": 35,
-          "market_gap": 7.4
+          "market_gap": 7.0
         },
         {
           "player_id": "00-0036972",
@@ -3793,9 +3793,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.47,
-          "market_rank": 38.69,
+          "market_rank": 38.81,
           "our_rank": 36,
-          "market_gap": 2.7
+          "market_gap": 2.8
         },
         {
           "player_id": "00-0036898",
@@ -3809,9 +3809,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 11.33,
-          "market_rank": 55.4,
+          "market_rank": 51.33,
           "our_rank": 37,
-          "market_gap": 18.4
+          "market_gap": 14.3
         },
         {
           "player_id": "00-0030565",
@@ -3825,9 +3825,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 11.31,
-          "market_rank": 28.65,
+          "market_rank": 28.52,
           "our_rank": 38,
-          "market_gap": -9.4
+          "market_gap": -9.5
         },
         {
           "player_id": "00-0039376",
@@ -3841,9 +3841,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.67,
-          "market_rank": 55.0,
+          "market_rank": 52.8,
           "our_rank": 39,
-          "market_gap": 16.0
+          "market_gap": 13.8
         },
         {
           "player_id": "00-0028118",
@@ -3857,25 +3857,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.44,
-          "market_rank": 50.0,
+          "market_rank": 50.17,
           "our_rank": 40,
-          "market_gap": 10.0
-        },
-        {
-          "player_id": "00-0036212",
-          "name": "Tua Tagovailoa",
-          "position": "QB",
-          "team": "MIA",
-          "baseline_ppg": 10.49,
-          "season_ppg": 11.62,
-          "last6_ppg": 9.36,
-          "games_played_2025": 14,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": false,
-          "edge_score": 10.29,
-          "market_rank": 30.95,
-          "our_rank": 41,
-          "market_gap": -10.1
+          "market_gap": 10.2
         },
         {
           "player_id": "00-0040668",
@@ -3889,9 +3873,25 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 10.29,
-          "market_rank": 33.76,
+          "market_rank": 33.94,
+          "our_rank": 41,
+          "market_gap": -7.1
+        },
+        {
+          "player_id": "00-0036212",
+          "name": "Tua Tagovailoa",
+          "position": "QB",
+          "team": "MIA",
+          "baseline_ppg": 10.49,
+          "season_ppg": 11.62,
+          "last6_ppg": 9.36,
+          "games_played_2025": 14,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": false,
+          "edge_score": 10.29,
+          "market_rank": 30.85,
           "our_rank": 42,
-          "market_gap": -8.2
+          "market_gap": -11.1
         },
         {
           "player_id": "00-0035100",
@@ -3921,9 +3921,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.28,
-          "market_rank": 58.29,
+          "market_rank": 62.13,
           "our_rank": 44,
-          "market_gap": 14.3
+          "market_gap": 18.1
         },
         {
           "player_id": "00-0029263",
@@ -3953,9 +3953,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 7.84,
-          "market_rank": 48.92,
+          "market_rank": 48.43,
           "our_rank": 46,
-          "market_gap": 2.9
+          "market_gap": 2.4
         },
         {
           "player_id": "00-0035993",
@@ -3969,9 +3969,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 7.23,
-          "market_rank": 54.4,
+          "market_rank": 53.11,
           "our_rank": 47,
-          "market_gap": 7.4
+          "market_gap": 6.1
         },
         {
           "player_id": "00-0040206",
@@ -3985,9 +3985,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.1,
-          "market_rank": 45.73,
+          "market_rank": 46.92,
           "our_rank": 48,
-          "market_gap": -2.3
+          "market_gap": -1.1
         },
         {
           "player_id": "00-0026158",
@@ -4001,9 +4001,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 6.81,
-          "market_rank": 42.41,
+          "market_rank": 42.0,
           "our_rank": 49,
-          "market_gap": -6.6
+          "market_gap": -7.0
         },
         {
           "player_id": "00-0040398",
@@ -4017,9 +4017,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 6.29,
-          "market_rank": 76.0,
+          "market_rank": 69.67,
           "our_rank": 50,
-          "market_gap": 26.0
+          "market_gap": 19.7
         }
       ],
       "RB": [
@@ -4035,9 +4035,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.77,
-          "market_rank": 1.54,
+          "market_rank": 1.71,
           "our_rank": 1,
-          "market_gap": 0.5
+          "market_gap": 0.7
         },
         {
           "player_id": "00-0033280",
@@ -4051,9 +4051,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 18.48,
-          "market_rank": 3.51,
+          "market_rank": 3.78,
           "our_rank": 2,
-          "market_gap": 1.5
+          "market_gap": 1.8
         },
         {
           "player_id": "00-0032764",
@@ -4067,7 +4067,7 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 16.78,
-          "market_rank": 13.44,
+          "market_rank": 13.45,
           "our_rank": 3,
           "market_gap": 10.4
         },
@@ -4083,9 +4083,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.79,
-          "market_rank": 7.15,
+          "market_rank": 6.55,
           "our_rank": 4,
-          "market_gap": 3.2
+          "market_gap": 2.5
         },
         {
           "player_id": "00-0038597",
@@ -4099,9 +4099,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.6,
-          "market_rank": 6.84,
+          "market_rank": 6.55,
           "our_rank": 5,
-          "market_gap": 1.8
+          "market_gap": 1.5
         },
         {
           "player_id": "00-0039040",
@@ -4115,9 +4115,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 15.4,
-          "market_rank": 7.79,
+          "market_rank": 7.97,
           "our_rank": 6,
-          "market_gap": 1.8
+          "market_gap": 2.0
         },
         {
           "player_id": "00-0039139",
@@ -4131,9 +4131,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 15.3,
-          "market_rank": 1.54,
+          "market_rank": 1.34,
           "our_rank": 7,
-          "market_gap": -5.5
+          "market_gap": -5.7
         },
         {
           "player_id": "00-0036223",
@@ -4147,7 +4147,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 15.29,
-          "market_rank": 4.59,
+          "market_rank": 4.56,
           "our_rank": 8,
           "market_gap": -3.4
         },
@@ -4163,9 +4163,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 14.09,
-          "market_rank": 15.01,
+          "market_rank": 14.9,
           "our_rank": 9,
-          "market_gap": 6.0
+          "market_gap": 5.9
         },
         {
           "player_id": "00-0040715",
@@ -4179,9 +4179,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 13.86,
-          "market_rank": 19.26,
+          "market_rank": 19.48,
           "our_rank": 10,
-          "market_gap": 9.3
+          "market_gap": 9.5
         },
         {
           "player_id": "00-0036973",
@@ -4195,9 +4195,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.44,
-          "market_rank": 17.73,
+          "market_rank": 18.47,
           "our_rank": 11,
-          "market_gap": 6.7
+          "market_gap": 7.5
         },
         {
           "player_id": "00-0036275",
@@ -4211,9 +4211,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.36,
-          "market_rank": 21.7,
+          "market_rank": 21.38,
           "our_rank": 12,
-          "market_gap": 9.7
+          "market_gap": 9.4
         },
         {
           "player_id": "00-0036875",
@@ -4227,9 +4227,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 13.08,
-          "market_rank": 29.33,
+          "market_rank": 29.08,
           "our_rank": 13,
-          "market_gap": 16.3
+          "market_gap": 16.1
         },
         {
           "player_id": "00-0034844",
@@ -4243,7 +4243,7 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.94,
-          "market_rank": 9.26,
+          "market_rank": 9.35,
           "our_rank": 14,
           "market_gap": -4.7
         },
@@ -4259,9 +4259,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.63,
-          "market_rank": 16.51,
+          "market_rank": 16.27,
           "our_rank": 15,
-          "market_gap": 1.5
+          "market_gap": 1.3
         },
         {
           "player_id": "00-0040730",
@@ -4275,9 +4275,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.14,
-          "market_rank": 32.62,
+          "market_rank": 32.92,
           "our_rank": 16,
-          "market_gap": 16.6
+          "market_gap": 16.9
         },
         {
           "player_id": "00-0039165",
@@ -4291,9 +4291,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.03,
-          "market_rank": 46.95,
+          "market_rank": 47.55,
           "our_rank": 17,
-          "market_gap": 30.0
+          "market_gap": 30.5
         },
         {
           "player_id": "00-0040666",
@@ -4307,9 +4307,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 12.01,
-          "market_rank": 8.91,
+          "market_rank": 9.36,
           "our_rank": 18,
-          "market_gap": -9.1
+          "market_gap": -8.6
         },
         {
           "player_id": "00-0040734",
@@ -4323,9 +4323,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.49,
-          "market_rank": 23.02,
+          "market_rank": 23.47,
           "our_rank": 19,
-          "market_gap": 4.0
+          "market_gap": 4.5
         },
         {
           "player_id": "00-0035700",
@@ -4339,7 +4339,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 11.29,
-          "market_rank": 16.0,
+          "market_rank": 16.01,
           "our_rank": 20,
           "market_gap": -4.0
         },
@@ -4355,9 +4355,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 10.93,
-          "market_rank": 26.82,
+          "market_rank": 26.96,
           "our_rank": 21,
-          "market_gap": 5.8
+          "market_gap": 6.0
         },
         {
           "player_id": "00-0039361",
@@ -4371,9 +4371,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 10.85,
-          "market_rank": 21.87,
+          "market_rank": 21.18,
           "our_rank": 22,
-          "market_gap": -0.1
+          "market_gap": -0.8
         },
         {
           "player_id": "00-0036158",
@@ -4387,9 +4387,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 10.45,
-          "market_rank": 34.37,
+          "market_rank": 34.18,
           "our_rank": 23,
-          "market_gap": 11.4
+          "market_gap": 11.2
         },
         {
           "player_id": "00-0035261",
@@ -4403,9 +4403,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 10.31,
-          "market_rank": 29.46,
+          "market_rank": 28.88,
           "our_rank": 24,
-          "market_gap": 5.5
+          "market_gap": 4.9
         },
         {
           "player_id": "00-0038120",
@@ -4419,9 +4419,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.29,
-          "market_rank": 14.1,
+          "market_rank": 14.6,
           "our_rank": 25,
-          "market_gap": -10.9
+          "market_gap": -10.4
         },
         {
           "player_id": "00-0039738",
@@ -4435,9 +4435,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 10.25,
-          "market_rank": 36.87,
+          "market_rank": 37.3,
           "our_rank": 26,
-          "market_gap": 10.9
+          "market_gap": 11.3
         },
         {
           "player_id": "00-0040122",
@@ -4451,7 +4451,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 10.22,
-          "market_rank": 6.35,
+          "market_rank": 6.39,
           "our_rank": 27,
           "market_gap": -20.6
         },
@@ -4467,9 +4467,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 9.99,
-          "market_rank": 10.54,
+          "market_rank": 10.19,
           "our_rank": 28,
-          "market_gap": -17.5
+          "market_gap": -17.8
         },
         {
           "player_id": "00-0039384",
@@ -4483,9 +4483,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 9.91,
-          "market_rank": 43.62,
+          "market_rank": 43.21,
           "our_rank": 29,
-          "market_gap": 14.6
+          "market_gap": 14.2
         },
         {
           "player_id": "00-0036919",
@@ -4499,9 +4499,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 9.14,
-          "market_rank": 34.37,
+          "market_rank": 34.51,
           "our_rank": 30,
-          "market_gap": 4.4
+          "market_gap": 4.5
         },
         {
           "player_id": "00-0036139",
@@ -4515,9 +4515,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.91,
-          "market_rank": 31.37,
+          "market_rank": 31.29,
           "our_rank": 31,
-          "market_gap": 0.4
+          "market_gap": 0.3
         },
         {
           "player_id": "00-0038611",
@@ -4531,9 +4531,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.79,
-          "market_rank": 46.77,
+          "market_rank": 45.82,
           "our_rank": 32,
-          "market_gap": 14.8
+          "market_gap": 13.8
         },
         {
           "player_id": "00-0040242",
@@ -4547,9 +4547,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.62,
-          "market_rank": 40.33,
+          "market_rank": 39.18,
           "our_rank": 33,
-          "market_gap": 7.3
+          "market_gap": 6.2
         },
         {
           "player_id": "00-0040236",
@@ -4563,9 +4563,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.36,
-          "market_rank": 35.61,
+          "market_rank": 36.06,
           "our_rank": 34,
-          "market_gap": 1.6
+          "market_gap": 2.1
         },
         {
           "player_id": "00-0035685",
@@ -4579,9 +4579,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.09,
-          "market_rank": 22.3,
+          "market_rank": 22.04,
           "our_rank": 35,
-          "market_gap": -12.7
+          "market_gap": -13.0
         },
         {
           "player_id": "00-0040784",
@@ -4595,9 +4595,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 7.96,
-          "market_rank": 21.89,
+          "market_rank": 21.81,
           "our_rank": 36,
-          "market_gap": -14.1
+          "market_gap": -14.2
         },
         {
           "player_id": "00-0033293",
@@ -4611,9 +4611,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.77,
-          "market_rank": 37.09,
+          "market_rank": 38.36,
           "our_rank": 37,
-          "market_gap": 0.1
+          "market_gap": 1.4
         },
         {
           "player_id": "00-0039373",
@@ -4627,9 +4627,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.72,
-          "market_rank": 92.66,
+          "market_rank": 90.79,
           "our_rank": 38,
-          "market_gap": 54.7
+          "market_gap": 52.8
         },
         {
           "player_id": "00-0040583",
@@ -4643,9 +4643,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 7.29,
-          "market_rank": 45.57,
+          "market_rank": 45.96,
           "our_rank": 39,
-          "market_gap": 6.6
+          "market_gap": 7.0
         },
         {
           "player_id": "00-0039391",
@@ -4659,7 +4659,7 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 7.0,
-          "market_rank": 60.42,
+          "market_rank": 60.43,
           "our_rank": 40,
           "market_gap": 20.4
         },
@@ -4675,9 +4675,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.89,
-          "market_rank": 40.72,
+          "market_rank": 39.87,
           "our_rank": 41,
-          "market_gap": -0.3
+          "market_gap": -1.1
         },
         {
           "player_id": "00-0035250",
@@ -4691,9 +4691,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 6.68,
-          "market_rank": 84.56,
+          "market_rank": 85.08,
           "our_rank": 42,
-          "market_gap": 42.6
+          "market_gap": 43.1
         },
         {
           "player_id": "00-0033923",
@@ -4707,9 +4707,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.46,
-          "market_rank": 94.88,
+          "market_rank": 95.03,
           "our_rank": 43,
-          "market_gap": 51.9
+          "market_gap": 52.0
         },
         {
           "player_id": "00-0037263",
@@ -4723,25 +4723,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.33,
-          "market_rank": 45.6,
+          "market_rank": 45.92,
           "our_rank": 44,
-          "market_gap": 1.6
-        },
-        {
-          "player_id": "00-0036555",
-          "name": "Chuba Hubbard",
-          "position": "RB",
-          "team": "CAR",
-          "baseline_ppg": 5.8,
-          "season_ppg": 6.36,
-          "last6_ppg": 5.23,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": true,
-          "edge_score": 6.3,
-          "market_rank": 30.16,
-          "our_rank": 45,
-          "market_gap": -14.8
+          "market_gap": 1.9
         },
         {
           "player_id": "00-0040202",
@@ -4755,9 +4739,25 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.3,
-          "market_rank": 79.87,
+          "market_rank": 81.36,
+          "our_rank": 45,
+          "market_gap": 36.4
+        },
+        {
+          "player_id": "00-0036555",
+          "name": "Chuba Hubbard",
+          "position": "RB",
+          "team": "CAR",
+          "baseline_ppg": 5.8,
+          "season_ppg": 6.36,
+          "last6_ppg": 5.23,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 6.3,
+          "market_rank": 31.05,
           "our_rank": 46,
-          "market_gap": 33.9
+          "market_gap": -14.9
         },
         {
           "player_id": "00-0040719",
@@ -4771,7 +4771,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.29,
-          "market_rank": 24.65,
+          "market_rank": 24.56,
           "our_rank": 47,
           "market_gap": -22.4
         },
@@ -4787,9 +4787,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 6.19,
-          "market_rank": 95.11,
+          "market_rank": 91.24,
           "our_rank": 48,
-          "market_gap": 47.1
+          "market_gap": 43.2
         },
         {
           "player_id": "00-0035537",
@@ -4803,7 +4803,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.01,
-          "market_rank": 74.35,
+          "market_rank": 74.32,
           "our_rank": 49,
           "market_gap": 25.3
         },
@@ -4819,9 +4819,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.89,
-          "market_rank": 47.83,
+          "market_rank": 48.71,
           "our_rank": 50,
-          "market_gap": -2.2
+          "market_gap": -1.3
         }
       ],
       "WR": [
@@ -4837,9 +4837,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 18.15,
-          "market_rank": 2.01,
+          "market_rank": 2.13,
           "our_rank": 1,
-          "market_gap": 1.0
+          "market_gap": 1.1
         },
         {
           "player_id": "00-0038543",
@@ -4853,9 +4853,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 13.38,
-          "market_rank": 3.11,
+          "market_rank": 3.2,
           "our_rank": 2,
-          "market_gap": 1.1
+          "market_gap": 1.2
         },
         {
           "player_id": "00-0036900",
@@ -4869,9 +4869,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.55,
-          "market_rank": 1.3,
+          "market_rank": 1.19,
           "our_rank": 3,
-          "market_gap": -1.7
+          "market_gap": -1.8
         },
         {
           "player_id": "00-0037238",
@@ -4885,9 +4885,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.5,
-          "market_rank": 7.72,
+          "market_rank": 7.46,
           "our_rank": 4,
-          "market_gap": 3.7
+          "market_gap": 3.5
         },
         {
           "player_id": "00-0037239",
@@ -4901,9 +4901,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 12.41,
-          "market_rank": 12.42,
+          "market_rank": 12.09,
           "our_rank": 5,
-          "market_gap": 7.4
+          "market_gap": 7.1
         },
         {
           "player_id": "00-0031381",
@@ -4917,9 +4917,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.1,
-          "market_rank": 24.75,
+          "market_rank": 25.56,
           "our_rank": 6,
-          "market_gap": 18.8
+          "market_gap": 19.6
         },
         {
           "player_id": "00-0035676",
@@ -4933,9 +4933,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 12.09,
-          "market_rank": 9.13,
+          "market_rank": 8.84,
           "our_rank": 7,
-          "market_gap": 2.1
+          "market_gap": 1.8
         },
         {
           "player_id": "00-0039067",
@@ -4949,9 +4949,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.94,
-          "market_rank": 11.53,
+          "market_rank": 12.64,
           "our_rank": 8,
-          "market_gap": 3.5
+          "market_gap": 4.6
         },
         {
           "player_id": "00-0036963",
@@ -4965,9 +4965,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 11.6,
-          "market_rank": 3.83,
+          "market_rank": 3.71,
           "our_rank": 9,
-          "market_gap": -5.2
+          "market_gap": -5.3
         },
         {
           "player_id": "00-0036410",
@@ -4981,9 +4981,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 11.13,
-          "market_rank": 18.01,
+          "market_rank": 17.56,
           "our_rank": 10,
-          "market_gap": 8.0
+          "market_gap": 7.6
         },
         {
           "player_id": "00-0038559",
@@ -4997,9 +4997,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 11.03,
-          "market_rank": 40.07,
+          "market_rank": 40.28,
           "our_rank": 11,
-          "market_gap": 29.1
+          "market_gap": 29.3
         },
         {
           "player_id": "00-0037664",
@@ -5013,9 +5013,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.81,
-          "market_rank": 37.47,
+          "market_rank": 40.74,
           "our_rank": 12,
-          "market_gap": 25.5
+          "market_gap": 28.7
         },
         {
           "player_id": "00-0036554",
@@ -5029,9 +5029,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 10.59,
-          "market_rank": 9.99,
+          "market_rank": 9.7,
           "our_rank": 13,
-          "market_gap": -3.0
+          "market_gap": -3.3
         },
         {
           "player_id": "00-0037240",
@@ -5045,7 +5045,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.4,
-          "market_rank": 27.61,
+          "market_rank": 27.65,
           "our_rank": 14,
           "market_gap": 13.6
         },
@@ -5061,9 +5061,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.24,
-          "market_rank": 28.22,
+          "market_rank": 28.01,
           "our_rank": 15,
-          "market_gap": 13.2
+          "market_gap": 13.0
         },
         {
           "player_id": "00-0037247",
@@ -5077,9 +5077,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.14,
-          "market_rank": 11.24,
+          "market_rank": 11.33,
           "our_rank": 16,
-          "market_gap": -4.8
+          "market_gap": -4.7
         },
         {
           "player_id": "00-0039064",
@@ -5093,9 +5093,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 9.91,
-          "market_rank": 15.8,
+          "market_rank": 15.51,
           "our_rank": 17,
-          "market_gap": -1.2
+          "market_gap": -1.5
         },
         {
           "player_id": "00-0038606",
@@ -5109,25 +5109,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.68,
-          "market_rank": 35.73,
+          "market_rank": 32.03,
           "our_rank": 18,
-          "market_gap": 17.7
-        },
-        {
-          "player_id": "00-0036259",
-          "name": "Jauan Jennings",
-          "position": "WR",
-          "team": "SF",
-          "baseline_ppg": 9.15,
-          "season_ppg": 7.89,
-          "last6_ppg": 10.42,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": true,
-          "edge_score": 9.65,
-          "market_rank": 60.89,
-          "our_rank": 19,
-          "market_gap": 41.9
+          "market_gap": 14.0
         },
         {
           "player_id": "00-0034348",
@@ -5141,9 +5125,25 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 9.65,
-          "market_rank": 37.66,
+          "market_rank": 38.68,
+          "our_rank": 19,
+          "market_gap": 19.7
+        },
+        {
+          "player_id": "00-0036259",
+          "name": "Jauan Jennings",
+          "position": "WR",
+          "team": "SF",
+          "baseline_ppg": 9.15,
+          "season_ppg": 7.89,
+          "last6_ppg": 10.42,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 9.65,
+          "market_rank": 62.52,
           "our_rank": 20,
-          "market_gap": 17.7
+          "market_gap": 42.5
         },
         {
           "player_id": "00-0039337",
@@ -5157,9 +5157,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 9.58,
-          "market_rank": 17.17,
+          "market_rank": 14.9,
           "our_rank": 21,
-          "market_gap": -3.8
+          "market_gap": -6.1
         },
         {
           "player_id": "00-0036358",
@@ -5173,7 +5173,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 9.55,
-          "market_rank": 5.54,
+          "market_rank": 5.51,
           "our_rank": 22,
           "market_gap": -16.5
         },
@@ -5189,9 +5189,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.74,
-          "market_rank": 16.23,
+          "market_rank": 16.26,
           "our_rank": 23,
-          "market_gap": -6.8
+          "market_gap": -6.7
         },
         {
           "player_id": "00-0040124",
@@ -5205,9 +5205,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.43,
-          "market_rank": 17.27,
+          "market_rank": 17.53,
           "our_rank": 24,
-          "market_gap": -6.7
+          "market_gap": -6.5
         },
         {
           "player_id": "00-0038117",
@@ -5221,9 +5221,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 8.19,
-          "market_rank": 38.92,
+          "market_rank": 39.2,
           "our_rank": 25,
-          "market_gap": 13.9
+          "market_gap": 14.2
         },
         {
           "player_id": "00-0035659",
@@ -5237,9 +5237,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.17,
-          "market_rank": 21.82,
+          "market_rank": 22.31,
           "our_rank": 26,
-          "market_gap": -4.2
+          "market_gap": -3.7
         },
         {
           "player_id": "00-0033040",
@@ -5253,9 +5253,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 7.92,
-          "market_rank": 92.04,
+          "market_rank": 98.42,
           "our_rank": 27,
-          "market_gap": 65.0
+          "market_gap": 71.4
         },
         {
           "player_id": "00-0031408",
@@ -5269,9 +5269,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 7.9,
-          "market_rank": 25.73,
+          "market_rank": 26.98,
           "our_rank": 28,
-          "market_gap": -2.3
+          "market_gap": -1.0
         },
         {
           "player_id": "00-0034960",
@@ -5285,9 +5285,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.82,
-          "market_rank": 43.51,
+          "market_rank": 44.53,
           "our_rank": 29,
-          "market_gap": 14.5
+          "market_gap": 15.5
         },
         {
           "player_id": "00-0038544",
@@ -5301,25 +5301,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 7.81,
-          "market_rank": 43.33,
+          "market_rank": 44.08,
           "our_rank": 30,
-          "market_gap": 13.3
-        },
-        {
-          "player_id": "00-0035640",
-          "name": "DK Metcalf",
-          "position": "WR",
-          "team": "PIT",
-          "baseline_ppg": 8.27,
-          "season_ppg": 8.55,
-          "last6_ppg": 8.0,
-          "games_played_2025": 15,
-          "oline_continuity_pct": 0.6,
-          "same_head_coach": false,
-          "edge_score": 7.77,
-          "market_rank": 35.66,
-          "our_rank": 31,
-          "market_gap": 4.7
+          "market_gap": 14.1
         },
         {
           "player_id": "00-0039919",
@@ -5333,9 +5317,25 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.77,
-          "market_rank": 28.98,
+          "market_rank": 28.9,
+          "our_rank": 31,
+          "market_gap": -2.1
+        },
+        {
+          "player_id": "00-0035640",
+          "name": "DK Metcalf",
+          "position": "WR",
+          "team": "PIT",
+          "baseline_ppg": 8.27,
+          "season_ppg": 8.55,
+          "last6_ppg": 8.0,
+          "games_played_2025": 15,
+          "oline_continuity_pct": 0.6,
+          "same_head_coach": false,
+          "edge_score": 7.77,
+          "market_rank": 35.9,
           "our_rank": 32,
-          "market_gap": -3.0
+          "market_gap": 3.9
         },
         {
           "player_id": "00-0031588",
@@ -5349,9 +5349,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.64,
-          "market_rank": 57.48,
+          "market_rank": 46.18,
           "our_rank": 33,
-          "market_gap": 24.5
+          "market_gap": 13.2
         },
         {
           "player_id": "00-0034827",
@@ -5365,9 +5365,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.42,
-          "market_rank": 26.57,
+          "market_rank": 25.69,
           "our_rank": 34,
-          "market_gap": -7.4
+          "market_gap": -8.3
         },
         {
           "player_id": "00-0040735",
@@ -5381,9 +5381,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.31,
-          "market_rank": 22.73,
+          "market_rank": 23.25,
           "our_rank": 35,
-          "market_gap": -12.3
+          "market_gap": -11.8
         },
         {
           "player_id": "00-0033921",
@@ -5397,9 +5397,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 7.24,
-          "market_rank": 36.54,
+          "market_rank": 37.36,
           "our_rank": 36,
-          "market_gap": 0.5
+          "market_gap": 1.4
         },
         {
           "player_id": "00-0036912",
@@ -5413,9 +5413,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 7.09,
-          "market_rank": 13.4,
+          "market_rank": 13.28,
           "our_rank": 37,
-          "market_gap": -23.6
+          "market_gap": -23.7
         },
         {
           "player_id": "00-0039849",
@@ -5429,7 +5429,7 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 6.93,
-          "market_rank": 33.0,
+          "market_rank": 32.98,
           "our_rank": 38,
           "market_gap": -5.0
         },
@@ -5445,9 +5445,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 6.76,
-          "market_rank": 92.82,
+          "market_rank": 93.39,
           "our_rank": 39,
-          "market_gap": 53.8
+          "market_gap": 54.4
         },
         {
           "player_id": "00-0039491",
@@ -5461,9 +5461,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.74,
-          "market_rank": 52.25,
+          "market_rank": 51.6,
           "our_rank": 40,
-          "market_gap": 12.2
+          "market_gap": 11.6
         },
         {
           "player_id": "00-0039893",
@@ -5477,7 +5477,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.68,
-          "market_rank": 35.69,
+          "market_rank": 35.73,
           "our_rank": 41,
           "market_gap": -5.3
         },
@@ -5493,9 +5493,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 6.6,
-          "market_rank": 18.88,
+          "market_rank": 19.03,
           "our_rank": 42,
-          "market_gap": -23.1
+          "market_gap": -23.0
         },
         {
           "player_id": "00-0037816",
@@ -5509,9 +5509,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 6.53,
-          "market_rank": 52.96,
+          "market_rank": 53.08,
           "our_rank": 43,
-          "market_gap": 10.0
+          "market_gap": 10.1
         },
         {
           "player_id": "00-0038994",
@@ -5525,9 +5525,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.52,
-          "market_rank": 45.52,
+          "market_rank": 46.54,
           "our_rank": 44,
-          "market_gap": 1.5
+          "market_gap": 2.5
         },
         {
           "player_id": "00-0039868",
@@ -5541,9 +5541,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 6.29,
-          "market_rank": 73.87,
+          "market_rank": 76.24,
           "our_rank": 45,
-          "market_gap": 28.9
+          "market_gap": 31.2
         },
         {
           "player_id": "00-0040129",
@@ -5557,7 +5557,7 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 6.28,
-          "market_rank": 19.02,
+          "market_rank": 19.01,
           "our_rank": 46,
           "market_gap": -27.0
         },
@@ -5573,9 +5573,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.26,
-          "market_rank": 70.44,
+          "market_rank": 69.54,
           "our_rank": 47,
-          "market_gap": 23.4
+          "market_gap": 22.5
         },
         {
           "player_id": "00-0035719",
@@ -5589,9 +5589,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 6.16,
-          "market_rank": 58.71,
+          "market_rank": 57.24,
           "our_rank": 48,
-          "market_gap": 10.7
+          "market_gap": 9.2
         },
         {
           "player_id": "00-0039146",
@@ -5605,9 +5605,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 6.1,
-          "market_rank": 46.07,
+          "market_rank": 46.64,
           "our_rank": 49,
-          "market_gap": -2.9
+          "market_gap": -2.4
         },
         {
           "player_id": "00-0036322",
@@ -5621,9 +5621,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.09,
-          "market_rank": 5.82,
+          "market_rank": 6.1,
           "our_rank": 50,
-          "market_gap": -44.2
+          "market_gap": -43.9
         }
       ],
       "TE": [
@@ -5655,9 +5655,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.95,
-          "market_rank": 11.21,
+          "market_rank": 11.1,
           "our_rank": 2,
-          "market_gap": 9.2
+          "market_gap": 9.1
         },
         {
           "player_id": "00-0038996",
@@ -5671,9 +5671,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 10.43,
-          "market_rank": 6.53,
+          "market_rank": 6.06,
           "our_rank": 3,
-          "market_gap": 3.5
+          "market_gap": 3.1
         },
         {
           "player_id": "00-0036970",
@@ -5687,9 +5687,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 10.02,
-          "market_rank": 6.96,
+          "market_rank": 7.11,
           "our_rank": 4,
-          "market_gap": 3.0
+          "market_gap": 3.1
         },
         {
           "player_id": "00-0034351",
@@ -5703,9 +5703,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 8.93,
-          "market_rank": 13.76,
+          "market_rank": 13.51,
           "our_rank": 5,
-          "market_gap": 8.8
+          "market_gap": 8.5
         },
         {
           "player_id": "00-0039338",
@@ -5719,7 +5719,7 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 8.65,
-          "market_rank": 1.67,
+          "market_rank": 1.72,
           "our_rank": 6,
           "market_gap": -4.3
         },
@@ -5735,9 +5735,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 8.43,
-          "market_rank": 31.75,
+          "market_rank": 32.23,
           "our_rank": 7,
-          "market_gap": 24.8
+          "market_gap": 25.2
         },
         {
           "player_id": "00-0033090",
@@ -5751,9 +5751,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.38,
-          "market_rank": 19.29,
+          "market_rank": 19.46,
           "our_rank": 8,
-          "market_gap": 11.3
+          "market_gap": 11.5
         },
         {
           "player_id": "00-0039065",
@@ -5767,9 +5767,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 8.34,
-          "market_rank": 7.63,
+          "market_rank": 7.28,
           "our_rank": 9,
-          "market_gap": -1.4
+          "market_gap": -1.7
         },
         {
           "player_id": "00-0040126",
@@ -5783,7 +5783,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 8.12,
-          "market_rank": 3.24,
+          "market_rank": 3.23,
           "our_rank": 10,
           "market_gap": -6.8
         },
@@ -5799,9 +5799,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.3,
-          "market_rank": 12.6,
+          "market_rank": 12.45,
           "our_rank": 11,
-          "market_gap": 1.6
+          "market_gap": 1.4
         },
         {
           "player_id": "00-0040663",
@@ -5815,9 +5815,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 7.14,
-          "market_rank": 6.0,
+          "market_rank": 6.37,
           "our_rank": 12,
-          "market_gap": -6.0
+          "market_gap": -5.6
         },
         {
           "player_id": "00-0038935",
@@ -5831,9 +5831,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 7.03,
-          "market_rank": 18.01,
+          "market_rank": 18.38,
           "our_rank": 13,
-          "market_gap": 5.0
+          "market_gap": 5.4
         },
         {
           "player_id": "00-0033110",
@@ -5847,9 +5847,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 6.43,
-          "market_rank": 42.81,
+          "market_rank": 44.08,
           "our_rank": 14,
-          "market_gap": 28.8
+          "market_gap": 30.1
         },
         {
           "player_id": "00-0037112",
@@ -5863,7 +5863,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.37,
-          "market_rank": 36.61,
+          "market_rank": 36.57,
           "our_rank": 15,
           "market_gap": 21.6
         },
@@ -5879,9 +5879,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.29,
-          "market_rank": 17.27,
+          "market_rank": 16.49,
           "our_rank": 16,
-          "market_gap": 1.3
+          "market_gap": 0.5
         },
         {
           "player_id": "00-0039793",
@@ -5895,9 +5895,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 6.25,
-          "market_rank": 23.71,
+          "market_rank": 23.77,
           "our_rank": 17,
-          "market_gap": 6.7
+          "market_gap": 6.8
         },
         {
           "player_id": "00-0035689",
@@ -5911,9 +5911,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 6.13,
-          "market_rank": 45.67,
+          "market_rank": 45.81,
           "our_rank": 18,
-          "market_gap": 27.7
+          "market_gap": 27.8
         },
         {
           "player_id": "00-0034383",
@@ -5927,9 +5927,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 6.05,
-          "market_rank": 21.19,
+          "market_rank": 20.89,
           "our_rank": 19,
-          "market_gap": 2.2
+          "market_gap": 1.9
         },
         {
           "player_id": "00-0030506",
@@ -5943,9 +5943,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.92,
-          "market_rank": 9.58,
+          "market_rank": 9.86,
           "our_rank": 20,
-          "market_gap": -10.4
+          "market_gap": -10.1
         },
         {
           "player_id": "00-0031610",
@@ -5959,9 +5959,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 5.81,
-          "market_rank": 50.09,
+          "market_rank": 40.0,
           "our_rank": 21,
-          "market_gap": 29.1
+          "market_gap": 19.0
         },
         {
           "player_id": "00-0040128",
@@ -5975,7 +5975,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.62,
-          "market_rank": 3.94,
+          "market_rank": 3.89,
           "our_rank": 22,
           "market_gap": -18.1
         },
@@ -5991,9 +5991,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 5.43,
-          "market_rank": 53.6,
+          "market_rank": 54.9,
           "our_rank": 23,
-          "market_gap": 30.6
+          "market_gap": 31.9
         },
         {
           "player_id": "00-0038041",
@@ -6007,9 +6007,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.29,
-          "market_rank": 12.14,
+          "market_rank": 12.39,
           "our_rank": 24,
-          "market_gap": -11.9
+          "market_gap": -11.6
         },
         {
           "player_id": "00-0034829",
@@ -6023,9 +6023,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 5.04,
-          "market_rank": 33.35,
+          "market_rank": 33.79,
           "our_rank": 25,
-          "market_gap": 8.4
+          "market_gap": 8.8
         },
         {
           "player_id": "00-0038129",
@@ -6039,9 +6039,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 5.0,
-          "market_rank": 28.62,
+          "market_rank": 28.44,
           "our_rank": 26,
-          "market_gap": 2.6
+          "market_gap": 2.4
         },
         {
           "player_id": "00-0039847",
@@ -6055,9 +6055,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 4.97,
-          "market_rank": 35.23,
+          "market_rank": 35.91,
           "our_rank": 27,
-          "market_gap": 8.2
+          "market_gap": 8.9
         },
         {
           "player_id": "00-0035229",
@@ -6071,7 +6071,7 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 4.7,
-          "market_rank": 22.23,
+          "market_rank": 22.25,
           "our_rank": 28,
           "market_gap": -5.8
         },
@@ -6087,9 +6087,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": true,
           "edge_score": 4.46,
-          "market_rank": 20.4,
+          "market_rank": 20.94,
           "our_rank": 29,
-          "market_gap": -8.6
+          "market_gap": -8.1
         },
         {
           "player_id": "00-0040737",
@@ -6103,9 +6103,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 4.44,
-          "market_rank": 28.09,
+          "market_rank": 27.77,
           "our_rank": 30,
-          "market_gap": -1.9
+          "market_gap": -2.2
         },
         {
           "player_id": "00-0037252",
@@ -6119,9 +6119,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": false,
           "edge_score": 4.17,
-          "market_rank": 24.63,
+          "market_rank": 23.63,
           "our_rank": 31,
-          "market_gap": -6.4
+          "market_gap": -7.4
         },
         {
           "player_id": "00-0036894",
@@ -6135,9 +6135,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 4.15,
-          "market_rank": 28.14,
+          "market_rank": 27.89,
           "our_rank": 32,
-          "market_gap": -3.9
+          "market_gap": -4.1
         },
         {
           "player_id": "00-0033881",
@@ -6151,9 +6151,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 4.12,
-          "market_rank": 31.18,
+          "market_rank": 31.35,
           "our_rank": 33,
-          "market_gap": -1.8
+          "market_gap": -1.6
         },
         {
           "player_id": "00-0037809",
@@ -6167,9 +6167,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 4.03,
-          "market_rank": 17.28,
+          "market_rank": 17.69,
           "our_rank": 34,
-          "market_gap": -16.7
+          "market_gap": -16.3
         },
         {
           "player_id": "00-0035249",
@@ -6183,9 +6183,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 4.02,
-          "market_rank": 64.11,
+          "market_rank": 64.5,
           "our_rank": 35,
-          "market_gap": 29.1
+          "market_gap": 29.5
         },
         {
           "player_id": "00-0036290",
@@ -6199,9 +6199,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 3.96,
-          "market_rank": 43.03,
+          "market_rank": 43.53,
           "our_rank": 36,
-          "market_gap": 7.0
+          "market_gap": 7.5
         },
         {
           "player_id": "00-0040736",
@@ -6215,9 +6215,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 3.77,
-          "market_rank": 34.18,
+          "market_rank": 34.76,
           "our_rank": 37,
-          "market_gap": -2.8
+          "market_gap": -2.2
         },
         {
           "player_id": "00-0032392",
@@ -6231,9 +6231,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 3.38,
-          "market_rank": 54.8,
+          "market_rank": 55.83,
           "our_rank": 38,
-          "market_gap": 16.8
+          "market_gap": 17.8
         },
         {
           "player_id": "00-0033885",
@@ -6247,9 +6247,9 @@
           "oline_continuity_pct": 0.0,
           "same_head_coach": false,
           "edge_score": 3.34,
-          "market_rank": 29.28,
+          "market_rank": 30.13,
           "our_rank": 39,
-          "market_gap": -9.7
+          "market_gap": -8.9
         },
         {
           "player_id": "00-0037005",
@@ -6263,9 +6263,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 3.22,
-          "market_rank": 53.2,
+          "market_rank": 54.53,
           "our_rank": 40,
-          "market_gap": 13.2
+          "market_gap": 14.5
         },
         {
           "player_id": "00-0034613",
@@ -6279,9 +6279,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 3.15,
-          "market_rank": 62.6,
+          "market_rank": 72.4,
           "our_rank": 41,
-          "market_gap": 21.6
+          "market_gap": 31.4
         },
         {
           "player_id": "00-0037004",
@@ -6295,9 +6295,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 3.12,
-          "market_rank": 140.67,
+          "market_rank": 124.25,
           "our_rank": 42,
-          "market_gap": 98.7
+          "market_gap": 82.2
         },
         {
           "player_id": "00-0040194",
@@ -6311,25 +6311,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 3.03,
-          "market_rank": 66.22,
+          "market_rank": 65.0,
           "our_rank": 43,
-          "market_gap": 23.2
-        },
-        {
-          "player_id": "00-0033357",
-          "name": "Taysom Hill",
-          "position": "TE",
-          "team": "NO",
-          "baseline_ppg": 2.46,
-          "season_ppg": 2.37,
-          "last6_ppg": 2.55,
-          "games_played_2025": 13,
-          "oline_continuity_pct": 0.8,
-          "same_head_coach": true,
-          "edge_score": 2.96,
-          "market_rank": 79.25,
-          "our_rank": 44,
-          "market_gap": 35.2
+          "market_gap": 22.0
         },
         {
           "player_id": "00-0039074",
@@ -6343,9 +6327,25 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 2.96,
-          "market_rank": 90.75,
+          "market_rank": 91.4,
+          "our_rank": 44,
+          "market_gap": 47.4
+        },
+        {
+          "player_id": "00-0033357",
+          "name": "Taysom Hill",
+          "position": "TE",
+          "team": "NO",
+          "baseline_ppg": 2.46,
+          "season_ppg": 2.37,
+          "last6_ppg": 2.55,
+          "games_played_2025": 13,
+          "oline_continuity_pct": 0.8,
+          "same_head_coach": true,
+          "edge_score": 2.96,
+          "market_rank": 69.0,
           "our_rank": 45,
-          "market_gap": 45.8
+          "market_gap": 24.0
         },
         {
           "player_id": "00-0034753",
@@ -6359,9 +6359,9 @@
           "oline_continuity_pct": 0.4,
           "same_head_coach": false,
           "edge_score": 2.81,
-          "market_rank": 13.88,
+          "market_rank": 14.52,
           "our_rank": 46,
-          "market_gap": -32.1
+          "market_gap": -31.5
         },
         {
           "player_id": "00-0036754",
@@ -6375,9 +6375,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": true,
           "edge_score": 2.79,
-          "market_rank": 67.6,
+          "market_rank": 76.2,
           "our_rank": 47,
-          "market_gap": 20.6
+          "market_gap": 29.2
         },
         {
           "player_id": "00-0036422",
@@ -6391,9 +6391,9 @@
           "oline_continuity_pct": 1.0,
           "same_head_coach": true,
           "edge_score": 2.71,
-          "market_rank": 62.13,
+          "market_rank": 62.0,
           "our_rank": 48,
-          "market_gap": 14.1
+          "market_gap": 14.0
         },
         {
           "player_id": "00-0040584",
@@ -6407,9 +6407,9 @@
           "oline_continuity_pct": 0.6,
           "same_head_coach": false,
           "edge_score": 2.67,
-          "market_rank": 25.45,
+          "market_rank": 25.66,
           "our_rank": 49,
-          "market_gap": -23.6
+          "market_gap": -23.3
         },
         {
           "player_id": "00-0039356",
@@ -6423,9 +6423,9 @@
           "oline_continuity_pct": 0.8,
           "same_head_coach": true,
           "edge_score": 2.66,
-          "market_rank": 42.19,
+          "market_rank": 44.16,
           "our_rank": 50,
-          "market_gap": -7.8
+          "market_gap": -5.8
         }
       ]
     }
