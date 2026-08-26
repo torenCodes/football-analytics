@@ -255,7 +255,7 @@ function renderDreamTeam() {
   const notesEl = document.getElementById('dream-team-notes');
   notesEl.innerHTML = (data.notes || []).map(n => `<p class="empty-state" style="color: var(--accent-betting-dark);">${n}</p>`).join('');
 
-  const slotOrder = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
+  const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
   const starters = [];
   for (const slot of slotOrder) {
     for (const p of (data.roster[slot] || [])) starters.push({ slot, ...p });

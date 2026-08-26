@@ -420,8 +420,9 @@ def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continu
 
 LEAGUE_SIZES = [10, 12]
 STARTERS = [("QB", 1), ("RB", 2), ("WR", 2), ("TE", 1)]
+FLEX_ELIGIBLE = ["RB", "WR", "TE"]
 BENCH_SIZE = 6
-SKILL_PICKS_NEEDED = sum(n for _, n in STARTERS) + BENCH_SIZE  # 6 starters + 6 bench = 12
+SKILL_PICKS_NEEDED = sum(n for _, n in STARTERS) + 1 + BENCH_SIZE  # 6 fixed starters + 1 FLEX + 6 bench = 13
 
 
 def snake_pick_numbers(num_teams, draft_slot, num_rounds):
@@ -473,10 +474,13 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
 
     taken = set()
     starters = {pos: [] for pos, _ in STARTERS}
+    starters["FLEX"] = []
     bench = []
     required = dict(STARTERS)
+    required["FLEX"] = 1
     need = dict(required)
     reach_notes = []
+    base_positions = [pos for pos, _ in STARTERS]
 
     def best_available(position_filter=None):
         for p in big_board:
@@ -489,7 +493,17 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
 
     for overall_pick in range(1, last_skill_pick + 1):
         if overall_pick in our_picks:
-            needed_positions = [pos for pos, remaining in need.items() if remaining > 0]
+            # Fill the fixed positional slots (QB/RB/WR/TE) before FLEX, and
+            # FLEX before bench -- a real drafter locks in required starters
+            # first, then takes the best remaining RB/WR/TE for the flex
+            # spot, same priority order as everything else here.
+            base_needed = [pos for pos in base_positions if need.get(pos, 0) > 0]
+            if base_needed:
+                needed_positions = base_needed
+            elif need.get("FLEX", 0) > 0:
+                needed_positions = FLEX_ELIGIBLE
+            else:
+                needed_positions = None
             pick = best_available(needed_positions) if needed_positions else best_available()
             if pick is None:
                 continue
@@ -498,6 +512,9 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
             if need.get(pick["position"], 0) > 0:
                 starters[pick["position"]].append(pick)
                 need[pick["position"]] -= 1
+            elif need.get("FLEX", 0) > 0 and pick["position"] in FLEX_ELIGIBLE:
+                starters["FLEX"].append(pick)
+                need["FLEX"] -= 1
             else:
                 bench.append(pick)
         else:
@@ -536,7 +553,8 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
         f"other {league_teams - 1} teams' -- is modeled as best-player-available by Value Over Replacement "
         "(VOR): edge score minus the edge score of the last starter-worthy player at that position "
         f"league-wide (QB{replacement_ranks['QB']}/RB{replacement_ranks['RB']}/WR{replacement_ranks['WR']}/"
-        f"TE{replacement_ranks['TE']} for a {league_teams}-team, 1QB/2RB/2WR/1TE-starter league). That "
+        f"TE{replacement_ranks['TE']} for a {league_teams}-team, 1QB/2RB/2WR/1TE/1FLEX-starter league; FLEX "
+        "draws from whichever RB/WR/TE has the best remaining VOR once the fixed slots are filled). That "
         f"determines our exact pick numbers: {', '.join(str(p) for p in skill_pick_numbers)} for skill "
         f"positions, with K and DST punted to the final two picks ({pick_numbers[-2]}, {pick_numbers[-1]}) "
         "since real drafts essentially never take them earlier regardless of raw VOR."
@@ -550,6 +568,7 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
             "RB": [simplify(p) for p in starters["RB"]],
             "WR": [simplify(p) for p in starters["WR"]],
             "TE": [simplify(p) for p in starters["TE"]],
+            "FLEX": [simplify(p) for p in starters["FLEX"]],
             "K": [simplify(top_k)] if top_k else [],
             "DST": [simplify(top_dst)] if top_dst else [],
             "BENCH": [simplify(p) for p in bench],
@@ -570,7 +589,7 @@ def compute_dream_team(draft_board):
 
     return {
         "league_sizes": LEAGUE_SIZES,
-        "roster_requirements": {**{pos: n for pos, n in STARTERS}, "K": 1, "DST": 1, "BENCH": BENCH_SIZE},
+        "roster_requirements": {**{pos: n for pos, n in STARTERS}, "FLEX": 1, "K": 1, "DST": 1, "BENCH": BENCH_SIZE},
         "scenarios": scenarios,
     }
 
