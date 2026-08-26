@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fantasy -- Gridiron Edge</title>
-<meta name="description" content="Perfect Team retrospective and 2026 Draft Board, scored under both PPR and Standard rules.">
+<title>Fantasy -- Data Touchdown</title>
+<meta name="description" content="Perfect Team retrospective, 2026 Draft Board, and Dream Team draft simulation, scored under both PPR and Standard rules.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
   <nav class="site-nav">
-    <a href="index.html" class="site-logo">Gridiron<span class="dot">•</span>Edge</a>
+    <a href="index.html" class="site-logo">Data<span class="dot">•</span>Touchdown</a>
     <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
     <ul class="site-nav-links">
       <li><a href="index.html" class="site-nav-link">Home</a></li>
@@ -22,31 +22,83 @@
 </header>
 
 <main class="container">
-  <section class="hero" style="padding-bottom: 1rem;">
-    <div class="badge">scoring format</div>
-    <h1>Fantasy</h1>
-    <p>Perfect Team retrospective and the 2026 Draft Board. Lineups and rankings can genuinely flip
-       between formats -- toggle below.</p>
+  <div class="masthead-strip">
+    <div>
+      <h1>Fantasy</h1>
+      <div class="masthead-sub">Perfect Team retrospective, the 2026 Draft Board, and a simulated Dream Team -- lineups and rankings can genuinely flip between formats.</div>
+    </div>
     <div class="toggle-group" id="format-toggle">
       <button class="toggle-btn active" data-format="ppr">PPR</button>
       <button class="toggle-btn" data-format="standard">Standard</button>
     </div>
-  </section>
+  </div>
 
   <section class="section">
-    <div class="section-head">
-      <h2 id="perfect-team-title">Perfect Team</h2>
-      <span class="section-note" id="perfect-team-note"></span>
+    <div class="two-col-fantasy">
+      <div class="two-col-left">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">2025 Season</div>
+            <h2 id="perfect-team-title">Perfect Team</h2>
+          </div>
+          <span class="section-note" id="perfect-team-note"></span>
+        </div>
+        <div id="perfect-lineup" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
+        <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
+        <div class="card card-accent-fantasy table-scroll">
+          <table class="data-table" id="perfect-team-bench">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="two-col-right">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">2026 Draft Simulation</div>
+            <h2>Dream Team</h2>
+          </div>
+        </div>
+        <div class="dream-team-controls">
+          <label>League size
+            <select id="dt-league-size">
+              <option value="10">10-team</option>
+              <option value="12">12-team</option>
+            </select>
+          </label>
+          <label>Your draft slot
+            <select id="dt-draft-slot"></select>
+          </label>
+        </div>
+        <div class="section-note" id="dream-team-scenario-line" style="display: block; margin-bottom: 0.5rem;"></div>
+        <details class="methodology-details" style="margin-bottom: 1rem;">
+          <summary>How this works</summary>
+          <div class="section-note" id="dream-team-methodology" style="display: block; margin-top: 0.5rem; line-height: 1.5;"></div>
+        </details>
+        <div id="dream-team-notes"></div>
+        <div id="dream-team-starters" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
+        <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
+        <div class="card card-accent-fantasy table-scroll">
+          <table class="data-table" id="dream-team-bench">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <div id="perfect-lineup" class="lineup-grid"></div>
   </section>
 
   <section class="section">
     <div class="section-head">
-      <h2>Position Leaders</h2>
+      <div>
+        <div class="section-kicker">2025 Season</div>
+        <h2>Position Leaders</h2>
+      </div>
+      <span class="section-note">Top 10 by total 2025 points.</span>
     </div>
     <div class="pos-tabs" id="leaders-pos-tabs"></div>
-    <div class="card table-scroll">
+    <div class="card card-accent-fantasy table-scroll">
       <table class="data-table" id="leaders-table">
         <thead></thead>
         <tbody></tbody>
@@ -56,11 +108,14 @@
 
   <section class="section">
     <div class="section-head">
-      <h2>2026 Draft Board</h2>
+      <div>
+        <div class="section-kicker">2026 Draft Prep</div>
+        <h2>Draft Board</h2>
+      </div>
       <span class="section-note">Edge score = recency-weighted 2025 production + continuity adjustment. Market rank = FantasyPros consensus.</span>
     </div>
     <div class="pos-tabs" id="board-pos-tabs"></div>
-    <div class="card table-scroll">
+    <div class="card card-accent-fantasy table-scroll">
       <table class="data-table" id="board-table">
         <thead></thead>
         <tbody></tbody>
@@ -69,8 +124,8 @@
   </section>
 
   <p class="disclaimer">
-    Educational research project, not financial or fantasy advice. Edge scores and rankings are one
-    tunable model's output, not a guarantee of results.
+    Educational research project, not financial or fantasy advice. Edge scores, rankings, and the Dream
+    Team simulation are one tunable model's output, not a guarantee of results.
   </p>
 </main>
 
@@ -81,12 +136,15 @@ function toggleSiteNav(btn) {
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
 }
 
-const SKILL_POS = ['QB', 'RB', 'WR', 'TE'];
+const ROSTER_POS = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
 let perfectTeamData = null;
 let draftBoardData = null;
+let dreamTeamData = null;
 let currentFormat = 'ppr';
 let currentLeadersPos = 'QB';
 let currentBoardPos = 'QB';
+let currentLeagueSize = 10;
+let currentDraftSlot = 1;
 
 function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
 
@@ -95,9 +153,10 @@ function renderPerfectTeam() {
   document.getElementById('perfect-team-title').textContent = `Perfect Team -- ${data.season} (${currentFormat.toUpperCase()})`;
   document.getElementById('perfect-team-note').textContent = `Highest-scoring possible lineup, total ${fmt1(data.perfect_lineup_total_points)} pts`;
 
+  const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
   const slots = [];
-  for (const [slot, players] of Object.entries(data.perfect_lineup)) {
-    for (const p of players) slots.push({ slot, ...p });
+  for (const slot of slotOrder) {
+    for (const p of (data.perfect_lineup[slot] || [])) slots.push({ slot, ...p });
   }
   const grid = document.getElementById('perfect-lineup');
   grid.innerHTML = slots.map(p => `
@@ -108,11 +167,24 @@ function renderPerfectTeam() {
       <div class="slot-pts">${fmt1(p.points)} pts</div>
     </div>
   `).join('');
+
+  const bench = data.bench || [];
+  const thead = document.querySelector('#perfect-team-bench thead');
+  const tbody = document.querySelector('#perfect-team-bench tbody');
+  thead.innerHTML = `<tr><th class="w-xs">Pos</th><th>Player</th><th class="w-sm">Team</th><th class="num-center w-sm">Points</th></tr>`;
+  tbody.innerHTML = bench.map(p => `
+    <tr>
+      <td><span class="pill pos">${p.position}</span></td>
+      <td>${p.name}</td>
+      <td>${p.team}</td>
+      <td class="num-center">${fmt1(p.points)}</td>
+    </tr>
+  `).join('') || `<tr><td colspan="4" class="empty-state">No data</td></tr>`;
 }
 
 function renderPosTabs(containerId, activePos, onSelect) {
   const el = document.getElementById(containerId);
-  el.innerHTML = SKILL_POS.map(pos =>
+  el.innerHTML = ROSTER_POS.map(pos =>
     `<button class="pos-tab ${pos === activePos ? 'active' : ''}" data-pos="${pos}">${pos}</button>`
   ).join('');
   el.querySelectorAll('.pos-tab').forEach(btn => {
@@ -125,15 +197,15 @@ function renderLeadersTable() {
   const rows = data.leaders_by_position[currentLeadersPos] || [];
   const thead = document.querySelector('#leaders-table thead');
   const tbody = document.querySelector('#leaders-table tbody');
-  thead.innerHTML = `<tr><th>#</th><th>Player</th><th>Team</th><th class="num">Games</th><th class="num">Points</th><th class="num">PPG</th></tr>`;
+  thead.innerHTML = `<tr><th class="w-xs">#</th><th>Player</th><th class="w-sm">Team</th><th class="num-center w-sm">Games</th><th class="num-center w-sm">Points</th><th class="num-center w-sm">PPG</th></tr>`;
   tbody.innerHTML = rows.map((p, i) => `
     <tr>
       <td>${i + 1}</td>
       <td>${p.name}</td>
       <td><span class="pill pos">${p.team}</span></td>
-      <td class="num">${p.games}</td>
-      <td class="num">${fmt1(p.points)}</td>
-      <td class="num">${fmt1(p.ppg)}</td>
+      <td class="num-center">${p.games}</td>
+      <td class="num-center">${fmt1(p.points)}</td>
+      <td class="num-center">${fmt1(p.ppg)}</td>
     </tr>
   `).join('') || `<tr><td colspan="6" class="empty-state">No data</td></tr>`;
 }
@@ -143,33 +215,81 @@ function renderBoardTable() {
   const rows = data.rankings_by_position[currentBoardPos] || [];
   const thead = document.querySelector('#board-table thead');
   const tbody = document.querySelector('#board-table tbody');
+  const lineLabel = currentBoardPos === 'DST' ? 'D-Line %' : 'O-Line %';
+  const coordLabel = currentBoardPos === 'DST' ? 'Same DC' : 'Same OC';
   thead.innerHTML = `<tr>
-    <th>Rank</th><th>Player</th><th>Team</th><th class="num">Edge Score</th>
-    <th class="num">O-Line Continuity</th><th>Same HC</th><th class="num">Market Rank</th><th class="num">Gap</th>
+    <th class="w-xs">Rank</th><th>Player</th><th class="w-sm">Team</th><th class="num-center w-sm">Edge</th>
+    <th class="num-center w-md">${lineLabel}</th><th class="center w-md">Same HC</th><th class="center w-md">${coordLabel}</th>
+    <th class="num-center w-md">Mkt Rank</th><th class="num w-sm">Gap</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => {
     const gapPill = p.market_gap === null ? '--' :
       p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` :
       p.market_gap < 0 ? `<span class="pill down">${p.market_gap}</span>` : '0';
     const coach = p.same_head_coach === null ? '--' : (p.same_head_coach ? 'Yes' : 'New HC');
-    const cont = p.oline_continuity_pct === null ? '--' : Math.round(p.oline_continuity_pct * 100) + '%';
-    return `<tr>
+    const cont = p.line_continuity_pct === null ? '--' : Math.round(p.line_continuity_pct * 100) + '%';
+    const coordShortRole = p.coordinator_role === 'DC' ? 'DC' : 'OC';
+    const coord = p.same_coordinator === null ? '--' : (p.same_coordinator ? 'Yes' : `New ${coordShortRole}`);
+    return `<tr title="${p.coordinator_name ? p.coordinator_role + ': ' + p.coordinator_name : ''}">
       <td>${p.our_rank}</td>
       <td>${p.name}</td>
       <td><span class="pill pos">${p.team}</span></td>
-      <td class="num">${fmt1(p.edge_score)}</td>
-      <td class="num">${cont}</td>
-      <td>${coach}</td>
-      <td class="num">${p.market_rank !== null ? fmt1(p.market_rank) : '--'}</td>
+      <td class="num-center">${fmt1(p.edge_score)}</td>
+      <td class="num-center">${cont}</td>
+      <td class="center">${coach}</td>
+      <td class="center">${coord}</td>
+      <td class="num-center">${p.market_rank !== null ? fmt1(p.market_rank) : '--'}</td>
       <td class="num">${gapPill}</td>
     </tr>`;
-  }).join('') || `<tr><td colspan="8" class="empty-state">No data</td></tr>`;
+  }).join('') || `<tr><td colspan="9" class="empty-state">No data</td></tr>`;
+}
+
+function renderDreamTeam() {
+  if (!dreamTeamData) return;
+  const scenario = dreamTeamData.scenarios[currentLeagueSize][currentDraftSlot];
+  const data = scenario[currentFormat];
+
+  document.getElementById('dream-team-scenario-line').innerHTML = `<strong>${currentLeagueSize}-team league, drafting from pick ${currentDraftSlot}.</strong>`;
+  document.getElementById('dream-team-methodology').textContent = data.methodology;
+
+  const notesEl = document.getElementById('dream-team-notes');
+  notesEl.innerHTML = (data.notes || []).map(n => `<p class="empty-state" style="color: var(--accent-betting-dark);">${n}</p>`).join('');
+
+  const slotOrder = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
+  const starters = [];
+  for (const slot of slotOrder) {
+    for (const p of (data.roster[slot] || [])) starters.push({ slot, ...p });
+  }
+  document.getElementById('dream-team-starters').innerHTML = starters.map(p => `
+    <div class="lineup-slot">
+      <div class="slot-label">${p.slot}</div>
+      <div class="slot-name">${p.name}</div>
+      <div class="slot-team">${p.team}</div>
+      <div class="slot-pts">${p.drafted_at_pick ? 'Pick ' + p.drafted_at_pick : ''}</div>
+    </div>
+  `).join('');
+
+  const bench = data.roster.BENCH || [];
+  const thead = document.querySelector('#dream-team-bench thead');
+  const tbody = document.querySelector('#dream-team-bench tbody');
+  thead.innerHTML = `<tr><th class="w-xs">Pos</th><th>Player</th><th class="w-sm">Team</th><th class="num-center w-sm">Edge</th><th class="num-center w-sm">VOR</th><th class="num-center w-lg">Drafted At</th></tr>`;
+  tbody.innerHTML = bench.map(p => `
+    <tr>
+      <td><span class="pill pos">${p.position}</span></td>
+      <td>${p.name}</td>
+      <td>${p.team}</td>
+      <td class="num-center">${fmt1(p.edge_score)}</td>
+      <td class="num-center">${fmt1(p.vor)}</td>
+      <td class="num-center">Pick ${p.drafted_at_pick ?? '--'}</td>
+    </tr>
+  `).join('') || `<tr><td colspan="6" class="empty-state">No data</td></tr>`;
 }
 
 function renderAll() {
   renderPerfectTeam();
   renderLeadersTable();
   renderBoardTable();
+  renderDreamTeam();
 }
 
 function selectLeadersPos(pos) {
@@ -184,11 +304,19 @@ function selectBoardPos(pos) {
   renderBoardTable();
 }
 
+function populateDraftSlotOptions() {
+  const select = document.getElementById('dt-draft-slot');
+  const slots = Object.keys(dreamTeamData.scenarios[currentLeagueSize]).sort((a, b) => a - b);
+  select.innerHTML = slots.map(s => `<option value="${s}">Pick ${s}</option>`).join('');
+  select.value = currentDraftSlot;
+}
+
 async function init() {
   try {
-    [perfectTeamData, draftBoardData] = await Promise.all([
+    [perfectTeamData, draftBoardData, dreamTeamData] = await Promise.all([
       fetch('data/fantasy/perfect_team.json').then(r => r.json()),
       fetch('data/fantasy/draft_board.json').then(r => r.json()),
+      fetch('data/fantasy/dream_team.json').then(r => r.json()),
     ]);
   } catch (e) {
     document.querySelector('main').insertAdjacentHTML('afterbegin', '<p class="empty-state">Could not load fantasy data. Run scripts/fantasy_scan.py.</p>');
@@ -202,6 +330,18 @@ async function init() {
       renderAll();
     });
   });
+
+  document.getElementById('dt-league-size').addEventListener('change', (e) => {
+    currentLeagueSize = Number(e.target.value);
+    currentDraftSlot = 1; // reset -- a slot valid in the old league size may not exist in the new one
+    populateDraftSlotOptions();
+    renderDreamTeam();
+  });
+  document.getElementById('dt-draft-slot').addEventListener('change', (e) => {
+    currentDraftSlot = Number(e.target.value);
+    renderDreamTeam();
+  });
+  populateDraftSlotOptions();
 
   renderPosTabs('leaders-pos-tabs', currentLeadersPos, selectLeadersPos);
   renderPosTabs('board-pos-tabs', currentBoardPos, selectBoardPos);

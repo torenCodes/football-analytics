@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Betting -- Gridiron Edge</title>
-<meta name="description" content="Weekly game-by-game picks and a 2025 season backtest against the closing spread.">
+<title>Betting -- Data Touchdown</title>
+<meta name="description" content="Weekly game-by-game picks built from matchup efficiency, continuity, situational factors, and weather.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
   <nav class="site-nav">
-    <a href="index.html" class="site-logo">Gridiron<span class="dot">•</span>Edge</a>
+    <a href="index.html" class="site-logo">Data<span class="dot">•</span>Touchdown</a>
     <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
     <ul class="site-nav-links">
       <li><a href="index.html" class="site-nav-link">Home</a></li>
@@ -22,33 +22,41 @@
 </header>
 
 <main class="container">
-  <section class="hero" style="padding-bottom: 1rem;">
-    <div class="badge">individual game analysis</div>
-    <h1>Individual Game Betting</h1>
-    <p>Matchup efficiency (offense vs. defense EPA/play), continuity, situational factors, and weather --
-       weighed as explainable factors, not a black-box number.</p>
-  </section>
+  <div class="masthead-strip">
+    <div>
+      <h1>Betting</h1>
+      <div class="masthead-sub">Matchup efficiency (offense vs. defense EPA/play), continuity, situational factors, and weather -- weighed as explainable factors, not a black-box number.</div>
+    </div>
+    <div class="masthead-date" id="betting-week-label"></div>
+  </div>
 
   <section class="section">
     <div class="section-head">
-      <h2>Backtest: 2025 vs. the Closing Spread</h2>
+      <div>
+        <div class="section-kicker betting">2026 Season</div>
+        <h2 id="game-board-title">Game Board</h2>
+      </div>
+      <span class="section-note">Click a game to see how the pick was built.</span>
     </div>
-    <div class="card card-pad" id="backtest-summary">
-      <p class="loading">Loading...</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <h2 id="game-board-title">This Week's Game Board</h2>
-    </div>
+    <details class="methodology-details" style="margin-bottom: 1.25rem;">
+      <summary>What do spread / moneyline / total mean?</summary>
+      <div class="section-note" style="display: block; margin-top: 0.5rem; line-height: 1.6;">
+        <strong>Moneyline</strong> is a bet on who simply wins the game. A negative number is the favorite --
+        e.g. &minus;148 means you'd bet $148 to win $100 (plus your $148 back). A positive number is the
+        underdog -- e.g. +124 means a $100 bet wins $124. <strong>Spread</strong> handicaps the favorite by a
+        point margin so both sides are roughly equally likely to "cover" -- the favorite (shown negative, e.g.
+        KC &minus;3.0) must win by more than 3 to cover; the underdog (shown positive, e.g. DEN +3.0) covers by
+        losing by less than 3, or winning outright. <strong>Total</strong> (over/under) is a bet on the
+        combined score of both teams, over or under one number. "Model vs. market" below compares our model's
+        margin to the actual spread -- the gap is our pitch, not the raw pick.
+      </div>
+    </details>
     <div id="game-board"></div>
   </section>
 
   <p class="disclaimer">
-    Educational research project, not betting advice. Model accuracy shown above is against the closing
-    spread on a leave-one-out backtest of the 2025 season -- past performance does not predict future
-    results, and this is not a recommendation to wager real money.
+    Educational research project, not betting advice. Picks come from one tunable model's output, not a
+    guarantee of results, and this is not a recommendation to wager real money.
   </p>
 </main>
 
@@ -61,24 +69,35 @@ function toggleSiteNav(btn) {
 
 function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
 
-async function loadBacktest() {
-  const el = document.getElementById('backtest-summary');
-  try {
-    const bt = await fetch('data/betting/best_calls_backtest.json').then(r => r.json());
-    if (!bt.accuracy && bt.accuracy !== 0) {
-      el.innerHTML = '<p class="empty-state">No graded games yet.</p>';
-      return;
-    }
-    const pct = Math.round(bt.accuracy * 1000) / 10;
-    el.innerHTML = `
-      <div class="zone-stat-row"><span class="zone-stat-label">Season</span><span class="zone-stat-value">${bt.season}</span></div>
-      <div class="zone-stat-row"><span class="zone-stat-label">Games graded</span><span class="zone-stat-value">${bt.games_graded}</span></div>
-      <div class="zone-stat-row"><span class="zone-stat-label">Correct against the spread</span><span class="zone-stat-value">${bt.correct_picks} (${pct}%)</span></div>
-      <p class="section-note" style="margin-top:0.75rem; display:block;">${bt.method}</p>
-    `;
-  } catch (e) {
-    el.innerHTML = '<p class="empty-state">Backtest data not available yet -- run scripts/betting_scan.py.</p>';
-  }
+// Official primary brand color per team (from nflverse's teams table).
+// One override: New Orleans' primary gold (#D3BC8D) fails contrast against
+// this page's light background (checked: 1.7:1, well under the 3:1 floor),
+// so NO uses their black secondary instead -- every other team's primary
+// clears 3:1 as-is.
+const TEAM_COLORS = {
+  ARI: '#97233F', ATL: '#A71930', BAL: '#241773', BUF: '#00338D', CAR: '#0085CA',
+  CHI: '#0B162A', CIN: '#FB4F14', CLE: '#FF3C00', DAL: '#002244', DEN: '#002244',
+  DET: '#0076B6', GB: '#203731', HOU: '#03202F', IND: '#002C5F', JAX: '#006778',
+  KC: '#E31837', LA: '#003594', LAC: '#007BC7', LV: '#000000', MIA: '#008E97',
+  MIN: '#4F2683', NE: '#002244', NO: '#000000', NYG: '#0B2265', NYJ: '#003F2D',
+  PHI: '#004C54', PIT: '#000000', SEA: '#002244', SF: '#AA0000', TB: '#A71930',
+  TEN: '#4495D2', WAS: '#5A1414',
+};
+
+function teamSpan(abbr) {
+  const color = TEAM_COLORS[abbr];
+  return color ? `<span style="color: ${color}; font-weight: 700;">${abbr}</span>` : abbr;
+}
+
+// Colors just the two teams THIS game is about, matched on word boundaries
+// so e.g. "LA" doesn't clip inside another word -- safe because a game's
+// storyline only ever names its own home/away teams.
+function colorStoryline(text, home, away) {
+  if (!text) return text;
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text
+    .replace(new RegExp(`\\b${esc(home)}\\b`, 'g'), teamSpan(home))
+    .replace(new RegExp(`\\b${esc(away)}\\b`, 'g'), teamSpan(away));
 }
 
 function factorTags(g) {
@@ -87,24 +106,49 @@ function factorTags(g) {
   if (g.div_game) tags.push(`<span class="factor-tag flag">Division game</span>`);
   if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) {
     const who = g.revenge_game.home ? g.home_team : g.away_team;
-    tags.push(`<span class="factor-tag flag">Revenge game: ${who} lost last meeting (${g.revenge_game.last_season})</span>`);
+    tags.push(`<span class="factor-tag flag">Revenge game: ${teamSpan(who)} lost last meeting (${g.revenge_game.last_season})</span>`);
   }
   if (g.rest_days_edge_home !== null && g.rest_days_edge_home !== 0) {
     const who = g.rest_days_edge_home > 0 ? g.home_team : g.away_team;
-    tags.push(`<span class="factor-tag">Rest edge: ${who} (+${Math.abs(g.rest_days_edge_home)}d)</span>`);
+    tags.push(`<span class="factor-tag">Rest edge: ${teamSpan(who)} (+${Math.abs(g.rest_days_edge_home)}d)</span>`);
   }
   if (g.international_site) tags.push(`<span class="factor-tag flag">International site</span>`);
   if (g.roof) tags.push(`<span class="factor-tag">${g.roof}</span>`);
   if (g.weather) tags.push(`<span class="factor-tag">${g.weather.short_forecast}, ${g.weather.temperature_f}°F, wind ${g.weather.wind}</span>`);
   const homeOl = g.oline_continuity && g.oline_continuity.home;
   const awayOl = g.oline_continuity && g.oline_continuity.away;
-  if (homeOl) tags.push(`<span class="factor-tag">${g.home_team} O-line continuity: ${Math.round(homeOl.continuity_pct * 100)}%</span>`);
-  if (awayOl) tags.push(`<span class="factor-tag">${g.away_team} O-line continuity: ${Math.round(awayOl.continuity_pct * 100)}%</span>`);
+  if (homeOl) tags.push(`<span class="factor-tag">${teamSpan(g.home_team)} O-line continuity: ${Math.round(homeOl.continuity_pct * 100)}%</span>`);
+  if (awayOl) tags.push(`<span class="factor-tag">${teamSpan(g.away_team)} O-line continuity: ${Math.round(awayOl.continuity_pct * 100)}%</span>`);
   const homeCoach = g.coach_continuity && g.coach_continuity.home;
   const awayCoach = g.coach_continuity && g.coach_continuity.away;
-  if (homeCoach && homeCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${g.home_team} new HC</span>`);
-  if (awayCoach && awayCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${g.away_team} new HC</span>`);
+  if (homeCoach && homeCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${teamSpan(g.home_team)} new HC</span>`);
+  if (awayCoach && awayCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${teamSpan(g.away_team)} new HC</span>`);
   return tags.join('');
+}
+
+function fmtOdds(n) { return (n === null || n === undefined) ? '--' : (n > 0 ? '+' + n : String(n)); }
+
+function marketOddsHtml(g) {
+  const m = g.market;
+  if (!m) return '';
+  // spread_home is home-relative (positive = home favored); flip signs to
+  // the two teams' own standard-notation numbers (favorite negative,
+  // underdog positive).
+  const homeSpread = -m.spread_home;
+  const awaySpread = m.spread_home;
+  let edgeNote = '';
+  if (m.edge_vs_market !== null && m.edge_vs_market !== undefined) {
+    const towardTeam = m.edge_vs_market > 0 ? g.home_team : g.away_team;
+    edgeNote = `Model vs. market: our model leans ${Math.abs(m.edge_vs_market).toFixed(1)} points more toward ${teamSpan(towardTeam)} than the actual spread does.`;
+  }
+  return `
+    <div class="market-odds">
+      <div class="market-row"><span class="market-label">Spread</span><span>${teamSpan(g.home_team)} ${fmtOdds(homeSpread)} &middot; ${teamSpan(g.away_team)} ${fmtOdds(awaySpread)}</span></div>
+      <div class="market-row"><span class="market-label">Moneyline</span><span>${teamSpan(g.home_team)} ${fmtOdds(m.moneyline_home)} &middot; ${teamSpan(g.away_team)} ${fmtOdds(m.moneyline_away)}</span></div>
+      <div class="market-row"><span class="market-label">Total</span><span>${m.total ?? '--'}</span></div>
+      ${edgeNote ? `<div class="market-edge-note">${edgeNote}</div>` : ''}
+    </div>
+  `;
 }
 
 async function loadGameBoard() {
@@ -115,22 +159,37 @@ async function loadGameBoard() {
       el.innerHTML = `<p class="empty-state">${gb.note || 'No upcoming games found.'}</p>`;
       return;
     }
-    document.getElementById('game-board-title').textContent = `Week ${gb.week} Game Board -- ${gb.season}`;
+    document.getElementById('betting-week-label').textContent = `Week ${gb.week} · ${gb.season}`;
+    const isRivalry = g => g.div_game || (g.revenge_game && (g.revenge_game.home || g.revenge_game.away));
     el.innerHTML = gb.games.map(g => {
       const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
-      const pickText = pickTeam ? `Model pick: ${pickTeam} (${g.model_margin_home > 0 ? '+' : ''}${fmt1(g.model_margin_home)})` : 'Not enough data yet';
+      // model_margin_home is always the HOME team's margin (negative when the
+      // away team is favored) -- showing that raw signed number next to
+      // whichever team is actually the pick reads backwards whenever the pick
+      // is the away team (a favored-by-9 away pick would show "-9"). Always
+      // show the margin from the PICK's own perspective instead, same as the
+      // storyline text already does.
+      const pickText = pickTeam ? `Model pick: ${teamSpan(pickTeam)} (+${fmt1(Math.abs(g.model_margin_home))})` : 'Not enough data yet';
       const time = (g.weekday && g.gametime) ? `${g.weekday} ${g.gametime}` : '';
       return `
-        <div class="game-card">
-          <div class="game-card-top">
-            <div>
-              <div class="game-matchup">${g.away_team} @ ${g.home_team}</div>
-              <div class="section-note">${time}</div>
+        <details class="game-card ${isRivalry(g) ? 'rivalry' : ''}">
+          <summary>
+            <div class="game-card-top">
+              <div class="matchup-line">
+                <div>
+                  <div class="game-matchup">${teamSpan(g.away_team)} @ ${teamSpan(g.home_team)}</div>
+                  <div class="section-note">${time}</div>
+                </div>
+              </div>
+              <div class="game-pick">${pickText}</div>
             </div>
-            <div class="game-pick">${pickText}</div>
+          </summary>
+          <div class="game-card-body">
+            ${marketOddsHtml(g)}
+            <p class="game-storyline">${colorStoryline(g.storyline, g.home_team, g.away_team)}</p>
+            <div class="factor-tags">${factorTags(g)}</div>
           </div>
-          <div class="factor-tags">${factorTags(g)}</div>
-        </div>
+        </details>
       `;
     }).join('');
   } catch (e) {
@@ -138,7 +197,6 @@ async function loadGameBoard() {
   }
 }
 
-loadBacktest();
 loadGameBoard();
 </script>
 </body>

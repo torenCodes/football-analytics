@@ -214,6 +214,116 @@ def fetch_weather(lat, lon, gameday):
         return None
 
 
+def build_storyline(
+    home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
+    oline_home, oline_away, coach_home, coach_away, revenge_flag, div_game,
+    weather, international_site, roof,
+):
+    """A short prose readout of *why* the model landed where it did --
+    the same factors already computed for this game, synthesized into
+    sentences instead of left as a pile of tags. Template-based (not an
+    LLM call -- this runs in a GitHub Actions scan, no API budget for
+    that), but branches on enough of the real inputs per game that it
+    reads as a genuine per-matchup readout rather than boilerplate."""
+    if model_margin_home is None or our_pick is None:
+        return "Not enough efficiency data yet to model this matchup -- check back closer to kickoff."
+
+    pick_team = home if our_pick == "home" else away
+    other_team = away if our_pick == "home" else home
+    margin_abs = abs(model_margin_home)
+
+    if margin_abs >= 7:
+        conviction = "a clear efficiency edge"
+    elif margin_abs >= 3:
+        conviction = "a moderate efficiency edge"
+    else:
+        conviction = "only a slight efficiency edge"
+    sentences = [
+        f"The model leans {pick_team} by {margin_abs:.1f} points, built on {conviction} in offense-vs-defense "
+        f"EPA/play against {other_team}."
+    ]
+
+    home_src, away_src = efficiency_source.get("home"), efficiency_source.get("away")
+    if home_src == "prior_season_fallback" and away_src == "prior_season_fallback":
+        sentences.append(
+            "Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen "
+            "once there's 2026 game data on the board."
+        )
+    elif "prior_season_fallback" in (home_src, away_src):
+        limited_team = home if home_src == "prior_season_fallback" else away
+        sentences.append(f"{limited_team} doesn't have enough 2026 snaps yet, so their side of this model still leans on 2025 production.")
+
+    pick_oline = oline_home if our_pick == "home" else oline_away
+    if pick_oline and pick_oline.get("continuity_pct") is not None:
+        pct = round(pick_oline["continuity_pct"] * 100)
+        if pct >= 80:
+            sentences.append(f"{pick_team}'s offensive line is largely intact from a year ago ({pct}% continuity), which tends to mean a faster start to the season.")
+        elif pct <= 40:
+            sentences.append(f"{pick_team} is breaking in a mostly new offensive line ({pct}% continuity) -- a real wildcard this early in the year.")
+
+    pick_coach = coach_home if our_pick == "home" else coach_away
+    if pick_coach and pick_coach.get("same_coach") is False:
+        sentences.append(f"{pick_team} is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet.")
+
+    if rest_edge is not None and rest_edge != 0:
+        rested_team = home if rest_edge > 0 else away
+        if rested_team == pick_team:
+            sentences.append(f"{pick_team} also holds a rest advantage coming in, one more thing tilting this the model's way.")
+        else:
+            sentences.append(f"Worth noting: {rested_team} actually has the rest advantage here, working against the pick.")
+
+    if div_game:
+        line = "This is a division game, and those historically play tighter than the numbers alone suggest."
+        if revenge_flag and (revenge_flag.get("home") or revenge_flag.get("away")):
+            revenge_team = home if revenge_flag.get("home") else away
+            line += f" {revenge_team} also lost the last meeting between these two, so there's a motivation angle the model can't price in."
+        sentences.append(line)
+
+    if international_site:
+        sentences.append("This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.")
+    elif weather:
+        sentences.append(
+            f"Forecast for kickoff: {weather['short_forecast']}, {weather['temperature_f']}°F, wind {weather['wind']} "
+            "-- something to watch if it turns into a run-heavy day."
+        )
+    elif roof and roof != "outdoors":
+        sentences.append(f"Played {roof.replace('_', ' ')}, so weather isn't a factor here.")
+
+    return " ".join(sentences)
+
+
+def build_market(r, our_pick, model_margin_home):
+    """Real market odds straight from nflverse's schedules -- already
+    populated ahead of kickoff, no paid odds API needed. spread_home follows
+    the same sign convention as the rest of the site: positive means the
+    HOME team is favored (verified against real results in betting_scan's
+    module docstring notes)."""
+    spread_home = r.get("spread_line")
+    if spread_home is None:
+        return None
+
+    market_favorite = "home" if spread_home > 0 else ("away" if spread_home < 0 else None)
+    agrees_with_model = (our_pick == market_favorite) if (our_pick and market_favorite) else None
+    # How much MORE (or less) the model favors the home team than Vegas
+    # does, both expressed as the same home-relative margin so they're
+    # directly comparable -- this gap is the "our data vs. the market" pitch.
+    edge_vs_market = round(model_margin_home - spread_home, 1) if model_margin_home is not None else None
+
+    return {
+        "spread_home": spread_home,
+        "spread_home_odds": r.get("home_spread_odds"),
+        "spread_away_odds": r.get("away_spread_odds"),
+        "moneyline_home": r.get("home_moneyline"),
+        "moneyline_away": r.get("away_moneyline"),
+        "total": r.get("total_line"),
+        "over_odds": r.get("over_odds"),
+        "under_odds": r.get("under_odds"),
+        "market_favorite": market_favorite,
+        "agrees_with_model": agrees_with_model,
+        "edge_vs_market": edge_vs_market,
+    }
+
+
 def build_game_board(schedules, team_stats):
     with open(os.path.join(REF_DIR, "stadiums.json"), encoding="utf-8") as f:
         stadiums = json.load(f)
@@ -314,6 +424,18 @@ def build_game_board(schedules, team_stats):
             + (2 if revenge_flag and (revenge_flag["home"] or revenge_flag["away"]) else 0)
         )
 
+        our_pick = ("home" if model_margin_home > 0 else "away") if model_margin_home is not None else None
+        efficiency_source = {"home": home_off_src, "away": away_off_src}
+        oline_home, oline_away = oline_continuity.get(home), oline_continuity.get(away)
+        coach_home, coach_away = coach_continuity.get(home), coach_continuity.get(away)
+
+        storyline = build_storyline(
+            home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
+            oline_home, oline_away, coach_home, coach_away, revenge_flag, bool(r["div_game"]),
+            weather, international_site, r["roof"],
+        )
+        market = build_market(r, our_pick, model_margin_home)
+
         picks.append(
             {
                 "game_id": r["game_id"],
@@ -327,15 +449,17 @@ def build_game_board(schedules, team_stats):
                 "away_team": away,
                 "div_game": bool(r["div_game"]),
                 "model_margin_home": model_margin_home,
-                "efficiency_source": {"home": home_off_src, "away": away_off_src},
-                "our_pick": ("home" if model_margin_home > 0 else "away") if model_margin_home is not None else None,
+                "efficiency_source": efficiency_source,
+                "our_pick": our_pick,
                 "rest_days_edge_home": rest_edge,
-                "oline_continuity": {"home": oline_continuity.get(home), "away": oline_continuity.get(away)},
-                "coach_continuity": {"home": coach_continuity.get(home), "away": coach_continuity.get(away)},
+                "oline_continuity": {"home": oline_home, "away": oline_away},
+                "coach_continuity": {"home": coach_home, "away": coach_away},
                 "revenge_game": revenge_flag,
                 "roof": r["roof"],
                 "international_site": international_site,
                 "weather": weather,
+                "storyline": storyline,
+                "market": market,
             }
         )
 

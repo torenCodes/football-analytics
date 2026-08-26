@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-25T15:44:10.780595+00:00"
+    "generated_at": "2026-08-26T14:48:41.770298+00:00"
   },
   "ppr": {
     "season": 2025,
@@ -332,6 +332,170 @@
           "games": 17,
           "ppg": 10.5
         }
+      ],
+      "K": [
+        {
+          "player_id": "00-0031492",
+          "name": "Jason Myers",
+          "team": "SEA",
+          "points": 196.0,
+          "games": 17,
+          "ppg": 11.5
+        },
+        {
+          "player_id": "00-0032726",
+          "name": "Ka'imi Fairbairn",
+          "team": "HOU",
+          "points": 191.0,
+          "games": 15,
+          "ppg": 12.7
+        },
+        {
+          "player_id": "00-0037692",
+          "name": "Brandon Aubrey",
+          "team": "DAL",
+          "points": 181.0,
+          "games": 17,
+          "ppg": 10.6
+        },
+        {
+          "player_id": "00-0037224",
+          "name": "Cameron Dicker",
+          "team": "LAC",
+          "points": 167.0,
+          "games": 17,
+          "ppg": 9.8
+        },
+        {
+          "player_id": "00-0039409",
+          "name": "Cam Little",
+          "team": "JAX",
+          "points": 160.0,
+          "games": 17,
+          "ppg": 9.4
+        },
+        {
+          "player_id": "00-0039404",
+          "name": "Will Reichard",
+          "team": "MIN",
+          "points": 157.0,
+          "games": 17,
+          "ppg": 9.2
+        },
+        {
+          "player_id": "00-0035358",
+          "name": "Chase McLaughlin",
+          "team": "TB",
+          "points": 153.0,
+          "games": 17,
+          "ppg": 9.0
+        },
+        {
+          "player_id": "00-0031136",
+          "name": "Chris Boswell",
+          "team": "PIT",
+          "points": 147.0,
+          "games": 17,
+          "ppg": 8.6
+        },
+        {
+          "player_id": "00-0039172",
+          "name": "Jake Bates",
+          "team": "DET",
+          "points": 147.0,
+          "games": 17,
+          "ppg": 8.6
+        },
+        {
+          "player_id": "00-0040200",
+          "name": "Andy Borregales",
+          "team": "NE",
+          "points": 145.0,
+          "games": 17,
+          "ppg": 8.5
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "SEA_DST",
+          "name": "SEA D/ST",
+          "team": "SEA",
+          "points": 158.0,
+          "games": 17,
+          "ppg": 9.3
+        },
+        {
+          "player_id": "JAX_DST",
+          "name": "JAX D/ST",
+          "team": "JAX",
+          "points": 140.0,
+          "games": 17,
+          "ppg": 8.2
+        },
+        {
+          "player_id": "HOU_DST",
+          "name": "HOU D/ST",
+          "team": "HOU",
+          "points": 140.0,
+          "games": 17,
+          "ppg": 8.2
+        },
+        {
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
+          "team": "DEN",
+          "points": 139.0,
+          "games": 17,
+          "ppg": 8.2
+        },
+        {
+          "player_id": "LA_DST",
+          "name": "LA D/ST",
+          "team": "LA",
+          "points": 130.0,
+          "games": 17,
+          "ppg": 7.6
+        },
+        {
+          "player_id": "PHI_DST",
+          "name": "PHI D/ST",
+          "team": "PHI",
+          "points": 127.0,
+          "games": 17,
+          "ppg": 7.5
+        },
+        {
+          "player_id": "CLE_DST",
+          "name": "CLE D/ST",
+          "team": "CLE",
+          "points": 123.0,
+          "games": 17,
+          "ppg": 7.2
+        },
+        {
+          "player_id": "MIN_DST",
+          "name": "MIN D/ST",
+          "team": "MIN",
+          "points": 123.0,
+          "games": 17,
+          "ppg": 7.2
+        },
+        {
+          "player_id": "NE_DST",
+          "name": "NE D/ST",
+          "team": "NE",
+          "points": 120.0,
+          "games": 17,
+          "ppg": 7.1
+        },
+        {
+          "player_id": "PIT_DST",
+          "name": "PIT D/ST",
+          "team": "PIT",
+          "points": 117.0,
+          "games": 17,
+          "ppg": 6.9
+        }
       ]
     },
     "perfect_lineup": {
@@ -386,9 +550,69 @@
           "team": "DET",
           "points": 366.9
         }
+      ],
+      "K": [
+        {
+          "player_id": "00-0031492",
+          "name": "Jason Myers",
+          "team": "SEA",
+          "points": 196.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "SEA_DST",
+          "name": "SEA D/ST",
+          "team": "SEA",
+          "points": 158.0
+        }
       ]
     },
-    "perfect_lineup_total_points": 2571.7
+    "perfect_lineup_total_points": 2925.7,
+    "bench": [
+      {
+        "player_id": "00-0036223",
+        "name": "Jonathan Taylor",
+        "team": "IND",
+        "position": "RB",
+        "points": 362.3
+      },
+      {
+        "player_id": "00-0039851",
+        "name": "Drake Maye",
+        "team": "NE",
+        "position": "QB",
+        "points": 358.0
+      },
+      {
+        "player_id": "00-0036963",
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "position": "WR",
+        "points": 324.0
+      },
+      {
+        "player_id": "00-0039040",
+        "name": "De'Von Achane",
+        "team": "MIA",
+        "position": "RB",
+        "points": 322.8
+      },
+      {
+        "player_id": "00-0036900",
+        "name": "Ja'Marr Chase",
+        "team": "CIN",
+        "position": "WR",
+        "points": 313.6
+      },
+      {
+        "player_id": "00-0037248",
+        "name": "James Cook",
+        "team": "BUF",
+        "position": "RB",
+        "points": 302.2
+      }
+    ]
   },
   "standard": {
     "season": 2025,
@@ -720,6 +944,170 @@
           "games": 17,
           "ppg": 6.2
         }
+      ],
+      "K": [
+        {
+          "player_id": "00-0031492",
+          "name": "Jason Myers",
+          "team": "SEA",
+          "points": 196.0,
+          "games": 17,
+          "ppg": 11.5
+        },
+        {
+          "player_id": "00-0032726",
+          "name": "Ka'imi Fairbairn",
+          "team": "HOU",
+          "points": 191.0,
+          "games": 15,
+          "ppg": 12.7
+        },
+        {
+          "player_id": "00-0037692",
+          "name": "Brandon Aubrey",
+          "team": "DAL",
+          "points": 181.0,
+          "games": 17,
+          "ppg": 10.6
+        },
+        {
+          "player_id": "00-0037224",
+          "name": "Cameron Dicker",
+          "team": "LAC",
+          "points": 167.0,
+          "games": 17,
+          "ppg": 9.8
+        },
+        {
+          "player_id": "00-0039409",
+          "name": "Cam Little",
+          "team": "JAX",
+          "points": 160.0,
+          "games": 17,
+          "ppg": 9.4
+        },
+        {
+          "player_id": "00-0039404",
+          "name": "Will Reichard",
+          "team": "MIN",
+          "points": 157.0,
+          "games": 17,
+          "ppg": 9.2
+        },
+        {
+          "player_id": "00-0035358",
+          "name": "Chase McLaughlin",
+          "team": "TB",
+          "points": 153.0,
+          "games": 17,
+          "ppg": 9.0
+        },
+        {
+          "player_id": "00-0031136",
+          "name": "Chris Boswell",
+          "team": "PIT",
+          "points": 147.0,
+          "games": 17,
+          "ppg": 8.6
+        },
+        {
+          "player_id": "00-0039172",
+          "name": "Jake Bates",
+          "team": "DET",
+          "points": 147.0,
+          "games": 17,
+          "ppg": 8.6
+        },
+        {
+          "player_id": "00-0040200",
+          "name": "Andy Borregales",
+          "team": "NE",
+          "points": 145.0,
+          "games": 17,
+          "ppg": 8.5
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "SEA_DST",
+          "name": "SEA D/ST",
+          "team": "SEA",
+          "points": 158.0,
+          "games": 17,
+          "ppg": 9.3
+        },
+        {
+          "player_id": "JAX_DST",
+          "name": "JAX D/ST",
+          "team": "JAX",
+          "points": 140.0,
+          "games": 17,
+          "ppg": 8.2
+        },
+        {
+          "player_id": "HOU_DST",
+          "name": "HOU D/ST",
+          "team": "HOU",
+          "points": 140.0,
+          "games": 17,
+          "ppg": 8.2
+        },
+        {
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
+          "team": "DEN",
+          "points": 139.0,
+          "games": 17,
+          "ppg": 8.2
+        },
+        {
+          "player_id": "LA_DST",
+          "name": "LA D/ST",
+          "team": "LA",
+          "points": 130.0,
+          "games": 17,
+          "ppg": 7.6
+        },
+        {
+          "player_id": "PHI_DST",
+          "name": "PHI D/ST",
+          "team": "PHI",
+          "points": 127.0,
+          "games": 17,
+          "ppg": 7.5
+        },
+        {
+          "player_id": "CLE_DST",
+          "name": "CLE D/ST",
+          "team": "CLE",
+          "points": 123.0,
+          "games": 17,
+          "ppg": 7.2
+        },
+        {
+          "player_id": "MIN_DST",
+          "name": "MIN D/ST",
+          "team": "MIN",
+          "points": 123.0,
+          "games": 17,
+          "ppg": 7.2
+        },
+        {
+          "player_id": "NE_DST",
+          "name": "NE D/ST",
+          "team": "NE",
+          "points": 120.0,
+          "games": 17,
+          "ppg": 7.1
+        },
+        {
+          "player_id": "PIT_DST",
+          "name": "PIT D/ST",
+          "team": "PIT",
+          "points": 117.0,
+          "games": 17,
+          "ppg": 6.9
+        }
       ]
     },
     "perfect_lineup": {
@@ -774,8 +1162,68 @@
           "team": "ATL",
           "points": 291.8
         }
+      ],
+      "K": [
+        {
+          "player_id": "00-0031492",
+          "name": "Jason Myers",
+          "team": "SEA",
+          "points": 196.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "SEA_DST",
+          "name": "SEA D/ST",
+          "team": "SEA",
+          "points": 158.0
+        }
       ]
     },
-    "perfect_lineup_total_points": 1966.1
+    "perfect_lineup_total_points": 2320.1,
+    "bench": [
+      {
+        "player_id": "00-0039851",
+        "name": "Drake Maye",
+        "team": "NE",
+        "position": "QB",
+        "points": 357.0
+      },
+      {
+        "player_id": "00-0039139",
+        "name": "Jahmyr Gibbs",
+        "team": "DET",
+        "position": "RB",
+        "points": 289.9
+      },
+      {
+        "player_id": "00-0037248",
+        "name": "James Cook",
+        "team": "BUF",
+        "position": "RB",
+        "points": 269.2
+      },
+      {
+        "player_id": "00-0032764",
+        "name": "Derrick Henry",
+        "team": "BAL",
+        "position": "RB",
+        "points": 264.5
+      },
+      {
+        "player_id": "00-0039040",
+        "name": "De'Von Achane",
+        "team": "MIA",
+        "position": "RB",
+        "points": 255.8
+      },
+      {
+        "player_id": "00-0037840",
+        "name": "Kyren Williams",
+        "team": "LA",
+        "position": "RB",
+        "points": 227.3
+      }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-25T16:07:19.110569+00:00"
+    "generated_at": "2026-08-26T15:42:08.969787+00:00"
   },
   "season": 2026,
   "week": 1,
@@ -54,7 +54,21 @@
       },
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans KC by 5.7 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DEN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. KC's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. KC also lost the last meeting between these two, so there's a motivation angle the model can't price in.",
+      "market": {
+        "spread_home": 3.0,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": -148,
+        "moneyline_away": 124,
+        "total": 42.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": true,
+        "edge_vs_market": 2.7
+      }
     },
     {
       "game_id": "2026_01_DAL_NYG",
@@ -105,7 +119,21 @@
       },
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans DAL by 9.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NYG. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. DAL's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. DAL also lost the last meeting between these two, so there's a motivation angle the model can't price in.",
+      "market": {
+        "spread_home": -2.5,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": 124,
+        "moneyline_away": -148,
+        "total": 48.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "away",
+        "agrees_with_model": true,
+        "edge_vs_market": -6.9
+      }
     },
     {
       "game_id": "2026_01_SF_LA",
@@ -156,7 +184,21 @@
       },
       "roof": "dome",
       "international_site": true,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans LA by 0.1 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against SF. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. LA's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. SF also lost the last meeting between these two, so there's a motivation angle the model can't price in. This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.",
+      "market": {
+        "spread_home": 3.5,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": -185,
+        "moneyline_away": 154,
+        "total": 48.5,
+        "over_odds": -108,
+        "under_odds": -112,
+        "market_favorite": "home",
+        "agrees_with_model": true,
+        "edge_vs_market": -3.4
+      }
     },
     {
       "game_id": "2026_01_GB_MIN",
@@ -207,7 +249,21 @@
       },
       "roof": "dome",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans GB by 22.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. GB is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. This is a division game, and those historically play tighter than the numbers alone suggest. GB also lost the last meeting between these two, so there's a motivation angle the model can't price in. Played dome, so weather isn't a factor here.",
+      "market": {
+        "spread_home": 1.5,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
+        "moneyline_home": -118,
+        "moneyline_away": -102,
+        "total": 45.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": false,
+        "edge_vs_market": -24.3
+      }
     },
     {
       "game_id": "2026_01_WAS_PHI",
@@ -258,7 +314,21 @@
       },
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans WAS by 11.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PHI. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. This is a division game, and those historically play tighter than the numbers alone suggest. PHI also lost the last meeting between these two, so there's a motivation angle the model can't price in.",
+      "market": {
+        "spread_home": 4.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -205,
+        "moneyline_away": 170,
+        "total": 46.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": false,
+        "edge_vs_market": -16.1
+      }
     },
     {
       "game_id": "2026_01_NE_SEA",
@@ -305,7 +375,21 @@
       "revenge_game": null,
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans NE by 3.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against SEA. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. NE's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season.",
+      "market": {
+        "spread_home": 3.5,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": -180,
+        "moneyline_away": 150,
+        "total": 44.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": false,
+        "edge_vs_market": -6.5
+      }
     },
     {
       "game_id": "2026_01_ATL_PIT",
@@ -352,7 +436,21 @@
       "revenge_game": null,
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans PIT by 4.4 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against ATL. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet.",
+      "market": {
+        "spread_home": 3.0,
+        "spread_home_odds": -120,
+        "spread_away_odds": 100,
+        "moneyline_home": -175,
+        "moneyline_away": 145,
+        "total": 41.5,
+        "over_odds": -115,
+        "under_odds": -105,
+        "market_favorite": "home",
+        "agrees_with_model": true,
+        "edge_vs_market": 1.4
+      }
     },
     {
       "game_id": "2026_01_BAL_IND",
@@ -399,7 +497,21 @@
       "revenge_game": null,
       "roof": null,
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans IND by 2.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against BAL. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. IND's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season.",
+      "market": {
+        "spread_home": -3.5,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 145,
+        "moneyline_away": -175,
+        "total": 48.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "away",
+        "agrees_with_model": false,
+        "edge_vs_market": 6.4
+      }
     },
     {
       "game_id": "2026_01_BUF_HOU",
@@ -446,7 +558,21 @@
       "revenge_game": null,
       "roof": null,
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans BUF by 18.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season.",
+      "market": {
+        "spread_home": -1.5,
+        "spread_home_odds": -115,
+        "spread_away_odds": -105,
+        "moneyline_home": -102,
+        "moneyline_away": -118,
+        "total": 44.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "away",
+        "agrees_with_model": true,
+        "edge_vs_market": -17.1
+      }
     },
     {
       "game_id": "2026_01_CHI_CAR",
@@ -493,7 +619,21 @@
       "revenge_game": null,
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans CHI by 4.6 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against CAR. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season.",
+      "market": {
+        "spread_home": -2.5,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
+        "moneyline_home": 120,
+        "moneyline_away": -142,
+        "total": 47.5,
+        "over_odds": -115,
+        "under_odds": -105,
+        "market_favorite": "away",
+        "agrees_with_model": true,
+        "edge_vs_market": -2.1
+      }
     },
     {
       "game_id": "2026_01_CLE_JAX",
@@ -540,7 +680,21 @@
       "revenge_game": null,
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans JAX by 17.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board.",
+      "market": {
+        "spread_home": 7.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -380,
+        "moneyline_away": 300,
+        "total": 40.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": true,
+        "edge_vs_market": 9.5
+      }
     },
     {
       "game_id": "2026_01_NO_DET",
@@ -587,7 +741,21 @@
       "revenge_game": null,
       "roof": "dome",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans DET by 15.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NO. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. Played dome, so weather isn't a factor here.",
+      "market": {
+        "spread_home": 7.0,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -305,
+        "moneyline_away": 245,
+        "total": 49.5,
+        "over_odds": -102,
+        "under_odds": -118,
+        "market_favorite": "home",
+        "agrees_with_model": true,
+        "edge_vs_market": 8.4
+      }
     },
     {
       "game_id": "2026_01_NYJ_TEN",
@@ -634,7 +802,21 @@
       "revenge_game": null,
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans NYJ by 2.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against TEN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board.",
+      "market": {
+        "spread_home": 3.0,
+        "spread_home_odds": 100,
+        "spread_away_odds": -120,
+        "moneyline_home": -148,
+        "moneyline_away": 124,
+        "total": 38.5,
+        "over_odds": -115,
+        "under_odds": -105,
+        "market_favorite": "home",
+        "agrees_with_model": false,
+        "edge_vs_market": -5.9
+      }
     },
     {
       "game_id": "2026_01_TB_CIN",
@@ -681,7 +863,21 @@
       "revenge_game": null,
       "roof": "outdoors",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans CIN by 11.2 points, built on a clear efficiency edge in offense-vs-defense EPA/play against TB. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CIN's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season.",
+      "market": {
+        "spread_home": 3.5,
+        "spread_home_odds": -115,
+        "spread_away_odds": -105,
+        "moneyline_home": -198,
+        "moneyline_away": 164,
+        "total": 51.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": true,
+        "edge_vs_market": 7.7
+      }
     },
     {
       "game_id": "2026_01_ARI_LAC",
@@ -728,7 +924,21 @@
       "revenge_game": null,
       "roof": "dome",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans ARI by 11.2 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LAC. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. ARI is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Played dome, so weather isn't a factor here.",
+      "market": {
+        "spread_home": 10.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -575,
+        "moneyline_away": 425,
+        "total": 46.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": false,
+        "edge_vs_market": -21.7
+      }
     },
     {
       "game_id": "2026_01_MIA_LV",
@@ -775,7 +985,21 @@
       "revenge_game": null,
       "roof": "dome",
       "international_site": false,
-      "weather": null
+      "weather": null,
+      "storyline": "The model leans MIA by 18.1 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LV. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. MIA's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Played dome, so weather isn't a factor here.",
+      "market": {
+        "spread_home": 3.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -205,
+        "moneyline_away": 170,
+        "total": 40.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "agrees_with_model": false,
+        "edge_vs_market": -21.6
+      }
     }
   ]
 }

@@ -10,6 +10,7 @@ CACHE_DIR = os.path.join(BASE_DIR, "data_cache")
 REF_DIR = os.path.join(BASE_DIR, "scripts", "reference")
 
 OFFENSIVE_LINE_POS = ["LT", "LG", "C", "RG", "RT"]
+DEFENSIVE_LINE_POS = ["LDE", "LDT", "NT", "RDT", "RDE"]
 
 
 def json_safe(obj):
@@ -39,8 +40,12 @@ def season_from_dt(dt_col):
     return pl.when(month <= 2).then(year - 1).otherwise(year)
 
 
-def build_oline_continuity(depth_charts, prior_season, current_season):
-    dc = depth_charts.filter(pl.col("pos_abb").is_in(OFFENSIVE_LINE_POS) & (pl.col("pos_rank") == 1)).with_columns(
+def build_oline_continuity(depth_charts, prior_season, current_season, positions=None):
+    """Starter continuity for a position group (offensive line by default;
+    pass positions=DEFENSIVE_LINE_POS for the defensive-line equivalent used
+    by DST rows)."""
+    positions = positions or OFFENSIVE_LINE_POS
+    dc = depth_charts.filter(pl.col("pos_abb").is_in(positions) & (pl.col("pos_rank") == 1)).with_columns(
         season_from_dt(pl.col("dt")).alias("season")
     )
     prior = dc.filter(pl.col("season") == prior_season)

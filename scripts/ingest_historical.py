@@ -46,6 +46,9 @@ def main():
     print(f"Snap counts ({HISTORY_START}-{CURRENT_SEASON - 1}, completed seasons)...")
     _save(nfl.load_snap_counts(seasons=HISTORY_SEASONS), "snap_counts")
 
+    print(f"Team stats ({HISTORY_START}-{CURRENT_SEASON - 1}, completed seasons -- team defense scoring)...")
+    _save(nfl.load_team_stats(seasons=HISTORY_SEASONS), "team_stats")
+
     print("Team descriptive info (colors/names/ids, no season split)...")
     _save(nfl.load_teams(), "teams")
 
