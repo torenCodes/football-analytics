@@ -255,8 +255,6 @@ table.data-table td {
   padding: 0.55rem 0.75rem;
   border-bottom: 1px solid var(--border-light);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 table.data-table tbody tr:hover { background: var(--surface-2); }
 .num { font-family: 'JetBrains Mono', monospace; text-align: right; }
@@ -270,7 +268,11 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
 .pill.up { background: var(--accent-fantasy-tint); color: var(--accent-fantasy-dark); }
 .pill.down { background: #f7e6e5; color: var(--nfl-red); }
 
-.table-scroll { overflow-x: auto; }
+/* padding (not just relying on the table's own cell padding) so a fully
+   right-scrolled table has real breathing room after the last column
+   instead of butting flush against the card edge -- the classic
+   horizontal-scroll-container issue of no trailing padding. */
+.table-scroll { overflow-x: auto; padding: 0 0.75rem; }
 
 /* ---- Perfect Team / Dream Team two-column layout (fantasy.html) ---- */
 .two-col-fantasy {
