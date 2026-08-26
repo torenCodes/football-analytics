@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-26T14:48:41.770298+00:00"
+    "generated_at": "2026-08-26T16:37:22.114229+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -588,26 +588,6 @@
           "market_gap": -0.6
         },
         {
-          "player_id": "00-0038128",
-          "name": "Malik Willis",
-          "position": "QB",
-          "team": "GB",
-          "baseline_ppg": 12.79,
-          "season_ppg": 12.79,
-          "last6_ppg": 12.79,
-          "games_played_2025": 4,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
-          "coordinator_role": "OC",
-          "edge_score": 12.89,
-          "market_rank": 20.79,
-          "our_rank": 30,
-          "market_gap": -9.2
-        },
-        {
           "player_id": "00-0039923",
           "name": "J.J. McCarthy",
           "position": "QB",
@@ -624,8 +604,28 @@
           "coordinator_role": "OC",
           "edge_score": 12.89,
           "market_rank": 37.73,
+          "our_rank": 30,
+          "market_gap": 7.7
+        },
+        {
+          "player_id": "00-0038128",
+          "name": "Malik Willis",
+          "position": "QB",
+          "team": "GB",
+          "baseline_ppg": 12.79,
+          "season_ppg": 12.79,
+          "last6_ppg": 12.79,
+          "games_played_2025": 4,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Adam Stenavich",
+          "coordinator_role": "OC",
+          "edge_score": 12.89,
+          "market_rank": 20.79,
           "our_rank": 31,
-          "market_gap": 6.7
+          "market_gap": -10.2
         },
         {
           "player_id": "00-0032268",
@@ -828,26 +828,6 @@
           "market_gap": 9.7
         },
         {
-          "player_id": "00-0040668",
-          "name": "Shedeur Sanders",
-          "position": "QB",
-          "team": "CLE",
-          "baseline_ppg": 11.69,
-          "season_ppg": 10.86,
-          "last6_ppg": 12.53,
-          "games_played_2025": 8,
-          "line_continuity_pct": 0.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Travis Switzer",
-          "coordinator_role": "OC",
-          "edge_score": 9.79,
-          "market_rank": 34.39,
-          "our_rank": 42,
-          "market_gap": -7.6
-        },
-        {
           "player_id": "00-0036212",
           "name": "Tua Tagovailoa",
           "position": "QB",
@@ -864,8 +844,28 @@
           "coordinator_role": "OC",
           "edge_score": 9.79,
           "market_rank": 30.97,
+          "our_rank": 42,
+          "market_gap": -11.0
+        },
+        {
+          "player_id": "00-0040668",
+          "name": "Shedeur Sanders",
+          "position": "QB",
+          "team": "CLE",
+          "baseline_ppg": 11.69,
+          "season_ppg": 10.86,
+          "last6_ppg": 12.53,
+          "games_played_2025": 8,
+          "line_continuity_pct": 0.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Travis Switzer",
+          "coordinator_role": "OC",
+          "edge_score": 9.79,
+          "market_rank": 34.39,
           "our_rank": 43,
-          "market_gap": -12.0
+          "market_gap": -8.6
         },
         {
           "player_id": "00-0033869",
@@ -6046,26 +6046,6 @@
           "market_gap": -0.6
         },
         {
-          "player_id": "00-0038128",
-          "name": "Malik Willis",
-          "position": "QB",
-          "team": "GB",
-          "baseline_ppg": 12.79,
-          "season_ppg": 12.79,
-          "last6_ppg": 12.79,
-          "games_played_2025": 4,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
-          "coordinator_role": "OC",
-          "edge_score": 12.89,
-          "market_rank": 20.79,
-          "our_rank": 30,
-          "market_gap": -9.2
-        },
-        {
           "player_id": "00-0039923",
           "name": "J.J. McCarthy",
           "position": "QB",
@@ -6082,8 +6062,28 @@
           "coordinator_role": "OC",
           "edge_score": 12.89,
           "market_rank": 37.73,
+          "our_rank": 30,
+          "market_gap": 7.7
+        },
+        {
+          "player_id": "00-0038128",
+          "name": "Malik Willis",
+          "position": "QB",
+          "team": "GB",
+          "baseline_ppg": 12.79,
+          "season_ppg": 12.79,
+          "last6_ppg": 12.79,
+          "games_played_2025": 4,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Adam Stenavich",
+          "coordinator_role": "OC",
+          "edge_score": 12.89,
+          "market_rank": 20.79,
           "our_rank": 31,
-          "market_gap": 6.7
+          "market_gap": -10.2
         },
         {
           "player_id": "00-0032268",
@@ -6286,26 +6286,6 @@
           "market_gap": 9.7
         },
         {
-          "player_id": "00-0040668",
-          "name": "Shedeur Sanders",
-          "position": "QB",
-          "team": "CLE",
-          "baseline_ppg": 11.69,
-          "season_ppg": 10.86,
-          "last6_ppg": 12.53,
-          "games_played_2025": 8,
-          "line_continuity_pct": 0.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Travis Switzer",
-          "coordinator_role": "OC",
-          "edge_score": 9.79,
-          "market_rank": 34.39,
-          "our_rank": 42,
-          "market_gap": -7.6
-        },
-        {
           "player_id": "00-0036212",
           "name": "Tua Tagovailoa",
           "position": "QB",
@@ -6322,8 +6302,28 @@
           "coordinator_role": "OC",
           "edge_score": 9.79,
           "market_rank": 30.97,
+          "our_rank": 42,
+          "market_gap": -11.0
+        },
+        {
+          "player_id": "00-0040668",
+          "name": "Shedeur Sanders",
+          "position": "QB",
+          "team": "CLE",
+          "baseline_ppg": 11.69,
+          "season_ppg": 10.86,
+          "last6_ppg": 12.53,
+          "games_played_2025": 8,
+          "line_continuity_pct": 0.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Travis Switzer",
+          "coordinator_role": "OC",
+          "edge_score": 9.79,
+          "market_rank": 34.39,
           "our_rank": 43,
-          "market_gap": -12.0
+          "market_gap": -8.6
         },
         {
           "player_id": "00-0033869",
@@ -8290,26 +8290,6 @@
           "market_gap": 29.4
         },
         {
-          "player_id": "00-0037816",
-          "name": "Romeo Doubs",
-          "position": "WR",
-          "team": "GB",
-          "baseline_ppg": 6.33,
-          "season_ppg": 6.9,
-          "last6_ppg": 5.75,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
-          "coordinator_role": "OC",
-          "edge_score": 6.43,
-          "market_rank": 53.83,
-          "our_rank": 42,
-          "market_gap": 11.8
-        },
-        {
           "player_id": "00-0039849",
           "name": "Marvin Harrison Jr.",
           "position": "WR",
@@ -8326,8 +8306,28 @@
           "coordinator_role": "OC",
           "edge_score": 6.43,
           "market_rank": 32.28,
+          "our_rank": 42,
+          "market_gap": -9.7
+        },
+        {
+          "player_id": "00-0037816",
+          "name": "Romeo Doubs",
+          "position": "WR",
+          "team": "GB",
+          "baseline_ppg": 6.33,
+          "season_ppg": 6.9,
+          "last6_ppg": 5.75,
+          "games_played_2025": 16,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Adam Stenavich",
+          "coordinator_role": "OC",
+          "edge_score": 6.43,
+          "market_rank": 53.83,
           "our_rank": 43,
-          "market_gap": -10.7
+          "market_gap": 10.8
         },
         {
           "player_id": "00-0036322",
@@ -8450,24 +8450,24 @@
           "market_gap": 28.9
         },
         {
-          "player_id": "00-0040129",
-          "name": "Emeka Egbuka",
+          "player_id": "00-0036252",
+          "name": "Michael Pittman",
           "position": "WR",
-          "team": "TB",
-          "baseline_ppg": 5.48,
-          "season_ppg": 7.81,
-          "last6_ppg": 3.15,
+          "team": "IND",
+          "baseline_ppg": 5.08,
+          "season_ppg": 7.2,
+          "last6_ppg": 2.95,
           "games_played_2025": 17,
-          "line_continuity_pct": 1.0,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Zac Robinson",
+          "same_coordinator": true,
+          "coordinator_name": "Jim Bob Cooter",
           "coordinator_role": "OC",
           "edge_score": 5.78,
-          "market_rank": 19.97,
+          "market_rank": 37.22,
           "our_rank": 50,
-          "market_gap": -30.0
+          "market_gap": -12.8
         }
       ],
       "TE": [
