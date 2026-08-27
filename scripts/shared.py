@@ -71,6 +71,28 @@ def build_oline_continuity(depth_charts, prior_season, current_season, positions
     return result
 
 
+
+# nflverse's rosters table alone uses a handful of team codes that its other
+# tables (schedules, depth_charts, team_stats, the coordinator reference)
+# don't -- normalize to the codes used everywhere else on the site so
+# lookups keyed by those other tables (continuity, coordinators) still hit.
+TEAM_CODE_ALIASES = {"AZ": "ARI", "OAK": "LV", "SD": "LAC", "STL": "LA"}
+
+
+def build_current_team_lookup(rosters, season):
+    """Most recent known team per player (by gsis_id) for a season -- picks
+    up offseason trades/signings that a prior-season stat aggregation can't
+    reflect (e.g. a player's 2025 stats are tagged with their 2025 team even
+    after they sign elsewhere for 2026)."""
+    snap = rosters.filter((pl.col("season") == season) & pl.col("gsis_id").is_not_null())
+    latest = snap.group_by("gsis_id").agg(pl.col("week").max().alias("week"))
+    current = snap.join(latest, on=["gsis_id", "week"], how="inner").unique(subset=["gsis_id"]).select(["gsis_id", "team"])
+    return {
+        gsis_id: TEAM_CODE_ALIASES.get(team, team)
+        for gsis_id, team in zip(current["gsis_id"].to_list(), current["team"].to_list())
+    }
+
+
 def build_coach_continuity(schedules, prior_season, current_season):
     def primary_coach(season):
         home = schedules.filter(pl.col("season") == season).select(pl.col("home_team").alias("team"), pl.col("home_coach").alias("coach"))

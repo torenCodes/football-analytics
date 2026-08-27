@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-26T20:20:56.531257+00:00"
+    "generated_at": "2026-08-27T01:59:53.800499+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -328,6 +328,26 @@
           "market_gap": 10.6
         },
         {
+          "player_id": "00-0035228",
+          "name": "Kyler Murray",
+          "position": "QB",
+          "team": "MIN",
+          "baseline_ppg": 15.56,
+          "season_ppg": 15.56,
+          "last6_ppg": 15.56,
+          "games_played_2025": 5,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Wes Phillips",
+          "coordinator_role": "OC",
+          "edge_score": 16.26,
+          "market_rank": 16.46,
+          "our_rank": 17,
+          "market_gap": -0.5
+        },
+        {
           "player_id": "00-0039910",
           "name": "Jayden Daniels",
           "position": "QB",
@@ -344,8 +364,8 @@
           "coordinator_role": "OC",
           "edge_score": 16.02,
           "market_rank": 5.88,
-          "our_rank": 17,
-          "market_gap": -11.1
+          "our_rank": 18,
+          "market_gap": -12.1
         },
         {
           "player_id": "00-0034855",
@@ -364,8 +384,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.98,
           "market_rank": 18.17,
-          "our_rank": 18,
-          "market_gap": 0.2
+          "our_rank": 19,
+          "market_gap": -0.8
         },
         {
           "player_id": "00-0036355",
@@ -384,8 +404,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.6,
           "market_rank": 8.13,
-          "our_rank": 19,
-          "market_gap": -10.9
+          "our_rank": 20,
+          "market_gap": -11.9
         },
         {
           "player_id": "00-0036264",
@@ -404,8 +424,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.36,
           "market_rank": 18.58,
-          "our_rank": 20,
-          "market_gap": -1.4
+          "our_rank": 21,
+          "market_gap": -2.4
         },
         {
           "player_id": "00-0039150",
@@ -424,28 +444,28 @@
           "coordinator_role": "OC",
           "edge_score": 15.08,
           "market_rank": 25.89,
-          "our_rank": 21,
-          "market_gap": 4.9
+          "our_rank": 22,
+          "market_gap": 3.9
         },
         {
-          "player_id": "00-0035228",
-          "name": "Kyler Murray",
+          "player_id": "00-0036945",
+          "name": "Justin Fields",
           "position": "QB",
-          "team": "ARI",
-          "baseline_ppg": 15.56,
-          "season_ppg": 15.56,
-          "last6_ppg": 15.56,
-          "games_played_2025": 5,
-          "line_continuity_pct": 0.4,
+          "team": "KC",
+          "baseline_ppg": 14.87,
+          "season_ppg": 16.07,
+          "last6_ppg": 13.67,
+          "games_played_2025": 9,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": false,
-          "coordinator_name": "Nathaniel Hackett",
+          "coordinator_name": "Eric Bieniemy",
           "coordinator_role": "OC",
-          "edge_score": 14.96,
-          "market_rank": 16.46,
-          "our_rank": 22,
-          "market_gap": -5.5
+          "edge_score": 14.87,
+          "market_rank": 40.39,
+          "our_rank": 23,
+          "market_gap": 17.4
         },
         {
           "player_id": "00-0039163",
@@ -464,8 +484,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.84,
           "market_rank": 23.25,
-          "our_rank": 23,
-          "market_gap": 0.2
+          "our_rank": 24,
+          "market_gap": -0.8
         },
         {
           "player_id": "00-0032950",
@@ -484,28 +504,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.77,
           "market_rank": 74.5,
-          "our_rank": 24,
-          "market_gap": 50.5
-        },
-        {
-          "player_id": "00-0036945",
-          "name": "Justin Fields",
-          "position": "QB",
-          "team": "NYJ",
-          "baseline_ppg": 14.87,
-          "season_ppg": 16.07,
-          "last6_ppg": 13.67,
-          "games_played_2025": 9,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Frank Reich",
-          "coordinator_role": "OC",
-          "edge_score": 14.57,
-          "market_rank": 40.39,
           "our_rank": 25,
-          "market_gap": 15.4
+          "market_gap": 49.5
         },
         {
           "player_id": "00-0039917",
@@ -588,26 +588,6 @@
           "market_gap": -0.6
         },
         {
-          "player_id": "00-0038128",
-          "name": "Malik Willis",
-          "position": "QB",
-          "team": "GB",
-          "baseline_ppg": 12.79,
-          "season_ppg": 12.79,
-          "last6_ppg": 12.79,
-          "games_played_2025": 4,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
-          "coordinator_role": "OC",
-          "edge_score": 12.89,
-          "market_rank": 20.79,
-          "our_rank": 30,
-          "market_gap": -9.2
-        },
-        {
           "player_id": "00-0039923",
           "name": "J.J. McCarthy",
           "position": "QB",
@@ -624,8 +604,8 @@
           "coordinator_role": "OC",
           "edge_score": 12.89,
           "market_rank": 37.73,
-          "our_rank": 31,
-          "market_gap": 6.7
+          "our_rank": 30,
+          "market_gap": 7.7
         },
         {
           "player_id": "00-0032268",
@@ -644,8 +624,28 @@
           "coordinator_role": "OC",
           "edge_score": 12.39,
           "market_rank": 43.26,
+          "our_rank": 31,
+          "market_gap": 12.3
+        },
+        {
+          "player_id": "00-0038128",
+          "name": "Malik Willis",
+          "position": "QB",
+          "team": "MIA",
+          "baseline_ppg": 12.79,
+          "season_ppg": 12.79,
+          "last6_ppg": 12.79,
+          "games_played_2025": 4,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Bobby Slowik",
+          "coordinator_role": "OC",
+          "edge_score": 12.09,
+          "market_rank": 20.79,
           "our_rank": 32,
-          "market_gap": 11.3
+          "market_gap": -11.2
         },
         {
           "player_id": "00-0026158",
@@ -668,26 +668,6 @@
           "market_gap": 8.6
         },
         {
-          "player_id": "00-0029604",
-          "name": "Kirk Cousins",
-          "position": "QB",
-          "team": "ATL",
-          "baseline_ppg": 11.73,
-          "season_ppg": 10.35,
-          "last6_ppg": 13.11,
-          "games_played_2025": 10,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Tommy Rees",
-          "coordinator_role": "OC",
-          "edge_score": 11.73,
-          "market_rank": 32.66,
-          "our_rank": 34,
-          "market_gap": -1.3
-        },
-        {
           "player_id": "00-0036972",
           "name": "Mac Jones",
           "position": "QB",
@@ -704,8 +684,8 @@
           "coordinator_role": "OC",
           "edge_score": 11.67,
           "market_rank": 39.28,
-          "our_rank": 35,
-          "market_gap": 4.3
+          "our_rank": 34,
+          "market_gap": 5.3
         },
         {
           "player_id": "00-0036898",
@@ -724,8 +704,28 @@
           "coordinator_role": "OC",
           "edge_score": 11.53,
           "market_rank": 53.9,
+          "our_rank": 35,
+          "market_gap": 18.9
+        },
+        {
+          "player_id": "00-0030565",
+          "name": "Geno Smith",
+          "position": "QB",
+          "team": "NYJ",
+          "baseline_ppg": 11.81,
+          "season_ppg": 11.73,
+          "last6_ppg": 11.89,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Frank Reich",
+          "coordinator_role": "OC",
+          "edge_score": 11.51,
+          "market_rank": 28.59,
           "our_rank": 36,
-          "market_gap": 17.9
+          "market_gap": -7.4
         },
         {
           "player_id": "00-0040676",
@@ -768,64 +768,84 @@
           "market_gap": 15.9
         },
         {
-          "player_id": "00-0030565",
-          "name": "Geno Smith",
+          "player_id": "00-0029604",
+          "name": "Kirk Cousins",
           "position": "QB",
           "team": "LV",
-          "baseline_ppg": 11.81,
-          "season_ppg": 11.73,
-          "last6_ppg": 11.89,
-          "games_played_2025": 15,
+          "baseline_ppg": 11.73,
+          "season_ppg": 10.35,
+          "last6_ppg": 13.11,
+          "games_played_2025": 10,
           "line_continuity_pct": 0.6,
           "line_continuity_type": "oline",
           "same_head_coach": false,
           "same_coordinator": false,
           "coordinator_name": "Andrew Janocko",
           "coordinator_role": "OC",
-          "edge_score": 10.81,
-          "market_rank": 28.59,
+          "edge_score": 10.73,
+          "market_rank": 32.66,
           "our_rank": 39,
-          "market_gap": -10.4
+          "market_gap": -6.3
         },
         {
-          "player_id": "00-0035100",
-          "name": "Jake Browning",
+          "player_id": "00-0036212",
+          "name": "Tua Tagovailoa",
           "position": "QB",
-          "team": "CIN",
-          "baseline_ppg": 9.75,
-          "season_ppg": 9.75,
-          "last6_ppg": 9.75,
-          "games_played_2025": 5,
+          "team": "ATL",
+          "baseline_ppg": 10.49,
+          "season_ppg": 11.62,
+          "last6_ppg": 9.36,
+          "games_played_2025": 14,
           "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Dan Pitcher",
+          "same_coordinator": false,
+          "coordinator_name": "Tommy Rees",
           "coordinator_role": "OC",
-          "edge_score": 10.45,
-          "market_rank": 62.0,
+          "edge_score": 10.49,
+          "market_rank": 30.97,
           "our_rank": 40,
-          "market_gap": 22.0
+          "market_gap": -9.0
         },
         {
           "player_id": "00-0028118",
           "name": "Tyrod Taylor",
           "position": "QB",
-          "team": "NYJ",
+          "team": "GB",
           "baseline_ppg": 10.24,
           "season_ppg": 10.24,
           "last6_ppg": 10.24,
           "games_played_2025": 6,
-          "line_continuity_pct": 0.6,
+          "line_continuity_pct": 0.4,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Frank Reich",
+          "same_coordinator": true,
+          "coordinator_name": "Adam Stenavich",
           "coordinator_role": "OC",
-          "edge_score": 9.94,
+          "edge_score": 10.34,
           "market_rank": 50.67,
           "our_rank": 41,
           "market_gap": 9.7
+        },
+        {
+          "player_id": "00-0035100",
+          "name": "Jake Browning",
+          "position": "QB",
+          "team": "TB",
+          "baseline_ppg": 9.75,
+          "season_ppg": 9.75,
+          "last6_ppg": 9.75,
+          "games_played_2025": 5,
+          "line_continuity_pct": 1.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Zac Robinson",
+          "coordinator_role": "OC",
+          "edge_score": 10.05,
+          "market_rank": 62.0,
+          "our_rank": 42,
+          "market_gap": 20.0
         },
         {
           "player_id": "00-0040668",
@@ -844,48 +864,28 @@
           "coordinator_role": "OC",
           "edge_score": 9.79,
           "market_rank": 34.39,
-          "our_rank": 42,
-          "market_gap": -7.6
-        },
-        {
-          "player_id": "00-0036212",
-          "name": "Tua Tagovailoa",
-          "position": "QB",
-          "team": "MIA",
-          "baseline_ppg": 10.49,
-          "season_ppg": 11.62,
-          "last6_ppg": 9.36,
-          "games_played_2025": 14,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Bobby Slowik",
-          "coordinator_role": "OC",
-          "edge_score": 9.79,
-          "market_rank": 30.97,
           "our_rank": 43,
-          "market_gap": -12.0
+          "market_gap": -8.6
         },
         {
-          "player_id": "00-0033869",
-          "name": "Mitchell Trubisky",
+          "player_id": "00-0026158",
+          "name": "Joe Flacco",
           "position": "QB",
-          "team": "BUF",
-          "baseline_ppg": 7.78,
-          "season_ppg": 7.78,
-          "last6_ppg": 7.78,
+          "team": "CIN",
+          "baseline_ppg": 8.21,
+          "season_ppg": 7.48,
+          "last6_ppg": 8.95,
           "games_played_2025": 4,
           "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Pete Carmichael Jr.",
+          "same_coordinator": true,
+          "coordinator_name": "Dan Pitcher",
           "coordinator_role": "OC",
-          "edge_score": 7.78,
-          "market_rank": 64.6,
+          "edge_score": 8.91,
+          "market_rank": 41.57,
           "our_rank": 44,
-          "market_gap": 20.6
+          "market_gap": -2.4
         },
         {
           "player_id": "00-0029263",
@@ -948,6 +948,26 @@
           "market_gap": -1.9
         },
         {
+          "player_id": "00-0033869",
+          "name": "Mitchell Trubisky",
+          "position": "QB",
+          "team": "TEN",
+          "baseline_ppg": 7.78,
+          "season_ppg": 7.78,
+          "last6_ppg": 7.78,
+          "games_played_2025": 4,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Daboll",
+          "coordinator_role": "OC",
+          "edge_score": 6.78,
+          "market_rank": 64.6,
+          "our_rank": 48,
+          "market_gap": 16.6
+        },
+        {
           "player_id": "00-0035993",
           "name": "Tyler Huntley",
           "position": "QB",
@@ -964,28 +984,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.73,
           "market_rank": 54.33,
-          "our_rank": 48,
-          "market_gap": 6.3
-        },
-        {
-          "player_id": "00-0026158",
-          "name": "Joe Flacco",
-          "position": "QB",
-          "team": "CLE",
-          "baseline_ppg": 8.21,
-          "season_ppg": 7.48,
-          "last6_ppg": 8.95,
-          "games_played_2025": 4,
-          "line_continuity_pct": 0.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Travis Switzer",
-          "coordinator_role": "OC",
-          "edge_score": 6.31,
-          "market_rank": 41.57,
           "our_rank": 49,
-          "market_gap": -7.4
+          "market_gap": 5.3
         },
         {
           "player_id": "00-0040398",
@@ -1210,6 +1210,26 @@
           "market_gap": 18.2
         },
         {
+          "player_id": "00-0036973",
+          "name": "Travis Etienne",
+          "position": "RB",
+          "team": "NO",
+          "baseline_ppg": 15.0,
+          "season_ppg": 14.94,
+          "last6_ppg": 15.07,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Doug Nussmeier",
+          "coordinator_role": "OC",
+          "edge_score": 15.7,
+          "market_rank": 17.76,
+          "our_rank": 11,
+          "market_gap": 6.8
+        },
+        {
           "player_id": "00-0037840",
           "name": "Kyren Williams",
           "position": "RB",
@@ -1226,28 +1246,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.65,
           "market_rank": 15.01,
-          "our_rank": 11,
-          "market_gap": 4.0
-        },
-        {
-          "player_id": "00-0036973",
-          "name": "Travis Etienne",
-          "position": "RB",
-          "team": "JAX",
-          "baseline_ppg": 15.0,
-          "season_ppg": 14.94,
-          "last6_ppg": 15.07,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Grant Udinski",
-          "coordinator_role": "OC",
-          "edge_score": 15.4,
-          "market_rank": 17.76,
           "our_rank": 12,
-          "market_gap": 5.8
+          "market_gap": 3.0
         },
         {
           "player_id": "00-0040666",
@@ -1290,6 +1290,26 @@
           "market_gap": 6.5
         },
         {
+          "player_id": "00-0036919",
+          "name": "Kenny Gainwell",
+          "position": "RB",
+          "team": "TB",
+          "baseline_ppg": 14.37,
+          "season_ppg": 13.02,
+          "last6_ppg": 15.72,
+          "games_played_2025": 17,
+          "line_continuity_pct": 1.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Zac Robinson",
+          "coordinator_role": "OC",
+          "edge_score": 14.67,
+          "market_rank": 34.07,
+          "our_rank": 15,
+          "market_gap": 19.1
+        },
+        {
           "player_id": "00-0036997",
           "name": "Javonte Williams",
           "position": "RB",
@@ -1306,8 +1326,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.67,
           "market_rank": 15.88,
-          "our_rank": 15,
-          "market_gap": 0.9
+          "our_rank": 16,
+          "market_gap": -0.1
         },
         {
           "player_id": "00-0040730",
@@ -1326,8 +1346,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.6,
           "market_rank": 33.51,
-          "our_rank": 16,
-          "market_gap": 17.5
+          "our_rank": 17,
+          "market_gap": 16.5
         },
         {
           "player_id": "00-0034844",
@@ -1346,8 +1366,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.34,
           "market_rank": 8.98,
-          "our_rank": 17,
-          "market_gap": -8.0
+          "our_rank": 18,
+          "market_gap": -9.0
         },
         {
           "player_id": "00-0040734",
@@ -1366,28 +1386,8 @@
           "coordinator_role": "OC",
           "edge_score": 13.47,
           "market_rank": 24.8,
-          "our_rank": 18,
-          "market_gap": 6.8
-        },
-        {
-          "player_id": "00-0036919",
-          "name": "Kenny Gainwell",
-          "position": "RB",
-          "team": "PIT",
-          "baseline_ppg": 14.37,
-          "season_ppg": 13.02,
-          "last6_ppg": 15.72,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Brian Angelichio",
-          "coordinator_role": "OC",
-          "edge_score": 13.37,
-          "market_rank": 34.07,
           "our_rank": 19,
-          "market_gap": 15.1
+          "market_gap": 5.8
         },
         {
           "player_id": "00-0039165",
@@ -1530,46 +1530,6 @@
           "market_gap": -11.7
         },
         {
-          "player_id": "00-0036139",
-          "name": "Rico Dowdle",
-          "position": "RB",
-          "team": "CAR",
-          "baseline_ppg": 10.89,
-          "season_ppg": 12.72,
-          "last6_ppg": 9.05,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Brad Idzik",
-          "coordinator_role": "OC",
-          "edge_score": 11.59,
-          "market_rank": 31.02,
-          "our_rank": 27,
-          "market_gap": 4.0
-        },
-        {
-          "player_id": "00-0038134",
-          "name": "Kenneth Walker III",
-          "position": "RB",
-          "team": "SEA",
-          "baseline_ppg": 11.27,
-          "season_ppg": 11.29,
-          "last6_ppg": 11.25,
-          "games_played_2025": 17,
-          "line_continuity_pct": 1.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Brian Fleury",
-          "coordinator_role": "OC",
-          "edge_score": 11.57,
-          "market_rank": 9.7,
-          "our_rank": 28,
-          "market_gap": -18.3
-        },
-        {
           "player_id": "00-0035261",
           "name": "Tony Pollard",
           "position": "RB",
@@ -1586,8 +1546,28 @@
           "coordinator_role": "OC",
           "edge_score": 11.36,
           "market_rank": 29.83,
-          "our_rank": 29,
-          "market_gap": 0.8
+          "our_rank": 27,
+          "market_gap": 2.8
+        },
+        {
+          "player_id": "00-0038134",
+          "name": "Kenneth Walker III",
+          "position": "RB",
+          "team": "KC",
+          "baseline_ppg": 11.27,
+          "season_ppg": 11.29,
+          "last6_ppg": 11.25,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Eric Bieniemy",
+          "coordinator_role": "OC",
+          "edge_score": 11.27,
+          "market_rank": 9.7,
+          "our_rank": 28,
+          "market_gap": -18.3
         },
         {
           "player_id": "00-0036158",
@@ -1606,8 +1586,8 @@
           "coordinator_role": "OC",
           "edge_score": 11.0,
           "market_rank": 34.49,
-          "our_rank": 30,
-          "market_gap": 4.5
+          "our_rank": 29,
+          "market_gap": 5.5
         },
         {
           "player_id": "00-0033293",
@@ -1626,8 +1606,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.39,
           "market_rank": 38.64,
-          "our_rank": 31,
-          "market_gap": 7.6
+          "our_rank": 30,
+          "market_gap": 8.6
         },
         {
           "player_id": "00-0039373",
@@ -1646,8 +1626,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.32,
           "market_rank": 92.54,
-          "our_rank": 32,
-          "market_gap": 60.5
+          "our_rank": 31,
+          "market_gap": 61.5
         },
         {
           "player_id": "00-0039738",
@@ -1666,8 +1646,28 @@
           "coordinator_role": "OC",
           "edge_score": 10.24,
           "market_rank": 37.05,
+          "our_rank": 32,
+          "market_gap": 5.0
+        },
+        {
+          "player_id": "00-0036139",
+          "name": "Rico Dowdle",
+          "position": "RB",
+          "team": "PIT",
+          "baseline_ppg": 10.89,
+          "season_ppg": 12.72,
+          "last6_ppg": 9.05,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Angelichio",
+          "coordinator_role": "OC",
+          "edge_score": 9.89,
+          "market_rank": 31.02,
           "our_rank": 33,
-          "market_gap": 4.0
+          "market_gap": -2.0
         },
         {
           "player_id": "00-0040784",
@@ -1690,6 +1690,46 @@
           "market_gap": -11.9
         },
         {
+          "player_id": "00-0038611",
+          "name": "Chris Rodriguez Jr.",
+          "position": "RB",
+          "team": "JAX",
+          "baseline_ppg": 8.97,
+          "season_ppg": 7.67,
+          "last6_ppg": 10.27,
+          "games_played_2025": 12,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Grant Udinski",
+          "coordinator_role": "OC",
+          "edge_score": 9.37,
+          "market_rank": 45.12,
+          "our_rank": 35,
+          "market_gap": 10.1
+        },
+        {
+          "player_id": "00-0035685",
+          "name": "David Montgomery",
+          "position": "RB",
+          "team": "HOU",
+          "baseline_ppg": 9.09,
+          "season_ppg": 9.82,
+          "last6_ppg": 8.37,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Nick Caley",
+          "coordinator_role": "OC",
+          "edge_score": 9.19,
+          "market_rank": 21.79,
+          "our_rank": 36,
+          "market_gap": -14.2
+        },
+        {
           "player_id": "00-0040236",
           "name": "Kyle Monangai",
           "position": "RB",
@@ -1706,8 +1746,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.06,
           "market_rank": 37.85,
-          "our_rank": 35,
-          "market_gap": 2.9
+          "our_rank": 37,
+          "market_gap": 0.9
         },
         {
           "player_id": "00-0033906",
@@ -1726,8 +1766,8 @@
           "coordinator_role": "OC",
           "edge_score": 8.92,
           "market_rank": 51.01,
-          "our_rank": 36,
-          "market_gap": 15.0
+          "our_rank": 38,
+          "market_gap": 13.0
         },
         {
           "player_id": "00-0040583",
@@ -1746,48 +1786,8 @@
           "coordinator_role": "OC",
           "edge_score": 8.91,
           "market_rank": 46.42,
-          "our_rank": 37,
-          "market_gap": 9.4
-        },
-        {
-          "player_id": "00-0035685",
-          "name": "David Montgomery",
-          "position": "RB",
-          "team": "DET",
-          "baseline_ppg": 9.09,
-          "season_ppg": 9.82,
-          "last6_ppg": 8.37,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Drew Petzing",
-          "coordinator_role": "OC",
-          "edge_score": 8.79,
-          "market_rank": 21.79,
-          "our_rank": 38,
-          "market_gap": -16.2
-        },
-        {
-          "player_id": "00-0038611",
-          "name": "Chris Rodriguez Jr.",
-          "position": "RB",
-          "team": "WAS",
-          "baseline_ppg": 8.97,
-          "season_ppg": 7.67,
-          "last6_ppg": 10.27,
-          "games_played_2025": 12,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "David Blough",
-          "coordinator_role": "OC",
-          "edge_score": 8.67,
-          "market_rank": 45.12,
           "our_rank": 39,
-          "market_gap": 6.1
+          "market_gap": 7.4
         },
         {
           "player_id": "00-0040202",
@@ -2112,6 +2112,26 @@
           "market_gap": -1.3
         },
         {
+          "player_id": "00-0035676",
+          "name": "A.J. Brown",
+          "position": "WR",
+          "team": "NE",
+          "baseline_ppg": 17.23,
+          "season_ppg": 14.69,
+          "last6_ppg": 19.77,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Josh McDaniels",
+          "coordinator_role": "OC",
+          "edge_score": 17.93,
+          "market_rank": 8.47,
+          "our_rank": 6,
+          "market_gap": 2.5
+        },
+        {
           "player_id": "00-0039067",
           "name": "Rashee Rice",
           "position": "WR",
@@ -2128,28 +2148,8 @@
           "coordinator_role": "OC",
           "edge_score": 17.83,
           "market_rank": 12.86,
-          "our_rank": 6,
-          "market_gap": 6.9
-        },
-        {
-          "player_id": "00-0035676",
-          "name": "A.J. Brown",
-          "position": "WR",
-          "team": "PHI",
-          "baseline_ppg": 17.23,
-          "season_ppg": 14.69,
-          "last6_ppg": 19.77,
-          "games_played_2025": 15,
-          "line_continuity_pct": 1.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Sean Mannion",
-          "coordinator_role": "OC",
-          "edge_score": 17.53,
-          "market_rank": 8.47,
           "our_rank": 7,
-          "market_gap": 1.5
+          "market_gap": 5.9
         },
         {
           "player_id": "00-0037238",
@@ -2352,26 +2352,6 @@
           "market_gap": 26.3
         },
         {
-          "player_id": "00-0038117",
-          "name": "Wan'Dale Robinson",
-          "position": "WR",
-          "team": "NYG",
-          "baseline_ppg": 14.52,
-          "season_ppg": 13.62,
-          "last6_ppg": 15.42,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Matt Nagy",
-          "coordinator_role": "OC",
-          "edge_score": 13.82,
-          "market_rank": 38.45,
-          "our_rank": 18,
-          "market_gap": 20.5
-        },
-        {
           "player_id": "00-0038124",
           "name": "Christian Watson",
           "position": "WR",
@@ -2388,8 +2368,8 @@
           "coordinator_role": "OC",
           "edge_score": 13.8,
           "market_rank": 28.49,
-          "our_rank": 19,
-          "market_gap": 9.5
+          "our_rank": 18,
+          "market_gap": 10.5
         },
         {
           "player_id": "00-0034348",
@@ -2408,8 +2388,8 @@
           "coordinator_role": "OC",
           "edge_score": 13.75,
           "market_rank": 37.84,
-          "our_rank": 20,
-          "market_gap": 17.8
+          "our_rank": 19,
+          "market_gap": 18.8
         },
         {
           "player_id": "00-0038606",
@@ -2428,14 +2408,14 @@
           "coordinator_role": "OC",
           "edge_score": 13.73,
           "market_rank": 31.01,
-          "our_rank": 21,
-          "market_gap": 10.0
+          "our_rank": 20,
+          "market_gap": 11.0
         },
         {
           "player_id": "00-0036259",
           "name": "Jauan Jennings",
           "position": "WR",
-          "team": "SF",
+          "team": "MIN",
           "baseline_ppg": 12.9,
           "season_ppg": 11.55,
           "last6_ppg": 14.25,
@@ -2444,12 +2424,12 @@
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": true,
-          "coordinator_name": "Klay Kubiak",
+          "coordinator_name": "Wes Phillips",
           "coordinator_role": "OC",
           "edge_score": 13.6,
           "market_rank": 63.51,
-          "our_rank": 22,
-          "market_gap": 41.5
+          "our_rank": 21,
+          "market_gap": 42.5
         },
         {
           "player_id": "00-0039337",
@@ -2468,8 +2448,28 @@
           "coordinator_role": "OC",
           "edge_score": 13.58,
           "market_rank": 13.51,
+          "our_rank": 22,
+          "market_gap": -8.5
+        },
+        {
+          "player_id": "00-0038117",
+          "name": "Wan'Dale Robinson",
+          "position": "WR",
+          "team": "TEN",
+          "baseline_ppg": 14.52,
+          "season_ppg": 13.62,
+          "last6_ppg": 15.42,
+          "games_played_2025": 16,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Daboll",
+          "coordinator_role": "OC",
+          "edge_score": 13.52,
+          "market_rank": 38.45,
           "our_rank": 23,
-          "market_gap": -9.5
+          "market_gap": 15.5
         },
         {
           "player_id": "00-0037740",
@@ -2612,24 +2612,44 @@
           "market_gap": 6.5
         },
         {
+          "player_id": "00-0034960",
+          "name": "Jakobi Meyers",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 11.05,
+          "season_ppg": 9.74,
+          "last6_ppg": 12.35,
+          "games_played_2025": 7,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Grant Udinski",
+          "coordinator_role": "OC",
+          "edge_score": 11.45,
+          "market_rank": 44.51,
+          "our_rank": 31,
+          "market_gap": 13.5
+        },
+        {
           "player_id": "00-0031408",
           "name": "Mike Evans",
           "position": "WR",
-          "team": "TB",
+          "team": "SF",
           "baseline_ppg": 10.64,
           "season_ppg": 10.6,
           "last6_ppg": 10.68,
           "games_played_2025": 8,
-          "line_continuity_pct": 1.0,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Zac Robinson",
+          "same_coordinator": true,
+          "coordinator_name": "Klay Kubiak",
           "coordinator_role": "OC",
-          "edge_score": 10.94,
+          "edge_score": 11.34,
           "market_rank": 26.91,
-          "our_rank": 31,
-          "market_gap": -4.1
+          "our_rank": 32,
+          "market_gap": -5.1
         },
         {
           "player_id": "00-0038544",
@@ -2648,8 +2668,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.86,
           "market_rank": 43.47,
-          "our_rank": 32,
-          "market_gap": 11.5
+          "our_rank": 33,
+          "market_gap": 10.5
         },
         {
           "player_id": "00-0039919",
@@ -2668,8 +2688,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.77,
           "market_rank": 28.22,
-          "our_rank": 33,
-          "market_gap": -4.8
+          "our_rank": 34,
+          "market_gap": -5.8
         },
         {
           "player_id": "00-0036322",
@@ -2688,8 +2708,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.76,
           "market_rank": 5.81,
-          "our_rank": 34,
-          "market_gap": -28.2
+          "our_rank": 35,
+          "market_gap": -29.2
         },
         {
           "player_id": "00-0040735",
@@ -2708,8 +2728,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.71,
           "market_rank": 23.7,
-          "our_rank": 35,
-          "market_gap": -11.3
+          "our_rank": 36,
+          "market_gap": -12.3
         },
         {
           "player_id": "00-0036912",
@@ -2728,8 +2748,8 @@
           "coordinator_role": "OC",
           "edge_score": 10.69,
           "market_rank": 13.28,
-          "our_rank": 36,
-          "market_gap": -22.7
+          "our_rank": 37,
+          "market_gap": -23.7
         },
         {
           "player_id": "00-0033921",
@@ -2748,8 +2768,28 @@
           "coordinator_role": "OC",
           "edge_score": 10.65,
           "market_rank": 35.84,
-          "our_rank": 37,
-          "market_gap": -1.2
+          "our_rank": 38,
+          "market_gap": -2.2
+        },
+        {
+          "player_id": "00-0036613",
+          "name": "Jaylen Waddle",
+          "position": "WR",
+          "team": "DEN",
+          "baseline_ppg": 10.3,
+          "season_ppg": 12.13,
+          "last6_ppg": 8.47,
+          "games_played_2025": 16,
+          "line_continuity_pct": 1.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Davis Webb",
+          "coordinator_role": "OC",
+          "edge_score": 10.6,
+          "market_rank": 18.38,
+          "our_rank": 39,
+          "market_gap": -20.6
         },
         {
           "player_id": "00-0039491",
@@ -2768,28 +2808,28 @@
           "coordinator_role": "OC",
           "edge_score": 10.28,
           "market_rank": 51.15,
-          "our_rank": 38,
-          "market_gap": 13.1
+          "our_rank": 40,
+          "market_gap": 11.1
         },
         {
-          "player_id": "00-0034960",
-          "name": "Jakobi Meyers",
+          "player_id": "00-0037816",
+          "name": "Romeo Doubs",
           "position": "WR",
-          "team": "LV",
-          "baseline_ppg": 11.05,
-          "season_ppg": 9.74,
-          "last6_ppg": 12.35,
-          "games_played_2025": 7,
-          "line_continuity_pct": 0.6,
+          "team": "NE",
+          "baseline_ppg": 9.38,
+          "season_ppg": 10.34,
+          "last6_ppg": 8.42,
+          "games_played_2025": 16,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Andrew Janocko",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Josh McDaniels",
           "coordinator_role": "OC",
-          "edge_score": 10.05,
-          "market_rank": 44.51,
-          "our_rank": 39,
-          "market_gap": 5.5
+          "edge_score": 10.08,
+          "market_rank": 53.83,
+          "our_rank": 41,
+          "market_gap": 12.8
         },
         {
           "player_id": "00-0037261",
@@ -2808,28 +2848,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.91,
           "market_rank": 50.33,
-          "our_rank": 40,
-          "market_gap": 10.3
-        },
-        {
-          "player_id": "00-0036252",
-          "name": "Michael Pittman",
-          "position": "WR",
-          "team": "IND",
-          "baseline_ppg": 9.18,
-          "season_ppg": 11.91,
-          "last6_ppg": 6.45,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Jim Bob Cooter",
-          "coordinator_role": "OC",
-          "edge_score": 9.88,
-          "market_rank": 37.22,
-          "our_rank": 41,
-          "market_gap": -3.8
+          "our_rank": 42,
+          "market_gap": 8.3
         },
         {
           "player_id": "00-0039146",
@@ -2848,8 +2868,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.8,
           "market_rank": 45.32,
-          "our_rank": 42,
-          "market_gap": 3.3
+          "our_rank": 43,
+          "market_gap": 2.3
         },
         {
           "player_id": "00-0039893",
@@ -2868,8 +2888,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.79,
           "market_rank": 35.18,
-          "our_rank": 43,
-          "market_gap": -7.8
+          "our_rank": 44,
+          "market_gap": -8.8
         },
         {
           "player_id": "00-0039849",
@@ -2888,8 +2908,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.72,
           "market_rank": 32.28,
-          "our_rank": 44,
-          "market_gap": -11.7
+          "our_rank": 45,
+          "market_gap": -12.7
         },
         {
           "player_id": "00-0039410",
@@ -2908,8 +2928,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.71,
           "market_rank": 70.38,
-          "our_rank": 45,
-          "market_gap": 25.4
+          "our_rank": 46,
+          "market_gap": 24.4
         },
         {
           "player_id": "00-0033555",
@@ -2928,34 +2948,14 @@
           "coordinator_role": "OC",
           "edge_score": 9.69,
           "market_rank": 102.94,
-          "our_rank": 46,
-          "market_gap": 56.9
-        },
-        {
-          "player_id": "00-0036613",
-          "name": "Jaylen Waddle",
-          "position": "WR",
-          "team": "MIA",
-          "baseline_ppg": 10.3,
-          "season_ppg": 12.13,
-          "last6_ppg": 8.47,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Bobby Slowik",
-          "coordinator_role": "OC",
-          "edge_score": 9.6,
-          "market_rank": 18.38,
           "our_rank": 47,
-          "market_gap": -28.6
+          "market_gap": 55.9
         },
         {
           "player_id": "00-0034827",
           "name": "DJ Moore",
           "position": "WR",
-          "team": "CHI",
+          "team": "BUF",
           "baseline_ppg": 9.56,
           "season_ppg": 10.13,
           "last6_ppg": 8.98,
@@ -2964,7 +2964,7 @@
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": false,
-          "coordinator_name": "Press Taylor",
+          "coordinator_name": "Pete Carmichael Jr.",
           "coordinator_role": "OC",
           "edge_score": 9.56,
           "market_rank": 25.91,
@@ -2992,24 +2992,24 @@
           "market_gap": 7.1
         },
         {
-          "player_id": "00-0037816",
-          "name": "Romeo Doubs",
+          "player_id": "00-0038994",
+          "name": "Jordan Addison",
           "position": "WR",
-          "team": "GB",
-          "baseline_ppg": 9.38,
-          "season_ppg": 10.34,
-          "last6_ppg": 8.42,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.4,
+          "team": "MIN",
+          "baseline_ppg": 8.68,
+          "season_ppg": 9.65,
+          "last6_ppg": 7.72,
+          "games_played_2025": 14,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
+          "coordinator_name": "Wes Phillips",
           "coordinator_role": "OC",
-          "edge_score": 9.48,
-          "market_rank": 53.83,
+          "edge_score": 9.38,
+          "market_rank": 45.71,
           "our_rank": 50,
-          "market_gap": 3.8
+          "market_gap": -4.3
         }
       ],
       "TE": [
@@ -3554,6 +3554,26 @@
           "market_gap": 7.5
         },
         {
+          "player_id": "00-0037809",
+          "name": "Chig Okonkwo",
+          "position": "TE",
+          "team": "WAS",
+          "baseline_ppg": 7.92,
+          "season_ppg": 7.29,
+          "last6_ppg": 8.55,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "David Blough",
+          "coordinator_role": "OC",
+          "edge_score": 7.62,
+          "market_rank": 18.45,
+          "our_rank": 28,
+          "market_gap": -9.6
+        },
+        {
           "player_id": "00-0039847",
           "name": "Theo Johnson",
           "position": "TE",
@@ -3570,28 +3590,28 @@
           "coordinator_role": "OC",
           "edge_score": 7.55,
           "market_rank": 36.0,
-          "our_rank": 28,
-          "market_gap": 8.0
+          "our_rank": 29,
+          "market_gap": 7.0
         },
         {
-          "player_id": "00-0037809",
-          "name": "Chig Okonkwo",
+          "player_id": "00-0033885",
+          "name": "David Njoku",
           "position": "TE",
-          "team": "TEN",
-          "baseline_ppg": 7.92,
-          "season_ppg": 7.29,
-          "last6_ppg": 8.55,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
+          "team": "LAC",
+          "baseline_ppg": 7.32,
+          "season_ppg": 7.85,
+          "last6_ppg": 6.8,
+          "games_played_2025": 11,
+          "line_continuity_pct": 0.4,
           "line_continuity_type": "oline",
-          "same_head_coach": false,
+          "same_head_coach": true,
           "same_coordinator": false,
-          "coordinator_name": "Brian Daboll",
+          "coordinator_name": "Mike McDaniel",
           "coordinator_role": "OC",
-          "edge_score": 6.92,
-          "market_rank": 18.45,
-          "our_rank": 29,
-          "market_gap": -10.6
+          "edge_score": 6.72,
+          "market_rank": 31.11,
+          "our_rank": 30,
+          "market_gap": 1.1
         },
         {
           "player_id": "00-0033881",
@@ -3610,8 +3630,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.69,
           "market_rank": 31.38,
-          "our_rank": 30,
-          "market_gap": 1.4
+          "our_rank": 31,
+          "market_gap": 0.4
         },
         {
           "player_id": "00-0040736",
@@ -3630,8 +3650,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.63,
           "market_rank": 34.86,
-          "our_rank": 31,
-          "market_gap": 3.9
+          "our_rank": 32,
+          "market_gap": 2.9
         },
         {
           "player_id": "00-0037252",
@@ -3650,8 +3670,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.61,
           "market_rank": 24.03,
-          "our_rank": 32,
-          "market_gap": -8.0
+          "our_rank": 33,
+          "market_gap": -9.0
         },
         {
           "player_id": "00-0040189",
@@ -3670,8 +3690,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.59,
           "market_rank": 23.19,
-          "our_rank": 33,
-          "market_gap": -9.8
+          "our_rank": 34,
+          "market_gap": -10.8
         },
         {
           "player_id": "00-0036894",
@@ -3690,8 +3710,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.51,
           "market_rank": 27.27,
-          "our_rank": 34,
-          "market_gap": -6.7
+          "our_rank": 35,
+          "market_gap": -7.7
         },
         {
           "player_id": "00-0035249",
@@ -3710,8 +3730,8 @@
           "coordinator_role": "OC",
           "edge_score": 5.59,
           "market_rank": 65.22,
-          "our_rank": 35,
-          "market_gap": 30.2
+          "our_rank": 36,
+          "market_gap": 29.2
         },
         {
           "player_id": "00-0036290",
@@ -3730,28 +3750,8 @@
           "coordinator_role": "OC",
           "edge_score": 5.48,
           "market_rank": 43.46,
-          "our_rank": 36,
-          "market_gap": 7.5
-        },
-        {
-          "player_id": "00-0033885",
-          "name": "David Njoku",
-          "position": "TE",
-          "team": "CLE",
-          "baseline_ppg": 7.32,
-          "season_ppg": 7.85,
-          "last6_ppg": 6.8,
-          "games_played_2025": 11,
-          "line_continuity_pct": 0.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Travis Switzer",
-          "coordinator_role": "OC",
-          "edge_score": 5.42,
-          "market_rank": 31.11,
           "our_rank": 37,
-          "market_gap": -5.9
+          "market_gap": 6.5
         },
         {
           "player_id": "00-0039356",
@@ -3794,26 +3794,6 @@
           "market_gap": -13.7
         },
         {
-          "player_id": "00-0032392",
-          "name": "Austin Hooper",
-          "position": "TE",
-          "team": "NE",
-          "baseline_ppg": 4.44,
-          "season_ppg": 4.56,
-          "last6_ppg": 4.32,
-          "games_played_2025": 13,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Josh McDaniels",
-          "coordinator_role": "OC",
-          "edge_score": 5.14,
-          "market_rank": 55.33,
-          "our_rank": 40,
-          "market_gap": 15.3
-        },
-        {
           "player_id": "00-0037005",
           "name": "Tommy Tremble",
           "position": "TE",
@@ -3830,8 +3810,8 @@
           "coordinator_role": "OC",
           "edge_score": 5.07,
           "market_rank": 55.11,
-          "our_rank": 41,
-          "market_gap": 14.1
+          "our_rank": 40,
+          "market_gap": 15.1
         },
         {
           "player_id": "00-0034613",
@@ -3850,8 +3830,28 @@
           "coordinator_role": "OC",
           "edge_score": 5.05,
           "market_rank": 86.0,
+          "our_rank": 41,
+          "market_gap": 45.0
+        },
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "position": "TE",
+          "team": "NYG",
+          "baseline_ppg": 5.73,
+          "season_ppg": 5.14,
+          "last6_ppg": 6.32,
+          "games_played_2025": 12,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Matt Nagy",
+          "coordinator_role": "OC",
+          "edge_score": 5.03,
+          "market_rank": 13.43,
           "our_rank": 42,
-          "market_gap": 44.0
+          "market_gap": -28.6
         },
         {
           "player_id": "00-0034753",
@@ -3937,7 +3937,7 @@
           "player_id": "00-0035644",
           "name": "Noah Fant",
           "position": "TE",
-          "team": "CIN",
+          "team": "NO",
           "baseline_ppg": 3.86,
           "season_ppg": 5.75,
           "last6_ppg": 1.97,
@@ -3946,7 +3946,7 @@
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": true,
-          "coordinator_name": "Dan Pitcher",
+          "coordinator_name": "Doug Nussmeier",
           "coordinator_role": "OC",
           "edge_score": 4.56,
           "market_rank": 51.96,
@@ -3954,24 +3954,24 @@
           "market_gap": 5.0
         },
         {
-          "player_id": "00-0037838",
-          "name": "Isaiah Likely",
+          "player_id": "00-0032392",
+          "name": "Austin Hooper",
           "position": "TE",
-          "team": "BAL",
-          "baseline_ppg": 5.73,
-          "season_ppg": 5.14,
-          "last6_ppg": 6.32,
-          "games_played_2025": 12,
-          "line_continuity_pct": 0.4,
+          "team": "ATL",
+          "baseline_ppg": 4.44,
+          "season_ppg": 4.56,
+          "last6_ppg": 4.32,
+          "games_played_2025": 13,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
-          "same_head_coach": false,
+          "same_head_coach": true,
           "same_coordinator": false,
-          "coordinator_name": "Declan Doyle",
+          "coordinator_name": "Tommy Rees",
           "coordinator_role": "OC",
-          "edge_score": 4.43,
-          "market_rank": 13.43,
+          "edge_score": 4.44,
+          "market_rank": 55.33,
           "our_rank": 48,
-          "market_gap": -34.6
+          "market_gap": 7.3
         },
         {
           "player_id": "00-0033357",
@@ -4119,18 +4119,18 @@
           "player_id": "00-0033862",
           "name": "Zane Gonzalez",
           "position": "K",
-          "team": "ATL",
+          "team": "MIA",
           "baseline_ppg": 10.44,
           "season_ppg": 10.56,
           "last6_ppg": 10.33,
           "games_played_2025": 9,
           "line_continuity_pct": null,
           "line_continuity_type": null,
-          "same_head_coach": true,
+          "same_head_coach": false,
           "same_coordinator": null,
           "coordinator_name": null,
           "coordinator_role": null,
-          "edge_score": 10.64,
+          "edge_score": 9.94,
           "market_rank": 23.92,
           "our_rank": 6,
           "market_gap": 17.9
@@ -4419,7 +4419,7 @@
           "player_id": "00-0038905",
           "name": "Blake Grupe",
           "position": "K",
-          "team": "NO",
+          "team": "IND",
           "baseline_ppg": 7.64,
           "season_ppg": 6.27,
           "last6_ppg": 9.0,
@@ -4459,7 +4459,7 @@
           "player_id": "00-0025565",
           "name": "Nick Folk",
           "position": "K",
-          "team": "NYJ",
+          "team": "ATL",
           "baseline_ppg": 7.27,
           "season_ppg": 7.88,
           "last6_ppg": 6.67,
@@ -4676,26 +4676,6 @@
           "market_gap": -12.9
         },
         {
-          "player_id": "00-0035269",
-          "name": "Matt Gay",
-          "position": "K",
-          "team": "WAS",
-          "baseline_ppg": 5.98,
-          "season_ppg": 6.8,
-          "last6_ppg": 5.17,
-          "games_played_2025": 10,
-          "line_continuity_pct": null,
-          "line_continuity_type": null,
-          "same_head_coach": true,
-          "same_coordinator": null,
-          "coordinator_name": null,
-          "coordinator_role": null,
-          "edge_score": 6.18,
-          "market_rank": 31.27,
-          "our_rank": 34,
-          "market_gap": -2.7
-        },
-        {
           "player_id": "00-0040279",
           "name": "Ryan Fitzgerald",
           "position": "K",
@@ -4712,8 +4692,8 @@
           "coordinator_role": null,
           "edge_score": 6.1,
           "market_rank": 25.06,
-          "our_rank": 35,
-          "market_gap": -9.9
+          "our_rank": 34,
+          "market_gap": -8.9
         },
         {
           "player_id": "00-0037542",
@@ -4732,7 +4712,7 @@
           "coordinator_role": null,
           "edge_score": 5.82,
           "market_rank": null,
-          "our_rank": 36,
+          "our_rank": 35,
           "market_gap": null
         },
         {
@@ -4752,8 +4732,28 @@
           "coordinator_role": null,
           "edge_score": 5.79,
           "market_rank": 30.87,
+          "our_rank": 36,
+          "market_gap": -5.1
+        },
+        {
+          "player_id": "00-0035269",
+          "name": "Matt Gay",
+          "position": "K",
+          "team": "LV",
+          "baseline_ppg": 5.98,
+          "season_ppg": 6.8,
+          "last6_ppg": 5.17,
+          "games_played_2025": 10,
+          "line_continuity_pct": null,
+          "line_continuity_type": null,
+          "same_head_coach": false,
+          "same_coordinator": null,
+          "coordinator_name": null,
+          "coordinator_role": null,
+          "edge_score": 5.48,
+          "market_rank": 31.27,
           "our_rank": 37,
-          "market_gap": -6.1
+          "market_gap": -5.7
         },
         {
           "player_id": "00-0034161",
@@ -5178,26 +5178,6 @@
           "market_gap": -7.4
         },
         {
-          "player_id": "DET_DST",
-          "name": "DET D/ST",
-          "position": "DST",
-          "team": "DET",
-          "baseline_ppg": 4.63,
-          "season_ppg": 5.59,
-          "last6_ppg": 3.67,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.5,
-          "line_continuity_type": "dline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Kelvin Sheppard",
-          "coordinator_role": "DC",
-          "edge_score": 4.88,
-          "market_rank": 14.97,
-          "our_rank": 19,
-          "market_gap": -4.0
-        },
-        {
           "player_id": "CLE_DST",
           "name": "CLE D/ST",
           "position": "DST",
@@ -5214,8 +5194,28 @@
           "coordinator_role": "DC",
           "edge_score": 4.88,
           "market_rank": 15.41,
+          "our_rank": 19,
+          "market_gap": -3.6
+        },
+        {
+          "player_id": "DET_DST",
+          "name": "DET D/ST",
+          "position": "DST",
+          "team": "DET",
+          "baseline_ppg": 4.63,
+          "season_ppg": 5.59,
+          "last6_ppg": 3.67,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.5,
+          "line_continuity_type": "dline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Kelvin Sheppard",
+          "coordinator_role": "DC",
+          "edge_score": 4.88,
+          "market_rank": 14.97,
           "our_rank": 20,
-          "market_gap": -4.6
+          "market_gap": -5.0
         },
         {
           "player_id": "CIN_DST",
@@ -5786,6 +5786,26 @@
           "market_gap": 10.6
         },
         {
+          "player_id": "00-0035228",
+          "name": "Kyler Murray",
+          "position": "QB",
+          "team": "MIN",
+          "baseline_ppg": 15.56,
+          "season_ppg": 15.56,
+          "last6_ppg": 15.56,
+          "games_played_2025": 5,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Wes Phillips",
+          "coordinator_role": "OC",
+          "edge_score": 16.26,
+          "market_rank": 16.46,
+          "our_rank": 17,
+          "market_gap": -0.5
+        },
+        {
           "player_id": "00-0039910",
           "name": "Jayden Daniels",
           "position": "QB",
@@ -5802,8 +5822,8 @@
           "coordinator_role": "OC",
           "edge_score": 16.02,
           "market_rank": 5.88,
-          "our_rank": 17,
-          "market_gap": -11.1
+          "our_rank": 18,
+          "market_gap": -12.1
         },
         {
           "player_id": "00-0034855",
@@ -5822,8 +5842,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.98,
           "market_rank": 18.17,
-          "our_rank": 18,
-          "market_gap": 0.2
+          "our_rank": 19,
+          "market_gap": -0.8
         },
         {
           "player_id": "00-0036355",
@@ -5842,8 +5862,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.6,
           "market_rank": 8.13,
-          "our_rank": 19,
-          "market_gap": -10.9
+          "our_rank": 20,
+          "market_gap": -11.9
         },
         {
           "player_id": "00-0036264",
@@ -5862,8 +5882,8 @@
           "coordinator_role": "OC",
           "edge_score": 15.36,
           "market_rank": 18.58,
-          "our_rank": 20,
-          "market_gap": -1.4
+          "our_rank": 21,
+          "market_gap": -2.4
         },
         {
           "player_id": "00-0039150",
@@ -5882,28 +5902,28 @@
           "coordinator_role": "OC",
           "edge_score": 15.08,
           "market_rank": 25.89,
-          "our_rank": 21,
-          "market_gap": 4.9
+          "our_rank": 22,
+          "market_gap": 3.9
         },
         {
-          "player_id": "00-0035228",
-          "name": "Kyler Murray",
+          "player_id": "00-0036945",
+          "name": "Justin Fields",
           "position": "QB",
-          "team": "ARI",
-          "baseline_ppg": 15.56,
-          "season_ppg": 15.56,
-          "last6_ppg": 15.56,
-          "games_played_2025": 5,
-          "line_continuity_pct": 0.4,
+          "team": "KC",
+          "baseline_ppg": 14.87,
+          "season_ppg": 16.07,
+          "last6_ppg": 13.67,
+          "games_played_2025": 9,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": false,
-          "coordinator_name": "Nathaniel Hackett",
+          "coordinator_name": "Eric Bieniemy",
           "coordinator_role": "OC",
-          "edge_score": 14.96,
-          "market_rank": 16.46,
-          "our_rank": 22,
-          "market_gap": -5.5
+          "edge_score": 14.87,
+          "market_rank": 40.39,
+          "our_rank": 23,
+          "market_gap": 17.4
         },
         {
           "player_id": "00-0039163",
@@ -5922,8 +5942,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.84,
           "market_rank": 23.25,
-          "our_rank": 23,
-          "market_gap": 0.2
+          "our_rank": 24,
+          "market_gap": -0.8
         },
         {
           "player_id": "00-0032950",
@@ -5942,28 +5962,8 @@
           "coordinator_role": "OC",
           "edge_score": 14.77,
           "market_rank": 74.5,
-          "our_rank": 24,
-          "market_gap": 50.5
-        },
-        {
-          "player_id": "00-0036945",
-          "name": "Justin Fields",
-          "position": "QB",
-          "team": "NYJ",
-          "baseline_ppg": 14.87,
-          "season_ppg": 16.07,
-          "last6_ppg": 13.67,
-          "games_played_2025": 9,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Frank Reich",
-          "coordinator_role": "OC",
-          "edge_score": 14.57,
-          "market_rank": 40.39,
           "our_rank": 25,
-          "market_gap": 15.4
+          "market_gap": 49.5
         },
         {
           "player_id": "00-0039917",
@@ -6046,26 +6046,6 @@
           "market_gap": -0.6
         },
         {
-          "player_id": "00-0038128",
-          "name": "Malik Willis",
-          "position": "QB",
-          "team": "GB",
-          "baseline_ppg": 12.79,
-          "season_ppg": 12.79,
-          "last6_ppg": 12.79,
-          "games_played_2025": 4,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
-          "coordinator_role": "OC",
-          "edge_score": 12.89,
-          "market_rank": 20.79,
-          "our_rank": 30,
-          "market_gap": -9.2
-        },
-        {
           "player_id": "00-0039923",
           "name": "J.J. McCarthy",
           "position": "QB",
@@ -6082,8 +6062,8 @@
           "coordinator_role": "OC",
           "edge_score": 12.89,
           "market_rank": 37.73,
-          "our_rank": 31,
-          "market_gap": 6.7
+          "our_rank": 30,
+          "market_gap": 7.7
         },
         {
           "player_id": "00-0032268",
@@ -6102,8 +6082,28 @@
           "coordinator_role": "OC",
           "edge_score": 12.39,
           "market_rank": 43.26,
+          "our_rank": 31,
+          "market_gap": 12.3
+        },
+        {
+          "player_id": "00-0038128",
+          "name": "Malik Willis",
+          "position": "QB",
+          "team": "MIA",
+          "baseline_ppg": 12.79,
+          "season_ppg": 12.79,
+          "last6_ppg": 12.79,
+          "games_played_2025": 4,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Bobby Slowik",
+          "coordinator_role": "OC",
+          "edge_score": 12.09,
+          "market_rank": 20.79,
           "our_rank": 32,
-          "market_gap": 11.3
+          "market_gap": -11.2
         },
         {
           "player_id": "00-0026158",
@@ -6126,26 +6126,6 @@
           "market_gap": 8.6
         },
         {
-          "player_id": "00-0029604",
-          "name": "Kirk Cousins",
-          "position": "QB",
-          "team": "ATL",
-          "baseline_ppg": 11.73,
-          "season_ppg": 10.35,
-          "last6_ppg": 13.11,
-          "games_played_2025": 10,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Tommy Rees",
-          "coordinator_role": "OC",
-          "edge_score": 11.73,
-          "market_rank": 32.66,
-          "our_rank": 34,
-          "market_gap": -1.3
-        },
-        {
           "player_id": "00-0036972",
           "name": "Mac Jones",
           "position": "QB",
@@ -6162,8 +6142,8 @@
           "coordinator_role": "OC",
           "edge_score": 11.67,
           "market_rank": 39.28,
-          "our_rank": 35,
-          "market_gap": 4.3
+          "our_rank": 34,
+          "market_gap": 5.3
         },
         {
           "player_id": "00-0036898",
@@ -6182,8 +6162,28 @@
           "coordinator_role": "OC",
           "edge_score": 11.53,
           "market_rank": 53.9,
+          "our_rank": 35,
+          "market_gap": 18.9
+        },
+        {
+          "player_id": "00-0030565",
+          "name": "Geno Smith",
+          "position": "QB",
+          "team": "NYJ",
+          "baseline_ppg": 11.81,
+          "season_ppg": 11.73,
+          "last6_ppg": 11.89,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Frank Reich",
+          "coordinator_role": "OC",
+          "edge_score": 11.51,
+          "market_rank": 28.59,
           "our_rank": 36,
-          "market_gap": 17.9
+          "market_gap": -7.4
         },
         {
           "player_id": "00-0040676",
@@ -6226,64 +6226,84 @@
           "market_gap": 15.9
         },
         {
-          "player_id": "00-0030565",
-          "name": "Geno Smith",
+          "player_id": "00-0029604",
+          "name": "Kirk Cousins",
           "position": "QB",
           "team": "LV",
-          "baseline_ppg": 11.81,
-          "season_ppg": 11.73,
-          "last6_ppg": 11.89,
-          "games_played_2025": 15,
+          "baseline_ppg": 11.73,
+          "season_ppg": 10.35,
+          "last6_ppg": 13.11,
+          "games_played_2025": 10,
           "line_continuity_pct": 0.6,
           "line_continuity_type": "oline",
           "same_head_coach": false,
           "same_coordinator": false,
           "coordinator_name": "Andrew Janocko",
           "coordinator_role": "OC",
-          "edge_score": 10.81,
-          "market_rank": 28.59,
+          "edge_score": 10.73,
+          "market_rank": 32.66,
           "our_rank": 39,
-          "market_gap": -10.4
+          "market_gap": -6.3
         },
         {
-          "player_id": "00-0035100",
-          "name": "Jake Browning",
+          "player_id": "00-0036212",
+          "name": "Tua Tagovailoa",
           "position": "QB",
-          "team": "CIN",
-          "baseline_ppg": 9.75,
-          "season_ppg": 9.75,
-          "last6_ppg": 9.75,
-          "games_played_2025": 5,
+          "team": "ATL",
+          "baseline_ppg": 10.49,
+          "season_ppg": 11.62,
+          "last6_ppg": 9.36,
+          "games_played_2025": 14,
           "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Dan Pitcher",
+          "same_coordinator": false,
+          "coordinator_name": "Tommy Rees",
           "coordinator_role": "OC",
-          "edge_score": 10.45,
-          "market_rank": 62.0,
+          "edge_score": 10.49,
+          "market_rank": 30.97,
           "our_rank": 40,
-          "market_gap": 22.0
+          "market_gap": -9.0
         },
         {
           "player_id": "00-0028118",
           "name": "Tyrod Taylor",
           "position": "QB",
-          "team": "NYJ",
+          "team": "GB",
           "baseline_ppg": 10.24,
           "season_ppg": 10.24,
           "last6_ppg": 10.24,
           "games_played_2025": 6,
-          "line_continuity_pct": 0.6,
+          "line_continuity_pct": 0.4,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Frank Reich",
+          "same_coordinator": true,
+          "coordinator_name": "Adam Stenavich",
           "coordinator_role": "OC",
-          "edge_score": 9.94,
+          "edge_score": 10.34,
           "market_rank": 50.67,
           "our_rank": 41,
           "market_gap": 9.7
+        },
+        {
+          "player_id": "00-0035100",
+          "name": "Jake Browning",
+          "position": "QB",
+          "team": "TB",
+          "baseline_ppg": 9.75,
+          "season_ppg": 9.75,
+          "last6_ppg": 9.75,
+          "games_played_2025": 5,
+          "line_continuity_pct": 1.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Zac Robinson",
+          "coordinator_role": "OC",
+          "edge_score": 10.05,
+          "market_rank": 62.0,
+          "our_rank": 42,
+          "market_gap": 20.0
         },
         {
           "player_id": "00-0040668",
@@ -6302,48 +6322,28 @@
           "coordinator_role": "OC",
           "edge_score": 9.79,
           "market_rank": 34.39,
-          "our_rank": 42,
-          "market_gap": -7.6
-        },
-        {
-          "player_id": "00-0036212",
-          "name": "Tua Tagovailoa",
-          "position": "QB",
-          "team": "MIA",
-          "baseline_ppg": 10.49,
-          "season_ppg": 11.62,
-          "last6_ppg": 9.36,
-          "games_played_2025": 14,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Bobby Slowik",
-          "coordinator_role": "OC",
-          "edge_score": 9.79,
-          "market_rank": 30.97,
           "our_rank": 43,
-          "market_gap": -12.0
+          "market_gap": -8.6
         },
         {
-          "player_id": "00-0033869",
-          "name": "Mitchell Trubisky",
+          "player_id": "00-0026158",
+          "name": "Joe Flacco",
           "position": "QB",
-          "team": "BUF",
-          "baseline_ppg": 7.78,
-          "season_ppg": 7.78,
-          "last6_ppg": 7.78,
+          "team": "CIN",
+          "baseline_ppg": 8.21,
+          "season_ppg": 7.48,
+          "last6_ppg": 8.95,
           "games_played_2025": 4,
           "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Pete Carmichael Jr.",
+          "same_coordinator": true,
+          "coordinator_name": "Dan Pitcher",
           "coordinator_role": "OC",
-          "edge_score": 7.78,
-          "market_rank": 64.6,
+          "edge_score": 8.91,
+          "market_rank": 41.57,
           "our_rank": 44,
-          "market_gap": 20.6
+          "market_gap": -2.4
         },
         {
           "player_id": "00-0029263",
@@ -6406,6 +6406,26 @@
           "market_gap": -1.9
         },
         {
+          "player_id": "00-0033869",
+          "name": "Mitchell Trubisky",
+          "position": "QB",
+          "team": "TEN",
+          "baseline_ppg": 7.78,
+          "season_ppg": 7.78,
+          "last6_ppg": 7.78,
+          "games_played_2025": 4,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Daboll",
+          "coordinator_role": "OC",
+          "edge_score": 6.78,
+          "market_rank": 64.6,
+          "our_rank": 48,
+          "market_gap": 16.6
+        },
+        {
           "player_id": "00-0035993",
           "name": "Tyler Huntley",
           "position": "QB",
@@ -6422,28 +6442,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.73,
           "market_rank": 54.33,
-          "our_rank": 48,
-          "market_gap": 6.3
-        },
-        {
-          "player_id": "00-0026158",
-          "name": "Joe Flacco",
-          "position": "QB",
-          "team": "CLE",
-          "baseline_ppg": 8.21,
-          "season_ppg": 7.48,
-          "last6_ppg": 8.95,
-          "games_played_2025": 4,
-          "line_continuity_pct": 0.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Travis Switzer",
-          "coordinator_role": "OC",
-          "edge_score": 6.31,
-          "market_rank": 41.57,
           "our_rank": 49,
-          "market_gap": -7.4
+          "market_gap": 5.3
         },
         {
           "player_id": "00-0040398",
@@ -6628,6 +6628,26 @@
           "market_gap": -6.7
         },
         {
+          "player_id": "00-0036973",
+          "name": "Travis Etienne",
+          "position": "RB",
+          "team": "NO",
+          "baseline_ppg": 12.94,
+          "season_ppg": 12.82,
+          "last6_ppg": 13.07,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Doug Nussmeier",
+          "coordinator_role": "OC",
+          "edge_score": 13.64,
+          "market_rank": 17.76,
+          "our_rank": 9,
+          "market_gap": 8.8
+        },
+        {
           "player_id": "00-0037840",
           "name": "Kyren Williams",
           "position": "RB",
@@ -6644,8 +6664,8 @@
           "coordinator_role": "OC",
           "edge_score": 13.59,
           "market_rank": 15.01,
-          "our_rank": 9,
-          "market_gap": 6.0
+          "our_rank": 10,
+          "market_gap": 5.0
         },
         {
           "player_id": "00-0040715",
@@ -6664,28 +6684,8 @@
           "coordinator_role": "OC",
           "edge_score": 13.36,
           "market_rank": 20.31,
-          "our_rank": 10,
-          "market_gap": 10.3
-        },
-        {
-          "player_id": "00-0036973",
-          "name": "Travis Etienne",
-          "position": "RB",
-          "team": "JAX",
-          "baseline_ppg": 12.94,
-          "season_ppg": 12.82,
-          "last6_ppg": 13.07,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Grant Udinski",
-          "coordinator_role": "OC",
-          "edge_score": 13.34,
-          "market_rank": 17.76,
           "our_rank": 11,
-          "market_gap": 6.8
+          "market_gap": 9.3
         },
         {
           "player_id": "00-0036875",
@@ -6928,6 +6928,26 @@
           "market_gap": 11.5
         },
         {
+          "player_id": "00-0036919",
+          "name": "Kenny Gainwell",
+          "position": "RB",
+          "team": "TB",
+          "baseline_ppg": 9.64,
+          "season_ppg": 8.72,
+          "last6_ppg": 10.55,
+          "games_played_2025": 17,
+          "line_continuity_pct": 1.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Zac Robinson",
+          "coordinator_role": "OC",
+          "edge_score": 9.94,
+          "market_rank": 34.07,
+          "our_rank": 24,
+          "market_gap": 10.1
+        },
+        {
           "player_id": "00-0035261",
           "name": "Tony Pollard",
           "position": "RB",
@@ -6944,8 +6964,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.81,
           "market_rank": 29.83,
-          "our_rank": 24,
-          "market_gap": 5.8
+          "our_rank": 25,
+          "market_gap": 4.8
         },
         {
           "player_id": "00-0038120",
@@ -6964,8 +6984,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.79,
           "market_rank": 14.31,
-          "our_rank": 25,
-          "market_gap": -10.7
+          "our_rank": 26,
+          "market_gap": -11.7
         },
         {
           "player_id": "00-0039738",
@@ -6984,8 +7004,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.75,
           "market_rank": 37.05,
-          "our_rank": 26,
-          "market_gap": 11.0
+          "our_rank": 27,
+          "market_gap": 10.0
         },
         {
           "player_id": "00-0040122",
@@ -7004,28 +7024,8 @@
           "coordinator_role": "OC",
           "edge_score": 9.72,
           "market_rank": 6.21,
-          "our_rank": 27,
-          "market_gap": -20.8
-        },
-        {
-          "player_id": "00-0038134",
-          "name": "Kenneth Walker III",
-          "position": "RB",
-          "team": "SEA",
-          "baseline_ppg": 9.19,
-          "season_ppg": 9.46,
-          "last6_ppg": 8.92,
-          "games_played_2025": 17,
-          "line_continuity_pct": 1.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Brian Fleury",
-          "coordinator_role": "OC",
-          "edge_score": 9.49,
-          "market_rank": 9.7,
           "our_rank": 28,
-          "market_gap": -18.3
+          "market_gap": -21.8
         },
         {
           "player_id": "00-0039384",
@@ -7048,50 +7048,30 @@
           "market_gap": 17.3
         },
         {
-          "player_id": "00-0036139",
-          "name": "Rico Dowdle",
+          "player_id": "00-0038134",
+          "name": "Kenneth Walker III",
           "position": "RB",
-          "team": "CAR",
-          "baseline_ppg": 8.41,
-          "season_ppg": 10.43,
-          "last6_ppg": 6.38,
+          "team": "KC",
+          "baseline_ppg": 9.19,
+          "season_ppg": 9.46,
+          "last6_ppg": 8.92,
           "games_played_2025": 17,
           "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Brad Idzik",
-          "coordinator_role": "OC",
-          "edge_score": 9.11,
-          "market_rank": 31.02,
-          "our_rank": 30,
-          "market_gap": 1.0
-        },
-        {
-          "player_id": "00-0036919",
-          "name": "Kenny Gainwell",
-          "position": "RB",
-          "team": "PIT",
-          "baseline_ppg": 9.64,
-          "season_ppg": 8.72,
-          "last6_ppg": 10.55,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
           "same_coordinator": false,
-          "coordinator_name": "Brian Angelichio",
+          "coordinator_name": "Eric Bieniemy",
           "coordinator_role": "OC",
-          "edge_score": 8.64,
-          "market_rank": 34.07,
-          "our_rank": 31,
-          "market_gap": 3.1
+          "edge_score": 9.19,
+          "market_rank": 9.7,
+          "our_rank": 30,
+          "market_gap": -20.3
         },
         {
           "player_id": "00-0038611",
           "name": "Chris Rodriguez Jr.",
           "position": "RB",
-          "team": "WAS",
+          "team": "JAX",
           "baseline_ppg": 8.59,
           "season_ppg": 7.42,
           "last6_ppg": 9.77,
@@ -7099,13 +7079,13 @@
           "line_continuity_pct": 0.6,
           "line_continuity_type": "oline",
           "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "David Blough",
+          "same_coordinator": true,
+          "coordinator_name": "Grant Udinski",
           "coordinator_role": "OC",
-          "edge_score": 8.29,
+          "edge_score": 8.99,
           "market_rank": 45.12,
-          "our_rank": 32,
-          "market_gap": 13.1
+          "our_rank": 31,
+          "market_gap": 14.1
         },
         {
           "player_id": "00-0040242",
@@ -7124,8 +7104,28 @@
           "coordinator_role": "OC",
           "edge_score": 8.12,
           "market_rank": 38.48,
+          "our_rank": 32,
+          "market_gap": 6.5
+        },
+        {
+          "player_id": "00-0035685",
+          "name": "David Montgomery",
+          "position": "RB",
+          "team": "HOU",
+          "baseline_ppg": 7.89,
+          "season_ppg": 8.41,
+          "last6_ppg": 7.37,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Nick Caley",
+          "coordinator_role": "OC",
+          "edge_score": 7.99,
+          "market_rank": 21.79,
           "our_rank": 33,
-          "market_gap": 5.5
+          "market_gap": -11.2
         },
         {
           "player_id": "00-0033293",
@@ -7188,26 +7188,6 @@
           "market_gap": 1.9
         },
         {
-          "player_id": "00-0035685",
-          "name": "David Montgomery",
-          "position": "RB",
-          "team": "DET",
-          "baseline_ppg": 7.89,
-          "season_ppg": 8.41,
-          "last6_ppg": 7.37,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Drew Petzing",
-          "coordinator_role": "OC",
-          "edge_score": 7.59,
-          "market_rank": 21.79,
-          "our_rank": 37,
-          "market_gap": -15.2
-        },
-        {
           "player_id": "00-0040583",
           "name": "Woody Marks",
           "position": "RB",
@@ -7224,8 +7204,8 @@
           "coordinator_role": "OC",
           "edge_score": 7.49,
           "market_rank": 46.42,
-          "our_rank": 38,
-          "market_gap": 8.4
+          "our_rank": 37,
+          "market_gap": 9.4
         },
         {
           "player_id": "00-0040784",
@@ -7244,8 +7224,28 @@
           "coordinator_role": "OC",
           "edge_score": 7.46,
           "market_rank": 22.13,
+          "our_rank": 38,
+          "market_gap": -15.9
+        },
+        {
+          "player_id": "00-0036139",
+          "name": "Rico Dowdle",
+          "position": "RB",
+          "team": "PIT",
+          "baseline_ppg": 8.41,
+          "season_ppg": 10.43,
+          "last6_ppg": 6.38,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Angelichio",
+          "coordinator_role": "OC",
+          "edge_score": 7.41,
+          "market_rank": 31.02,
           "our_rank": 39,
-          "market_gap": -16.9
+          "market_gap": -8.0
         },
         {
           "player_id": "00-0037525",
@@ -7268,26 +7268,6 @@
           "market_gap": -1.3
         },
         {
-          "player_id": "00-0036555",
-          "name": "Chuba Hubbard",
-          "position": "RB",
-          "team": "CAR",
-          "baseline_ppg": 5.8,
-          "season_ppg": 6.36,
-          "last6_ppg": 5.23,
-          "games_played_2025": 15,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Brad Idzik",
-          "coordinator_role": "OC",
-          "edge_score": 6.5,
-          "market_rank": 34.06,
-          "our_rank": 41,
-          "market_gap": -6.9
-        },
-        {
           "player_id": "00-0040202",
           "name": "Devin Neal",
           "position": "RB",
@@ -7304,8 +7284,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.5,
           "market_rank": 81.06,
-          "our_rank": 42,
-          "market_gap": 39.1
+          "our_rank": 41,
+          "market_gap": 40.1
         },
         {
           "player_id": "00-0039391",
@@ -7324,8 +7304,28 @@
           "coordinator_role": "OC",
           "edge_score": 6.5,
           "market_rank": 62.41,
+          "our_rank": 42,
+          "market_gap": 20.4
+        },
+        {
+          "player_id": "00-0036555",
+          "name": "Chuba Hubbard",
+          "position": "RB",
+          "team": "CAR",
+          "baseline_ppg": 5.8,
+          "season_ppg": 6.36,
+          "last6_ppg": 5.23,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Brad Idzik",
+          "coordinator_role": "OC",
+          "edge_score": 6.5,
+          "market_rank": 34.06,
           "our_rank": 43,
-          "market_gap": 19.4
+          "market_gap": -8.9
         },
         {
           "player_id": "00-0040719",
@@ -7408,26 +7408,6 @@
           "market_gap": 48.3
         },
         {
-          "player_id": "00-0037263",
-          "name": "Tyler Allgeier",
-          "position": "RB",
-          "team": "ATL",
-          "baseline_ppg": 5.83,
-          "season_ppg": 6.41,
-          "last6_ppg": 5.25,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Tommy Rees",
-          "coordinator_role": "OC",
-          "edge_score": 5.83,
-          "market_rank": 45.76,
-          "our_rank": 48,
-          "market_gap": -2.2
-        },
-        {
           "player_id": "00-0039405",
           "name": "Jawhar Jordan",
           "position": "RB",
@@ -7444,8 +7424,8 @@
           "coordinator_role": "OC",
           "edge_score": 5.78,
           "market_rank": 96.31,
-          "our_rank": 49,
-          "market_gap": 47.3
+          "our_rank": 48,
+          "market_gap": 48.3
         },
         {
           "player_id": "00-0037157",
@@ -7464,8 +7444,28 @@
           "coordinator_role": "OC",
           "edge_score": 5.69,
           "market_rank": 93.74,
+          "our_rank": 49,
+          "market_gap": 44.7
+        },
+        {
+          "player_id": "00-0037563",
+          "name": "Malik Davis",
+          "position": "RB",
+          "team": "DAL",
+          "baseline_ppg": 4.93,
+          "season_ppg": 3.86,
+          "last6_ppg": 6.0,
+          "games_played_2025": 10,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Klayton Adams",
+          "coordinator_role": "OC",
+          "edge_score": 5.63,
+          "market_rank": 82.11,
           "our_rank": 50,
-          "market_gap": 43.7
+          "market_gap": 32.1
         }
       ],
       "WR": [
@@ -7570,6 +7570,26 @@
           "market_gap": 2.6
         },
         {
+          "player_id": "00-0035676",
+          "name": "A.J. Brown",
+          "position": "WR",
+          "team": "NE",
+          "baseline_ppg": 11.29,
+          "season_ppg": 9.49,
+          "last6_ppg": 13.1,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Josh McDaniels",
+          "coordinator_role": "OC",
+          "edge_score": 11.99,
+          "market_rank": 8.47,
+          "our_rank": 6,
+          "market_gap": 2.5
+        },
+        {
           "player_id": "00-0031381",
           "name": "Davante Adams",
           "position": "WR",
@@ -7586,28 +7606,8 @@
           "coordinator_role": "OC",
           "edge_score": 11.6,
           "market_rank": 25.55,
-          "our_rank": 6,
-          "market_gap": 19.6
-        },
-        {
-          "player_id": "00-0035676",
-          "name": "A.J. Brown",
-          "position": "WR",
-          "team": "PHI",
-          "baseline_ppg": 11.29,
-          "season_ppg": 9.49,
-          "last6_ppg": 13.1,
-          "games_played_2025": 15,
-          "line_continuity_pct": 1.0,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Sean Mannion",
-          "coordinator_role": "OC",
-          "edge_score": 11.59,
-          "market_rank": 8.47,
           "our_rank": 7,
-          "market_gap": 1.5
+          "market_gap": 18.6
         },
         {
           "player_id": "00-0039067",
@@ -7793,7 +7793,7 @@
           "player_id": "00-0036259",
           "name": "Jauan Jennings",
           "position": "WR",
-          "team": "SF",
+          "team": "MIN",
           "baseline_ppg": 9.15,
           "season_ppg": 7.89,
           "last6_ppg": 10.42,
@@ -7802,7 +7802,7 @@
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": true,
-          "coordinator_name": "Klay Kubiak",
+          "coordinator_name": "Wes Phillips",
           "coordinator_role": "OC",
           "edge_score": 9.85,
           "market_rank": 63.51,
@@ -7970,6 +7970,26 @@
           "market_gap": 17.6
         },
         {
+          "player_id": "00-0031408",
+          "name": "Mike Evans",
+          "position": "WR",
+          "team": "SF",
+          "baseline_ppg": 7.1,
+          "season_ppg": 6.85,
+          "last6_ppg": 7.35,
+          "games_played_2025": 8,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Klay Kubiak",
+          "coordinator_role": "OC",
+          "edge_score": 7.8,
+          "market_rank": 26.91,
+          "our_rank": 26,
+          "market_gap": 0.9
+        },
+        {
           "player_id": "00-0034960",
           "name": "Jakobi Meyers",
           "position": "WR",
@@ -7986,28 +8006,8 @@
           "coordinator_role": "OC",
           "edge_score": 7.72,
           "market_rank": 44.51,
-          "our_rank": 26,
-          "market_gap": 18.5
-        },
-        {
-          "player_id": "00-0038117",
-          "name": "Wan'Dale Robinson",
-          "position": "WR",
-          "team": "NYG",
-          "baseline_ppg": 8.39,
-          "season_ppg": 7.87,
-          "last6_ppg": 8.92,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Matt Nagy",
-          "coordinator_role": "OC",
-          "edge_score": 7.69,
-          "market_rank": 38.45,
           "our_rank": 27,
-          "market_gap": 11.5
+          "market_gap": 17.5
         },
         {
           "player_id": "00-0035659",
@@ -8050,24 +8050,24 @@
           "market_gap": 73.7
         },
         {
-          "player_id": "00-0031408",
-          "name": "Mike Evans",
+          "player_id": "00-0038117",
+          "name": "Wan'Dale Robinson",
           "position": "WR",
-          "team": "TB",
-          "baseline_ppg": 7.1,
-          "season_ppg": 6.85,
-          "last6_ppg": 7.35,
-          "games_played_2025": 8,
-          "line_continuity_pct": 1.0,
+          "team": "TEN",
+          "baseline_ppg": 8.39,
+          "season_ppg": 7.87,
+          "last6_ppg": 8.92,
+          "games_played_2025": 16,
+          "line_continuity_pct": 0.6,
           "line_continuity_type": "oline",
-          "same_head_coach": true,
+          "same_head_coach": false,
           "same_coordinator": false,
-          "coordinator_name": "Zac Robinson",
+          "coordinator_name": "Brian Daboll",
           "coordinator_role": "OC",
-          "edge_score": 7.4,
-          "market_rank": 26.91,
+          "edge_score": 7.39,
+          "market_rank": 38.45,
           "our_rank": 30,
-          "market_gap": -3.1
+          "market_gap": 8.5
         },
         {
           "player_id": "00-0038544",
@@ -8130,6 +8130,46 @@
           "market_gap": 3.5
         },
         {
+          "player_id": "00-0036613",
+          "name": "Jaylen Waddle",
+          "position": "WR",
+          "team": "DEN",
+          "baseline_ppg": 6.8,
+          "season_ppg": 8.13,
+          "last6_ppg": 5.47,
+          "games_played_2025": 16,
+          "line_continuity_pct": 1.0,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Davis Webb",
+          "coordinator_role": "OC",
+          "edge_score": 7.1,
+          "market_rank": 18.38,
+          "our_rank": 34,
+          "market_gap": -15.6
+        },
+        {
+          "player_id": "00-0037816",
+          "name": "Romeo Doubs",
+          "position": "WR",
+          "team": "NE",
+          "baseline_ppg": 6.33,
+          "season_ppg": 6.9,
+          "last6_ppg": 5.75,
+          "games_played_2025": 16,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Josh McDaniels",
+          "coordinator_role": "OC",
+          "edge_score": 7.03,
+          "market_rank": 53.83,
+          "our_rank": 35,
+          "market_gap": 18.8
+        },
+        {
           "player_id": "00-0039491",
           "name": "Jalen Coker",
           "position": "WR",
@@ -8146,14 +8186,14 @@
           "coordinator_role": "OC",
           "edge_score": 6.94,
           "market_rank": 51.15,
-          "our_rank": 34,
-          "market_gap": 17.1
+          "our_rank": 36,
+          "market_gap": 15.1
         },
         {
           "player_id": "00-0034827",
           "name": "DJ Moore",
           "position": "WR",
-          "team": "CHI",
+          "team": "BUF",
           "baseline_ppg": 6.92,
           "season_ppg": 7.19,
           "last6_ppg": 6.65,
@@ -8162,12 +8202,12 @@
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": false,
-          "coordinator_name": "Press Taylor",
+          "coordinator_name": "Pete Carmichael Jr.",
           "coordinator_role": "OC",
           "edge_score": 6.92,
           "market_rank": 25.91,
-          "our_rank": 35,
-          "market_gap": -9.1
+          "our_rank": 37,
+          "market_gap": -11.1
         },
         {
           "player_id": "00-0040735",
@@ -8186,8 +8226,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.81,
           "market_rank": 23.7,
-          "our_rank": 36,
-          "market_gap": -12.3
+          "our_rank": 38,
+          "market_gap": -14.3
         },
         {
           "player_id": "00-0033921",
@@ -8206,8 +8246,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.74,
           "market_rank": 35.84,
-          "our_rank": 37,
-          "market_gap": -1.2
+          "our_rank": 39,
+          "market_gap": -3.2
         },
         {
           "player_id": "00-0038994",
@@ -8226,8 +8266,28 @@
           "coordinator_role": "OC",
           "edge_score": 6.72,
           "market_rank": 45.71,
-          "our_rank": 38,
-          "market_gap": 7.7
+          "our_rank": 40,
+          "market_gap": 5.7
+        },
+        {
+          "player_id": "00-0034960",
+          "name": "Jakobi Meyers",
+          "position": "WR",
+          "team": "JAX",
+          "baseline_ppg": 6.19,
+          "season_ppg": 5.03,
+          "last6_ppg": 7.35,
+          "games_played_2025": 7,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Grant Udinski",
+          "coordinator_role": "OC",
+          "edge_score": 6.59,
+          "market_rank": 44.51,
+          "our_rank": 41,
+          "market_gap": 3.5
         },
         {
           "player_id": "00-0036912",
@@ -8246,8 +8306,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.59,
           "market_rank": 13.28,
-          "our_rank": 39,
-          "market_gap": -25.7
+          "our_rank": 42,
+          "market_gap": -28.7
         },
         {
           "player_id": "00-0039893",
@@ -8266,8 +8326,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.58,
           "market_rank": 35.18,
-          "our_rank": 40,
-          "market_gap": -4.8
+          "our_rank": 43,
+          "market_gap": -7.8
         },
         {
           "player_id": "00-0039410",
@@ -8286,28 +8346,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.46,
           "market_rank": 70.38,
-          "our_rank": 41,
-          "market_gap": 29.4
-        },
-        {
-          "player_id": "00-0037816",
-          "name": "Romeo Doubs",
-          "position": "WR",
-          "team": "GB",
-          "baseline_ppg": 6.33,
-          "season_ppg": 6.9,
-          "last6_ppg": 5.75,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Adam Stenavich",
-          "coordinator_role": "OC",
-          "edge_score": 6.43,
-          "market_rank": 53.83,
-          "our_rank": 42,
-          "market_gap": 11.8
+          "our_rank": 44,
+          "market_gap": 26.4
         },
         {
           "player_id": "00-0039849",
@@ -8326,8 +8366,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.43,
           "market_rank": 32.28,
-          "our_rank": 43,
-          "market_gap": -10.7
+          "our_rank": 45,
+          "market_gap": -12.7
         },
         {
           "player_id": "00-0036322",
@@ -8346,8 +8386,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.29,
           "market_rank": 5.81,
-          "our_rank": 44,
-          "market_gap": -38.2
+          "our_rank": 46,
+          "market_gap": -40.2
         },
         {
           "player_id": "00-0040648",
@@ -8366,28 +8406,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.26,
           "market_rank": 93.19,
-          "our_rank": 45,
-          "market_gap": 48.2
-        },
-        {
-          "player_id": "00-0036613",
-          "name": "Jaylen Waddle",
-          "position": "WR",
-          "team": "MIA",
-          "baseline_ppg": 6.8,
-          "season_ppg": 8.13,
-          "last6_ppg": 5.47,
-          "games_played_2025": 16,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Bobby Slowik",
-          "coordinator_role": "OC",
-          "edge_score": 6.1,
-          "market_rank": 18.38,
-          "our_rank": 46,
-          "market_gap": -27.6
+          "our_rank": 47,
+          "market_gap": 46.2
         },
         {
           "player_id": "00-0039146",
@@ -8406,8 +8426,8 @@
           "coordinator_role": "OC",
           "edge_score": 6.0,
           "market_rank": 45.32,
-          "our_rank": 47,
-          "market_gap": -1.7
+          "our_rank": 48,
+          "market_gap": -2.7
         },
         {
           "player_id": "00-0033555",
@@ -8426,8 +8446,8 @@
           "coordinator_role": "OC",
           "edge_score": 5.88,
           "market_rank": 102.94,
-          "our_rank": 48,
-          "market_gap": 54.9
+          "our_rank": 49,
+          "market_gap": 53.9
         },
         {
           "player_id": "00-0039868",
@@ -8446,28 +8466,8 @@
           "coordinator_role": "OC",
           "edge_score": 5.79,
           "market_rank": 77.92,
-          "our_rank": 49,
-          "market_gap": 28.9
-        },
-        {
-          "player_id": "00-0036252",
-          "name": "Michael Pittman",
-          "position": "WR",
-          "team": "IND",
-          "baseline_ppg": 5.08,
-          "season_ppg": 7.2,
-          "last6_ppg": 2.95,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Jim Bob Cooter",
-          "coordinator_role": "OC",
-          "edge_score": 5.78,
-          "market_rank": 37.22,
           "our_rank": 50,
-          "market_gap": -12.8
+          "market_gap": 27.9
         }
       ],
       "TE": [
@@ -9032,6 +9032,26 @@
           "market_gap": 8.0
         },
         {
+          "player_id": "00-0037809",
+          "name": "Chig Okonkwo",
+          "position": "TE",
+          "team": "WAS",
+          "baseline_ppg": 4.53,
+          "season_ppg": 4.0,
+          "last6_ppg": 5.05,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "David Blough",
+          "coordinator_role": "OC",
+          "edge_score": 4.23,
+          "market_rank": 18.45,
+          "our_rank": 29,
+          "market_gap": -10.6
+        },
+        {
           "player_id": "00-0035249",
           "name": "Josh Oliver",
           "position": "TE",
@@ -9048,8 +9068,28 @@
           "coordinator_role": "OC",
           "edge_score": 4.22,
           "market_rank": 65.22,
-          "our_rank": 29,
-          "market_gap": 36.2
+          "our_rank": 30,
+          "market_gap": 35.2
+        },
+        {
+          "player_id": "00-0033885",
+          "name": "David Njoku",
+          "position": "TE",
+          "team": "LAC",
+          "baseline_ppg": 4.74,
+          "season_ppg": 4.85,
+          "last6_ppg": 4.63,
+          "games_played_2025": 11,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Mike McDaniel",
+          "coordinator_role": "OC",
+          "edge_score": 4.14,
+          "market_rank": 31.11,
+          "our_rank": 31,
+          "market_gap": 0.1
         },
         {
           "player_id": "00-0040189",
@@ -9068,8 +9108,8 @@
           "coordinator_role": "OC",
           "edge_score": 3.96,
           "market_rank": 23.19,
-          "our_rank": 30,
-          "market_gap": -6.8
+          "our_rank": 32,
+          "market_gap": -8.8
         },
         {
           "player_id": "00-0040737",
@@ -9088,8 +9128,8 @@
           "coordinator_role": "OC",
           "edge_score": 3.94,
           "market_rank": 26.12,
-          "our_rank": 31,
-          "market_gap": -4.9
+          "our_rank": 33,
+          "market_gap": -6.9
         },
         {
           "player_id": "00-0037252",
@@ -9108,8 +9148,8 @@
           "coordinator_role": "OC",
           "edge_score": 3.67,
           "market_rank": 24.03,
-          "our_rank": 32,
-          "market_gap": -8.0
+          "our_rank": 34,
+          "market_gap": -10.0
         },
         {
           "player_id": "00-0036894",
@@ -9128,8 +9168,8 @@
           "coordinator_role": "OC",
           "edge_score": 3.65,
           "market_rank": 27.27,
-          "our_rank": 33,
-          "market_gap": -5.7
+          "our_rank": 35,
+          "market_gap": -7.7
         },
         {
           "player_id": "00-0033881",
@@ -9148,48 +9188,8 @@
           "coordinator_role": "OC",
           "edge_score": 3.62,
           "market_rank": 31.38,
-          "our_rank": 34,
-          "market_gap": -2.6
-        },
-        {
-          "player_id": "00-0032392",
-          "name": "Austin Hooper",
-          "position": "TE",
-          "team": "NE",
-          "baseline_ppg": 2.88,
-          "season_ppg": 2.95,
-          "last6_ppg": 2.82,
-          "games_played_2025": 13,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Josh McDaniels",
-          "coordinator_role": "OC",
-          "edge_score": 3.58,
-          "market_rank": 55.33,
-          "our_rank": 35,
-          "market_gap": 20.3
-        },
-        {
-          "player_id": "00-0037809",
-          "name": "Chig Okonkwo",
-          "position": "TE",
-          "team": "TEN",
-          "baseline_ppg": 4.53,
-          "season_ppg": 4.0,
-          "last6_ppg": 5.05,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Brian Daboll",
-          "coordinator_role": "OC",
-          "edge_score": 3.53,
-          "market_rank": 18.45,
           "our_rank": 36,
-          "market_gap": -17.6
+          "market_gap": -4.6
         },
         {
           "player_id": "00-0036290",
@@ -9312,6 +9312,26 @@
           "market_gap": 87.5
         },
         {
+          "player_id": "00-0032392",
+          "name": "Austin Hooper",
+          "position": "TE",
+          "team": "ATL",
+          "baseline_ppg": 2.88,
+          "season_ppg": 2.95,
+          "last6_ppg": 2.82,
+          "games_played_2025": 13,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": false,
+          "coordinator_name": "Tommy Rees",
+          "coordinator_role": "OC",
+          "edge_score": 2.88,
+          "market_rank": 55.33,
+          "our_rank": 43,
+          "market_gap": 12.3
+        },
+        {
           "player_id": "00-0039356",
           "name": "Ja'Tavion Sanders",
           "position": "TE",
@@ -9328,28 +9348,28 @@
           "coordinator_role": "OC",
           "edge_score": 2.86,
           "market_rank": 44.96,
-          "our_rank": 43,
-          "market_gap": 2.0
+          "our_rank": 44,
+          "market_gap": 1.0
         },
         {
-          "player_id": "00-0033885",
-          "name": "David Njoku",
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
           "position": "TE",
-          "team": "CLE",
-          "baseline_ppg": 4.74,
-          "season_ppg": 4.85,
-          "last6_ppg": 4.63,
-          "games_played_2025": 11,
-          "line_continuity_pct": 0.0,
+          "team": "NYG",
+          "baseline_ppg": 3.35,
+          "season_ppg": 2.89,
+          "last6_ppg": 3.82,
+          "games_played_2025": 12,
+          "line_continuity_pct": 0.8,
           "line_continuity_type": "oline",
           "same_head_coach": false,
           "same_coordinator": false,
-          "coordinator_name": "Travis Switzer",
+          "coordinator_name": "Matt Nagy",
           "coordinator_role": "OC",
-          "edge_score": 2.84,
-          "market_rank": 31.11,
-          "our_rank": 44,
-          "market_gap": -12.9
+          "edge_score": 2.65,
+          "market_rank": 13.43,
+          "our_rank": 45,
+          "market_gap": -31.6
         },
         {
           "player_id": "00-0033217",
@@ -9368,8 +9388,8 @@
           "coordinator_role": "OC",
           "edge_score": 2.56,
           "market_rank": 73.8,
-          "our_rank": 45,
-          "market_gap": 28.8
+          "our_rank": 46,
+          "market_gap": 27.8
         },
         {
           "player_id": "00-0040194",
@@ -9388,14 +9408,14 @@
           "coordinator_role": "OC",
           "edge_score": 2.53,
           "market_rank": 64.0,
-          "our_rank": 46,
-          "market_gap": 18.0
+          "our_rank": 47,
+          "market_gap": 17.0
         },
         {
           "player_id": "00-0035644",
           "name": "Noah Fant",
           "position": "TE",
-          "team": "CIN",
+          "team": "NO",
           "baseline_ppg": 1.8,
           "season_ppg": 3.14,
           "last6_ppg": 0.47,
@@ -9404,12 +9424,12 @@
           "line_continuity_type": "oline",
           "same_head_coach": true,
           "same_coordinator": true,
-          "coordinator_name": "Dan Pitcher",
+          "coordinator_name": "Doug Nussmeier",
           "coordinator_role": "OC",
           "edge_score": 2.5,
           "market_rank": 51.96,
-          "our_rank": 47,
-          "market_gap": 5.0
+          "our_rank": 48,
+          "market_gap": 4.0
         },
         {
           "player_id": "00-0039074",
@@ -9428,8 +9448,8 @@
           "coordinator_role": "OC",
           "edge_score": 2.46,
           "market_rank": 86.25,
-          "our_rank": 48,
-          "market_gap": 38.2
+          "our_rank": 49,
+          "market_gap": 37.2
         },
         {
           "player_id": "00-0034753",
@@ -9448,28 +9468,8 @@
           "coordinator_role": "OC",
           "edge_score": 2.31,
           "market_rank": 14.64,
-          "our_rank": 49,
-          "market_gap": -34.4
-        },
-        {
-          "player_id": "00-0036754",
-          "name": "Brock Wright",
-          "position": "TE",
-          "team": "DET",
-          "baseline_ppg": 2.59,
-          "season_ppg": 2.85,
-          "last6_ppg": 2.33,
-          "games_played_2025": 8,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": false,
-          "coordinator_name": "Drew Petzing",
-          "coordinator_role": "OC",
-          "edge_score": 2.29,
-          "market_rank": 77.5,
           "our_rank": 50,
-          "market_gap": 27.5
+          "market_gap": -35.4
         }
       ],
       "K": [
@@ -9577,18 +9577,18 @@
           "player_id": "00-0033862",
           "name": "Zane Gonzalez",
           "position": "K",
-          "team": "ATL",
+          "team": "MIA",
           "baseline_ppg": 10.44,
           "season_ppg": 10.56,
           "last6_ppg": 10.33,
           "games_played_2025": 9,
           "line_continuity_pct": null,
           "line_continuity_type": null,
-          "same_head_coach": true,
+          "same_head_coach": false,
           "same_coordinator": null,
           "coordinator_name": null,
           "coordinator_role": null,
-          "edge_score": 10.64,
+          "edge_score": 9.94,
           "market_rank": 23.92,
           "our_rank": 6,
           "market_gap": 17.9
@@ -9877,7 +9877,7 @@
           "player_id": "00-0038905",
           "name": "Blake Grupe",
           "position": "K",
-          "team": "NO",
+          "team": "IND",
           "baseline_ppg": 7.64,
           "season_ppg": 6.27,
           "last6_ppg": 9.0,
@@ -9917,7 +9917,7 @@
           "player_id": "00-0025565",
           "name": "Nick Folk",
           "position": "K",
-          "team": "NYJ",
+          "team": "ATL",
           "baseline_ppg": 7.27,
           "season_ppg": 7.88,
           "last6_ppg": 6.67,
@@ -10134,26 +10134,6 @@
           "market_gap": -12.9
         },
         {
-          "player_id": "00-0035269",
-          "name": "Matt Gay",
-          "position": "K",
-          "team": "WAS",
-          "baseline_ppg": 5.98,
-          "season_ppg": 6.8,
-          "last6_ppg": 5.17,
-          "games_played_2025": 10,
-          "line_continuity_pct": null,
-          "line_continuity_type": null,
-          "same_head_coach": true,
-          "same_coordinator": null,
-          "coordinator_name": null,
-          "coordinator_role": null,
-          "edge_score": 6.18,
-          "market_rank": 31.27,
-          "our_rank": 34,
-          "market_gap": -2.7
-        },
-        {
           "player_id": "00-0040279",
           "name": "Ryan Fitzgerald",
           "position": "K",
@@ -10170,8 +10150,8 @@
           "coordinator_role": null,
           "edge_score": 6.1,
           "market_rank": 25.06,
-          "our_rank": 35,
-          "market_gap": -9.9
+          "our_rank": 34,
+          "market_gap": -8.9
         },
         {
           "player_id": "00-0037542",
@@ -10190,7 +10170,7 @@
           "coordinator_role": null,
           "edge_score": 5.82,
           "market_rank": null,
-          "our_rank": 36,
+          "our_rank": 35,
           "market_gap": null
         },
         {
@@ -10210,8 +10190,28 @@
           "coordinator_role": null,
           "edge_score": 5.79,
           "market_rank": 30.87,
+          "our_rank": 36,
+          "market_gap": -5.1
+        },
+        {
+          "player_id": "00-0035269",
+          "name": "Matt Gay",
+          "position": "K",
+          "team": "LV",
+          "baseline_ppg": 5.98,
+          "season_ppg": 6.8,
+          "last6_ppg": 5.17,
+          "games_played_2025": 10,
+          "line_continuity_pct": null,
+          "line_continuity_type": null,
+          "same_head_coach": false,
+          "same_coordinator": null,
+          "coordinator_name": null,
+          "coordinator_role": null,
+          "edge_score": 5.48,
+          "market_rank": 31.27,
           "our_rank": 37,
-          "market_gap": -6.1
+          "market_gap": -5.7
         },
         {
           "player_id": "00-0034161",
@@ -10636,26 +10636,6 @@
           "market_gap": -7.4
         },
         {
-          "player_id": "DET_DST",
-          "name": "DET D/ST",
-          "position": "DST",
-          "team": "DET",
-          "baseline_ppg": 4.63,
-          "season_ppg": 5.59,
-          "last6_ppg": 3.67,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.5,
-          "line_continuity_type": "dline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Kelvin Sheppard",
-          "coordinator_role": "DC",
-          "edge_score": 4.88,
-          "market_rank": 14.97,
-          "our_rank": 19,
-          "market_gap": -4.0
-        },
-        {
           "player_id": "CLE_DST",
           "name": "CLE D/ST",
           "position": "DST",
@@ -10672,8 +10652,28 @@
           "coordinator_role": "DC",
           "edge_score": 4.88,
           "market_rank": 15.41,
+          "our_rank": 19,
+          "market_gap": -3.6
+        },
+        {
+          "player_id": "DET_DST",
+          "name": "DET D/ST",
+          "position": "DST",
+          "team": "DET",
+          "baseline_ppg": 4.63,
+          "season_ppg": 5.59,
+          "last6_ppg": 3.67,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.5,
+          "line_continuity_type": "dline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Kelvin Sheppard",
+          "coordinator_role": "DC",
+          "edge_score": 4.88,
+          "market_rank": 14.97,
           "our_rank": 20,
-          "market_gap": -4.6
+          "market_gap": -5.0
         },
         {
           "player_id": "CIN_DST",

@@ -25,6 +25,7 @@ from shared import (
     DEFENSIVE_LINE_POS,
     REF_DIR,
     build_coach_continuity,
+    build_current_team_lookup,
     build_oline_continuity,
     json_safe,
     load_cache,
@@ -301,7 +302,7 @@ def compute_perfect_team(stats):
     return out
 
 
-def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continuity, coordinator_continuity, market):
+def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continuity, coordinator_continuity, market, current_team):
     reg = stats.filter((pl.col("season") == RETRO_SEASON) & (pl.col("season_type") == "REG") & pl.col("position").is_in(ROSTER_POS))
 
     season_agg = reg.group_by(["player_id", "player_display_name", "position", "team"]).agg(
@@ -335,7 +336,13 @@ def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continu
             baseline_ppg = RECENCY_WEIGHT * last6_ppg + (1 - RECENCY_WEIGHT) * season_ppg
 
             position = r["position"]
-            team = r["team"]
+            # This board ranks players for the 2026 draft, so team should
+            # reflect where they'll actually play in 2026 -- not wherever
+            # they racked up their 2025 stats (r["team"]), which goes stale
+            # the moment a player is traded or signs elsewhere. DST rows
+            # aren't real gsis_ids so they always miss this lookup and fall
+            # back to their (accurate) team-as-player_id team.
+            team = current_team.get(r["player_id"], r["team"])
             is_skill = position in SKILL_POS
             is_dst = position == "DST"
             # Skill positions care about O-line continuity (pass protection/
@@ -602,6 +609,7 @@ def main():
     depth_charts = load_cache("depth_charts")
     schedules = load_cache("schedules")
     teams = load_cache("teams")
+    rosters = load_cache("rosters")
 
     print("Building unified weekly fantasy points (QB/RB/WR/TE + K + DST)...")
     stats = pl.concat([build_skill_weekly(raw_stats), build_kicker_weekly(raw_stats), build_dst_weekly(team_stats, schedules)])
@@ -631,11 +639,15 @@ def main():
         print(f"  WARNING: market consensus unavailable ({e}), continuing without it")
         market = {}
 
+    print("Computing current (2026) team per player, for traded/signed players...")
+    current_team = build_current_team_lookup(rosters, UPCOMING_SEASON)
+    print(f"  {len(current_team)} players")
+
     print("Computing Perfect Team retrospective...")
     perfect_team = compute_perfect_team(stats)
 
     print("Computing Draft Board...")
-    draft_board = compute_draft_board(stats, oline_continuity, dline_continuity, coach_continuity, coordinator_continuity, market)
+    draft_board = compute_draft_board(stats, oline_continuity, dline_continuity, coach_continuity, coordinator_continuity, market, current_team)
 
     print("Computing 2026 Dream Team (snake-draft simulation)...")
     dream_team = compute_dream_team(draft_board)
