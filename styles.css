@@ -86,7 +86,7 @@ a { color: inherit; }
   font-family: 'Bungee', 'Oswald', sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 0.01em;
   text-decoration: none;
   color: #fff;
@@ -95,8 +95,8 @@ a { color: inherit; }
   gap: 0.6rem;
 }
 .site-logo-img {
-  height: 36px;
-  width: 36px;
+  height: 42px;
+  width: 42px;
   border-radius: 6px;
 }
 .site-nav-links {
