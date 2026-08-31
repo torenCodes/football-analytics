@@ -21,6 +21,7 @@ is live -- picks should tighten up as more of the current season's own
 efficiency data accumulates) to refresh.
 """
 
+import glob
 import json
 import os
 from datetime import datetime, timezone
@@ -38,6 +39,7 @@ from shared import (
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(BASE_DIR, "data", "betting")
+ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 
 RETRO_SEASON = 2025  # most recently completed season -> backtest + fallback efficiency baseline
 UPCOMING_SEASON = 2026
@@ -224,9 +226,14 @@ def build_storyline(
     sentences instead of left as a pile of tags. Template-based (not an
     LLM call -- this runs in a GitHub Actions scan, no API budget for
     that), but branches on enough of the real inputs per game that it
-    reads as a genuine per-matchup readout rather than boilerplate."""
+    reads as a genuine per-matchup readout rather than boilerplate.
+
+    Returns (full, short): short is the first sentence alone, a
+    self-contained one-liner surfaced on the collapsed game card so the
+    "why" is visible before a click, not just after."""
     if model_margin_home is None or our_pick is None:
-        return "Not enough efficiency data yet to model this matchup -- check back closer to kickoff."
+        one_liner = "Not enough efficiency data yet to model this matchup -- check back closer to kickoff."
+        return one_liner, one_liner
 
     pick_team = home if our_pick == "home" else away
     other_team = away if our_pick == "home" else home
@@ -289,7 +296,7 @@ def build_storyline(
     elif roof and roof != "outdoors":
         sentences.append(f"Played {roof.replace('_', ' ')}, so weather isn't a factor here.")
 
-    return " ".join(sentences)
+    return " ".join(sentences), sentences[0]
 
 
 def build_market(r, our_pick, model_margin_home):
@@ -429,7 +436,7 @@ def build_game_board(schedules, team_stats):
         oline_home, oline_away = oline_continuity.get(home), oline_continuity.get(away)
         coach_home, coach_away = coach_continuity.get(home), coach_continuity.get(away)
 
-        storyline = build_storyline(
+        storyline, storyline_short = build_storyline(
             home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
             oline_home, oline_away, coach_home, coach_away, revenge_flag, bool(r["div_game"]),
             weather, international_site, r["roof"],
@@ -459,6 +466,7 @@ def build_game_board(schedules, team_stats):
                 "international_site": international_site,
                 "weather": weather,
                 "storyline": storyline,
+                "storyline_short": storyline_short,
                 "market": market,
             }
         )
@@ -466,6 +474,98 @@ def build_game_board(schedules, team_stats):
     picks.sort(key=lambda g: (-g["juice_score"], g["gametime"] or "", g["game_id"]))
 
     return {"season": UPCOMING_SEASON, "week": next_week, "games": picks}
+
+
+def archive_current_week(game_board, schedules):
+    """Freeze this week's picks before kickoff so they can be graded later
+    against the actual final results without any risk of a later re-run
+    silently rewriting a pick after the fact. Only ever writes/overwrites
+    the archive file for a week where NONE of its games have started yet
+    (by calendar day, not by whether a score has posted -- a manual
+    workflow_dispatch re-run mid-week could otherwise land between two of
+    the week's games and mix a completed one with an unplayed one into a
+    single "frozen" week). Once any game in the week has kicked off, that
+    week's archive is permanently left alone."""
+    games = game_board.get("games") or []
+    if not games:
+        return
+    season, week = game_board["season"], game_board["week"]
+    today = datetime.now(timezone.utc).date().isoformat()
+    if any((g.get("gameday") or "9999-99-99") <= today for g in games):
+        print(f"  Week {week} has already started -- leaving its archive untouched.")
+        return
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    path = os.path.join(ARCHIVE_DIR, f"{season}-w{week:02d}.json")
+    payload = {"season": season, "week": week, "locked_at": datetime.now(timezone.utc).isoformat(), "games": games}
+    with open(path, "w") as f:
+        json.dump(json_safe(payload), f, indent=2)
+    print(f"  Locked picks for {season} week {week} ({len(games)} games) -> archive/{season}-w{week:02d}.json")
+
+
+def grade_archived_weeks(schedules):
+    """Grade every archived week's FROZEN picks (not a recomputed
+    prediction, unlike build_backtest's retrospective leave-one-out model)
+    against actual final results. Re-grades every archived week on every
+    run -- idempotent, and a week still in progress just carries partial
+    grades until its remaining games go final."""
+    paths = sorted(glob.glob(os.path.join(ARCHIVE_DIR, "*-w*.json")))
+    if not paths:
+        return {"weeks_graded": 0, "games_graded": 0, "correct_picks": 0, "accuracy": None, "weeks": []}
+
+    result_by_game = dict(zip(schedules["game_id"].to_list(), schedules["result"].to_list()))
+
+    weeks = []
+    total_correct = total_graded = 0
+    for path in paths:
+        with open(path, encoding="utf-8") as f:
+            archived = json.load(f)
+        week_games, week_correct, week_graded = [], 0, 0
+        for g in archived["games"]:
+            result = result_by_game.get(g["game_id"])
+            spread_home = (g.get("market") or {}).get("spread_home")
+            our_pick = g.get("our_pick")
+            correct = push = None
+            if result is not None and spread_home is not None and our_pick is not None:
+                push = result == spread_home
+                if not push:
+                    home_covered = result > spread_home
+                    correct = (our_pick == "home") == home_covered
+                    week_graded += 1
+                    week_correct += int(correct)
+            week_games.append(
+                {
+                    "game_id": g["game_id"],
+                    "home_team": g["home_team"],
+                    "away_team": g["away_team"],
+                    "our_pick": our_pick,
+                    "spread_home": spread_home,
+                    "result": result,
+                    "push": push,
+                    "correct": correct,
+                    "storyline_short": g.get("storyline_short"),
+                }
+            )
+        weeks.append(
+            {
+                "season": archived["season"],
+                "week": archived["week"],
+                "locked_at": archived.get("locked_at"),
+                "games_graded": week_graded,
+                "correct_picks": week_correct,
+                "accuracy": round(week_correct / week_graded, 3) if week_graded else None,
+                "games": week_games,
+            }
+        )
+        total_correct += week_correct
+        total_graded += week_graded
+
+    return {
+        "weeks_graded": len(weeks),
+        "games_graded": total_graded,
+        "correct_picks": total_correct,
+        "accuracy": round(total_correct / total_graded, 3) if total_graded else None,
+        "weeks": sorted(weeks, key=lambda w: (w["season"], w["week"])),
+    }
 
 
 def main():
@@ -484,14 +584,23 @@ def main():
     game_board = build_game_board(schedules, all_team_stats)
     print(f"  {len(game_board.get('games', []))} games in week {game_board.get('week')}")
 
+    print("Grading previously-archived weeks against final results...")
+    accountability = grade_archived_weeks(schedules)
+    print(f"  {accountability['weeks_graded']} weeks, {accountability['games_graded']} games graded, accuracy={accountability['accuracy']}")
+
+    print("Archiving this week's picks (skipped if the week has already started)...")
+    archive_current_week(game_board, schedules)
+
     meta = {"generated_at": datetime.now(timezone.utc).isoformat()}
 
     with open(os.path.join(OUT_DIR, "best_calls_backtest.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **backtest}), f, indent=2)
     with open(os.path.join(OUT_DIR, "game_board.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **game_board}), f, indent=2)
+    with open(os.path.join(OUT_DIR, "accountability.json"), "w") as f:
+        json.dump(json_safe({"meta": meta, **accountability}), f, indent=2)
 
-    print("Wrote best_calls_backtest.json and game_board.json")
+    print("Wrote best_calls_backtest.json, game_board.json, and accountability.json")
 
 
 def load_cache_team_stats(season, allow_empty=False):

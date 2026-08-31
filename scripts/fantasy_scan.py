@@ -33,6 +33,7 @@ from shared import (
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(BASE_DIR, "data", "fantasy")
+ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 
 RETRO_SEASON = 2025  # most recently completed season -> "Perfect Team" + draft baseline
 UPCOMING_SEASON = 2026
@@ -302,6 +303,222 @@ def compute_perfect_team(stats):
     return out
 
 
+def compute_team_of_week(stats, week):
+    """The actual highest-scoring lineup for ONE already-played 2026 week --
+    same shape and greedy-optimal logic as compute_perfect_team, just scoped
+    to a single week instead of summed across a whole season. Returns None
+    if that week has no stat rows yet (not played, or stats not synced)."""
+    wk = stats.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("week") == week) & (pl.col("season_type") == "REG") & pl.col("position").is_in(ROSTER_POS))
+    if wk.is_empty():
+        return None
+    agg = wk.group_by(["player_id", "player_display_name", "position", "team"]).agg(
+        pl.col("fpts_ppr").sum().alias("total_ppr"),
+        pl.col("fpts_standard").sum().alias("total_standard"),
+    )
+
+    out = {}
+    for fmt, points_col in (("ppr", "total_ppr"), ("standard", "total_standard")):
+        rows = agg.select(["player_id", "player_display_name", "position", "team", points_col])
+        players = [
+            {"player_id": r["player_id"], "name": r["player_display_name"], "team": r["team"], "position": r["position"], "points": r[points_col]}
+            for r in rows.iter_rows(named=True)
+        ]
+        lineup, total, bench = optimal_lineup(players)
+        out[fmt] = {
+            "season": UPCOMING_SEASON,
+            "week": week,
+            "perfect_lineup": {
+                slot: [{"player_id": p["player_id"], "name": p["name"], "team": p["team"], "points": round(p["points"], 1)} for p in picks]
+                for slot, picks in lineup.items()
+            },
+            "perfect_lineup_total_points": round(total, 1),
+            "bench": [
+                {"player_id": p["player_id"], "name": p["name"], "team": p["team"], "position": p["position"], "points": round(p["points"], 1)}
+                for p in bench
+            ],
+        }
+    return out
+
+
+def archive_team_of_week(stats, schedules):
+    """Recompute + overwrite every completed 2026 week's Team of the Week
+    unconditionally (unlike the betting picks archive, this is a
+    retrospective stat aggregation, not a locked-in-advance prediction, so
+    there's no hindsight-bias risk in refreshing it -- it should self-correct
+    if nflverse issues a late stat correction)."""
+    completed_weeks = (
+        schedules.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("game_type") == "REG") & pl.col("result").is_not_null())
+        ["week"].unique().sort().to_list()
+    )
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    written = []
+    for week in completed_weeks:
+        team_of_week = compute_team_of_week(stats, week)
+        if team_of_week is None:
+            continue
+        path = os.path.join(ARCHIVE_DIR, f"{UPCOMING_SEASON}-w{week:02d}-team-of-week.json")
+        with open(path, "w") as f:
+            json.dump(json_safe(team_of_week), f, indent=2)
+        written.append(week)
+    return written
+
+
+def _season_started(schedules):
+    """Whether any 2026 regular-season game has reached its kickoff date
+    yet, by calendar day rather than by whether a score has posted -- same
+    guard convention as betting_scan.py's archive_current_week."""
+    today = datetime.now(timezone.utc).date().isoformat()
+    reg = schedules.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("game_type") == "REG"))
+    if reg.is_empty():
+        return False
+    return bool((reg["gameday"] <= today).any())
+
+
+def freeze_preseason_board_if_needed(draft_board, dream_team, schedules):
+    """One-time snapshot of the preseason Draft Board/Dream Team, taken the
+    first run after Week 1 kicks off. Existence-checked so each file is
+    only ever written once per season -- draft_board.json/dream_team.json
+    keep regenerating weekly after this (their own computation is
+    untouched), but this frozen copy is what the pivoted frontend reads as
+    "what we said before the season started"."""
+    if not _season_started(schedules):
+        return False
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    board_path = os.path.join(ARCHIVE_DIR, f"{UPCOMING_SEASON}-preseason-draft-board.json")
+    team_path = os.path.join(ARCHIVE_DIR, f"{UPCOMING_SEASON}-preseason-dream-team.json")
+    wrote_any = False
+    if not os.path.exists(board_path):
+        with open(board_path, "w") as f:
+            json.dump(json_safe(draft_board), f, indent=2)
+        wrote_any = True
+    if not os.path.exists(team_path):
+        with open(team_path, "w") as f:
+            json.dump(json_safe(dream_team), f, indent=2)
+        wrote_any = True
+    if wrote_any:
+        print("  Froze preseason Draft Board + Dream Team snapshot at the Week 1 boundary.")
+    return wrote_any
+
+
+def compute_draft_board_accountability(stats, schedules):
+    """Preseason Draft Board rank vs. actual 2026 season-to-date PPG rank,
+    per position. Mirrors the site's existing market_gap convention
+    (market_rank - our_rank, fantasy_scan.py's compute_draft_board) but
+    pointed at "us-then vs. reality-now" instead of "us vs. the market."
+    Negative rank_error = we underrated them (a steal); positive = we
+    overrated them (a bust). Guarded by MIN_GAMES_FOR_DRAFT_BOARD, the same
+    noisy-small-sample guard the Draft Board itself already uses."""
+    board_path = os.path.join(ARCHIVE_DIR, f"{UPCOMING_SEASON}-preseason-draft-board.json")
+    if not os.path.exists(board_path):
+        return {"available": False, "note": "Accountability grading unlocks once the 2026 preseason Draft Board has been frozen at Week 1 kickoff."}
+    with open(board_path, encoding="utf-8") as f:
+        preseason_board = json.load(f)
+
+    reg = stats.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("season_type") == "REG") & pl.col("position").is_in(ROSTER_POS))
+    if reg.is_empty():
+        return {"available": False, "note": "Accountability grading unlocks once 2026 games have been played."}
+    agg = reg.group_by(["player_id", "player_display_name", "position"]).agg(
+        pl.col("fpts_ppr").sum().alias("total_ppr"),
+        pl.col("fpts_standard").sum().alias("total_standard"),
+        pl.col("week").n_unique().alias("games"),
+    )
+
+    out = {}
+    for fmt, points_col in (("ppr", "total_ppr"), ("standard", "total_standard")):
+        preseason_rank_by_id = {}
+        for pos, rows in preseason_board[fmt]["rankings_by_position"].items():
+            for row in rows:
+                preseason_rank_by_id[row["player_id"]] = row["our_rank"]
+
+        by_pos = {}
+        for pos in ROSTER_POS:
+            pos_rows = (
+                agg.filter((pl.col("position") == pos) & (pl.col("games") >= MIN_GAMES_FOR_DRAFT_BOARD))
+                .with_columns((pl.col(points_col) / pl.col("games")).alias("ppg"))
+                .sort("ppg", descending=True)
+            )
+            graded = []
+            for actual_rank, r in enumerate(pos_rows.iter_rows(named=True), start=1):
+                preseason_rank = preseason_rank_by_id.get(r["player_id"])
+                if preseason_rank is None:
+                    continue
+                graded.append(
+                    {
+                        "player_id": r["player_id"],
+                        "name": r["player_display_name"],
+                        "preseason_rank": preseason_rank,
+                        "actual_rank": actual_rank,
+                        "rank_error": actual_rank - preseason_rank,
+                        "games": r["games"],
+                        "ppg": round(r["ppg"], 1),
+                    }
+                )
+            graded.sort(key=lambda g: g["rank_error"])
+            n = len(graded)
+            by_pos[pos] = {
+                "players_graded": n,
+                "mean_abs_rank_error": round(sum(abs(g["rank_error"]) for g in graded) / n, 1) if n else None,
+                "hit_rate_within_5": round(sum(1 for g in graded if abs(g["rank_error"]) <= 5) / n, 3) if n else None,
+                "biggest_steals": graded[:5],
+                "biggest_busts": graded[-5:][::-1],
+            }
+        out[fmt] = by_pos
+    return {"available": True, "season": UPCOMING_SEASON, "by_format": out}
+
+
+def compute_season_state(schedules):
+    """Single source of truth for the frontend: has the season started, and
+    what's the latest week with completed games? Lets fantasy.html branch
+    between the preseason layout and the in-season pivot without
+    re-deriving this from multiple JSON files client-side."""
+    started = _season_started(schedules)
+    current_week = None
+    if started:
+        reg = schedules.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("game_type") == "REG"))
+        played = reg.filter(pl.col("result").is_not_null())
+        current_week = int(played["week"].max()) if not played.is_empty() else int(reg["week"].min())
+    return {"season": UPCOMING_SEASON, "season_started": started, "current_week": current_week}
+
+
+def build_draft_board_explain(row):
+    """A short prose readout of *why* this player's Edge Score/rank landed
+    where it did -- same spirit as betting_scan.py's build_storyline, but
+    surfaced as this row's tooltip rather than a visible table column,
+    since the Draft Board's table-layout:fixed columns have no room left
+    for prose without reopening past column-alignment bugs."""
+    name = row["name"]
+    line_label = "D-line" if row["line_continuity_type"] == "dline" else "O-line"
+    role = row["coordinator_role"] or "OC"
+    sentences = []
+
+    pct = row["line_continuity_pct"]
+    if pct is not None:
+        pct_r = round(pct * 100)
+        if pct_r >= 80:
+            sentences.append(f"{line_label} continuity is elite ({pct_r}%), a real tailwind here.")
+        elif pct_r <= 40:
+            sentences.append(f"{line_label} continuity is shaky ({pct_r}%), a drag on the Edge Score this early.")
+
+    if row["same_head_coach"] is False:
+        sentences.append("Playing under a new head coach this season adds scheme uncertainty.")
+
+    if row["same_coordinator"] is False and row["coordinator_name"]:
+        sentences.append(f"New {role} ({row['coordinator_name']}) means a new scheme to learn too.")
+    elif row["same_coordinator"] is True and row["coordinator_name"]:
+        sentences.append(f"Same {role} ({row['coordinator_name']}) returning, so scheme continuity holds.")
+
+    gap = row["market_gap"]
+    if gap is not None and gap >= 5:
+        sentences.append(f"We have {name} {round(gap)} spots higher than market consensus -- a value the market hasn't priced in yet.")
+    elif gap is not None and gap <= -5:
+        sentences.append(f"The market ranks {name} {round(abs(gap))} spots higher than we do -- our model is more cautious here.")
+
+    if not sentences and row["coordinator_name"]:
+        sentences.append(f"{role}: {row['coordinator_name']}.")
+
+    return " ".join(sentences)
+
+
 def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continuity, coordinator_continuity, market, current_team):
     reg = stats.filter((pl.col("season") == RETRO_SEASON) & (pl.col("season_type") == "REG") & pl.col("position").is_in(ROSTER_POS))
 
@@ -413,6 +630,7 @@ def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continu
             for i, x in enumerate(pos_rows, start=1):
                 x["our_rank"] = i
                 x["market_gap"] = round(x["market_rank"] - i, 1) if x["market_rank"] is not None else None
+                x["explain"] = build_draft_board_explain(x)
             by_pos[pos] = pos_rows[:50]
         board[fmt] = {"season_baseline": RETRO_SEASON, "draft_season": UPCOMING_SEASON, "rankings_by_position": by_pos}
     return board
@@ -611,6 +829,16 @@ def main():
     teams = load_cache("teams")
     rosters = load_cache("rosters")
 
+    print(f"Loading live {UPCOMING_SEASON} player/team stats (in-season, empty until Week 1 kicks off)...")
+    current_player_stats = load_current_season_player_stats(UPCOMING_SEASON, allow_empty=True)
+    current_team_stats = load_current_season_team_stats(UPCOMING_SEASON, allow_empty=True)
+    if current_player_stats is not None and not current_player_stats.is_empty():
+        raw_stats = pl.concat([raw_stats, current_player_stats], how="diagonal_relaxed")
+        print(f"  {current_player_stats.shape[0]} {UPCOMING_SEASON} player-weeks added")
+    if current_team_stats is not None and not current_team_stats.is_empty():
+        team_stats = pl.concat([team_stats, current_team_stats], how="diagonal_relaxed")
+        print(f"  {current_team_stats.shape[0]} {UPCOMING_SEASON} team-weeks added")
+
     print("Building unified weekly fantasy points (QB/RB/WR/TE + K + DST)...")
     stats = pl.concat([build_skill_weekly(raw_stats), build_kicker_weekly(raw_stats), build_dst_weekly(team_stats, schedules)])
     print(f"  {stats.shape[0]} player-weeks across {stats['position'].n_unique()} positions")
@@ -652,6 +880,21 @@ def main():
     print("Computing 2026 Dream Team (snake-draft simulation)...")
     dream_team = compute_dream_team(draft_board)
 
+    print("Freezing preseason Draft Board + Dream Team snapshot, if Week 1 has started and not yet frozen...")
+    freeze_preseason_board_if_needed(draft_board, dream_team, schedules)
+
+    print("Computing Draft Board accountability (preseason rank vs. actual performance)...")
+    accountability = compute_draft_board_accountability(stats, schedules)
+    print(f"  available={accountability['available']}")
+
+    print("Archiving Team of the Week for every completed 2026 week...")
+    weeks_archived = archive_team_of_week(stats, schedules)
+    print(f"  {len(weeks_archived)} week(s): {weeks_archived}")
+
+    print("Computing season state (for the frontend's preseason/in-season pivot)...")
+    season_state = compute_season_state(schedules)
+    print(f"  {season_state}")
+
     meta = {"generated_at": datetime.now(timezone.utc).isoformat()}
 
     with open(os.path.join(OUT_DIR, "perfect_team.json"), "w") as f:
@@ -660,8 +903,36 @@ def main():
         json.dump(json_safe({"meta": meta, **draft_board}), f, indent=2)
     with open(os.path.join(OUT_DIR, "dream_team.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **dream_team}), f, indent=2)
+    with open(os.path.join(OUT_DIR, "accountability.json"), "w") as f:
+        json.dump(json_safe({"meta": meta, **accountability}), f, indent=2)
+    with open(os.path.join(OUT_DIR, "season_state.json"), "w") as f:
+        json.dump(json_safe({"meta": meta, **season_state}), f, indent=2)
 
-    print("Wrote perfect_team.json, draft_board.json, and dream_team.json")
+    print("Wrote perfect_team.json, draft_board.json, dream_team.json, accountability.json, and season_state.json")
+
+
+def load_current_season_player_stats(season, allow_empty=False):
+    import nflreadpy as nfl
+
+    try:
+        return nfl.load_player_stats(seasons=[season])
+    except Exception as e:
+        if allow_empty:
+            print(f"  no player_stats for {season} yet ({e}) -- expected before that season's games start")
+            return None
+        raise
+
+
+def load_current_season_team_stats(season, allow_empty=False):
+    import nflreadpy as nfl
+
+    try:
+        return nfl.load_team_stats(seasons=[season])
+    except Exception as e:
+        if allow_empty:
+            print(f"  no team_stats for {season} yet ({e}) -- expected before that season's games start")
+            return None
+        raise
 
 
 if __name__ == "__main__":

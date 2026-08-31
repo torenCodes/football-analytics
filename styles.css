@@ -385,6 +385,7 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
 .game-card[open] .matchup-line::before { transform: rotate(90deg); }
 .game-matchup { font-family: 'Oswald', sans-serif; font-size: 1.15rem; text-transform: uppercase; }
 .game-pick { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent-betting-dark); }
+.game-why { font-size: 0.88rem; line-height: 1.5; color: var(--ink-2); font-style: italic; margin: 0.6rem 0 0; }
 .game-card-body { padding: 0 1.4rem 1.25rem; border-top: 1px solid var(--border-light); }
 .market-odds {
   background: var(--surface-2);
@@ -400,6 +401,9 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
   padding: 0.2rem 0;
 }
 .market-row span:last-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; text-align: right; }
+.tr-game-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border-light); }
+.tr-game-row:last-child { border-bottom: none; }
+.pivot-toggle { display: none; }
 .market-label {
   font-weight: 600;
   color: var(--ink-3);
