@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-31T01:26:46.495428+00:00"
+    "generated_at": "2026-09-01T18:41:09.232282+00:00"
   },
   "season": 2026,
   "week": 1,
@@ -191,13 +191,13 @@
       "storyline_short": "The model leans LA by 0.1 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against SF.",
       "market": {
         "spread_home": 3.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -185,
-        "moneyline_away": 154,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": -205,
+        "moneyline_away": 170,
         "total": 48.5,
-        "over_odds": -108,
-        "under_odds": -112,
+        "over_odds": -105,
+        "under_odds": -115,
         "market_favorite": "home",
         "agrees_with_model": true,
         "edge_vs_market": -3.4
@@ -327,7 +327,7 @@
         "spread_away_odds": -110,
         "moneyline_home": -205,
         "moneyline_away": 170,
-        "total": 46.5,
+        "total": 45.5,
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "home",
@@ -385,13 +385,13 @@
       "storyline_short": "The model leans NE by 3.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against SEA.",
       "market": {
         "spread_home": 3.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -180,
-        "moneyline_away": 150,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -185,
+        "moneyline_away": 154,
         "total": 44.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "over_odds": -105,
+        "under_odds": -115,
         "market_favorite": "home",
         "agrees_with_model": false,
         "edge_vs_market": -6.5
@@ -451,9 +451,9 @@
         "spread_away_odds": 100,
         "moneyline_home": -175,
         "moneyline_away": 145,
-        "total": 41.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "total": 42.5,
+        "over_odds": -105,
+        "under_odds": -115,
         "market_favorite": "home",
         "agrees_with_model": true,
         "edge_vs_market": 1.4
@@ -514,8 +514,8 @@
         "moneyline_home": 145,
         "moneyline_away": -175,
         "total": 48.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "over_odds": -105,
+        "under_odds": -115,
         "market_favorite": "away",
         "agrees_with_model": false,
         "edge_vs_market": 6.4
@@ -603,9 +603,9 @@
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
-          "returning_starters": 4,
+          "returning_starters": 2,
           "total_starters": 5,
-          "continuity_pct": 0.8
+          "continuity_pct": 0.4
         },
         "away": {
           "returning_starters": 4,
@@ -635,8 +635,8 @@
         "spread_home": -2.5,
         "spread_home_odds": -102,
         "spread_away_odds": -118,
-        "moneyline_home": 120,
-        "moneyline_away": -142,
+        "moneyline_home": 130,
+        "moneyline_away": -155,
         "total": 47.5,
         "over_odds": -115,
         "under_odds": -105,
@@ -759,11 +759,11 @@
         "spread_home": 7.0,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": -305,
-        "moneyline_away": 245,
+        "moneyline_home": -310,
+        "moneyline_away": 250,
         "total": 49.5,
-        "over_odds": -102,
-        "under_odds": -118,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "home",
         "agrees_with_model": true,
         "edge_vs_market": 8.4
@@ -818,17 +818,17 @@
       "storyline": "The model leans NYJ by 2.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against TEN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board.",
       "storyline_short": "The model leans NYJ by 2.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against TEN.",
       "market": {
-        "spread_home": 3.0,
-        "spread_home_odds": 100,
-        "spread_away_odds": -120,
-        "moneyline_home": -148,
-        "moneyline_away": 124,
+        "spread_home": 1.5,
+        "spread_home_odds": -115,
+        "spread_away_odds": -105,
+        "moneyline_home": -130,
+        "moneyline_away": 110,
         "total": 38.5,
         "over_odds": -115,
         "under_odds": -105,
         "market_favorite": "home",
         "agrees_with_model": false,
-        "edge_vs_market": -5.9
+        "edge_vs_market": -4.4
       }
     },
     {
@@ -886,8 +886,8 @@
         "moneyline_home": -198,
         "moneyline_away": 164,
         "total": 51.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "over_odds": -102,
+        "under_odds": -118,
         "market_favorite": "home",
         "agrees_with_model": true,
         "edge_vs_market": 7.7
@@ -945,11 +945,11 @@
         "spread_home": 10.5,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": -575,
-        "moneyline_away": 425,
+        "moneyline_home": -550,
+        "moneyline_away": 410,
         "total": 46.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "home",
         "agrees_with_model": false,
         "edge_vs_market": -21.7
@@ -1007,8 +1007,8 @@
         "spread_home": 3.5,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": -205,
-        "moneyline_away": 170,
+        "moneyline_home": -198,
+        "moneyline_away": 164,
         "total": 40.5,
         "over_odds": -110,
         "under_odds": -110,
