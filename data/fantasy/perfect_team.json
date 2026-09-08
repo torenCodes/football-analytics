@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-01T18:14:32.948231+00:00"
+    "generated_at": "2026-09-08T18:23:41.249687+00:00"
   },
   "ppr": {
     "season": 2025,
@@ -63,20 +63,20 @@
           "ppg": 18.0
         },
         {
-          "player_id": "00-0033106",
-          "name": "Jared Goff",
-          "team": "DET",
-          "points": 303.1,
-          "games": 17,
-          "ppg": 17.8
-        },
-        {
           "player_id": "00-0036389",
           "name": "Jalen Hurts",
           "team": "PHI",
           "points": 303.1,
           "games": 16,
           "ppg": 18.9
+        },
+        {
+          "player_id": "00-0033106",
+          "name": "Jared Goff",
+          "team": "DET",
+          "points": 303.1,
+          "games": 17,
+          "ppg": 17.8
         },
         {
           "player_id": "00-0036355",
@@ -391,17 +391,17 @@
           "ppg": 9.0
         },
         {
-          "player_id": "00-0039172",
-          "name": "Jake Bates",
-          "team": "DET",
+          "player_id": "00-0031136",
+          "name": "Chris Boswell",
+          "team": "PIT",
           "points": 147.0,
           "games": 17,
           "ppg": 8.6
         },
         {
-          "player_id": "00-0031136",
-          "name": "Chris Boswell",
-          "team": "PIT",
+          "player_id": "00-0039172",
+          "name": "Jake Bates",
+          "team": "DET",
           "points": 147.0,
           "games": 17,
           "ppg": 8.6
@@ -465,17 +465,17 @@
           "ppg": 7.5
         },
         {
-          "player_id": "MIN_DST",
-          "name": "MIN D/ST",
-          "team": "MIN",
+          "player_id": "CLE_DST",
+          "name": "CLE D/ST",
+          "team": "CLE",
           "points": 123.0,
           "games": 17,
           "ppg": 7.2
         },
         {
-          "player_id": "CLE_DST",
-          "name": "CLE D/ST",
-          "team": "CLE",
+          "player_id": "MIN_DST",
+          "name": "MIN D/ST",
+          "team": "MIN",
           "points": 123.0,
           "games": 17,
           "ppg": 7.2
@@ -675,20 +675,20 @@
           "ppg": 18.0
         },
         {
-          "player_id": "00-0033106",
-          "name": "Jared Goff",
-          "team": "DET",
-          "points": 303.1,
-          "games": 17,
-          "ppg": 17.8
-        },
-        {
           "player_id": "00-0036389",
           "name": "Jalen Hurts",
           "team": "PHI",
           "points": 303.1,
           "games": 16,
           "ppg": 18.9
+        },
+        {
+          "player_id": "00-0033106",
+          "name": "Jared Goff",
+          "team": "DET",
+          "points": 303.1,
+          "games": 17,
+          "ppg": 17.8
         },
         {
           "player_id": "00-0036355",
@@ -1003,17 +1003,17 @@
           "ppg": 9.0
         },
         {
-          "player_id": "00-0039172",
-          "name": "Jake Bates",
-          "team": "DET",
+          "player_id": "00-0031136",
+          "name": "Chris Boswell",
+          "team": "PIT",
           "points": 147.0,
           "games": 17,
           "ppg": 8.6
         },
         {
-          "player_id": "00-0031136",
-          "name": "Chris Boswell",
-          "team": "PIT",
+          "player_id": "00-0039172",
+          "name": "Jake Bates",
+          "team": "DET",
           "points": 147.0,
           "games": 17,
           "ppg": 8.6
@@ -1077,17 +1077,17 @@
           "ppg": 7.5
         },
         {
-          "player_id": "MIN_DST",
-          "name": "MIN D/ST",
-          "team": "MIN",
+          "player_id": "CLE_DST",
+          "name": "CLE D/ST",
+          "team": "CLE",
           "points": 123.0,
           "games": 17,
           "ppg": 7.2
         },
         {
-          "player_id": "CLE_DST",
-          "name": "CLE D/ST",
-          "team": "CLE",
+          "player_id": "MIN_DST",
+          "name": "MIN D/ST",
+          "team": "MIN",
           "points": 123.0,
           "games": 17,
           "ppg": 7.2
