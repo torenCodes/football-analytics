@@ -34,6 +34,7 @@ from shared import (
     build_oline_continuity,
     json_safe,
     load_cache,
+    season_from_dt,
     REF_DIR,
 )
 
@@ -46,6 +47,10 @@ UPCOMING_SEASON = 2026
 PLAY_SCALE = 65  # rough plays-per-team-per-game, converts EPA/play diff to a point-scale margin
 HOME_FIELD_ADJ = 1.5  # points, standard analytics convention (~1-3)
 MIN_GAMES_FOR_CURRENT_SEASON = 3  # below this, fall back to prior-season efficiency for that team
+QB_OUT_STATUSES = {"Out", "Doubtful"}  # "Questionable" is a real coin-flip -- shown as a tag, not scored
+QB_OUT_PENALTY = 4.0  # points; backtested estimates of a backup QB's scoring impact commonly range
+# ~3-7 points -- 4 is a defensible, modest v1 value, consistent with this model's philosophy of small
+# explainable nudges rather than a fully-modeled per-player value system (that's a future project, not this one)
 
 
 def team_game_efficiency(team_stats):
@@ -219,7 +224,7 @@ def fetch_weather(lat, lon, gameday):
 def build_storyline(
     home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
     oline_home, oline_away, coach_home, coach_away, revenge_flag, div_game,
-    weather, international_site, roof,
+    weather, international_site, roof, qb_injury_home=None, qb_injury_away=None,
 ):
     """A short prose readout of *why* the model landed where it did --
     the same factors already computed for this game, synthesized into
@@ -249,6 +254,19 @@ def build_storyline(
         f"The model leans {pick_team} by {margin_abs:.1f} points, built on {conviction} in offense-vs-defense "
         f"EPA/play against {other_team}."
     ]
+
+    other_qb_out = qb_injury_away if our_pick == "home" else qb_injury_home
+    pick_qb_out = qb_injury_home if our_pick == "home" else qb_injury_away
+    if other_qb_out:
+        sentences.append(
+            f"{other_team}'s starting QB is listed {other_qb_out['status']} on the official injury report -- "
+            "that's already baked into the model's lean, not just a footnote."
+        )
+    elif pick_qb_out:
+        sentences.append(
+            f"Worth noting: {pick_team}'s own starting QB is listed {pick_qb_out['status']} this week, adding "
+            "some uncertainty even with the pick."
+        )
 
     home_src, away_src = efficiency_source.get("home"), efficiency_source.get("away")
     if home_src == "prior_season_fallback" and away_src == "prior_season_fallback":
@@ -331,7 +349,43 @@ def build_market(r, our_pick, model_margin_home):
     }
 
 
-def build_game_board(schedules, team_stats):
+def starting_qb_by_team(depth_charts, season):
+    """Each team's current starting QB (gsis_id), from that team's most
+    recent depth-chart snapshot this season -- same snapshot-latest pattern
+    shared.py's build_oline_continuity uses for O-line starters."""
+    qb = depth_charts.filter((pl.col("pos_abb") == "QB") & (pl.col("pos_rank") == 1)).with_columns(
+        season_from_dt(pl.col("dt")).alias("dc_season")
+    )
+    qb = qb.filter(pl.col("dc_season") == season)
+    if qb.is_empty():
+        return {}
+    latest = qb.group_by("team").agg(pl.col("dt").max().alias("dt"))
+    current = qb.join(latest, on=["team", "dt"], how="inner").unique(subset=["team"])
+    return dict(zip(current["team"].to_list(), current["gsis_id"].to_list()))
+
+
+def build_qb_injury_flags(depth_charts, injuries, season, week):
+    """Flags a team's starting QB as a real game-time question when the
+    NFL's own official weekly injury report lists them Out or Doubtful --
+    the standard, free signal sportsbooks and fantasy platforms already key
+    off, available well before a player is ever formally placed on IR."""
+    starters = starting_qb_by_team(depth_charts, season)
+    if not starters or injuries is None or injuries.is_empty():
+        return {}
+    wk = injuries.filter((pl.col("season") == season) & (pl.col("week") == week))
+    if wk.is_empty():
+        return {}
+    status_by_id = dict(zip(wk["gsis_id"].to_list(), wk["report_status"].to_list()))
+
+    flags = {}
+    for team, gsis_id in starters.items():
+        status = status_by_id.get(gsis_id)
+        if status in QB_OUT_STATUSES:
+            flags[team] = {"gsis_id": gsis_id, "status": status}
+    return flags
+
+
+def build_game_board(schedules, team_stats, injuries):
     with open(os.path.join(REF_DIR, "stadiums.json"), encoding="utf-8") as f:
         stadiums = json.load(f)
 
@@ -374,6 +428,7 @@ def build_game_board(schedules, team_stats):
     depth_charts = load_cache("depth_charts")
     oline_continuity = build_oline_continuity(depth_charts, RETRO_SEASON, UPCOMING_SEASON)
     coach_continuity = build_coach_continuity(schedules, RETRO_SEASON, UPCOMING_SEASON)
+    qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week)
 
     def team_off(team):
         if games_played_by_team.get(team, 0) >= MIN_GAMES_FOR_CURRENT_SEASON:
@@ -395,9 +450,15 @@ def build_game_board(schedules, team_stats):
 
         model_margin_home = None
         if None not in (home_off_pp, away_off_pp, home_def_pp, away_def_pp):
-            model_margin_home = round(
-                ((home_off_pp - away_def_pp) - (away_off_pp - home_def_pp)) * PLAY_SCALE + HOME_FIELD_ADJ, 1
-            )
+            model_margin_home = ((home_off_pp - away_def_pp) - (away_off_pp - home_def_pp)) * PLAY_SCALE + HOME_FIELD_ADJ
+
+        qb_injury_home, qb_injury_away = qb_injury_flags.get(home), qb_injury_flags.get(away)
+        if model_margin_home is not None:
+            if qb_injury_home:
+                model_margin_home -= QB_OUT_PENALTY
+            if qb_injury_away:
+                model_margin_home += QB_OUT_PENALTY
+            model_margin_home = round(model_margin_home, 1)
 
         rest_edge = None
         if r["home_rest"] is not None and r["away_rest"] is not None:
@@ -439,7 +500,7 @@ def build_game_board(schedules, team_stats):
         storyline, storyline_short = build_storyline(
             home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
             oline_home, oline_away, coach_home, coach_away, revenge_flag, bool(r["div_game"]),
-            weather, international_site, r["roof"],
+            weather, international_site, r["roof"], qb_injury_home, qb_injury_away,
         )
         market = build_market(r, our_pick, model_margin_home)
 
@@ -461,6 +522,7 @@ def build_game_board(schedules, team_stats):
                 "rest_days_edge_home": rest_edge,
                 "oline_continuity": {"home": oline_home, "away": oline_away},
                 "coach_continuity": {"home": coach_home, "away": coach_away},
+                "qb_injury": {"home": qb_injury_home, "away": qb_injury_away},
                 "revenge_game": revenge_flag,
                 "roof": r["roof"],
                 "international_site": international_site,
@@ -581,7 +643,10 @@ def main():
     print("Building upcoming-week game board...")
     team_stats_current = load_cache_team_stats(UPCOMING_SEASON, allow_empty=True)
     all_team_stats = pl.concat([team_stats_25, team_stats_current]) if team_stats_current is not None else team_stats_25
-    game_board = build_game_board(schedules, all_team_stats)
+    injuries_hist = load_cache("injuries")
+    injuries_current = load_current_season_injuries(UPCOMING_SEASON, allow_empty=True)
+    all_injuries = pl.concat([injuries_hist, injuries_current], how="diagonal_relaxed") if injuries_current is not None else injuries_hist
+    game_board = build_game_board(schedules, all_team_stats, all_injuries)
     print(f"  {len(game_board.get('games', []))} games in week {game_board.get('week')}")
 
     print("Grading previously-archived weeks against final results...")
@@ -611,6 +676,18 @@ def load_cache_team_stats(season, allow_empty=False):
     except Exception as e:
         if allow_empty:
             print(f"  no team_stats for {season} yet ({e}) -- expected before that season's games start")
+            return None
+        raise
+
+
+def load_current_season_injuries(season, allow_empty=False):
+    import nflreadpy as nfl
+
+    try:
+        return nfl.load_injuries(seasons=[season])
+    except Exception as e:
+        if allow_empty:
+            print(f"  no injuries for {season} yet ({e}) -- expected before that season's games start")
             return None
         raise
 
