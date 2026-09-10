@@ -110,6 +110,23 @@
     </div>
   </section>
 
+  <section class="section" id="weekly-rankings-section" style="display: none;">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker" id="weekly-rankings-kicker">This Week</div>
+        <h2>Weekly Rankings</h2>
+      </div>
+      <span class="section-note">Start Score = recency-weighted production + matchup + injury status. The in-season successor to the Draft Board.</span>
+    </div>
+    <div class="pos-tabs" id="weekly-rankings-pos-tabs"></div>
+    <div class="card card-accent-fantasy table-scroll">
+      <table class="data-table" id="weekly-rankings-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-head">
       <div>
@@ -166,10 +183,12 @@ let teamOfWeekData = null;
 let preseasonDraftBoardData = null;
 let preseasonDreamTeamData = null;
 let accountabilityData = null;
+let weeklyRankingsData = null;
 let currentFormat = 'ppr';
 let currentLeadersPos = 'QB';
 let currentBoardPos = 'QB';
 let currentAccountabilityPos = 'QB';
+let currentWeeklyRankingsPos = 'QB';
 let currentLeagueSize = 10;
 let currentDraftSlot = 1;
 
@@ -452,12 +471,64 @@ function selectAccountabilityPos(pos) {
   renderAccountability();
 }
 
+function injuryPill(status) {
+  if (!status) return '--';
+  const cls = status === 'Questionable' ? 'pos' : 'down';
+  return `<span class="pill ${cls}">${status}</span>`;
+}
+
+function renderWeeklyRankings() {
+  const kickerEl = document.getElementById('weekly-rankings-kicker');
+  const posTabsEl = document.getElementById('weekly-rankings-pos-tabs');
+  const thead = document.querySelector('#weekly-rankings-table thead');
+  const tbody = document.querySelector('#weekly-rankings-table tbody');
+  if (!weeklyRankingsData || !weeklyRankingsData.available) {
+    kickerEl.textContent = 'This Week';
+    posTabsEl.innerHTML = '';
+    thead.innerHTML = '';
+    tbody.innerHTML = `<tr><td class="empty-state">${(weeklyRankingsData && weeklyRankingsData.note) || 'Not available yet.'}</td></tr>`;
+    return;
+  }
+  const data = weeklyRankingsData[currentFormat];
+  document.getElementById('weekly-rankings-kicker').textContent = `Week ${data.week} · ${weeklyRankingsData.season}`;
+  const rows = data.rankings_by_position[currentWeeklyRankingsPos] || [];
+  thead.innerHTML = `<tr>
+    <th class="w-xs">Rank</th><th>Player</th><th class="w-sm">Team</th><th class="w-sm">Opp</th>
+    <th class="num-center w-sm">Start Score</th><th class="num-center w-md">Recent PPG</th>
+    <th class="num w-sm">Matchup</th><th class="center w-md">Injury</th>
+  </tr>`;
+  tbody.innerHTML = rows.map(p => {
+    const matchupPill = p.matchup_adj === null ? '--' :
+      p.matchup_adj > 0 ? `<span class="pill up">+${fmt1(p.matchup_adj)}</span>` :
+      p.matchup_adj < 0 ? `<span class="pill down">${fmt1(p.matchup_adj)}</span>` : '0';
+    return `<tr title="${p.explain || ''}">
+      <td>${p.rank}</td>
+      <td>${p.name}</td>
+      <td><span class="pill pos">${p.team}</span></td>
+      <td>${p.opponent}</td>
+      <td class="num-center">${fmt1(p.start_score)}</td>
+      <td class="num-center">${fmt1(p.recent_ppg)} (${p.games_this_season})</td>
+      <td class="num">${matchupPill}</td>
+      <td class="center">${injuryPill(p.injury_status)}</td>
+    </tr>`;
+  }).join('') || `<tr><td colspan="8" class="empty-state">No data</td></tr>`;
+}
+
+function selectWeeklyRankingsPos(pos) {
+  currentWeeklyRankingsPos = pos;
+  renderPosTabs('weekly-rankings-pos-tabs', currentWeeklyRankingsPos, selectWeeklyRankingsPos);
+  renderWeeklyRankings();
+}
+
 function renderAll() {
   renderPerfectTeam();
   renderLeadersTable();
   renderDraftBoardSection();
   renderRightColumn();
-  if (seasonState && seasonState.season_started) renderAccountability();
+  if (seasonState && seasonState.season_started) {
+    renderAccountability();
+    renderWeeklyRankings();
+  }
 }
 
 function selectLeadersPos(pos) {
@@ -483,11 +554,12 @@ async function applySeasonPivot() {
   const season = seasonState.season;
   const week = seasonState.current_week;
   const safeJson = (url) => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
-  [accountabilityData, preseasonDraftBoardData, preseasonDreamTeamData, teamOfWeekData] = await Promise.all([
+  [accountabilityData, preseasonDraftBoardData, preseasonDreamTeamData, teamOfWeekData, weeklyRankingsData] = await Promise.all([
     safeJson('data/fantasy/accountability.json'),
     safeJson(`data/fantasy/archive/${season}-preseason-draft-board.json`),
     safeJson(`data/fantasy/archive/${season}-preseason-dream-team.json`),
     week ? safeJson(`data/fantasy/archive/${season}-w${String(week).padStart(2, '0')}-team-of-week.json`) : Promise.resolve(null),
+    safeJson('data/fantasy/weekly_rankings.json'),
   ]);
 
   document.getElementById('draft-board-kicker').textContent = 'Archived -- 2026 Preseason Prep';
@@ -498,6 +570,9 @@ async function applySeasonPivot() {
 
   if (accountabilityData) {
     document.getElementById('accountability-section').style.display = '';
+  }
+  if (weeklyRankingsData) {
+    document.getElementById('weekly-rankings-section').style.display = '';
   }
 }
 
@@ -541,6 +616,7 @@ async function init() {
   renderPosTabs('leaders-pos-tabs', currentLeadersPos, selectLeadersPos);
   renderPosTabs('board-pos-tabs', currentBoardPos, selectBoardPos);
   renderPosTabs('accountability-pos-tabs', currentAccountabilityPos, selectAccountabilityPos);
+  renderPosTabs('weekly-rankings-pos-tabs', currentWeeklyRankingsPos, selectWeeklyRankingsPos);
 
   renderAll();
 }

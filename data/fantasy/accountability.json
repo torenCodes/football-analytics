@@ -1,7 +1,97 @@
 {
   "meta": {
-    "generated_at": "2026-09-08T18:23:41.249687+00:00"
+    "generated_at": "2026-09-10T20:25:21.835640+00:00"
   },
-  "available": false,
-  "note": "Accountability grading unlocks once the 2026 preseason Draft Board has been frozen at Week 1 kickoff."
+  "available": true,
+  "season": 2026,
+  "by_format": {
+    "ppr": {
+      "QB": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "RB": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "WR": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "TE": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "K": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "DST": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      }
+    },
+    "standard": {
+      "QB": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "RB": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "WR": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "TE": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "K": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      },
+      "DST": {
+        "players_graded": 0,
+        "mean_abs_rank_error": null,
+        "hit_rate_within_5": null,
+        "biggest_steals": [],
+        "biggest_busts": []
+      }
+    }
+  }
 }

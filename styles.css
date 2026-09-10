@@ -231,7 +231,12 @@ a { color: inherit; }
    producing wildly inconsistent column widths and misaligned-looking rows.
    The one column left without a .w-* class (always Player) absorbs all
    remaining space. */
-table.data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; table-layout: fixed; }
+/* min-width forces .table-scroll's overflow-x:auto to actually engage on
+   narrow viewports -- without it, width:100% + table-layout:fixed just
+   shrinks every column to fit the container, and white-space:nowrap on td
+   makes the squeezed text visually spill into neighboring cells instead of
+   properly scrolling. */
+table.data-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 0.9rem; table-layout: fixed; }
 table.data-table .w-xs { width: 3.25rem; }
 table.data-table .w-sm { width: 4.5rem; }
 table.data-table .w-md { width: 5.5rem; }
