@@ -35,95 +35,105 @@
   </div>
 
   <section class="section">
-    <div class="two-col-fantasy">
-      <div class="two-col-left">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">2025 Season</div>
-            <h2 id="perfect-team-title">Perfect Team</h2>
-          </div>
-          <span class="section-note" id="perfect-team-note"></span>
+    <div class="toggle-group" id="season-tabs" style="margin-bottom: 1.5rem;">
+      <button class="toggle-btn" data-tab="2025">2025 Perfect Team</button>
+      <button class="toggle-btn active" data-tab="2026" id="season-tab-2026-btn">2026 Dream Team</button>
+    </div>
+
+    <div id="season-tab-2025" style="display: none;">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">2025 Season</div>
+          <h2 id="perfect-team-title">Perfect Team</h2>
         </div>
-        <div id="perfect-lineup" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
-        <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
-        <div class="card card-accent-fantasy table-scroll">
-          <table class="data-table" id="perfect-team-bench">
-            <thead></thead>
-            <tbody></tbody>
-          </table>
+        <span class="section-note" id="perfect-team-note"></span>
+      </div>
+      <div id="perfect-lineup" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
+      <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
+      <div class="card card-accent-fantasy table-scroll">
+        <table class="data-table" id="perfect-team-bench">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="season-tab-2026">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker" id="right-col-kicker">2026 Draft Simulation</div>
+          <h2 id="right-col-title">Dream Team</h2>
         </div>
       </div>
-
-      <div class="two-col-right">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker" id="right-col-kicker">2026 Draft Simulation</div>
-            <h2 id="right-col-title">Dream Team</h2>
-          </div>
+      <div id="dream-team-controls-wrap">
+        <div class="dream-team-controls">
+          <label>League size
+            <select id="dt-league-size">
+              <option value="10">10-team</option>
+              <option value="12">12-team</option>
+            </select>
+          </label>
+          <label>Your draft slot
+            <select id="dt-draft-slot"></select>
+          </label>
         </div>
-        <div id="dream-team-controls-wrap">
-          <div class="dream-team-controls">
-            <label>League size
-              <select id="dt-league-size">
-                <option value="10">10-team</option>
-                <option value="12">12-team</option>
-              </select>
-            </label>
-            <label>Your draft slot
-              <select id="dt-draft-slot"></select>
-            </label>
-          </div>
-          <div class="section-note" id="dream-team-scenario-line" style="display: block; margin-bottom: 0.5rem;"></div>
-          <details class="methodology-details" style="margin-bottom: 1rem;">
-            <summary>How this works</summary>
-            <div class="section-note" id="dream-team-methodology" style="display: block; margin-top: 0.5rem; line-height: 1.5;"></div>
-          </details>
-          <div id="dream-team-notes"></div>
-        </div>
-        <p class="empty-state" id="right-col-empty" style="display: none;"></p>
-        <div id="dream-team-starters" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
-        <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
-        <div class="card card-accent-fantasy table-scroll">
-          <table class="data-table" id="dream-team-bench">
-            <thead></thead>
-            <tbody></tbody>
-          </table>
-        </div>
+        <div class="section-note" id="dream-team-scenario-line" style="display: block; margin-bottom: 0.5rem;"></div>
+        <details class="methodology-details" style="margin-bottom: 1rem;">
+          <summary>How this works</summary>
+          <div class="section-note" id="dream-team-methodology" style="display: block; margin-top: 0.5rem; line-height: 1.5;"></div>
+        </details>
+        <div id="dream-team-notes"></div>
+      </div>
+      <p class="empty-state" id="right-col-empty" style="display: none;"></p>
+      <div id="dream-team-starters" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
+      <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
+      <div class="card card-accent-fantasy table-scroll">
+        <table class="data-table" id="dream-team-bench">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="section-head">
-      <div>
-        <div class="section-kicker">2025 Season</div>
-        <h2>Position Leaders</h2>
-      </div>
-      <span class="section-note">Top 10 by total 2025 points.</span>
+    <div class="toggle-group" id="leaders-weekly-tabs" style="margin-bottom: 1.5rem;">
+      <button class="toggle-btn active" data-tab="leaders">2025 Leaders</button>
+      <button class="toggle-btn" data-tab="weekly" id="weekly-rankings-tab-btn" style="display: none;">Weekly Rankings</button>
     </div>
-    <div class="pos-tabs" id="leaders-pos-tabs"></div>
-    <div class="card card-accent-fantasy table-scroll">
-      <table class="data-table" id="leaders-table">
-        <thead></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </section>
 
-  <section class="section" id="weekly-rankings-section" style="display: none;">
-    <div class="section-head">
-      <div>
-        <div class="section-kicker" id="weekly-rankings-kicker">This Week</div>
-        <h2>Weekly Rankings</h2>
+    <div id="leaders-tab-panel">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">2025 Season</div>
+          <h2>Position Leaders</h2>
+        </div>
+        <span class="section-note">Top 10 by total 2025 points.</span>
       </div>
-      <span class="section-note">Start Score = recency-weighted production + matchup + injury status. The in-season successor to the Draft Board.</span>
+      <div class="pos-tabs" id="leaders-pos-tabs"></div>
+      <div class="card card-accent-fantasy table-scroll">
+        <table class="data-table" id="leaders-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
-    <div class="pos-tabs" id="weekly-rankings-pos-tabs"></div>
-    <div class="card card-accent-fantasy table-scroll">
-      <table class="data-table" id="weekly-rankings-table">
-        <thead></thead>
-        <tbody></tbody>
-      </table>
+
+    <div id="weekly-tab-panel" style="display: none;">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker" id="weekly-rankings-kicker">This Week</div>
+          <h2>Weekly Rankings</h2>
+        </div>
+        <span class="section-note">Start Score = recency-weighted production + matchup + injury status. The in-season successor to the Draft Board.</span>
+      </div>
+      <div class="pos-tabs" id="weekly-rankings-pos-tabs"></div>
+      <div class="card card-accent-fantasy table-scroll">
+        <table class="data-table" id="weekly-rankings-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -172,6 +182,18 @@ function toggleSiteNav(btn) {
   const links = document.querySelector('.site-nav-links');
   const open = links.classList.toggle('open');
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
+}
+
+function selectSeasonTab(tab) {
+  document.querySelectorAll('#season-tabs .toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.getElementById('season-tab-2025').style.display = tab === '2025' ? '' : 'none';
+  document.getElementById('season-tab-2026').style.display = tab === '2026' ? '' : 'none';
+}
+
+function selectLeadersWeeklyTab(tab) {
+  document.querySelectorAll('#leaders-weekly-tabs .toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.getElementById('leaders-tab-panel').style.display = tab === 'leaders' ? '' : 'none';
+  document.getElementById('weekly-tab-panel').style.display = tab === 'weekly' ? '' : 'none';
 }
 
 const ROSTER_POS = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
@@ -568,11 +590,14 @@ async function applySeasonPivot() {
   summary.classList.remove('pivot-toggle');
   summary.textContent = 'Show the preseason Draft Board';
 
+  document.getElementById('season-tab-2026-btn').textContent = '2026 Team of the Week';
+
   if (accountabilityData) {
     document.getElementById('accountability-section').style.display = '';
   }
   if (weeklyRankingsData) {
-    document.getElementById('weekly-rankings-section').style.display = '';
+    document.getElementById('weekly-rankings-tab-btn').style.display = '';
+    selectLeadersWeeklyTab('weekly');
   }
 }
 
@@ -599,6 +624,13 @@ async function init() {
       document.querySelectorAll('#format-toggle .toggle-btn').forEach(b => b.classList.toggle('active', b === btn));
       renderAll();
     });
+  });
+
+  document.querySelectorAll('#season-tabs .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => selectSeasonTab(btn.dataset.tab));
+  });
+  document.querySelectorAll('#leaders-weekly-tabs .toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => selectLeadersWeeklyTab(btn.dataset.tab));
   });
 
   document.getElementById('dt-league-size').addEventListener('change', (e) => {

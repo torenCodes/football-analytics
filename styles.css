@@ -284,18 +284,6 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
    horizontal-scroll-container issue of no trailing padding. */
 .table-scroll { overflow-x: auto; padding: 0 0.75rem; }
 
-/* ---- Perfect Team / Dream Team two-column layout (fantasy.html) ---- */
-.two-col-fantasy {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 2.5rem;
-}
-.two-col-fantasy .two-col-left { border-right: 1px solid var(--border); padding-right: 2rem; }
-@media (max-width: 860px) {
-  .two-col-fantasy { grid-template-columns: 1fr; }
-  .two-col-fantasy .two-col-left { border-right: none; padding-right: 0; border-bottom: 1px solid var(--border); padding-bottom: 1.75rem; margin-bottom: 1.75rem; }
-}
-
 .dream-team-controls { display: flex; gap: 1.25rem; margin-bottom: 1rem; flex-wrap: wrap; }
 .dream-team-controls label {
   display: flex;
