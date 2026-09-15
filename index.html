@@ -55,6 +55,16 @@
         </div>
       </div>
 
+      <div class="front-block" id="waiver-wire-teaser" style="display: none;">
+        <div class="front-block-title">Waiver Wire Watch</div>
+        <div class="table-scroll">
+          <table class="tight-table" id="waiver-wire-teaser-table">
+            <thead><tr><th>Player</th><th>Pos</th><th>Team</th><th class="num">PPG</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
       <div class="front-block" style="margin-bottom: 0.5rem;">
         <div class="front-block-title">2025 Season Leaders</div>
         <div class="mini-leader-grid" id="mini-leaders"></div>
@@ -227,9 +237,10 @@ function loadFantasyColumnPreseason(perfectTeam, draftBoard) {
 async function loadFantasyColumnInSeason(seasonState) {
   const season = seasonState.season;
   const week = seasonState.current_week;
-  const [teamOfWeek, weeklyRankings] = await Promise.all([
+  const [teamOfWeek, weeklyRankings, waiverWire] = await Promise.all([
     week ? fetch(`data/fantasy/archive/${season}-w${String(week).padStart(2, '0')}-team-of-week.json`).then(r => r.ok ? r.json() : null).catch(() => null) : Promise.resolve(null),
     fetch('data/fantasy/weekly_rankings.json').then(r => r.json()).catch(() => null),
+    fetch('data/fantasy/waiver_wire.json').then(r => r.json()).catch(() => null),
   ]);
 
   document.getElementById('fantasy-col-title').textContent = week ? `Team of the Week -- Week ${week}, ${season}` : `Fantasy -- ${season} Season`;
@@ -277,6 +288,25 @@ async function loadFantasyColumnInSeason(seasonState) {
     document.getElementById('value-gap-title').textContent = 'Weekly Rankings -- Biggest Matchup Edges';
     document.querySelector('#value-gap-table tbody').innerHTML =
       `<tr><td colspan="6" class="empty-state">${(weeklyRankings && weeklyRankings.note) || 'Weekly rankings unlock once at least one 2026 game has been played.'}</td></tr>`;
+  }
+
+  // Sneak peek only -- full position-tabbed listings live on the Fantasy
+  // dashboard. Cross-position, same RB/WR/TE focus as the value-gap table
+  // above it (the "sleeper story" positions, not QB/K/DST streaming).
+  if (waiverWire && waiverWire.available) {
+    const ww = waiverWire.by_position.ppr;
+    let candidates = [];
+    for (const pos of ['RB', 'WR', 'TE']) {
+      for (const p of (ww[pos] || [])) candidates.push({ ...p, position: pos });
+    }
+    candidates.sort((a, b) => b.ppg - a.ppg);
+    candidates = candidates.slice(0, 6);
+    if (candidates.length) {
+      document.getElementById('waiver-wire-teaser').style.display = '';
+      document.querySelector('#waiver-wire-teaser-table tbody').innerHTML = candidates.map(p =>
+        `<tr><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.ppg)}</td></tr>`
+      ).join('');
+    }
   }
 }
 

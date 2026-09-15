@@ -137,6 +137,23 @@
     </div>
   </section>
 
+  <section class="section" id="waiver-wire-section" style="display: none;">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Waiver Wire</div>
+        <h2>Waiver Wire Watch</h2>
+      </div>
+      <span class="section-note">Likely undrafted in most leagues (unranked or beyond a realistic draftable depth on our preseason board), now outperforming that expectation.</span>
+    </div>
+    <div class="pos-tabs" id="waiver-wire-pos-tabs"></div>
+    <div class="card card-accent-fantasy table-scroll">
+      <table class="data-table" id="waiver-wire-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
   <section class="section">
     <div class="section-head">
       <div>
@@ -206,11 +223,13 @@ let preseasonDraftBoardData = null;
 let preseasonDreamTeamData = null;
 let accountabilityData = null;
 let weeklyRankingsData = null;
+let waiverWireData = null;
 let currentFormat = 'ppr';
 let currentLeadersPos = 'QB';
 let currentBoardPos = 'QB';
 let currentAccountabilityPos = 'QB';
 let currentWeeklyRankingsPos = 'QB';
+let currentWaiverWirePos = 'QB';
 let currentLeagueSize = 10;
 let currentDraftSlot = 1;
 
@@ -542,6 +561,36 @@ function selectWeeklyRankingsPos(pos) {
   renderWeeklyRankings();
 }
 
+function renderWaiverWire() {
+  const thead = document.querySelector('#waiver-wire-table thead');
+  const tbody = document.querySelector('#waiver-wire-table tbody');
+  if (!waiverWireData || !waiverWireData.available) {
+    thead.innerHTML = '';
+    tbody.innerHTML = `<tr><td class="empty-state">${(waiverWireData && waiverWireData.note) || 'Not available yet.'}</td></tr>`;
+    return;
+  }
+  const rows = waiverWireData.by_position[currentFormat][currentWaiverWirePos] || [];
+  thead.innerHTML = `<tr>
+    <th>Player</th><th class="w-sm">Team</th><th class="num-center w-md">PPG</th>
+    <th class="num-center w-md">Games</th><th class="num-center w-lg">Preseason Rank</th>
+  </tr>`;
+  tbody.innerHTML = rows.map(p => `
+    <tr title="${p.explain || ''}">
+      <td>${p.name}</td>
+      <td><span class="pill pos">${p.team}</span></td>
+      <td class="num-center">${fmt1(p.ppg)}</td>
+      <td class="num-center">${p.games}</td>
+      <td class="num-center">${p.preseason_rank !== null ? p.preseason_rank : 'Unranked'}</td>
+    </tr>
+  `).join('') || `<tr><td colspan="5" class="empty-state">No waiver-wire standouts at this position yet.</td></tr>`;
+}
+
+function selectWaiverWirePos(pos) {
+  currentWaiverWirePos = pos;
+  renderPosTabs('waiver-wire-pos-tabs', currentWaiverWirePos, selectWaiverWirePos);
+  renderWaiverWire();
+}
+
 function renderAll() {
   renderPerfectTeam();
   renderLeadersTable();
@@ -550,6 +599,7 @@ function renderAll() {
   if (seasonState && seasonState.season_started) {
     renderAccountability();
     renderWeeklyRankings();
+    renderWaiverWire();
   }
 }
 
@@ -576,12 +626,13 @@ async function applySeasonPivot() {
   const season = seasonState.season;
   const week = seasonState.current_week;
   const safeJson = (url) => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
-  [accountabilityData, preseasonDraftBoardData, preseasonDreamTeamData, teamOfWeekData, weeklyRankingsData] = await Promise.all([
+  [accountabilityData, preseasonDraftBoardData, preseasonDreamTeamData, teamOfWeekData, weeklyRankingsData, waiverWireData] = await Promise.all([
     safeJson('data/fantasy/accountability.json'),
     safeJson(`data/fantasy/archive/${season}-preseason-draft-board.json`),
     safeJson(`data/fantasy/archive/${season}-preseason-dream-team.json`),
     week ? safeJson(`data/fantasy/archive/${season}-w${String(week).padStart(2, '0')}-team-of-week.json`) : Promise.resolve(null),
     safeJson('data/fantasy/weekly_rankings.json'),
+    safeJson('data/fantasy/waiver_wire.json'),
   ]);
 
   document.getElementById('draft-board-kicker').textContent = 'Archived -- 2026 Preseason Prep';
@@ -598,6 +649,9 @@ async function applySeasonPivot() {
   if (weeklyRankingsData) {
     document.getElementById('weekly-rankings-tab-btn').style.display = '';
     selectLeadersWeeklyTab('weekly');
+  }
+  if (waiverWireData) {
+    document.getElementById('waiver-wire-section').style.display = '';
   }
 }
 
@@ -649,6 +703,7 @@ async function init() {
   renderPosTabs('board-pos-tabs', currentBoardPos, selectBoardPos);
   renderPosTabs('accountability-pos-tabs', currentAccountabilityPos, selectAccountabilityPos);
   renderPosTabs('weekly-rankings-pos-tabs', currentWeeklyRankingsPos, selectWeeklyRankingsPos);
+  renderPosTabs('waiver-wire-pos-tabs', currentWaiverWirePos, selectWaiverWirePos);
 
   renderAll();
 }

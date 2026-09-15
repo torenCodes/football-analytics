@@ -60,6 +60,18 @@ QUESTIONABLE_PENALTY, DOUBTFUL_PENALTY, OUT_PENALTY = -2.0, -10.0, -20.0  # soft
 # exclusion -- an "Out" player still shows up, clearly flagged, sunk to the bottom of their position
 # group (a typical 8-20 ppg skill player's score goes negative), same "explainable, not a black box"
 # philosophy as betting_scan.py's QB_OUT_PENALTY
+MIN_GAMES_FOR_WAIVER_WIRE = 1  # a single monster game is often exactly what should trigger a waiver
+# pickup in the first place -- requiring 2+ games would leave this section completely empty for the
+# first two weeks of the season, missing the exact window a hot pickup is most available. games is
+# still shown alongside ppg (same "visible sample size, not a hidden blend" convention as Weekly
+# Rankings) so a 1-game outlier reads as exactly that, not a false guarantee.
+# Rough draftable depth per position in a standard 12-team league (2 QB/5 RB/6 WR/2 TE/1 K/1 DST per
+# roster, some slack for FLEX/bench) -- a player ranked deeper than this on the frozen preseason board,
+# or missing from it entirely (rookies, anyone with too little 2025 usage to be ranked at all), is a
+# reasonable proxy for "probably sitting on waivers in most leagues." Real per-league ownership data
+# doesn't exist for free, so this is a proxy, not a fact -- same "model, not gospel" honesty as everywhere
+# else on the site.
+WAIVER_DRAFTABLE_DEPTH = {"QB": 24, "RB": 60, "WR": 72, "TE": 24, "K": 14, "DST": 14}
 
 UNIFIED_COLS = ["player_id", "player_display_name", "position", "team", "week", "season", "season_type", "fpts_ppr", "fpts_standard", "opponent_team"]
 
@@ -485,6 +497,78 @@ def compute_draft_board_accountability(stats, schedules):
             }
         out[fmt] = by_pos
     return {"available": True, "season": UPCOMING_SEASON, "by_format": out}
+
+
+def build_waiver_wire_explain(row):
+    """Short prose readout, same spirit as build_draft_board_explain and
+    build_weekly_ranking_explain -- surfaced as this row's tooltip."""
+    if row["preseason_rank"] is None:
+        expectation = "wasn't on our preseason board at all"
+    else:
+        expectation = f"we had them {row['preseason_rank']}th at the position entering the season"
+    game_word = "game" if row["games"] == 1 else "games"
+    return f"Likely available on waivers in most leagues -- {expectation}, and they're averaging {row['ppg']:.1f} ppg over {row['games']} {game_word} since."
+
+
+def compute_waiver_wire(stats, schedules):
+    """Likely-undrafted players (probably sitting on waivers in most
+    leagues) who are outperforming that expectation -- the inverse of
+    compute_draft_board_accountability's "steals" list, which explicitly
+    SKIPS any player with no preseason rank (`if preseason_rank is None:
+    continue`) since it's grading rank accuracy, not surfacing waiver
+    adds. This is the mirror image: it only wants exactly the players
+    that filter throws away, plus anyone ranked deeper than a realistic
+    draftable cutoff (WAIVER_DRAFTABLE_DEPTH)."""
+    board_path = os.path.join(ARCHIVE_DIR, f"{UPCOMING_SEASON}-preseason-draft-board.json")
+    if not os.path.exists(board_path):
+        return {"available": False, "note": "Waiver wire tracking unlocks once the 2026 preseason Draft Board has been frozen at Week 1 kickoff."}
+    with open(board_path, encoding="utf-8") as f:
+        preseason_board = json.load(f)
+
+    reg = stats.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("season_type") == "REG") & pl.col("position").is_in(ROSTER_POS))
+    if reg.is_empty():
+        return {"available": False, "note": "Waiver wire tracking unlocks once 2026 games have been played."}
+    agg = reg.group_by(["player_id", "player_display_name", "position", "team"]).agg(
+        pl.col("fpts_ppr").sum().alias("total_ppr"),
+        pl.col("fpts_standard").sum().alias("total_standard"),
+        pl.col("week").n_unique().alias("games"),
+    )
+
+    out = {}
+    for fmt, points_col in (("ppr", "total_ppr"), ("standard", "total_standard")):
+        preseason_rank_by_id = {}
+        for pos, rows in preseason_board[fmt]["rankings_by_position"].items():
+            for row in rows:
+                preseason_rank_by_id[row["player_id"]] = row["our_rank"]
+
+        by_pos = {}
+        for pos in ROSTER_POS:
+            depth = WAIVER_DRAFTABLE_DEPTH.get(pos, 24)
+            pos_rows = (
+                agg.filter((pl.col("position") == pos) & (pl.col("games") >= MIN_GAMES_FOR_WAIVER_WIRE))
+                .with_columns((pl.col(points_col) / pl.col("games")).alias("ppg"))
+                .sort("ppg", descending=True)
+            )
+            candidates = []
+            for r in pos_rows.iter_rows(named=True):
+                preseason_rank = preseason_rank_by_id.get(r["player_id"])
+                if preseason_rank is not None and preseason_rank <= depth:
+                    continue  # ranked within realistic draftable depth -- not a waiver-wire story
+                candidates.append(
+                    {
+                        "player_id": r["player_id"],
+                        "name": r["player_display_name"],
+                        "team": r["team"],
+                        "preseason_rank": preseason_rank,
+                        "games": r["games"],
+                        "ppg": round(r["ppg"], 1),
+                    }
+                )
+            for c in candidates:
+                c["explain"] = build_waiver_wire_explain(c)
+            by_pos[pos] = candidates[:15]
+        out[fmt] = by_pos
+    return {"available": True, "season": UPCOMING_SEASON, "by_position": out}
 
 
 def compute_season_state(schedules):
@@ -1108,6 +1192,10 @@ def main():
     weekly_rankings = compute_weekly_rankings(stats, schedules, injuries, current_team)
     print(f"  available={weekly_rankings['available']}")
 
+    print("Computing waiver wire watch (likely-undrafted players outperforming expectations)...")
+    waiver_wire = compute_waiver_wire(stats, schedules)
+    print(f"  available={waiver_wire['available']}")
+
     meta = {"generated_at": datetime.now(timezone.utc).isoformat()}
 
     with open(os.path.join(OUT_DIR, "perfect_team.json"), "w") as f:
@@ -1122,8 +1210,10 @@ def main():
         json.dump(json_safe({"meta": meta, **season_state}), f, indent=2)
     with open(os.path.join(OUT_DIR, "weekly_rankings.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **weekly_rankings}), f, indent=2)
+    with open(os.path.join(OUT_DIR, "waiver_wire.json"), "w") as f:
+        json.dump(json_safe({"meta": meta, **waiver_wire}), f, indent=2)
 
-    print("Wrote perfect_team.json, draft_board.json, dream_team.json, accountability.json, season_state.json, and weekly_rankings.json")
+    print("Wrote perfect_team.json, draft_board.json, dream_team.json, accountability.json, season_state.json, weekly_rankings.json, and waiver_wire.json")
 
 
 def load_current_season_player_stats(season, allow_empty=False):
