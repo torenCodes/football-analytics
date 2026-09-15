@@ -2,7 +2,9 @@ name: Football Betting scan
 
 on:
   schedule:
-    - cron: '30 15 * * 2'  # weekly, Tuesday ~10:30am ET -- staggered vs. the Fantasy scan; bump cadence closer to Week 1
+    - cron: '30 15 * * 2'  # Tuesday ~10:30am ET -- primary run, staggered vs. the Fantasy scan
+    - cron: '30 19 * * 2'  # Tuesday ~3:30pm ET -- same-day backup, in case the morning run failed or ran too early
+    - cron: '30 13 * * 3'  # Wednesday ~9:30am ET -- final backup; commit step only fires on an actual diff, so a no-op run is harmless
   workflow_dispatch:
 
 permissions:
