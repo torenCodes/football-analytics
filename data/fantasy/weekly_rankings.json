@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-15T16:47:38.108882+00:00"
+    "generated_at": "2026-09-15T22:05:57.663608+00:00"
   },
   "available": true,
   "season": 2026,
@@ -54,21 +54,6 @@
           "rank": 3
         },
         {
-          "player_id": "00-0036389",
-          "name": "Jalen Hurts",
-          "position": "QB",
-          "team": "PHI",
-          "opponent": "TEN",
-          "start_score": 26.07,
-          "recent_ppg": 24.72,
-          "games_this_season": 1,
-          "matchup_adj": 1.35,
-          "matchup_source": "prior_season_fallback",
-          "injury_status": null,
-          "explain": "Averaging 24.7 ppg over 1 game(s) this season.",
-          "rank": 4
-        },
-        {
           "player_id": "00-0040691",
           "name": "Jaxson Dart",
           "position": "QB",
@@ -81,6 +66,21 @@
           "matchup_source": "prior_season_fallback",
           "injury_status": null,
           "explain": "Averaging 26.6 ppg over 1 game(s) this season.",
+          "rank": 4
+        },
+        {
+          "player_id": "00-0036389",
+          "name": "Jalen Hurts",
+          "position": "QB",
+          "team": "PHI",
+          "opponent": "TEN",
+          "start_score": 26.07,
+          "recent_ppg": 24.72,
+          "games_this_season": 1,
+          "matchup_adj": 1.35,
+          "matchup_source": "prior_season_fallback",
+          "injury_status": null,
+          "explain": "Averaging 24.7 ppg over 1 game(s) this season.",
           "rank": 5
         },
         {
@@ -3454,21 +3454,6 @@
           "rank": 10
         },
         {
-          "player_id": "ARI_DST",
-          "name": "ARI D/ST",
-          "position": "DST",
-          "team": "ARI",
-          "opponent": "SEA",
-          "start_score": 8.0,
-          "recent_ppg": 8.0,
-          "games_this_season": 1,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "explain": "Averaging 8.0 ppg over 1 game(s) this season.",
-          "rank": 11
-        },
-        {
           "player_id": "MIN_DST",
           "name": "MIN D/ST",
           "position": "DST",
@@ -3481,22 +3466,22 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 8.0 ppg over 1 game(s) this season.",
-          "rank": 12
+          "rank": 11
         },
         {
-          "player_id": "BAL_DST",
-          "name": "BAL D/ST",
+          "player_id": "ARI_DST",
+          "name": "ARI D/ST",
           "position": "DST",
-          "team": "BAL",
-          "opponent": "NO",
-          "start_score": 6.0,
-          "recent_ppg": 6.0,
+          "team": "ARI",
+          "opponent": "SEA",
+          "start_score": 8.0,
+          "recent_ppg": 8.0,
           "games_this_season": 1,
           "matchup_adj": null,
           "matchup_source": null,
           "injury_status": null,
-          "explain": "Averaging 6.0 ppg over 1 game(s) this season.",
-          "rank": 13
+          "explain": "Averaging 8.0 ppg over 1 game(s) this season.",
+          "rank": 12
         },
         {
           "player_id": "NE_DST",
@@ -3511,7 +3496,7 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 6.0 ppg over 1 game(s) this season.",
-          "rank": 14
+          "rank": 13
         },
         {
           "player_id": "BUF_DST",
@@ -3519,6 +3504,21 @@
           "position": "DST",
           "team": "BUF",
           "opponent": "DET",
+          "start_score": 6.0,
+          "recent_ppg": 6.0,
+          "games_this_season": 1,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "explain": "Averaging 6.0 ppg over 1 game(s) this season.",
+          "rank": 14
+        },
+        {
+          "player_id": "BAL_DST",
+          "name": "BAL D/ST",
+          "position": "DST",
+          "team": "BAL",
+          "opponent": "NO",
           "start_score": 6.0,
           "recent_ppg": 6.0,
           "games_this_season": 1,
@@ -3544,21 +3544,6 @@
           "rank": 16
         },
         {
-          "player_id": "MIA_DST",
-          "name": "MIA D/ST",
-          "position": "DST",
-          "team": "MIA",
-          "opponent": "SF",
-          "start_score": 4.0,
-          "recent_ppg": 4.0,
-          "games_this_season": 1,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "explain": "Averaging 4.0 ppg over 1 game(s) this season.",
-          "rank": 17
-        },
-        {
           "player_id": "CHI_DST",
           "name": "CHI D/ST",
           "position": "DST",
@@ -3571,22 +3556,22 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 4.0 ppg over 1 game(s) this season.",
-          "rank": 18
+          "rank": 17
         },
         {
-          "player_id": "NYG_DST",
-          "name": "NYG D/ST",
+          "player_id": "MIA_DST",
+          "name": "MIA D/ST",
           "position": "DST",
-          "team": "NYG",
-          "opponent": "LA",
-          "start_score": 3.0,
-          "recent_ppg": 3.0,
+          "team": "MIA",
+          "opponent": "SF",
+          "start_score": 4.0,
+          "recent_ppg": 4.0,
           "games_this_season": 1,
           "matchup_adj": null,
           "matchup_source": null,
           "injury_status": null,
-          "explain": "Averaging 3.0 ppg over 1 game(s) this season.",
-          "rank": 19
+          "explain": "Averaging 4.0 ppg over 1 game(s) this season.",
+          "rank": 18
         },
         {
           "player_id": "DAL_DST",
@@ -3601,14 +3586,29 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 3.0 ppg over 1 game(s) this season.",
+          "rank": 19
+        },
+        {
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
+          "position": "DST",
+          "team": "DEN",
+          "opponent": "JAX",
+          "start_score": 3.0,
+          "recent_ppg": 3.0,
+          "games_this_season": 1,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "explain": "Averaging 3.0 ppg over 1 game(s) this season.",
           "rank": 20
         },
         {
-          "player_id": "WAS_DST",
-          "name": "WAS D/ST",
+          "player_id": "NYG_DST",
+          "name": "NYG D/ST",
           "position": "DST",
-          "team": "WAS",
-          "opponent": "DAL",
+          "team": "NYG",
+          "opponent": "LA",
           "start_score": 3.0,
           "recent_ppg": 3.0,
           "games_this_season": 1,
@@ -3619,11 +3619,11 @@
           "rank": 21
         },
         {
-          "player_id": "DEN_DST",
-          "name": "DEN D/ST",
+          "player_id": "WAS_DST",
+          "name": "WAS D/ST",
           "position": "DST",
-          "team": "DEN",
-          "opponent": "JAX",
+          "team": "WAS",
+          "opponent": "DAL",
           "start_score": 3.0,
           "recent_ppg": 3.0,
           "games_this_season": 1,
@@ -3664,21 +3664,6 @@
           "rank": 24
         },
         {
-          "player_id": "LAC_DST",
-          "name": "LAC D/ST",
-          "position": "DST",
-          "team": "LAC",
-          "opponent": "LV",
-          "start_score": 1.0,
-          "recent_ppg": 1.0,
-          "games_this_season": 1,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "explain": "Averaging 1.0 ppg over 1 game(s) this season.",
-          "rank": 25
-        },
-        {
           "player_id": "PHI_DST",
           "name": "PHI D/ST",
           "position": "DST",
@@ -3691,7 +3676,7 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 1.0 ppg over 1 game(s) this season.",
-          "rank": 26
+          "rank": 25
         },
         {
           "player_id": "GB_DST",
@@ -3699,6 +3684,21 @@
           "position": "DST",
           "team": "GB",
           "opponent": "NYJ",
+          "start_score": 1.0,
+          "recent_ppg": 1.0,
+          "games_this_season": 1,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "explain": "Averaging 1.0 ppg over 1 game(s) this season.",
+          "rank": 26
+        },
+        {
+          "player_id": "LAC_DST",
+          "name": "LAC D/ST",
+          "position": "DST",
+          "team": "LAC",
+          "opponent": "LV",
           "start_score": 1.0,
           "recent_ppg": 1.0,
           "games_this_season": 1,
@@ -3836,21 +3836,6 @@
           "rank": 3
         },
         {
-          "player_id": "00-0036389",
-          "name": "Jalen Hurts",
-          "position": "QB",
-          "team": "PHI",
-          "opponent": "TEN",
-          "start_score": 26.08,
-          "recent_ppg": 24.72,
-          "games_this_season": 1,
-          "matchup_adj": 1.36,
-          "matchup_source": "prior_season_fallback",
-          "injury_status": null,
-          "explain": "Averaging 24.7 ppg over 1 game(s) this season.",
-          "rank": 4
-        },
-        {
           "player_id": "00-0040691",
           "name": "Jaxson Dart",
           "position": "QB",
@@ -3863,6 +3848,21 @@
           "matchup_source": "prior_season_fallback",
           "injury_status": null,
           "explain": "Averaging 26.6 ppg over 1 game(s) this season.",
+          "rank": 4
+        },
+        {
+          "player_id": "00-0036389",
+          "name": "Jalen Hurts",
+          "position": "QB",
+          "team": "PHI",
+          "opponent": "TEN",
+          "start_score": 26.08,
+          "recent_ppg": 24.72,
+          "games_this_season": 1,
+          "matchup_adj": 1.36,
+          "matchup_source": "prior_season_fallback",
+          "injury_status": null,
+          "explain": "Averaging 24.7 ppg over 1 game(s) this season.",
           "rank": 5
         },
         {
@@ -4798,21 +4798,6 @@
           "rank": 30
         },
         {
-          "player_id": "00-0039811",
-          "name": "MarShawn Lloyd",
-          "position": "RB",
-          "team": "GB",
-          "opponent": "NYJ",
-          "start_score": 7.0,
-          "recent_ppg": 3.7,
-          "games_this_season": 1,
-          "matchup_adj": 3.3,
-          "matchup_source": "prior_season_fallback",
-          "injury_status": null,
-          "explain": "Averaging 3.7 ppg over 1 game(s) this season. Facing NYJ, a favorable matchup for RBs this week.",
-          "rank": 31
-        },
-        {
           "player_id": "00-0040719",
           "name": "Bhayshul Tuten",
           "position": "RB",
@@ -4825,6 +4810,21 @@
           "matchup_source": "prior_season_fallback",
           "injury_status": null,
           "explain": "Averaging 8.8 ppg over 1 game(s) this season. Facing DEN, a tough matchup for RBs this week.",
+          "rank": 31
+        },
+        {
+          "player_id": "00-0039811",
+          "name": "MarShawn Lloyd",
+          "position": "RB",
+          "team": "GB",
+          "opponent": "NYJ",
+          "start_score": 7.0,
+          "recent_ppg": 3.7,
+          "games_this_season": 1,
+          "matchup_adj": 3.3,
+          "matchup_source": "prior_season_fallback",
+          "injury_status": null,
+          "explain": "Averaging 3.7 ppg over 1 game(s) this season. Facing NYJ, a favorable matchup for RBs this week.",
           "rank": 32
         },
         {
@@ -4978,21 +4978,6 @@
           "rank": 42
         },
         {
-          "player_id": "00-0037746",
-          "name": "Brian Robinson",
-          "position": "RB",
-          "team": "ATL",
-          "opponent": "CAR",
-          "start_score": 4.1,
-          "recent_ppg": 3.1,
-          "games_this_season": 1,
-          "matchup_adj": 1.0,
-          "matchup_source": "prior_season_fallback",
-          "injury_status": null,
-          "explain": "Averaging 3.1 ppg over 1 game(s) this season.",
-          "rank": 43
-        },
-        {
           "player_id": "00-0038488",
           "name": "Brady Russell",
           "position": "RB",
@@ -5005,6 +4990,21 @@
           "matchup_source": "prior_season_fallback",
           "injury_status": null,
           "explain": "Averaging 2.0 ppg over 1 game(s) this season. Facing ARI, a favorable matchup for RBs this week.",
+          "rank": 43
+        },
+        {
+          "player_id": "00-0037746",
+          "name": "Brian Robinson",
+          "position": "RB",
+          "team": "ATL",
+          "opponent": "CAR",
+          "start_score": 4.1,
+          "recent_ppg": 3.1,
+          "games_this_season": 1,
+          "matchup_adj": 1.0,
+          "matchup_source": "prior_season_fallback",
+          "injury_status": null,
+          "explain": "Averaging 3.1 ppg over 1 game(s) this season.",
           "rank": 44
         },
         {
@@ -6287,21 +6287,6 @@
           "rank": 29
         },
         {
-          "player_id": "00-0038547",
-          "name": "Luke Schoonmaker",
-          "position": "TE",
-          "team": "DAL",
-          "opponent": "WAS",
-          "start_score": 2.61,
-          "recent_ppg": 1.2,
-          "games_this_season": 1,
-          "matchup_adj": 1.41,
-          "matchup_source": "prior_season_fallback",
-          "injury_status": null,
-          "explain": "Averaging 1.2 ppg over 1 game(s) this season.",
-          "rank": 30
-        },
-        {
           "player_id": "00-0039793",
           "name": "AJ Barner",
           "position": "TE",
@@ -6314,6 +6299,21 @@
           "matchup_source": "prior_season_fallback",
           "injury_status": null,
           "explain": "Averaging 1.3 ppg over 1 game(s) this season.",
+          "rank": 30
+        },
+        {
+          "player_id": "00-0038547",
+          "name": "Luke Schoonmaker",
+          "position": "TE",
+          "team": "DAL",
+          "opponent": "WAS",
+          "start_score": 2.61,
+          "recent_ppg": 1.2,
+          "games_this_season": 1,
+          "matchup_adj": 1.41,
+          "matchup_source": "prior_season_fallback",
+          "injury_status": null,
+          "explain": "Averaging 1.2 ppg over 1 game(s) this season.",
           "rank": 31
         },
         {
@@ -6482,21 +6482,6 @@
           "rank": 42
         },
         {
-          "player_id": "00-0035631",
-          "name": "Drew Sample",
-          "position": "TE",
-          "team": "CIN",
-          "opponent": "HOU",
-          "start_score": 1.47,
-          "recent_ppg": 1.9,
-          "games_this_season": 1,
-          "matchup_adj": -0.43,
-          "matchup_source": "prior_season_fallback",
-          "injury_status": null,
-          "explain": "Averaging 1.9 ppg over 1 game(s) this season.",
-          "rank": 43
-        },
-        {
           "player_id": "00-0037005",
           "name": "Tommy Tremble",
           "position": "TE",
@@ -6509,6 +6494,21 @@
           "matchup_source": "prior_season_fallback",
           "injury_status": null,
           "explain": "Averaging 2.5 ppg over 1 game(s) this season.",
+          "rank": 43
+        },
+        {
+          "player_id": "00-0035631",
+          "name": "Drew Sample",
+          "position": "TE",
+          "team": "CIN",
+          "opponent": "HOU",
+          "start_score": 1.47,
+          "recent_ppg": 1.9,
+          "games_this_season": 1,
+          "matchup_adj": -0.43,
+          "matchup_source": "prior_season_fallback",
+          "injury_status": null,
+          "explain": "Averaging 1.9 ppg over 1 game(s) this season.",
           "rank": 44
         },
         {
@@ -7236,21 +7236,6 @@
           "rank": 10
         },
         {
-          "player_id": "ARI_DST",
-          "name": "ARI D/ST",
-          "position": "DST",
-          "team": "ARI",
-          "opponent": "SEA",
-          "start_score": 8.0,
-          "recent_ppg": 8.0,
-          "games_this_season": 1,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "explain": "Averaging 8.0 ppg over 1 game(s) this season.",
-          "rank": 11
-        },
-        {
           "player_id": "MIN_DST",
           "name": "MIN D/ST",
           "position": "DST",
@@ -7263,22 +7248,22 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 8.0 ppg over 1 game(s) this season.",
-          "rank": 12
+          "rank": 11
         },
         {
-          "player_id": "BAL_DST",
-          "name": "BAL D/ST",
+          "player_id": "ARI_DST",
+          "name": "ARI D/ST",
           "position": "DST",
-          "team": "BAL",
-          "opponent": "NO",
-          "start_score": 6.0,
-          "recent_ppg": 6.0,
+          "team": "ARI",
+          "opponent": "SEA",
+          "start_score": 8.0,
+          "recent_ppg": 8.0,
           "games_this_season": 1,
           "matchup_adj": null,
           "matchup_source": null,
           "injury_status": null,
-          "explain": "Averaging 6.0 ppg over 1 game(s) this season.",
-          "rank": 13
+          "explain": "Averaging 8.0 ppg over 1 game(s) this season.",
+          "rank": 12
         },
         {
           "player_id": "NE_DST",
@@ -7293,7 +7278,7 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 6.0 ppg over 1 game(s) this season.",
-          "rank": 14
+          "rank": 13
         },
         {
           "player_id": "BUF_DST",
@@ -7301,6 +7286,21 @@
           "position": "DST",
           "team": "BUF",
           "opponent": "DET",
+          "start_score": 6.0,
+          "recent_ppg": 6.0,
+          "games_this_season": 1,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "explain": "Averaging 6.0 ppg over 1 game(s) this season.",
+          "rank": 14
+        },
+        {
+          "player_id": "BAL_DST",
+          "name": "BAL D/ST",
+          "position": "DST",
+          "team": "BAL",
+          "opponent": "NO",
           "start_score": 6.0,
           "recent_ppg": 6.0,
           "games_this_season": 1,
@@ -7326,21 +7326,6 @@
           "rank": 16
         },
         {
-          "player_id": "MIA_DST",
-          "name": "MIA D/ST",
-          "position": "DST",
-          "team": "MIA",
-          "opponent": "SF",
-          "start_score": 4.0,
-          "recent_ppg": 4.0,
-          "games_this_season": 1,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "explain": "Averaging 4.0 ppg over 1 game(s) this season.",
-          "rank": 17
-        },
-        {
           "player_id": "CHI_DST",
           "name": "CHI D/ST",
           "position": "DST",
@@ -7353,22 +7338,22 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 4.0 ppg over 1 game(s) this season.",
-          "rank": 18
+          "rank": 17
         },
         {
-          "player_id": "NYG_DST",
-          "name": "NYG D/ST",
+          "player_id": "MIA_DST",
+          "name": "MIA D/ST",
           "position": "DST",
-          "team": "NYG",
-          "opponent": "LA",
-          "start_score": 3.0,
-          "recent_ppg": 3.0,
+          "team": "MIA",
+          "opponent": "SF",
+          "start_score": 4.0,
+          "recent_ppg": 4.0,
           "games_this_season": 1,
           "matchup_adj": null,
           "matchup_source": null,
           "injury_status": null,
-          "explain": "Averaging 3.0 ppg over 1 game(s) this season.",
-          "rank": 19
+          "explain": "Averaging 4.0 ppg over 1 game(s) this season.",
+          "rank": 18
         },
         {
           "player_id": "DAL_DST",
@@ -7383,14 +7368,29 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 3.0 ppg over 1 game(s) this season.",
+          "rank": 19
+        },
+        {
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
+          "position": "DST",
+          "team": "DEN",
+          "opponent": "JAX",
+          "start_score": 3.0,
+          "recent_ppg": 3.0,
+          "games_this_season": 1,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "explain": "Averaging 3.0 ppg over 1 game(s) this season.",
           "rank": 20
         },
         {
-          "player_id": "WAS_DST",
-          "name": "WAS D/ST",
+          "player_id": "NYG_DST",
+          "name": "NYG D/ST",
           "position": "DST",
-          "team": "WAS",
-          "opponent": "DAL",
+          "team": "NYG",
+          "opponent": "LA",
           "start_score": 3.0,
           "recent_ppg": 3.0,
           "games_this_season": 1,
@@ -7401,11 +7401,11 @@
           "rank": 21
         },
         {
-          "player_id": "DEN_DST",
-          "name": "DEN D/ST",
+          "player_id": "WAS_DST",
+          "name": "WAS D/ST",
           "position": "DST",
-          "team": "DEN",
-          "opponent": "JAX",
+          "team": "WAS",
+          "opponent": "DAL",
           "start_score": 3.0,
           "recent_ppg": 3.0,
           "games_this_season": 1,
@@ -7446,21 +7446,6 @@
           "rank": 24
         },
         {
-          "player_id": "LAC_DST",
-          "name": "LAC D/ST",
-          "position": "DST",
-          "team": "LAC",
-          "opponent": "LV",
-          "start_score": 1.0,
-          "recent_ppg": 1.0,
-          "games_this_season": 1,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "explain": "Averaging 1.0 ppg over 1 game(s) this season.",
-          "rank": 25
-        },
-        {
           "player_id": "PHI_DST",
           "name": "PHI D/ST",
           "position": "DST",
@@ -7473,7 +7458,7 @@
           "matchup_source": null,
           "injury_status": null,
           "explain": "Averaging 1.0 ppg over 1 game(s) this season.",
-          "rank": 26
+          "rank": 25
         },
         {
           "player_id": "GB_DST",
@@ -7481,6 +7466,21 @@
           "position": "DST",
           "team": "GB",
           "opponent": "NYJ",
+          "start_score": 1.0,
+          "recent_ppg": 1.0,
+          "games_this_season": 1,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "explain": "Averaging 1.0 ppg over 1 game(s) this season.",
+          "rank": 26
+        },
+        {
+          "player_id": "LAC_DST",
+          "name": "LAC D/ST",
+          "position": "DST",
+          "team": "LAC",
+          "opponent": "LV",
           "start_score": 1.0,
           "recent_ppg": 1.0,
           "games_this_season": 1,
