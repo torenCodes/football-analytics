@@ -46,7 +46,7 @@
       </div>
 
       <div class="front-block">
-        <div class="front-block-title">Draft Board -- Biggest Value Gaps</div>
+        <div class="front-block-title" id="value-gap-title">Draft Board -- Biggest Value Gaps</div>
         <div class="table-scroll">
           <table class="tight-table" id="value-gap-table">
             <thead><tr><th>Rank</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Edge</th><th class="num">Gap vs. Market</th></tr></thead>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="front-block" style="margin-bottom: 0.5rem;">
-        <div class="front-block-title">Position Leaders</div>
+        <div class="front-block-title">2025 Season Leaders</div>
         <div class="mini-leader-grid" id="mini-leaders"></div>
       </div>
 
@@ -155,47 +155,24 @@ function teamSpan(abbr) {
 document.getElementById('masthead-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 
 async function loadFantasyColumn() {
+  const safeJson = (url) => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
   try {
-    const [perfectTeam, draftBoard] = await Promise.all([
+    const [perfectTeam, draftBoard, seasonState] = await Promise.all([
       fetch('data/fantasy/perfect_team.json').then(r => r.json()),
       fetch('data/fantasy/draft_board.json').then(r => r.json()),
+      safeJson('data/fantasy/season_state.json'),
     ]);
+
+    if (seasonState && seasonState.season_started) {
+      await loadFantasyColumnInSeason(seasonState);
+    } else {
+      loadFantasyColumnPreseason(perfectTeam, draftBoard);
+    }
+
+    // Position leader mini-columns stay on the 2025 retrospective regardless
+    // of pivot state -- a different, complementary dataset to whichever
+    // current/preseason content is above it, not a duplicate of it.
     const pt = perfectTeam.ppr;
-    const db = draftBoard.ppr;
-
-    document.getElementById('fantasy-col-title').textContent = `Perfect Team & Draft Board -- ${pt.season}/${db.draft_season}`;
-    document.getElementById('perfect-lineup-title').textContent = `${pt.season} Perfect Lineup -- Box Score`;
-
-    // Perfect lineup, dark box-score panel
-    const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
-    const slots = [];
-    for (const slot of slotOrder) {
-      for (const p of (pt.perfect_lineup[slot] || [])) slots.push({ slot, ...p });
-    }
-    document.getElementById('perfect-lineup-rows').innerHTML = slots.map(p => `
-      <div class="stat-row"><span class="slot">${p.slot}</span><span>${p.name} &middot; ${p.team}</span><span class="pts">${fmt1(p.points)}</span></div>
-    `).join('');
-
-    // Biggest value gaps across RB/WR/TE, restricted to players we actually
-    // rank as relevant (our_rank <= 24) -- otherwise deep-bench players with
-    // near-zero market presence produce enormous but meaningless "gaps"
-    // (e.g. a 4 PPG TE we rank 42nd vs. a market that doesn't rank him at
-    // all isn't a sleeper story, it's two models agreeing he's irrelevant).
-    const RELEVANCE_CUTOFF = 24;
-    let gaps = [];
-    for (const pos of ['RB', 'WR', 'TE']) {
-      for (const p of (db.rankings_by_position[pos] || [])) {
-        if (p.market_gap !== null && p.our_rank <= RELEVANCE_CUTOFF) gaps.push(p);
-      }
-    }
-    gaps.sort((a, b) => b.market_gap - a.market_gap);
-    gaps = gaps.slice(0, 16);
-    document.querySelector('#value-gap-table tbody').innerHTML = gaps.map(p => {
-      const gapPill = p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` : `<span class="pill down">${p.market_gap}</span>`;
-      return `<tr><td>${p.our_rank}</td><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.edge_score)}</td><td class="num">${gapPill}</td></tr>`;
-    }).join('') || '<tr><td colspan="6" class="empty-state">No data</td></tr>';
-
-    // Position leader mini-columns
     const positions = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
     document.getElementById('mini-leaders').innerHTML = positions.map(pos => {
       const top10 = (pt.leaders_by_position[pos] || []).slice(0, 10);
@@ -204,6 +181,102 @@ async function loadFantasyColumn() {
     }).join('');
   } catch (e) {
     document.getElementById('fantasy-col-sub').textContent = 'Fantasy data not available yet -- run scripts/fantasy_scan.py.';
+  }
+}
+
+function loadFantasyColumnPreseason(perfectTeam, draftBoard) {
+  const pt = perfectTeam.ppr;
+  const db = draftBoard.ppr;
+
+  document.getElementById('fantasy-col-title').textContent = `Perfect Team & Draft Board -- ${pt.season}/${db.draft_season}`;
+  document.getElementById('perfect-lineup-title').textContent = `${pt.season} Perfect Lineup -- Box Score`;
+
+  const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
+  const slots = [];
+  for (const slot of slotOrder) {
+    for (const p of (pt.perfect_lineup[slot] || [])) slots.push({ slot, ...p });
+  }
+  document.getElementById('perfect-lineup-rows').innerHTML = slots.map(p => `
+    <div class="stat-row"><span class="slot">${p.slot}</span><span>${p.name} &middot; ${p.team}</span><span class="pts">${fmt1(p.points)}</span></div>
+  `).join('');
+
+  document.getElementById('value-gap-title').textContent = 'Draft Board -- Biggest Value Gaps';
+  document.querySelector('#value-gap-table thead').innerHTML =
+    '<tr><th>Rank</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Edge</th><th class="num">Gap vs. Market</th></tr>';
+
+  // Biggest value gaps across RB/WR/TE, restricted to players we actually
+  // rank as relevant (our_rank <= 24) -- otherwise deep-bench players with
+  // near-zero market presence produce enormous but meaningless "gaps"
+  // (e.g. a 4 PPG TE we rank 42nd vs. a market that doesn't rank him at
+  // all isn't a sleeper story, it's two models agreeing he's irrelevant).
+  const RELEVANCE_CUTOFF = 24;
+  let gaps = [];
+  for (const pos of ['RB', 'WR', 'TE']) {
+    for (const p of (db.rankings_by_position[pos] || [])) {
+      if (p.market_gap !== null && p.our_rank <= RELEVANCE_CUTOFF) gaps.push(p);
+    }
+  }
+  gaps.sort((a, b) => b.market_gap - a.market_gap);
+  gaps = gaps.slice(0, 16);
+  document.querySelector('#value-gap-table tbody').innerHTML = gaps.map(p => {
+    const gapPill = p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` : `<span class="pill down">${p.market_gap}</span>`;
+    return `<tr><td>${p.our_rank}</td><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.edge_score)}</td><td class="num">${gapPill}</td></tr>`;
+  }).join('') || '<tr><td colspan="6" class="empty-state">No data</td></tr>';
+}
+
+async function loadFantasyColumnInSeason(seasonState) {
+  const season = seasonState.season;
+  const week = seasonState.current_week;
+  const [teamOfWeek, weeklyRankings] = await Promise.all([
+    week ? fetch(`data/fantasy/archive/${season}-w${String(week).padStart(2, '0')}-team-of-week.json`).then(r => r.ok ? r.json() : null).catch(() => null) : Promise.resolve(null),
+    fetch('data/fantasy/weekly_rankings.json').then(r => r.json()).catch(() => null),
+  ]);
+
+  document.getElementById('fantasy-col-title').textContent = week ? `Team of the Week -- Week ${week}, ${season}` : `Fantasy -- ${season} Season`;
+  document.getElementById('fantasy-col-sub').textContent = 'PPR scoring shown -- Week’s picks factor in matchup + injury status';
+
+  document.getElementById('perfect-lineup-title').textContent = week ? `Week ${week} Best Lineup -- Box Score` : 'Team of the Week';
+  if (teamOfWeek) {
+    const tow = teamOfWeek.ppr;
+    const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
+    const slots = [];
+    for (const slot of slotOrder) {
+      for (const p of (tow.perfect_lineup[slot] || [])) slots.push({ slot, ...p });
+    }
+    document.getElementById('perfect-lineup-rows').innerHTML = slots.map(p => `
+      <div class="stat-row"><span class="slot">${p.slot}</span><span>${p.name} &middot; ${p.team}</span><span class="pts">${fmt1(p.points)}</span></div>
+    `).join('');
+  } else {
+    document.getElementById('perfect-lineup-rows').innerHTML = '<div class="empty-state" style="color: #4c7a60;">Team of the Week unlocks once this week’s games are final.</div>';
+  }
+
+  document.querySelector('#value-gap-table thead').innerHTML =
+    '<tr><th>Rank</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Start Score</th><th class="num">Matchup Edge</th></tr>';
+
+  if (weeklyRankings && weeklyRankings.available) {
+    const wr = weeklyRankings.ppr;
+    document.getElementById('value-gap-title').textContent = `Weekly Rankings -- Week ${wr.week} Biggest Matchup Edges`;
+    // Same relevance-cutoff logic as the preseason value-gap table, and the
+    // same bye-week handling for free: players whose team has a bye this
+    // week are never in weekly_rankings.json to begin with (excluded at
+    // the source in compute_weekly_rankings), so they can't show up here.
+    const RELEVANCE_CUTOFF = 24;
+    let edges = [];
+    for (const pos of ['RB', 'WR', 'TE']) {
+      for (const p of (wr.rankings_by_position[pos] || [])) {
+        if (p.matchup_adj !== null && p.rank <= RELEVANCE_CUTOFF) edges.push(p);
+      }
+    }
+    edges.sort((a, b) => b.matchup_adj - a.matchup_adj);
+    edges = edges.slice(0, 16);
+    document.querySelector('#value-gap-table tbody').innerHTML = edges.map(p => {
+      const edgePill = p.matchup_adj > 0 ? `<span class="pill up">+${fmt1(p.matchup_adj)}</span>` : `<span class="pill down">${fmt1(p.matchup_adj)}</span>`;
+      return `<tr><td>${p.rank}</td><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.start_score)}</td><td class="num">${edgePill}</td></tr>`;
+    }).join('') || '<tr><td colspan="6" class="empty-state">No data</td></tr>';
+  } else {
+    document.getElementById('value-gap-title').textContent = 'Weekly Rankings -- Biggest Matchup Edges';
+    document.querySelector('#value-gap-table tbody').innerHTML =
+      `<tr><td colspan="6" class="empty-state">${(weeklyRankings && weeklyRankings.note) || 'Weekly rankings unlock once at least one 2026 game has been played.'}</td></tr>`;
   }
 }
 
