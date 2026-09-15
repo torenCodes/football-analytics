@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 1,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039918",
+          "name": "Caleb Williams",
+          "team": "CHI",
+          "points": 37.3
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0032764",
+          "name": "Derrick Henry",
+          "team": "BAL",
+          "points": 35.3
+        },
+        {
+          "player_id": "00-0038134",
+          "name": "Kenneth Walker III",
+          "team": "KC",
+          "points": 34.1
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039491",
+          "name": "Jalen Coker",
+          "team": "CAR",
+          "points": 33.8
+        },
+        {
+          "player_id": "00-0038124",
+          "name": "Christian Watson",
+          "team": "GB",
+          "points": 32.7
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "points": 27.8
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 33.6
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0036854",
+          "name": "Evan McPherson",
+          "team": "CIN",
+          "points": 19.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "PIT_DST",
+          "name": "PIT D/ST",
+          "team": "PIT",
+          "points": 18.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 271.6,
+    "bench": [
+      {
+        "player_id": "00-0034857",
+        "name": "Josh Allen",
+        "team": "BUF",
+        "position": "QB",
+        "points": 35.7
+      },
+      {
+        "player_id": "00-0040122",
+        "name": "Ashton Jeanty",
+        "team": "LV",
+        "position": "RB",
+        "points": 32.7
+      },
+      {
+        "player_id": "00-0036275",
+        "name": "D'Andre Swift",
+        "team": "CHI",
+        "position": "RB",
+        "points": 32.4
+      },
+      {
+        "player_id": "00-0038542",
+        "name": "Bijan Robinson",
+        "team": "ATL",
+        "position": "RB",
+        "points": 31.3
+      },
+      {
+        "player_id": "00-0036322",
+        "name": "Justin Jefferson",
+        "team": "MIN",
+        "position": "WR",
+        "points": 31.2
+      },
+      {
+        "player_id": "00-0035685",
+        "name": "David Montgomery",
+        "team": "HOU",
+        "position": "RB",
+        "points": 28.9
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 1,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039918",
+          "name": "Caleb Williams",
+          "team": "CHI",
+          "points": 37.3
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0032764",
+          "name": "Derrick Henry",
+          "team": "BAL",
+          "points": 34.3
+        },
+        {
+          "player_id": "00-0036275",
+          "name": "D'Andre Swift",
+          "team": "CHI",
+          "points": 31.4
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038124",
+          "name": "Christian Watson",
+          "team": "GB",
+          "points": 26.7
+        },
+        {
+          "player_id": "00-0039491",
+          "name": "Jalen Coker",
+          "team": "CAR",
+          "points": 25.8
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "points": 19.8
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0038134",
+          "name": "Kenneth Walker III",
+          "team": "KC",
+          "points": 31.1
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0036854",
+          "name": "Evan McPherson",
+          "team": "CIN",
+          "points": 19.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "PIT_DST",
+          "name": "PIT D/ST",
+          "team": "PIT",
+          "points": 18.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 243.4,
+    "bench": [
+      {
+        "player_id": "00-0034857",
+        "name": "Josh Allen",
+        "team": "BUF",
+        "position": "QB",
+        "points": 35.7
+      },
+      {
+        "player_id": "00-0039139",
+        "name": "Jahmyr Gibbs",
+        "team": "DET",
+        "position": "RB",
+        "points": 28.6
+      },
+      {
+        "player_id": "00-0040122",
+        "name": "Ashton Jeanty",
+        "team": "LV",
+        "position": "RB",
+        "points": 26.7
+      },
+      {
+        "player_id": "00-0035685",
+        "name": "David Montgomery",
+        "team": "HOU",
+        "position": "RB",
+        "points": 25.9
+      },
+      {
+        "player_id": "00-0038542",
+        "name": "Bijan Robinson",
+        "team": "ATL",
+        "position": "RB",
+        "points": 23.3
+      },
+      {
+        "player_id": "00-0036322",
+        "name": "Justin Jefferson",
+        "team": "MIN",
+        "position": "WR",
+        "points": 23.2
+      }
+    ]
+  }
+}
