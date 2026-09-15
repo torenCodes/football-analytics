@@ -2,9 +2,14 @@ name: Football Fantasy scan
 
 on:
   schedule:
-    - cron: '0 15 * * 2'   # Tuesday ~10am ET -- primary run
-    - cron: '0 19 * * 2'   # Tuesday ~3pm ET -- same-day backup, in case the morning run failed or ran too early
-    - cron: '0 13 * * 3'   # Wednesday ~9am ET -- final backup; commit step only fires on an actual diff, so a no-op run is harmless
+    # Minutes deliberately off the round numbers (:00/:15/:30/:45) -- GitHub's own
+    # docs warn scheduled workflows get silently skipped under load at those exact
+    # marks, since that's when every other repo's cron jobs fire too. Confirmed
+    # this bit us on 2026-09-15: no run of any kind (success OR failure) shows in
+    # the Actions history for that day -- the trigger itself never fired.
+    - cron: '7 15 * * 2'   # Tuesday ~10am ET -- primary run
+    - cron: '7 19 * * 2'   # Tuesday ~3pm ET -- same-day backup, in case the morning run was skipped or ran too early
+    - cron: '7 13 * * 3'   # Wednesday ~9am ET -- final backup; commit step only fires on an actual diff, so a no-op run is harmless
   workflow_dispatch:
 
 permissions:
