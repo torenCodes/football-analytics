@@ -214,6 +214,16 @@ function selectLeadersWeeklyTab(tab) {
 }
 
 const ROSTER_POS = ['QB', 'RB', 'WR', 'TE', 'K', 'DST'];
+const TEAM_NAMES = {
+  ARI: 'Arizona Cardinals', ATL: 'Atlanta Falcons', BAL: 'Baltimore Ravens', BUF: 'Buffalo Bills',
+  CAR: 'Carolina Panthers', CHI: 'Chicago Bears', CIN: 'Cincinnati Bengals', CLE: 'Cleveland Browns',
+  DAL: 'Dallas Cowboys', DEN: 'Denver Broncos', DET: 'Detroit Lions', GB: 'Green Bay Packers',
+  HOU: 'Houston Texans', IND: 'Indianapolis Colts', JAX: 'Jacksonville Jaguars', KC: 'Kansas City Chiefs',
+  LA: 'Los Angeles Rams', LAC: 'Los Angeles Chargers', LV: 'Las Vegas Raiders', MIA: 'Miami Dolphins',
+  MIN: 'Minnesota Vikings', NE: 'New England Patriots', NO: 'New Orleans Saints', NYG: 'New York Giants',
+  NYJ: 'New York Jets', PHI: 'Philadelphia Eagles', PIT: 'Pittsburgh Steelers', SEA: 'Seattle Seahawks',
+  SF: 'San Francisco 49ers', TB: 'Tampa Bay Buccaneers', TEN: 'Tennessee Titans', WAS: 'Washington Commanders',
+};
 let perfectTeamData = null;
 let draftBoardData = null;
 let dreamTeamData = null;
@@ -544,7 +554,7 @@ function renderWeeklyRankings() {
       p.matchup_adj < 0 ? `<span class="pill down">${fmt1(p.matchup_adj)}</span>` : '0';
     return `<tr title="${p.explain || ''}">
       <td>${p.rank}</td>
-      <td>${p.name}</td>
+      <td>${p.position === 'DST' ? (TEAM_NAMES[p.team] || p.name) : p.name}</td>
       <td><span class="pill pos">${p.team}</span></td>
       <td>${p.opponent}</td>
       <td class="num-center">${fmt1(p.start_score)}</td>
