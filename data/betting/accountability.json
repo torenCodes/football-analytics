@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-16T02:15:25.526760+00:00"
+    "generated_at": "2026-09-16T17:44:37.587965+00:00"
   },
   "weeks_graded": 2,
   "games_graded": 15,
@@ -196,7 +196,7 @@
     {
       "season": 2026,
       "week": 2,
-      "locked_at": "2026-09-15T22:25:32.758036+00:00",
+      "locked_at": "2026-09-16T02:15:25.522463+00:00",
       "games_graded": 0,
       "correct_picks": 0,
       "accuracy": null,
@@ -205,12 +205,12 @@
           "game_id": "2026_02_CAR_ATL",
           "home_team": "ATL",
           "away_team": "CAR",
-          "our_pick": "away",
+          "our_pick": "home",
           "spread_home": -2.5,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans CAR by 0.2 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against ATL."
+          "storyline_short": "The model leans ATL by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against CAR."
         },
         {
           "game_id": "2026_02_MIN_CHI",
@@ -221,18 +221,18 @@
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans CHI by 22.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN."
+          "storyline_short": "The model leans CHI by 21.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN."
         },
         {
           "game_id": "2026_02_LV_LAC",
           "home_team": "LAC",
           "away_team": "LV",
           "our_pick": "home",
-          "spread_home": 6.5,
+          "spread_home": 7.0,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans LAC by 7.5 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LV."
+          "storyline_short": "The model leans LAC by 6.5 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV."
         },
         {
           "game_id": "2026_02_SEA_ARI",
@@ -243,18 +243,18 @@
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans ARI by 10.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA."
+          "storyline_short": "The model leans ARI by 11.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA."
         },
         {
           "game_id": "2026_02_WAS_DAL",
           "home_team": "DAL",
           "away_team": "WAS",
           "our_pick": "home",
-          "spread_home": 4.5,
+          "spread_home": 3.5,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans DAL by 9.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS."
+          "storyline_short": "The model leans DAL by 8.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS."
         },
         {
           "game_id": "2026_02_DET_BUF",
@@ -371,7 +371,7 @@
           "home_team": "SF",
           "away_team": "MIA",
           "our_pick": "home",
-          "spread_home": 13.5,
+          "spread_home": 12.5,
           "result": null,
           "push": null,
           "correct": null,
