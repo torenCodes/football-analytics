@@ -241,6 +241,10 @@ table.data-table .w-xs { width: 3.25rem; }
 table.data-table .w-sm { width: 4.5rem; }
 table.data-table .w-md { width: 5.5rem; }
 table.data-table .w-lg { width: 7rem; }
+/* Explicit cap for a Player column on a table with few other columns (e.g.
+   Waiver Wire) -- without it, the unclaimed-space rule above hands Player
+   the whole remainder, ballooning it far past what a name needs. */
+table.data-table .w-player { width: 9rem; }
 table.data-table th {
   text-align: center;
   font-family: 'JetBrains Mono', monospace;

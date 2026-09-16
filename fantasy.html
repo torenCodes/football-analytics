@@ -319,33 +319,28 @@ function renderBoardTable() {
   const rows = data.rankings_by_position[currentBoardPos] || [];
   const thead = document.querySelector('#board-table thead');
   const tbody = document.querySelector('#board-table tbody');
-  const lineLabel = currentBoardPos === 'DST' ? 'D-Line %' : 'O-Line %';
-  const coordLabel = currentBoardPos === 'DST' ? 'Same DC' : 'Same OC';
+  // Line continuity / same-HC / same-coordinator dropped from 2026-09 on --
+  // build_draft_board_explain already surfaces the notable cases as this
+  // row's tooltip, and with them as visible columns table-layout:fixed had
+  // nothing left to give the Player column (20px on a phone), same
+  // "tooltip over table-width bloat" call Weekly Rankings already makes.
   thead.innerHTML = `<tr>
     <th class="w-xs">Rank</th><th>Player</th><th class="w-sm">Team</th><th class="num-center w-sm">Edge</th>
-    <th class="num-center w-md">${lineLabel}</th><th class="center w-md">Same HC</th><th class="center w-md">${coordLabel}</th>
     <th class="num-center w-md">Mkt Rank</th><th class="num w-sm">Gap</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => {
     const gapPill = p.market_gap === null ? '--' :
       p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` :
       p.market_gap < 0 ? `<span class="pill down">${p.market_gap}</span>` : '0';
-    const coach = p.same_head_coach === null ? '--' : (p.same_head_coach ? 'Yes' : 'New HC');
-    const cont = p.line_continuity_pct === null ? '--' : Math.round(p.line_continuity_pct * 100) + '%';
-    const coordShortRole = p.coordinator_role === 'DC' ? 'DC' : 'OC';
-    const coord = p.same_coordinator === null ? '--' : (p.same_coordinator ? 'Yes' : `New ${coordShortRole}`);
     return `<tr title="${p.explain || (p.coordinator_name ? p.coordinator_role + ': ' + p.coordinator_name : '')}">
       <td>${p.our_rank}</td>
       <td>${p.name}</td>
       <td><span class="pill pos">${p.team}</span></td>
       <td class="num-center">${fmt1(p.edge_score)}</td>
-      <td class="num-center">${cont}</td>
-      <td class="center">${coach}</td>
-      <td class="center">${coord}</td>
       <td class="num-center">${p.market_rank !== null ? fmt1(p.market_rank) : '--'}</td>
       <td class="num">${gapPill}</td>
     </tr>`;
-  }).join('') || `<tr><td colspan="9" class="empty-state">No data</td></tr>`;
+  }).join('') || `<tr><td colspan="6" class="empty-state">No data</td></tr>`;
 }
 
 function renderDreamTeam() {
@@ -581,7 +576,7 @@ function renderWaiverWire() {
   }
   const rows = waiverWireData.by_position[currentFormat][currentWaiverWirePos] || [];
   thead.innerHTML = `<tr>
-    <th>Player</th><th class="w-sm">Team</th><th class="num-center w-md">PPG</th>
+    <th class="w-player">Player</th><th class="w-sm">Team</th><th class="num-center w-md">PPG</th>
     <th class="num-center w-md">Games</th><th class="num-center w-lg">Preseason Rank</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => `
