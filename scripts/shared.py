@@ -93,19 +93,24 @@ def build_current_team_lookup(rosters, season):
     }
 
 
-def build_coach_continuity(schedules, prior_season, current_season):
-    def primary_coach(season):
-        home = schedules.filter(pl.col("season") == season).select(pl.col("home_team").alias("team"), pl.col("home_coach").alias("coach"))
-        away = schedules.filter(pl.col("season") == season).select(pl.col("away_team").alias("team"), pl.col("away_coach").alias("coach"))
-        combined = pl.concat([home, away]).drop_nulls()
-        if combined.is_empty():
-            return {}
-        counts = combined.group_by(["team", "coach"]).len().sort("len", descending=True)
-        top = counts.group_by("team").first()
-        return dict(zip(top["team"].to_list(), top["coach"].to_list()))
+def primary_coach(schedules, season):
+    """Each team's primary coach for a season, by majority vote across that
+    team's home/away games (handles the rare mid-season coaching change --
+    the coach who ran the most games "wins," same as an interim coach who
+    only had 2 games would lose to a fired coach who had 15)."""
+    home = schedules.filter(pl.col("season") == season).select(pl.col("home_team").alias("team"), pl.col("home_coach").alias("coach"))
+    away = schedules.filter(pl.col("season") == season).select(pl.col("away_team").alias("team"), pl.col("away_coach").alias("coach"))
+    combined = pl.concat([home, away]).drop_nulls()
+    if combined.is_empty():
+        return {}
+    counts = combined.group_by(["team", "coach"]).len().sort("len", descending=True)
+    top = counts.group_by("team").first()
+    return dict(zip(top["team"].to_list(), top["coach"].to_list()))
 
-    prior_coach = primary_coach(prior_season)
-    current_coach = primary_coach(current_season)
+
+def build_coach_continuity(schedules, prior_season, current_season):
+    prior_coach = primary_coach(schedules, prior_season)
+    current_coach = primary_coach(schedules, current_season)
     result = {}
     for team in sorted(set(prior_coach) | set(current_coach)):
         c_prior = prior_coach.get(team)
@@ -115,4 +120,25 @@ def build_coach_continuity(schedules, prior_season, current_season):
             "coach_current": c_current,
             "same_coach": bool(c_prior and c_current and c_prior == c_current),
         }
+    return result
+
+
+def build_former_coach_matchups(schedules, prior_season, current_season):
+    """For each team whose prior_season coach left and is now coaching a
+    DIFFERENT team this season, maps team -> {coach_name, now_with}. A
+    caller checks former_coach.get(team, {}).get("now_with") == opponent to
+    know whether THIS specific matchup is a former-coach game -- shared
+    between betting_scan.py (a team-margin adjustment) and fantasy_scan.py
+    (a team-wide skill-position bump), since both need the identical
+    "who used to coach whom" fact, not two independently-computed copies."""
+    prior_coach = primary_coach(schedules, prior_season)
+    current_coach = primary_coach(schedules, current_season)
+    current_team_by_coach = {v: k for k, v in current_coach.items()}
+    result = {}
+    for team, old_coach in prior_coach.items():
+        if not old_coach:
+            continue
+        new_team = current_team_by_coach.get(old_coach)
+        if new_team and new_team != team:
+            result[team] = {"coach_name": old_coach, "now_with": new_team}
     return result

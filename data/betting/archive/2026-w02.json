@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 2,
-  "locked_at": "2026-09-15T22:25:32.758036+00:00",
+  "locked_at": "2026-09-16T02:15:25.522463+00:00",
   "games": [
     {
       "game_id": "2026_02_CAR_ATL",
@@ -14,12 +14,12 @@
       "home_team": "ATL",
       "away_team": "CAR",
       "div_game": true,
-      "model_margin_home": -0.2,
+      "model_margin_home": 0.8,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
       },
-      "our_pick": "away",
+      "our_pick": "home",
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -54,6 +54,7 @@
         "away": false,
         "last_season": 2025
       },
+      "former_coach": null,
       "roof": null,
       "international_site": false,
       "weather": {
@@ -61,20 +62,20 @@
         "temperature_f": 91,
         "wind": "0 to 5 mph"
       },
-      "storyline": "The model leans CAR by 0.2 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against ATL. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CAR is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. This is a division game, and those historically play tighter than the numbers alone suggest. ATL also lost the last meeting between these two, so there's a motivation angle the model can't price in. Forecast for kickoff: Mostly Sunny then Slight Chance Showers And Thunderstorms, 91\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans CAR by 0.2 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against ATL.",
+      "storyline": "The model leans ATL by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against CAR. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. ATL's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. ATL also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Mostly Sunny then Slight Chance Showers And Thunderstorms, 91\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model leans ATL by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against CAR.",
       "market": {
         "spread_home": -2.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": 130,
-        "moneyline_away": -155,
+        "spread_home_odds": -118,
+        "spread_away_odds": -102,
+        "moneyline_home": 120,
+        "moneyline_away": -142,
         "total": 43.5,
-        "over_odds": -105,
-        "under_odds": -115,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "away",
-        "agrees_with_model": true,
-        "edge_vs_market": 2.3
+        "agrees_with_model": false,
+        "edge_vs_market": 3.3
       }
     },
     {
@@ -88,7 +89,7 @@
       "home_team": "CHI",
       "away_team": "MIN",
       "div_game": true,
-      "model_margin_home": 22.4,
+      "model_margin_home": 21.4,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -128,6 +129,7 @@
         "away": true,
         "last_season": 2025
       },
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -135,20 +137,20 @@
         "temperature_f": 76,
         "wind": "10 mph"
       },
-      "storyline": "The model leans CHI by 22.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. MIN also lost the last meeting between these two, so there's a motivation angle the model can't price in. Forecast for kickoff: Showers And Thunderstorms Likely, 76\u00b0F, wind 10 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans CHI by 22.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN.",
+      "storyline": "The model leans CHI by 21.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. MIN also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Showers And Thunderstorms Likely, 76\u00b0F, wind 10 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model leans CHI by 21.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN.",
       "market": {
         "spread_home": 5.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": -230,
-        "moneyline_away": 190,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -225,
+        "moneyline_away": 185,
         "total": 48.5,
-        "over_odds": -118,
-        "under_odds": -102,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "home",
         "agrees_with_model": true,
-        "edge_vs_market": 16.9
+        "edge_vs_market": 15.9
       }
     },
     {
@@ -162,7 +164,7 @@
       "home_team": "LAC",
       "away_team": "LV",
       "div_game": true,
-      "model_margin_home": 7.5,
+      "model_margin_home": 6.5,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -202,6 +204,7 @@
         "away": true,
         "last_season": 2025
       },
+      "former_coach": null,
       "roof": "dome",
       "international_site": false,
       "weather": {
@@ -209,20 +212,20 @@
         "temperature_f": 79,
         "wind": "0 to 10 mph"
       },
-      "storyline": "The model leans LAC by 7.5 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LV. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. LAC is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. This is a division game, and those historically play tighter than the numbers alone suggest. LV also lost the last meeting between these two, so there's a motivation angle the model can't price in. Forecast for kickoff: Mostly Sunny, 79\u00b0F, wind 0 to 10 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans LAC by 7.5 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LV.",
+      "storyline": "The model leans LAC by 6.5 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. LAC is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. This is a division game, and those historically play tighter than the numbers alone suggest. LV also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Mostly Sunny, 79\u00b0F, wind 0 to 10 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model leans LAC by 6.5 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV.",
       "market": {
-        "spread_home": 6.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": -305,
-        "moneyline_away": 245,
+        "spread_home": 7.0,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": -310,
+        "moneyline_away": 250,
         "total": 43.5,
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "home",
         "agrees_with_model": true,
-        "edge_vs_market": 1.0
+        "edge_vs_market": -0.5
       }
     },
     {
@@ -236,7 +239,7 @@
       "home_team": "ARI",
       "away_team": "SEA",
       "div_game": true,
-      "model_margin_home": 10.8,
+      "model_margin_home": 11.8,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -276,6 +279,7 @@
         "away": false,
         "last_season": 2025
       },
+      "former_coach": null,
       "roof": null,
       "international_site": false,
       "weather": {
@@ -283,8 +287,8 @@
         "temperature_f": 103,
         "wind": "5 mph"
       },
-      "storyline": "The model leans ARI by 10.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. ARI is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Worth noting: SEA actually has the rest advantage here, working against the pick. This is a division game, and those historically play tighter than the numbers alone suggest. ARI also lost the last meeting between these two, so there's a motivation angle the model can't price in. Forecast for kickoff: Sunny, 103\u00b0F, wind 5 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans ARI by 10.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA.",
+      "storyline": "The model leans ARI by 11.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. ARI is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Worth noting: SEA actually has the rest advantage here, working against the pick. This is a division game, and those historically play tighter than the numbers alone suggest. ARI also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Sunny, 103\u00b0F, wind 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model leans ARI by 11.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA.",
       "market": {
         "spread_home": -4.5,
         "spread_home_odds": -115,
@@ -296,7 +300,7 @@
         "under_odds": -110,
         "market_favorite": "away",
         "agrees_with_model": false,
-        "edge_vs_market": 15.3
+        "edge_vs_market": 16.3
       }
     },
     {
@@ -310,7 +314,7 @@
       "home_team": "DAL",
       "away_team": "WAS",
       "div_game": true,
-      "model_margin_home": 9.7,
+      "model_margin_home": 8.7,
       "efficiency_source": {
         "home": "prior_season_fallback",
         "away": "prior_season_fallback"
@@ -350,6 +354,7 @@
         "away": true,
         "last_season": 2025
       },
+      "former_coach": null,
       "roof": null,
       "international_site": false,
       "weather": {
@@ -357,14 +362,14 @@
         "temperature_f": 99,
         "wind": "5 to 10 mph"
       },
-      "storyline": "The model leans DAL by 9.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. DAL's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. WAS also lost the last meeting between these two, so there's a motivation angle the model can't price in. Forecast for kickoff: Sunny, 99\u00b0F, wind 5 to 10 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans DAL by 9.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS.",
+      "storyline": "The model leans DAL by 8.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. DAL's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. WAS also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Sunny, 99\u00b0F, wind 5 to 10 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model leans DAL by 8.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS.",
       "market": {
-        "spread_home": 4.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -218,
-        "moneyline_away": 180,
+        "spread_home": 3.5,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": -225,
+        "moneyline_away": 185,
         "total": 50.5,
         "over_odds": -108,
         "under_odds": -112,
@@ -420,14 +425,15 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
         "short_forecast": "Chance Showers And Thunderstorms",
-        "temperature_f": 77,
-        "wind": "5 mph"
+        "temperature_f": 76,
+        "wind": "1 to 5 mph"
       },
-      "storyline": "The model leans BUF by 4.9 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DET. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Chance Showers And Thunderstorms, 77\u00b0F, wind 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model leans BUF by 4.9 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DET. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Chance Showers And Thunderstorms, 76\u00b0F, wind 1 to 5 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model leans BUF by 4.9 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DET.",
       "market": {
         "spread_home": 4.5,
@@ -436,8 +442,8 @@
         "moneyline_home": -218,
         "moneyline_away": 180,
         "total": 53.5,
-        "over_odds": -120,
-        "under_odds": 100,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "home",
         "agrees_with_model": true,
         "edge_vs_market": 0.4
@@ -490,6 +496,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "dome",
       "international_site": false,
       "weather": {
@@ -503,8 +510,8 @@
         "spread_home": 7.0,
         "spread_home_odds": -115,
         "spread_away_odds": -105,
-        "moneyline_home": -360,
-        "moneyline_away": 285,
+        "moneyline_home": -355,
+        "moneyline_away": 280,
         "total": 48.5,
         "over_odds": -108,
         "under_odds": -112,
@@ -560,6 +567,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -630,6 +638,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": null,
       "international_site": false,
       "weather": {
@@ -700,6 +709,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -713,8 +723,8 @@
         "spread_home": 8.5,
         "spread_home_odds": -112,
         "spread_away_odds": -108,
-        "moneyline_home": -395,
-        "moneyline_away": 310,
+        "moneyline_home": -410,
+        "moneyline_away": 320,
         "total": 40.5,
         "over_odds": -115,
         "under_odds": -105,
@@ -770,6 +780,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -840,6 +851,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -853,8 +865,8 @@
         "spread_home": 8.5,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": -380,
-        "moneyline_away": 300,
+        "moneyline_home": -410,
+        "moneyline_away": 320,
         "total": 46.5,
         "over_odds": -118,
         "under_odds": -102,
@@ -910,6 +922,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -921,10 +934,10 @@
       "storyline_short": "The model leans TEN by 0.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against PHI.",
       "market": {
         "spread_home": -7.0,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
-        "moneyline_home": 250,
-        "moneyline_away": -310,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": 245,
+        "moneyline_away": -305,
         "total": 39.5,
         "over_odds": -110,
         "under_odds": -110,
@@ -980,6 +993,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -991,10 +1005,10 @@
       "storyline_short": "The model leans PIT by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against NE.",
       "market": {
         "spread_home": 5.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -218,
-        "moneyline_away": 180,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -230,
+        "moneyline_away": 190,
         "total": 41.5,
         "over_odds": -112,
         "under_odds": -108,
@@ -1050,6 +1064,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -1061,13 +1076,13 @@
       "storyline_short": "The model leans DEN by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against JAX.",
       "market": {
         "spread_home": 2.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": -142,
-        "moneyline_away": 120,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -135,
+        "moneyline_away": 114,
         "total": 44.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "over_odds": -102,
+        "under_odds": -118,
         "market_favorite": "home",
         "agrees_with_model": true,
         "edge_vs_market": -1.7
@@ -1120,6 +1135,7 @@
         "away": null
       },
       "revenge_game": null,
+      "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
@@ -1130,9 +1146,9 @@
       "storyline": "The model leans SF by 5.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against MIA. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. SF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. SF also holds a rest advantage coming in, one more thing tilting this the model's way. Forecast for kickoff: Partly Sunny, 75\u00b0F, wind 2 to 10 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model leans SF by 5.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against MIA.",
       "market": {
-        "spread_home": 13.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
+        "spread_home": 12.5,
+        "spread_home_odds": -115,
+        "spread_away_odds": -105,
         "moneyline_home": -950,
         "moneyline_away": 625,
         "total": 45.5,
@@ -1140,7 +1156,7 @@
         "under_odds": -112,
         "market_favorite": "home",
         "agrees_with_model": true,
-        "edge_vs_market": -8.5
+        "edge_vs_market": -7.5
       }
     }
   ]

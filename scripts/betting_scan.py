@@ -31,6 +31,7 @@ import requests
 
 from shared import (
     build_coach_continuity,
+    build_former_coach_matchups,
     build_oline_continuity,
     json_safe,
     load_cache,
@@ -51,6 +52,11 @@ QB_OUT_STATUSES = {"Out", "Doubtful"}  # "Questionable" is a real coin-flip -- s
 QB_OUT_PENALTY = 4.0  # points; backtested estimates of a backup QB's scoring impact commonly range
 # ~3-7 points -- 4 is a defensible, modest v1 value, consistent with this model's philosophy of small
 # explainable nudges rather than a fully-modeled per-player value system (that's a future project, not this one)
+REVENGE_BONUS = 1.0  # points, for a team that lost the last meeting against this same opponent (only
+# ever set for division games -- see last_meeting/revenge_flag). Same order as HOME_FIELD_ADJ (1.5),
+# well under QB_OUT_PENALTY (4.0) -- a psychological nudge stays softer than a concrete injury impact
+FORMER_COACH_BONUS = 1.0  # points, for a team facing the coach who coached THEM last season -- same
+# magnitude as REVENGE_BONUS, same reasoning
 
 
 def team_game_efficiency(team_stats):
@@ -225,6 +231,7 @@ def build_storyline(
     home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
     oline_home, oline_away, coach_home, coach_away, revenge_flag, div_game,
     weather, international_site, roof, qb_injury_home=None, qb_injury_away=None,
+    former_coach_home=None, former_coach_away=None,
 ):
     """A short prose readout of *why* the model landed where it did --
     the same factors already computed for this game, synthesized into
@@ -301,8 +308,14 @@ def build_storyline(
         line = "This is a division game, and those historically play tighter than the numbers alone suggest."
         if revenge_flag and (revenge_flag.get("home") or revenge_flag.get("away")):
             revenge_team = home if revenge_flag.get("home") else away
-            line += f" {revenge_team} also lost the last meeting between these two, so there's a motivation angle the model can't price in."
+            line += f" {revenge_team} also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote."
         sentences.append(line)
+
+    if former_coach_home or former_coach_away:
+        team, coach = (home, former_coach_home) if former_coach_home else (away, former_coach_away)
+        sentences.append(
+            f"{team} is also facing {coach['coach_name']}, who coached {team} last season -- that motivation angle is already priced in too."
+        )
 
     if international_site:
         sentences.append("This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.")
@@ -428,6 +441,7 @@ def build_game_board(schedules, team_stats, injuries):
     depth_charts = load_cache("depth_charts")
     oline_continuity = build_oline_continuity(depth_charts, RETRO_SEASON, UPCOMING_SEASON)
     coach_continuity = build_coach_continuity(schedules, RETRO_SEASON, UPCOMING_SEASON)
+    former_coach_matchups = build_former_coach_matchups(schedules, RETRO_SEASON, UPCOMING_SEASON)
     qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week)
 
     def team_off(team):
@@ -452,22 +466,33 @@ def build_game_board(schedules, team_stats, injuries):
         if None not in (home_off_pp, away_off_pp, home_def_pp, away_def_pp):
             model_margin_home = ((home_off_pp - away_def_pp) - (away_off_pp - home_def_pp)) * PLAY_SCALE + HOME_FIELD_ADJ
 
+        meeting = last_meeting(schedules, home, away, UPCOMING_SEASON)
+        revenge_flag = None
+        if meeting and r["div_game"]:
+            revenge_flag = {"home": meeting["winner"] == away, "away": meeting["winner"] == home, "last_season": meeting["season"]}
+
+        former_coach_home = former_coach_matchups.get(home) if former_coach_matchups.get(home, {}).get("now_with") == away else None
+        former_coach_away = former_coach_matchups.get(away) if former_coach_matchups.get(away, {}).get("now_with") == home else None
+
         qb_injury_home, qb_injury_away = qb_injury_flags.get(home), qb_injury_flags.get(away)
         if model_margin_home is not None:
             if qb_injury_home:
                 model_margin_home -= QB_OUT_PENALTY
             if qb_injury_away:
                 model_margin_home += QB_OUT_PENALTY
+            if revenge_flag and revenge_flag.get("home"):
+                model_margin_home += REVENGE_BONUS
+            if revenge_flag and revenge_flag.get("away"):
+                model_margin_home -= REVENGE_BONUS
+            if former_coach_home:
+                model_margin_home += FORMER_COACH_BONUS
+            if former_coach_away:
+                model_margin_home -= FORMER_COACH_BONUS
             model_margin_home = round(model_margin_home, 1)
 
         rest_edge = None
         if r["home_rest"] is not None and r["away_rest"] is not None:
             rest_edge = r["home_rest"] - r["away_rest"]
-
-        meeting = last_meeting(schedules, home, away, UPCOMING_SEASON)
-        revenge_flag = None
-        if meeting and r["div_game"]:
-            revenge_flag = {"home": meeting["winner"] == away, "away": meeting["winner"] == home, "last_season": meeting["season"]}
 
         stadium = stadiums.get(home)
         primary_name = primary_stadium_name.get(home)
@@ -490,6 +515,7 @@ def build_game_board(schedules, team_stats, injuries):
             (4 if primetime else 0)
             + (2 if r["div_game"] else 0)
             + (2 if revenge_flag and (revenge_flag["home"] or revenge_flag["away"]) else 0)
+            + (2 if former_coach_home or former_coach_away else 0)
         )
 
         our_pick = ("home" if model_margin_home > 0 else "away") if model_margin_home is not None else None
@@ -501,6 +527,7 @@ def build_game_board(schedules, team_stats, injuries):
             home, away, model_margin_home, our_pick, efficiency_source, rest_edge,
             oline_home, oline_away, coach_home, coach_away, revenge_flag, bool(r["div_game"]),
             weather, international_site, r["roof"], qb_injury_home, qb_injury_away,
+            former_coach_home, former_coach_away,
         )
         market = build_market(r, our_pick, model_margin_home)
 
@@ -524,6 +551,7 @@ def build_game_board(schedules, team_stats, injuries):
                 "coach_continuity": {"home": coach_home, "away": coach_away},
                 "qb_injury": {"home": qb_injury_home, "away": qb_injury_away},
                 "revenge_game": revenge_flag,
+                "former_coach": {"home": former_coach_home, "away": former_coach_away} if (former_coach_home or former_coach_away) else None,
                 "roof": r["roof"],
                 "international_site": international_site,
                 "weather": weather,

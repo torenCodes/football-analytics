@@ -24,8 +24,10 @@ import polars as pl
 from shared import (
     DEFENSIVE_LINE_POS,
     REF_DIR,
+    TEAM_CODE_ALIASES,
     build_coach_continuity,
     build_current_team_lookup,
+    build_former_coach_matchups,
     build_oline_continuity,
     json_safe,
     load_cache,
@@ -72,6 +74,13 @@ MIN_GAMES_FOR_WAIVER_WIRE = 1  # a single monster game is often exactly what sho
 # doesn't exist for free, so this is a proxy, not a fact -- same "model, not gospel" honesty as everywhere
 # else on the site.
 WAIVER_DRAFTABLE_DEPTH = {"QB": 24, "RB": 60, "WR": 72, "TE": 24, "K": 14, "DST": 14}
+
+FORMER_COACH_TEAM_BONUS = 0.5  # points, for a SKILL_POS player whose team faces the coach who ran
+# them last season -- above the Draft Board's flat SAME_HC_BONUS (0.2), below the injury penalties: a
+# genuinely matchup-specific motivation signal, still clearly softer than "this player might not play"
+FORMER_TEAM_BONUS = 1.0  # points, for a player individually facing a team they used to play for --
+# a bigger, more personal storyline than facing a former coach, same magnitude as betting_scan.py's
+# REVENGE_BONUS/FORMER_COACH_BONUS
 
 UNIFIED_COLS = ["player_id", "player_display_name", "position", "team", "week", "season", "season_type", "fpts_ppr", "fpts_standard", "opponent_team"]
 
@@ -967,6 +976,21 @@ def _defense_vs_position(stats, season):
     return by_team_pos, league_avg
 
 
+def build_player_former_teams(rosters):
+    """gsis_id -> set of teams this player was ACTIVE on in a prior season,
+    excluding their current team. Filtered to status=="ACT" -- unfiltered,
+    over half of all (player, team) pairs in the roster history are
+    practice-squad/cut-before-a-snap stints, not real former-team stories.
+    Applies the same TEAM_CODE_ALIASES normalization build_current_team_lookup
+    already uses, so a pre-2020 Raiders stint (tagged "OAK") still matches
+    against today's "LV" -- otherwise it silently never would."""
+    active = rosters.filter((pl.col("status") == "ACT") & pl.col("gsis_id").is_not_null()).with_columns(
+        pl.col("team").replace(TEAM_CODE_ALIASES).alias("team")
+    )
+    by_player = active.group_by("gsis_id").agg(pl.col("team").unique().alias("teams"))
+    return dict(zip(by_player["gsis_id"].to_list(), (set(t) for t in by_player["teams"].to_list())))
+
+
 def build_weekly_ranking_explain(row):
     """Short prose readout of why this player's Start Score landed where it
     did -- same explainable-nudge spirit as build_draft_board_explain and
@@ -979,10 +1003,14 @@ def build_weekly_ranking_explain(row):
             sentences.append(f"Facing {row['opponent']}, a tough matchup for {row['position']}s this week.")
     if row["injury_status"]:
         sentences.append(f"Listed {row['injury_status']} on the official injury report.")
+    if row.get("former_coach_matchup"):
+        sentences.append(f"{row['team']} also faces the coach who ran them last season -- extra motivation baked into the score.")
+    if row.get("former_team_matchup"):
+        sentences.append(f"{row['name']} is facing a former team this week, another motivation nudge factored in.")
     return " ".join(sentences)
 
 
-def compute_weekly_rankings(stats, schedules, injuries, current_team):
+def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters):
     """Forward-looking start/sit rankings for the upcoming week -- the
     in-season successor to the Draft Board, using the exact same
     recency-weighted-production-plus-explainable-adjustments philosophy,
@@ -1049,6 +1077,9 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team):
             injury_by_player = dict(zip(wk_injuries["gsis_id"].to_list(), wk_injuries["report_status"].to_list()))
     injury_penalty_by_status = {"Questionable": QUESTIONABLE_PENALTY, "Doubtful": DOUBTFUL_PENALTY, "Out": OUT_PENALTY}
 
+    former_coach_matchups = build_former_coach_matchups(schedules, RETRO_SEASON, UPCOMING_SEASON)
+    player_former_teams = build_player_former_teams(rosters)
+
     board = {}
     for fmt, season_col, last6_col in (("ppr", "season_ppr", "last6_ppr_total"), ("standard", "season_standard", "last6_standard_total")):
         rows = []
@@ -1077,7 +1108,12 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team):
 
             injury_status = injury_by_player.get(r["player_id"])
             injury_penalty = injury_penalty_by_status.get(injury_status, 0.0)
-            start_score = round(recent_ppg + (matchup_adj or 0.0) + injury_penalty, 2)
+
+            former_coach_matchup = position in SKILL_POS and former_coach_matchups.get(team, {}).get("now_with") == opponent
+            former_team_matchup = opponent in player_former_teams.get(r["player_id"], set())
+            motivation_bonus = (FORMER_COACH_TEAM_BONUS if former_coach_matchup else 0.0) + (FORMER_TEAM_BONUS if former_team_matchup else 0.0)
+
+            start_score = round(recent_ppg + (matchup_adj or 0.0) + injury_penalty + motivation_bonus, 2)
 
             row = {
                 "player_id": r["player_id"],
@@ -1091,6 +1127,8 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team):
                 "matchup_adj": matchup_adj,
                 "matchup_source": matchup_source,
                 "injury_status": injury_status,
+                "former_coach_matchup": former_coach_matchup,
+                "former_team_matchup": former_team_matchup,
             }
             row["explain"] = build_weekly_ranking_explain(row)
             rows.append(row)
@@ -1189,7 +1227,7 @@ def main():
     injuries = load_current_season_injuries(UPCOMING_SEASON, allow_empty=True)
 
     print("Computing weekly start/sit rankings...")
-    weekly_rankings = compute_weekly_rankings(stats, schedules, injuries, current_team)
+    weekly_rankings = compute_weekly_rankings(stats, schedules, injuries, current_team, rosters)
     print(f"  available={weekly_rankings['available']}")
 
     print("Computing waiver wire watch (likely-undrafted players outperforming expectations)...")

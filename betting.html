@@ -124,6 +124,11 @@ function factorTags(g) {
     const who = g.revenge_game.home ? g.home_team : g.away_team;
     tags.push(`<span class="factor-tag flag">Revenge game: ${teamSpan(who)} lost last meeting (${g.revenge_game.last_season})</span>`);
   }
+  if (g.former_coach && (g.former_coach.home || g.former_coach.away)) {
+    const fc = g.former_coach.home || g.former_coach.away;
+    const who = g.former_coach.home ? g.home_team : g.away_team;
+    tags.push(`<span class="factor-tag flag">${teamSpan(who)} faces former coach ${fc.coach_name}</span>`);
+  }
   if (g.rest_days_edge_home !== null && g.rest_days_edge_home !== 0) {
     const who = g.rest_days_edge_home > 0 ? g.home_team : g.away_team;
     tags.push(`<span class="factor-tag">Rest edge: ${teamSpan(who)} (+${Math.abs(g.rest_days_edge_home)}d)</span>`);
@@ -176,7 +181,7 @@ async function loadGameBoard() {
       return;
     }
     document.getElementById('betting-week-label').textContent = `Week ${gb.week} · ${gb.season}`;
-    const isRivalry = g => g.div_game || (g.revenge_game && (g.revenge_game.home || g.revenge_game.away));
+    const isRivalry = g => g.div_game || (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) || (g.former_coach && (g.former_coach.home || g.former_coach.away));
     el.innerHTML = gb.games.map(g => {
       const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
       // model_margin_home is always the HOME team's margin (negative when the

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-15T22:05:57.663608+00:00"
+    "generated_at": "2026-09-16T02:15:34.799547+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -7630,27 +7630,6 @@
           "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Wes Phillips) returning, so scheme continuity holds. The market ranks Jordan Mason 6 spots higher than we do -- our model is more cautious here."
         },
         {
-          "player_id": "00-0040202",
-          "name": "Devin Neal",
-          "position": "RB",
-          "team": "NO",
-          "baseline_ppg": 5.8,
-          "season_ppg": 4.78,
-          "last6_ppg": 6.82,
-          "games_played_2025": 9,
-          "line_continuity_pct": 0.8,
-          "line_continuity_type": "oline",
-          "same_head_coach": true,
-          "same_coordinator": true,
-          "coordinator_name": "Doug Nussmeier",
-          "coordinator_role": "OC",
-          "edge_score": 6.5,
-          "market_rank": 88.5,
-          "our_rank": 41,
-          "market_gap": 47.5,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Doug Nussmeier) returning, so scheme continuity holds. We have Devin Neal 48 spots higher than market consensus -- a value the market hasn't priced in yet."
-        },
-        {
           "player_id": "00-0040719",
           "name": "Bhayshul Tuten",
           "position": "RB",
@@ -7667,9 +7646,30 @@
           "coordinator_role": "OC",
           "edge_score": 6.5,
           "market_rank": 21.0,
+          "our_rank": 41,
+          "market_gap": -20.0,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Grant Udinski) returning, so scheme continuity holds. The market ranks Bhayshul Tuten 20 spots higher than we do -- our model is more cautious here."
+        },
+        {
+          "player_id": "00-0040202",
+          "name": "Devin Neal",
+          "position": "RB",
+          "team": "NO",
+          "baseline_ppg": 5.8,
+          "season_ppg": 4.78,
+          "last6_ppg": 6.82,
+          "games_played_2025": 9,
+          "line_continuity_pct": 0.8,
+          "line_continuity_type": "oline",
+          "same_head_coach": true,
+          "same_coordinator": true,
+          "coordinator_name": "Doug Nussmeier",
+          "coordinator_role": "OC",
+          "edge_score": 6.5,
+          "market_rank": 88.5,
           "our_rank": 42,
-          "market_gap": -21.0,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Grant Udinski) returning, so scheme continuity holds. The market ranks Bhayshul Tuten 21 spots higher than we do -- our model is more cautious here."
+          "market_gap": 46.5,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Doug Nussmeier) returning, so scheme continuity holds. We have Devin Neal 46 spots higher than market consensus -- a value the market hasn't priced in yet."
         },
         {
           "player_id": "00-0039391",
@@ -8472,27 +8472,6 @@
           "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. New OC (Mike McDaniel) means a new scheme to learn too. We have Quentin Johnston 10 spots higher than market consensus -- a value the market hasn't priced in yet."
         },
         {
-          "player_id": "00-0035640",
-          "name": "DK Metcalf",
-          "position": "WR",
-          "team": "PIT",
-          "baseline_ppg": 8.27,
-          "season_ppg": 8.55,
-          "last6_ppg": 8.0,
-          "games_played_2025": 15,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Brian Angelichio",
-          "coordinator_role": "OC",
-          "edge_score": 7.27,
-          "market_rank": 37.0,
-          "our_rank": 31,
-          "market_gap": 6.0,
-          "explain": "Playing under a new head coach this season adds scheme uncertainty. New OC (Brian Angelichio) means a new scheme to learn too. We have DK Metcalf 6 spots higher than market consensus -- a value the market hasn't priced in yet."
-        },
-        {
           "player_id": "00-0039919",
           "name": "Rome Odunze",
           "position": "WR",
@@ -8509,9 +8488,30 @@
           "coordinator_role": "OC",
           "edge_score": 7.27,
           "market_rank": 32.0,
-          "our_rank": 32,
-          "market_gap": 0.0,
+          "our_rank": 31,
+          "market_gap": 1.0,
           "explain": "O-line continuity is elite (80%), a real tailwind here. New OC (Press Taylor) means a new scheme to learn too."
+        },
+        {
+          "player_id": "00-0035640",
+          "name": "DK Metcalf",
+          "position": "WR",
+          "team": "PIT",
+          "baseline_ppg": 8.27,
+          "season_ppg": 8.55,
+          "last6_ppg": 8.0,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Angelichio",
+          "coordinator_role": "OC",
+          "edge_score": 7.27,
+          "market_rank": 37.0,
+          "our_rank": 32,
+          "market_gap": 5.0,
+          "explain": "Playing under a new head coach this season adds scheme uncertainty. New OC (Brian Angelichio) means a new scheme to learn too. We have DK Metcalf 5 spots higher than market consensus -- a value the market hasn't priced in yet."
         },
         {
           "player_id": "00-0036613",
