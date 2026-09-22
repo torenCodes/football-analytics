@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 2,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "points": 40.8
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0036223",
+          "name": "Jonathan Taylor",
+          "team": "IND",
+          "points": 29.2
+        },
+        {
+          "player_id": "00-0038134",
+          "name": "Kenneth Walker III",
+          "team": "KC",
+          "points": 23.8
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 42.5
+        },
+        {
+          "player_id": "00-0031381",
+          "name": "Davante Adams",
+          "team": "LA",
+          "points": 39.5
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0034383",
+          "name": "Dalton Schultz",
+          "team": "HOU",
+          "points": 26.0
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0036358",
+          "name": "CeeDee Lamb",
+          "team": "DAL",
+          "points": 35.3
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0037692",
+          "name": "Brandon Aubrey",
+          "team": "DAL",
+          "points": 16.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "CAR_DST",
+          "name": "CAR D/ST",
+          "team": "CAR",
+          "points": 25.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 278.1,
+    "bench": [
+      {
+        "player_id": "00-0036963",
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "position": "WR",
+        "points": 35.2
+      },
+      {
+        "player_id": "00-0033106",
+        "name": "Jared Goff",
+        "team": "DET",
+        "position": "QB",
+        "points": 29.8
+      },
+      {
+        "player_id": "00-0036912",
+        "name": "DeVonta Smith",
+        "team": "PHI",
+        "position": "WR",
+        "points": 27.7
+      },
+      {
+        "player_id": "00-0036900",
+        "name": "Ja'Marr Chase",
+        "team": "CIN",
+        "position": "WR",
+        "points": 26.5
+      },
+      {
+        "player_id": "00-0030506",
+        "name": "Travis Kelce",
+        "team": "KC",
+        "position": "TE",
+        "points": 25.1
+      },
+      {
+        "player_id": "00-0039139",
+        "name": "Jahmyr Gibbs",
+        "team": "DET",
+        "position": "RB",
+        "points": 23.3
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 2,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0034857",
+          "name": "Josh Allen",
+          "team": "BUF",
+          "points": 40.8
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0036223",
+          "name": "Jonathan Taylor",
+          "team": "IND",
+          "points": 25.2
+        },
+        {
+          "player_id": "00-0037248",
+          "name": "James Cook",
+          "team": "BUF",
+          "points": 19.9
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 33.5
+        },
+        {
+          "player_id": "00-0031381",
+          "name": "Davante Adams",
+          "team": "LA",
+          "points": 31.5
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0038041",
+          "name": "Jake Ferguson",
+          "team": "DAL",
+          "points": 16.3
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0036358",
+          "name": "CeeDee Lamb",
+          "team": "DAL",
+          "points": 27.3
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0037692",
+          "name": "Brandon Aubrey",
+          "team": "DAL",
+          "points": 16.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "CAR_DST",
+          "name": "CAR D/ST",
+          "team": "CAR",
+          "points": 25.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 235.5,
+    "bench": [
+      {
+        "player_id": "00-0033106",
+        "name": "Jared Goff",
+        "team": "DET",
+        "position": "QB",
+        "points": 29.8
+      },
+      {
+        "player_id": "00-0036963",
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "position": "WR",
+        "points": 26.2
+      },
+      {
+        "player_id": "00-0036900",
+        "name": "Ja'Marr Chase",
+        "team": "CIN",
+        "position": "WR",
+        "points": 19.5
+      },
+      {
+        "player_id": "00-0033280",
+        "name": "Christian McCaffrey",
+        "team": "SF",
+        "position": "RB",
+        "points": 18.6
+      },
+      {
+        "player_id": "00-0038563",
+        "name": "Tre Tucker",
+        "team": "LV",
+        "position": "WR",
+        "points": 17.9
+      },
+      {
+        "player_id": "00-0038134",
+        "name": "Kenneth Walker III",
+        "team": "KC",
+        "position": "RB",
+        "points": 17.8
+      }
+    ]
+  }
+}

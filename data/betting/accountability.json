@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated_at": "2026-09-16T17:44:37.587965+00:00"
+    "generated_at": "2026-09-22T13:46:08.084311+00:00"
   },
   "weeks_graded": 2,
-  "games_graded": 15,
-  "correct_picks": 9,
-  "accuracy": 0.6,
+  "games_graded": 31,
+  "correct_picks": 17,
+  "accuracy": 0.548,
   "weeks": [
     {
       "season": 2026,
@@ -196,10 +196,10 @@
     {
       "season": 2026,
       "week": 2,
-      "locked_at": "2026-09-16T02:15:25.522463+00:00",
-      "games_graded": 0,
-      "correct_picks": 0,
-      "accuracy": null,
+      "locked_at": "2026-09-16T17:44:37.586260+00:00",
+      "games_graded": 16,
+      "correct_picks": 8,
+      "accuracy": 0.5,
       "games": [
         {
           "game_id": "2026_02_CAR_ATL",
@@ -207,9 +207,9 @@
           "away_team": "CAR",
           "our_pick": "home",
           "spread_home": -2.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": -31,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans ATL by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against CAR."
         },
         {
@@ -217,10 +217,10 @@
           "home_team": "CHI",
           "away_team": "MIN",
           "our_pick": "home",
-          "spread_home": 5.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "spread_home": 4.5,
+          "result": -6,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans CHI by 21.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN."
         },
         {
@@ -228,10 +228,10 @@
           "home_team": "LAC",
           "away_team": "LV",
           "our_pick": "home",
-          "spread_home": 7.0,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "spread_home": 6.5,
+          "result": -12,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans LAC by 6.5 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV."
         },
         {
@@ -239,10 +239,10 @@
           "home_team": "ARI",
           "away_team": "SEA",
           "our_pick": "home",
-          "spread_home": -4.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "spread_home": -3.5,
+          "result": -24,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans ARI by 11.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA."
         },
         {
@@ -250,10 +250,10 @@
           "home_team": "DAL",
           "away_team": "WAS",
           "our_pick": "home",
-          "spread_home": 3.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "spread_home": 4.5,
+          "result": 17,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans DAL by 8.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS."
         },
         {
@@ -262,9 +262,9 @@
           "away_team": "DET",
           "our_pick": "home",
           "spread_home": 4.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": 10,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans BUF by 4.9 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DET."
         },
         {
@@ -273,9 +273,9 @@
           "away_team": "NYG",
           "our_pick": "home",
           "spread_home": 7.0,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": 22,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans LA by 2.2 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against NYG."
         },
         {
@@ -284,9 +284,9 @@
           "away_team": "IND",
           "our_pick": "away",
           "spread_home": 6.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": 3,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans IND by 4.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against KC."
         },
         {
@@ -294,10 +294,10 @@
           "home_team": "HOU",
           "away_team": "CIN",
           "our_pick": "away",
-          "spread_home": 2.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "spread_home": 3.0,
+          "result": -14,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans CIN by 20.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU."
         },
         {
@@ -306,9 +306,9 @@
           "away_team": "CLE",
           "our_pick": "home",
           "spread_home": 8.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": -4,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans TB by 20.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE."
         },
         {
@@ -317,9 +317,9 @@
           "away_team": "GB",
           "our_pick": "away",
           "spread_home": -4.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": -3,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans GB by 8.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NYJ."
         },
         {
@@ -328,9 +328,9 @@
           "away_team": "NO",
           "our_pick": "home",
           "spread_home": 8.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": -7,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans BAL by 15.2 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NO."
         },
         {
@@ -339,9 +339,9 @@
           "away_team": "PHI",
           "our_pick": "home",
           "spread_home": -7.0,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": -4,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans TEN by 0.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against PHI."
         },
         {
@@ -350,9 +350,9 @@
           "away_team": "PIT",
           "our_pick": "away",
           "spread_home": 5.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": 17,
+          "push": false,
+          "correct": false,
           "storyline_short": "The model leans PIT by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against NE."
         },
         {
@@ -361,9 +361,9 @@
           "away_team": "JAX",
           "our_pick": "home",
           "spread_home": 2.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "result": 7,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans DEN by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against JAX."
         },
         {
@@ -371,10 +371,10 @@
           "home_team": "SF",
           "away_team": "MIA",
           "our_pick": "home",
-          "spread_home": 12.5,
-          "result": null,
-          "push": null,
-          "correct": null,
+          "spread_home": 13.5,
+          "result": 22,
+          "push": false,
+          "correct": true,
           "storyline_short": "The model leans SF by 5.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against MIA."
         }
       ]
