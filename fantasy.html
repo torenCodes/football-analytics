@@ -539,9 +539,9 @@ function renderWeeklyRankings() {
   document.getElementById('weekly-rankings-kicker').textContent = `Week ${data.week} · ${weeklyRankingsData.season}`;
   const rows = data.rankings_by_position[currentWeeklyRankingsPos] || [];
   thead.innerHTML = `<tr>
-    <th class="w-xs">Rank</th><th>Player</th><th class="w-sm">Team</th><th class="w-sm">Opp</th>
-    <th class="num-center w-sm">Start Score</th><th class="num-center w-md">Recent PPG</th>
-    <th class="num w-sm">Matchup</th><th class="center w-md">Injury</th>
+    <th class="w-xs">Rank</th><th class="w-player">Player</th><th class="w-sm">Team</th><th class="w-sm">Opp</th>
+    <th class="num-center w-lg">Start Score</th><th class="num-center w-lg">Recent PPG</th>
+    <th class="num w-md">Matchup</th><th class="center w-md">Injury</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => {
     const matchupPill = p.matchup_adj === null ? '--' :
