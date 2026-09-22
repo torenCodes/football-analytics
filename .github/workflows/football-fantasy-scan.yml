@@ -7,9 +7,19 @@ on:
     # marks, since that's when every other repo's cron jobs fire too. Confirmed
     # this bit us on 2026-09-15: no run of any kind (success OR failure) shows in
     # the Actions history for that day -- the trigger itself never fired.
-    - cron: '7 15 * * 2'   # Tuesday ~10am ET -- primary run
-    - cron: '7 19 * * 2'   # Tuesday ~3pm ET -- same-day backup, in case the morning run was skipped or ran too early
-    - cron: '7 13 * * 3'   # Wednesday ~9am ET -- final backup; commit step only fires on an actual diff, so a no-op run is harmless
+    #
+    # Clustered right after Monday Night Football instead of Tuesday mid-morning,
+    # so users see fresh data as soon as possible after the last game of the week
+    # ends, not ~12 hours later -- commit step only fires on an actual diff, so a
+    # run that hits incomplete/not-yet-synced nflverse data is a harmless no-op,
+    # caught by the next attempt. Staggered vs. the Betting scan (:07 here, :37
+    # there) so the two workflows don't hit the shared nflverse cache at once.
+    # NOTE: cron is UTC-only, no DST awareness -- these assume EDT (UTC-4). Once
+    # DST ends (~Nov 1), actual ET times shift an hour earlier (12am/3am/5am ET)
+    # until this is manually adjusted for the winter offset (UTC-5).
+    - cron: '7 5 * * 2'   # Tuesday ~1am ET -- primary run, right after MNF wraps
+    - cron: '7 8 * * 2'   # Tuesday ~4am ET -- backup, in case nflverse data wasn't synced yet at 1am
+    - cron: '7 10 * * 2'  # Tuesday ~6am ET -- second backup, same reasoning
   workflow_dispatch:
 
 permissions:
