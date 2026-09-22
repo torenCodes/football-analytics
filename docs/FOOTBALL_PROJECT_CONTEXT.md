@@ -51,6 +51,50 @@ file to still be current.
   to portfolio) is the goal — currently it's one-directional (portfolio →
   live site / GitHub profile only).
 
+## Public-readiness audit (2026-09-22)
+
+Checked before Toren makes this repo public, for a hiring-manager audience.
+Covered both the current tracked file tree and the **full git commit
+history** (a public repo exposes every past commit, not just the current
+state) — searched for hardcoded secrets/API keys/tokens, personal emails,
+leaked local file paths, and accidentally-committed large/binary files.
+
+**One real finding:** every commit's author metadata carries Toren's real
+email (`toren5@gmail.com`, standard `git config user.email`) — this becomes
+publicly visible in the commit history once the repo is public. Nothing
+technically wrong with that (very common on public GitHub repos, not a red
+flag to a reviewer), but if a public personal email is unwanted, the options
+are: (a) leave it as-is; (b) switch to GitHub's private noreply address
+(`<id>+torenCodes@users.noreply.github.com`) for commits going forward —
+doesn't touch existing history; (c) rewrite history (e.g. `git filter-repo`)
+to scrub the email from every past commit — fixes it fully but is
+destructive: every commit hash changes, a force-push is required, and it
+breaks any existing local clone. Not done here — a real decision with real
+consequences, Toren's call.
+
+**Everything else checked out clean:**
+- No hardcoded secrets, API keys, or passwords anywhere in the tracked tree
+  or full history. The only "token" reference is the standard
+  `secrets.GITHUB_TOKEN` GitHub Actions context variable in both workflow
+  files — safe, expected, auto-rotated by GitHub, not a real leak.
+- `.gitignore` correctly keeps `.venv/`, `.claude/`, `data_cache/` (the raw
+  nflverse parquet cache), and `images/source/` (the Photoshop working file)
+  out of the repo — confirmed untracked via `git check-ignore`.
+- No leaked local file paths (checked for `D:\Coding Projects\...`,
+  `C:\Users\toren\...`, etc. — none found in any tracked file).
+- No stray debug/test/scratch files, no `.env` file, no credentials file of
+  any kind tracked.
+- The one commit that stopped tracking an asset ("stop tracking Photoshop
+  source," 2026-08-30) only ever removed two small JPG files — no PSD or
+  other large binary was ever committed, so there's no history bloat.
+  Total `.git` size: 3.6MB.
+- All 42 commit messages read cleanly and professionally.
+
+**Bottom line:** the file tree that would go public — source code, computed
+JSON output, the two GitHub Actions workflows, README.md, this doc — is
+exactly the intended one. Nothing needs to be deleted or hidden except the
+optional commit-email consideration above.
+
 ## Tools and methods (factual backup for the case-study prose)
 
 - **Language/data stack:** Python + [polars](https://pola.rs/) (not pandas,
@@ -131,3 +175,15 @@ site's own self-graded track record (not previously in the case-study copy):
   Monday Night Football rather than half a day later. Not case-study-worthy
   on its own, but relevant if the case study ever claims a specific
   refresh cadence.
+- **The homepage project card's tech pills are wrong.** DataByToren's
+  `index.html` tags this project Python / **SQL** / Claude Code / Data
+  Storytelling — this repo has no SQL anywhere (no database, no queries;
+  everything runs through polars DataFrames on parquet/JSON). Not even
+  "Pandas" would be accurate the way it is on The Invest Lab's card — this
+  project specifically uses polars, not pandas. Swap the SQL pill for
+  **ETL** (extract from nflverse/FantasyPros/NWS → transform via the
+  explainable scoring adjustments → load as JSON that drives the static
+  site — an accurate, recruiter-legible framing). If a more specific/
+  technical pill is wanted instead, **Polars** or **GitHub Actions** are
+  the honest alternatives, but ETL is the better fit for this card's
+  audience.
