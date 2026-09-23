@@ -1,195 +1,241 @@
 {
   "meta": {
-    "generated_at": "2026-09-23T13:16:19.057831+00:00"
+    "generated_at": "2026-09-23T14:40:51.372929+00:00"
   },
   "weeks_graded": 3,
-  "games_graded": 31,
-  "correct_picks": 17,
-  "accuracy": 0.548,
+  "ats": {
+    "graded": 30,
+    "correct": 15,
+    "accuracy": 0.5
+  },
+  "outright": {
+    "graded": 32,
+    "correct": 16,
+    "accuracy": 0.5
+  },
   "weeks": [
     {
       "season": 2026,
       "week": 1,
       "locked_at": "2026-09-08T18:51:15.826045+00:00",
-      "games_graded": 15,
-      "correct_picks": 9,
-      "accuracy": 0.6,
+      "ats": {
+        "graded": 15,
+        "correct": 10,
+        "accuracy": 0.667
+      },
+      "outright": {
+        "graded": 16,
+        "correct": 9,
+        "accuracy": 0.562
+      },
       "games": [
         {
           "game_id": "2026_01_DEN_KC",
           "home_team": "KC",
           "away_team": "DEN",
-          "our_pick": "home",
+          "model_margin_home": 5.7,
           "spread_home": 3.0,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 21,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans KC by 5.7 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DEN."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_DAL_NYG",
           "home_team": "NYG",
           "away_team": "DAL",
-          "our_pick": "away",
+          "model_margin_home": -9.4,
           "spread_home": -3.0,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 8,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans DAL by 9.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NYG."
+          "winner_correct": false
         },
         {
           "game_id": "2026_01_SF_LA",
           "home_team": "LA",
           "away_team": "SF",
-          "our_pick": "home",
+          "model_margin_home": 0.1,
           "spread_home": 3.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -20,
           "push": false,
-          "correct": false,
-          "storyline_short": "The model leans LA by 0.1 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against SF."
+          "correct": true,
+          "winner_correct": false
         },
         {
           "game_id": "2026_01_GB_MIN",
           "home_team": "MIN",
           "away_team": "GB",
-          "our_pick": "away",
+          "model_margin_home": -22.8,
           "spread_home": 1.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 17,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans GB by 22.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN."
+          "winner_correct": false
         },
         {
           "game_id": "2026_01_WAS_PHI",
           "home_team": "PHI",
           "away_team": "WAS",
-          "our_pick": "away",
+          "model_margin_home": -11.6,
           "spread_home": 5.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 2,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans WAS by 11.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PHI."
+          "winner_correct": false
         },
         {
           "game_id": "2026_01_NE_SEA",
           "home_team": "SEA",
           "away_team": "NE",
-          "our_pick": "away",
+          "model_margin_home": -3.0,
           "spread_home": 3.0,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 3,
           "push": true,
           "correct": null,
-          "storyline_short": "The model leans NE by 3.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against SEA."
+          "winner_correct": false
         },
         {
           "game_id": "2026_01_ATL_PIT",
           "home_team": "PIT",
           "away_team": "ATL",
-          "our_pick": "home",
+          "model_margin_home": 4.4,
           "spread_home": 3.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 7,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans PIT by 4.4 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against ATL."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_BAL_IND",
           "home_team": "IND",
           "away_team": "BAL",
-          "our_pick": "home",
+          "model_margin_home": 2.9,
           "spread_home": -3.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -18,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans IND by 2.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against BAL."
+          "winner_correct": false
         },
         {
           "game_id": "2026_01_BUF_HOU",
           "home_team": "HOU",
           "away_team": "BUF",
-          "our_pick": "away",
+          "model_margin_home": -18.6,
           "spread_home": -1.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -5,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans BUF by 18.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_CHI_CAR",
           "home_team": "CAR",
           "away_team": "CHI",
-          "our_pick": "away",
+          "model_margin_home": -4.6,
           "spread_home": -3.0,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -22,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans CHI by 4.6 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against CAR."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_CLE_JAX",
           "home_team": "JAX",
           "away_team": "CLE",
-          "our_pick": "home",
+          "model_margin_home": 17.0,
           "spread_home": 8.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 24,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans JAX by 17.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_NO_DET",
           "home_team": "DET",
           "away_team": "NO",
-          "our_pick": "home",
+          "model_margin_home": 15.4,
           "spread_home": 7.0,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 1,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans DET by 15.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NO."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_NYJ_TEN",
           "home_team": "TEN",
           "away_team": "NYJ",
-          "our_pick": "away",
+          "model_margin_home": -2.9,
           "spread_home": 1.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -13,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans NYJ by 2.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against TEN."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_TB_CIN",
           "home_team": "CIN",
           "away_team": "TB",
-          "our_pick": "home",
+          "model_margin_home": 11.2,
           "spread_home": 3.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 6,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans CIN by 11.2 points, built on a clear efficiency edge in offense-vs-defense EPA/play against TB."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_ARI_LAC",
           "home_team": "LAC",
           "away_team": "ARI",
-          "our_pick": "away",
+          "model_margin_home": -11.2,
           "spread_home": 9.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -12,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans ARI by 11.2 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LAC."
+          "winner_correct": true
         },
         {
           "game_id": "2026_01_MIA_LV",
           "home_team": "LV",
           "away_team": "MIA",
-          "our_pick": "away",
+          "model_margin_home": -18.1,
           "spread_home": 3.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 14,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans MIA by 18.1 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LV."
+          "winner_correct": false
         }
       ]
     },
@@ -197,371 +243,449 @@
       "season": 2026,
       "week": 2,
       "locked_at": "2026-09-16T17:44:37.586260+00:00",
-      "games_graded": 16,
-      "correct_picks": 8,
-      "accuracy": 0.5,
+      "ats": {
+        "graded": 15,
+        "correct": 5,
+        "accuracy": 0.333
+      },
+      "outright": {
+        "graded": 16,
+        "correct": 7,
+        "accuracy": 0.438
+      },
       "games": [
         {
           "game_id": "2026_02_CAR_ATL",
           "home_team": "ATL",
           "away_team": "CAR",
-          "our_pick": "home",
+          "model_margin_home": 0.8,
           "spread_home": -2.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -31,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans ATL by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against CAR."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_MIN_CHI",
           "home_team": "CHI",
           "away_team": "MIN",
-          "our_pick": "home",
+          "model_margin_home": 21.4,
           "spread_home": 4.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -6,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans CHI by 21.4 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_LV_LAC",
           "home_team": "LAC",
           "away_team": "LV",
-          "our_pick": "home",
+          "model_margin_home": 6.5,
           "spread_home": 6.5,
+          "our_pick": null,
+          "no_lean": true,
           "result": -12,
           "push": false,
-          "correct": false,
-          "storyline_short": "The model leans LAC by 6.5 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV."
+          "correct": null,
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_SEA_ARI",
           "home_team": "ARI",
           "away_team": "SEA",
-          "our_pick": "home",
+          "model_margin_home": 11.8,
           "spread_home": -3.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -24,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans ARI by 11.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_WAS_DAL",
           "home_team": "DAL",
           "away_team": "WAS",
-          "our_pick": "home",
+          "model_margin_home": 8.7,
           "spread_home": 4.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 17,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans DAL by 8.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against WAS."
+          "winner_correct": true
         },
         {
           "game_id": "2026_02_DET_BUF",
           "home_team": "BUF",
           "away_team": "DET",
-          "our_pick": "home",
+          "model_margin_home": 4.9,
           "spread_home": 4.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": 10,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans BUF by 4.9 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against DET."
+          "winner_correct": true
         },
         {
           "game_id": "2026_02_NYG_LA",
           "home_team": "LA",
           "away_team": "NYG",
-          "our_pick": "home",
+          "model_margin_home": 2.2,
           "spread_home": 7.0,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 22,
           "push": false,
-          "correct": true,
-          "storyline_short": "The model leans LA by 2.2 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against NYG."
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_02_IND_KC",
           "home_team": "KC",
           "away_team": "IND",
-          "our_pick": "away",
+          "model_margin_home": -4.0,
           "spread_home": 6.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 3,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans IND by 4.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against KC."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_CIN_HOU",
           "home_team": "HOU",
           "away_team": "CIN",
-          "our_pick": "away",
+          "model_margin_home": -20.8,
           "spread_home": 3.0,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -14,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans CIN by 20.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU."
+          "winner_correct": true
         },
         {
           "game_id": "2026_02_CLE_TB",
           "home_team": "TB",
           "away_team": "CLE",
-          "our_pick": "home",
+          "model_margin_home": 20.8,
           "spread_home": 8.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -4,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans TB by 20.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_GB_NYJ",
           "home_team": "NYJ",
           "away_team": "GB",
-          "our_pick": "away",
+          "model_margin_home": -8.6,
           "spread_home": -4.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": -3,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans GB by 8.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NYJ."
+          "winner_correct": true
         },
         {
           "game_id": "2026_02_NO_BAL",
           "home_team": "BAL",
           "away_team": "NO",
-          "our_pick": "home",
+          "model_margin_home": 15.2,
           "spread_home": 8.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -7,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans BAL by 15.2 points, built on a clear efficiency edge in offense-vs-defense EPA/play against NO."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_PHI_TEN",
           "home_team": "TEN",
           "away_team": "PHI",
-          "our_pick": "home",
+          "model_margin_home": 0.9,
           "spread_home": -7.0,
+          "our_pick": "home",
+          "no_lean": false,
           "result": -4,
           "push": false,
           "correct": true,
-          "storyline_short": "The model leans TEN by 0.9 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against PHI."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_PIT_NE",
           "home_team": "NE",
           "away_team": "PIT",
-          "our_pick": "away",
+          "model_margin_home": -0.8,
           "spread_home": 5.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 17,
           "push": false,
           "correct": false,
-          "storyline_short": "The model leans PIT by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against NE."
+          "winner_correct": false
         },
         {
           "game_id": "2026_02_JAX_DEN",
           "home_team": "DEN",
           "away_team": "JAX",
-          "our_pick": "home",
+          "model_margin_home": 0.8,
           "spread_home": 2.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 7,
           "push": false,
-          "correct": true,
-          "storyline_short": "The model leans DEN by 0.8 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against JAX."
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_02_MIA_SF",
           "home_team": "SF",
           "away_team": "MIA",
-          "our_pick": "home",
+          "model_margin_home": 5.0,
           "spread_home": 13.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": 22,
           "push": false,
-          "correct": true,
-          "storyline_short": "The model leans SF by 5.0 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against MIA."
+          "correct": false,
+          "winner_correct": true
         }
       ]
     },
     {
       "season": 2026,
       "week": 3,
-      "locked_at": "2026-09-22T13:46:08.079798+00:00",
-      "games_graded": 0,
-      "correct_picks": 0,
-      "accuracy": null,
+      "locked_at": "2026-09-23T14:40:51.366657+00:00",
+      "ats": {
+        "graded": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "outright": {
+        "graded": 0,
+        "correct": 0,
+        "accuracy": null
+      },
       "games": [
         {
           "game_id": "2026_03_CIN_PIT",
           "home_team": "PIT",
           "away_team": "CIN",
-          "our_pick": "away",
+          "model_margin_home": -0.9,
           "spread_home": -3.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans CIN by 8.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PIT."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_HOU_IND",
           "home_team": "IND",
           "away_team": "HOU",
+          "model_margin_home": 3.4,
+          "spread_home": -3.0,
           "our_pick": "home",
-          "spread_home": -2.5,
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans IND by 20.3 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_ARI_SF",
           "home_team": "SF",
           "away_team": "ARI",
-          "our_pick": "home",
+          "model_margin_home": 7.4,
           "spread_home": 8.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans SF by 4.8 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against ARI."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_ATL_GB",
           "home_team": "GB",
           "away_team": "ATL",
+          "model_margin_home": 6.8,
+          "spread_home": 5.5,
           "our_pick": "home",
-          "spread_home": 6.0,
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans GB by 12.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against ATL."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_PHI_CHI",
           "home_team": "CHI",
           "away_team": "PHI",
+          "model_margin_home": 3.4,
+          "spread_home": -4.5,
           "our_pick": "home",
-          "spread_home": -3.0,
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans CHI by 12.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PHI."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_LA_DEN",
           "home_team": "DEN",
           "away_team": "LA",
-          "our_pick": "away",
+          "model_margin_home": -2.3,
           "spread_home": -2.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans LA by 9.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against DEN."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_CAR_CLE",
           "home_team": "CLE",
           "away_team": "CAR",
-          "our_pick": "away",
+          "model_margin_home": -3.2,
           "spread_home": -2.5,
+          "our_pick": "away",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans CAR by 17.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_KC_MIA",
           "home_team": "MIA",
           "away_team": "KC",
-          "our_pick": "home",
+          "model_margin_home": -4.5,
           "spread_home": -11.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans MIA by 6.4 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against KC."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_LAC_BUF",
           "home_team": "BUF",
           "away_team": "LAC",
-          "our_pick": "home",
+          "model_margin_home": 9.3,
           "spread_home": 7.0,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans BUF by 18.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LAC."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_NE_JAX",
           "home_team": "JAX",
           "away_team": "NE",
-          "our_pick": "away",
+          "model_margin_home": -0.1,
           "spread_home": 3.0,
+          "our_pick": "away",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans NE by 1.3 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against JAX."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_NYJ_DET",
           "home_team": "DET",
           "away_team": "NYJ",
-          "our_pick": "home",
+          "model_margin_home": 6.7,
           "spread_home": 6.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans DET by 6.3 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against NYJ."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_SEA_WAS",
           "home_team": "WAS",
           "away_team": "SEA",
-          "our_pick": "home",
+          "model_margin_home": -4.1,
           "spread_home": -7.0,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans WAS by 15.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_TEN_NYG",
           "home_team": "NYG",
           "away_team": "TEN",
+          "model_margin_home": 5.6,
+          "spread_home": 2.5,
           "our_pick": "home",
-          "spread_home": 3.5,
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans NYG by 12.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against TEN."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_MIN_TB",
           "home_team": "TB",
           "away_team": "MIN",
-          "our_pick": "home",
+          "model_margin_home": 1.6,
           "spread_home": -1.5,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans TB by 16.3 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_BAL_DAL",
           "home_team": "DAL",
           "away_team": "BAL",
+          "model_margin_home": -2.2,
+          "spread_home": -3.5,
           "our_pick": "home",
-          "spread_home": -3.0,
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans DAL by 14.5 points, built on a clear efficiency edge in offense-vs-defense EPA/play against BAL."
+          "winner_correct": null
         },
         {
           "game_id": "2026_03_LV_NO",
           "home_team": "NO",
           "away_team": "LV",
-          "our_pick": "home",
+          "model_margin_home": 5.0,
           "spread_home": 3.0,
+          "our_pick": "home",
+          "no_lean": false,
           "result": null,
           "push": null,
           "correct": null,
-          "storyline_short": "The model leans NO by 6.7 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV."
+          "winner_correct": null
         }
       ]
     }

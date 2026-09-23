@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-23T13:16:19.057831+00:00"
+    "generated_at": "2026-09-23T14:40:51.372929+00:00"
   },
   "season": 2026,
   "week": 3,
@@ -16,12 +16,20 @@
       "home_team": "PIT",
       "away_team": "CIN",
       "div_game": true,
-      "model_margin_home": -8.0,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -0.9,
+      "current_season_weight": {
+        "home": {
+          "off": 0.21,
+          "def": 0.18
+        },
+        "away": {
+          "off": 0.19,
+          "def": 0.2
+        }
       },
-      "our_pick": "away",
+      "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -64,8 +72,8 @@
         "temperature_f": 69,
         "wind": "5 to 12 mph"
       },
-      "storyline": "The model leans CIN by 8.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PIT. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CIN's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. CIN also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Mostly Sunny, 69\u00b0F, wind 5 to 12 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans CIN by 8.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PIT.",
+      "storyline": "The model has CIN by 0.9, short of the 3.5-point spread, so the lean is PIT +3.5. That's a 2.6-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. CIN lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 69\u00b0F, wind 5 to 12 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has CIN by 0.9, short of the 3.5-point spread, so the lean is PIT +3.5.",
       "market": {
         "spread_home": -3.5,
         "spread_home_odds": -105,
@@ -76,8 +84,7 @@
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "away",
-        "agrees_with_model": true,
-        "edge_vs_market": -4.5
+        "edge_vs_market": 2.6
       }
     },
     {
@@ -91,12 +98,20 @@
       "home_team": "IND",
       "away_team": "HOU",
       "div_game": true,
-      "model_margin_home": 20.3,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 3.4,
+      "current_season_weight": {
+        "home": {
+          "off": 0.19,
+          "def": 0.22
+        },
+        "away": {
+          "off": 0.23,
+          "def": 0.18
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -139,8 +154,8 @@
         "temperature_f": 73,
         "wind": "1 to 5 mph"
       },
-      "storyline": "The model leans IND by 20.3 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. IND's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. IND also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Partly Sunny, 73\u00b0F, wind 1 to 5 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans IND by 20.3 points, built on a clear efficiency edge in offense-vs-defense EPA/play against HOU.",
+      "storyline": "The market favors HOU by 3, but the model has IND winning by 3.4, so the lean is IND +3. That's a 6.4-point gap from the market -- more than a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. IND's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. IND lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Partly Sunny, 73\u00b0F, wind 1 to 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The market favors HOU by 3, but the model has IND winning by 3.4, so the lean is IND +3.",
       "market": {
         "spread_home": -3.0,
         "spread_home_odds": -118,
@@ -151,8 +166,7 @@
         "over_odds": -112,
         "under_odds": -108,
         "market_favorite": "away",
-        "agrees_with_model": false,
-        "edge_vs_market": 23.3
+        "edge_vs_market": 6.4
       }
     },
     {
@@ -166,12 +180,20 @@
       "home_team": "SF",
       "away_team": "ARI",
       "div_game": true,
-      "model_margin_home": 4.8,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 7.4,
+      "current_season_weight": {
+        "home": {
+          "off": 0.19,
+          "def": 0.19
+        },
+        "away": {
+          "off": 0.19,
+          "def": 0.19
+        }
       },
-      "our_pick": "home",
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -214,8 +236,8 @@
         "temperature_f": 72,
         "wind": "2 to 12 mph"
       },
-      "storyline": "The model leans SF by 4.8 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against ARI. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. SF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This is a division game, and those historically play tighter than the numbers alone suggest. ARI also lost the last meeting between these two, which is already baked into the model's lean, not just a footnote. Forecast for kickoff: Mostly Sunny, 72\u00b0F, wind 2 to 12 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans SF by 4.8 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against ARI.",
+      "storyline": "The model has SF by 7.4, short of the 8.5-point spread, so the lean is ARI +8.5. That's a 1.1-point gap from the market -- under a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. ARI is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. ARI lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 72\u00b0F, wind 2 to 12 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has SF by 7.4, short of the 8.5-point spread, so the lean is ARI +8.5.",
       "market": {
         "spread_home": 8.5,
         "spread_home_odds": -105,
@@ -226,8 +248,7 @@
         "over_odds": -115,
         "under_odds": -105,
         "market_favorite": "home",
-        "agrees_with_model": true,
-        "edge_vs_market": -3.7
+        "edge_vs_market": -1.1
       }
     },
     {
@@ -241,12 +262,20 @@
       "home_team": "GB",
       "away_team": "ATL",
       "div_game": false,
-      "model_margin_home": 12.6,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 6.8,
+      "current_season_weight": {
+        "home": {
+          "off": 0.19,
+          "def": 0.21
+        },
+        "away": {
+          "off": 0.2,
+          "def": 0.2
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -285,20 +314,19 @@
         "temperature_f": 66,
         "wind": "1 to 6 mph"
       },
-      "storyline": "The model leans GB by 12.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against ATL. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. GB is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Mostly Sunny, 66\u00b0F, wind 1 to 6 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans GB by 12.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against ATL.",
+      "storyline": "The model has GB by 6.8, more than the 5.5-point spread, so the lean is GB -5.5. That's a 1.3-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. GB is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Mostly Sunny, 66\u00b0F, wind 1 to 6 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has GB by 6.8, more than the 5.5-point spread, so the lean is GB -5.5.",
       "market": {
         "spread_home": 5.5,
         "spread_home_odds": -108,
         "spread_away_odds": -112,
-        "moneyline_home": -258,
-        "moneyline_away": 210,
+        "moneyline_home": -265,
+        "moneyline_away": 215,
         "total": 43.5,
-        "over_odds": -112,
-        "under_odds": -108,
+        "over_odds": -102,
+        "under_odds": -118,
         "market_favorite": "home",
-        "agrees_with_model": true,
-        "edge_vs_market": 7.1
+        "edge_vs_market": 1.3
       }
     },
     {
@@ -312,12 +340,20 @@
       "home_team": "CHI",
       "away_team": "PHI",
       "div_game": false,
-      "model_margin_home": 12.0,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 3.4,
+      "current_season_weight": {
+        "home": {
+          "off": 0.22,
+          "def": 0.18
+        },
+        "away": {
+          "off": 0.2,
+          "def": 0.19
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -356,8 +392,8 @@
         "temperature_f": 71,
         "wind": "0 to 5 mph"
       },
-      "storyline": "The model leans CHI by 12.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PHI. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 71\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans CHI by 12.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against PHI.",
+      "storyline": "The market favors PHI by 4.5, but the model has CHI winning by 3.4, so the lean is CHI +4.5. That's a 7.9-point gap from the market -- more than a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 71\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The market favors PHI by 4.5, but the model has CHI winning by 3.4, so the lean is CHI +4.5.",
       "market": {
         "spread_home": -4.5,
         "spread_home_odds": -105,
@@ -368,8 +404,7 @@
         "over_odds": -105,
         "under_odds": -115,
         "market_favorite": "away",
-        "agrees_with_model": false,
-        "edge_vs_market": 16.5
+        "edge_vs_market": 7.9
       }
     },
     {
@@ -383,12 +418,20 @@
       "home_team": "DEN",
       "away_team": "LA",
       "div_game": false,
-      "model_margin_home": -9.7,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -2.3,
+      "current_season_weight": {
+        "home": {
+          "off": 0.18,
+          "def": 0.2
+        },
+        "away": {
+          "off": 0.19,
+          "def": 0.2
+        }
       },
-      "our_pick": "away",
+      "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 1,
       "oline_continuity": {
         "home": {
@@ -427,8 +470,8 @@
         "temperature_f": 85,
         "wind": "6 mph"
       },
-      "storyline": "The model leans LA by 9.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against DEN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. LA's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. Worth noting: DEN actually has the rest advantage here, working against the pick. Forecast for kickoff: Sunny, 85\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans LA by 9.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against DEN.",
+      "storyline": "The model has LA by 2.3, short of the 2.5-point spread, so the lean is DEN +2.5. That's a 0.2-point gap from the market -- under a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DEN's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. DEN comes in with 1 extra day of rest -- context, not something the model scores. Forecast for kickoff: Sunny, 85\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has LA by 2.3, short of the 2.5-point spread, so the lean is DEN +2.5.",
       "market": {
         "spread_home": -2.5,
         "spread_home_odds": -105,
@@ -439,8 +482,7 @@
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "away",
-        "agrees_with_model": true,
-        "edge_vs_market": -7.2
+        "edge_vs_market": 0.2
       }
     },
     {
@@ -454,12 +496,20 @@
       "home_team": "CLE",
       "away_team": "CAR",
       "div_game": false,
-      "model_margin_home": -17.8,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -3.2,
+      "current_season_weight": {
+        "home": {
+          "off": 0.17,
+          "def": 0.19
+        },
+        "away": {
+          "off": 0.2,
+          "def": 0.22
+        }
       },
       "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -498,8 +548,8 @@
         "temperature_f": 68,
         "wind": "2 to 12 mph"
       },
-      "storyline": "The model leans CAR by 17.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. CAR is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Sunny, 68\u00b0F, wind 2 to 12 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans CAR by 17.8 points, built on a clear efficiency edge in offense-vs-defense EPA/play against CLE.",
+      "storyline": "The model has CAR by 3.2, more than the 2.5-point spread, so the lean is CAR -2.5. That's a 0.7-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. CAR is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Sunny, 68\u00b0F, wind 2 to 12 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has CAR by 3.2, more than the 2.5-point spread, so the lean is CAR -2.5.",
       "market": {
         "spread_home": -2.5,
         "spread_home_odds": 100,
@@ -510,8 +560,7 @@
         "over_odds": -108,
         "under_odds": -112,
         "market_favorite": "away",
-        "agrees_with_model": true,
-        "edge_vs_market": -15.3
+        "edge_vs_market": -0.7
       }
     },
     {
@@ -525,12 +574,20 @@
       "home_team": "MIA",
       "away_team": "KC",
       "div_game": false,
-      "model_margin_home": 6.4,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -4.5,
+      "current_season_weight": {
+        "home": {
+          "off": 0.17,
+          "def": 0.19
+        },
+        "away": {
+          "off": 0.23,
+          "def": 0.18
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -569,8 +626,8 @@
         "temperature_f": 87,
         "wind": "8 mph"
       },
-      "storyline": "The model leans MIA by 6.4 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against KC. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. MIA's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Mostly Sunny then Chance Showers And Thunderstorms, 87\u00b0F, wind 8 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans MIA by 6.4 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against KC.",
+      "storyline": "The model has KC by 4.5, short of the 11.5-point spread, so the lean is MIA +11.5. That's a 7.0-point gap from the market -- more than a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. MIA's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Mostly Sunny then Chance Showers And Thunderstorms, 87\u00b0F, wind 8 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has KC by 4.5, short of the 11.5-point spread, so the lean is MIA +11.5.",
       "market": {
         "spread_home": -11.5,
         "spread_home_odds": -112,
@@ -578,11 +635,10 @@
         "moneyline_home": 600,
         "moneyline_away": -900,
         "total": 46.5,
-        "over_odds": -105,
-        "under_odds": -115,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "away",
-        "agrees_with_model": false,
-        "edge_vs_market": 17.9
+        "edge_vs_market": 7.0
       }
     },
     {
@@ -596,12 +652,20 @@
       "home_team": "BUF",
       "away_team": "LAC",
       "div_game": false,
-      "model_margin_home": 18.0,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 9.3,
+      "current_season_weight": {
+        "home": {
+          "off": 0.2,
+          "def": 0.21
+        },
+        "away": {
+          "off": 0.18,
+          "def": 0.21
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 3,
       "oline_continuity": {
         "home": {
@@ -640,8 +704,8 @@
         "temperature_f": 68,
         "wind": "2 to 7 mph"
       },
-      "storyline": "The model leans BUF by 18.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LAC. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. BUF also holds a rest advantage coming in, one more thing tilting this the model's way. Forecast for kickoff: Mostly Sunny, 68\u00b0F, wind 2 to 7 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans BUF by 18.0 points, built on a clear efficiency edge in offense-vs-defense EPA/play against LAC.",
+      "storyline": "The model has BUF by 9.3, more than the 7-point spread, so the lean is BUF -7. That's a 2.3-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. BUF comes in with 3 extra days of rest -- context, not something the model scores. Forecast for kickoff: Mostly Sunny, 68\u00b0F, wind 2 to 7 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has BUF by 9.3, more than the 7-point spread, so the lean is BUF -7.",
       "market": {
         "spread_home": 7.0,
         "spread_home_odds": -115,
@@ -652,8 +716,7 @@
         "over_odds": -105,
         "under_odds": -115,
         "market_favorite": "home",
-        "agrees_with_model": true,
-        "edge_vs_market": 11.0
+        "edge_vs_market": 2.3
       }
     },
     {
@@ -667,12 +730,20 @@
       "home_team": "JAX",
       "away_team": "NE",
       "div_game": false,
-      "model_margin_home": -1.3,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -0.1,
+      "current_season_weight": {
+        "home": {
+          "off": 0.18,
+          "def": 0.18
+        },
+        "away": {
+          "off": 0.19,
+          "def": 0.19
+        }
       },
       "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -711,8 +782,8 @@
         "temperature_f": 85,
         "wind": "5 to 8 mph"
       },
-      "storyline": "The model leans NE by 1.3 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against JAX. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. Forecast for kickoff: Mostly Sunny, 85\u00b0F, wind 5 to 8 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans NE by 1.3 points, built on only a slight efficiency edge in offense-vs-defense EPA/play against JAX.",
+      "storyline": "The market favors JAX by 3, but the model has NE winning by 0.1, so the lean is NE +3. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 18% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Mostly Sunny, 85\u00b0F, wind 5 to 8 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The market favors JAX by 3, but the model has NE winning by 0.1, so the lean is NE +3.",
       "market": {
         "spread_home": 3.0,
         "spread_home_odds": -108,
@@ -723,8 +794,7 @@
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "home",
-        "agrees_with_model": false,
-        "edge_vs_market": -4.3
+        "edge_vs_market": -3.1
       }
     },
     {
@@ -738,12 +808,20 @@
       "home_team": "DET",
       "away_team": "NYJ",
       "div_game": false,
-      "model_margin_home": 6.3,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 6.7,
+      "current_season_weight": {
+        "home": {
+          "off": 0.21,
+          "def": 0.24
+        },
+        "away": {
+          "off": 0.21,
+          "def": 0.16
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 3,
       "oline_continuity": {
         "home": {
@@ -782,8 +860,8 @@
         "temperature_f": 69,
         "wind": "6 mph"
       },
-      "storyline": "The model leans DET by 6.3 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against NYJ. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. DET also holds a rest advantage coming in, one more thing tilting this the model's way. Forecast for kickoff: Sunny, 69\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans DET by 6.3 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against NYJ.",
+      "storyline": "The model has DET by 6.7, more than the 6.5-point spread, so the lean is DET -6.5. That's a 0.2-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DET comes in with 3 extra days of rest -- context, not something the model scores. Forecast for kickoff: Sunny, 69\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has DET by 6.7, more than the 6.5-point spread, so the lean is DET -6.5.",
       "market": {
         "spread_home": 6.5,
         "spread_home_odds": -110,
@@ -791,11 +869,10 @@
         "moneyline_home": -305,
         "moneyline_away": 245,
         "total": 47.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "home",
-        "agrees_with_model": true,
-        "edge_vs_market": -0.2
+        "edge_vs_market": 0.2
       }
     },
     {
@@ -809,12 +886,20 @@
       "home_team": "WAS",
       "away_team": "SEA",
       "div_game": false,
-      "model_margin_home": 15.7,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -4.1,
+      "current_season_weight": {
+        "home": {
+          "off": 0.22,
+          "def": 0.18
+        },
+        "away": {
+          "off": 0.19,
+          "def": 0.19
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -853,8 +938,8 @@
         "temperature_f": 72,
         "wind": "15 mph"
       },
-      "storyline": "The model leans WAS by 15.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. Forecast for kickoff: Slight Chance Rain Showers, 72\u00b0F, wind 15 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans WAS by 15.7 points, built on a clear efficiency edge in offense-vs-defense EPA/play against SEA.",
+      "storyline": "The model has SEA by 4.1, short of the 7-point spread, so the lean is WAS +7. That's a 2.9-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Slight Chance Rain Showers, 72\u00b0F, wind 15 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has SEA by 4.1, short of the 7-point spread, so the lean is WAS +7.",
       "market": {
         "spread_home": -7.0,
         "spread_home_odds": -112,
@@ -865,8 +950,7 @@
         "over_odds": -102,
         "under_odds": -118,
         "market_favorite": "away",
-        "agrees_with_model": false,
-        "edge_vs_market": 22.7
+        "edge_vs_market": 2.9
       }
     },
     {
@@ -880,12 +964,20 @@
       "home_team": "NYG",
       "away_team": "TEN",
       "div_game": false,
-      "model_margin_home": 12.6,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 5.6,
+      "current_season_weight": {
+        "home": {
+          "off": 0.2,
+          "def": 0.19
+        },
+        "away": {
+          "off": 0.17,
+          "def": 0.22
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": -1,
       "oline_continuity": {
         "home": {
@@ -924,8 +1016,8 @@
         "temperature_f": 67,
         "wind": "15 to 18 mph"
       },
-      "storyline": "The model leans NYG by 12.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against TEN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. NYG's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Worth noting: TEN actually has the rest advantage here, working against the pick. Forecast for kickoff: Chance Rain Showers, 67\u00b0F, wind 15 to 18 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans NYG by 12.6 points, built on a clear efficiency edge in offense-vs-defense EPA/play against TEN.",
+      "storyline": "The model has NYG by 5.6, more than the 2.5-point spread, so the lean is NYG -2.5. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. NYG's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. TEN comes in with 1 extra day of rest -- context, not something the model scores. Forecast for kickoff: Chance Rain Showers, 67\u00b0F, wind 15 to 18 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has NYG by 5.6, more than the 2.5-point spread, so the lean is NYG -2.5.",
       "market": {
         "spread_home": 2.5,
         "spread_home_odds": -120,
@@ -936,8 +1028,7 @@
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "home",
-        "agrees_with_model": true,
-        "edge_vs_market": 10.1
+        "edge_vs_market": 3.1
       }
     },
     {
@@ -951,12 +1042,20 @@
       "home_team": "TB",
       "away_team": "MIN",
       "div_game": false,
-      "model_margin_home": 16.3,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 1.6,
+      "current_season_weight": {
+        "home": {
+          "off": 0.18,
+          "def": 0.19
+        },
+        "away": {
+          "off": 0.18,
+          "def": 0.21
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -995,20 +1094,19 @@
         "temperature_f": 88,
         "wind": "7 mph"
       },
-      "storyline": "The model leans TB by 16.3 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. TB's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 88\u00b0F, wind 7 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans TB by 16.3 points, built on a clear efficiency edge in offense-vs-defense EPA/play against MIN.",
+      "storyline": "The market favors MIN by 1.5, but the model has TB winning by 1.6, so the lean is TB +1.5. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. TB's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 88\u00b0F, wind 7 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The market favors MIN by 1.5, but the model has TB winning by 1.6, so the lean is TB +1.5.",
       "market": {
         "spread_home": -1.5,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": 100,
-        "moneyline_away": -120,
+        "moneyline_home": 102,
+        "moneyline_away": -122,
         "total": 42.5,
         "over_odds": -112,
         "under_odds": -108,
         "market_favorite": "away",
-        "agrees_with_model": false,
-        "edge_vs_market": 17.8
+        "edge_vs_market": 3.1
       }
     },
     {
@@ -1022,12 +1120,20 @@
       "home_team": "DAL",
       "away_team": "BAL",
       "div_game": false,
-      "model_margin_home": 14.5,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": -2.2,
+      "current_season_weight": {
+        "home": {
+          "off": 0.18,
+          "def": 0.22
+        },
+        "away": {
+          "off": 0.19,
+          "def": 0.19
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": true,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -1062,20 +1168,19 @@
       "roof": null,
       "international_site": true,
       "weather": null,
-      "storyline": "The model leans DAL by 14.5 points, built on a clear efficiency edge in offense-vs-defense EPA/play against BAL. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. DAL's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.",
-      "storyline_short": "The model leans DAL by 14.5 points, built on a clear efficiency edge in offense-vs-defense EPA/play against BAL.",
+      "storyline": "The model has BAL by 2.2, short of the 3.5-point spread, so the lean is DAL +3.5. That's a 1.3-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DAL's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. This one's at an international neutral site, so the model gives neither team home-field points.",
+      "storyline_short": "The model has BAL by 2.2, short of the 3.5-point spread, so the lean is DAL +3.5.",
       "market": {
         "spread_home": -3.5,
         "spread_home_odds": -115,
         "spread_away_odds": -105,
-        "moneyline_home": 145,
-        "moneyline_away": -175,
+        "moneyline_home": 150,
+        "moneyline_away": -180,
         "total": 52.5,
         "over_odds": -112,
         "under_odds": -108,
         "market_favorite": "away",
-        "agrees_with_model": false,
-        "edge_vs_market": 18.0
+        "edge_vs_market": 1.3
       }
     },
     {
@@ -1089,12 +1194,20 @@
       "home_team": "NO",
       "away_team": "LV",
       "div_game": false,
-      "model_margin_home": 6.7,
-      "efficiency_source": {
-        "home": "prior_season_fallback",
-        "away": "prior_season_fallback"
+      "model_margin_home": 5.0,
+      "current_season_weight": {
+        "home": {
+          "off": 0.23,
+          "def": 0.21
+        },
+        "away": {
+          "off": 0.21,
+          "def": 0.18
+        }
       },
       "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
@@ -1133,8 +1246,8 @@
         "temperature_f": 90,
         "wind": "0 to 5 mph"
       },
-      "storyline": "The model leans NO by 6.7 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV. Both teams' efficiency numbers are still running off last season's tape -- this read will sharpen once there's 2026 game data on the board. Forecast for kickoff: Mostly Sunny, 90\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model leans NO by 6.7 points, built on a moderate efficiency edge in offense-vs-defense EPA/play against LV.",
+      "storyline": "The model has NO by 5.0, more than the 3-point spread, so the lean is NO -3. That's a 2.0-point gap from the market -- under a field goal. Early-season read: only about 21% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Mostly Sunny, 90\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has NO by 5.0, more than the 3-point spread, so the lean is NO -3.",
       "market": {
         "spread_home": 3.0,
         "spread_home_odds": -122,
@@ -1145,8 +1258,7 @@
         "over_odds": -102,
         "under_odds": -118,
         "market_favorite": "home",
-        "agrees_with_model": true,
-        "edge_vs_market": 3.7
+        "edge_vs_market": 2.0
       }
     }
   ]

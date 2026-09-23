@@ -400,6 +400,8 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
 .market-row span:last-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; text-align: right; }
 .tr-game-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border-light); }
 .tr-game-row:last-child { border-bottom: none; }
+.backtest-summary { display: block; margin: 0 0 1rem; line-height: 1.55; }
+.backtest-summary:empty { display: none; }
 .pivot-toggle { display: none; }
 .market-label {
   font-weight: 600;
@@ -438,6 +440,8 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
   padding: 1.75rem 0 3rem;
   line-height: 1.6;
 }
+.disclaimer p { margin: 0 0 0.75rem; }
+.disclaimer p:last-child { margin-bottom: 0; }
 
 .loading, .empty-state { color: var(--ink-3); font-size: 0.9rem; padding: 1rem 0; }
 
@@ -607,6 +611,7 @@ table.tight-table .num { font-family: 'JetBrains Mono', monospace; text-align: r
 .ticket-stub { width: 68px; flex-shrink: 0; padding: 0.75rem 0.5rem; text-align: center; }
 .ticket-stub .pick-label { font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.04em; }
 .ticket-stub .pick-team { font-family: 'Oswald', sans-serif; font-size: 0.95rem; color: var(--accent-betting-dark); margin-top: 0.15rem; }
+.ticket-stub .pick-line { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--ink-2); margin-top: 0.1rem; }
 .ticket-matchup { font-weight: 700; font-size: 0.92rem; }
 .ticket-time { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--ink-3); margin-top: 1px; }
 .ticket-tags { display: flex; gap: 0.3rem; margin-top: 0.4rem; flex-wrap: wrap; }

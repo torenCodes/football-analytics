@@ -56,9 +56,9 @@ MATCHUP_POS = SKILL_POS + ["K"]  # positions the defense-vs-position matchup sig
 MATCHUP_ADJ_WEIGHT = 0.5  # half the raw points-allowed-vs-league-average differential -- a modest
 # nudge, same philosophy as CONTINUITY_ADJ_WEIGHT below
 MIN_GAMES_FOR_DEFENSE_SAMPLE = 3  # below this, fall back to the defense's full-prior-season number --
-# reuses betting_scan.py's MIN_GAMES_FOR_CURRENT_SEASON threshold for consistency, though a 3-game
-# points-allowed-to-position total is a smaller, higher-variance sample than the play-level EPA data
-# that threshold was originally calibrated against -- an acceptable, explicitly-flagged judgment call
+# a hard switch chosen by judgment, not fitted (betting_scan.py's game model now blends prior and
+# current season gradually by plays played; a 3-game points-allowed-to-position total is a small,
+# high-variance sample either way -- an acceptable, explicitly-flagged judgment call)
 QUESTIONABLE_PENALTY, DOUBTFUL_PENALTY, OUT_PENALTY = -2.0, -10.0, -20.0  # soft nudges, never a hard
 # exclusion -- an "Out" player still shows up, clearly flagged, sunk to the bottom of their position
 # group (a typical 8-20 ppg skill player's score goes negative), same "explainable, not a black box"

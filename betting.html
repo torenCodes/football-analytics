@@ -26,7 +26,7 @@
   <div class="masthead-strip">
     <div>
       <h1>Game Picks</h1>
-      <div class="masthead-sub">Matchup efficiency (offense vs. defense EPA/play), continuity, situational factors, and weather -- weighed as explainable factors, not a black-box number.</div>
+      <div class="masthead-sub">Team efficiency (offense vs. defense EPA/play), blended from last season into this one, plus a few explainable situational adjustments -- set against the real spread, not a black-box number.</div>
     </div>
     <div class="masthead-date" id="betting-week-label"></div>
   </div>
@@ -48,8 +48,10 @@
         point margin so both sides are roughly equally likely to "cover" -- the favorite (shown negative, e.g.
         KC &minus;3.0) must win by more than 3 to cover; the underdog (shown positive, e.g. DEN +3.0) covers by
         losing by less than 3, or winning outright. <strong>Total</strong> (over/under) is a bet on the
-        combined score of both teams, over or under one number. "Model vs. market" below compares our model's
-        margin to the actual spread -- the gap is our pitch, not the raw pick.
+        combined score of both teams, over or under one number. Each <strong>Model pick</strong> below is the
+        side of the spread our model favors: if the model's projected margin beats the spread, it takes the
+        favorite; if it falls short, it takes the underdog with the points. When the two match exactly, there's
+        no lean.
       </div>
     </details>
     <div id="game-board"></div>
@@ -63,13 +65,21 @@
       </div>
       <span class="section-note" id="track-record-overall"></span>
     </div>
+    <p class="section-note backtest-summary" id="backtest-summary"></p>
     <div id="track-record"></div>
   </section>
 
-  <p class="disclaimer">
-    Educational research project, not betting advice. Picks come from one tunable model's output, not a
-    guarantee of results, and this is not a recommendation to wager real money.
-  </p>
+  <div class="disclaimer">
+    <p>
+      Educational research project, not betting advice. Picks come from one tunable model's output, not a
+      guarantee of results, and this is not a recommendation to wager real money.
+    </p>
+    <p>
+      Football Forecast is a living project -- models and methods get refined as the season teaches us things,
+      and past results may be re-graded when a fix changes how they should be scored. What you see always
+      reflects the current method.
+    </p>
+  </div>
 </main>
 
 <script>
@@ -150,6 +160,27 @@ function factorTags(g) {
 
 function fmtOdds(n) { return (n === null || n === undefined) ? '--' : (n > 0 ? '+' + n : String(n)); }
 
+// A team's own spread in standard notation (favorite negative) from the
+// home-relative spread_home -- same formatting as the market row.
+function teamLine(spreadHome, side) {
+  const x = side === 'home' ? -spreadHome : spreadHome;
+  return x === 0 ? 'PK' : fmtOdds(x);
+}
+
+function pickLabel(side, spreadHome, home, away) {
+  const team = side === 'home' ? home : away;
+  return `${teamSpan(team)} ${teamLine(spreadHome, side)}`;
+}
+
+function pickHeader(g) {
+  if (g.pick_status === 'pick' && g.our_pick && g.market) {
+    return `Model pick: ${pickLabel(g.our_pick, g.market.spread_home, g.home_team, g.away_team)}`;
+  }
+  if (g.pick_status === 'no_lean') return 'No lean -- model matches the spread';
+  if (g.pick_status === 'no_line') return 'No line posted yet';
+  return 'Not enough data yet';
+}
+
 function marketOddsHtml(g) {
   const m = g.market;
   if (!m) return '';
@@ -159,9 +190,14 @@ function marketOddsHtml(g) {
   const homeSpread = -m.spread_home;
   const awaySpread = m.spread_home;
   let edgeNote = '';
-  if (m.edge_vs_market !== null && m.edge_vs_market !== undefined) {
-    const towardTeam = m.edge_vs_market > 0 ? g.home_team : g.away_team;
-    edgeNote = `Model vs. market: our model leans ${Math.abs(m.edge_vs_market).toFixed(1)} points more toward ${teamSpan(towardTeam)} than the actual spread does.`;
+  const mm = g.model_margin_home;
+  if (mm !== null && mm !== undefined && m.edge_vs_market !== null && m.edge_vs_market !== undefined) {
+    const modelText = mm === 0 ? 'even' : `${teamSpan(mm > 0 ? g.home_team : g.away_team)} by ${fmt1(Math.abs(mm))}`;
+    const s = m.spread_home;
+    const marketText = s === 0 ? 'even' : `${teamSpan(s > 0 ? g.home_team : g.away_team)} ${fmtOdds(-Math.abs(s))}`;
+    const e = m.edge_vs_market;
+    const gapText = e === 0 ? 'no gap' : `gap ${Math.abs(e).toFixed(1)} toward ${teamSpan(e > 0 ? g.home_team : g.away_team)}`;
+    edgeNote = `Model: ${modelText} &middot; Market: ${marketText} &middot; ${gapText}`;
   }
   return `
     <div class="market-odds">
@@ -184,14 +220,7 @@ async function loadGameBoard() {
     document.getElementById('betting-week-label').textContent = `Week ${gb.week} · ${gb.season}`;
     const isRivalry = g => g.div_game || (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) || (g.former_coach && (g.former_coach.home || g.former_coach.away));
     el.innerHTML = gb.games.map(g => {
-      const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
-      // model_margin_home is always the HOME team's margin (negative when the
-      // away team is favored) -- showing that raw signed number next to
-      // whichever team is actually the pick reads backwards whenever the pick
-      // is the away team (a favored-by-9 away pick would show "-9"). Always
-      // show the margin from the PICK's own perspective instead, same as the
-      // storyline text already does.
-      const pickText = pickTeam ? `Model pick: ${teamSpan(pickTeam)} (+${fmt1(Math.abs(g.model_margin_home))})` : 'Not enough data yet';
+      const pickText = pickHeader(g);
       const time = (g.weekday && g.gametime) ? `${g.weekday} ${g.gametime}` : '';
       return `
         <details class="game-card ${isRivalry(g) ? 'rivalry' : ''}">
@@ -221,9 +250,32 @@ async function loadGameBoard() {
 }
 
 function pickResultPill(g) {
+  if (g.no_lean) return `<span class="pill pos">No lean</span>`;
   if (g.push) return `<span class="pill pos">Push</span>`;
   if (g.correct === null || g.correct === undefined) return `<span class="pill pos">Pending</span>`;
   return g.correct ? `<span class="pill up">Correct</span>` : `<span class="pill down">Incorrect</span>`;
+}
+
+// "15-15 (50.0%)" from {graded, correct, accuracy}; null when nothing's graded yet.
+function recordText(r) {
+  if (!r || !r.graded) return null;
+  return `${r.correct}-${r.graded - r.correct} (${(r.accuracy * 100).toFixed(1)}%)`;
+}
+
+async function loadBacktestSummary() {
+  const el = document.getElementById('backtest-summary');
+  try {
+    const bt = await fetch('data/betting/best_calls_backtest.json').then(r => r.json());
+    const ats = recordText(bt.ats), outright = recordText(bt.outright);
+    if (!ats || !outright) return;
+    const fav = bt.market_favorite_outright && bt.market_favorite_outright.accuracy;
+    el.innerHTML = `<strong>${bt.season} backtest</strong> (same model, run week by week on games it hadn't seen yet): `
+      + `${ats} against the spread -- short of the 52.4% needed to profit at standard odds -- and ${outright} on outright winners`
+      + (fav ? ` (the Vegas favorite won ${(fav * 100).toFixed(1)}%)` : '')
+      + `. Base model only; injury, revenge and former-coach adjustments aren't backtested.`;
+  } catch (e) {
+    el.textContent = '';
+  }
 }
 
 async function loadTrackRecord() {
@@ -235,19 +287,19 @@ async function loadTrackRecord() {
       el.innerHTML = `<p class="empty-state">No graded weeks yet -- picks get locked before kickoff, then graded once that week's games are final.</p>`;
       return;
     }
-    overallEl.textContent = acc.accuracy !== null
-      ? `${acc.correct_picks}-${acc.games_graded - acc.correct_picks} (${(acc.accuracy * 100).toFixed(1)}%) vs. the spread this season`
+    const seasonAts = recordText(acc.ats), seasonOutright = recordText(acc.outright);
+    overallEl.textContent = seasonAts
+      ? `Against the spread: ${seasonAts} · Outright winners: ${seasonOutright || '--'}`
       : '';
     el.innerHTML = [...acc.weeks].reverse().map(w => {
-      const wRecord = w.accuracy !== null
-        ? `${w.correct_picks}-${w.games_graded - w.correct_picks} (${(w.accuracy * 100).toFixed(1)}%)`
-        : 'Pending';
+      const wAts = recordText(w.ats), wOutright = recordText(w.outright);
+      const wRecord = wAts ? `ATS ${wAts.split(' ')[0]} · Winners ${wOutright ? wOutright.split(' ')[0] : '--'}` : 'Pending';
       const gamesHtml = w.games.map(g => {
-        const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
+        const pick = g.our_pick ? pickLabel(g.our_pick, g.spread_home, g.home_team, g.away_team) : '--';
         return `
           <div class="tr-game-row">
             <span>${teamSpan(g.away_team)} @ ${teamSpan(g.home_team)}</span>
-            <span class="section-note">Pick: ${pickTeam ? teamSpan(pickTeam) : '--'}</span>
+            <span class="section-note">Pick: ${pick}</span>
             ${pickResultPill(g)}
           </div>
         `;
@@ -273,6 +325,7 @@ async function loadTrackRecord() {
 
 loadGameBoard();
 loadTrackRecord();
+loadBacktestSummary();
 </script>
 </body>
 </html>

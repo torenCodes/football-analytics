@@ -128,11 +128,18 @@
     </div>
   </section>
 
-  <p class="disclaimer">
-    Football Forecast is a personal research project. Every number here comes from a documented, tunable
-    model built on public data (nflverse, FantasyPros consensus, NWS weather) -- nothing here is
-    professional betting or financial advice, and past model accuracy does not guarantee future results.
-  </p>
+  <div class="disclaimer">
+    <p>
+      Football Forecast is a personal research project. Every number here comes from a documented, tunable
+      model built on public data (nflverse, FantasyPros consensus, NWS weather) -- nothing here is
+      professional betting or financial advice, and past model accuracy does not guarantee future results.
+    </p>
+    <p>
+      It's also a living project -- models and methods get refined as the season teaches us things, and past
+      results may be re-graded when a fix changes how they should be scored. What you see always reflects the
+      current method.
+    </p>
+  </div>
 </main>
 
 <script>
@@ -312,6 +319,14 @@ async function loadFantasyColumnInSeason(seasonState) {
 
 function gameRowHtml(g) {
   const pickTeam = g.our_pick === 'home' ? g.home_team : (g.our_pick === 'away' ? g.away_team : null);
+  // The pick is a side of the spread, so the stub shows that side's own line
+  // (favorite negative), not just a team name.
+  let pickLine = '';
+  if (pickTeam && g.market) {
+    const x = g.our_pick === 'home' ? -g.market.spread_home : g.market.spread_home;
+    pickLine = x === 0 ? 'PK' : (x > 0 ? '+' + x : String(x));
+  }
+  const stubLabel = g.pick_status === 'no_lean' ? 'No lean' : 'Pick';
   const time = (g.weekday && g.gametime) ? `${g.weekday.slice(0, 3)} ${g.gametime}` : '';
   const isRivalry = g.div_game || (g.revenge_game && (g.revenge_game.home || g.revenge_game.away));
   const tags = [];
@@ -329,8 +344,9 @@ function gameRowHtml(g) {
       </div>
       <div class="ticket-perf"></div>
       <div class="ticket-stub">
-        <div class="pick-label">Pick</div>
+        <div class="pick-label">${stubLabel}</div>
         <div class="pick-team">${pickTeam ? teamSpan(pickTeam) : '--'}</div>
+        ${pickLine ? `<div class="pick-line">${pickLine}</div>` : ''}
       </div>
     </div>
   `;
