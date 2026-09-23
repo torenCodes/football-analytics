@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-22T14:14:58.896896+00:00"
+    "generated_at": "2026-09-23T13:16:25.830348+00:00"
   },
   "available": true,
   "season": 2026,
@@ -601,24 +601,6 @@
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 9.5 ppg over 2 games since."
         },
         {
-          "player_id": "00-0035269",
-          "name": "Matt Gay",
-          "team": "LV",
-          "preseason_rank": 37,
-          "games": 2,
-          "ppg": 9.0,
-          "explain": "Likely available on waivers in most leagues -- we had them 37th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
-        },
-        {
-          "player_id": "00-0040279",
-          "name": "Ryan Fitzgerald",
-          "team": "CAR",
-          "preseason_rank": 34,
-          "games": 2,
-          "ppg": 9.0,
-          "explain": "Likely available on waivers in most leagues -- we had them 34th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
-        },
-        {
           "player_id": "00-0034161",
           "name": "Daniel Carlson",
           "team": "NO",
@@ -635,6 +617,24 @@
           "games": 2,
           "ppg": 9.0,
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 9.0 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0040279",
+          "name": "Ryan Fitzgerald",
+          "team": "CAR",
+          "preseason_rank": 34,
+          "games": 2,
+          "ppg": 9.0,
+          "explain": "Likely available on waivers in most leagues -- we had them 34th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0035269",
+          "name": "Matt Gay",
+          "team": "LV",
+          "preseason_rank": 37,
+          "games": 2,
+          "ppg": 9.0,
+          "explain": "Likely available on waivers in most leagues -- we had them 37th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
         },
         {
           "player_id": "00-0038428",
@@ -1014,18 +1014,18 @@
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 5.5 ppg over 2 games since."
         },
         {
-          "player_id": "00-0039811",
-          "name": "MarShawn Lloyd",
-          "team": "GB",
+          "player_id": "00-0041013",
+          "name": "Emmett Johnson",
+          "team": "KC",
           "preseason_rank": null,
           "games": 2,
           "ppg": 5.2,
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 5.2 ppg over 2 games since."
         },
         {
-          "player_id": "00-0041013",
-          "name": "Emmett Johnson",
-          "team": "KC",
+          "player_id": "00-0039811",
+          "name": "MarShawn Lloyd",
+          "team": "GB",
           "preseason_rank": null,
           "games": 2,
           "ppg": 5.2,
@@ -1106,15 +1106,6 @@
       ],
       "WR": [
         {
-          "player_id": "00-0038824",
-          "name": "Ryan Miller",
-          "team": "MIA",
-          "preseason_rank": null,
-          "games": 1,
-          "ppg": 13.7,
-          "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 13.7 ppg over 1 game since."
-        },
-        {
           "player_id": "00-0041037",
           "name": "Denzel Boston",
           "team": "CLE",
@@ -1122,6 +1113,15 @@
           "games": 2,
           "ppg": 13.7,
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 13.7 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0038824",
+          "name": "Ryan Miller",
+          "team": "MIA",
+          "preseason_rank": null,
+          "games": 1,
+          "ppg": 13.7,
+          "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 13.7 ppg over 1 game since."
         },
         {
           "player_id": "00-0038393",
@@ -1187,15 +1187,6 @@
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 7.7 ppg over 2 games since."
         },
         {
-          "player_id": "00-0041040",
-          "name": "Antonio Williams",
-          "team": "WAS",
-          "preseason_rank": null,
-          "games": 2,
-          "ppg": 7.4,
-          "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 7.4 ppg over 2 games since."
-        },
-        {
           "player_id": "00-0036550",
           "name": "Rashod Bateman",
           "team": "BAL",
@@ -1205,18 +1196,27 @@
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 7.4 ppg over 2 games since."
         },
         {
-          "player_id": "00-0035891",
-          "name": "Cody White",
-          "team": "LV",
+          "player_id": "00-0041040",
+          "name": "Antonio Williams",
+          "team": "WAS",
+          "preseason_rank": null,
+          "games": 2,
+          "ppg": 7.4,
+          "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 7.4 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0032775",
+          "name": "Demarcus Robinson",
+          "team": "SF",
           "preseason_rank": null,
           "games": 2,
           "ppg": 7.2,
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 7.2 ppg over 2 games since."
         },
         {
-          "player_id": "00-0032775",
-          "name": "Demarcus Robinson",
-          "team": "SF",
+          "player_id": "00-0035891",
+          "name": "Cody White",
+          "team": "LV",
           "preseason_rank": null,
           "games": 2,
           "ppg": 7.2,
@@ -1315,15 +1315,6 @@
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 5.0 ppg over 1 game since."
         },
         {
-          "player_id": "00-0034753",
-          "name": "Mark Andrews",
-          "team": "BAL",
-          "preseason_rank": 50,
-          "games": 2,
-          "ppg": 4.9,
-          "explain": "Likely available on waivers in most leagues -- we had them 50th at the position entering the season, and they're averaging 4.9 ppg over 2 games since."
-        },
-        {
           "player_id": "00-0038783",
           "name": "Nate Adkins",
           "team": "DEN",
@@ -1331,6 +1322,15 @@
           "games": 2,
           "ppg": 4.9,
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 4.9 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0034753",
+          "name": "Mark Andrews",
+          "team": "BAL",
+          "preseason_rank": 50,
+          "games": 2,
+          "ppg": 4.9,
+          "explain": "Likely available on waivers in most leagues -- we had them 50th at the position entering the season, and they're averaging 4.9 ppg over 2 games since."
         },
         {
           "player_id": "00-0036290",
@@ -1425,24 +1425,6 @@
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 9.5 ppg over 2 games since."
         },
         {
-          "player_id": "00-0035269",
-          "name": "Matt Gay",
-          "team": "LV",
-          "preseason_rank": 37,
-          "games": 2,
-          "ppg": 9.0,
-          "explain": "Likely available on waivers in most leagues -- we had them 37th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
-        },
-        {
-          "player_id": "00-0040279",
-          "name": "Ryan Fitzgerald",
-          "team": "CAR",
-          "preseason_rank": 34,
-          "games": 2,
-          "ppg": 9.0,
-          "explain": "Likely available on waivers in most leagues -- we had them 34th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
-        },
-        {
           "player_id": "00-0034161",
           "name": "Daniel Carlson",
           "team": "NO",
@@ -1459,6 +1441,24 @@
           "games": 2,
           "ppg": 9.0,
           "explain": "Likely available on waivers in most leagues -- wasn't on our preseason board at all, and they're averaging 9.0 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0040279",
+          "name": "Ryan Fitzgerald",
+          "team": "CAR",
+          "preseason_rank": 34,
+          "games": 2,
+          "ppg": 9.0,
+          "explain": "Likely available on waivers in most leagues -- we had them 34th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
+        },
+        {
+          "player_id": "00-0035269",
+          "name": "Matt Gay",
+          "team": "LV",
+          "preseason_rank": 37,
+          "games": 2,
+          "ppg": 9.0,
+          "explain": "Likely available on waivers in most leagues -- we had them 37th at the position entering the season, and they're averaging 9.0 ppg over 2 games since."
         },
         {
           "player_id": "00-0038428",

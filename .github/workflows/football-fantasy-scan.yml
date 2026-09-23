@@ -8,18 +8,33 @@ on:
     # this bit us on 2026-09-15: no run of any kind (success OR failure) shows in
     # the Actions history for that day -- the trigger itself never fired.
     #
-    # Clustered right after Monday Night Football instead of Tuesday mid-morning,
-    # so users see fresh data as soon as possible after the last game of the week
-    # ends, not ~12 hours later -- commit step only fires on an actual diff, so a
-    # run that hits incomplete/not-yet-synced nflverse data is a harmless no-op,
-    # caught by the next attempt. Staggered vs. the Betting scan (:07 here, :37
-    # there) so the two workflows don't hit the shared nflverse cache at once.
+    # Six runs/week, staggered vs. the Betting scan (:07 here, :37 there) so the
+    # two workflows don't hit the shared nflverse cache at once. Commit step only
+    # fires on an actual diff, so a run that hits incomplete/not-yet-synced nflverse
+    # data is a harmless no-op, caught by the next attempt -- confirmed necessary,
+    # not just theoretical: nflverse's Week 3 2026 injury report had zero rows as
+    # late as Tuesday AND Wednesday that week, well after Jaxson Dart's
+    # Monday-night injury -- a Tuesday-only cadence cannot see a report that
+    # doesn't exist yet.
+    #   - Tuesday x3 (1am/4am/6am ET): right after MNF wraps, so users see fresh
+    #     rankings as soon as possible instead of ~12 hours later.
+    #   - Wednesday x1 (6pm ET): catches that week's first official practice/injury
+    #     report. No backup -- it's not the last word before kickoff, and both
+    #     Friday's runs and the following Tuesday's cluster backstop it. Thursday's
+    #     intermediate report is deliberately skipped between two bracketing checks.
+    #   - Friday x2 (6pm/9pm ET): catches the FINAL weekly injury designations
+    #     before the Sunday slate -- the highest-stakes single point of failure
+    #     (last chance before kickoff, so it gets the same double-attempt treatment
+    #     Tuesday already gets, not just one shot).
     # NOTE: cron is UTC-only, no DST awareness -- these assume EDT (UTC-4). Once
-    # DST ends (~Nov 1), actual ET times shift an hour earlier (12am/3am/5am ET)
-    # until this is manually adjusted for the winter offset (UTC-5).
+    # DST ends (~Nov 1), actual ET times shift an hour earlier until this is
+    # manually adjusted for the winter offset (UTC-5).
     - cron: '7 5 * * 2'   # Tuesday ~1am ET -- primary run, right after MNF wraps
     - cron: '7 8 * * 2'   # Tuesday ~4am ET -- backup, in case nflverse data wasn't synced yet at 1am
     - cron: '7 10 * * 2'  # Tuesday ~6am ET -- second backup, same reasoning
+    - cron: '7 22 * * 3'  # Wednesday ~6pm ET -- first official practice/injury report of the week
+    - cron: '7 22 * * 5'  # Friday ~6pm ET -- final weekly injury designations before Sunday
+    - cron: '7 1 * * 6'   # Friday ~9pm ET (crosses into Saturday UTC) -- backup for the Friday report
   workflow_dispatch:
 
 permissions:

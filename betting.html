@@ -118,8 +118,9 @@ function factorTags(g) {
   if (g.div_game) tags.push(`<span class="factor-tag flag">Division game</span>`);
   const homeQbOut = g.qb_injury && g.qb_injury.home;
   const awayQbOut = g.qb_injury && g.qb_injury.away;
-  if (homeQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.home_team)} QB ${homeQbOut.status}</span>`);
-  if (awayQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.away_team)} QB ${awayQbOut.status}</span>`);
+  const qbStatusLabel = s => s === 'Reserve' ? 'on Reserve' : s;
+  if (homeQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.home_team)} QB ${qbStatusLabel(homeQbOut.status)}</span>`);
+  if (awayQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.away_team)} QB ${qbStatusLabel(awayQbOut.status)}</span>`);
   if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) {
     const who = g.revenge_game.home ? g.home_team : g.away_team;
     tags.push(`<span class="factor-tag flag">Revenge game: ${teamSpan(who)} lost last meeting (${g.revenge_game.last_season})</span>`);

@@ -33,9 +33,9 @@ from shared import (
     build_coach_continuity,
     build_former_coach_matchups,
     build_oline_continuity,
+    build_qb_injury_flags,
     json_safe,
     load_cache,
-    season_from_dt,
     REF_DIR,
 )
 
@@ -48,7 +48,6 @@ UPCOMING_SEASON = 2026
 PLAY_SCALE = 65  # rough plays-per-team-per-game, converts EPA/play diff to a point-scale margin
 HOME_FIELD_ADJ = 1.5  # points, standard analytics convention (~1-3)
 MIN_GAMES_FOR_CURRENT_SEASON = 3  # below this, fall back to prior-season efficiency for that team
-QB_OUT_STATUSES = {"Out", "Doubtful"}  # "Questionable" is a real coin-flip -- shown as a tag, not scored
 QB_OUT_PENALTY = 4.0  # points; backtested estimates of a backup QB's scoring impact commonly range
 # ~3-7 points -- 4 is a defensible, modest v1 value, consistent with this model's philosophy of small
 # explainable nudges rather than a fully-modeled per-player value system (that's a future project, not this one)
@@ -362,43 +361,7 @@ def build_market(r, our_pick, model_margin_home):
     }
 
 
-def starting_qb_by_team(depth_charts, season):
-    """Each team's current starting QB (gsis_id), from that team's most
-    recent depth-chart snapshot this season -- same snapshot-latest pattern
-    shared.py's build_oline_continuity uses for O-line starters."""
-    qb = depth_charts.filter((pl.col("pos_abb") == "QB") & (pl.col("pos_rank") == 1)).with_columns(
-        season_from_dt(pl.col("dt")).alias("dc_season")
-    )
-    qb = qb.filter(pl.col("dc_season") == season)
-    if qb.is_empty():
-        return {}
-    latest = qb.group_by("team").agg(pl.col("dt").max().alias("dt"))
-    current = qb.join(latest, on=["team", "dt"], how="inner").unique(subset=["team"])
-    return dict(zip(current["team"].to_list(), current["gsis_id"].to_list()))
-
-
-def build_qb_injury_flags(depth_charts, injuries, season, week):
-    """Flags a team's starting QB as a real game-time question when the
-    NFL's own official weekly injury report lists them Out or Doubtful --
-    the standard, free signal sportsbooks and fantasy platforms already key
-    off, available well before a player is ever formally placed on IR."""
-    starters = starting_qb_by_team(depth_charts, season)
-    if not starters or injuries is None or injuries.is_empty():
-        return {}
-    wk = injuries.filter((pl.col("season") == season) & (pl.col("week") == week))
-    if wk.is_empty():
-        return {}
-    status_by_id = dict(zip(wk["gsis_id"].to_list(), wk["report_status"].to_list()))
-
-    flags = {}
-    for team, gsis_id in starters.items():
-        status = status_by_id.get(gsis_id)
-        if status in QB_OUT_STATUSES:
-            flags[team] = {"gsis_id": gsis_id, "status": status}
-    return flags
-
-
-def build_game_board(schedules, team_stats, injuries):
+def build_game_board(schedules, team_stats, injuries, rosters=None):
     with open(os.path.join(REF_DIR, "stadiums.json"), encoding="utf-8") as f:
         stadiums = json.load(f)
 
@@ -442,7 +405,7 @@ def build_game_board(schedules, team_stats, injuries):
     oline_continuity = build_oline_continuity(depth_charts, RETRO_SEASON, UPCOMING_SEASON)
     coach_continuity = build_coach_continuity(schedules, RETRO_SEASON, UPCOMING_SEASON)
     former_coach_matchups = build_former_coach_matchups(schedules, RETRO_SEASON, UPCOMING_SEASON)
-    qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week)
+    qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week, rosters=rosters)
 
     def team_off(team):
         if games_played_by_team.get(team, 0) >= MIN_GAMES_FOR_CURRENT_SEASON:
@@ -662,6 +625,7 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
     schedules = load_cache("schedules")
+    rosters = load_cache("rosters")
     team_stats_25 = load_cache_team_stats(RETRO_SEASON)
 
     print(f"Building {RETRO_SEASON} spread backtest (leave-one-out EPA model)...")
@@ -674,7 +638,7 @@ def main():
     injuries_hist = load_cache("injuries")
     injuries_current = load_current_season_injuries(UPCOMING_SEASON, allow_empty=True)
     all_injuries = pl.concat([injuries_hist, injuries_current], how="diagonal_relaxed") if injuries_current is not None else injuries_hist
-    game_board = build_game_board(schedules, all_team_stats, all_injuries)
+    game_board = build_game_board(schedules, all_team_stats, all_injuries, rosters=rosters)
     print(f"  {len(game_board.get('games', []))} games in week {game_board.get('week')}")
 
     print("Grading previously-archived weeks against final results...")

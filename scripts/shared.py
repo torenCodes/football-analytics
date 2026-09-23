@@ -142,3 +142,67 @@ def build_former_coach_matchups(schedules, prior_season, current_season):
         if new_team and new_team != team:
             result[team] = {"coach_name": old_coach, "now_with": new_team}
     return result
+
+
+QB_OUT_STATUSES = {"Out", "Doubtful"}  # "Questionable" is a real coin-flip -- shown as a tag, not scored
+
+
+def starting_qb_by_team(depth_charts, season):
+    """Each team's current starting QB (gsis_id), from that team's most
+    recent depth-chart snapshot this season -- same snapshot-latest pattern
+    build_oline_continuity uses for O-line starters."""
+    qb = depth_charts.filter((pl.col("pos_abb") == "QB") & (pl.col("pos_rank") == 1)).with_columns(
+        season_from_dt(pl.col("dt")).alias("dc_season")
+    )
+    qb = qb.filter(pl.col("dc_season") == season)
+    if qb.is_empty():
+        return {}
+    latest = qb.group_by("team").agg(pl.col("dt").max().alias("dt"))
+    current = qb.join(latest, on=["team", "dt"], how="inner").unique(subset=["team"])
+    return dict(zip(current["team"].to_list(), current["gsis_id"].to_list()))
+
+
+def build_qb_injury_flags(depth_charts, injuries, season, week, rosters=None):
+    """Flags a team's starting QB as a real game-time question when the
+    NFL's own official weekly injury report lists them Out or Doubtful --
+    the standard, free signal sportsbooks and fantasy platforms already key
+    off, available well before a player is ever formally placed on IR.
+    Shared between betting_scan.py (a team-margin adjustment) and
+    fantasy_scan.py (a WR/TE ripple penalty), since both need the identical
+    "is this team's starter really playing" fact.
+
+    Optional rosters fallback: the weekly injury report only covers players
+    still tracked on it -- a starter formally moved to Reserve (nflverse's
+    umbrella "RES" status, covering IR/PUP/NFI/Suspended) often drops off
+    that report entirely, even though the depth chart may not yet show a
+    new starter. When rosters is given, also flags a starter whose most
+    recent roster status this season is "RES", even if they're absent from
+    this week's injury report -- confirmed this bit us for Jaxson Dart
+    (2026 wk3): a likely season-ending injury that hadn't yet produced a
+    weekly report entry."""
+    starters = starting_qb_by_team(depth_charts, season)
+    if not starters:
+        return {}
+
+    status_by_id = {}
+    if injuries is not None and not injuries.is_empty():
+        wk = injuries.filter((pl.col("season") == season) & (pl.col("week") == week))
+        if not wk.is_empty():
+            status_by_id = dict(zip(wk["gsis_id"].to_list(), wk["report_status"].to_list()))
+
+    reserve_ids = set()
+    if rosters is not None:
+        snap = rosters.filter((pl.col("season") == season) & pl.col("gsis_id").is_not_null())
+        if not snap.is_empty():
+            latest = snap.group_by("gsis_id").agg(pl.col("week").max().alias("week"))
+            current = snap.join(latest, on=["gsis_id", "week"], how="inner")
+            reserve_ids = set(current.filter(pl.col("status") == "RES")["gsis_id"].to_list())
+
+    flags = {}
+    for team, gsis_id in starters.items():
+        status = status_by_id.get(gsis_id)
+        if status in QB_OUT_STATUSES:
+            flags[team] = {"gsis_id": gsis_id, "status": status}
+        elif gsis_id in reserve_ids:
+            flags[team] = {"gsis_id": gsis_id, "status": "Reserve"}
+    return flags

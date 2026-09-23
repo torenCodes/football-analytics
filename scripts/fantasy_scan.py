@@ -29,6 +29,7 @@ from shared import (
     build_current_team_lookup,
     build_former_coach_matchups,
     build_oline_continuity,
+    build_qb_injury_flags,
     json_safe,
     load_cache,
 )
@@ -62,6 +63,15 @@ QUESTIONABLE_PENALTY, DOUBTFUL_PENALTY, OUT_PENALTY = -2.0, -10.0, -20.0  # soft
 # exclusion -- an "Out" player still shows up, clearly flagged, sunk to the bottom of their position
 # group (a typical 8-20 ppg skill player's score goes negative), same "explainable, not a black box"
 # philosophy as betting_scan.py's QB_OUT_PENALTY
+TEAM_QB_OUT_PENALTY = -2.0  # points, for a WR/TE whose team's starting QB is Out/Doubtful (or on
+# Reserve) this week -- half of betting_scan.py's QB_OUT_PENALTY (4.0, the whole offense's margin),
+# proportionate for one player absorbing part of that. Landed at QUESTIONABLE_PENALTY's tier
+# deliberately: a real, mechanical, first-order effect (a different QB throwing every pass), not a
+# soft motivation nudge (the 0.5-1.0 tier below), but well short of the -10/-20 tier reserved for the
+# receiver's own availability being in doubt. Flat across WR/TE, not scaled by target share or
+# depth-chart rank -- deliberately simple, same as every other adjustment here; a true WR1 likely
+# absorbs less of this in reality (volume/checkdowns partially offset QB-quality decline) while a
+# WR3/4 likely absorbs more -- an acceptable, disclosed v1 simplification, not something to model around
 MIN_GAMES_FOR_WAIVER_WIRE = 1  # a single monster game is often exactly what should trigger a waiver
 # pickup in the first place -- requiring 2+ games would leave this section completely empty for the
 # first two weeks of the season, missing the exact window a hot pickup is most available. games is
@@ -1003,6 +1013,8 @@ def build_weekly_ranking_explain(row):
             sentences.append(f"Facing {row['opponent']}, a tough matchup for {row['position']}s this week.")
     if row["injury_status"]:
         sentences.append(f"Listed {row['injury_status']} on the official injury report.")
+    if row.get("team_qb_out"):
+        sentences.append(f"{row['team']}'s starting QB is out this week, a modest drag on the passing game.")
     if row.get("former_coach_matchup"):
         sentences.append(f"{row['team']} also faces the coach who ran them last season -- extra motivation baked into the score.")
     if row.get("former_team_matchup"):
@@ -1010,7 +1022,7 @@ def build_weekly_ranking_explain(row):
     return " ".join(sentences)
 
 
-def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters):
+def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, depth_charts):
     """Forward-looking start/sit rankings for the upcoming week -- the
     in-season successor to the Draft Board, using the exact same
     recency-weighted-production-plus-explainable-adjustments philosophy,
@@ -1079,6 +1091,7 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters):
 
     former_coach_matchups = build_former_coach_matchups(schedules, RETRO_SEASON, UPCOMING_SEASON)
     player_former_teams = build_player_former_teams(rosters)
+    qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week, rosters=rosters)
 
     board = {}
     for fmt, season_col, last6_col in (("ppr", "season_ppr", "last6_ppr_total"), ("standard", "season_standard", "last6_standard_total")):
@@ -1113,7 +1126,10 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters):
             former_team_matchup = opponent in player_former_teams.get(r["player_id"], set())
             motivation_bonus = (FORMER_COACH_TEAM_BONUS if former_coach_matchup else 0.0) + (FORMER_TEAM_BONUS if former_team_matchup else 0.0)
 
-            start_score = round(recent_ppg + (matchup_adj or 0.0) + injury_penalty + motivation_bonus, 2)
+            team_qb_out = position in ("WR", "TE") and team in qb_injury_flags
+            qb_out_penalty = TEAM_QB_OUT_PENALTY if team_qb_out else 0.0
+
+            start_score = round(recent_ppg + (matchup_adj or 0.0) + injury_penalty + motivation_bonus + qb_out_penalty, 2)
 
             row = {
                 "player_id": r["player_id"],
@@ -1129,6 +1145,7 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters):
                 "injury_status": injury_status,
                 "former_coach_matchup": former_coach_matchup,
                 "former_team_matchup": former_team_matchup,
+                "team_qb_out": team_qb_out,
             }
             row["explain"] = build_weekly_ranking_explain(row)
             rows.append(row)
@@ -1227,7 +1244,7 @@ def main():
     injuries = load_current_season_injuries(UPCOMING_SEASON, allow_empty=True)
 
     print("Computing weekly start/sit rankings...")
-    weekly_rankings = compute_weekly_rankings(stats, schedules, injuries, current_team, rosters)
+    weekly_rankings = compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, depth_charts)
     print(f"  available={weekly_rankings['available']}")
 
     print("Computing waiver wire watch (likely-undrafted players outperforming expectations)...")
