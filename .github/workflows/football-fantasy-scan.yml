@@ -40,6 +40,13 @@ on:
 permissions:
   contents: write
 
+# Queue rather than overlap: two runs racing would each commit, and the commit step's
+# `git pull --rebase -Xtheirs` lets whichever pushes last win -- including a run that
+# checked out older code before a fix landed.
+concurrency:
+  group: football-fantasy-scan
+  cancel-in-progress: false
+
 jobs:
   scan:
     runs-on: ubuntu-latest
