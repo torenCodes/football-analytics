@@ -487,7 +487,10 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
 .col-fantasy { border-right: 1px solid var(--border); padding-right: 2rem; }
 .col-betting { padding-left: 2rem; }
 @media (max-width: 860px) {
-  .front-grid { grid-template-columns: 1fr; }
+  /* Same minmax(0, ...) floor as the desktop rule above -- a bare 1fr let the
+     Weekly Rankings table's min-content (358px) widen the single mobile track
+     past a 335px phone column, scrolling the whole page sideways. */
+  .front-grid { grid-template-columns: minmax(0, 1fr); }
   .col-fantasy { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 2rem; }
   .col-betting { padding-left: 0; }
 }
@@ -564,12 +567,15 @@ table.tight-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--bo
 table.tight-table tbody tr:hover { background: var(--surface-2); }
 table.tight-table .num { font-family: 'JetBrains Mono', monospace; text-align: right; }
 
+/* minmax(0, 1fr), not 1fr: a bare fr track sizes to its longest full player
+   name first, so .mlname's ellipsis never engaged and "Christian McCaffrey"
+   pushed the grid past a phone-width column. */
 .mini-leader-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem 1.25rem;
 }
-@media (max-width: 460px) { .mini-leader-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .mini-leader-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .mini-leader-col .mini-leader-pos {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
