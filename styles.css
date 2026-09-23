@@ -400,8 +400,14 @@ table.data-table tbody tr:hover { background: var(--surface-2); }
 .market-row span:last-child { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; text-align: right; }
 .tr-game-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border-light); }
 .tr-game-row:last-child { border-bottom: none; }
-.backtest-summary { display: block; margin: 0 0 1rem; line-height: 1.55; }
-.backtest-summary:empty { display: none; }
+.tr-note { display: block; margin: 0 0 1rem; line-height: 1.55; }
+.tr-note:empty { display: none; }
+/* Rows wrap on narrow phones: matchup on top, the two result lines right-aligned
+   beneath it, instead of squeezing the matchup into a sliver. */
+.tr-game-row { flex-wrap: wrap; }
+.tr-matchup { white-space: nowrap; }
+.tr-results { display: flex; flex-direction: column; align-items: flex-end; gap: 0.25rem; margin-left: auto; }
+.tr-result { display: flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
 .pivot-toggle { display: none; }
 .market-label {
   font-weight: 600;

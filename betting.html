@@ -65,7 +65,12 @@
       </div>
       <span class="section-note" id="track-record-overall"></span>
     </div>
-    <p class="section-note backtest-summary" id="backtest-summary"></p>
+    <p class="section-note tr-note">
+      Every game is graded two ways: did the <strong>spread pick</strong> cover, and did the team the model
+      <strong>projected to win</strong> actually win? They can be different teams -- the model can project KC to
+      win by 1.5 yet pick DEN +3, because 1.5 falls short of KC's 3-point spread.
+    </p>
+    <p class="section-note tr-note" id="backtest-summary"></p>
     <div id="track-record"></div>
   </section>
 
@@ -249,11 +254,32 @@ async function loadGameBoard() {
   }
 }
 
-function pickResultPill(g) {
+const MARK_RIGHT = `<span class="pill up" title="Correct" aria-label="Correct">&#10003;</span>`;
+const MARK_WRONG = `<span class="pill down" title="Incorrect" aria-label="Incorrect">&#10007;</span>`;
+
+// Unplayed games get no mark -- the week header already says "Pending", and
+// a pill per line was what pushed rows past a phone-width card.
+function spreadResultPill(g) {
   if (g.no_lean) return `<span class="pill pos">No lean</span>`;
   if (g.push) return `<span class="pill pos">Push</span>`;
-  if (g.correct === null || g.correct === undefined) return `<span class="pill pos">Pending</span>`;
-  return g.correct ? `<span class="pill up">Correct</span>` : `<span class="pill down">Incorrect</span>`;
+  if (g.correct === null || g.correct === undefined) return '';
+  return g.correct ? MARK_RIGHT : MARK_WRONG;
+}
+
+function winnerResultPill(g) {
+  if (g.result === null || g.result === undefined) return '';
+  if (g.result === 0) return `<span class="pill pos">Tie</span>`;
+  if (g.winner_correct === null || g.winner_correct === undefined) return '';
+  return g.winner_correct ? MARK_RIGHT : MARK_WRONG;
+}
+
+// The team the frozen margin projected to win -- can differ from the spread
+// pick (KC by 1.5 vs. a 3-point spread projects KC but picks DEN +3).
+function projectedWinner(g) {
+  const m = g.model_margin_home;
+  if (m === null || m === undefined) return '--';
+  if (m === 0) return 'Even';
+  return teamSpan(m > 0 ? g.home_team : g.away_team);
 }
 
 // "15-15 (50.0%)" from {graded, correct, accuracy}; null when nothing's graded yet.
@@ -270,7 +296,7 @@ async function loadBacktestSummary() {
     if (!ats || !outright) return;
     const fav = bt.market_favorite_outright && bt.market_favorite_outright.accuracy;
     el.innerHTML = `<strong>${bt.season} backtest</strong> (same model, run week by week on games it hadn't seen yet): `
-      + `${ats} against the spread -- short of the 52.4% needed to profit at standard odds -- and ${outright} on outright winners`
+      + `spread picks went ${ats} -- short of the 52.4% needed to profit at standard odds -- and it picked the winner ${outright}`
       + (fav ? ` (the Vegas favorite won ${(fav * 100).toFixed(1)}%)` : '')
       + `. Base model only; injury, revenge and former-coach adjustments aren't backtested.`;
   } catch (e) {
@@ -289,18 +315,20 @@ async function loadTrackRecord() {
     }
     const seasonAts = recordText(acc.ats), seasonOutright = recordText(acc.outright);
     overallEl.textContent = seasonAts
-      ? `Against the spread: ${seasonAts} · Outright winners: ${seasonOutright || '--'}`
+      ? `Spread picks: ${seasonAts} · Picked the winner: ${seasonOutright || '--'}`
       : '';
     el.innerHTML = [...acc.weeks].reverse().map(w => {
       const wAts = recordText(w.ats), wOutright = recordText(w.outright);
-      const wRecord = wAts ? `ATS ${wAts.split(' ')[0]} · Winners ${wOutright ? wOutright.split(' ')[0] : '--'}` : 'Pending';
+      const wRecord = wAts ? `Spread ${wAts.split(' ')[0]} · Winner ${wOutright ? wOutright.split(' ')[0] : '--'}` : 'Pending';
       const gamesHtml = w.games.map(g => {
         const pick = g.our_pick ? pickLabel(g.our_pick, g.spread_home, g.home_team, g.away_team) : '--';
         return `
           <div class="tr-game-row">
-            <span>${teamSpan(g.away_team)} @ ${teamSpan(g.home_team)}</span>
-            <span class="section-note">Pick: ${pick}</span>
-            ${pickResultPill(g)}
+            <span class="tr-matchup">${teamSpan(g.away_team)} @ ${teamSpan(g.home_team)}</span>
+            <div class="tr-results">
+              <div class="tr-result"><span class="section-note">Spread pick</span> ${pick} ${spreadResultPill(g)}</div>
+              <div class="tr-result"><span class="section-note">Projected winner</span> ${projectedWinner(g)} ${winnerResultPill(g)}</div>
+            </div>
           </div>
         `;
       }).join('');
