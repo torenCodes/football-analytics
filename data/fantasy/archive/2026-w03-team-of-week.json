@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 3,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0036264",
+          "name": "Jordan Love",
+          "team": "GB",
+          "points": 18.5
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0038542",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "points": 35.3
+        },
+        {
+          "player_id": "00-0037746",
+          "name": "Brian Robinson",
+          "team": "ATL",
+          "points": 11.0
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0037238",
+          "name": "Drake London",
+          "team": "ATL",
+          "points": 28.4
+        },
+        {
+          "player_id": "00-0038124",
+          "name": "Christian Watson",
+          "team": "GB",
+          "points": 22.6
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0032392",
+          "name": "Austin Hooper",
+          "team": "ATL",
+          "points": 9.1
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0040667",
+          "name": "Matthew Golden",
+          "team": "GB",
+          "points": 21.0
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0025565",
+          "name": "Nick Folk",
+          "team": "ATL",
+          "points": 10.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "ATL_DST",
+          "name": "ATL D/ST",
+          "team": "ATL",
+          "points": 4.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 159.9,
+    "bench": [
+      {
+        "player_id": "00-0039917",
+        "name": "Michael Penix Jr.",
+        "team": "ATL",
+        "position": "QB",
+        "points": 14.0
+      },
+      {
+        "player_id": "00-0038996",
+        "name": "Tucker Kraft",
+        "team": "GB",
+        "position": "TE",
+        "points": 6.6
+      },
+      {
+        "player_id": "00-0038090",
+        "name": "Skyy Moore",
+        "team": "GB",
+        "position": "WR",
+        "points": 6.1
+      },
+      {
+        "player_id": "00-0040948",
+        "name": "J. Michael Sturdivant",
+        "team": "GB",
+        "position": "WR",
+        "points": 5.2
+      },
+      {
+        "player_id": "00-0039811",
+        "name": "MarShawn Lloyd",
+        "team": "GB",
+        "position": "RB",
+        "points": 3.8
+      },
+      {
+        "player_id": "00-0035208",
+        "name": "Olamide Zaccheaus",
+        "team": "ATL",
+        "position": "WR",
+        "points": 2.9
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 3,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0036264",
+          "name": "Jordan Love",
+          "team": "GB",
+          "points": 18.5
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0038542",
+          "name": "Bijan Robinson",
+          "team": "ATL",
+          "points": 33.3
+        },
+        {
+          "player_id": "00-0037746",
+          "name": "Brian Robinson",
+          "team": "ATL",
+          "points": 11.0
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0037238",
+          "name": "Drake London",
+          "team": "ATL",
+          "points": 19.4
+        },
+        {
+          "player_id": "00-0040667",
+          "name": "Matthew Golden",
+          "team": "GB",
+          "points": 16.0
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0032392",
+          "name": "Austin Hooper",
+          "team": "ATL",
+          "points": 7.1
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0038124",
+          "name": "Christian Watson",
+          "team": "GB",
+          "points": 15.6
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0025565",
+          "name": "Nick Folk",
+          "team": "ATL",
+          "points": 10.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "ATL_DST",
+          "name": "ATL D/ST",
+          "team": "ATL",
+          "points": 4.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 134.9,
+    "bench": [
+      {
+        "player_id": "00-0039917",
+        "name": "Michael Penix Jr.",
+        "team": "ATL",
+        "position": "QB",
+        "points": 14.0
+      },
+      {
+        "player_id": "00-0038090",
+        "name": "Skyy Moore",
+        "team": "GB",
+        "position": "WR",
+        "points": 3.1
+      },
+      {
+        "player_id": "00-0038996",
+        "name": "Tucker Kraft",
+        "team": "GB",
+        "position": "TE",
+        "points": 2.6
+      },
+      {
+        "player_id": "00-0040948",
+        "name": "J. Michael Sturdivant",
+        "team": "GB",
+        "position": "WR",
+        "points": 2.2
+      },
+      {
+        "player_id": "00-0036463",
+        "name": "Chris Blair",
+        "team": "ATL",
+        "position": "WR",
+        "points": 2.0
+      },
+      {
+        "player_id": "00-0039811",
+        "name": "MarShawn Lloyd",
+        "team": "GB",
+        "position": "RB",
+        "points": 1.8
+      }
+    ]
+  }
+}
