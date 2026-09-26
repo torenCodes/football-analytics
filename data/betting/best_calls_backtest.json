@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-24T00:51:49.957346+00:00"
+    "generated_at": "2026-09-26T00:51:47.710074+00:00"
   },
   "season": 2025,
   "method": "Walk-forward: each 2025 regular-season game predicted with only the games before it plus 2024, using the same rating code as the live board, then picked against the closing spread. Base model only -- QB-injury, revenge and former-coach adjustments aren't backtested. Constants were fitted on 2021-2024, so 2025 is data the fit never saw.",

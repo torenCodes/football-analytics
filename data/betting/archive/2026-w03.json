@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 3,
-  "locked_at": "2026-09-23T14:40:51.366657+00:00",
+  "locked_at": "2026-09-26T00:51:47.659279+00:00",
   "pick_rule": "ats",
   "games": [
     {
@@ -67,21 +67,21 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
+        "short_forecast": "Partly Sunny",
         "temperature_f": 69,
-        "wind": "5 to 12 mph"
+        "wind": "7 to 14 mph"
       },
-      "storyline": "The model has CIN by 0.9, short of the 3.5-point spread, so the lean is PIT +3.5. That's a 2.6-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. CIN lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 69\u00b0F, wind 5 to 12 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has CIN by 0.9, short of the 3.5-point spread, so the lean is PIT +3.5. That's a 2.6-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. CIN lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Partly Sunny, 69\u00b0F, wind 7 to 14 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has CIN by 0.9, short of the 3.5-point spread, so the lean is PIT +3.5.",
       "market": {
         "spread_home": -3.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": 160,
-        "moneyline_away": -192,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 154,
+        "moneyline_away": -185,
         "total": 42.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "over_odds": -112,
+        "under_odds": -108,
         "market_favorite": "away",
         "edge_vs_market": 2.6
       }
@@ -119,9 +119,9 @@
           "continuity_pct": 0.8
         },
         "away": {
-          "returning_starters": 3,
+          "returning_starters": 2,
           "total_starters": 5,
-          "continuity_pct": 0.6
+          "continuity_pct": 0.4
         }
       },
       "coach_continuity": {
@@ -149,23 +149,23 @@
       "roof": null,
       "international_site": false,
       "weather": {
-        "short_forecast": "Partly Sunny",
-        "temperature_f": 73,
-        "wind": "1 to 5 mph"
+        "short_forecast": "Sunny",
+        "temperature_f": 71,
+        "wind": "1 to 6 mph"
       },
-      "storyline": "The market favors HOU by 3, but the model has IND winning by 3.4, so the lean is IND +3. That's a 6.4-point gap from the market -- more than a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. IND's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. IND lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Partly Sunny, 73\u00b0F, wind 1 to 5 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The market favors HOU by 3, but the model has IND winning by 3.4, so the lean is IND +3.",
+      "storyline": "The market favors HOU by 1.5, but the model has IND winning by 3.4, so the lean is IND +1.5. That's a 4.9-point gap from the market -- more than a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. IND's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. IND lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Sunny, 71\u00b0F, wind 1 to 6 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The market favors HOU by 1.5, but the model has IND winning by 3.4, so the lean is IND +1.5.",
       "market": {
-        "spread_home": -3.0,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
-        "moneyline_home": 124,
-        "moneyline_away": -148,
+        "spread_home": -1.5,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
+        "moneyline_home": 105,
+        "moneyline_away": -125,
         "total": 42.5,
-        "over_odds": -112,
-        "under_odds": -108,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "away",
-        "edge_vs_market": 6.4
+        "edge_vs_market": 4.9
       }
     },
     {
@@ -232,100 +232,22 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Mostly Sunny",
-        "temperature_f": 72,
-        "wind": "2 to 12 mph"
+        "temperature_f": 68,
+        "wind": "3 to 14 mph"
       },
-      "storyline": "The model has SF by 7.4, short of the 8.5-point spread, so the lean is ARI +8.5. That's a 1.1-point gap from the market -- under a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. ARI is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. ARI lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 72\u00b0F, wind 2 to 12 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has SF by 7.4, short of the 8.5-point spread, so the lean is ARI +8.5. That's a 1.1-point gap from the market -- under a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. ARI is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. ARI lost the last meeting between these division rivals -- worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 68\u00b0F, wind 3 to 14 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has SF by 7.4, short of the 8.5-point spread, so the lean is ARI +8.5.",
       "market": {
         "spread_home": 8.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -485,
-        "moneyline_away": 370,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": -440,
+        "moneyline_away": 340,
         "total": 47.5,
         "over_odds": -115,
         "under_odds": -105,
         "market_favorite": "home",
         "edge_vs_market": -1.1
-      }
-    },
-    {
-      "game_id": "2026_03_ATL_GB",
-      "week": 3,
-      "gameday": "2026-09-24",
-      "weekday": "Thursday",
-      "gametime": "20:15",
-      "primetime": true,
-      "juice_score": 4,
-      "home_team": "GB",
-      "away_team": "ATL",
-      "div_game": false,
-      "model_margin_home": 6.8,
-      "current_season_weight": {
-        "home": {
-          "off": 0.19,
-          "def": 0.21
-        },
-        "away": {
-          "off": 0.2,
-          "def": 0.2
-        }
-      },
-      "our_pick": "home",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 0,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 2,
-          "total_starters": 5,
-          "continuity_pct": 0.4
-        },
-        "away": {
-          "returning_starters": 4,
-          "total_starters": 5,
-          "continuity_pct": 0.8
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Matt LaFleur",
-          "coach_current": "Matt LaFleur",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Raheem Morris",
-          "coach_current": "Raheem Morris",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "outdoors",
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 66,
-        "wind": "1 to 6 mph"
-      },
-      "storyline": "The model has GB by 6.8, more than the 5.5-point spread, so the lean is GB -5.5. That's a 1.3-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. GB is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Mostly Sunny, 66\u00b0F, wind 1 to 6 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model has GB by 6.8, more than the 5.5-point spread, so the lean is GB -5.5.",
-      "market": {
-        "spread_home": 5.5,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
-        "moneyline_home": -265,
-        "moneyline_away": 215,
-        "total": 43.5,
-        "over_odds": -102,
-        "under_odds": -118,
-        "market_favorite": "home",
-        "edge_vs_market": 1.3
       }
     },
     {
@@ -387,18 +309,18 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 71,
-        "wind": "0 to 5 mph"
+        "short_forecast": "Sunny",
+        "temperature_f": 69,
+        "wind": "5 mph"
       },
-      "storyline": "The market favors PHI by 4.5, but the model has CHI winning by 3.4, so the lean is CHI +4.5. That's a 7.9-point gap from the market -- more than a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 71\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The market favors PHI by 4.5, but the model has CHI winning by 3.4, so the lean is CHI +4.5. That's a 7.9-point gap from the market -- more than a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. CHI's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Sunny, 69\u00b0F, wind 5 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The market favors PHI by 4.5, but the model has CHI winning by 3.4, so the lean is CHI +4.5.",
       "market": {
         "spread_home": -4.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": 185,
-        "moneyline_away": -225,
+        "spread_home_odds": 102,
+        "spread_away_odds": -122,
+        "moneyline_home": 195,
+        "moneyline_away": -238,
         "total": 41.5,
         "over_odds": -105,
         "under_odds": -115,
@@ -465,21 +387,21 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Sunny",
-        "temperature_f": 85,
-        "wind": "6 mph"
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 84,
+        "wind": "3 to 10 mph"
       },
-      "storyline": "The model has LA by 2.3, short of the 2.5-point spread, so the lean is DEN +2.5. That's a 0.2-point gap from the market -- under a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DEN's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. DEN comes in with 1 extra day of rest -- context, not something the model scores. Forecast for kickoff: Sunny, 85\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has LA by 2.3, short of the 2.5-point spread, so the lean is DEN +2.5. That's a 0.2-point gap from the market -- under a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DEN's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. DEN comes in with 1 extra day of rest -- context, not something the model scores. Forecast for kickoff: Mostly Sunny, 84\u00b0F, wind 3 to 10 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has LA by 2.3, short of the 2.5-point spread, so the lean is DEN +2.5.",
       "market": {
         "spread_home": -2.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": 120,
-        "moneyline_away": -142,
-        "total": 45.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "spread_home_odds": -115,
+        "spread_away_odds": -105,
+        "moneyline_home": 110,
+        "moneyline_away": -130,
+        "total": 44.5,
+        "over_odds": -102,
+        "under_odds": -118,
         "market_favorite": "away",
         "edge_vs_market": 0.2
       }
@@ -544,20 +466,20 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Sunny",
-        "temperature_f": 68,
-        "wind": "2 to 12 mph"
+        "temperature_f": 70,
+        "wind": "5 to 14 mph"
       },
-      "storyline": "The model has CAR by 3.2, more than the 2.5-point spread, so the lean is CAR -2.5. That's a 0.7-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. CAR is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Sunny, 68\u00b0F, wind 2 to 12 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has CAR by 3.2, more than the 2.5-point spread, so the lean is CAR -2.5. That's a 0.7-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. CAR is breaking in a mostly new offensive line (40% continuity) -- a real wildcard this early in the year. Forecast for kickoff: Sunny, 70\u00b0F, wind 5 to 14 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has CAR by 3.2, more than the 2.5-point spread, so the lean is CAR -2.5.",
       "market": {
         "spread_home": -2.5,
-        "spread_home_odds": 100,
-        "spread_away_odds": -120,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
         "moneyline_home": 124,
         "moneyline_away": -148,
         "total": 42.5,
-        "over_odds": -108,
-        "under_odds": -112,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "away",
         "edge_vs_market": -0.7
       }
@@ -621,23 +543,23 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny then Chance Showers And Thunderstorms",
-        "temperature_f": 87,
-        "wind": "8 mph"
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 86,
+        "wind": "2 to 7 mph"
       },
-      "storyline": "The model has KC by 4.5, short of the 11.5-point spread, so the lean is MIA +11.5. That's a 7.0-point gap from the market -- more than a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. MIA's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Mostly Sunny then Chance Showers And Thunderstorms, 87\u00b0F, wind 8 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model has KC by 4.5, short of the 11.5-point spread, so the lean is MIA +11.5.",
+      "storyline": "The model has KC by 4.5, short of the 10-point spread, so the lean is MIA +10. That's a 5.5-point gap from the market -- more than a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. MIA's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Mostly Sunny, 86\u00b0F, wind 2 to 7 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has KC by 4.5, short of the 10-point spread, so the lean is MIA +10.",
       "market": {
-        "spread_home": -11.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": 600,
-        "moneyline_away": -900,
-        "total": 46.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "spread_home": -10.0,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": 455,
+        "moneyline_away": -625,
+        "total": 45.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "away",
-        "edge_vs_market": 7.0
+        "edge_vs_market": 5.5
       }
     },
     {
@@ -700,20 +622,20 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Mostly Sunny",
-        "temperature_f": 68,
-        "wind": "2 to 7 mph"
+        "temperature_f": 67,
+        "wind": "5 to 9 mph"
       },
-      "storyline": "The model has BUF by 9.3, more than the 7-point spread, so the lean is BUF -7. That's a 2.3-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. BUF comes in with 3 extra days of rest -- context, not something the model scores. Forecast for kickoff: Mostly Sunny, 68\u00b0F, wind 2 to 7 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has BUF by 9.3, more than the 7-point spread, so the lean is BUF -7. That's a 2.3-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. BUF's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. BUF comes in with 3 extra days of rest -- context, not something the model scores. Forecast for kickoff: Mostly Sunny, 67\u00b0F, wind 5 to 9 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has BUF by 9.3, more than the 7-point spread, so the lean is BUF -7.",
       "market": {
         "spread_home": 7.0,
         "spread_home_odds": -115,
         "spread_away_odds": -105,
-        "moneyline_home": -345,
-        "moneyline_away": 275,
-        "total": 50.5,
-        "over_odds": -105,
-        "under_odds": -115,
+        "moneyline_home": -340,
+        "moneyline_away": 270,
+        "total": 49.5,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "home",
         "edge_vs_market": 2.3
       }
@@ -777,21 +699,21 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 85,
-        "wind": "5 to 8 mph"
+        "short_forecast": "Sunny",
+        "temperature_f": 86,
+        "wind": "6 mph"
       },
-      "storyline": "The market favors JAX by 3, but the model has NE winning by 0.1, so the lean is NE +3. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 18% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Mostly Sunny, 85\u00b0F, wind 5 to 8 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The market favors JAX by 3, but the model has NE winning by 0.1, so the lean is NE +3. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 18% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Sunny, 86\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The market favors JAX by 3, but the model has NE winning by 0.1, so the lean is NE +3.",
       "market": {
         "spread_home": 3.0,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
         "moneyline_home": -155,
         "moneyline_away": 130,
-        "total": 45.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "total": 46.5,
+        "over_odds": -105,
+        "under_odds": -115,
         "market_favorite": "home",
         "edge_vs_market": -3.1
       }
@@ -855,21 +777,21 @@
       "roof": "dome",
       "international_site": false,
       "weather": {
-        "short_forecast": "Sunny",
-        "temperature_f": 69,
-        "wind": "6 mph"
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 72,
+        "wind": "5 to 10 mph"
       },
-      "storyline": "The model has DET by 6.7, more than the 6.5-point spread, so the lean is DET -6.5. That's a 0.2-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DET comes in with 3 extra days of rest -- context, not something the model scores. Forecast for kickoff: Sunny, 69\u00b0F, wind 6 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has DET by 6.7, more than the 6.5-point spread, so the lean is DET -6.5. That's a 0.2-point gap from the market -- under a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. DET comes in with 3 extra days of rest -- context, not something the model scores. Forecast for kickoff: Mostly Sunny, 72\u00b0F, wind 5 to 10 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has DET by 6.7, more than the 6.5-point spread, so the lean is DET -6.5.",
       "market": {
         "spread_home": 6.5,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
+        "spread_home_odds": -120,
+        "spread_away_odds": 100,
         "moneyline_home": -305,
         "moneyline_away": 245,
-        "total": 47.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "total": 48.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "home",
         "edge_vs_market": 0.2
       }
@@ -907,9 +829,9 @@
           "continuity_pct": 0.6
         },
         "away": {
-          "returning_starters": 5,
+          "returning_starters": 4,
           "total_starters": 5,
-          "continuity_pct": 1.0
+          "continuity_pct": 0.8
         }
       },
       "coach_continuity": {
@@ -933,23 +855,23 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Slight Chance Rain Showers",
-        "temperature_f": 72,
-        "wind": "15 mph"
+        "short_forecast": "Rain Showers Likely",
+        "temperature_f": 65,
+        "wind": "12 to 15 mph"
       },
-      "storyline": "The model has SEA by 4.1, short of the 7-point spread, so the lean is WAS +7. That's a 2.9-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Slight Chance Rain Showers, 72\u00b0F, wind 15 mph -- something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model has SEA by 4.1, short of the 7-point spread, so the lean is WAS +7.",
+      "storyline": "The model has SEA by 4.1, short of the 7.5-point spread, so the lean is WAS +7.5. That's a 3.4-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Rain Showers Likely, 65\u00b0F, wind 12 to 15 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model has SEA by 4.1, short of the 7.5-point spread, so the lean is WAS +7.5.",
       "market": {
-        "spread_home": -7.0,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": 240,
-        "moneyline_away": -298,
-        "total": 40.5,
-        "over_odds": -102,
-        "under_odds": -118,
+        "spread_home": -7.5,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
+        "moneyline_home": 310,
+        "moneyline_away": -395,
+        "total": 39.5,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "away",
-        "edge_vs_market": 2.9
+        "edge_vs_market": 3.4
       }
     },
     {
@@ -1011,21 +933,21 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Rain Showers",
+        "short_forecast": "Rain",
         "temperature_f": 67,
-        "wind": "15 to 18 mph"
+        "wind": "17 to 22 mph"
       },
-      "storyline": "The model has NYG by 5.6, more than the 2.5-point spread, so the lean is NYG -2.5. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. NYG's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. TEN comes in with 1 extra day of rest -- context, not something the model scores. Forecast for kickoff: Chance Rain Showers, 67\u00b0F, wind 15 to 18 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has NYG by 5.6, more than the 2.5-point spread, so the lean is NYG -2.5. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 20% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. NYG's offensive line is largely intact from a year ago (80% continuity), which tends to mean a faster start to the season. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. TEN comes in with 1 extra day of rest -- context, not something the model scores. Forecast for kickoff: Rain, 67\u00b0F, wind 17 to 22 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has NYG by 5.6, more than the 2.5-point spread, so the lean is NYG -2.5.",
       "market": {
         "spread_home": 2.5,
-        "spread_home_odds": -120,
-        "spread_away_odds": 100,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
         "moneyline_home": -135,
         "moneyline_away": 114,
-        "total": 39.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "total": 38.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "home",
         "edge_vs_market": 3.1
       }
@@ -1090,20 +1012,20 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Mostly Sunny",
-        "temperature_f": 88,
-        "wind": "7 mph"
+        "temperature_f": 87,
+        "wind": "1 to 5 mph"
       },
-      "storyline": "The market favors MIN by 1.5, but the model has TB winning by 1.6, so the lean is TB +1.5. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. TB's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 88\u00b0F, wind 7 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The market favors MIN by 1.5, but the model has TB winning by 1.6, so the lean is TB +1.5. That's a 3.1-point gap from the market -- about a field goal. Early-season read: only about 19% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. TB's offensive line is largely intact from a year ago (100% continuity), which tends to mean a faster start to the season. Forecast for kickoff: Mostly Sunny, 87\u00b0F, wind 1 to 5 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The market favors MIN by 1.5, but the model has TB winning by 1.6, so the lean is TB +1.5.",
       "market": {
         "spread_home": -1.5,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": 102,
-        "moneyline_away": -122,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 100,
+        "moneyline_away": -120,
         "total": 42.5,
-        "over_odds": -112,
-        "under_odds": -108,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "away",
         "edge_vs_market": 3.1
       }
@@ -1173,11 +1095,11 @@
         "spread_home": -3.5,
         "spread_home_odds": -115,
         "spread_away_odds": -105,
-        "moneyline_home": 150,
-        "moneyline_away": -180,
-        "total": 52.5,
-        "over_odds": -112,
-        "under_odds": -108,
+        "moneyline_home": 145,
+        "moneyline_away": -175,
+        "total": 53.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "away",
         "edge_vs_market": 1.3
       }
@@ -1241,11 +1163,11 @@
       "roof": "dome",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 90,
+        "short_forecast": "Sunny",
+        "temperature_f": 89,
         "wind": "0 to 5 mph"
       },
-      "storyline": "The model has NO by 5.0, more than the 3-point spread, so the lean is NO -3. That's a 2.0-point gap from the market -- under a field goal. Early-season read: only about 21% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Mostly Sunny, 90\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
+      "storyline": "The model has NO by 5.0, more than the 3-point spread, so the lean is NO -3. That's a 2.0-point gap from the market -- under a field goal. Early-season read: only about 21% of these ratings come from 2026 games so far -- the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Sunny, 89\u00b0F, wind 0 to 5 mph -- something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model has NO by 5.0, more than the 3-point spread, so the lean is NO -3.",
       "market": {
         "spread_home": 3.0,
@@ -1253,9 +1175,9 @@
         "spread_away_odds": 102,
         "moneyline_home": -185,
         "moneyline_away": 154,
-        "total": 44.5,
-        "over_odds": -102,
-        "under_odds": -118,
+        "total": 43.5,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "home",
         "edge_vs_market": 2.0
       }
