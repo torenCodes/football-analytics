@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-26T00:51:47.710074+00:00"
+    "generated_at": "2026-09-26T06:36:07.111937+00:00"
   },
   "weeks_graded": 3,
   "ats": {
@@ -467,7 +467,7 @@
     {
       "season": 2026,
       "week": 3,
-      "locked_at": "2026-09-26T00:51:47.659279+00:00",
+      "locked_at": "2026-09-26T06:36:07.108431+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -613,9 +613,9 @@
           "game_id": "2026_03_SEA_WAS",
           "home_team": "WAS",
           "away_team": "SEA",
-          "model_margin_home": -4.1,
+          "model_margin_home": -8.1,
           "spread_home": -7.5,
-          "our_pick": "home",
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
