@@ -5,116 +5,116 @@
     "perfect_lineup": {
       "QB": [
         {
-          "player_id": "00-0036264",
-          "name": "Jordan Love",
-          "team": "GB",
-          "points": 18.5
+          "player_id": "00-0037834",
+          "name": "Brock Purdy",
+          "team": "SF",
+          "points": 31.3
         }
       ],
       "RB": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 41.4
+        },
         {
           "player_id": "00-0038542",
           "name": "Bijan Robinson",
           "team": "ATL",
           "points": 35.3
-        },
-        {
-          "player_id": "00-0037746",
-          "name": "Brian Robinson",
-          "team": "ATL",
-          "points": 11.0
         }
       ],
       "WR": [
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 35.4
+        },
         {
           "player_id": "00-0037238",
           "name": "Drake London",
           "team": "ATL",
           "points": 28.4
-        },
-        {
-          "player_id": "00-0038124",
-          "name": "Christian Watson",
-          "team": "GB",
-          "points": 22.6
         }
       ],
       "TE": [
         {
-          "player_id": "00-0032392",
-          "name": "Austin Hooper",
-          "team": "ATL",
-          "points": 9.1
+          "player_id": "00-0039338",
+          "name": "Brock Bowers",
+          "team": "LV",
+          "points": 27.6
         }
       ],
       "FLEX": [
         {
-          "player_id": "00-0040667",
-          "name": "Matthew Golden",
-          "team": "GB",
-          "points": 21.0
+          "player_id": "00-0037740",
+          "name": "Garrett Wilson",
+          "team": "NYJ",
+          "points": 26.7
         }
       ],
       "K": [
         {
-          "player_id": "00-0025565",
-          "name": "Nick Folk",
-          "team": "ATL",
-          "points": 10.0
+          "player_id": "00-0039576",
+          "name": "Spencer Shrader",
+          "team": "IND",
+          "points": 17.0
         }
       ],
       "DST": [
         {
-          "player_id": "ATL_DST",
-          "name": "ATL D/ST",
-          "team": "ATL",
-          "points": 4.0
+          "player_id": "MIN_DST",
+          "name": "MIN D/ST",
+          "team": "MIN",
+          "points": 17.0
         }
       ]
     },
-    "perfect_lineup_total_points": 159.9,
+    "perfect_lineup_total_points": 260.0,
     "bench": [
       {
-        "player_id": "00-0039917",
-        "name": "Michael Penix Jr.",
-        "team": "ATL",
+        "player_id": "00-0030565",
+        "name": "Geno Smith",
+        "team": "NYJ",
         "position": "QB",
-        "points": 14.0
+        "points": 28.0
       },
       {
-        "player_id": "00-0038996",
-        "name": "Tucker Kraft",
-        "team": "GB",
+        "player_id": "00-0033288",
+        "name": "George Kittle",
+        "team": "SF",
         "position": "TE",
-        "points": 6.6
+        "points": 26.2
       },
       {
-        "player_id": "00-0038090",
-        "name": "Skyy Moore",
+        "player_id": "00-0038559",
+        "name": "Michael Wilson",
+        "team": "ARI",
+        "position": "WR",
+        "points": 25.9
+      },
+      {
+        "player_id": "00-0036900",
+        "name": "Ja'Marr Chase",
+        "team": "CIN",
+        "position": "WR",
+        "points": 24.8
+      },
+      {
+        "player_id": "00-0038124",
+        "name": "Christian Watson",
         "team": "GB",
         "position": "WR",
-        "points": 6.1
+        "points": 22.6
       },
       {
-        "player_id": "00-0040948",
-        "name": "J. Michael Sturdivant",
-        "team": "GB",
-        "position": "WR",
-        "points": 5.2
-      },
-      {
-        "player_id": "00-0039811",
-        "name": "MarShawn Lloyd",
-        "team": "GB",
+        "player_id": "00-0032764",
+        "name": "Derrick Henry",
+        "team": "BAL",
         "position": "RB",
-        "points": 3.8
-      },
-      {
-        "player_id": "00-0035208",
-        "name": "Olamide Zaccheaus",
-        "team": "ATL",
-        "position": "WR",
-        "points": 2.9
+        "points": 21.9
       }
     ]
   },
@@ -124,116 +124,116 @@
     "perfect_lineup": {
       "QB": [
         {
-          "player_id": "00-0036264",
-          "name": "Jordan Love",
-          "team": "GB",
-          "points": 18.5
+          "player_id": "00-0037834",
+          "name": "Brock Purdy",
+          "team": "SF",
+          "points": 31.3
         }
       ],
       "RB": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 34.4
+        },
         {
           "player_id": "00-0038542",
           "name": "Bijan Robinson",
           "team": "ATL",
           "points": 33.3
-        },
-        {
-          "player_id": "00-0037746",
-          "name": "Brian Robinson",
-          "team": "ATL",
-          "points": 11.0
         }
       ],
       "WR": [
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 25.4
+        },
         {
           "player_id": "00-0037238",
           "name": "Drake London",
           "team": "ATL",
           "points": 19.4
-        },
-        {
-          "player_id": "00-0040667",
-          "name": "Matthew Golden",
-          "team": "GB",
-          "points": 16.0
         }
       ],
       "TE": [
         {
-          "player_id": "00-0032392",
-          "name": "Austin Hooper",
-          "team": "ATL",
-          "points": 7.1
+          "player_id": "00-0033288",
+          "name": "George Kittle",
+          "team": "SF",
+          "points": 20.2
         }
       ],
       "FLEX": [
         {
-          "player_id": "00-0038124",
-          "name": "Christian Watson",
-          "team": "GB",
-          "points": 15.6
+          "player_id": "00-0032764",
+          "name": "Derrick Henry",
+          "team": "BAL",
+          "points": 20.9
         }
       ],
       "K": [
         {
-          "player_id": "00-0025565",
-          "name": "Nick Folk",
-          "team": "ATL",
-          "points": 10.0
+          "player_id": "00-0039576",
+          "name": "Spencer Shrader",
+          "team": "IND",
+          "points": 17.0
         }
       ],
       "DST": [
         {
-          "player_id": "ATL_DST",
-          "name": "ATL D/ST",
-          "team": "ATL",
-          "points": 4.0
+          "player_id": "MIN_DST",
+          "name": "MIN D/ST",
+          "team": "MIN",
+          "points": 17.0
         }
       ]
     },
-    "perfect_lineup_total_points": 134.9,
+    "perfect_lineup_total_points": 218.8,
     "bench": [
       {
-        "player_id": "00-0039917",
-        "name": "Michael Penix Jr.",
-        "team": "ATL",
+        "player_id": "00-0030565",
+        "name": "Geno Smith",
+        "team": "NYJ",
         "position": "QB",
-        "points": 14.0
+        "points": 28.0
       },
       {
-        "player_id": "00-0038090",
-        "name": "Skyy Moore",
-        "team": "GB",
-        "position": "WR",
-        "points": 3.1
-      },
-      {
-        "player_id": "00-0038996",
-        "name": "Tucker Kraft",
-        "team": "GB",
-        "position": "TE",
-        "points": 2.6
-      },
-      {
-        "player_id": "00-0040948",
-        "name": "J. Michael Sturdivant",
-        "team": "GB",
-        "position": "WR",
-        "points": 2.2
-      },
-      {
-        "player_id": "00-0036463",
-        "name": "Chris Blair",
-        "team": "ATL",
-        "position": "WR",
-        "points": 2.0
-      },
-      {
-        "player_id": "00-0039811",
-        "name": "MarShawn Lloyd",
-        "team": "GB",
+        "player_id": "00-0037248",
+        "name": "James Cook",
+        "team": "BUF",
         "position": "RB",
-        "points": 1.8
+        "points": 19.4
+      },
+      {
+        "player_id": "00-0038134",
+        "name": "Kenneth Walker III",
+        "team": "KC",
+        "position": "RB",
+        "points": 19.3
+      },
+      {
+        "player_id": "00-0033280",
+        "name": "Christian McCaffrey",
+        "team": "SF",
+        "position": "RB",
+        "points": 17.6
+      },
+      {
+        "player_id": "00-0037228",
+        "name": "Jaylen Warren",
+        "team": "PIT",
+        "position": "RB",
+        "points": 17.6
+      },
+      {
+        "player_id": "00-0039338",
+        "name": "Brock Bowers",
+        "team": "LV",
+        "position": "TE",
+        "points": 17.6
       }
     ]
   }
