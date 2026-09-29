@@ -333,3 +333,7 @@ table.tight-table .num { text-align: right; }
    teamSpan() -- except on a yellow penalty flag, where only on-flag ink reads. */
 .team { color: var(--team-color, inherit); font-weight: 700; }
 .factor-tag.flag .team { color: inherit; }
+/* Chalk's text-3 measures 4.496:1 on surface-raised -- a hair under the 4.5:1
+   its own token note promises (market labels, Track Record labels sit there).
+   1% darker clears it on every Chalk ground; worth fixing in the system too. */
+[data-theme="light"] { --text-3: #5a6a5f; }
