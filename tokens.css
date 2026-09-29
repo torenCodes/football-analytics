@@ -1,0 +1,100 @@
+/* Football Forecast design tokens -- compiled from the Claude Design system
+   "Football Forecast" (tokens.json). Load before styles.css. Field (dark) is
+   the default theme; Chalk (light) applies under [data-theme="light"]. */
+
+/* Field */
+:root, [data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e2418;
+  --turf-stripe: #12291c;
+  --surface: #15331f;
+  --surface-raised: #1c4129;
+  --line: #2a553a;
+  --line-strong: #5a9670;
+  --text: #f6f3e8;
+  --text-2: #c5d4c8;
+  --text-3: #94ad9b;
+  --turf: #1f7a45;
+  --turf-strong: #18633a;
+  --turf-text: #7fd6a0;
+  --on-turf: #ffffff;
+  --pigskin: #8a5428;
+  --pigskin-strong: #6f4220;
+  --pigskin-text: #e0a56b;
+  --on-pigskin: #ffffff;
+  --laces: #ffffff;
+  --flag: #f2c230;
+  --on-flag: #1a1405;
+  --up: #7fd6a0;
+  --up-tint: #1d4a2f;
+  --down: #ff9e7a;
+  --down-tint: #3f2a1c;
+  --sheet: #f4efe1;
+  --sheet-ink: #1b2e20;
+  --sheet-muted: #5a6b5e;
+  --sheet-line: #d8cfb6;
+  --header: #0a1b11;
+  --on-header: #f6f3e8;
+  --on-header-muted: #a9bfae;
+  --focus: #f2c230;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.35);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.45);
+}
+
+/* Chalk */
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3efe4;
+  --turf-stripe: #ece7da;
+  --surface: #fffdf7;
+  --surface-raised: #ebe5d6;
+  --line: #ddd5c3;
+  --line-strong: #8c8168;
+  --text: #132a1c;
+  --text-2: #44554a;
+  --text-3: #5b6b60;
+  --turf: #1d6b3e;
+  --turf-strong: #155531;
+  --turf-text: #1d6b3e;
+  --pigskin: #7d4a20;
+  --pigskin-strong: #643a18;
+  --pigskin-text: #7a4720;
+  --up: #1d6b3e;
+  --up-tint: #e2efe4;
+  --down: #b23b16;
+  --down-tint: #f6e3d9;
+  --sheet: #15331f;
+  --sheet-ink: #f6f3e8;
+  --sheet-muted: #b5c8ba;
+  --sheet-line: #2f5a3f;
+  --header: #15331f;
+  --on-header-muted: #b5c8ba;
+  --focus: #7d4a20;
+  --shadow-sm: 0 1px 3px rgba(19,42,28,0.08);
+  --shadow-md: 0 8px 22px rgba(19,42,28,0.12);
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --max-width: 1240px;
+  --header-height: 68px;
+  --gutter: 24px;
+  --font-marker: "Permanent Marker", "Marker Felt", cursive;
+  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: Barlow, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* gutter token's own note: 16px under 480px */
+@media (max-width: 480px) { :root { --gutter: 16px; } }

@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Game Picks -- Football Forecast</title>
 <meta name="description" content="Weekly game-by-game picks built from matchup efficiency, continuity, situational factors, and weather.">
+<meta name="theme-color" content="#0a1b11">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 </head>
@@ -97,23 +99,42 @@ function toggleSiteNav(btn) {
 function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
 
 // Official primary brand color per team (from nflverse's teams table).
-// One override: New Orleans' primary gold (#D3BC8D) fails contrast against
-// this page's light background (checked: 1.7:1, well under the 3:1 floor),
-// so NO uses their black secondary instead -- every other team's primary
-// clears 3:1 as-is.
 const TEAM_COLORS = {
   ARI: '#97233F', ATL: '#A71930', BAL: '#241773', BUF: '#00338D', CAR: '#0085CA',
   CHI: '#0B162A', CIN: '#FB4F14', CLE: '#FF3C00', DAL: '#002244', DEN: '#002244',
   DET: '#0076B6', GB: '#203731', HOU: '#03202F', IND: '#002C5F', JAX: '#006778',
   KC: '#E31837', LA: '#003594', LAC: '#007BC7', LV: '#000000', MIA: '#008E97',
-  MIN: '#4F2683', NE: '#002244', NO: '#000000', NYG: '#0B2265', NYJ: '#003F2D',
+  MIN: '#4F2683', NE: '#002244', NO: '#D3BC8D', NYG: '#0B2265', NYJ: '#003F2D',
   PHI: '#004C54', PIT: '#000000', SEA: '#002244', SF: '#AA0000', TB: '#A71930',
   TEN: '#4495D2', WAS: '#5A1414',
 };
 
+// Most primaries are navy or black and vanish on the dark field, so each is
+// mixed toward the page's text color only as far as it takes to clear 4.5:1
+// on --surface-raised (the worst-case card ground in both themes). Reads the
+// live tokens, so it holds in either theme.
+const READABLE_TEAM_COLORS = (() => {
+  const rgb = hex => { const n = parseInt(hex.trim().slice(1), 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; };
+  const lum = c => c.map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; })
+    .reduce((s, v, i) => s + v * [0.2126, 0.7152, 0.0722][i], 0);
+  const ratio = (a, b) => { const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x); return (hi + 0.05) / (lo + 0.05); };
+  const css = getComputedStyle(document.documentElement);
+  const ground = rgb(css.getPropertyValue('--surface-raised')), ink = rgb(css.getPropertyValue('--text'));
+  const out = {};
+  for (const [team, hex] of Object.entries(TEAM_COLORS)) {
+    const base = rgb(hex);
+    let mixed = base;
+    for (let step = 1; step <= 20 && ratio(mixed, ground) < 4.5; step++) {
+      mixed = base.map((v, i) => Math.round(v + (ink[i] - v) * step / 20));
+    }
+    out[team] = `rgb(${mixed.join(', ')})`;
+  }
+  return out;
+})();
+
 function teamSpan(abbr) {
-  const color = TEAM_COLORS[abbr];
-  return color ? `<span style="color: ${color}; font-weight: 700;">${abbr}</span>` : abbr;
+  const color = READABLE_TEAM_COLORS[abbr];
+  return color ? `<span class="team" style="--team-color: ${color};">${abbr}</span>` : abbr;
 }
 
 // Colors just the two teams THIS game is about, matched on word boundaries
@@ -127,10 +148,13 @@ function colorStoryline(text, home, away) {
     .replace(new RegExp(`\\b${esc(away)}\\b`, 'g'), teamSpan(away));
 }
 
+// Yellow penalty flags (.flag) are reserved for factors that actually move the
+// model's margin -- a starting QB out, a revenge game, a former coach -- per the
+// design system's Tag rule. Everything else is context, shown as a neutral tag.
 function factorTags(g) {
   const tags = [];
-  if (g.primetime) tags.push(`<span class="factor-tag flag">Primetime</span>`);
-  if (g.div_game) tags.push(`<span class="factor-tag flag">Division game</span>`);
+  if (g.primetime) tags.push(`<span class="factor-tag">Primetime</span>`);
+  if (g.div_game) tags.push(`<span class="factor-tag">Division game</span>`);
   const homeQbOut = g.qb_injury && g.qb_injury.home;
   const awayQbOut = g.qb_injury && g.qb_injury.away;
   const qbStatusLabel = s => s === 'Reserve' ? 'on Reserve' : s;
@@ -149,7 +173,7 @@ function factorTags(g) {
     const who = g.rest_days_edge_home > 0 ? g.home_team : g.away_team;
     tags.push(`<span class="factor-tag">Rest edge: ${teamSpan(who)} (+${Math.abs(g.rest_days_edge_home)}d)</span>`);
   }
-  if (g.international_site) tags.push(`<span class="factor-tag flag">International site</span>`);
+  if (g.international_site) tags.push(`<span class="factor-tag">International site</span>`);
   if (g.roof) tags.push(`<span class="factor-tag">${g.roof}</span>`);
   if (g.weather) tags.push(`<span class="factor-tag">${g.weather.short_forecast}, ${g.weather.temperature_f}°F, wind ${g.weather.wind}</span>`);
   const homeOl = g.oline_continuity && g.oline_continuity.home;
@@ -158,8 +182,8 @@ function factorTags(g) {
   if (awayOl) tags.push(`<span class="factor-tag">${teamSpan(g.away_team)} O-line continuity: ${Math.round(awayOl.continuity_pct * 100)}%</span>`);
   const homeCoach = g.coach_continuity && g.coach_continuity.home;
   const awayCoach = g.coach_continuity && g.coach_continuity.away;
-  if (homeCoach && homeCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${teamSpan(g.home_team)} new HC</span>`);
-  if (awayCoach && awayCoach.same_coach === false) tags.push(`<span class="factor-tag flag">${teamSpan(g.away_team)} new HC</span>`);
+  if (homeCoach && homeCoach.same_coach === false) tags.push(`<span class="factor-tag">${teamSpan(g.home_team)} new HC</span>`);
+  if (awayCoach && awayCoach.same_coach === false) tags.push(`<span class="factor-tag">${teamSpan(g.away_team)} new HC</span>`);
   return tags.join('');
 }
 

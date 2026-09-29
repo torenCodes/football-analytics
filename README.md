@@ -114,7 +114,8 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 ├── index.html                # homepage -- season-aware teaser, waiver wire sneak peek
 ├── fantasy.html               # Draft Board, Dream Team, Weekly Rankings, Waiver Wire, accountability
 ├── betting.html                # Game Picks board, storylines, ATS track record
-├── styles.css
+├── tokens.css                 # design tokens (colors per theme, spacing, type) from the Claude Design system
+├── styles.css                 # component styles -- the design system's bundle.css plus a short site-additions block
 ├── app.py                     # local-dev file server only -- Render serves this same folder statically
 ├── render.yaml                 # Render blueprint (static site, no build step)
 ├── scripts/

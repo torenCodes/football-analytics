@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fantasy -- Football Forecast</title>
 <meta name="description" content="Perfect Team retrospective, 2026 Draft Board, and Dream Team draft simulation, scored under both PPR and Standard rules.">
+<meta name="theme-color" content="#0a1b11">
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
 </head>
@@ -359,7 +361,7 @@ function renderDreamTeam() {
   document.getElementById('dream-team-methodology').textContent = data.methodology;
 
   const notesEl = document.getElementById('dream-team-notes');
-  notesEl.innerHTML = (data.notes || []).map(n => `<p class="empty-state" style="color: var(--accent-betting-dark);">${n}</p>`).join('');
+  notesEl.innerHTML = (data.notes || []).map(n => `<p class="empty-state" style="color: var(--pigskin-text);">${n}</p>`).join('');
 
   const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
   const starters = [];
