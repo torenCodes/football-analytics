@@ -219,7 +219,7 @@ def build_backtest(schedules, eff):
         "method": (
             f"Walk-forward: each {RETRO_SEASON} regular-season game predicted with only the games before it plus "
             f"{RETRO_SEASON - 1}, using the same rating code as the live board, then picked against the closing spread. "
-            f"Base model only -- QB-injury, revenge and former-coach adjustments aren't backtested. Constants were fitted on "
+            f"Base model only — QB-injury, revenge and former-coach adjustments aren't backtested. Constants were fitted on "
             f"2021-{RETRO_SEASON - 1}, so {RETRO_SEASON} is data the fit never saw."
         ),
         "games": len(picks),
@@ -292,7 +292,7 @@ def fetch_weather(lat, lon, gameday):
 def _team_line(spread_home, side):
     """A team's own spread in standard notation (favorite negative)."""
     line = -spread_home if side == "home" else spread_home
-    return "PK" if line == 0 else f"{'+' if line > 0 else '-'}{abs(line):g}"
+    return "PK" if line == 0 else f"{'+' if line > 0 else '−'}{abs(line):g}"
 
 
 def pick_headline(home, away, model_margin_home, spread_home, our_pick):
@@ -300,7 +300,7 @@ def pick_headline(home, away, model_margin_home, spread_home, our_pick):
     of the spread that produces. Every branch reads off the same two numbers
     the pick is derived from, so the text can't contradict the pick."""
     if model_margin_home is None:
-        return "Not enough efficiency data yet to model this matchup -- check back closer to kickoff."
+        return "Not enough efficiency data yet to model this matchup — check back closer to kickoff."
     model_winner = home if model_margin_home > 0 else away
     margin_abs = abs(model_margin_home)
     if spread_home is None:
@@ -308,9 +308,9 @@ def pick_headline(home, away, model_margin_home, spread_home, our_pick):
                 else "No line is posted yet, and the model has this one dead even.")
     if our_pick is None:
         if spread_home == 0:
-            return "The market and the model both have this one even -- no lean either way."
+            return "The market and the model both have this one even — no lean either way."
         fav = home if spread_home > 0 else away
-        return f"The model lands exactly on the {fav} {abs(spread_home):g}-point spread -- no lean either way."
+        return f"The model lands exactly on the {fav} {abs(spread_home):g}-point spread — no lean either way."
 
     pick = home if our_pick == "home" else away
     pick_line = _team_line(spread_home, our_pick)
@@ -354,7 +354,7 @@ def build_storyline(
     if our_pick is not None and spread_home is not None:
         gap = abs(model_margin_home - spread_home)
         size = "under a field goal" if gap < 2.5 else ("about a field goal" if gap <= 3.5 else "more than a field goal")
-        sentences.append(f"That's a {gap:.1f}-point gap from the market -- {size}.")
+        sentences.append(f"That's a {gap:.1f}-point gap from the market — {size}.")
 
     pick_side = our_pick or ("home" if model_margin_home >= 0 else "away")
     pick_team, other_team = (home, away) if pick_side == "home" else (away, home)
@@ -366,7 +366,7 @@ def build_storyline(
     pick_qb_out = qb_injury_home if pick_side == "home" else qb_injury_away
     if other_qb_out:
         sentences.append(
-            f"{other_team}'s starting QB is {qb_status(other_qb_out)} -- the model already docks them "
+            f"{other_team}'s starting QB is {qb_status(other_qb_out)} — the model already docks them "
             f"{QB_OUT_PENALTY:g} points for it."
         )
     if pick_qb_out and our_pick is not None:
@@ -375,14 +375,14 @@ def build_storyline(
             "points for it and still thinks the line moved too far."
         )
     elif pick_qb_out:
-        sentences.append(f"{pick_team}'s starting QB is {qb_status(pick_qb_out)} -- the model already docks them {QB_OUT_PENALTY:g} points for it.")
+        sentences.append(f"{pick_team}'s starting QB is {qb_status(pick_qb_out)} — the model already docks them {QB_OUT_PENALTY:g} points for it.")
 
     if weights:
         share = sum(weights[s][p] for s in ("home", "away") for p in ("off", "def")) / 4
         pct = round(share * 100)
         if pct < 50:
             sentences.append(
-                f"Early-season read: only about {pct}% of these ratings come from {UPCOMING_SEASON} games so far -- "
+                f"Early-season read: only about {pct}% of these ratings come from {UPCOMING_SEASON} games so far — "
                 f"the rest is {UPCOMING_SEASON - 1}'s tape, shrunk toward average, so expect it to move."
             )
         else:
@@ -394,7 +394,7 @@ def build_storyline(
         if pct >= 80:
             sentences.append(f"{pick_team}'s offensive line is largely intact from a year ago ({pct}% continuity), which tends to mean a faster start to the season.")
         elif pct <= 40:
-            sentences.append(f"{pick_team} is breaking in a mostly new offensive line ({pct}% continuity) -- a real wildcard this early in the year.")
+            sentences.append(f"{pick_team} is breaking in a mostly new offensive line ({pct}% continuity) — a real wildcard this early in the year.")
 
     pick_coach = coach_home if pick_side == "home" else coach_away
     if pick_coach and pick_coach.get("same_coach") is False:
@@ -403,16 +403,16 @@ def build_storyline(
     if rest_edge is not None and rest_edge != 0:
         rested_team = home if rest_edge > 0 else away
         days = abs(rest_edge)
-        sentences.append(f"{rested_team} comes in with {days} extra day{'s' if days != 1 else ''} of rest -- context, not something the model scores.")
+        sentences.append(f"{rested_team} comes in with {days} extra day{'s' if days != 1 else ''} of rest — context, not something the model scores.")
 
     if revenge_flag and (revenge_flag.get("home") or revenge_flag.get("away")):
         revenge_team = home if revenge_flag.get("home") else away
-        sentences.append(f"{revenge_team} lost the last meeting between these division rivals -- worth a {REVENGE_BONUS:g}-point nudge in the model.")
+        sentences.append(f"{revenge_team} lost the last meeting between these division rivals — worth a {REVENGE_BONUS:g}-point nudge in the model.")
 
     if former_coach_home or former_coach_away:
         team, coach = (home, former_coach_home) if former_coach_home else (away, former_coach_away)
         sentences.append(
-            f"{team} is also facing {coach['coach_name']}, who coached {team} last season -- worth a {FORMER_COACH_BONUS:g}-point nudge in the model."
+            f"{team} is also facing {coach['coach_name']}, who coached {team} last season — worth a {FORMER_COACH_BONUS:g}-point nudge in the model."
         )
 
     if neutral_site:
@@ -423,7 +423,7 @@ def build_storyline(
     elif weather:
         sentences.append(
             f"Forecast for kickoff: {weather['short_forecast']}, {weather['temperature_f']}°F, wind {weather['wind']} "
-            "-- something to watch if it turns into a run-heavy day."
+            "— something to watch if it turns into a run-heavy day."
         )
     elif roof and roof != "outdoors":
         sentences.append(f"Played {roof.replace('_', ' ')}, so weather isn't a factor here.")

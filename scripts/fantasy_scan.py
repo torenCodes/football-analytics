@@ -526,7 +526,7 @@ def build_waiver_wire_explain(row):
     else:
         expectation = f"we had them {row['preseason_rank']}th at the position entering the season"
     game_word = "game" if row["games"] == 1 else "games"
-    return f"Likely available on waivers in most leagues -- {expectation}, and they're averaging {row['ppg']:.1f} ppg over {row['games']} {game_word} since."
+    return f"Likely available on waivers in most leagues — {expectation}, and they're averaging {row['ppg']:.1f} ppg over {row['games']} {game_word} since."
 
 
 def compute_waiver_wire(stats, schedules):
@@ -633,9 +633,9 @@ def build_draft_board_explain(row):
 
     gap = row["market_gap"]
     if gap is not None and gap >= 5:
-        sentences.append(f"We have {name} {round(gap)} spots higher than market consensus -- a value the market hasn't priced in yet.")
+        sentences.append(f"We have {name} {round(gap)} spots higher than market consensus — a value the market hasn't priced in yet.")
     elif gap is not None and gap <= -5:
-        sentences.append(f"The market ranks {name} {round(abs(gap))} spots higher than we do -- our model is more cautious here.")
+        sentences.append(f"The market ranks {name} {round(abs(gap))} spots higher than we do — our model is more cautious here.")
 
     if not sentences and row["coordinator_name"]:
         sentences.append(f"{role}: {row['coordinator_name']}.")
@@ -875,7 +875,7 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
         if remaining > 0:
             filled = required[pos] - remaining
             reach_notes.append(
-                f"Only {filled} of {required[pos]} {pos} slot(s) filled by pick {last_skill_pick} -- "
+                f"Only {filled} of {required[pos]} {pos} slot(s) filled by pick {last_skill_pick} — "
                 "every remaining option at the position was already off the board."
             )
 
@@ -898,8 +898,8 @@ def simulate_draft(big_board, ranked, league_teams, draft_slot):
 
     replacement_ranks = {pos: n * league_teams for pos, n in STARTERS}
     methodology = (
-        f"Simulates a {league_teams}-team snake draft from pick {draft_slot}. Every pick -- ours and the "
-        f"other {league_teams - 1} teams' -- is modeled as best-player-available by Value Over Replacement "
+        f"Simulates a {league_teams}-team snake draft from pick {draft_slot}. Every pick — ours and the "
+        f"other {league_teams - 1} teams' — is modeled as best-player-available by Value Over Replacement "
         "(VOR): edge score minus the edge score of the last starter-worthy player at that position "
         f"league-wide (QB{replacement_ranks['QB']}/RB{replacement_ranks['RB']}/WR{replacement_ranks['WR']}/"
         f"TE{replacement_ranks['TE']} for a {league_teams}-team, 1QB/2RB/2WR/1TE/1FLEX-starter league; FLEX "
@@ -1016,7 +1016,7 @@ def build_weekly_ranking_explain(row):
     if row.get("team_qb_out"):
         sentences.append(f"{row['team']}'s starting QB is out this week, a modest drag on the passing game.")
     if row.get("former_coach_matchup"):
-        sentences.append(f"{row['team']} also faces the coach who ran them last season -- extra motivation baked into the score.")
+        sentences.append(f"{row['team']} also faces the coach who ran them last season — extra motivation baked into the score.")
     if row.get("former_team_matchup"):
         sentences.append(f"{row['name']} is facing a former team this week, another motivation nudge factored in.")
     return " ".join(sentences)

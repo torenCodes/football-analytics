@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fantasy -- Football Forecast</title>
+<title>Fantasy — Football Forecast</title>
 <meta name="description" content="Perfect Team retrospective, 2026 Draft Board, and Dream Team draft simulation, scored under both PPR and Standard rules.">
 <meta name="theme-color" content="#0a1b11">
 <link rel="stylesheet" href="tokens.css">
@@ -28,7 +28,7 @@
   <div class="masthead-strip">
     <div>
       <h1>Fantasy</h1>
-      <div class="masthead-sub">Perfect Team retrospective, the 2026 Draft Board, and a simulated Dream Team -- lineups and rankings can genuinely flip between formats.</div>
+      <div class="masthead-sub">Perfect Team retrospective, the 2026 Draft Board, and a simulated Dream Team — lineups and rankings can genuinely flip between formats.</div>
     </div>
     <div class="toggle-group" id="format-toggle">
       <button class="toggle-btn active" data-format="ppr">PPR</button>
@@ -196,7 +196,7 @@
       Team simulation are one tunable model's output, not a guarantee of results.
     </p>
     <p>
-      Football Forecast is a living project -- models and methods get refined as the season teaches us things,
+      Football Forecast is a living project — models and methods get refined as the season teaches us things,
       and past results may be re-graded when a fix changes how they should be scored. What you see always
       reflects the current method.
     </p>
@@ -259,11 +259,11 @@ function currentDraftBoardSource() {
   return (seasonState && seasonState.season_started && preseasonDraftBoardData) ? preseasonDraftBoardData : draftBoardData;
 }
 
-function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
+function fmt1(n) { return (n === null || n === undefined) ? '—' : (Math.round(n * 10) / 10).toFixed(1).replace('-', '−'); }
 
 function renderPerfectTeam() {
   const data = perfectTeamData[currentFormat];
-  document.getElementById('perfect-team-title').textContent = `Perfect Team -- ${data.season} (${currentFormat.toUpperCase()})`;
+  document.getElementById('perfect-team-title').textContent = `Perfect Team — ${data.season} (${currentFormat.toUpperCase()})`;
   document.getElementById('perfect-team-note').textContent = `Highest-scoring possible lineup, total ${fmt1(data.perfect_lineup_total_points)} pts`;
 
   const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
@@ -338,15 +338,15 @@ function renderBoardTable() {
     <th class="num-center w-md">Mkt Rank</th><th class="num w-sm">Gap</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => {
-    const gapPill = p.market_gap === null ? '--' :
+    const gapPill = p.market_gap === null ? '—' :
       p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` :
-      p.market_gap < 0 ? `<span class="pill down">${p.market_gap}</span>` : '0';
+      p.market_gap < 0 ? `<span class="pill down">−${Math.abs(p.market_gap)}</span>` : '0';
     return `<tr title="${p.explain || (p.coordinator_name ? p.coordinator_role + ': ' + p.coordinator_name : '')}">
       <td>${p.our_rank}</td>
       <td>${p.name}</td>
       <td><span class="pill pos">${p.team}</span></td>
       <td class="num-center">${fmt1(p.edge_score)}</td>
-      <td class="num-center">${p.market_rank !== null ? fmt1(p.market_rank) : '--'}</td>
+      <td class="num-center">${p.market_rank !== null ? fmt1(p.market_rank) : '—'}</td>
       <td class="num">${gapPill}</td>
     </tr>`;
   }).join('') || `<tr><td colspan="6" class="empty-state">No data</td></tr>`;
@@ -388,7 +388,7 @@ function renderDreamTeam() {
       <td>${p.team}</td>
       <td class="num-center">${fmt1(p.edge_score)}</td>
       <td class="num-center">${fmt1(p.vor)}</td>
-      <td class="num-center">Pick ${p.drafted_at_pick ?? '--'}</td>
+      <td class="num-center">Pick ${p.drafted_at_pick ?? '—'}</td>
     </tr>
   `).join('') || `<tr><td colspan="6" class="empty-state">No data</td></tr>`;
 }
@@ -509,11 +509,11 @@ function renderAccountability() {
   const steals = posData.biggest_steals || [];
   const busts = posData.biggest_busts || [];
   el.innerHTML = `
-    <div class="front-block-title" style="margin-bottom: 0.5rem;">Biggest Steals -- we had them ranked too low</div>
+    <div class="front-block-title" style="margin-bottom: 0.5rem;">Biggest Steals — we had them ranked too low</div>
     <div class="card card-accent-fantasy" style="padding: 0.25rem 1rem; margin-bottom: 1.25rem;">
       ${steals.length ? steals.map(gradeRow).join('') : '<p class="empty-state">None yet.</p>'}
     </div>
-    <div class="front-block-title" style="margin-bottom: 0.5rem;">Biggest Busts -- we had them ranked too high</div>
+    <div class="front-block-title" style="margin-bottom: 0.5rem;">Biggest Busts — we had them ranked too high</div>
     <div class="card card-accent-fantasy" style="padding: 0.25rem 1rem;">
       ${busts.length ? busts.map(gradeRow).join('') : '<p class="empty-state">None yet.</p>'}
     </div>
@@ -527,7 +527,7 @@ function selectAccountabilityPos(pos) {
 }
 
 function injuryPill(status) {
-  if (!status) return '--';
+  if (!status) return '—';
   const cls = status === 'Questionable' ? 'pos' : 'down';
   return `<span class="pill ${cls}">${status}</span>`;
 }
@@ -553,7 +553,7 @@ function renderWeeklyRankings() {
     <th class="num w-md">Matchup</th><th class="center w-md">Injury</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => {
-    const matchupPill = p.matchup_adj === null ? '--' :
+    const matchupPill = p.matchup_adj === null ? '—' :
       p.matchup_adj > 0 ? `<span class="pill up">+${fmt1(p.matchup_adj)}</span>` :
       p.matchup_adj < 0 ? `<span class="pill down">${fmt1(p.matchup_adj)}</span>` : '0';
     return `<tr title="${p.explain || ''}">
@@ -649,7 +649,7 @@ async function applySeasonPivot() {
     safeJson('data/fantasy/waiver_wire.json'),
   ]);
 
-  document.getElementById('draft-board-kicker').textContent = 'Archived -- 2026 Preseason Prep';
+  document.getElementById('draft-board-kicker').textContent = 'Archived — 2026 Preseason Prep';
   document.getElementById('draft-board-details').removeAttribute('open');
   const summary = document.getElementById('draft-board-summary');
   summary.classList.remove('pivot-toggle');
@@ -703,7 +703,7 @@ async function init() {
 
   document.getElementById('dt-league-size').addEventListener('change', (e) => {
     currentLeagueSize = Number(e.target.value);
-    currentDraftSlot = 1; // reset -- a slot valid in the old league size may not exist in the new one
+    currentDraftSlot = 1; // reset — a slot valid in the old league size may not exist in the new one
     populateDraftSlotOptions();
     renderDreamTeam();
   });

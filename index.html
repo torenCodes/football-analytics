@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Football Forecast -- NFL Fantasy &amp; Game Picks Research</title>
+<title>Football Forecast — NFL Fantasy &amp; Game Picks Research</title>
 <meta name="description" content="Data-driven NFL fantasy and individual-game research: efficiency stats, roster continuity, and situational edges the market overlooks.">
 <meta name="theme-color" content="#0a1b11">
 <link rel="stylesheet" href="tokens.css">
@@ -36,19 +36,19 @@
       <div class="col-head">
         <div class="col-kicker">Fantasy</div>
         <h2 id="fantasy-col-title">Perfect Team &amp; Draft Board</h2>
-        <div class="col-sub" id="fantasy-col-sub">PPR scoring shown -- toggle formats on the full dashboard</div>
+        <div class="col-sub" id="fantasy-col-sub">PPR scoring shown — toggle formats on the full dashboard</div>
       </div>
       <a href="fantasy.html" class="col-cta fantasy">Open Fantasy dashboard &rarr;</a>
 
       <div class="front-block">
         <div class="stat-sheet">
-          <div class="stat-sheet-title" id="perfect-lineup-title">2025 Perfect Lineup -- Box Score</div>
+          <div class="stat-sheet-title" id="perfect-lineup-title">2025 Perfect Lineup — Box Score</div>
           <div id="perfect-lineup-rows"><div class="loading">Loading...</div></div>
         </div>
       </div>
 
       <div class="front-block">
-        <div class="front-block-title" id="value-gap-title">Draft Board -- Biggest Value Gaps</div>
+        <div class="front-block-title" id="value-gap-title">Draft Board — Biggest Value Gaps</div>
         <div class="table-scroll">
           <table class="tight-table" id="value-gap-table">
             <thead><tr><th>Rank</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Edge</th><th class="num">Gap vs. Market</th></tr></thead>
@@ -72,7 +72,7 @@
         <div class="mini-leader-grid" id="mini-leaders"></div>
       </div>
 
-      <a href="fantasy.html" class="view-more">View full Fantasy dashboard -- lineups, rankings, PPR/Standard toggle &rarr;</a>
+      <a href="fantasy.html" class="view-more">View full Fantasy dashboard — lineups, rankings, PPR/Standard toggle &rarr;</a>
     </section>
 
     <!-- BETTING (narrower column) -->
@@ -86,7 +86,7 @@
 
       <div id="game-list"></div>
 
-      <a href="betting.html" class="view-more">View full Game Picks dashboard -- factors &amp; storylines &rarr;</a>
+      <a href="betting.html" class="view-more">View full Game Picks dashboard — factors &amp; storylines &rarr;</a>
     </section>
   </div>
 
@@ -102,7 +102,7 @@
         <div class="front-block-title">The Data</div>
         <p>Every dashboard here runs on public data, not scraped guesses. <a href="https://github.com/nflverse" target="_blank" rel="noopener">nflverse</a>
            (the open-source project behind nflfastR) supplies play-by-play efficiency (EPA per play), weekly
-           stats, roster and depth-chart snapshots, and -- critically for the Game Picks side -- real market
+           stats, roster and depth-chart snapshots, and — critically for the Game Picks side — real market
            lines (spread, moneyline, total) straight from the same schedule feed, no paid odds subscription
            required. FantasyPros' consensus expert rankings serve as the "market" baseline on the Fantasy
            side. The National Weather Service fills in game-day forecasts. The one exception: offensive and
@@ -114,7 +114,7 @@
         <p>Every number here is explainable, not a black box. Fantasy rankings start from recency-weighted
            2025 production, then adjust for the "boring" stuff that actually moves outcomes: O-line/D-line
            continuity, head coach and coordinator continuity, and availability. The Dream Team isn't a
-           top-14 list -- it's a real pick-by-pick snake-draft simulation built on Value Over Replacement,
+           top-14 list — it's a real pick-by-pick snake-draft simulation built on Value Over Replacement,
            the same math serious fantasy strategy runs on. The Game Picks side works the same way in reverse:
            offense-vs-defense efficiency, rest, rivalry/revenge context, and weather, synthesized into a
            plain-English storyline for every game instead of a bare number.</p>
@@ -123,7 +123,7 @@
         <div class="front-block-title">Why It's Different</div>
         <p>Most sites hand you a ranking or a line and stop there. This one shows the reasoning and puts it
            next to the market: where the Draft Board disagrees with FantasyPros' consensus, or where our
-           spread differs from the actual Vegas line, that gap is the point -- it's either a real edge or a
+           spread differs from the actual Vegas line, that gap is the point — it's either a real edge or a
            sign the model is missing something, and either way it's more useful than a number with no story
            behind it. Use it alongside your usual sites, not as a replacement for your own judgment.</p>
       </div>
@@ -133,11 +133,11 @@
   <div class="disclaimer">
     <p>
       Football Forecast is a personal research project. Every number here comes from a documented, tunable
-      model built on public data (nflverse, FantasyPros consensus, NWS weather) -- nothing here is
+      model built on public data (nflverse, FantasyPros consensus, NWS weather) — nothing here is
       professional betting or financial advice, and past model accuracy does not guarantee future results.
     </p>
     <p>
-      It's also a living project -- models and methods get refined as the season teaches us things, and past
+      It's also a living project — models and methods get refined as the season teaches us things, and past
       results may be re-graded when a fix changes how they should be scored. What you see always reflects the
       current method.
     </p>
@@ -151,7 +151,15 @@ function toggleSiteNav(btn) {
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
 }
 
-function fmt1(n) { return (n === null || n === undefined) ? '--' : (Math.round(n * 10) / 10).toFixed(1); }
+function fmt1(n) { return (n === null || n === undefined) ? '—' : (Math.round(n * 10) / 10).toFixed(1).replace('-', '−'); }
+
+// Kickoff as the design system writes it: "SUN 1:00 PM ET". nflverse's
+// gametime is already Eastern, 24-hour.
+function kickoff(g) {
+  if (!g.weekday || !g.gametime) return '';
+  const [h, m] = g.gametime.split(':').map(Number);
+  return `${g.weekday.slice(0, 3).toUpperCase()} ${h % 12 || 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'} ET`;
+}
 
 // Official primary brand color per team (from nflverse's teams table).
 const TEAM_COLORS = {
@@ -220,7 +228,7 @@ async function loadFantasyColumn() {
       return `<div class="mini-leader-col"><div class="mini-leader-pos">${pos}</div><ol>${items}</ol></div>`;
     }).join('');
   } catch (e) {
-    document.getElementById('fantasy-col-sub').textContent = 'Fantasy data not available yet -- run scripts/fantasy_scan.py.';
+    document.getElementById('fantasy-col-sub').textContent = 'Fantasy data not available yet — run scripts/fantasy_scan.py.';
   }
 }
 
@@ -228,8 +236,8 @@ function loadFantasyColumnPreseason(perfectTeam, draftBoard) {
   const pt = perfectTeam.ppr;
   const db = draftBoard.ppr;
 
-  document.getElementById('fantasy-col-title').textContent = `Perfect Team & Draft Board -- ${pt.season}/${db.draft_season}`;
-  document.getElementById('perfect-lineup-title').textContent = `${pt.season} Perfect Lineup -- Box Score`;
+  document.getElementById('fantasy-col-title').textContent = `Perfect Team & Draft Board — ${pt.season}/${db.draft_season}`;
+  document.getElementById('perfect-lineup-title').textContent = `${pt.season} Perfect Lineup — Box Score`;
 
   const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
   const slots = [];
@@ -240,7 +248,7 @@ function loadFantasyColumnPreseason(perfectTeam, draftBoard) {
     <div class="stat-row"><span class="slot">${p.slot}</span><span>${p.name} &middot; ${p.team}</span><span class="pts">${fmt1(p.points)}</span></div>
   `).join('');
 
-  document.getElementById('value-gap-title').textContent = 'Draft Board -- Biggest Value Gaps';
+  document.getElementById('value-gap-title').textContent = 'Draft Board — Biggest Value Gaps';
   document.querySelector('#value-gap-table thead').innerHTML =
     '<tr><th>Rank</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Edge</th><th class="num">Gap vs. Market</th></tr>';
 
@@ -259,7 +267,7 @@ function loadFantasyColumnPreseason(perfectTeam, draftBoard) {
   gaps.sort((a, b) => b.market_gap - a.market_gap);
   gaps = gaps.slice(0, 16);
   document.querySelector('#value-gap-table tbody').innerHTML = gaps.map(p => {
-    const gapPill = p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` : `<span class="pill down">${p.market_gap}</span>`;
+    const gapPill = p.market_gap > 0 ? `<span class="pill up">+${p.market_gap}</span>` : `<span class="pill down">−${Math.abs(p.market_gap)}</span>`;
     return `<tr><td>${p.our_rank}</td><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.edge_score)}</td><td class="num">${gapPill}</td></tr>`;
   }).join('') || '<tr><td colspan="6" class="empty-state">No data</td></tr>';
 }
@@ -273,10 +281,10 @@ async function loadFantasyColumnInSeason(seasonState) {
     fetch('data/fantasy/waiver_wire.json').then(r => r.json()).catch(() => null),
   ]);
 
-  document.getElementById('fantasy-col-title').textContent = week ? `Team of the Week -- Week ${week}, ${season}` : `Fantasy -- ${season} Season`;
-  document.getElementById('fantasy-col-sub').textContent = 'PPR scoring shown -- Week’s picks factor in matchup + injury status';
+  document.getElementById('fantasy-col-title').textContent = week ? `Team of the Week — Week ${week}, ${season}` : `Fantasy — ${season} Season`;
+  document.getElementById('fantasy-col-sub').textContent = 'PPR scoring shown — Week’s picks factor in matchup + injury status';
 
-  document.getElementById('perfect-lineup-title').textContent = week ? `Week ${week} Best Lineup -- Box Score` : 'Team of the Week';
+  document.getElementById('perfect-lineup-title').textContent = week ? `Week ${week} Best Lineup — Box Score` : 'Team of the Week';
   if (teamOfWeek) {
     const tow = teamOfWeek.ppr;
     const slotOrder = ['QB', 'RB', 'WR', 'TE', 'FLEX', 'K', 'DST'];
@@ -296,7 +304,7 @@ async function loadFantasyColumnInSeason(seasonState) {
 
   if (weeklyRankings && weeklyRankings.available) {
     const wr = weeklyRankings.ppr;
-    document.getElementById('value-gap-title').textContent = `Weekly Rankings -- Week ${wr.week} Biggest Matchup Edges`;
+    document.getElementById('value-gap-title').textContent = `Weekly Rankings — Week ${wr.week} Biggest Matchup Edges`;
     // Same relevance-cutoff logic as the preseason value-gap table, and the
     // same bye-week handling for free: players whose team has a bye this
     // week are never in weekly_rankings.json to begin with (excluded at
@@ -315,7 +323,7 @@ async function loadFantasyColumnInSeason(seasonState) {
       return `<tr><td>${p.rank}</td><td>${p.name}</td><td>${p.position}</td><td>${p.team}</td><td class="num">${fmt1(p.start_score)}</td><td class="num">${edgePill}</td></tr>`;
     }).join('') || '<tr><td colspan="6" class="empty-state">No data</td></tr>';
   } else {
-    document.getElementById('value-gap-title').textContent = 'Weekly Rankings -- Biggest Matchup Edges';
+    document.getElementById('value-gap-title').textContent = 'Weekly Rankings — Biggest Matchup Edges';
     document.querySelector('#value-gap-table tbody').innerHTML =
       `<tr><td colspan="6" class="empty-state">${(weeklyRankings && weeklyRankings.note) || 'Weekly rankings unlock once at least one 2026 game has been played.'}</td></tr>`;
   }
@@ -347,10 +355,10 @@ function gameRowHtml(g) {
   let pickLine = '';
   if (pickTeam && g.market) {
     const x = g.our_pick === 'home' ? -g.market.spread_home : g.market.spread_home;
-    pickLine = x === 0 ? 'PK' : (x > 0 ? '+' + x : String(x));
+    pickLine = x === 0 ? 'PK' : (x > 0 ? '+' + x : String(x).replace('-', '−'));
   }
   const stubLabel = g.pick_status === 'no_lean' ? 'No lean' : 'Pick';
-  const time = (g.weekday && g.gametime) ? `${g.weekday.slice(0, 3)} ${g.gametime}` : '';
+  const time = kickoff(g);
   const isRivalry = g.div_game || (g.revenge_game && (g.revenge_game.home || g.revenge_game.away));
   const tags = [];
   if (g.primetime) tags.push('<span class="mini-tag blue">Primetime</span>');
@@ -368,7 +376,7 @@ function gameRowHtml(g) {
       <div class="ticket-perf"></div>
       <div class="ticket-stub">
         <div class="pick-label">${stubLabel}</div>
-        <div class="pick-team">${pickTeam ? teamSpan(pickTeam) : '--'}</div>
+        <div class="pick-team">${pickTeam ? teamSpan(pickTeam) : '—'}</div>
         ${pickLine ? `<div class="pick-line">${pickLine}</div>` : ''}
       </div>
     </div>
@@ -381,7 +389,7 @@ async function loadBettingColumn() {
 
     let sub = '';
     if (gameBoard.games && gameBoard.games.length) {
-      document.getElementById('betting-col-title').textContent = `Week ${gameBoard.week} Board -- ${gameBoard.season}`;
+      document.getElementById('betting-col-title').textContent = `Week ${gameBoard.week} Board — ${gameBoard.season}`;
       sub = `${gameBoard.games.length} games this week`;
       document.getElementById('game-list').innerHTML = gameBoard.games.map(gameRowHtml).join('');
     } else {
@@ -389,7 +397,7 @@ async function loadBettingColumn() {
     }
     document.getElementById('betting-col-sub').innerHTML = sub;
   } catch (e) {
-    document.getElementById('betting-col-sub').textContent = 'Game Picks data not available yet -- run scripts/betting_scan.py.';
+    document.getElementById('betting-col-sub').textContent = 'Game Picks data not available yet — run scripts/betting_scan.py.';
   }
 }
 
