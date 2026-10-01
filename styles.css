@@ -337,3 +337,20 @@ table.tight-table .num { text-align: right; }
    its own token note promises (market labels, Track Record labels sit there).
    1% darker clears it on every Chalk ground; worth fixing in the system too. */
 [data-theme="light"] { --text-3: #5a6a5f; }
+
+/* Lineup + bench side by side on wide screens (Team of the Week, Perfect Team):
+   the 9 lineup cards as a 3x3 grid left, the 4-column bench right. The bench
+   table drops .data-table's 640px floor here -- that floor exists to force
+   scrolling on phones, and 4 columns fit the half-width column easily. */
+@media (min-width: 1000px) {
+  .lineup-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); align-items: start; }
+  .lineup-split .lineup-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 0 !important; }
+  .lineup-split table.data-table { min-width: 0; }
+}
+
+/* Game card pick: only the picked team keeps the marker voice; "Model pick"
+   reads as a label and the line as a number, like the rest of the card. */
+.game-pick { font-family: var(--font-condensed); font-size: 16px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-2); }
+.game-pick .pick-team-marker { font-family: var(--font-marker); font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--pigskin-text); }
+.game-pick .pick-team-marker .team { font-weight: 400; }
+.game-pick .pick-num { font-family: var(--font-mono); font-size: 16px; letter-spacing: 0; color: var(--text); }

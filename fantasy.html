@@ -50,13 +50,17 @@
         </div>
         <span class="section-note" id="perfect-team-note"></span>
       </div>
-      <div id="perfect-lineup" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
-      <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
-      <div class="card card-accent-fantasy table-scroll">
-        <table class="data-table" id="perfect-team-bench">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
+      <div class="lineup-split">
+        <div id="perfect-lineup" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
+        <div>
+          <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
+          <div class="card card-accent-fantasy table-scroll">
+            <table class="data-table" id="perfect-team-bench">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -87,13 +91,17 @@
         <div id="dream-team-notes"></div>
       </div>
       <p class="empty-state" id="right-col-empty" style="display: none;"></p>
-      <div id="dream-team-starters" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
-      <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
-      <div class="card card-accent-fantasy table-scroll">
-        <table class="data-table" id="dream-team-bench">
-          <thead></thead>
-          <tbody></tbody>
-        </table>
+      <div id="dream-team-split">
+        <div id="dream-team-starters" class="lineup-grid" style="margin-bottom: 1.25rem;"></div>
+        <div>
+          <div class="front-block-title" style="margin-bottom: 0.5rem;">Bench</div>
+          <div class="card card-accent-fantasy table-scroll">
+            <table class="data-table" id="dream-team-bench">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -474,7 +482,11 @@ function renderTeamOfWeek() {
 
 function renderRightColumn() {
   const controlsWrap = document.getElementById('dream-team-controls-wrap');
-  if (seasonState && seasonState.season_started) {
+  const inSeason = !!(seasonState && seasonState.season_started);
+  // Side-by-side lineup + bench only for Team of the Week: its 4-column bench
+  // fits beside the lineup; the preseason Dream Team's 6-column bench doesn't.
+  document.getElementById('dream-team-split').classList.toggle('lineup-split', inSeason);
+  if (inSeason) {
     controlsWrap.style.display = 'none';
     renderTeamOfWeek();
   } else {

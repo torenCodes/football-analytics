@@ -211,7 +211,9 @@ function pickLabel(side, spreadHome, home, away) {
 
 function pickHeader(g) {
   if (g.pick_status === 'pick' && g.our_pick && g.market) {
-    return `Model pick: ${pickLabel(g.our_pick, g.market.spread_home, g.home_team, g.away_team)}`;
+    const team = g.our_pick === 'home' ? g.home_team : g.away_team;
+    return `<span class="pick-word">Model pick</span> <span class="pick-team-marker">${teamSpan(team)}</span> `
+      + `<span class="pick-num">${teamLine(g.market.spread_home, g.our_pick)}</span>`;
   }
   if (g.pick_status === 'no_lean') return 'No lean — model matches the spread';
   if (g.pick_status === 'no_line') return 'No line posted yet';
@@ -351,7 +353,9 @@ async function loadTrackRecord() {
       : '';
     el.innerHTML = [...acc.weeks].reverse().map(w => {
       const wAts = recordText(w.ats), wOutright = recordText(w.outright);
-      const wRecord = wAts ? `Spread ${wAts.split(' ')[0]} · Winner ${wOutright ? wOutright.split(' ')[0] : '—'}` : 'Pending';
+      const wRecord = wAts
+        ? `Spread <span class="pick-num">${wAts.split(' ')[0]}</span> · Winner <span class="pick-num">${wOutright ? wOutright.split(' ')[0] : '—'}</span>`
+        : 'Pending';
       const gamesHtml = w.games.map(g => {
         const pick = g.our_pick ? pickLabel(g.our_pick, g.spread_home, g.home_team, g.away_team) : '—';
         return `
