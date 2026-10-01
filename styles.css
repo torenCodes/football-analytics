@@ -342,11 +342,20 @@ table.tight-table .num { text-align: right; }
    the 9 lineup cards as a 3x3 grid left, the 4-column bench right. The bench
    table drops .data-table's 640px floor here -- that floor exists to force
    scrolling on phones, and 4 columns fit the half-width column easily. */
+.lineup-starters { margin-bottom: 1.25rem; }
 @media (min-width: 1000px) {
   .lineup-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); align-items: start; }
-  .lineup-split .lineup-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 0 !important; }
+  .lineup-split .lineup-starters { margin-bottom: 0; }
+  .lineup-split .lineup-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .lineup-split table.data-table { min-width: 0; }
 }
+/* Lineup cards: left-aligned and compact, so the 3x3 starters grid stands
+   about as tall as the 6-row bench table beside it. */
+.lineup-slot { padding: 8px; text-align: left; }
+.lineup-slot .slot-label { font-size: 12px; line-height: 1.25; }
+.lineup-slot .slot-name { font-size: 14px; line-height: 1.25; margin: 3px 0 0; }
+.lineup-slot .slot-team { font-size: 12px; line-height: 1.25; }
+.lineup-slot .slot-pts { font-size: 17px; line-height: 1.1; margin-top: 3px; }
 
 /* Game card pick: only the picked team keeps the marker voice; "Model pick"
    reads as a label and the line as a number, like the rest of the card. */
