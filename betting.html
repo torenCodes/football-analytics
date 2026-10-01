@@ -39,11 +39,19 @@
         <div class="section-kicker betting">2026 Season</div>
         <h2 id="game-board-title">Game Board</h2>
       </div>
-      <span class="section-note">Click a game to see how the pick was built.</span>
+      <span class="section-note">Click a game for the matchup math. Green edge = rivalry game.</span>
     </div>
     <details class="methodology-details" style="margin-bottom: 1.25rem;">
-      <summary>What do spread / moneyline / total mean?</summary>
+      <summary>How to read these cards</summary>
       <div class="section-note" style="display: block; margin-top: 0.5rem; line-height: 1.6;">
+        The bar on each card is one number line from the away team (left) to the home team (right): the
+        <strong>dot</strong> is the model's projected margin, the <strong>tick</strong> is Vegas's spread, and
+        the shaded stretch between them is the gap the pick comes from. A bigger gap isn't a safer pick, though —
+        in last season's backtest, big-gap picks covered no more often than small ones, so no game here is
+        flagged as a sure thing. Team ranks (#1 = best) are the model's blended efficiency ratings, which
+        lean on last season early in the year.
+      </div>
+      <div class="section-note" style="display: block; margin-top: 0.75rem; line-height: 1.6;">
         <strong>Moneyline</strong> is a bet on who simply wins the game. A negative number is the favorite —
         e.g. &minus;148 means you'd bet $148 to win $100 (plus your $148 back). A positive number is the
         underdog — e.g. +124 means a $100 bet wins $124. <strong>Spread</strong> handicaps the favorite by a
@@ -228,24 +236,111 @@ function marketOddsHtml(g) {
   // underdog positive).
   const homeSpread = -m.spread_home;
   const awaySpread = m.spread_home;
-  let edgeNote = '';
-  const mm = g.model_margin_home;
-  if (mm !== null && mm !== undefined && m.edge_vs_market !== null && m.edge_vs_market !== undefined) {
-    const modelText = mm === 0 ? 'even' : `${teamSpan(mm > 0 ? g.home_team : g.away_team)} by ${fmt1(Math.abs(mm))}`;
-    const s = m.spread_home;
-    const marketText = s === 0 ? 'even' : `${teamSpan(s > 0 ? g.home_team : g.away_team)} ${fmtOdds(-Math.abs(s))}`;
-    const e = m.edge_vs_market;
-    const gapText = e === 0 ? 'no gap' : `gap ${Math.abs(e).toFixed(1)} toward ${teamSpan(e > 0 ? g.home_team : g.away_team)}`;
-    edgeNote = `Model: ${modelText} &middot; Market: ${marketText} &middot; ${gapText}`;
-  }
   return `
     <div class="market-odds">
+      <div class="box-title">Vegas</div>
       <div class="market-row"><span class="market-label">Spread</span><span>${teamSpan(g.home_team)} ${fmtOdds(homeSpread)} &middot; ${teamSpan(g.away_team)} ${fmtOdds(awaySpread)}</span></div>
       <div class="market-row"><span class="market-label">Moneyline</span><span>${teamSpan(g.home_team)} ${fmtOdds(m.moneyline_home)} &middot; ${teamSpan(g.away_team)} ${fmtOdds(m.moneyline_away)}</span></div>
       <div class="market-row"><span class="market-label">Total</span><span>${m.total ?? '—'}</span></div>
-      ${edgeNote ? `<div class="market-edge-note">${edgeNote}</div>` : ''}
     </div>
   `;
+}
+
+// "NO by 3.0" / "Even" for a home-relative margin; html=false for aria text.
+function marginText(g, x, html = true) {
+  if (x === 0) return 'Even';
+  const team = x > 0 ? g.home_team : g.away_team;
+  return `${html ? teamSpan(team) : team} by ${fmt1(Math.abs(x))}`;
+}
+
+// The favorite's line, "NO −2.5" / "PK".
+function vegasText(g, s, html = true) {
+  if (s === 0) return 'PK';
+  const team = s > 0 ? g.home_team : g.away_team;
+  return `${html ? teamSpan(team) : team} ${fmtOdds(-Math.abs(s))}`;
+}
+
+// Model vs. Vegas on one number line: away team's side on the left, home's
+// on the right (same order as "AWAY @ HOME"), fixed at two touchdowns each
+// way so the gaps compare across cards. Ticks sit on football's key margins.
+const GAUGE_RANGE = 14;
+function spreadGauge(g) {
+  const m = g.model_margin_home, s = g.market ? g.market.spread_home : null;
+  if (m === null || m === undefined || s === null || s === undefined) return '';
+  const pos = x => 50 + 50 * Math.max(-GAUGE_RANGE, Math.min(GAUGE_RANGE, x)) / GAUGE_RANGE;
+  const pm = pos(m), ps = pos(s);
+  const ticks = [-10, -7, -3, 0, 3, 7, 10]
+    .map(t => `<span class="sg-tick${t === 0 ? ' zero' : ''}" style="left: ${pos(t)}%;"></span>`).join('');
+  return `
+    <div class="spread-gauge" role="img" aria-label="Model: ${marginText(g, m, false)}. Vegas: ${vegasText(g, s, false)}.">
+      <span class="sg-team">${teamSpan(g.away_team)}</span>
+      <div class="sg-field">
+        <div class="sg-label sg-label-model"><span style="--p: ${pm}%;">Model <b>${marginText(g, m)}</b></span></div>
+        <div class="sg-track">
+          ${ticks}
+          <span class="sg-gap" style="left: ${Math.min(pm, ps)}%; width: ${Math.abs(pm - ps)}%;"></span>
+          <span class="sg-mark sg-mark-vegas" style="left: ${ps}%;"></span>
+          <span class="sg-mark sg-mark-model" style="left: ${pm}%;"></span>
+        </div>
+        <div class="sg-label sg-label-vegas"><span style="--p: ${ps}%;">Vegas <b>${vegasText(g, s)}</b></span></div>
+      </div>
+      <span class="sg-team">${teamSpan(g.home_team)}</span>
+    </div>
+  `;
+}
+
+function rankPill(r) {
+  return `<span class="pill ${r <= 10 ? 'up' : r >= 23 ? 'down' : 'pos'}">#${r}</span>`;
+}
+
+const BREAKDOWN_LABEL = {
+  offense: r => `${teamSpan(r.team)} offense vs. ${teamSpan(r.opp)} defense`,
+  home_field: () => 'Home field',
+  qb_out: r => `${teamSpan(r.team)} starting QB out`,
+  revenge: r => `${teamSpan(r.team)} revenge game`,
+  former_coach: r => `${teamSpan(r.team)} faces former coach`,
+};
+
+// Unit ranks plus the model's margin taken apart into the pieces that sum
+// to it (betting_scan's margin_breakdown), each credited to the team it helps.
+function matchupMathHtml(g) {
+  const ranks = g.unit_ranks, rows = g.margin_breakdown;
+  if (!ranks || !rows) return '';
+  const credit = x => x === 0 ? 'even' : `${teamSpan(x > 0 ? g.home_team : g.away_team)} +${fmt1(Math.abs(x))}`;
+  return `
+    <div class="matchup-math">
+      <div class="box-title">Matchup math</div>
+      <table class="rank-table">
+        <thead><tr><th></th><th>Offense</th><th>Defense</th></tr></thead>
+        <tbody>
+          <tr><td>${teamSpan(g.away_team)}</td><td>${rankPill(ranks.away.off)}</td><td>${rankPill(ranks.away.def)}</td></tr>
+          <tr><td>${teamSpan(g.home_team)}</td><td>${rankPill(ranks.home.off)}</td><td>${rankPill(ranks.home.def)}</td></tr>
+        </tbody>
+      </table>
+      <div class="ledger">
+        ${rows.map(r => `<div class="ledger-row"><span>${(BREAKDOWN_LABEL[r.kind] || (() => r.kind))(r)}</span><span>${credit(r.pts_home)}</span></div>`).join('')}
+        <div class="ledger-row ledger-total"><span>Model</span><span>${marginText(g, g.model_margin_home)}</span></div>
+      </div>
+    </div>
+  `;
+}
+
+// The few things worth seeing before a click: billing, rivalry, and every
+// factor that actually moves the model's number (yellow flags).
+function summaryChips(g) {
+  const chips = [];
+  const m = g.model_margin_home, s = g.market ? g.market.spread_home : null;
+  if (m !== null && m !== undefined && s !== null && s !== undefined && m * s < 0) chips.push('<span class="mini-tag upset">Upset call</span>');
+  if (g.primetime) chips.push('<span class="mini-tag blue">Primetime</span>');
+  if (g.div_game) chips.push('<span class="mini-tag">Division</span>');
+  for (const side of ['away', 'home']) {
+    if (g.qb_injury && g.qb_injury[side]) chips.push(`<span class="mini-tag flag">${g[side + '_team']} QB out</span>`);
+  }
+  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) chips.push('<span class="mini-tag flag">Revenge</span>');
+  if (g.former_coach) chips.push('<span class="mini-tag flag">Former coach</span>');
+  if (g.neutral_site) chips.push('<span class="mini-tag">Neutral site</span>');
+  else if (g.international_site) chips.push('<span class="mini-tag">International</span>');
+  return chips.join('');
 }
 
 async function loadGameBoard() {
@@ -261,6 +356,10 @@ async function loadGameBoard() {
     el.innerHTML = gb.games.map(g => {
       const pickText = pickHeader(g);
       const time = kickoff(g);
+      // The full storyline opens with the same sentences the summary shows;
+      // the body picks up where the summary leaves off.
+      const short = g.storyline_short || '';
+      const rest = g.storyline && short && g.storyline.startsWith(short) ? g.storyline.slice(short.length).trim() : g.storyline;
       return `
         <details class="game-card ${isRivalry(g) ? 'rivalry' : ''}">
           <summary>
@@ -268,16 +367,22 @@ async function loadGameBoard() {
               <div class="matchup-line">
                 <div>
                   <div class="game-matchup">${teamSpan(g.away_team)} @ ${teamSpan(g.home_team)}</div>
-                  <div class="section-note">${time}</div>
+                  <div class="game-meta"><span class="game-time">${time}</span>${summaryChips(g)}</div>
                 </div>
               </div>
               <div class="game-pick">${pickText}</div>
             </div>
-            <p class="game-why">${colorStoryline(g.storyline_short, g.home_team, g.away_team)}</p>
+            <div class="game-card-mid">
+              <p class="game-why">${colorStoryline(short, g.home_team, g.away_team)}</p>
+              ${spreadGauge(g)}
+            </div>
           </summary>
           <div class="game-card-body">
-            ${marketOddsHtml(g)}
-            <p class="game-storyline">${colorStoryline(g.storyline, g.home_team, g.away_team)}</p>
+            <div class="game-body-grid">
+              ${matchupMathHtml(g)}
+              ${marketOddsHtml(g)}
+            </div>
+            ${rest ? `<p class="game-storyline">${colorStoryline(rest, g.home_team, g.away_team)}</p>` : ''}
             <div class="factor-tags">${factorTags(g)}</div>
           </div>
         </details>

@@ -337,6 +337,8 @@ table.tight-table .num { text-align: right; }
    its own token note promises (market labels, Track Record labels sit there).
    1% darker clears it on every Chalk ground; worth fixing in the system too. */
 [data-theme="light"] { --text-3: #5a6a5f; }
+/* Masthead subhead: wrap at a readable measure, with room above the hash-mark rule. */
+.masthead-strip .masthead-sub { max-width: 80ch; padding: 10px 0 15px; }
 
 /* Lineup + bench side by side on wide screens (Team of the Week, Perfect Team):
    the 9 lineup cards as a 3x3 grid left, the 4-column bench right. The bench
@@ -363,3 +365,45 @@ table.tight-table .num { text-align: right; }
 .game-pick .pick-team-marker { font-family: var(--font-marker); font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--pigskin-text); }
 .game-pick .pick-team-marker .team { font-weight: 400; }
 .game-pick .pick-num { font-family: var(--font-mono); font-size: 16px; letter-spacing: 0; color: var(--text); }
+
+/* Game card summary: kickoff + chips, then the read beside the Model-vs-Vegas gauge. */
+.game-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; margin-top: 3px; }
+.game-time { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); margin-right: 4px; }
+.mini-tag.upset { background: var(--pigskin); color: var(--on-pigskin); }
+.game-card-mid .game-why { margin: 10px 0 0; }
+.spread-gauge { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; margin-top: 12px; }
+@media (min-width: 900px) {
+  .game-card-mid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, 320px); gap: var(--space-6); align-items: center; margin-top: 10px; }
+  .game-card-mid .game-why, .game-card-mid .spread-gauge { margin-top: 0; }
+}
+.sg-team { font-family: var(--font-condensed); font-size: 15px; font-weight: 700; }
+.sg-label { position: relative; height: 17px; }
+/* left: p% + translateX(-p%) slides each label from left-aligned at one end
+   of the track to right-aligned at the other, so it never overhangs. */
+.sg-label > span { position: absolute; top: 0; left: var(--p); transform: translateX(calc(var(--p) * -1)); white-space: nowrap; font-family: var(--font-condensed); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.sg-label-model > span { color: var(--pigskin-text); }
+.sg-label-vegas > span { color: var(--text-3); }
+.sg-label b { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--text); margin-left: 3px; }
+.sg-track { position: relative; height: 10px; margin: 4px 0; border-radius: 5px; background: var(--surface-raised); box-shadow: inset 0 0 0 1px var(--line); }
+.sg-tick { position: absolute; top: 2px; bottom: 2px; width: 1px; background: var(--line-strong); transform: translateX(-50%); }
+.sg-tick.zero { top: -3px; bottom: -3px; width: 2px; background: var(--text-3); }
+.sg-gap { position: absolute; top: 0; bottom: 0; background: var(--pigskin); opacity: 0.4; }
+.sg-mark { position: absolute; top: 50%; transform: translate(-50%, -50%); }
+.sg-mark-vegas { width: 3px; height: 20px; border-radius: 2px; background: var(--text); }
+.sg-mark-model { width: 14px; height: 14px; border-radius: 50%; background: var(--pigskin-text); box-shadow: 0 0 0 2px var(--surface); }
+
+/* Game card body: matchup math (unit ranks + the margin's ledger) beside the Vegas odds. */
+.game-body-grid { display: grid; gap: var(--space-3); margin-top: var(--space-4); }
+@media (min-width: 760px) { .game-body-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
+.game-body-grid .market-odds { margin-top: 0; }
+.matchup-math { background: var(--surface-raised); border-radius: var(--radius-md); padding: 12px 16px; }
+.box-title { font-family: var(--font-condensed); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }
+.rank-table { border-collapse: collapse; margin-bottom: 8px; }
+.rank-table th { font-family: var(--font-condensed); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); text-align: center; padding: 2px 10px; }
+.rank-table td { text-align: center; padding: 3px 10px; }
+.rank-table th:first-child, .rank-table td:first-child { padding-left: 0; padding-right: 16px; }
+.rank-table th:first-child, .rank-table td:first-child { text-align: left; font-family: var(--font-condensed); font-size: 15px; font-weight: 700; }
+.ledger { border-top: 1px solid var(--line); padding-top: 6px; }
+.ledger-row { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); font-size: 13px; padding: 2px 0; color: var(--text-2); }
+.ledger-row span:last-child { font-family: var(--font-mono); white-space: nowrap; color: var(--text); }
+.ledger-total { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 6px; font-weight: 700; color: var(--text); }

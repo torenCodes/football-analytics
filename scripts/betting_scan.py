@@ -29,6 +29,7 @@ Getting this backwards would silently invert every pick in the backtest.
 import glob
 import json
 import os
+import zlib
 from datetime import datetime, timezone
 
 import polars as pl
@@ -70,6 +71,7 @@ REVENGE_BONUS = 1.0  # points, for a team that lost the last meeting against thi
 # validated by the backtest (not reconstructable historically without leaking later news)
 FORMER_COACH_BONUS = 1.0  # points, for a team facing the coach who coached THEM last season -- same
 # magnitude as REVENGE_BONUS, same reasoning
+INDOOR_ROOFS = ("dome", "closed")  # nflverse roof values where the forecast doesn't matter
 
 
 def team_game_efficiency(team_stats):
@@ -295,10 +297,168 @@ def _team_line(spread_home, side):
     return "PK" if line == 0 else f"{'+' if line > 0 else '−'}{abs(line):g}"
 
 
-def pick_headline(home, away, model_margin_home, spread_home, our_pick):
-    """Sentence one: the model's margin set against the spread, and the side
-    of the spread that produces. Every branch reads off the same two numbers
-    the pick is derived from, so the text can't contradict the pick."""
+def unit_ranks(ratings):
+    """1-32 per unit from the blended ratings: offense by most EPA/play
+    gained, defense by fewest allowed."""
+    by_off = sorted(ratings, key=lambda t: -ratings[t]["off"])
+    by_def = sorted(ratings, key=lambda t: ratings[t]["def"])
+    return {t: {"off": by_off.index(t) + 1, "def": by_def.index(t) + 1} for t in ratings}
+
+
+def margin_breakdown(ratings, home, away, neutral, adjustments, margin_home):
+    """The model's margin split into the pieces that add up to it: each
+    offense against the defense it faces (points vs. an average matchup --
+    base_margin regrouped), home field, then the situational nudges. Rows are
+    home-relative (positive helps home), rounded to 0.1 with the rounding
+    slack put on the biggest row, so the rows shown sum exactly to the
+    margin shown."""
+    h, a = ratings[home], ratings[away]
+    rows = [
+        {"kind": "offense", "team": home, "opp": away, "raw": MARGIN_SCALE * (h["off"] + a["def"])},
+        {"kind": "offense", "team": away, "opp": home, "raw": -MARGIN_SCALE * (a["off"] + h["def"])},
+    ]
+    if not neutral:
+        rows.append({"kind": "home_field", "team": home, "raw": HOME_FIELD_ADJ})
+    rows += adjustments
+    for r in rows:
+        r["pts_home"] = round(r["raw"], 1)
+    slack = round(margin_home - sum(r["pts_home"] for r in rows), 1)
+    if slack:
+        biggest = max(rows, key=lambda r: abs(r["raw"]))
+        biggest["pts_home"] = round(biggest["pts_home"] + slack, 1)
+    return [{k: v for k, v in r.items() if k != "raw"} for r in rows]
+
+
+class Phrasing:
+    """Rotates through each situation's phrasings across a week's board, so
+    16 cards don't keep landing on the same sentence. Each key starts at an
+    offset seeded by the season/week: a re-scan with the same situations in
+    the same order phrases them the same way, but each week opens fresh."""
+
+    def __init__(self, seed=""):
+        self.seed = seed
+        self.used = {}
+
+    def pick(self, key, options):
+        i = self.used.get(key, zlib.crc32(f"{self.seed}:{key}".encode()))
+        self.used[key] = i + 1
+        return options[i % len(options)]
+
+
+def _half(x):
+    """Points as prose, to the nearest half point: "3", "3.5"."""
+    return f"{round(x * 2) / 2:g}"
+
+
+def _qb_status(flag):
+    return "on Reserve" if flag["status"] == "Reserve" else f"listed {flag['status']}"
+
+
+def _weakness_story(own_rank, opp_rank):
+    """True when the opposing unit sits further below average than this
+    team's unit sits above it -- the story is then the other side's hole,
+    not this side's strength (a #20 defense isn't why ATL's #25 offense stalls)."""
+    return (opp_rank - 16.5) > (16.5 - own_rank)
+
+
+def driver_sentence(phr, home, away, margin_home, rows, ranks, qb_injury):
+    """What carries the model's projected winner: the breakdown row pulling
+    hardest their way, told as a unit-vs-unit matchup with ranks.
+    Returns (sentence, kind of row it describes)."""
+    if abs(margin_home) < 1.0:
+        return phr.pick("even", [
+            "The model can barely separate these two.",
+            "By the model's ratings, this is about as even as matchups get.",
+            "The model sees close to a coin flip here.",
+        ]), "even"
+    w, l = (home, away) if margin_home > 0 else (away, home)
+    sign = 1 if w == home else -1
+    best = max(rows, key=lambda r: sign * r["pts_home"])
+    pts = _half(sign * best["pts_home"])
+    if best["kind"] == "offense" and best["team"] == w:
+        ro, rd = ranks[w]["off"], ranks[l]["def"]
+        if _weakness_story(ro, rd):
+            return phr.pick("drv_def_hole", [
+                f"The soft spot is {l}'s defense, #{rd} in the model's ratings, and {w}'s #{ro} offense gets to face it.",
+                f"{l}'s defense ranks #{rd}, and the model expects {w}'s #{ro} offense to take advantage — worth about {pts} points by its math.",
+                f"Look at {l}'s #{rd} defense: that's the hole the model sees {w}'s #{ro} offense getting through.",
+            ]), "offense"
+        return phr.pick("drv_off", [
+            f"It starts with {w}'s offense, #{ro} in the model's ratings, against a {l} defense that ranks #{rd}.",
+            f"The matchup doing the most work: {w}'s #{ro} offense vs. {l}'s #{rd} defense, worth about {pts} points by the model's math.",
+            f"{w} brings the #{ro} offense in the model's ratings and draws a {l} defense ranked #{rd}.",
+            f"Follow {w}'s #{ro} offense into {l}'s #{rd} defense — that's where the model finds its edge.",
+        ]), "offense"
+    if best["kind"] == "offense":
+        rd, ro = ranks[w]["def"], ranks[l]["off"]
+        if _weakness_story(rd, ro):
+            against = "even against" if rd > 16 else "up against"
+            return phr.pick("drv_off_hole", [
+                f"{l}'s offense ranks #{ro} in the model's ratings, and it runs into a {w} defense ranked #{rd}.",
+                f"{l}'s #{ro} offense is the weak link the model keys on, {against} {w}'s #{rd} defense.",
+                f"The model doesn't trust {l}'s offense (#{ro}) to move the ball, {against} {w}'s #{rd} defense — worth about {pts} points by its math.",
+            ]), "defense"
+        return phr.pick("drv_def", [
+            f"{w}'s #{rd} defense against {l}'s #{ro} offense is where the model sees this one tilting.",
+            f"The model trusts {w}'s defense (#{rd}) to slow {l}'s #{ro} offense — worth about {pts} points by its math.",
+            f"This projection is built on defense: {w}'s #{rd} unit against {l}'s #{ro} offense.",
+        ]), "defense"
+    if best["kind"] == "home_field":
+        return phr.pick("drv_home", [
+            f"On paper these two grade out close — home field does most of the work for {w}.",
+            f"Take away home field and the model has this one nearly even; the {HOME_FIELD_ADJ:g}-point home edge tips it to {w}.",
+        ]), "home_field"
+    if best["kind"] == "qb_out" and qb_injury.get(l):
+        status = _qb_status(qb_injury[l])
+        return phr.pick("drv_qb", [
+            f"{l}'s starting QB is {status}, and that {QB_OUT_PENALTY:g}-point adjustment is the biggest single piece of the model's number.",
+            f"The headline is under center: {l}'s starting QB is {status}, which costs them {QB_OUT_PENALTY:g} points in the model.",
+        ]), "qb_out"
+    return f"The model's numbers tilt toward {w}.", best["kind"]
+
+
+def counter_sentence(phr, home, away, margin_home, rows, ranks):
+    """The other side's best answer, when it's worth a point and a half or
+    more -- so the readout isn't one-sided."""
+    if abs(margin_home) < 1.0:
+        return None
+    w, l = (home, away) if margin_home > 0 else (away, home)
+    sign = 1 if w == home else -1
+    best = max(rows, key=lambda r: -sign * r["pts_home"])
+    pts = -sign * best["pts_home"]
+    if pts < 1.5:
+        return None
+    if best["kind"] == "offense" and best["team"] == l:
+        ro, rd = ranks[l]["off"], ranks[w]["def"]
+        if _weakness_story(ro, rd):
+            return phr.pick("ctr_def_hole", [
+                f"The worry for {w}: a #{rd} defense that {l}'s #{ro} offense can attack.",
+                f"{w}'s defense (#{rd}) gives {l}'s #{ro} offense a way back in, worth about {_half(pts)} points.",
+            ])
+        return phr.pick("ctr_off", [
+            f"{l}'s best counter: its #{ro} offense against {w}'s #{rd} defense, worth about {_half(pts)} points back.",
+            f"{l} isn't without answers — its #{ro} offense should find room against {w}'s #{rd} defense.",
+        ])
+    if best["kind"] == "offense":
+        rd, ro = ranks[l]["def"], ranks[w]["off"]
+        if _weakness_story(rd, ro):
+            return phr.pick("ctr_off_hole", [
+                f"The catch: {w}'s own offense ranks just #{ro}, and {l}'s #{rd} defense can keep this close.",
+                f"{w}'s #{ro} offense is the question mark, facing {l}'s #{rd} defense.",
+            ])
+        return phr.pick("ctr_def", [
+            f"{l}'s best counter is its #{rd} defense, which should make life hard on {w}'s #{ro} offense.",
+            f"The catch: {l}'s defense ranks #{rd} and matches up well with {w}'s #{ro} offense.",
+        ])
+    if best["kind"] == "home_field":
+        return f"{l} does get {HOME_FIELD_ADJ:g} points of home field back."
+    return None
+
+
+def pick_verdict(phr, home, away, model_margin_home, spread_home, our_pick):
+    """The model's margin set against the spread, and the side of the spread
+    that produces. Every branch reads off the same two numbers the pick is
+    derived from, so the text can't contradict the pick."""
     if model_margin_home is None:
         return "Not enough efficiency data yet to model this matchup — check back closer to kickoff."
     model_winner = home if model_margin_home > 0 else away
@@ -308,74 +468,101 @@ def pick_headline(home, away, model_margin_home, spread_home, our_pick):
                 else "No line is posted yet, and the model has this one dead even.")
     if our_pick is None:
         if spread_home == 0:
-            return "The market and the model both have this one even — no lean either way."
+            return "Vegas and the model both have this one even — no lean either way."
         fav = home if spread_home > 0 else away
         return f"The model lands exactly on the {fav} {abs(spread_home):g}-point spread — no lean either way."
 
     pick = home if our_pick == "home" else away
     pick_line = _team_line(spread_home, our_pick)
     if spread_home == 0:
-        return f"The market has this one even; the model has {pick} by {margin_abs:.1f}, so the lean is {pick} {pick_line}."
+        return phr.pick("pk", [
+            f"Vegas can't separate these two; the model can — {pick} by {margin_abs:.1f}.",
+            f"It's a pick'em in Vegas, but the model has {pick} by {margin_abs:.1f}.",
+        ])
     fav, dog = (home, away) if spread_home > 0 else (away, home)
-    line = abs(spread_home)
-    fav_margin = model_margin_home if fav == home else -model_margin_home
+    line = f"{abs(spread_home):g}"
+    m = model_margin_home if fav == home else -model_margin_home
     if pick == fav:
-        return f"The model has {fav} by {fav_margin:.1f}, more than the {line:g}-point spread, so the lean is {pick} {pick_line}."
-    if fav_margin > 0:
-        return f"The model has {fav} by {fav_margin:.1f}, short of the {line:g}-point spread, so the lean is {pick} {pick_line}."
-    if fav_margin == 0:
-        return f"The model has this one dead even against a {line:g}-point spread, so the lean is {pick} {pick_line}."
-    return f"The market favors {fav} by {line:g}, but the model has {dog} winning by {-fav_margin:.1f}, so the lean is {pick} {pick_line}."
+        gap = m - abs(spread_home)
+        size = "a hair" if gap < 1 else ("a bit" if gap < 3 else "well")
+        return phr.pick("fav", [
+            f"Vegas has {fav} by {line}; the model goes {size} past that, to {m:.1f}. Lean {fav} {pick_line}.",
+            f"{fav} is a {line}-point favorite, and the model thinks that's not enough — it has them by {m:.1f}.",
+            f"The model is even higher on {fav} than Vegas is: {m:.1f} points to the market's {line}.",
+        ])
+    if m > 0:
+        return phr.pick("dog", [
+            f"The model likes {fav} too, just not by {line} — it has them by {m:.1f}, so the lean is {dog} {pick_line}.",
+            f"Asking {fav} to win by more than {line} is a lot when the model has them by {m:.1f}. Lean {dog} {pick_line}.",
+            f"Vegas and the model agree {fav} should win; the model just expects {dog} to keep it closer than {line}.",
+            f"The model's {fav} by {m:.1f} lands inside the {line}-point spread, so {dog} {pick_line} gets the lean.",
+        ])
+    if m == 0:
+        return f"The model calls it a dead heat; Vegas has {fav} by {line}. That's enough to lean {dog} {pick_line}."
+    return phr.pick("upset", [
+        f"Upset call: Vegas favors {fav} by {line}, but the model has {dog} winning outright by {-m:.1f}.",
+        f"The model goes against the grain, projecting {dog} to win straight up by {-m:.1f} as a {line}-point underdog.",
+        f"Vegas has {fav}; the model has {dog}, by {-m:.1f}. That flips the lean to {dog} {pick_line}.",
+    ])
 
 
 def build_storyline(
     home, away, model_margin_home, spread_home, our_pick, weights, rest_edge,
     oline_home, oline_away, coach_home, coach_away, revenge_flag,
-    weather, international_site, neutral_site, roof, qb_injury_home=None, qb_injury_away=None,
-    former_coach_home=None, former_coach_away=None,
+    weather, international_site, neutral_site, roof, breakdown=None, ranks=None,
+    qb_injury_home=None, qb_injury_away=None, former_coach_home=None, former_coach_away=None,
+    phrasing=None,
 ):
     """A short prose readout of *why* the model landed where it did --
     the same factors already computed for this game, synthesized into
     sentences instead of left as a pile of tags. Template-based (not an
     LLM call -- this runs in a GitHub Actions scan, no API budget for
     that), but branches on enough of the real inputs per game that it
-    reads as a genuine per-matchup readout rather than boilerplate.
+    reads as a genuine per-matchup readout rather than boilerplate, and
+    each situation has a few phrasings (rotated across the board by
+    Phrasing) so 16 games don't read like one sentence 16 times.
     Factors that aren't in the model's margin are described as context,
     never as pushing the pick.
 
-    Returns (full, short): short is the first sentence alone, a
-    self-contained one-liner surfaced on the collapsed game card so the
-    "why" is visible before a click, not just after."""
-    headline = pick_headline(home, away, model_margin_home, spread_home, our_pick)
+    Returns (full, short): short is the matchup that drives the projection
+    plus the verdict against the spread, surfaced on the collapsed game card
+    so the "why" is visible before a click, not just after."""
+    phr = phrasing or Phrasing()
+    verdict = pick_verdict(phr, home, away, model_margin_home, spread_home, our_pick)
     if model_margin_home is None:
-        return headline, headline
-    sentences = [headline]
-
-    if our_pick is not None and spread_home is not None:
-        gap = abs(model_margin_home - spread_home)
-        size = "under a field goal" if gap < 2.5 else ("about a field goal" if gap <= 3.5 else "more than a field goal")
-        sentences.append(f"That's a {gap:.1f}-point gap from the market — {size}.")
+        return verdict, verdict
+    qb_injury = {home: qb_injury_home, away: qb_injury_away}
+    driver_kind = None
+    short = [verdict]
+    if breakdown and ranks:
+        driver, driver_kind = driver_sentence(phr, home, away, model_margin_home, breakdown, ranks, qb_injury)
+        short = [driver, verdict]
+    sentences = list(short)
+    if breakdown and ranks:
+        counter = counter_sentence(phr, home, away, model_margin_home, breakdown, ranks)
+        if counter:
+            sentences.append(counter)
 
     pick_side = our_pick or ("home" if model_margin_home >= 0 else "away")
     pick_team, other_team = (home, away) if pick_side == "home" else (away, home)
+    # The driver sentence already told the story of the projected loser's QB being out.
+    model_loser = away if model_margin_home > 0 else home
+    told = {model_loser} if driver_kind == "qb_out" else set()
 
-    def qb_status(flag):
-        return "on Reserve" if flag["status"] == "Reserve" else f"listed {flag['status']}"
-
-    other_qb_out = qb_injury_away if pick_side == "home" else qb_injury_home
-    pick_qb_out = qb_injury_home if pick_side == "home" else qb_injury_away
-    if other_qb_out:
+    other_qb_out = qb_injury[other_team]
+    pick_qb_out = qb_injury[pick_team]
+    if other_qb_out and other_team not in told:
         sentences.append(
-            f"{other_team}'s starting QB is {qb_status(other_qb_out)} — the model already docks them "
+            f"{other_team}'s starting QB is {_qb_status(other_qb_out)} — the model already docks them "
             f"{QB_OUT_PENALTY:g} points for it."
         )
-    if pick_qb_out and our_pick is not None:
+    if pick_qb_out and pick_team not in told and our_pick is not None:
         sentences.append(
-            f"{pick_team}'s own starting QB is {qb_status(pick_qb_out)}. The model docks them {QB_OUT_PENALTY:g} "
+            f"{pick_team}'s own starting QB is {_qb_status(pick_qb_out)}. The model docks them {QB_OUT_PENALTY:g} "
             "points for it and still thinks the line moved too far."
         )
-    elif pick_qb_out:
-        sentences.append(f"{pick_team}'s starting QB is {qb_status(pick_qb_out)} — the model already docks them {QB_OUT_PENALTY:g} points for it.")
+    elif pick_qb_out and pick_team not in told:
+        sentences.append(f"{pick_team}'s starting QB is {_qb_status(pick_qb_out)} — the model already docks them {QB_OUT_PENALTY:g} points for it.")
 
     if weights:
         share = sum(weights[s][p] for s in ("home", "away") for p in ("off", "def")) / 4
@@ -420,15 +607,15 @@ def build_storyline(
         sentences.append(f"This one's at {where}, so the model gives neither team home-field points.")
     elif international_site:
         sentences.append("This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.")
+    elif roof in INDOOR_ROOFS:
+        sentences.append("Played indoors, so weather isn't a factor here.")
     elif weather:
         sentences.append(
             f"Forecast for kickoff: {weather['short_forecast']}, {weather['temperature_f']}°F, wind {weather['wind']} "
             "— something to watch if it turns into a run-heavy day."
         )
-    elif roof and roof != "outdoors":
-        sentences.append(f"Played {roof.replace('_', ' ')}, so weather isn't a factor here.")
 
-    return " ".join(sentences), sentences[0]
+    return " ".join(sentences), " ".join(short)
 
 
 def build_market(r, model_margin_home):
@@ -486,6 +673,8 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         primary_stadium_name = dict(zip(top["home_team"].to_list(), top["stadium"].to_list()))
 
     ratings = blend(rating_inputs_asof(eff, UPCOMING_SEASON, next_week))
+    ranks = unit_ranks(ratings)
+    phrasing = Phrasing(seed=f"{UPCOMING_SEASON}-{next_week}")
 
     print("Computing continuity for game board...")
     depth_charts = load_cache("depth_charts")
@@ -509,20 +698,23 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         former_coach_away = former_coach_matchups.get(away) if former_coach_matchups.get(away, {}).get("now_with") == home else None
 
         qb_injury_home, qb_injury_away = qb_injury_flags.get(home), qb_injury_flags.get(away)
+        adjustments = []  # the same nudges as breakdown rows (home-relative points)
+        if qb_injury_home:
+            adjustments.append({"kind": "qb_out", "team": home, "raw": -QB_OUT_PENALTY})
+        if qb_injury_away:
+            adjustments.append({"kind": "qb_out", "team": away, "raw": QB_OUT_PENALTY})
+        if revenge_flag and revenge_flag.get("home"):
+            adjustments.append({"kind": "revenge", "team": home, "raw": REVENGE_BONUS})
+        if revenge_flag and revenge_flag.get("away"):
+            adjustments.append({"kind": "revenge", "team": away, "raw": -REVENGE_BONUS})
+        if former_coach_home:
+            adjustments.append({"kind": "former_coach", "team": home, "coach": former_coach_home["coach_name"], "raw": FORMER_COACH_BONUS})
+        if former_coach_away:
+            adjustments.append({"kind": "former_coach", "team": away, "coach": former_coach_away["coach_name"], "raw": -FORMER_COACH_BONUS})
+        breakdown = None
         if model_margin_home is not None:
-            if qb_injury_home:
-                model_margin_home -= QB_OUT_PENALTY
-            if qb_injury_away:
-                model_margin_home += QB_OUT_PENALTY
-            if revenge_flag and revenge_flag.get("home"):
-                model_margin_home += REVENGE_BONUS
-            if revenge_flag and revenge_flag.get("away"):
-                model_margin_home -= REVENGE_BONUS
-            if former_coach_home:
-                model_margin_home += FORMER_COACH_BONUS
-            if former_coach_away:
-                model_margin_home -= FORMER_COACH_BONUS
-            model_margin_home = round(model_margin_home, 1)
+            model_margin_home = round(model_margin_home + sum(a["raw"] for a in adjustments), 1)
+            breakdown = margin_breakdown(ratings, home, away, neutral_site, adjustments, model_margin_home)
 
         rest_edge = None
         if r["home_rest"] is not None and r["away_rest"] is not None:
@@ -534,7 +726,7 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         weather = None  # must default every iteration -- otherwise a skipped fetch (e.g. this game's
         # condition below is False) would silently inherit the PREVIOUS game's weather value, since
         # Python loop variables aren't re-scoped per-iteration.
-        if stadium and not international_site and stadium.get("nws_coverage") and r.get("gameday"):
+        if stadium and not international_site and stadium.get("nws_coverage") and r.get("gameday") and r["roof"] not in INDOOR_ROOFS:
             weather = fetch_weather(stadium["lat"], stadium["lon"], r["gameday"])
 
         weekday = r.get("weekday")
@@ -569,11 +761,15 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         oline_home, oline_away = oline_continuity.get(home), oline_continuity.get(away)
         coach_home, coach_away = coach_continuity.get(home), coach_continuity.get(away)
 
+        game_ranks = {"home": ranks[home], "away": ranks[away]} if home in ranks and away in ranks else None
         storyline, storyline_short = build_storyline(
             home, away, model_margin_home, spread_home, our_pick, weights, rest_edge,
             oline_home, oline_away, coach_home, coach_away, revenge_flag,
-            weather, international_site, neutral_site, r["roof"], qb_injury_home, qb_injury_away,
-            former_coach_home, former_coach_away,
+            weather, international_site, neutral_site, r["roof"],
+            breakdown=breakdown, ranks={home: ranks[home], away: ranks[away]} if game_ranks else None,
+            qb_injury_home=qb_injury_home, qb_injury_away=qb_injury_away,
+            former_coach_home=former_coach_home, former_coach_away=former_coach_away,
+            phrasing=phrasing,
         )
         market = build_market(r, model_margin_home)
 
@@ -590,6 +786,8 @@ def build_game_board(schedules, eff, injuries, rosters=None):
                 "away_team": away,
                 "div_game": bool(r["div_game"]),
                 "model_margin_home": model_margin_home,
+                "margin_breakdown": breakdown,
+                "unit_ranks": game_ranks,
                 "current_season_weight": weights,
                 "our_pick": our_pick,
                 "pick_status": pick_status,
