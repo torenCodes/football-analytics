@@ -44,6 +44,13 @@ The honest conclusion: the model now predicts games reasonably well, and it stil
 
 What it does instead is show both records, publish the backtest on the page, and fail its own scheduled run if a regression like this ever drops the backtest's correlation below 0.2 — so the site keeps its last good data rather than quietly publishing a broken model.
 
+**Tested and left out: offensive-line continuity.** It seems obvious that a team bringing back its offensive line should get points for it. `scripts/backtest_line_continuity.py` checked that on 2021–2025 (1,359 games, each season predicted by a fit on the other four):
+- A flat "returning line = more points" bonus made predictions slightly *worse* out of sample.
+- Continuity didn't lift a team's offense on its own.
+- What it may do is make last season's numbers a steadier guide. That version pointed the same way in all five seasons, but its improvement was too small to separate from noise, and it would have changed about 1 pick in 27.
+
+It stays a context tag on the cards until more seasons say otherwise.
+
 ---
 
 ## The part I'd point a data team at
@@ -72,7 +79,7 @@ Every signal is a small, named point adjustment layered onto a base production/e
 | Revenge game (lost the last meeting) | Game Picks | ±1.0 pt | Division games only — where a real prior result exists |
 | Facing a former head coach | Both | ±1.0 pt (picks) / +0.5 pt (fantasy, skill positions) | The coach who ran this team last season is now coaching the opponent |
 | Facing a former team | Fantasy | +1.0 pt | A player individually facing a team they used to play for |
-| O-line / D-line continuity | Fantasy (scored); shown as a factor tag in Game Picks, not scored there | 1.5 × (continuity% − 60%) | Returning starters vs. a rebuilt unit, centered on a 60% baseline |
+| O-line / D-line continuity | Fantasy (scored); shown as a factor tag in Game Picks, not scored there | 1.5 × (continuity% − 60%) | Returning starters (last season's regulars or its final starters) vs. a rebuilt unit, centered on a 60% baseline. Backtested for Game Picks and left out: no measurable gain |
 | Head coach / coordinator continuity | Fantasy | +0.2 / −0.5 pts | Scheme continuity vs. a new system to learn |
 | Matchup vs. league-average defense | Fantasy | ×0.5 of the raw gap | Softened, not full-strength, points-allowed differential |
 | Injury status (Questionable/Doubtful/Out) | Fantasy | −2.0 / −10.0 / −20.0 pts | Soft nudge, not a hard exclusion — an "Out" player still shows, clearly flagged |
@@ -123,6 +130,7 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 │   ├── shared.py                 # the shared "constitution" -- continuity + motivation signals
 │   ├── betting_scan.py            # game picks: model margin vs. the real Vegas line, storylines, backtest
 │   ├── calibrate_game_model.py     # fits the Game Picks constants walk-forward (local-only, not in CI)
+│   ├── backtest_line_continuity.py # tests whether O-line continuity improves the picks (local-only; it doesn't, yet)
 │   ├── fantasy_scan.py             # Draft Board, Dream Team, Weekly Rankings, Waiver Wire
 │   ├── requirements.txt             # exact-pinned deps -- CI has no lockfile, so floors aren't safe
 │   └── reference/                    # hand-maintained data (coordinator continuity, stadium geocoords)

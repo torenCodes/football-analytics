@@ -579,7 +579,8 @@ def build_storyline(
     if pick_oline and pick_oline.get("continuity_pct") is not None:
         pct = round(pick_oline["continuity_pct"] * 100)
         if pct >= 80:
-            sentences.append(f"{pick_team}'s offensive line is largely intact from a year ago ({pct}% continuity), which tends to mean a faster start to the season.")
+            # Not "a faster start": backtest_line_continuity.py found no lift from continuity on its own.
+            sentences.append(f"{pick_team} brings back most of last year's offensive line ({pct}% continuity) — context only, since a returning line hasn't predicted a better offense in our backtests.")
         elif pct <= 40:
             sentences.append(f"{pick_team} is breaking in a mostly new offensive line ({pct}% continuity) — a real wildcard this early in the year.")
 
