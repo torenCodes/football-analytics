@@ -40,10 +40,24 @@ def season_from_dt(dt_col):
     return pl.when(month <= 2).then(year - 1).otherwise(year)
 
 
+REGULAR_STARTER_SHARE = 0.25  # share of a season's depth-chart snapshots listed as a starter that makes a "regular"
+
+
 def build_oline_continuity(depth_charts, prior_season, current_season, positions=None):
     """Starter continuity for a position group (offensive line by default;
     pass positions=DEFENSIVE_LINE_POS for the defensive-line equivalent used
-    by DST rows)."""
+    by DST rows): the share of this season's current starters who were
+    starters for the same team last season.
+
+    "Last season's starters" is anyone who either finished that season in
+    the starting group (its final depth chart) or was listed as a starter
+    for at least REGULAR_STARTER_SHARE of its regular-season snapshots, at
+    any position in the group. The final chart alone -- the original rule --
+    is a single offseason snapshot: it counted a late-season fill-in as the
+    starter and missed regulars who were hurt or had moved spots that day
+    (GB read 40% with four of its five 2026 starters having started for GB
+    in 2025). Matching is by player, so a guard who moves to tackle still
+    counts as returning."""
     positions = positions or OFFENSIVE_LINE_POS
     dc = depth_charts.filter(pl.col("pos_abb").is_in(positions) & (pl.col("pos_rank") == 1)).with_columns(
         season_from_dt(pl.col("dt")).alias("season")
@@ -52,6 +66,17 @@ def build_oline_continuity(depth_charts, prior_season, current_season, positions
     prior_latest = prior.group_by("team").agg(pl.col("dt").max().alias("dt"))
     prior_starters = prior.join(prior_latest, on=["team", "dt"], how="inner").select(["team", "pos_abb", "gsis_id"]).unique()
 
+    # Regular season by date (2025+ snapshots carry no week/game_type): kickoff
+    # month through Week 18, which always lands in the first days of January.
+    reg = prior.filter((pl.col("dt") >= f"{prior_season}-09-01") & (pl.col("dt") < f"{prior_season + 1}-01-10"))
+    snapshots = reg.group_by("team").agg(pl.col("dt").n_unique().alias("n"))
+    regulars = (
+        reg.drop_nulls("gsis_id")
+        .group_by(["team", "gsis_id"]).agg(pl.col("dt").n_unique().alias("listed"))
+        .join(snapshots, on="team")
+        .filter(pl.col("listed") / pl.col("n") >= REGULAR_STARTER_SHARE)
+    )
+
     current = dc.filter(pl.col("season") == current_season)
     current_latest = current.group_by("team").agg(pl.col("dt").max().alias("dt"))
     current_starters = current.join(current_latest, on=["team", "dt"], how="inner").select(["team", "pos_abb", "gsis_id"]).unique()
@@ -59,6 +84,7 @@ def build_oline_continuity(depth_charts, prior_season, current_season, positions
     result = {}
     for team in sorted(set(prior_starters["team"].to_list()) | set(current_starters["team"].to_list())):
         prior_ids = set(prior_starters.filter(pl.col("team") == team)["gsis_id"].drop_nulls().to_list())
+        prior_ids |= set(regulars.filter(pl.col("team") == team)["gsis_id"].to_list())
         current_ids = set(current_starters.filter(pl.col("team") == team)["gsis_id"].drop_nulls().to_list())
         if not prior_ids or not current_ids:
             continue
