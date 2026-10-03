@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-03T01:25:00.285503+00:00"
+    "generated_at": "2026-10-03T07:05:09.271358+00:00"
   },
   "weeks_graded": 4,
   "ats": {
@@ -679,7 +679,7 @@
     {
       "season": 2026,
       "week": 4,
-      "locked_at": "2026-10-03T01:25:00.281432+00:00",
+      "locked_at": "2026-10-03T07:05:09.266875+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -747,9 +747,9 @@
           "game_id": "2026_04_IND_WAS",
           "home_team": "WAS",
           "away_team": "IND",
-          "model_margin_home": -0.7,
+          "model_margin_home": -4.7,
           "spread_home": -4.5,
-          "our_pick": "home",
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -786,7 +786,7 @@
           "game_id": "2026_04_GB_TB",
           "home_team": "TB",
           "away_team": "GB",
-          "model_margin_home": 1.1,
+          "model_margin_home": -2.9,
           "spread_home": -3.0,
           "our_pick": "home",
           "no_lean": false,
@@ -825,7 +825,7 @@
           "game_id": "2026_04_NYJ_CHI",
           "home_team": "CHI",
           "away_team": "NYJ",
-          "model_margin_home": 8.3,
+          "model_margin_home": 4.3,
           "spread_home": 3.5,
           "our_pick": "home",
           "no_lean": false,
