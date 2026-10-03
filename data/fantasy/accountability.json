@@ -1,96 +1,480 @@
 {
   "meta": {
-    "generated_at": "2026-10-01T01:11:37.045138+00:00"
+    "generated_at": "2026-10-03T01:03:16.053952+00:00"
   },
   "available": true,
   "season": 2026,
   "by_format": {
     "ppr": {
       "QB": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 1,
+        "mean_abs_rank_error": 27.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0023459",
+            "name": "Aaron Rodgers",
+            "preseason_rank": 29,
+            "actual_rank": 2,
+            "rank_error": -27,
+            "games": 4,
+            "ppg": 15.8
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0023459",
+            "name": "Aaron Rodgers",
+            "preseason_rank": 29,
+            "actual_rank": 2,
+            "rank_error": -27,
+            "games": 4,
+            "ppg": 15.8
+          }
+        ]
       },
       "RB": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 26.5,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0040784",
+            "name": "Quinshon Judkins",
+            "preseason_rank": 34,
+            "actual_rank": 2,
+            "rank_error": -32,
+            "games": 4,
+            "ppg": 12.1
+          },
+          {
+            "player_id": "00-0037228",
+            "name": "Jaylen Warren",
+            "preseason_rank": 22,
+            "actual_rank": 1,
+            "rank_error": -21,
+            "games": 4,
+            "ppg": 14.1
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0037228",
+            "name": "Jaylen Warren",
+            "preseason_rank": 22,
+            "actual_rank": 1,
+            "rank_error": -21,
+            "games": 4,
+            "ppg": 14.1
+          },
+          {
+            "player_id": "00-0040784",
+            "name": "Quinshon Judkins",
+            "preseason_rank": 34,
+            "actual_rank": 2,
+            "rank_error": -32,
+            "games": 4,
+            "ppg": 12.1
+          }
+        ]
       },
       "WR": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 1,
+        "mean_abs_rank_error": 27.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0035640",
+            "name": "DK Metcalf",
+            "preseason_rank": 30,
+            "actual_rank": 3,
+            "rank_error": -27,
+            "games": 4,
+            "ppg": 10.8
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0035640",
+            "name": "DK Metcalf",
+            "preseason_rank": 30,
+            "actual_rank": 3,
+            "rank_error": -27,
+            "games": 4,
+            "ppg": 10.8
+          }
+        ]
       },
       "TE": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 21.5,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0036894",
+            "name": "Pat Freiermuth",
+            "preseason_rank": 35,
+            "actual_rank": 2,
+            "rank_error": -33,
+            "games": 4,
+            "ppg": 9.7
+          },
+          {
+            "player_id": "00-0040663",
+            "name": "Harold Fannin Jr.",
+            "preseason_rank": 11,
+            "actual_rank": 1,
+            "rank_error": -10,
+            "games": 4,
+            "ppg": 12.6
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0040663",
+            "name": "Harold Fannin Jr.",
+            "preseason_rank": 11,
+            "actual_rank": 1,
+            "rank_error": -10,
+            "games": 4,
+            "ppg": 12.6
+          },
+          {
+            "player_id": "00-0036894",
+            "name": "Pat Freiermuth",
+            "preseason_rank": 35,
+            "actual_rank": 2,
+            "rank_error": -33,
+            "games": 4,
+            "ppg": 9.7
+          }
+        ]
       },
       "K": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 30.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 1,
+            "rank_error": -35,
+            "games": 4,
+            "ppg": 9.5
+          },
+          {
+            "player_id": "00-0031136",
+            "name": "Chris Boswell",
+            "preseason_rank": 27,
+            "actual_rank": 2,
+            "rank_error": -25,
+            "games": 4,
+            "ppg": 7.0
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0031136",
+            "name": "Chris Boswell",
+            "preseason_rank": 27,
+            "actual_rank": 2,
+            "rank_error": -25,
+            "games": 4,
+            "ppg": 7.0
+          },
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 1,
+            "rank_error": -35,
+            "games": 4,
+            "ppg": 9.5
+          }
+        ]
       },
       "DST": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 16.5,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "CLE_DST",
+            "name": "CLE D/ST",
+            "preseason_rank": 20,
+            "actual_rank": 2,
+            "rank_error": -18,
+            "games": 4,
+            "ppg": 5.2
+          },
+          {
+            "player_id": "PIT_DST",
+            "name": "PIT D/ST",
+            "preseason_rank": 16,
+            "actual_rank": 1,
+            "rank_error": -15,
+            "games": 4,
+            "ppg": 9.2
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "PIT_DST",
+            "name": "PIT D/ST",
+            "preseason_rank": 16,
+            "actual_rank": 1,
+            "rank_error": -15,
+            "games": 4,
+            "ppg": 9.2
+          },
+          {
+            "player_id": "CLE_DST",
+            "name": "CLE D/ST",
+            "preseason_rank": 20,
+            "actual_rank": 2,
+            "rank_error": -18,
+            "games": 4,
+            "ppg": 5.2
+          }
+        ]
       }
     },
     "standard": {
       "QB": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 1,
+        "mean_abs_rank_error": 27.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0023459",
+            "name": "Aaron Rodgers",
+            "preseason_rank": 29,
+            "actual_rank": 2,
+            "rank_error": -27,
+            "games": 4,
+            "ppg": 15.8
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0023459",
+            "name": "Aaron Rodgers",
+            "preseason_rank": 29,
+            "actual_rank": 2,
+            "rank_error": -27,
+            "games": 4,
+            "ppg": 15.8
+          }
+        ]
       },
       "RB": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 28.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0040784",
+            "name": "Quinshon Judkins",
+            "preseason_rank": 38,
+            "actual_rank": 2,
+            "rank_error": -36,
+            "games": 4,
+            "ppg": 8.3
+          },
+          {
+            "player_id": "00-0037228",
+            "name": "Jaylen Warren",
+            "preseason_rank": 21,
+            "actual_rank": 1,
+            "rank_error": -20,
+            "games": 4,
+            "ppg": 10.8
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0037228",
+            "name": "Jaylen Warren",
+            "preseason_rank": 21,
+            "actual_rank": 1,
+            "rank_error": -20,
+            "games": 4,
+            "ppg": 10.8
+          },
+          {
+            "player_id": "00-0040784",
+            "name": "Quinshon Judkins",
+            "preseason_rank": 38,
+            "actual_rank": 2,
+            "rank_error": -36,
+            "games": 4,
+            "ppg": 8.3
+          }
+        ]
       },
       "WR": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 1,
+        "mean_abs_rank_error": 29.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0035640",
+            "name": "DK Metcalf",
+            "preseason_rank": 32,
+            "actual_rank": 3,
+            "rank_error": -29,
+            "games": 4,
+            "ppg": 6.8
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0035640",
+            "name": "DK Metcalf",
+            "preseason_rank": 32,
+            "actual_rank": 3,
+            "rank_error": -29,
+            "games": 4,
+            "ppg": 6.8
+          }
+        ]
       },
       "TE": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 22.5,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0036894",
+            "name": "Pat Freiermuth",
+            "preseason_rank": 35,
+            "actual_rank": 2,
+            "rank_error": -33,
+            "games": 4,
+            "ppg": 6.2
+          },
+          {
+            "player_id": "00-0040663",
+            "name": "Harold Fannin Jr.",
+            "preseason_rank": 13,
+            "actual_rank": 1,
+            "rank_error": -12,
+            "games": 4,
+            "ppg": 8.3
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0040663",
+            "name": "Harold Fannin Jr.",
+            "preseason_rank": 13,
+            "actual_rank": 1,
+            "rank_error": -12,
+            "games": 4,
+            "ppg": 8.3
+          },
+          {
+            "player_id": "00-0036894",
+            "name": "Pat Freiermuth",
+            "preseason_rank": 35,
+            "actual_rank": 2,
+            "rank_error": -33,
+            "games": 4,
+            "ppg": 6.2
+          }
+        ]
       },
       "K": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 30.0,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 1,
+            "rank_error": -35,
+            "games": 4,
+            "ppg": 9.5
+          },
+          {
+            "player_id": "00-0031136",
+            "name": "Chris Boswell",
+            "preseason_rank": 27,
+            "actual_rank": 2,
+            "rank_error": -25,
+            "games": 4,
+            "ppg": 7.0
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "00-0031136",
+            "name": "Chris Boswell",
+            "preseason_rank": 27,
+            "actual_rank": 2,
+            "rank_error": -25,
+            "games": 4,
+            "ppg": 7.0
+          },
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 1,
+            "rank_error": -35,
+            "games": 4,
+            "ppg": 9.5
+          }
+        ]
       },
       "DST": {
-        "players_graded": 0,
-        "mean_abs_rank_error": null,
-        "hit_rate_within_5": null,
-        "biggest_steals": [],
-        "biggest_busts": []
+        "players_graded": 2,
+        "mean_abs_rank_error": 16.5,
+        "hit_rate_within_5": 0.0,
+        "biggest_steals": [
+          {
+            "player_id": "CLE_DST",
+            "name": "CLE D/ST",
+            "preseason_rank": 20,
+            "actual_rank": 2,
+            "rank_error": -18,
+            "games": 4,
+            "ppg": 5.2
+          },
+          {
+            "player_id": "PIT_DST",
+            "name": "PIT D/ST",
+            "preseason_rank": 16,
+            "actual_rank": 1,
+            "rank_error": -15,
+            "games": 4,
+            "ppg": 9.2
+          }
+        ],
+        "biggest_busts": [
+          {
+            "player_id": "PIT_DST",
+            "name": "PIT D/ST",
+            "preseason_rank": 16,
+            "actual_rank": 1,
+            "rank_error": -15,
+            "games": 4,
+            "ppg": 9.2
+          },
+          {
+            "player_id": "CLE_DST",
+            "name": "CLE D/ST",
+            "preseason_rank": 20,
+            "actual_rank": 2,
+            "rank_error": -18,
+            "games": 4,
+            "ppg": 5.2
+          }
+        ]
       }
     }
   }

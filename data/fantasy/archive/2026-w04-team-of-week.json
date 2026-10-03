@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 4,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0023459",
+          "name": "Aaron Rodgers",
+          "team": "PIT",
+          "points": 22.0
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0040784",
+          "name": "Quinshon Judkins",
+          "team": "CLE",
+          "points": 21.6
+        },
+        {
+          "player_id": "00-0037228",
+          "name": "Jaylen Warren",
+          "team": "PIT",
+          "points": 15.6
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0035640",
+          "name": "DK Metcalf",
+          "team": "PIT",
+          "points": 16.5
+        },
+        {
+          "player_id": "00-0039739",
+          "name": "Roman Wilson",
+          "team": "PIT",
+          "points": 16.4
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0038558",
+          "name": "Darnell Washington",
+          "team": "PIT",
+          "points": 11.7
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0041037",
+          "name": "Denzel Boston",
+          "team": "CLE",
+          "points": 12.9
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0038428",
+          "name": "Andre Szmyt",
+          "team": "CLE",
+          "points": 12.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "CLE_DST",
+          "name": "CLE D/ST",
+          "team": "CLE",
+          "points": 9.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 137.7,
+    "bench": [
+      {
+        "player_id": "00-0033537",
+        "name": "Deshaun Watson",
+        "team": "CLE",
+        "position": "QB",
+        "points": 12.9
+      },
+      {
+        "player_id": "00-0040663",
+        "name": "Harold Fannin Jr.",
+        "team": "CLE",
+        "position": "TE",
+        "points": 11.7
+      },
+      {
+        "player_id": "00-0041547",
+        "name": "KC Concepcion",
+        "team": "CLE",
+        "position": "WR",
+        "points": 11.4
+      },
+      {
+        "player_id": "00-0038794",
+        "name": "Jaleel McLaughlin",
+        "team": "CLE",
+        "position": "RB",
+        "points": 8.8
+      },
+      {
+        "player_id": "00-0036407",
+        "name": "Jerry Jeudy",
+        "team": "CLE",
+        "position": "WR",
+        "points": 6.6
+      },
+      {
+        "player_id": "00-0040466",
+        "name": "Raheim Sanders",
+        "team": "CLE",
+        "position": "RB",
+        "points": 3.6
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 4,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0023459",
+          "name": "Aaron Rodgers",
+          "team": "PIT",
+          "points": 22.0
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0040784",
+          "name": "Quinshon Judkins",
+          "team": "CLE",
+          "points": 15.6
+        },
+        {
+          "player_id": "00-0037228",
+          "name": "Jaylen Warren",
+          "team": "PIT",
+          "points": 12.6
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039739",
+          "name": "Roman Wilson",
+          "team": "PIT",
+          "points": 13.4
+        },
+        {
+          "player_id": "00-0035640",
+          "name": "DK Metcalf",
+          "team": "PIT",
+          "points": 11.5
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0038558",
+          "name": "Darnell Washington",
+          "team": "PIT",
+          "points": 8.7
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0041037",
+          "name": "Denzel Boston",
+          "team": "CLE",
+          "points": 8.9
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0038428",
+          "name": "Andre Szmyt",
+          "team": "CLE",
+          "points": 12.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "CLE_DST",
+          "name": "CLE D/ST",
+          "team": "CLE",
+          "points": 9.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 113.7,
+    "bench": [
+      {
+        "player_id": "00-0033537",
+        "name": "Deshaun Watson",
+        "team": "CLE",
+        "position": "QB",
+        "points": 12.9
+      },
+      {
+        "player_id": "00-0038794",
+        "name": "Jaleel McLaughlin",
+        "team": "CLE",
+        "position": "RB",
+        "points": 8.8
+      },
+      {
+        "player_id": "00-0040663",
+        "name": "Harold Fannin Jr.",
+        "team": "CLE",
+        "position": "TE",
+        "points": 8.7
+      },
+      {
+        "player_id": "00-0041547",
+        "name": "KC Concepcion",
+        "team": "CLE",
+        "position": "WR",
+        "points": 6.4
+      },
+      {
+        "player_id": "00-0036407",
+        "name": "Jerry Jeudy",
+        "team": "CLE",
+        "position": "WR",
+        "points": 3.6
+      },
+      {
+        "player_id": "00-0040466",
+        "name": "Raheim Sanders",
+        "team": "CLE",
+        "position": "RB",
+        "points": 1.6
+      }
+    ]
+  }
+}
