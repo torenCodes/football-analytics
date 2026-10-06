@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-06T15:01:41.231970+00:00"
+    "generated_at": "2026-10-06T16:37:26.180284+00:00"
   },
   "available": true,
   "season": 2026,
@@ -4357,6 +4357,24 @@
           "rank": 13
         },
         {
+          "player_id": "TB_DST",
+          "name": "TB D/ST",
+          "position": "DST",
+          "team": "TB",
+          "opponent": "DAL",
+          "start_score": 5.0,
+          "recent_ppg": 5.0,
+          "games_this_season": 4,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.0 ppg over 4 game(s) this season.",
+          "rank": 14
+        },
+        {
           "player_id": "SF_DST",
           "name": "SF D/ST",
           "position": "DST",
@@ -4372,7 +4390,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.0 ppg over 4 game(s) this season.",
-          "rank": 14
+          "rank": 15
         },
         {
           "player_id": "LA_DST",
@@ -4380,24 +4398,6 @@
           "position": "DST",
           "team": "LA",
           "opponent": "BUF",
-          "start_score": 5.0,
-          "recent_ppg": 5.0,
-          "games_this_season": 4,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.0 ppg over 4 game(s) this season.",
-          "rank": 15
-        },
-        {
-          "player_id": "TB_DST",
-          "name": "TB D/ST",
-          "position": "DST",
-          "team": "TB",
-          "opponent": "DAL",
           "start_score": 5.0,
           "recent_ppg": 5.0,
           "games_this_season": 4,
@@ -4447,6 +4447,24 @@
           "rank": 18
         },
         {
+          "player_id": "WAS_DST",
+          "name": "WAS D/ST",
+          "position": "DST",
+          "team": "WAS",
+          "opponent": "NYG",
+          "start_score": 4.25,
+          "recent_ppg": 4.25,
+          "games_this_season": 4,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 4.2 ppg over 4 game(s) this season.",
+          "rank": 19
+        },
+        {
           "player_id": "HOU_DST",
           "name": "HOU D/ST",
           "position": "DST",
@@ -4462,7 +4480,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 4.2 ppg over 4 game(s) this season.",
-          "rank": 19
+          "rank": 20
         },
         {
           "player_id": "DET_DST",
@@ -4470,24 +4488,6 @@
           "position": "DST",
           "team": "DET",
           "opponent": "ARI",
-          "start_score": 4.25,
-          "recent_ppg": 4.25,
-          "games_this_season": 4,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 4.2 ppg over 4 game(s) this season.",
-          "rank": 20
-        },
-        {
-          "player_id": "WAS_DST",
-          "name": "WAS D/ST",
-          "position": "DST",
-          "team": "WAS",
-          "opponent": "NYG",
           "start_score": 4.25,
           "recent_ppg": 4.25,
           "games_this_season": 4,
@@ -6310,24 +6310,6 @@
           "rank": 43
         },
         {
-          "player_id": "00-0039391",
-          "name": "Kimani Vidal",
-          "position": "RB",
-          "team": "LAC",
-          "opponent": "DEN",
-          "start_score": 5.86,
-          "recent_ppg": 3.87,
-          "games_this_season": 3,
-          "matchup_adj": 1.99,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 3.9 ppg over 3 game(s) this season. Facing DEN, a favorable matchup for RBs this week.",
-          "rank": 44
-        },
-        {
           "player_id": "00-0035261",
           "name": "Tony Pollard",
           "position": "RB",
@@ -6343,6 +6325,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 7.6 ppg over 4 game(s) this season. Facing HOU, a tough matchup for RBs this week.",
+          "rank": 44
+        },
+        {
+          "player_id": "00-0039391",
+          "name": "Kimani Vidal",
+          "position": "RB",
+          "team": "LAC",
+          "opponent": "DEN",
+          "start_score": 5.86,
+          "recent_ppg": 3.87,
+          "games_this_season": 3,
+          "matchup_adj": 1.99,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 3.9 ppg over 3 game(s) this season. Facing DEN, a favorable matchup for RBs this week.",
           "rank": 45
         },
         {
@@ -6456,24 +6456,6 @@
           "rank": 1
         },
         {
-          "player_id": "00-0036963",
-          "name": "Amon-Ra St. Brown",
-          "position": "WR",
-          "team": "DET",
-          "opponent": "ARI",
-          "start_score": 19.12,
-          "recent_ppg": 15.08,
-          "games_this_season": 4,
-          "matchup_adj": 4.04,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 15.1 ppg over 4 game(s) this season. Facing ARI, a favorable matchup for WRs this week.",
-          "rank": 2
-        },
-        {
           "player_id": "00-0038543",
           "name": "Jaxon Smith-Njigba",
           "position": "WR",
@@ -6489,6 +6471,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 21.2 ppg over 4 game(s) this season. Facing SF, a tough matchup for WRs this week.",
+          "rank": 2
+        },
+        {
+          "player_id": "00-0036963",
+          "name": "Amon-Ra St. Brown",
+          "position": "WR",
+          "team": "DET",
+          "opponent": "ARI",
+          "start_score": 19.12,
+          "recent_ppg": 15.08,
+          "games_this_season": 4,
+          "matchup_adj": 4.04,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 15.1 ppg over 4 game(s) this season. Facing ARI, a favorable matchup for WRs this week.",
           "rank": 3
         },
         {
@@ -7248,24 +7248,6 @@
           "rank": 45
         },
         {
-          "player_id": "00-0036988",
-          "name": "Josh Palmer",
-          "position": "WR",
-          "team": "BUF",
-          "opponent": "LA",
-          "start_score": 6.79,
-          "recent_ppg": 6.67,
-          "games_this_season": 3,
-          "matchup_adj": 0.12,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 6.7 ppg over 3 game(s) this season.",
-          "rank": 46
-        },
-        {
           "player_id": "00-0040134",
           "name": "Pat Bryant",
           "position": "WR",
@@ -7281,6 +7263,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.7 ppg over 4 game(s) this season.",
+          "rank": 46
+        },
+        {
+          "player_id": "00-0036988",
+          "name": "Josh Palmer",
+          "position": "WR",
+          "team": "BUF",
+          "opponent": "LA",
+          "start_score": 6.79,
+          "recent_ppg": 6.67,
+          "games_this_season": 3,
+          "matchup_adj": 0.12,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 6.7 ppg over 3 game(s) this season.",
           "rank": 47
         },
         {
@@ -9018,6 +9018,24 @@
           "rank": 13
         },
         {
+          "player_id": "TB_DST",
+          "name": "TB D/ST",
+          "position": "DST",
+          "team": "TB",
+          "opponent": "DAL",
+          "start_score": 5.0,
+          "recent_ppg": 5.0,
+          "games_this_season": 4,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.0 ppg over 4 game(s) this season.",
+          "rank": 14
+        },
+        {
           "player_id": "SF_DST",
           "name": "SF D/ST",
           "position": "DST",
@@ -9033,7 +9051,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.0 ppg over 4 game(s) this season.",
-          "rank": 14
+          "rank": 15
         },
         {
           "player_id": "LA_DST",
@@ -9041,24 +9059,6 @@
           "position": "DST",
           "team": "LA",
           "opponent": "BUF",
-          "start_score": 5.0,
-          "recent_ppg": 5.0,
-          "games_this_season": 4,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.0 ppg over 4 game(s) this season.",
-          "rank": 15
-        },
-        {
-          "player_id": "TB_DST",
-          "name": "TB D/ST",
-          "position": "DST",
-          "team": "TB",
-          "opponent": "DAL",
           "start_score": 5.0,
           "recent_ppg": 5.0,
           "games_this_season": 4,
@@ -9108,6 +9108,24 @@
           "rank": 18
         },
         {
+          "player_id": "WAS_DST",
+          "name": "WAS D/ST",
+          "position": "DST",
+          "team": "WAS",
+          "opponent": "NYG",
+          "start_score": 4.25,
+          "recent_ppg": 4.25,
+          "games_this_season": 4,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 4.2 ppg over 4 game(s) this season.",
+          "rank": 19
+        },
+        {
           "player_id": "HOU_DST",
           "name": "HOU D/ST",
           "position": "DST",
@@ -9123,7 +9141,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 4.2 ppg over 4 game(s) this season.",
-          "rank": 19
+          "rank": 20
         },
         {
           "player_id": "DET_DST",
@@ -9131,24 +9149,6 @@
           "position": "DST",
           "team": "DET",
           "opponent": "ARI",
-          "start_score": 4.25,
-          "recent_ppg": 4.25,
-          "games_this_season": 4,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 4.2 ppg over 4 game(s) this season.",
-          "rank": 20
-        },
-        {
-          "player_id": "WAS_DST",
-          "name": "WAS D/ST",
-          "position": "DST",
-          "team": "WAS",
-          "opponent": "NYG",
           "start_score": 4.25,
           "recent_ppg": 4.25,
           "games_this_season": 4,

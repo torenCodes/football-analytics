@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-06T15:01:41.231970+00:00"
+    "generated_at": "2026-10-06T16:37:26.180284+00:00"
   },
   "available": true,
   "season": 2026,
@@ -426,15 +426,6 @@
             "ppg": 10.5
           },
           {
-            "player_id": "00-0038428",
-            "name": "Andre Szmyt",
-            "preseason_rank": 36,
-            "actual_rank": 11,
-            "rank_error": -25,
-            "games": 4,
-            "ppg": 9.5
-          },
-          {
             "player_id": "00-0040074",
             "name": "Tyler Loop",
             "preseason_rank": 31,
@@ -444,13 +435,22 @@
             "ppg": 9.8
           },
           {
-            "player_id": "00-0036854",
-            "name": "Evan McPherson",
-            "preseason_rank": 19,
-            "actual_rank": 3,
-            "rank_error": -16,
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 13,
+            "rank_error": -23,
             "games": 4,
-            "ppg": 11.8
+            "ppg": 9.5
+          },
+          {
+            "player_id": "00-0038567",
+            "name": "Chad Ryland",
+            "preseason_rank": 28,
+            "actual_rank": 10,
+            "rank_error": -18,
+            "games": 4,
+            "ppg": 9.5
           }
         ],
         "biggest_busts": [
@@ -503,8 +503,8 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.4,
-        "hit_rate_within_5": 0.625,
+        "mean_abs_rank_error": 7.3,
+        "hit_rate_within_5": 0.656,
         "biggest_steals": [
           {
             "player_id": "LV_DST",
@@ -534,6 +534,15 @@
             "ppg": 7.2
           },
           {
+            "player_id": "CIN_DST",
+            "name": "CIN D/ST",
+            "preseason_rank": 21,
+            "actual_rank": 7,
+            "rank_error": -14,
+            "games": 4,
+            "ppg": 7.5
+          },
+          {
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
@@ -541,15 +550,6 @@
             "rank_error": -13,
             "games": 4,
             "ppg": 9.2
-          },
-          {
-            "player_id": "CIN_DST",
-            "name": "CIN D/ST",
-            "preseason_rank": 21,
-            "actual_rank": 8,
-            "rank_error": -13,
-            "games": 4,
-            "ppg": 7.5
           }
         ],
         "biggest_busts": [
@@ -575,8 +575,8 @@
             "player_id": "HOU_DST",
             "name": "HOU D/ST",
             "preseason_rank": 5,
-            "actual_rank": 23,
-            "rank_error": 18,
+            "actual_rank": 21,
+            "rank_error": 16,
             "games": 4,
             "ppg": 4.2
           },
@@ -584,8 +584,8 @@
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
-            "actual_rank": 25,
-            "rank_error": 13,
+            "actual_rank": 26,
+            "rank_error": 14,
             "games": 4,
             "ppg": 3.5
           },
@@ -593,8 +593,8 @@
             "player_id": "LA_DST",
             "name": "LA D/ST",
             "preseason_rank": 8,
-            "actual_rank": 18,
-            "rank_error": 10,
+            "actual_rank": 17,
+            "rank_error": 9,
             "games": 4,
             "ppg": 5.0
           }
@@ -703,7 +703,7 @@
       },
       "RB": {
         "players_graded": 32,
-        "mean_abs_rank_error": 11.3,
+        "mean_abs_rank_error": 11.2,
         "hit_rate_within_5": 0.375,
         "biggest_steals": [
           {
@@ -772,15 +772,6 @@
             "ppg": 4.8
           },
           {
-            "player_id": "00-0036919",
-            "name": "Kenny Gainwell",
-            "preseason_rank": 24,
-            "actual_rank": 41,
-            "rank_error": 17,
-            "games": 4,
-            "ppg": 3.2
-          },
-          {
             "player_id": "00-0038597",
             "name": "Chase Brown",
             "preseason_rank": 4,
@@ -788,6 +779,15 @@
             "rank_error": 17,
             "games": 4,
             "ppg": 9.2
+          },
+          {
+            "player_id": "00-0036919",
+            "name": "Kenny Gainwell",
+            "preseason_rank": 24,
+            "actual_rank": 40,
+            "rank_error": 16,
+            "games": 4,
+            "ppg": 3.2
           },
           {
             "player_id": "00-0036158",
@@ -802,7 +802,7 @@
       },
       "WR": {
         "players_graded": 34,
-        "mean_abs_rank_error": 12.7,
+        "mean_abs_rank_error": 12.6,
         "hit_rate_within_5": 0.324,
         "biggest_steals": [
           {
@@ -874,8 +874,8 @@
             "player_id": "00-0039410",
             "name": "Ryan Flournoy",
             "preseason_rank": 44,
-            "actual_rank": 74,
-            "rank_error": 30,
+            "actual_rank": 73,
+            "rank_error": 29,
             "games": 4,
             "ppg": 2.6
           },
@@ -889,13 +889,13 @@
             "ppg": 5.6
           },
           {
-            "player_id": "00-0033921",
-            "name": "Chris Godwin Jr.",
-            "preseason_rank": 39,
-            "actual_rank": 63,
-            "rank_error": 24,
+            "player_id": "00-0037240",
+            "name": "Jameson Williams",
+            "preseason_rank": 16,
+            "actual_rank": 41,
+            "rank_error": 25,
             "games": 4,
-            "ppg": 3.9
+            "ppg": 5.7
           }
         ]
       },
@@ -908,8 +908,8 @@
             "player_id": "00-0037838",
             "name": "Isaiah Likely",
             "preseason_rank": 45,
-            "actual_rank": 7,
-            "rank_error": -38,
+            "actual_rank": 8,
+            "rank_error": -37,
             "games": 4,
             "ppg": 7.8
           },
@@ -941,13 +941,13 @@
             "ppg": 9.2
           },
           {
-            "player_id": "00-0031610",
-            "name": "Darren Waller",
-            "preseason_rank": 23,
-            "actual_rank": 9,
-            "rank_error": -14,
+            "player_id": "00-0035229",
+            "name": "T.J. Hockenson",
+            "preseason_rank": 26,
+            "actual_rank": 11,
+            "rank_error": -15,
             "games": 4,
-            "ppg": 6.7
+            "ppg": 6.4
           }
         ],
         "biggest_busts": [
@@ -1022,15 +1022,6 @@
             "ppg": 10.5
           },
           {
-            "player_id": "00-0038428",
-            "name": "Andre Szmyt",
-            "preseason_rank": 36,
-            "actual_rank": 11,
-            "rank_error": -25,
-            "games": 4,
-            "ppg": 9.5
-          },
-          {
             "player_id": "00-0040074",
             "name": "Tyler Loop",
             "preseason_rank": 31,
@@ -1040,13 +1031,22 @@
             "ppg": 9.8
           },
           {
-            "player_id": "00-0036854",
-            "name": "Evan McPherson",
-            "preseason_rank": 19,
-            "actual_rank": 3,
-            "rank_error": -16,
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 13,
+            "rank_error": -23,
             "games": 4,
-            "ppg": 11.8
+            "ppg": 9.5
+          },
+          {
+            "player_id": "00-0038567",
+            "name": "Chad Ryland",
+            "preseason_rank": 28,
+            "actual_rank": 10,
+            "rank_error": -18,
+            "games": 4,
+            "ppg": 9.5
           }
         ],
         "biggest_busts": [
@@ -1099,8 +1099,8 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.4,
-        "hit_rate_within_5": 0.625,
+        "mean_abs_rank_error": 7.3,
+        "hit_rate_within_5": 0.656,
         "biggest_steals": [
           {
             "player_id": "LV_DST",
@@ -1130,6 +1130,15 @@
             "ppg": 7.2
           },
           {
+            "player_id": "CIN_DST",
+            "name": "CIN D/ST",
+            "preseason_rank": 21,
+            "actual_rank": 7,
+            "rank_error": -14,
+            "games": 4,
+            "ppg": 7.5
+          },
+          {
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
@@ -1137,15 +1146,6 @@
             "rank_error": -13,
             "games": 4,
             "ppg": 9.2
-          },
-          {
-            "player_id": "CIN_DST",
-            "name": "CIN D/ST",
-            "preseason_rank": 21,
-            "actual_rank": 8,
-            "rank_error": -13,
-            "games": 4,
-            "ppg": 7.5
           }
         ],
         "biggest_busts": [
@@ -1171,8 +1171,8 @@
             "player_id": "HOU_DST",
             "name": "HOU D/ST",
             "preseason_rank": 5,
-            "actual_rank": 23,
-            "rank_error": 18,
+            "actual_rank": 21,
+            "rank_error": 16,
             "games": 4,
             "ppg": 4.2
           },
@@ -1180,8 +1180,8 @@
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
-            "actual_rank": 25,
-            "rank_error": 13,
+            "actual_rank": 26,
+            "rank_error": 14,
             "games": 4,
             "ppg": 3.5
           },
@@ -1189,8 +1189,8 @@
             "player_id": "LA_DST",
             "name": "LA D/ST",
             "preseason_rank": 8,
-            "actual_rank": 18,
-            "rank_error": 10,
+            "actual_rank": 17,
+            "rank_error": 9,
             "games": 4,
             "ppg": 5.0
           }
