@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-06T12:12:01.841771+00:00"
+    "generated_at": "2026-10-06T15:25:39.025822+00:00"
   },
   "weeks_graded": 5,
   "ats": {
@@ -891,7 +891,7 @@
     {
       "season": 2026,
       "week": 5,
-      "locked_at": "2026-10-06T12:12:01.837094+00:00",
+      "locked_at": "2026-10-06T15:25:39.021033+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -921,7 +921,7 @@
           "home_team": "TEN",
           "away_team": "HOU",
           "model_margin_home": -2.5,
-          "spread_home": -7.0,
+          "spread_home": -6.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -999,8 +999,8 @@
           "home_team": "ATL",
           "away_team": "BAL",
           "model_margin_home": -0.7,
-          "spread_home": -2.5,
-          "our_pick": "home",
+          "spread_home": 3.0,
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -1012,7 +1012,7 @@
           "home_team": "JAX",
           "away_team": "PHI",
           "model_margin_home": 8.3,
-          "spread_home": 7.0,
+          "spread_home": 6.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -1038,8 +1038,8 @@
           "home_team": "NYJ",
           "away_team": "CLE",
           "model_margin_home": 2.2,
-          "spread_home": 1.5,
-          "our_pick": "home",
+          "spread_home": 2.5,
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
