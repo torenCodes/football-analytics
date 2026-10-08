@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-06T16:54:56.474734+00:00"
+    "generated_at": "2026-10-08T02:15:08.679529+00:00"
   },
   "season": 2025,
   "method": "Walk-forward: each 2025 regular-season game predicted with only the games before it plus 2024, using the same rating code as the live board, then picked against the closing spread. Base model only \u2014 QB-injury, revenge and former-coach adjustments aren't backtested. Constants were fitted on 2021-2024, so 2025 is data the fit never saw.",
@@ -2797,6 +2797,20 @@
       "winner_correct": false
     },
     {
+      "game_id": "2025_14_CIN_BUF",
+      "week": 14,
+      "home_team": "BUF",
+      "away_team": "CIN",
+      "spread_line": 6.0,
+      "result": 5,
+      "model_margin_home": 12.9,
+      "our_pick": "home",
+      "takes_favorite": true,
+      "push": false,
+      "correct": false,
+      "winner_correct": true
+    },
+    {
       "game_id": "2025_14_TEN_CLE",
       "week": 14,
       "home_team": "CLE",
@@ -2809,20 +2823,6 @@
       "push": false,
       "correct": false,
       "winner_correct": false
-    },
-    {
-      "game_id": "2025_14_CHI_GB",
-      "week": 14,
-      "home_team": "GB",
-      "away_team": "CHI",
-      "spread_line": 6.5,
-      "result": 7,
-      "model_margin_home": 6.9,
-      "our_pick": "home",
-      "takes_favorite": true,
-      "push": false,
-      "correct": true,
-      "winner_correct": true
     },
     {
       "game_id": "2025_14_IND_JAX",
@@ -2909,17 +2909,17 @@
       "winner_correct": true
     },
     {
-      "game_id": "2025_14_CIN_BUF",
+      "game_id": "2025_14_CHI_GB",
       "week": 14,
-      "home_team": "BUF",
-      "away_team": "CIN",
-      "spread_line": 6.0,
-      "result": 5,
-      "model_margin_home": 12.9,
+      "home_team": "GB",
+      "away_team": "CHI",
+      "spread_line": 6.5,
+      "result": 7,
+      "model_margin_home": 6.9,
       "our_pick": "home",
       "takes_favorite": true,
       "push": false,
-      "correct": false,
+      "correct": true,
       "winner_correct": true
     },
     {
@@ -3189,20 +3189,6 @@
       "winner_correct": true
     },
     {
-      "game_id": "2025_16_GB_CHI",
-      "week": 16,
-      "home_team": "CHI",
-      "away_team": "GB",
-      "spread_line": 1.5,
-      "result": 6,
-      "model_margin_home": -1.5,
-      "our_pick": "away",
-      "takes_favorite": false,
-      "push": false,
-      "correct": false,
-      "winner_correct": false
-    },
-    {
       "game_id": "2025_16_PHI_WAS",
       "week": 16,
       "home_team": "WAS",
@@ -3217,17 +3203,17 @@
       "winner_correct": true
     },
     {
-      "game_id": "2025_16_NE_BAL",
+      "game_id": "2025_16_GB_CHI",
       "week": 16,
-      "home_team": "BAL",
-      "away_team": "NE",
-      "spread_line": 3.5,
-      "result": -4,
-      "model_margin_home": 1.9,
+      "home_team": "CHI",
+      "away_team": "GB",
+      "spread_line": 1.5,
+      "result": 6,
+      "model_margin_home": -1.5,
       "our_pick": "away",
       "takes_favorite": false,
       "push": false,
-      "correct": true,
+      "correct": false,
       "winner_correct": false
     },
     {
@@ -3271,6 +3257,20 @@
       "push": false,
       "correct": true,
       "winner_correct": true
+    },
+    {
+      "game_id": "2025_16_CIN_MIA",
+      "week": 16,
+      "home_team": "MIA",
+      "away_team": "CIN",
+      "spread_line": -3.5,
+      "result": -24,
+      "model_margin_home": 5.7,
+      "our_pick": "home",
+      "takes_favorite": false,
+      "push": false,
+      "correct": false,
+      "winner_correct": false
     },
     {
       "game_id": "2025_16_NYJ_NO",
@@ -3371,17 +3371,17 @@
       "winner_correct": true
     },
     {
-      "game_id": "2025_16_CIN_MIA",
+      "game_id": "2025_16_NE_BAL",
       "week": 16,
-      "home_team": "MIA",
-      "away_team": "CIN",
-      "spread_line": -3.5,
-      "result": -24,
-      "model_margin_home": 5.7,
-      "our_pick": "home",
+      "home_team": "BAL",
+      "away_team": "NE",
+      "spread_line": 3.5,
+      "result": -4,
+      "model_margin_home": 1.9,
+      "our_pick": "away",
       "takes_favorite": false,
       "push": false,
-      "correct": false,
+      "correct": true,
       "winner_correct": false
     },
     {
@@ -3441,6 +3441,34 @@
       "winner_correct": false
     },
     {
+      "game_id": "2025_17_HOU_LAC",
+      "week": 17,
+      "home_team": "LAC",
+      "away_team": "HOU",
+      "spread_line": 1.5,
+      "result": -4,
+      "model_margin_home": 2.1,
+      "our_pick": "home",
+      "takes_favorite": true,
+      "push": false,
+      "correct": false,
+      "winner_correct": false
+    },
+    {
+      "game_id": "2025_17_BAL_GB",
+      "week": 17,
+      "home_team": "GB",
+      "away_team": "BAL",
+      "spread_line": 2.5,
+      "result": -17,
+      "model_margin_home": 4.0,
+      "our_pick": "home",
+      "takes_favorite": true,
+      "push": false,
+      "correct": false,
+      "winner_correct": false
+    },
+    {
       "game_id": "2025_17_SEA_CAR",
       "week": 17,
       "home_team": "CAR",
@@ -3483,20 +3511,6 @@
       "winner_correct": false
     },
     {
-      "game_id": "2025_17_BAL_GB",
-      "week": 17,
-      "home_team": "GB",
-      "away_team": "BAL",
-      "spread_line": 2.5,
-      "result": -17,
-      "model_margin_home": 4.0,
-      "our_pick": "home",
-      "takes_favorite": true,
-      "push": false,
-      "correct": false,
-      "winner_correct": false
-    },
-    {
       "game_id": "2025_17_JAX_IND",
       "week": 17,
       "home_team": "IND",
@@ -3509,34 +3523,6 @@
       "push": false,
       "correct": false,
       "winner_correct": false
-    },
-    {
-      "game_id": "2025_17_HOU_LAC",
-      "week": 17,
-      "home_team": "LAC",
-      "away_team": "HOU",
-      "spread_line": 1.5,
-      "result": -4,
-      "model_margin_home": 2.1,
-      "our_pick": "home",
-      "takes_favorite": true,
-      "push": false,
-      "correct": false,
-      "winner_correct": false
-    },
-    {
-      "game_id": "2025_17_NYG_LV",
-      "week": 17,
-      "home_team": "LV",
-      "away_team": "NYG",
-      "spread_line": -3.0,
-      "result": -24,
-      "model_margin_home": -1.7,
-      "our_pick": "home",
-      "takes_favorite": false,
-      "push": false,
-      "correct": false,
-      "winner_correct": true
     },
     {
       "game_id": "2025_17_TB_MIA",
@@ -3578,6 +3564,20 @@
       "takes_favorite": true,
       "push": false,
       "correct": true,
+      "winner_correct": true
+    },
+    {
+      "game_id": "2025_17_NYG_LV",
+      "week": 17,
+      "home_team": "LV",
+      "away_team": "NYG",
+      "spread_line": -3.0,
+      "result": -24,
+      "model_margin_home": -1.7,
+      "our_pick": "home",
+      "takes_favorite": false,
+      "push": false,
+      "correct": false,
       "winner_correct": true
     },
     {
@@ -3623,6 +3623,34 @@
       "winner_correct": false
     },
     {
+      "game_id": "2025_18_CAR_TB",
+      "week": 18,
+      "home_team": "TB",
+      "away_team": "CAR",
+      "spread_line": 3.0,
+      "result": 2,
+      "model_margin_home": 6.7,
+      "our_pick": "home",
+      "takes_favorite": true,
+      "push": false,
+      "correct": false,
+      "winner_correct": true
+    },
+    {
+      "game_id": "2025_18_SEA_SF",
+      "week": 18,
+      "home_team": "SF",
+      "away_team": "SEA",
+      "spread_line": -2.5,
+      "result": -10,
+      "model_margin_home": -1.1,
+      "our_pick": "home",
+      "takes_favorite": false,
+      "push": false,
+      "correct": false,
+      "winner_correct": true
+    },
+    {
       "game_id": "2025_18_NO_ATL",
       "week": 18,
       "home_team": "ATL",
@@ -3631,6 +3659,76 @@
       "result": 2,
       "model_margin_home": 3.3,
       "our_pick": "away",
+      "takes_favorite": false,
+      "push": false,
+      "correct": true,
+      "winner_correct": true
+    },
+    {
+      "game_id": "2025_18_CLE_CIN",
+      "week": 18,
+      "home_team": "CIN",
+      "away_team": "CLE",
+      "spread_line": 9.5,
+      "result": -2,
+      "model_margin_home": 3.3,
+      "our_pick": "away",
+      "takes_favorite": false,
+      "push": false,
+      "correct": true,
+      "winner_correct": false
+    },
+    {
+      "game_id": "2025_18_IND_HOU",
+      "week": 18,
+      "home_team": "HOU",
+      "away_team": "IND",
+      "spread_line": 9.5,
+      "result": 8,
+      "model_margin_home": 3.4,
+      "our_pick": "away",
+      "takes_favorite": false,
+      "push": false,
+      "correct": true,
+      "winner_correct": true
+    },
+    {
+      "game_id": "2025_18_TEN_JAX",
+      "week": 18,
+      "home_team": "JAX",
+      "away_team": "TEN",
+      "spread_line": 12.5,
+      "result": 34,
+      "model_margin_home": 14.5,
+      "our_pick": "home",
+      "takes_favorite": true,
+      "push": false,
+      "correct": true,
+      "winner_correct": true
+    },
+    {
+      "game_id": "2025_18_GB_MIN",
+      "week": 18,
+      "home_team": "MIN",
+      "away_team": "GB",
+      "spread_line": 12.5,
+      "result": 13,
+      "model_margin_home": -3.0,
+      "our_pick": "away",
+      "takes_favorite": false,
+      "push": false,
+      "correct": false,
+      "winner_correct": false
+    },
+    {
+      "game_id": "2025_18_DAL_NYG",
+      "week": 18,
+      "home_team": "NYG",
+      "away_team": "DAL",
+      "spread_line": -3.0,
+      "result": 17,
+      "model_margin_home": 0.7,
+      "our_pick": "home",
       "takes_favorite": false,
       "push": false,
       "correct": true,
@@ -3665,20 +3763,6 @@
       "winner_correct": true
     },
     {
-      "game_id": "2025_18_CLE_CIN",
-      "week": 18,
-      "home_team": "CIN",
-      "away_team": "CLE",
-      "spread_line": 9.5,
-      "result": -2,
-      "model_margin_home": 3.3,
-      "our_pick": "away",
-      "takes_favorite": false,
-      "push": false,
-      "correct": true,
-      "winner_correct": false
-    },
-    {
       "game_id": "2025_18_LAC_DEN",
       "week": 18,
       "home_team": "DEN",
@@ -3690,34 +3774,6 @@
       "takes_favorite": false,
       "push": false,
       "correct": false,
-      "winner_correct": true
-    },
-    {
-      "game_id": "2025_18_IND_HOU",
-      "week": 18,
-      "home_team": "HOU",
-      "away_team": "IND",
-      "spread_line": 9.5,
-      "result": 8,
-      "model_margin_home": 3.4,
-      "our_pick": "away",
-      "takes_favorite": false,
-      "push": false,
-      "correct": true,
-      "winner_correct": true
-    },
-    {
-      "game_id": "2025_18_TEN_JAX",
-      "week": 18,
-      "home_team": "JAX",
-      "away_team": "TEN",
-      "spread_line": 12.5,
-      "result": 34,
-      "model_margin_home": 14.5,
-      "our_pick": "home",
-      "takes_favorite": true,
-      "push": false,
-      "correct": true,
       "winner_correct": true
     },
     {
@@ -3749,20 +3805,6 @@
       "winner_correct": false
     },
     {
-      "game_id": "2025_18_GB_MIN",
-      "week": 18,
-      "home_team": "MIN",
-      "away_team": "GB",
-      "spread_line": 12.5,
-      "result": 13,
-      "model_margin_home": -3.0,
-      "our_pick": "away",
-      "takes_favorite": false,
-      "push": false,
-      "correct": false,
-      "winner_correct": false
-    },
-    {
       "game_id": "2025_18_MIA_NE",
       "week": 18,
       "home_team": "NE",
@@ -3774,20 +3816,6 @@
       "takes_favorite": false,
       "push": false,
       "correct": false,
-      "winner_correct": true
-    },
-    {
-      "game_id": "2025_18_DAL_NYG",
-      "week": 18,
-      "home_team": "NYG",
-      "away_team": "DAL",
-      "spread_line": -3.0,
-      "result": 17,
-      "model_margin_home": 0.7,
-      "our_pick": "home",
-      "takes_favorite": false,
-      "push": false,
-      "correct": true,
       "winner_correct": true
     },
     {
@@ -3817,34 +3845,6 @@
       "push": false,
       "correct": true,
       "winner_correct": false
-    },
-    {
-      "game_id": "2025_18_SEA_SF",
-      "week": 18,
-      "home_team": "SF",
-      "away_team": "SEA",
-      "spread_line": -2.5,
-      "result": -10,
-      "model_margin_home": -1.1,
-      "our_pick": "home",
-      "takes_favorite": false,
-      "push": false,
-      "correct": false,
-      "winner_correct": true
-    },
-    {
-      "game_id": "2025_18_CAR_TB",
-      "week": 18,
-      "home_team": "TB",
-      "away_team": "CAR",
-      "spread_line": 3.0,
-      "result": 2,
-      "model_margin_home": 6.7,
-      "our_pick": "home",
-      "takes_favorite": true,
-      "push": false,
-      "correct": false,
-      "winner_correct": true
     }
   ]
 }
