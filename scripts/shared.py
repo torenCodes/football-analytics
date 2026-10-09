@@ -26,6 +26,16 @@ def json_safe(obj):
     return obj
 
 
+def ordinal(n):
+    """1 -> "1st", 2 -> "2nd", 11 -> "11th", 21 -> "21st", 112 -> "112th"."""
+    n = int(n)
+    if 11 <= n % 100 <= 13:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
 def load_cache(name):
     return pl.read_parquet(os.path.join(CACHE_DIR, f"{name}.parquet"))
 

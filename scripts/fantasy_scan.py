@@ -32,6 +32,7 @@ from shared import (
     build_qb_injury_flags,
     json_safe,
     load_cache,
+    ordinal,
 )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -524,7 +525,7 @@ def build_waiver_wire_explain(row):
     if row["preseason_rank"] is None:
         expectation = "wasn't on our preseason board at all"
     else:
-        expectation = f"we had them {row['preseason_rank']}th at the position entering the season"
+        expectation = f"we had them {ordinal(row['preseason_rank'])} at the position entering the season"
     game_word = "game" if row["games"] == 1 else "games"
     return f"Likely available on waivers in most leagues — {expectation}, and they're averaging {row['ppg']:.1f} ppg over {row['games']} {game_word} since."
 
