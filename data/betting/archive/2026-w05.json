@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 5,
-  "locked_at": "2026-10-06T16:54:56.469860+00:00",
+  "locked_at": "2026-10-10T01:54:29.936265+00:00",
   "pick_rule": "ats",
   "games": [
     {
@@ -101,23 +101,23 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 77,
-        "wind": "13 mph"
+        "short_forecast": "Sunny",
+        "temperature_f": 78,
+        "wind": "7 mph"
       },
-      "storyline": "The model can barely separate these two. The model likes CHI too, just not by 3 \u2014 it has them by 0.5, so the lean is GB +3. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. GB brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. GB lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 77\u00b0F, wind 13 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model can barely separate these two. The model likes CHI too, just not by 3 \u2014 it has them by 0.5, so the lean is GB +3.",
+      "storyline": "The model sees close to a coin flip here. Asking CHI to win by more than 1.5 is a lot when the model has them by 0.5. Lean GB +1.5. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. GB brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. GB lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Sunny, 78\u00b0F, wind 7 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model sees close to a coin flip here. Asking CHI to win by more than 1.5 is a lot when the model has them by 0.5. Lean GB +1.5.",
       "market": {
-        "spread_home": -3.0,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
-        "moneyline_home": 124,
-        "moneyline_away": -148,
+        "spread_home": -1.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": 102,
+        "moneyline_away": -122,
         "total": 45.5,
-        "over_odds": -108,
-        "under_odds": -112,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "away",
-        "edge_vs_market": 2.5
+        "edge_vs_market": 1.0
       }
     },
     {
@@ -217,23 +217,23 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Showers And Thunderstorms",
-        "temperature_f": 77,
-        "wind": "10 mph"
+        "short_forecast": "Chance Rain Showers",
+        "temperature_f": 74,
+        "wind": "5 to 10 mph"
       },
-      "storyline": "TEN's #30 offense is the weak link the model keys on, up against HOU's #12 defense. Vegas and the model agree HOU should win; the model just expects TEN to keep it closer than 6.5. TEN does get 2 points of home field back. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. TEN is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. TEN lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Chance Showers And Thunderstorms, 77\u00b0F, wind 10 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "TEN's #30 offense is the weak link the model keys on, up against HOU's #12 defense. Vegas and the model agree HOU should win; the model just expects TEN to keep it closer than 6.5.",
+      "storyline": "TEN's #30 offense is the weak link the model keys on, up against HOU's #12 defense. Vegas and the model agree HOU should win; the model just expects TEN to keep it closer than 7. TEN does get 2 points of home field back. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. TEN is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. TEN lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Chance Rain Showers, 74\u00b0F, wind 5 to 10 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "TEN's #30 offense is the weak link the model keys on, up against HOU's #12 defense. Vegas and the model agree HOU should win; the model just expects TEN to keep it closer than 7.",
       "market": {
-        "spread_home": -6.5,
+        "spread_home": -7.0,
         "spread_home_odds": -108,
         "spread_away_odds": -112,
-        "moneyline_home": 250,
-        "moneyline_away": -310,
-        "total": 38.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "moneyline_home": 295,
+        "moneyline_away": -375,
+        "total": 37.5,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "away",
-        "edge_vs_market": 4.0
+        "edge_vs_market": 4.5
       }
     },
     {
@@ -333,23 +333,23 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Rain Showers",
-        "temperature_f": 70,
-        "wind": "2 to 8 mph"
+        "short_forecast": "Rain then Showers And Thunderstorms",
+        "temperature_f": 68,
+        "wind": "14 mph"
       },
-      "storyline": "By the model's ratings, this is about as even as matchups get. The model calls it a dead heat; Vegas has WAS by 3. That's enough to lean NYG +3. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. NYG brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. NYG lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Chance Rain Showers, 70\u00b0F, wind 2 to 8 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "By the model's ratings, this is about as even as matchups get. The model calls it a dead heat; Vegas has WAS by 3. That's enough to lean NYG +3.",
+      "storyline": "The model sees close to a coin flip here. The model calls it a dead heat; Vegas has WAS by 3.5. That's enough to lean NYG +3.5. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. NYG brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. NYG lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Rain then Showers And Thunderstorms, 68\u00b0F, wind 14 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model sees close to a coin flip here. The model calls it a dead heat; Vegas has WAS by 3.5. That's enough to lean NYG +3.5.",
       "market": {
-        "spread_home": 3.0,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": -166,
-        "moneyline_away": 140,
-        "total": 43.5,
+        "spread_home": 3.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -170,
+        "moneyline_away": 142,
+        "total": 41.5,
         "over_odds": -115,
         "under_odds": -105,
         "market_favorite": "home",
-        "edge_vs_market": -3.0
+        "edge_vs_market": -3.5
       }
     },
     {
@@ -449,17 +449,17 @@
       "roof": "dome",
       "international_site": false,
       "weather": null,
-      "storyline": "The model sees close to a coin flip here. Vegas has DEN; the model has LAC, by 0.5. That flips the lean to LAC +3.5. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. LAC is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. LAC lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "The model sees close to a coin flip here. Vegas has DEN; the model has LAC, by 0.5. That flips the lean to LAC +3.5.",
+      "storyline": "The model can barely separate these two. Vegas has DEN; the model has LAC, by 0.5. That flips the lean to LAC +3.5. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. LAC is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. LAC lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "The model can barely separate these two. Vegas has DEN; the model has LAC, by 0.5. That flips the lean to LAC +3.5.",
       "market": {
         "spread_home": -3.5,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": 154,
-        "moneyline_away": -185,
-        "total": 42.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 160,
+        "moneyline_away": -192,
+        "total": 41.5,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "away",
         "edge_vs_market": 4.0
       }
@@ -563,19 +563,19 @@
       "weather": {
         "short_forecast": "Sunny",
         "temperature_f": 60,
-        "wind": "3 to 9 mph"
+        "wind": "5 to 10 mph"
       },
-      "storyline": "By the model's ratings, this is about as even as matchups get. Upset call: Vegas favors SEA by 3, but the model has SF winning outright by 0.2. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. SF brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. SF lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Sunny, 60\u00b0F, wind 3 to 9 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline": "By the model's ratings, this is about as even as matchups get. Upset call: Vegas favors SEA by 3, but the model has SF winning outright by 0.2. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. SF brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. SF lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Sunny, 60\u00b0F, wind 5 to 10 mph \u2014 something to watch if it turns into a run-heavy day.",
       "storyline_short": "By the model's ratings, this is about as even as matchups get. Upset call: Vegas favors SEA by 3, but the model has SF winning outright by 0.2.",
       "market": {
         "spread_home": 3.0,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": -164,
-        "moneyline_away": 138,
-        "total": 47.5,
-        "over_odds": -102,
-        "under_odds": -120,
+        "moneyline_home": -162,
+        "moneyline_away": 136,
+        "total": 45.5,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "home",
         "edge_vs_market": -3.2
       }
@@ -668,126 +668,19 @@
       "roof": "dome",
       "international_site": false,
       "weather": null,
-      "storyline": "BUF's defense ranks #29, and the model expects LA's #9 offense to take advantage \u2014 worth about 4 points by its math. Vegas has LA by 2.5; the model goes a hair past that, to 3.2. Lean LA \u22122.5. BUF's best counter: its #2 offense against LA's #3 defense, worth about 3 points back. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. LA brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "BUF's defense ranks #29, and the model expects LA's #9 offense to take advantage \u2014 worth about 4 points by its math. Vegas has LA by 2.5; the model goes a hair past that, to 3.2. Lean LA \u22122.5.",
+      "storyline": "BUF's defense ranks #29, and the model expects LA's #9 offense to take advantage \u2014 worth about 4 points by its math. Vegas has LA by 3; the model goes a hair past that, to 3.2. Lean LA \u22123. BUF's best counter: its #2 offense against LA's #3 defense, worth about 3 points back. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. LA brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "BUF's defense ranks #29, and the model expects LA's #9 offense to take advantage \u2014 worth about 4 points by its math. Vegas has LA by 3; the model goes a hair past that, to 3.2. Lean LA \u22123.",
       "market": {
-        "spread_home": 2.5,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
-        "moneyline_home": -148,
-        "moneyline_away": 124,
+        "spread_home": 3.0,
+        "spread_home_odds": -120,
+        "spread_away_odds": 100,
+        "moneyline_home": -175,
+        "moneyline_away": 145,
         "total": 54.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "home",
-        "edge_vs_market": 0.7
-      }
-    },
-    {
-      "game_id": "2026_05_TB_DAL",
-      "week": 5,
-      "gameday": "2026-10-08",
-      "weekday": "Thursday",
-      "gametime": "20:15",
-      "primetime": true,
-      "juice_score": 4,
-      "home_team": "DAL",
-      "away_team": "TB",
-      "div_game": false,
-      "model_margin_home": 4.1,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "DAL",
-          "opp": "TB",
-          "pts_home": 3.4
-        },
-        {
-          "kind": "offense",
-          "team": "TB",
-          "opp": "DAL",
-          "pts_home": -1.3
-        },
-        {
-          "kind": "home_field",
-          "team": "DAL",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 3,
-          "def": 32
-        },
-        "away": {
-          "off": 26,
-          "def": 8
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.34,
-          "def": 0.33
-        },
-        "away": {
-          "off": 0.32,
-          "def": 0.32
-        }
-      },
-      "our_pick": "away",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 0,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 5,
-          "total_starters": 5,
-          "continuity_pct": 1.0
-        },
-        "away": {
-          "returning_starters": 5,
-          "total_starters": 5,
-          "continuity_pct": 1.0
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Brian Schottenheimer",
-          "coach_current": "Brian Schottenheimer",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Todd Bowles",
-          "coach_current": "Todd Bowles",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": null,
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Sunny",
-        "temperature_f": 85,
-        "wind": "0 to 5 mph"
-      },
-      "storyline": "Follow DAL's #3 offense into TB's #8 defense \u2014 that's where the model finds its edge. Asking DAL to win by more than 8.5 is a lot when the model has them by 4.1. Lean TB +8.5. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. TB brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Sunny, 85\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "Follow DAL's #3 offense into TB's #8 defense \u2014 that's where the model finds its edge. Asking DAL to win by more than 8.5 is a lot when the model has them by 4.1. Lean TB +8.5.",
-      "market": {
-        "spread_home": 8.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": -455,
-        "moneyline_away": 350,
-        "total": 47.5,
-        "over_odds": -115,
-        "under_odds": -105,
-        "market_favorite": "home",
-        "edge_vs_market": -4.4
+        "edge_vs_market": 0.2
       }
     },
     {
@@ -852,9 +745,9 @@
           "continuity_pct": 0.8
         },
         "away": {
-          "returning_starters": 3,
+          "returning_starters": 2,
           "total_starters": 5,
-          "continuity_pct": 0.6
+          "continuity_pct": 0.4
         }
       },
       "coach_continuity": {
@@ -878,23 +771,23 @@
       "roof": null,
       "international_site": false,
       "weather": {
-        "short_forecast": "Showers And Thunderstorms",
+        "short_forecast": "Partly Sunny",
         "temperature_f": 73,
-        "wind": "15 mph"
+        "wind": "10 to 15 mph"
       },
-      "storyline": "The model sees close to a coin flip here. The model goes against the grain, projecting BAL to win straight up by 0.7 as a 3-point underdog. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. BAL is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. BAL comes in with 1 extra day of rest \u2014 context, not something the model scores. Forecast for kickoff: Showers And Thunderstorms, 73\u00b0F, wind 15 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model sees close to a coin flip here. The model goes against the grain, projecting BAL to win straight up by 0.7 as a 3-point underdog.",
+      "storyline": "The model sees close to a coin flip here. The model goes against the grain, projecting BAL to win straight up by 0.7 as a 3.5-point underdog. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. BAL is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. BAL is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. BAL comes in with 1 extra day of rest \u2014 context, not something the model scores. Forecast for kickoff: Partly Sunny, 73\u00b0F, wind 10 to 15 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model sees close to a coin flip here. The model goes against the grain, projecting BAL to win straight up by 0.7 as a 3.5-point underdog.",
       "market": {
-        "spread_home": 3.0,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -155,
-        "moneyline_away": 130,
+        "spread_home": 3.5,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
+        "moneyline_home": -180,
+        "moneyline_away": 150,
         "total": 43.5,
         "over_odds": -115,
         "under_odds": -105,
         "market_favorite": "home",
-        "edge_vs_market": -3.7
+        "edge_vs_market": -4.2
       }
     },
     {
@@ -959,9 +852,9 @@
           "continuity_pct": 0.8
         },
         "away": {
-          "returning_starters": 4,
+          "returning_starters": 2,
           "total_starters": 5,
-          "continuity_pct": 0.8
+          "continuity_pct": 0.4
         }
       },
       "coach_continuity": {
@@ -985,19 +878,19 @@
       "roof": "outdoors",
       "international_site": true,
       "weather": null,
-      "storyline": "This projection is built on defense: JAX's #4 unit against PHI's #23 offense. JAX is a 6.5-point favorite, and the model thinks that's not enough \u2014 it has them by 8.3. Early-season read: only about 32% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. JAX brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.",
-      "storyline_short": "This projection is built on defense: JAX's #4 unit against PHI's #23 offense. JAX is a 6.5-point favorite, and the model thinks that's not enough \u2014 it has them by 8.3.",
+      "storyline": "This projection is built on defense: JAX's #4 unit against PHI's #23 offense. JAX is a 7.5-point favorite, and the model thinks that's not enough \u2014 it has them by 8.3. Early-season read: only about 32% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. JAX brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. This one's at an international site, so the usual home-field and weather assumptions carry more uncertainty than a normal week.",
+      "storyline_short": "This projection is built on defense: JAX's #4 unit against PHI's #23 offense. JAX is a 7.5-point favorite, and the model thinks that's not enough \u2014 it has them by 8.3.",
       "market": {
-        "spread_home": 6.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": -285,
-        "moneyline_away": 230,
-        "total": 42.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "spread_home": 7.5,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": -395,
+        "moneyline_away": 310,
+        "total": 41.5,
+        "over_odds": -112,
+        "under_odds": -108,
         "market_favorite": "home",
-        "edge_vs_market": 1.8
+        "edge_vs_market": 0.8
       }
     },
     {
@@ -1088,21 +981,21 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Showers And Thunderstorms",
-        "temperature_f": 89,
-        "wind": "13 mph"
+        "short_forecast": "Mostly Sunny then Slight Chance Showers And Thunderstorms",
+        "temperature_f": 91,
+        "wind": "9 mph"
       },
-      "storyline": "MIA's #25 offense is the weak link the model keys on, even against CIN's #17 defense. Vegas and the model agree CIN should win; the model just expects MIA to keep it closer than 7. MIA does get 2 points of home field back. Early-season read: only about 32% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. MIA brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Chance Showers And Thunderstorms, 89\u00b0F, wind 13 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline": "MIA's #25 offense is the weak link the model keys on, even against CIN's #17 defense. Vegas and the model agree CIN should win; the model just expects MIA to keep it closer than 7. MIA does get 2 points of home field back. Early-season read: only about 32% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. MIA brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Mostly Sunny then Slight Chance Showers And Thunderstorms, 91\u00b0F, wind 9 mph \u2014 something to watch if it turns into a run-heavy day.",
       "storyline_short": "MIA's #25 offense is the weak link the model keys on, even against CIN's #17 defense. Vegas and the model agree CIN should win; the model just expects MIA to keep it closer than 7.",
       "market": {
         "spread_home": -7.0,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
-        "moneyline_home": 275,
-        "moneyline_away": -345,
-        "total": 42.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": 280,
+        "moneyline_away": -355,
+        "total": 43.5,
+        "over_odds": -112,
+        "under_odds": -108,
         "market_favorite": "away",
         "edge_vs_market": 4.7
       }
@@ -1195,21 +1088,21 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny then Slight Chance Rain Showers",
-        "temperature_f": 71,
-        "wind": "2 to 9 mph"
+        "short_forecast": "Periods Of Rain",
+        "temperature_f": 65,
+        "wind": "3 to 8 mph"
       },
-      "storyline": "CLE's offense ranks #29 in the model's ratings, and it runs into a NYJ defense ranked #19. The model likes NYJ too, just not by 2.5 \u2014 it has them by 2.2, so the lean is CLE +2.5. The catch: NYJ's own offense ranks just #27, and CLE's #10 defense can keep this close. Early-season read: only about 32% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. CLE is breaking in a mostly new offensive line (0% continuity) \u2014 a real wildcard this early in the year. CLE is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. CLE comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny then Slight Chance Rain Showers, 71\u00b0F, wind 2 to 9 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline": "CLE's offense ranks #29 in the model's ratings, and it runs into a NYJ defense ranked #19. The model likes NYJ too, just not by 2.5 \u2014 it has them by 2.2, so the lean is CLE +2.5. The catch: NYJ's own offense ranks just #27, and CLE's #10 defense can keep this close. Early-season read: only about 32% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. CLE is breaking in a mostly new offensive line (0% continuity) \u2014 a real wildcard this early in the year. CLE is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. CLE comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Periods Of Rain, 65\u00b0F, wind 3 to 8 mph \u2014 something to watch if it turns into a run-heavy day.",
       "storyline_short": "CLE's offense ranks #29 in the model's ratings, and it runs into a NYJ defense ranked #19. The model likes NYJ too, just not by 2.5 \u2014 it has them by 2.2, so the lean is CLE +2.5.",
       "market": {
         "spread_home": 2.5,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
         "moneyline_home": -130,
         "moneyline_away": 110,
         "total": 39.5,
-        "over_odds": -118,
-        "under_odds": -102,
+        "over_odds": -112,
+        "under_odds": -108,
         "market_favorite": "home",
         "edge_vs_market": -0.3
       }
@@ -1302,23 +1195,23 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Rain Showers",
-        "temperature_f": 73,
-        "wind": "3 to 9 mph"
+        "short_forecast": "Showers And Thunderstorms",
+        "temperature_f": 69,
+        "wind": "13 mph"
       },
-      "storyline": "The model can barely separate these two. Asking PIT to win by more than 2.5 is a lot when the model has them by 0.7. Lean IND +2.5. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. IND brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. PIT comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Chance Rain Showers, 73\u00b0F, wind 3 to 9 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model can barely separate these two. Asking PIT to win by more than 2.5 is a lot when the model has them by 0.7. Lean IND +2.5.",
+      "storyline": "By the model's ratings, this is about as even as matchups get. Asking PIT to win by more than 3 is a lot when the model has them by 0.7. Lean IND +3. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. IND brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. PIT comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Showers And Thunderstorms, 69\u00b0F, wind 13 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "By the model's ratings, this is about as even as matchups get. Asking PIT to win by more than 3 is a lot when the model has them by 0.7. Lean IND +3.",
       "market": {
-        "spread_home": 2.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": -135,
-        "moneyline_away": 114,
-        "total": 44.5,
-        "over_odds": -112,
-        "under_odds": -108,
+        "spread_home": 3.0,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": -148,
+        "moneyline_away": 124,
+        "total": 43.5,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "home",
-        "edge_vs_market": -1.8
+        "edge_vs_market": -2.3
       }
     },
     {
@@ -1409,11 +1302,11 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 67,
-        "wind": "2 to 9 mph"
+        "short_forecast": "Partly Sunny",
+        "temperature_f": 62,
+        "wind": "1 to 7 mph"
       },
-      "storyline": "The model doesn't trust LV's offense (#32) to move the ball, up against NE's #11 defense \u2014 worth about 5.5 points by its math. The model is even higher on NE than Vegas is: 8.2 points to the market's 3.5. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Mostly Sunny, 67\u00b0F, wind 2 to 9 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline": "The model doesn't trust LV's offense (#32) to move the ball, up against NE's #11 defense \u2014 worth about 5.5 points by its math. The model is even higher on NE than Vegas is: 8.2 points to the market's 3.5. Early-season read: only about 33% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Partly Sunny, 62\u00b0F, wind 1 to 7 mph \u2014 something to watch if it turns into a run-heavy day.",
       "storyline_short": "The model doesn't trust LV's offense (#32) to move the ball, up against NE's #11 defense \u2014 worth about 5.5 points by its math. The model is even higher on NE than Vegas is: 8.2 points to the market's 3.5.",
       "market": {
         "spread_home": 3.5,
@@ -1516,19 +1409,19 @@
       "roof": "dome",
       "international_site": false,
       "weather": null,
-      "storyline": "The model sees close to a coin flip here. The model's MIN by 0.7 lands inside the 1.5-point spread, so NO +1.5 gets the lean. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. MIN comes in with 1 extra day of rest \u2014 context, not something the model scores. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "The model sees close to a coin flip here. The model's MIN by 0.7 lands inside the 1.5-point spread, so NO +1.5 gets the lean.",
+      "storyline": "The model can barely separate these two. The model's MIN by 0.7 lands inside the 2.5-point spread, so NO +2.5 gets the lean. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. MIN comes in with 1 extra day of rest \u2014 context, not something the model scores. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "The model can barely separate these two. The model's MIN by 0.7 lands inside the 2.5-point spread, so NO +2.5 gets the lean.",
       "market": {
-        "spread_home": -1.5,
-        "spread_home_odds": -104,
-        "spread_away_odds": -118,
-        "moneyline_home": 110,
-        "moneyline_away": -130,
-        "total": 42.5,
-        "over_odds": -104,
-        "under_odds": -115,
+        "spread_home": -2.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": 120,
+        "moneyline_away": -142,
+        "total": 41.5,
+        "over_odds": -112,
+        "under_odds": -108,
         "market_favorite": "away",
-        "edge_vs_market": 0.8
+        "edge_vs_market": 1.8
       }
     },
     {
@@ -1619,23 +1512,23 @@
       "roof": null,
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Showers And Thunderstorms",
-        "temperature_f": 89,
-        "wind": "10 to 15 mph"
+        "short_forecast": "Showers And Thunderstorms",
+        "temperature_f": 85,
+        "wind": "10 to 25 mph"
       },
-      "storyline": "It starts with DET's offense, #4 in the model's ratings, against a ARI defense that ranks #27. The model's DET by 2.0 lands inside the 4.5-point spread, so ARI +4.5 gets the lean. ARI does get 2 points of home field back. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. ARI is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. Forecast for kickoff: Chance Showers And Thunderstorms, 89\u00b0F, wind 10 to 15 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "It starts with DET's offense, #4 in the model's ratings, against a ARI defense that ranks #27. The model's DET by 2.0 lands inside the 4.5-point spread, so ARI +4.5 gets the lean.",
+      "storyline": "Follow DET's #4 offense into ARI's #27 defense \u2014 that's where the model finds its edge. The model's DET by 2.0 lands inside the 5.5-point spread, so ARI +5.5 gets the lean. ARI does get 2 points of home field back. Early-season read: only about 34% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. ARI is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. Forecast for kickoff: Showers And Thunderstorms, 85\u00b0F, wind 10 to 25 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "Follow DET's #4 offense into ARI's #27 defense \u2014 that's where the model finds its edge. The model's DET by 2.0 lands inside the 5.5-point spread, so ARI +5.5 gets the lean.",
       "market": {
-        "spread_home": -4.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": 180,
-        "moneyline_away": -218,
+        "spread_home": -5.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": 210,
+        "moneyline_away": -258,
         "total": 54.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "away",
-        "edge_vs_market": 2.5
+        "edge_vs_market": 3.5
       }
     }
   ]
