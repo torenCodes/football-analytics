@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-10T01:54:29.939920+00:00"
+    "generated_at": "2026-10-10T07:43:50.479652+00:00"
   },
   "weeks_graded": 5,
   "ats": {
@@ -891,7 +891,7 @@
     {
       "season": 2026,
       "week": 5,
-      "locked_at": "2026-10-10T01:54:29.936265+00:00",
+      "locked_at": "2026-10-10T07:43:50.475963+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -985,7 +985,7 @@
           "game_id": "2026_05_BAL_ATL",
           "home_team": "ATL",
           "away_team": "BAL",
-          "model_margin_home": -0.7,
+          "model_margin_home": 3.3,
           "spread_home": 3.5,
           "our_pick": "away",
           "no_lean": false,
