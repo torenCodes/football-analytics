@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 5,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0041251",
+          "name": "Jalon Daniels",
+          "team": "TB",
+          "points": 13.9
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0039361",
+          "name": "Bucky Irving",
+          "team": "TB",
+          "points": 31.5
+        },
+        {
+          "player_id": "00-0036997",
+          "name": "Javonte Williams",
+          "team": "DAL",
+          "points": 14.2
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0037247",
+          "name": "George Pickens",
+          "team": "DAL",
+          "points": 28.0
+        },
+        {
+          "player_id": "00-0040129",
+          "name": "Emeka Egbuka",
+          "team": "TB",
+          "points": 17.2
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0038129",
+          "name": "Cade Otton",
+          "team": "TB",
+          "points": 5.5
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039410",
+          "name": "Ryan Flournoy",
+          "team": "DAL",
+          "points": 12.0
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0035358",
+          "name": "Chase McLaughlin",
+          "team": "TB",
+          "points": 7.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "TB_DST",
+          "name": "TB D/ST",
+          "team": "TB",
+          "points": 7.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 136.3,
+    "bench": [
+      {
+        "player_id": "00-0033077",
+        "name": "Dak Prescott",
+        "team": "DAL",
+        "position": "QB",
+        "points": 12.6
+      },
+      {
+        "player_id": "00-0040237",
+        "name": "Tez Johnson",
+        "team": "TB",
+        "position": "WR",
+        "points": 7.4
+      },
+      {
+        "player_id": "00-0033921",
+        "name": "Chris Godwin Jr.",
+        "team": "TB",
+        "position": "WR",
+        "points": 7.0
+      },
+      {
+        "player_id": "00-0036919",
+        "name": "Kenny Gainwell",
+        "team": "TB",
+        "position": "RB",
+        "points": 5.8
+      },
+      {
+        "player_id": "00-0038041",
+        "name": "Jake Ferguson",
+        "team": "DAL",
+        "position": "TE",
+        "points": 4.9
+      },
+      {
+        "player_id": "00-0037801",
+        "name": "KaVontae Turpin",
+        "team": "DAL",
+        "position": "WR",
+        "points": 4.2
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 5,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0041251",
+          "name": "Jalon Daniels",
+          "team": "TB",
+          "points": 13.9
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0039361",
+          "name": "Bucky Irving",
+          "team": "TB",
+          "points": 29.5
+        },
+        {
+          "player_id": "00-0036997",
+          "name": "Javonte Williams",
+          "team": "DAL",
+          "points": 12.2
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0037247",
+          "name": "George Pickens",
+          "team": "DAL",
+          "points": 19.0
+        },
+        {
+          "player_id": "00-0040129",
+          "name": "Emeka Egbuka",
+          "team": "TB",
+          "points": 11.2
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0038129",
+          "name": "Cade Otton",
+          "team": "TB",
+          "points": 2.5
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039410",
+          "name": "Ryan Flournoy",
+          "team": "DAL",
+          "points": 9.0
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0035358",
+          "name": "Chase McLaughlin",
+          "team": "TB",
+          "points": 7.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "TB_DST",
+          "name": "TB D/ST",
+          "team": "TB",
+          "points": 7.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 111.3,
+    "bench": [
+      {
+        "player_id": "00-0033077",
+        "name": "Dak Prescott",
+        "team": "DAL",
+        "position": "QB",
+        "points": 12.6
+      },
+      {
+        "player_id": "00-0040237",
+        "name": "Tez Johnson",
+        "team": "TB",
+        "position": "WR",
+        "points": 6.4
+      },
+      {
+        "player_id": "00-0033921",
+        "name": "Chris Godwin Jr.",
+        "team": "TB",
+        "position": "WR",
+        "points": 4.0
+      },
+      {
+        "player_id": "00-0036919",
+        "name": "Kenny Gainwell",
+        "team": "TB",
+        "position": "RB",
+        "points": 2.8
+      },
+      {
+        "player_id": "00-0037801",
+        "name": "KaVontae Turpin",
+        "team": "DAL",
+        "position": "WR",
+        "points": 2.2
+      },
+      {
+        "player_id": "00-0039062",
+        "name": "Jonathan Mingo",
+        "team": "DAL",
+        "position": "WR",
+        "points": 2.0
+      }
+    ]
+  }
+}
