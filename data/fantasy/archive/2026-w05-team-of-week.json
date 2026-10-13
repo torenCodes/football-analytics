@@ -5,116 +5,116 @@
     "perfect_lineup": {
       "QB": [
         {
-          "player_id": "00-0041251",
-          "name": "Jalon Daniels",
-          "team": "TB",
-          "points": 13.9
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
+          "team": "NE",
+          "points": 39.5
         }
       ],
       "RB": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 37.7
+        },
+        {
+          "player_id": "00-0037228",
+          "name": "Jaylen Warren",
+          "team": "PIT",
+          "points": 36.8
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0039075",
+          "name": "Puka Nacua",
+          "team": "LA",
+          "points": 37.7
+        },
+        {
+          "player_id": "00-0038124",
+          "name": "Christian Watson",
+          "team": "GB",
+          "points": 32.3
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "points": 32.4
+        }
+      ],
+      "FLEX": [
         {
           "player_id": "00-0039361",
           "name": "Bucky Irving",
           "team": "TB",
           "points": 31.5
-        },
-        {
-          "player_id": "00-0036997",
-          "name": "Javonte Williams",
-          "team": "DAL",
-          "points": 14.2
-        }
-      ],
-      "WR": [
-        {
-          "player_id": "00-0037247",
-          "name": "George Pickens",
-          "team": "DAL",
-          "points": 28.0
-        },
-        {
-          "player_id": "00-0040129",
-          "name": "Emeka Egbuka",
-          "team": "TB",
-          "points": 17.2
-        }
-      ],
-      "TE": [
-        {
-          "player_id": "00-0038129",
-          "name": "Cade Otton",
-          "team": "TB",
-          "points": 5.5
-        }
-      ],
-      "FLEX": [
-        {
-          "player_id": "00-0039410",
-          "name": "Ryan Flournoy",
-          "team": "DAL",
-          "points": 12.0
         }
       ],
       "K": [
         {
-          "player_id": "00-0035358",
-          "name": "Chase McLaughlin",
-          "team": "TB",
-          "points": 7.0
+          "player_id": "00-0031492",
+          "name": "Jason Myers",
+          "team": "SEA",
+          "points": 23.0
         }
       ],
       "DST": [
         {
-          "player_id": "TB_DST",
-          "name": "TB D/ST",
-          "team": "TB",
-          "points": 7.0
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "team": "GB",
+          "points": 18.0
         }
       ]
     },
-    "perfect_lineup_total_points": 136.3,
+    "perfect_lineup_total_points": 288.9,
     "bench": [
       {
-        "player_id": "00-0033077",
-        "name": "Dak Prescott",
-        "team": "DAL",
+        "player_id": "00-0039910",
+        "name": "Jayden Daniels",
+        "team": "WAS",
         "position": "QB",
-        "points": 12.6
+        "points": 32.3
       },
       {
-        "player_id": "00-0040237",
-        "name": "Tez Johnson",
-        "team": "TB",
+        "player_id": "00-0038606",
+        "name": "Parker Washington",
+        "team": "JAX",
         "position": "WR",
-        "points": 7.4
+        "points": 30.4
       },
       {
-        "player_id": "00-0033921",
-        "name": "Chris Godwin Jr.",
-        "team": "TB",
+        "player_id": "00-0039337",
+        "name": "Malik Nabers",
+        "team": "NYG",
         "position": "WR",
-        "points": 7.0
+        "points": 29.1
       },
       {
-        "player_id": "00-0036919",
-        "name": "Kenny Gainwell",
-        "team": "TB",
-        "position": "RB",
-        "points": 5.8
-      },
-      {
-        "player_id": "00-0038041",
-        "name": "Jake Ferguson",
-        "team": "DAL",
-        "position": "TE",
-        "points": 4.9
-      },
-      {
-        "player_id": "00-0037801",
-        "name": "KaVontae Turpin",
+        "player_id": "00-0037247",
+        "name": "George Pickens",
         "team": "DAL",
         "position": "WR",
-        "points": 4.2
+        "points": 28.0
+      },
+      {
+        "player_id": "00-0031408",
+        "name": "Mike Evans",
+        "team": "SF",
+        "position": "WR",
+        "points": 26.3
+      },
+      {
+        "player_id": "00-0037740",
+        "name": "Garrett Wilson",
+        "team": "NYJ",
+        "position": "WR",
+        "points": 23.4
       }
     ]
   },
@@ -124,116 +124,116 @@
     "perfect_lineup": {
       "QB": [
         {
-          "player_id": "00-0041251",
-          "name": "Jalon Daniels",
-          "team": "TB",
-          "points": 13.9
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
+          "team": "NE",
+          "points": 39.5
         }
       ],
       "RB": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 32.7
+        },
+        {
+          "player_id": "00-0037228",
+          "name": "Jaylen Warren",
+          "team": "PIT",
+          "points": 30.8
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038124",
+          "name": "Christian Watson",
+          "team": "GB",
+          "points": 26.3
+        },
+        {
+          "player_id": "00-0038606",
+          "name": "Parker Washington",
+          "team": "JAX",
+          "points": 24.4
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "points": 21.4
+        }
+      ],
+      "FLEX": [
         {
           "player_id": "00-0039361",
           "name": "Bucky Irving",
           "team": "TB",
           "points": 29.5
-        },
-        {
-          "player_id": "00-0036997",
-          "name": "Javonte Williams",
-          "team": "DAL",
-          "points": 12.2
-        }
-      ],
-      "WR": [
-        {
-          "player_id": "00-0037247",
-          "name": "George Pickens",
-          "team": "DAL",
-          "points": 19.0
-        },
-        {
-          "player_id": "00-0040129",
-          "name": "Emeka Egbuka",
-          "team": "TB",
-          "points": 11.2
-        }
-      ],
-      "TE": [
-        {
-          "player_id": "00-0038129",
-          "name": "Cade Otton",
-          "team": "TB",
-          "points": 2.5
-        }
-      ],
-      "FLEX": [
-        {
-          "player_id": "00-0039410",
-          "name": "Ryan Flournoy",
-          "team": "DAL",
-          "points": 9.0
         }
       ],
       "K": [
         {
-          "player_id": "00-0035358",
-          "name": "Chase McLaughlin",
-          "team": "TB",
-          "points": 7.0
+          "player_id": "00-0031492",
+          "name": "Jason Myers",
+          "team": "SEA",
+          "points": 23.0
         }
       ],
       "DST": [
         {
-          "player_id": "TB_DST",
-          "name": "TB D/ST",
-          "team": "TB",
-          "points": 7.0
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "team": "GB",
+          "points": 18.0
         }
       ]
     },
-    "perfect_lineup_total_points": 111.3,
+    "perfect_lineup_total_points": 245.6,
     "bench": [
       {
-        "player_id": "00-0033077",
-        "name": "Dak Prescott",
-        "team": "DAL",
+        "player_id": "00-0039910",
+        "name": "Jayden Daniels",
+        "team": "WAS",
         "position": "QB",
-        "points": 12.6
+        "points": 32.3
       },
       {
-        "player_id": "00-0040237",
-        "name": "Tez Johnson",
-        "team": "TB",
-        "position": "WR",
-        "points": 6.4
-      },
-      {
-        "player_id": "00-0033921",
-        "name": "Chris Godwin Jr.",
-        "team": "TB",
-        "position": "WR",
-        "points": 4.0
-      },
-      {
-        "player_id": "00-0036919",
-        "name": "Kenny Gainwell",
-        "team": "TB",
+        "player_id": "00-0037248",
+        "name": "James Cook",
+        "team": "BUF",
         "position": "RB",
-        "points": 2.8
+        "points": 21.8
       },
       {
-        "player_id": "00-0037801",
-        "name": "KaVontae Turpin",
-        "team": "DAL",
+        "player_id": "00-0039075",
+        "name": "Puka Nacua",
+        "team": "LA",
         "position": "WR",
-        "points": 2.2
+        "points": 20.7
       },
       {
-        "player_id": "00-0039062",
-        "name": "Jonathan Mingo",
+        "player_id": "00-0032764",
+        "name": "Derrick Henry",
+        "team": "BAL",
+        "position": "RB",
+        "points": 20.0
+      },
+      {
+        "player_id": "00-0031408",
+        "name": "Mike Evans",
+        "team": "SF",
+        "position": "WR",
+        "points": 19.3
+      },
+      {
+        "player_id": "00-0037247",
+        "name": "George Pickens",
         "team": "DAL",
         "position": "WR",
-        "points": 2.0
+        "points": 19.0
       }
     ]
   }
