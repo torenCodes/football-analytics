@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-13T15:52:45.719039+00:00"
+    "generated_at": "2026-10-13T17:27:59.731839+00:00"
   },
   "available": true,
   "season": 2026,
@@ -1667,24 +1667,6 @@
           "rank": 42
         },
         {
-          "player_id": "00-0036919",
-          "name": "Kenny Gainwell",
-          "position": "RB",
-          "team": "TB",
-          "opponent": "PIT",
-          "start_score": 6.85,
-          "recent_ppg": 5.36,
-          "games_this_season": 5,
-          "matchup_adj": 0.49,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": true,
-          "team_qb_out": false,
-          "explain": "Averaging 5.4 ppg over 5 game(s) this season. Kenny Gainwell is facing a former team this week, another motivation nudge factored in.",
-          "rank": 43
-        },
-        {
           "player_id": "00-0036158",
           "name": "J.K. Dobbins",
           "position": "RB",
@@ -1700,6 +1682,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 7.2 ppg over 5 game(s) this season.",
+          "rank": 43
+        },
+        {
+          "player_id": "00-0036919",
+          "name": "Kenny Gainwell",
+          "position": "RB",
+          "team": "TB",
+          "opponent": "PIT",
+          "start_score": 6.85,
+          "recent_ppg": 5.36,
+          "games_this_season": 5,
+          "matchup_adj": 0.49,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": true,
+          "team_qb_out": false,
+          "explain": "Averaging 5.4 ppg over 5 game(s) this season. Kenny Gainwell is facing a former team this week, another motivation nudge factored in.",
           "rank": 44
         },
         {
@@ -3689,24 +3689,6 @@
           "rank": 4
         },
         {
-          "player_id": "00-0041145",
-          "name": "Dominic Zvada",
-          "position": "K",
-          "team": "NYG",
-          "opponent": "NO",
-          "start_score": 10.36,
-          "recent_ppg": 9.6,
-          "games_this_season": 5,
-          "matchup_adj": 0.76,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 9.6 ppg over 5 game(s) this season.",
-          "rank": 5
-        },
-        {
           "player_id": "00-0031492",
           "name": "Jason Myers",
           "position": "K",
@@ -3722,6 +3704,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 10.4 ppg over 5 game(s) this season.",
+          "rank": 5
+        },
+        {
+          "player_id": "00-0041145",
+          "name": "Dominic Zvada",
+          "position": "K",
+          "team": "NYG",
+          "opponent": "NO",
+          "start_score": 10.36,
+          "recent_ppg": 9.6,
+          "games_this_season": 5,
+          "matchup_adj": 0.76,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 9.6 ppg over 5 game(s) this season.",
           "rank": 6
         },
         {
@@ -3815,24 +3815,6 @@
           "rank": 11
         },
         {
-          "player_id": "00-0041182",
-          "name": "Drew Stevens",
-          "position": "K",
-          "team": "WAS",
-          "opponent": "SF",
-          "start_score": 8.76,
-          "recent_ppg": 7.8,
-          "games_this_season": 5,
-          "matchup_adj": 0.96,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 7.8 ppg over 5 game(s) this season.",
-          "rank": 12
-        },
-        {
           "player_id": "00-0033303",
           "name": "Harrison Butker",
           "position": "K",
@@ -3848,6 +3830,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 8.5 ppg over 4 game(s) this season.",
+          "rank": 12
+        },
+        {
+          "player_id": "00-0041182",
+          "name": "Drew Stevens",
+          "position": "K",
+          "team": "WAS",
+          "opponent": "SF",
+          "start_score": 8.76,
+          "recent_ppg": 7.8,
+          "games_this_season": 5,
+          "matchup_adj": 0.96,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 7.8 ppg over 5 game(s) this season.",
           "rank": 13
         },
         {
@@ -4195,11 +4195,11 @@
           "rank": 4
         },
         {
-          "player_id": "DEN_DST",
-          "name": "DEN D/ST",
+          "player_id": "NYJ_DST",
+          "name": "NYJ D/ST",
           "position": "DST",
-          "team": "DEN",
-          "opponent": "SEA",
+          "team": "NYJ",
+          "opponent": "NE",
           "start_score": 7.4,
           "recent_ppg": 7.4,
           "games_this_season": 5,
@@ -4213,11 +4213,11 @@
           "rank": 5
         },
         {
-          "player_id": "NYJ_DST",
-          "name": "NYJ D/ST",
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
           "position": "DST",
-          "team": "NYJ",
-          "opponent": "NE",
+          "team": "DEN",
+          "opponent": "SEA",
           "start_score": 7.4,
           "recent_ppg": 7.4,
           "games_this_season": 5,
@@ -4267,24 +4267,6 @@
           "rank": 8
         },
         {
-          "player_id": "HOU_DST",
-          "name": "HOU D/ST",
-          "position": "DST",
-          "team": "HOU",
-          "opponent": "JAX",
-          "start_score": 6.4,
-          "recent_ppg": 6.4,
-          "games_this_season": 5,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 6.4 ppg over 5 game(s) this season.",
-          "rank": 9
-        },
-        {
           "player_id": "SF_DST",
           "name": "SF D/ST",
           "position": "DST",
@@ -4300,16 +4282,16 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.4 ppg over 5 game(s) this season.",
-          "rank": 10
+          "rank": 9
         },
         {
-          "player_id": "NE_DST",
-          "name": "NE D/ST",
+          "player_id": "HOU_DST",
+          "name": "HOU D/ST",
           "position": "DST",
-          "team": "NE",
-          "opponent": "NYJ",
-          "start_score": 6.2,
-          "recent_ppg": 6.2,
+          "team": "HOU",
+          "opponent": "JAX",
+          "start_score": 6.4,
+          "recent_ppg": 6.4,
           "games_this_season": 5,
           "matchup_adj": null,
           "matchup_source": null,
@@ -4317,8 +4299,8 @@
           "former_coach_matchup": false,
           "former_team_matchup": false,
           "team_qb_out": false,
-          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
-          "rank": 11
+          "explain": "Averaging 6.4 ppg over 5 game(s) this season.",
+          "rank": 10
         },
         {
           "player_id": "CHI_DST",
@@ -4336,16 +4318,16 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
-          "rank": 12
+          "rank": 11
         },
         {
-          "player_id": "GB_DST",
-          "name": "GB D/ST",
+          "player_id": "NE_DST",
+          "name": "NE D/ST",
           "position": "DST",
-          "team": "GB",
-          "opponent": "DAL",
-          "start_score": 6.0,
-          "recent_ppg": 6.0,
+          "team": "NE",
+          "opponent": "NYJ",
+          "start_score": 6.2,
+          "recent_ppg": 6.2,
           "games_this_season": 5,
           "matchup_adj": null,
           "matchup_source": null,
@@ -4353,8 +4335,8 @@
           "former_coach_matchup": false,
           "former_team_matchup": false,
           "team_qb_out": false,
-          "explain": "Averaging 6.0 ppg over 5 game(s) this season.",
-          "rank": 13
+          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
+          "rank": 12
         },
         {
           "player_id": "CLE_DST",
@@ -4372,7 +4354,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.0 ppg over 5 game(s) this season.",
-          "rank": 14
+          "rank": 13
         },
         {
           "player_id": "KC_DST",
@@ -4390,6 +4372,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.0 ppg over 4 game(s) this season.",
+          "rank": 14
+        },
+        {
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "position": "DST",
+          "team": "GB",
+          "opponent": "DAL",
+          "start_score": 6.0,
+          "recent_ppg": 6.0,
+          "games_this_season": 5,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 6.0 ppg over 5 game(s) this season.",
           "rank": 15
         },
         {
@@ -4868,24 +4868,6 @@
           "rank": 13
         },
         {
-          "player_id": "00-0033119",
-          "name": "Jacoby Brissett",
-          "position": "QB",
-          "team": "ARI",
-          "opponent": "LA",
-          "start_score": 17.25,
-          "recent_ppg": 16.66,
-          "games_this_season": 5,
-          "matchup_adj": 0.59,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 16.7 ppg over 5 game(s) this season.",
-          "rank": 14
-        },
-        {
           "player_id": "00-0036389",
           "name": "Jalen Hurts",
           "position": "QB",
@@ -4901,6 +4883,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 16.0 ppg over 5 game(s) this season.",
+          "rank": 14
+        },
+        {
+          "player_id": "00-0033119",
+          "name": "Jacoby Brissett",
+          "position": "QB",
+          "team": "ARI",
+          "opponent": "LA",
+          "start_score": 17.25,
+          "recent_ppg": 16.66,
+          "games_this_season": 5,
+          "matchup_adj": 0.59,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 16.7 ppg over 5 game(s) this season.",
           "rank": 15
         },
         {
@@ -6130,21 +6130,21 @@
           "rank": 33
         },
         {
-          "player_id": "00-0033906",
-          "name": "Alvin Kamara",
+          "player_id": "00-0039738",
+          "name": "Blake Corum",
           "position": "RB",
-          "team": "NO",
-          "opponent": "NYG",
+          "team": "LA",
+          "opponent": "ARI",
           "start_score": 6.38,
-          "recent_ppg": 6.18,
-          "games_this_season": 4,
-          "matchup_adj": 0.2,
+          "recent_ppg": 6.28,
+          "games_this_season": 5,
+          "matchup_adj": 0.1,
           "matchup_source": "current_season",
           "injury_status": null,
           "former_coach_matchup": false,
           "former_team_matchup": false,
           "team_qb_out": false,
-          "explain": "Averaging 6.2 ppg over 4 game(s) this season.",
+          "explain": "Averaging 6.3 ppg over 5 game(s) this season.",
           "rank": 34
         },
         {
@@ -6166,21 +6166,21 @@
           "rank": 35
         },
         {
-          "player_id": "00-0039738",
-          "name": "Blake Corum",
+          "player_id": "00-0033906",
+          "name": "Alvin Kamara",
           "position": "RB",
-          "team": "LA",
-          "opponent": "ARI",
+          "team": "NO",
+          "opponent": "NYG",
           "start_score": 6.38,
-          "recent_ppg": 6.28,
-          "games_this_season": 5,
-          "matchup_adj": 0.1,
+          "recent_ppg": 6.18,
+          "games_this_season": 4,
+          "matchup_adj": 0.2,
           "matchup_source": "current_season",
           "injury_status": null,
           "former_coach_matchup": false,
           "former_team_matchup": false,
           "team_qb_out": false,
-          "explain": "Averaging 6.3 ppg over 5 game(s) this season.",
+          "explain": "Averaging 6.2 ppg over 4 game(s) this season.",
           "rank": 36
         },
         {
@@ -7212,24 +7212,6 @@
           "rank": 43
         },
         {
-          "player_id": "00-0038117",
-          "name": "Wan'Dale Robinson",
-          "position": "WR",
-          "team": "TEN",
-          "opponent": "IND",
-          "start_score": 6.12,
-          "recent_ppg": 5.94,
-          "games_this_season": 5,
-          "matchup_adj": 0.18,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.9 ppg over 5 game(s) this season.",
-          "rank": 44
-        },
-        {
           "player_id": "00-0039919",
           "name": "Rome Odunze",
           "position": "WR",
@@ -7245,6 +7227,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.1 ppg over 5 game(s) this season.",
+          "rank": 44
+        },
+        {
+          "player_id": "00-0038117",
+          "name": "Wan'Dale Robinson",
+          "position": "WR",
+          "team": "TEN",
+          "opponent": "IND",
+          "start_score": 6.12,
+          "recent_ppg": 5.94,
+          "games_this_season": 5,
+          "matchup_adj": 0.18,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.9 ppg over 5 game(s) this season.",
           "rank": 45
         },
         {
@@ -7592,8 +7592,8 @@
           "rank": 14
         },
         {
-          "player_id": "00-0039489",
-          "name": "Hayden Rucci",
+          "player_id": "00-0033885",
+          "name": "David Njoku",
           "position": "TE",
           "team": "LAC",
           "opponent": "KC",
@@ -7610,8 +7610,8 @@
           "rank": 15
         },
         {
-          "player_id": "00-0033885",
-          "name": "David Njoku",
+          "player_id": "00-0039489",
+          "name": "Hayden Rucci",
           "position": "TE",
           "team": "LAC",
           "opponent": "KC",
@@ -7626,24 +7626,6 @@
           "team_qb_out": false,
           "explain": "Averaging 3.4 ppg over 2 game(s) this season. Facing KC, a favorable matchup for TEs this week.",
           "rank": 16
-        },
-        {
-          "player_id": "00-0035644",
-          "name": "Noah Fant",
-          "position": "TE",
-          "team": "NO",
-          "opponent": "NYG",
-          "start_score": 5.96,
-          "recent_ppg": 6.33,
-          "games_this_season": 4,
-          "matchup_adj": -0.36,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 6.3 ppg over 4 game(s) this season.",
-          "rank": 17
         },
         {
           "player_id": "00-0040189",
@@ -7661,6 +7643,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 3.0 ppg over 5 game(s) this season. Facing KC, a favorable matchup for TEs this week.",
+          "rank": 17
+        },
+        {
+          "player_id": "00-0035644",
+          "name": "Noah Fant",
+          "position": "TE",
+          "team": "NO",
+          "opponent": "NYG",
+          "start_score": 5.96,
+          "recent_ppg": 6.33,
+          "games_this_season": 4,
+          "matchup_adj": -0.36,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 6.3 ppg over 4 game(s) this season.",
           "rank": 18
         },
         {
@@ -8314,24 +8314,6 @@
           "rank": 4
         },
         {
-          "player_id": "00-0041145",
-          "name": "Dominic Zvada",
-          "position": "K",
-          "team": "NYG",
-          "opponent": "NO",
-          "start_score": 10.36,
-          "recent_ppg": 9.6,
-          "games_this_season": 5,
-          "matchup_adj": 0.76,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 9.6 ppg over 5 game(s) this season.",
-          "rank": 5
-        },
-        {
           "player_id": "00-0031492",
           "name": "Jason Myers",
           "position": "K",
@@ -8347,6 +8329,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 10.4 ppg over 5 game(s) this season.",
+          "rank": 5
+        },
+        {
+          "player_id": "00-0041145",
+          "name": "Dominic Zvada",
+          "position": "K",
+          "team": "NYG",
+          "opponent": "NO",
+          "start_score": 10.36,
+          "recent_ppg": 9.6,
+          "games_this_season": 5,
+          "matchup_adj": 0.76,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 9.6 ppg over 5 game(s) this season.",
           "rank": 6
         },
         {
@@ -8440,24 +8440,6 @@
           "rank": 11
         },
         {
-          "player_id": "00-0041182",
-          "name": "Drew Stevens",
-          "position": "K",
-          "team": "WAS",
-          "opponent": "SF",
-          "start_score": 8.76,
-          "recent_ppg": 7.8,
-          "games_this_season": 5,
-          "matchup_adj": 0.96,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 7.8 ppg over 5 game(s) this season.",
-          "rank": 12
-        },
-        {
           "player_id": "00-0033303",
           "name": "Harrison Butker",
           "position": "K",
@@ -8473,6 +8455,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 8.5 ppg over 4 game(s) this season.",
+          "rank": 12
+        },
+        {
+          "player_id": "00-0041182",
+          "name": "Drew Stevens",
+          "position": "K",
+          "team": "WAS",
+          "opponent": "SF",
+          "start_score": 8.76,
+          "recent_ppg": 7.8,
+          "games_this_season": 5,
+          "matchup_adj": 0.96,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 7.8 ppg over 5 game(s) this season.",
           "rank": 13
         },
         {
@@ -8820,11 +8820,11 @@
           "rank": 4
         },
         {
-          "player_id": "DEN_DST",
-          "name": "DEN D/ST",
+          "player_id": "NYJ_DST",
+          "name": "NYJ D/ST",
           "position": "DST",
-          "team": "DEN",
-          "opponent": "SEA",
+          "team": "NYJ",
+          "opponent": "NE",
           "start_score": 7.4,
           "recent_ppg": 7.4,
           "games_this_season": 5,
@@ -8838,11 +8838,11 @@
           "rank": 5
         },
         {
-          "player_id": "NYJ_DST",
-          "name": "NYJ D/ST",
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
           "position": "DST",
-          "team": "NYJ",
-          "opponent": "NE",
+          "team": "DEN",
+          "opponent": "SEA",
           "start_score": 7.4,
           "recent_ppg": 7.4,
           "games_this_season": 5,
@@ -8892,24 +8892,6 @@
           "rank": 8
         },
         {
-          "player_id": "HOU_DST",
-          "name": "HOU D/ST",
-          "position": "DST",
-          "team": "HOU",
-          "opponent": "JAX",
-          "start_score": 6.4,
-          "recent_ppg": 6.4,
-          "games_this_season": 5,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 6.4 ppg over 5 game(s) this season.",
-          "rank": 9
-        },
-        {
           "player_id": "SF_DST",
           "name": "SF D/ST",
           "position": "DST",
@@ -8925,16 +8907,16 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.4 ppg over 5 game(s) this season.",
-          "rank": 10
+          "rank": 9
         },
         {
-          "player_id": "NE_DST",
-          "name": "NE D/ST",
+          "player_id": "HOU_DST",
+          "name": "HOU D/ST",
           "position": "DST",
-          "team": "NE",
-          "opponent": "NYJ",
-          "start_score": 6.2,
-          "recent_ppg": 6.2,
+          "team": "HOU",
+          "opponent": "JAX",
+          "start_score": 6.4,
+          "recent_ppg": 6.4,
           "games_this_season": 5,
           "matchup_adj": null,
           "matchup_source": null,
@@ -8942,8 +8924,8 @@
           "former_coach_matchup": false,
           "former_team_matchup": false,
           "team_qb_out": false,
-          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
-          "rank": 11
+          "explain": "Averaging 6.4 ppg over 5 game(s) this season.",
+          "rank": 10
         },
         {
           "player_id": "CHI_DST",
@@ -8961,16 +8943,16 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
-          "rank": 12
+          "rank": 11
         },
         {
-          "player_id": "GB_DST",
-          "name": "GB D/ST",
+          "player_id": "NE_DST",
+          "name": "NE D/ST",
           "position": "DST",
-          "team": "GB",
-          "opponent": "DAL",
-          "start_score": 6.0,
-          "recent_ppg": 6.0,
+          "team": "NE",
+          "opponent": "NYJ",
+          "start_score": 6.2,
+          "recent_ppg": 6.2,
           "games_this_season": 5,
           "matchup_adj": null,
           "matchup_source": null,
@@ -8978,8 +8960,8 @@
           "former_coach_matchup": false,
           "former_team_matchup": false,
           "team_qb_out": false,
-          "explain": "Averaging 6.0 ppg over 5 game(s) this season.",
-          "rank": 13
+          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
+          "rank": 12
         },
         {
           "player_id": "CLE_DST",
@@ -8997,7 +8979,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.0 ppg over 5 game(s) this season.",
-          "rank": 14
+          "rank": 13
         },
         {
           "player_id": "KC_DST",
@@ -9015,6 +8997,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.0 ppg over 4 game(s) this season.",
+          "rank": 14
+        },
+        {
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "position": "DST",
+          "team": "GB",
+          "opponent": "DAL",
+          "start_score": 6.0,
+          "recent_ppg": 6.0,
+          "games_this_season": 5,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 6.0 ppg over 5 game(s) this season.",
           "rank": 15
         },
         {
