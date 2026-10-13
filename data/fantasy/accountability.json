@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-13T12:36:03.775986+00:00"
+    "generated_at": "2026-10-13T15:52:45.719039+00:00"
   },
   "available": true,
   "season": 2026,
@@ -404,7 +404,7 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 10.7,
+        "mean_abs_rank_error": 10.9,
         "hit_rate_within_5": 0.259,
         "biggest_steals": [
           {
@@ -438,8 +438,8 @@
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 15,
-            "rank_error": -21,
+            "actual_rank": 13,
+            "rank_error": -23,
             "games": 5,
             "ppg": 9.0
           },
@@ -476,8 +476,8 @@
             "player_id": "00-0040200",
             "name": "Andy Borregales",
             "preseason_rank": 9,
-            "actual_rank": 25,
-            "rank_error": 16,
+            "actual_rank": 26,
+            "rank_error": 17,
             "games": 5,
             "ppg": 6.4
           },
@@ -485,8 +485,8 @@
             "player_id": "00-0037692",
             "name": "Brandon Aubrey",
             "preseason_rank": 3,
-            "actual_rank": 14,
-            "rank_error": 11,
+            "actual_rank": 15,
+            "rank_error": 12,
             "games": 5,
             "ppg": 9.0
           },
@@ -503,15 +503,15 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.0,
+        "mean_abs_rank_error": 7.9,
         "hit_rate_within_5": 0.5,
         "biggest_steals": [
           {
             "player_id": "NYJ_DST",
             "name": "NYJ D/ST",
             "preseason_rank": 32,
-            "actual_rank": 7,
-            "rank_error": -25,
+            "actual_rank": 8,
+            "rank_error": -24,
             "games": 5,
             "ppg": 7.4
           },
@@ -1000,7 +1000,7 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 10.7,
+        "mean_abs_rank_error": 10.9,
         "hit_rate_within_5": 0.259,
         "biggest_steals": [
           {
@@ -1034,8 +1034,8 @@
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 15,
-            "rank_error": -21,
+            "actual_rank": 13,
+            "rank_error": -23,
             "games": 5,
             "ppg": 9.0
           },
@@ -1072,8 +1072,8 @@
             "player_id": "00-0040200",
             "name": "Andy Borregales",
             "preseason_rank": 9,
-            "actual_rank": 25,
-            "rank_error": 16,
+            "actual_rank": 26,
+            "rank_error": 17,
             "games": 5,
             "ppg": 6.4
           },
@@ -1081,8 +1081,8 @@
             "player_id": "00-0037692",
             "name": "Brandon Aubrey",
             "preseason_rank": 3,
-            "actual_rank": 14,
-            "rank_error": 11,
+            "actual_rank": 15,
+            "rank_error": 12,
             "games": 5,
             "ppg": 9.0
           },
@@ -1099,15 +1099,15 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.0,
+        "mean_abs_rank_error": 7.9,
         "hit_rate_within_5": 0.5,
         "biggest_steals": [
           {
             "player_id": "NYJ_DST",
             "name": "NYJ D/ST",
             "preseason_rank": 32,
-            "actual_rank": 7,
-            "rank_error": -25,
+            "actual_rank": 8,
+            "rank_error": -24,
             "games": 5,
             "ppg": 7.4
           },
