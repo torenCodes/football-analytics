@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-13T17:27:59.731839+00:00"
+    "generated_at": "2026-10-15T00:24:32.228156+00:00"
   },
   "available": true,
   "season": 2026,
@@ -359,8 +359,8 @@
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 10,
-            "actual_rank": 47,
-            "rank_error": 37,
+            "actual_rank": 48,
+            "rank_error": 38,
             "games": 4,
             "ppg": 1.6
           },
@@ -404,7 +404,7 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 10.7,
+        "mean_abs_rank_error": 10.9,
         "hit_rate_within_5": 0.259,
         "biggest_steals": [
           {
@@ -438,8 +438,8 @@
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 15,
-            "rank_error": -21,
+            "actual_rank": 13,
+            "rank_error": -23,
             "games": 5,
             "ppg": 9.0
           },
@@ -482,6 +482,15 @@
             "ppg": 6.4
           },
           {
+            "player_id": "00-0037692",
+            "name": "Brandon Aubrey",
+            "preseason_rank": 3,
+            "actual_rank": 15,
+            "rank_error": 12,
+            "games": 5,
+            "ppg": 9.0
+          },
+          {
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
@@ -489,15 +498,6 @@
             "rank_error": 10,
             "games": 5,
             "ppg": 7.0
-          },
-          {
-            "player_id": "00-0037692",
-            "name": "Brandon Aubrey",
-            "preseason_rank": 3,
-            "actual_rank": 13,
-            "rank_error": 10,
-            "games": 5,
-            "ppg": 9.0
           }
         ]
       },
@@ -546,8 +546,8 @@
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 15,
-            "rank_error": -13,
+            "actual_rank": 16,
+            "rank_error": -12,
             "games": 5,
             "ppg": 6.0
           }
@@ -581,6 +581,15 @@
             "ppg": 4.2
           },
           {
+            "player_id": "BUF_DST",
+            "name": "BUF D/ST",
+            "preseason_rank": 14,
+            "actual_rank": 26,
+            "rank_error": 12,
+            "games": 5,
+            "ppg": 3.6
+          },
+          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -588,15 +597,6 @@
             "rank_error": 12,
             "games": 5,
             "ppg": 3.8
-          },
-          {
-            "player_id": "BUF_DST",
-            "name": "BUF D/ST",
-            "preseason_rank": 14,
-            "actual_rank": 25,
-            "rank_error": 11,
-            "games": 5,
-            "ppg": 3.6
           }
         ]
       }
@@ -955,8 +955,8 @@
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 8,
-            "actual_rank": 49,
-            "rank_error": 41,
+            "actual_rank": 50,
+            "rank_error": 42,
             "games": 4,
             "ppg": 0.6
           },
@@ -1000,7 +1000,7 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 10.7,
+        "mean_abs_rank_error": 10.9,
         "hit_rate_within_5": 0.259,
         "biggest_steals": [
           {
@@ -1034,8 +1034,8 @@
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 15,
-            "rank_error": -21,
+            "actual_rank": 13,
+            "rank_error": -23,
             "games": 5,
             "ppg": 9.0
           },
@@ -1078,6 +1078,15 @@
             "ppg": 6.4
           },
           {
+            "player_id": "00-0037692",
+            "name": "Brandon Aubrey",
+            "preseason_rank": 3,
+            "actual_rank": 15,
+            "rank_error": 12,
+            "games": 5,
+            "ppg": 9.0
+          },
+          {
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
@@ -1085,15 +1094,6 @@
             "rank_error": 10,
             "games": 5,
             "ppg": 7.0
-          },
-          {
-            "player_id": "00-0037692",
-            "name": "Brandon Aubrey",
-            "preseason_rank": 3,
-            "actual_rank": 13,
-            "rank_error": 10,
-            "games": 5,
-            "ppg": 9.0
           }
         ]
       },
@@ -1142,8 +1142,8 @@
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 15,
-            "rank_error": -13,
+            "actual_rank": 16,
+            "rank_error": -12,
             "games": 5,
             "ppg": 6.0
           }
@@ -1177,6 +1177,15 @@
             "ppg": 4.2
           },
           {
+            "player_id": "BUF_DST",
+            "name": "BUF D/ST",
+            "preseason_rank": 14,
+            "actual_rank": 26,
+            "rank_error": 12,
+            "games": 5,
+            "ppg": 3.6
+          },
+          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -1184,15 +1193,6 @@
             "rank_error": 12,
             "games": 5,
             "ppg": 3.8
-          },
-          {
-            "player_id": "BUF_DST",
-            "name": "BUF D/ST",
-            "preseason_rank": 14,
-            "actual_rank": 25,
-            "rank_error": 11,
-            "games": 5,
-            "ppg": 3.6
           }
         ]
       }
