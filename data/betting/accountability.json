@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-15T00:49:46.967044+00:00"
+    "generated_at": "2026-10-17T00:45:59.618461+00:00"
   },
   "weeks_graded": 6,
   "ats": {
@@ -1090,7 +1090,7 @@
     {
       "season": 2026,
       "week": 6,
-      "locked_at": "2026-10-13T17:46:41.208412+00:00",
+      "locked_at": "2026-10-17T00:45:59.613685+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -1107,7 +1107,7 @@
           "home_team": "JAX",
           "away_team": "HOU",
           "model_margin_home": 5.4,
-          "spread_home": 3.0,
+          "spread_home": 2.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -1120,8 +1120,8 @@
           "home_team": "CLE",
           "away_team": "BAL",
           "model_margin_home": -4.2,
-          "spread_home": -4.5,
-          "our_pick": "home",
+          "spread_home": -3.0,
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -1172,20 +1172,7 @@
           "home_team": "KC",
           "away_team": "LAC",
           "model_margin_home": 9.7,
-          "spread_home": 8.5,
-          "our_pick": "home",
-          "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
-        },
-        {
-          "game_id": "2026_06_SEA_DEN",
-          "home_team": "DEN",
-          "away_team": "SEA",
-          "model_margin_home": -0.0,
-          "spread_home": -3.0,
+          "spread_home": 7.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -1224,8 +1211,8 @@
           "home_team": "PHI",
           "away_team": "CAR",
           "model_margin_home": -0.1,
-          "spread_home": 1.5,
-          "our_pick": "away",
+          "spread_home": -3.0,
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -1237,7 +1224,7 @@
           "home_team": "ATL",
           "away_team": "CHI",
           "model_margin_home": 0.5,
-          "spread_home": -3.0,
+          "spread_home": -1.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
