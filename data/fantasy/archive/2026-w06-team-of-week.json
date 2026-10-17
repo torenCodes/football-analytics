@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 6,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0034869",
+          "name": "Sam Darnold",
+          "team": "SEA",
+          "points": 11.0
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0040730",
+          "name": "RJ Harvey",
+          "team": "DEN",
+          "points": 14.6
+        },
+        {
+          "player_id": "00-0036158",
+          "name": "J.K. Dobbins",
+          "team": "DEN",
+          "points": 13.6
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 25.4
+        },
+        {
+          "player_id": "00-0037545",
+          "name": "Rashid Shaheed",
+          "team": "SEA",
+          "points": 11.8
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0039793",
+          "name": "AJ Barner",
+          "team": "SEA",
+          "points": 4.6
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0033908",
+          "name": "Cooper Kupp",
+          "team": "SEA",
+          "points": 10.0
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0032569",
+          "name": "Wil Lutz",
+          "team": "DEN",
+          "points": 7.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
+          "team": "DEN",
+          "points": 12.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 110.0,
+    "bench": [
+      {
+        "player_id": "00-0039299",
+        "name": "George Holani",
+        "team": "SEA",
+        "position": "RB",
+        "points": 8.0
+      },
+      {
+        "player_id": "00-0036613",
+        "name": "Jaylen Waddle",
+        "team": "DEN",
+        "position": "WR",
+        "points": 6.4
+      },
+      {
+        "player_id": "00-0038797",
+        "name": "Emanuel Wilson",
+        "team": "SEA",
+        "position": "RB",
+        "points": 5.2
+      },
+      {
+        "player_id": "00-0039732",
+        "name": "Bo Nix",
+        "team": "DEN",
+        "position": "QB",
+        "points": 4.5
+      },
+      {
+        "player_id": "00-0034348",
+        "name": "Courtland Sutton",
+        "team": "DEN",
+        "position": "WR",
+        "points": 3.9
+      },
+      {
+        "player_id": "00-0038976",
+        "name": "Marvin Mims Jr.",
+        "team": "DEN",
+        "position": "WR",
+        "points": 3.3
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 6,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0034869",
+          "name": "Sam Darnold",
+          "team": "SEA",
+          "points": 11.0
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0040730",
+          "name": "RJ Harvey",
+          "team": "DEN",
+          "points": 11.6
+        },
+        {
+          "player_id": "00-0036158",
+          "name": "J.K. Dobbins",
+          "team": "DEN",
+          "points": 10.6
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038543",
+          "name": "Jaxon Smith-Njigba",
+          "team": "SEA",
+          "points": 13.4
+        },
+        {
+          "player_id": "00-0037545",
+          "name": "Rashid Shaheed",
+          "team": "SEA",
+          "points": 6.8
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0039793",
+          "name": "AJ Barner",
+          "team": "SEA",
+          "points": 1.6
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039299",
+          "name": "George Holani",
+          "team": "SEA",
+          "points": 8.0
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0032569",
+          "name": "Wil Lutz",
+          "team": "DEN",
+          "points": 7.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "DEN_DST",
+          "name": "DEN D/ST",
+          "team": "DEN",
+          "points": 12.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 82.0,
+    "bench": [
+      {
+        "player_id": "00-0038797",
+        "name": "Emanuel Wilson",
+        "team": "SEA",
+        "position": "RB",
+        "points": 5.2
+      },
+      {
+        "player_id": "00-0033908",
+        "name": "Cooper Kupp",
+        "team": "SEA",
+        "position": "WR",
+        "points": 5.0
+      },
+      {
+        "player_id": "00-0039732",
+        "name": "Bo Nix",
+        "team": "DEN",
+        "position": "QB",
+        "points": 4.5
+      },
+      {
+        "player_id": "00-0036613",
+        "name": "Jaylen Waddle",
+        "team": "DEN",
+        "position": "WR",
+        "points": 2.4
+      },
+      {
+        "player_id": "00-0034348",
+        "name": "Courtland Sutton",
+        "team": "DEN",
+        "position": "WR",
+        "points": 1.9
+      },
+      {
+        "player_id": "00-0037745",
+        "name": "Velus Jones Jr.",
+        "team": "SEA",
+        "position": "RB",
+        "points": 1.9
+      }
+    ]
+  }
+}
