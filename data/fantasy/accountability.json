@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-17T00:17:39.264532+00:00"
+    "generated_at": "2026-10-17T05:32:50.674265+00:00"
   },
   "available": true,
   "season": 2026,
@@ -359,8 +359,8 @@
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 10,
-            "actual_rank": 46,
-            "rank_error": 36,
+            "actual_rank": 47,
+            "rank_error": 37,
             "games": 4,
             "ppg": 1.6
           },
@@ -377,8 +377,8 @@
             "player_id": "00-0040126",
             "name": "Colston Loveland",
             "preseason_rank": 9,
-            "actual_rank": 33,
-            "rank_error": 24,
+            "actual_rank": 32,
+            "rank_error": 23,
             "games": 5,
             "ppg": 4.8
           },
@@ -485,8 +485,8 @@
             "player_id": "00-0037692",
             "name": "Brandon Aubrey",
             "preseason_rank": 3,
-            "actual_rank": 15,
-            "rank_error": 12,
+            "actual_rank": 14,
+            "rank_error": 11,
             "games": 5,
             "ppg": 9.0
           },
@@ -503,8 +503,8 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.2,
-        "hit_rate_within_5": 0.5,
+        "mean_abs_rank_error": 8.1,
+        "hit_rate_within_5": 0.469,
         "biggest_steals": [
           {
             "player_id": "NYJ_DST",
@@ -581,15 +581,6 @@
             "ppg": 4.2
           },
           {
-            "player_id": "BUF_DST",
-            "name": "BUF D/ST",
-            "preseason_rank": 14,
-            "actual_rank": 26,
-            "rank_error": 12,
-            "games": 5,
-            "ppg": 3.6
-          },
-          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -597,6 +588,15 @@
             "rank_error": 12,
             "games": 5,
             "ppg": 3.8
+          },
+          {
+            "player_id": "BUF_DST",
+            "name": "BUF D/ST",
+            "preseason_rank": 14,
+            "actual_rank": 25,
+            "rank_error": 11,
+            "games": 5,
+            "ppg": 3.6
           }
         ]
       }
@@ -901,7 +901,7 @@
       },
       "TE": {
         "players_graded": 36,
-        "mean_abs_rank_error": 11.8,
+        "mean_abs_rank_error": 11.9,
         "hit_rate_within_5": 0.444,
         "biggest_steals": [
           {
@@ -955,8 +955,8 @@
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 8,
-            "actual_rank": 49,
-            "rank_error": 41,
+            "actual_rank": 50,
+            "rank_error": 42,
             "games": 4,
             "ppg": 0.6
           },
@@ -1081,8 +1081,8 @@
             "player_id": "00-0037692",
             "name": "Brandon Aubrey",
             "preseason_rank": 3,
-            "actual_rank": 15,
-            "rank_error": 12,
+            "actual_rank": 14,
+            "rank_error": 11,
             "games": 5,
             "ppg": 9.0
           },
@@ -1099,8 +1099,8 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.2,
-        "hit_rate_within_5": 0.5,
+        "mean_abs_rank_error": 8.1,
+        "hit_rate_within_5": 0.469,
         "biggest_steals": [
           {
             "player_id": "NYJ_DST",
@@ -1177,15 +1177,6 @@
             "ppg": 4.2
           },
           {
-            "player_id": "BUF_DST",
-            "name": "BUF D/ST",
-            "preseason_rank": 14,
-            "actual_rank": 26,
-            "rank_error": 12,
-            "games": 5,
-            "ppg": 3.6
-          },
-          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -1193,6 +1184,15 @@
             "rank_error": 12,
             "games": 5,
             "ppg": 3.8
+          },
+          {
+            "player_id": "BUF_DST",
+            "name": "BUF D/ST",
+            "preseason_rank": 14,
+            "actual_rank": 25,
+            "rank_error": 11,
+            "games": 5,
+            "ppg": 3.6
           }
         ]
       }
