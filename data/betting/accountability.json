@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-17T00:45:59.618461+00:00"
+    "generated_at": "2026-10-17T06:08:43.735600+00:00"
   },
   "weeks_graded": 6,
   "ats": {
@@ -1090,7 +1090,7 @@
     {
       "season": 2026,
       "week": 6,
-      "locked_at": "2026-10-17T00:45:59.613685+00:00",
+      "locked_at": "2026-10-17T06:08:43.730696+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -1119,9 +1119,9 @@
           "game_id": "2026_06_BAL_CLE",
           "home_team": "CLE",
           "away_team": "BAL",
-          "model_margin_home": -4.2,
+          "model_margin_home": -0.2,
           "spread_home": -3.0,
-          "our_pick": "away",
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -1210,9 +1210,9 @@
           "game_id": "2026_06_CAR_PHI",
           "home_team": "PHI",
           "away_team": "CAR",
-          "model_margin_home": -0.1,
+          "model_margin_home": -4.1,
           "spread_home": -3.0,
-          "our_pick": "home",
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -1249,7 +1249,7 @@
           "game_id": "2026_06_PIT_TB",
           "home_team": "TB",
           "away_team": "PIT",
-          "model_margin_home": 2.0,
+          "model_margin_home": -2.0,
           "spread_home": -2.5,
           "our_pick": "home",
           "no_lean": false,
