@@ -144,12 +144,44 @@
   </div>
 </main>
 
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="site-logo"><img src="images/logo_small_white.png" alt="" class="site-logo-img">Football Forecast</a>
+      <p>NFL fantasy and Game Picks research built on public data — every pick is frozen before kickoff and graded in public afterward.</p>
+      <p class="footer-project">This site is a <a href="https://databytoren.com">databytoren.com</a> project.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <div class="footer-heading">Explore</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fantasy.html">Fantasy</a></li>
+        <li><a href="betting.html">Game Picks</a></li>
+        <li><a href="betting.html#track-record-section">Track Record</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <div class="footer-heading">Data from</div>
+      <ul>
+        <li><a href="https://github.com/nflverse">nflverse</a></li>
+        <li><a href="https://www.fantasypros.com">FantasyPros</a> consensus</li>
+        <li><a href="https://www.weather.gov">National Weather Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer-bottom">
+    <span>&copy; <span id="footer-year">2026</span> DataByToren. Not affiliated with or endorsed by the NFL or any of its teams.</span>
+    <a href="#">Back to top &uarr;</a>
+  </div>
+</footer>
+
 <script>
 function toggleSiteNav(btn) {
   const links = document.querySelector('.site-nav-links');
   const open = links.classList.toggle('open');
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
 }
+document.getElementById('footer-year').textContent = new Date().getFullYear();
 
 function fmt1(n) { return (n === null || n === undefined) ? '—' : (Math.round(n * 10) / 10).toFixed(1).replace('-', '−'); }
 

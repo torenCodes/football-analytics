@@ -407,3 +407,30 @@ table.tight-table .num { text-align: right; }
 .ledger-row { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); font-size: 13px; padding: 2px 0; color: var(--text-2); }
 .ledger-row span:last-child { font-family: var(--font-mono); white-space: nowrap; color: var(--text); }
 .ledger-total { border-top: 1px solid var(--line); margin-top: 4px; padding-top: 6px; font-weight: 700; color: var(--text); }
+
+/* ---- Site footer: the header's mowed-turf bar, closing out every page ---- */
+.site-footer {
+  background-color: var(--header);
+  background-image: repeating-linear-gradient(90deg, transparent 0 80px, rgba(255,255,255,0.035) 80px 160px);
+  border-top: 3px solid var(--turf);
+  color: var(--on-header-muted);
+  font-size: 14px; line-height: 1.6;
+}
+.site-footer-inner, .site-footer-bottom { max-width: var(--max-width); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+.site-footer-inner { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-6); padding-top: var(--space-7); padding-bottom: var(--space-6); }
+.footer-brand p { margin: var(--space-3) 0 0; max-width: 46ch; }
+.footer-brand .footer-project { color: var(--on-header); font-weight: 600; }
+.footer-heading { font-family: var(--font-condensed); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--flag); margin-bottom: var(--space-2); }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { padding: 3px 0; }
+.site-footer a:not(.site-logo) { color: var(--on-header); text-decoration-color: rgba(255,255,255,0.4); }
+.site-footer li a { text-decoration: none; }
+.site-footer a:not(.site-logo):hover { text-decoration: underline; text-decoration-color: var(--flag); }
+.site-footer :focus-visible { outline-color: var(--flag); }
+.site-footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: var(--space-2) var(--space-5); padding-top: var(--space-4); padding-bottom: var(--space-5); border-top: 1px solid rgba(255,255,255,0.12); font-size: 13px; }
+@media (max-width: 720px) {
+  .site-footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5) var(--space-4); }
+  .footer-brand { grid-column: 1 / -1; }
+}
+/* In-page jumps (e.g. the footer's Track Record link) land below the sticky header. */
+section[id] { scroll-margin-top: calc(var(--header-height) + 12px); }
