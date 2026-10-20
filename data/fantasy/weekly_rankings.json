@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T09:56:50.809344+00:00"
+    "generated_at": "2026-10-20T13:31:12.478061+00:00"
   },
   "available": true,
   "season": 2026,
@@ -765,24 +765,6 @@
           "rank": 42
         },
         {
-          "player_id": "00-0027973",
-          "name": "Andy Dalton",
-          "position": "QB",
-          "team": "PHI",
-          "opponent": "DAL",
-          "start_score": 1.07,
-          "recent_ppg": -2.0,
-          "games_this_season": 1,
-          "matchup_adj": 2.07,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": true,
-          "team_qb_out": false,
-          "explain": "Averaging -2.0 ppg over 1 game(s) this season. Facing DAL, a favorable matchup for QBs this week. Andy Dalton is facing a former team this week, another motivation nudge factored in.",
-          "rank": 43
-        },
-        {
           "player_id": "00-0041194",
           "name": "Jack Strand",
           "position": "QB",
@@ -798,7 +780,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 2.0 ppg over 1 game(s) this season.",
-          "rank": 44
+          "rank": 43
         },
         {
           "player_id": "00-0036972",
@@ -816,7 +798,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging -0.2 ppg over 1 game(s) this season.",
-          "rank": 45
+          "rank": 44
         },
         {
           "player_id": "00-0034771",
@@ -834,7 +816,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 0.1 ppg over 2 game(s) this season.",
-          "rank": 46
+          "rank": 45
         },
         {
           "player_id": "00-0038102",
@@ -852,7 +834,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 1.0 ppg over 2 game(s) this season.",
-          "rank": 47
+          "rank": 46
         },
         {
           "player_id": "00-0040668",
@@ -870,7 +852,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 0.0 ppg over 1 game(s) this season.",
-          "rank": 48
+          "rank": 47
         },
         {
           "player_id": "00-0036212",
@@ -888,6 +870,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging -0.6 ppg over 1 game(s) this season.",
+          "rank": 48
+        },
+        {
+          "player_id": "00-0027973",
+          "name": "Andy Dalton",
+          "position": "QB",
+          "team": "ATL",
+          "opponent": "SF",
+          "start_score": -3.37,
+          "recent_ppg": -2.0,
+          "games_this_season": 1,
+          "matchup_adj": -1.37,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging -2.0 ppg over 1 game(s) this season.",
           "rank": 49
         }
       ],
@@ -2949,24 +2949,6 @@
           "rank": 14
         },
         {
-          "player_id": "00-0030506",
-          "name": "Travis Kelce",
-          "position": "TE",
-          "team": "KC",
-          "opponent": "SEA",
-          "start_score": 9.96,
-          "recent_ppg": 12.38,
-          "games_this_season": 5,
-          "matchup_adj": -2.42,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 12.4 ppg over 5 game(s) this season. Facing SEA, a tough matchup for TEs this week.",
-          "rank": 15
-        },
-        {
           "player_id": "00-0036040",
           "name": "Juwan Johnson",
           "position": "TE",
@@ -2982,6 +2964,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 11.0 ppg over 6 game(s) this season.",
+          "rank": 15
+        },
+        {
+          "player_id": "00-0030506",
+          "name": "Travis Kelce",
+          "position": "TE",
+          "team": "KC",
+          "opponent": "SEA",
+          "start_score": 9.96,
+          "recent_ppg": 12.38,
+          "games_this_season": 5,
+          "matchup_adj": -2.42,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 12.4 ppg over 5 game(s) this season. Facing SEA, a tough matchup for TEs this week.",
           "rank": 16
         },
         {
@@ -4177,11 +4177,11 @@
           "rank": 3
         },
         {
-          "player_id": "CIN_DST",
-          "name": "CIN D/ST",
+          "player_id": "KC_DST",
+          "name": "KC D/ST",
           "position": "DST",
-          "team": "CIN",
-          "opponent": "BAL",
+          "team": "KC",
+          "opponent": "SEA",
           "start_score": 7.8,
           "recent_ppg": 7.8,
           "games_this_season": 5,
@@ -4195,11 +4195,11 @@
           "rank": 4
         },
         {
-          "player_id": "KC_DST",
-          "name": "KC D/ST",
+          "player_id": "CIN_DST",
+          "name": "CIN D/ST",
           "position": "DST",
-          "team": "KC",
-          "opponent": "SEA",
+          "team": "CIN",
+          "opponent": "BAL",
           "start_score": 7.8,
           "recent_ppg": 7.8,
           "games_this_season": 5,
@@ -4501,11 +4501,11 @@
           "rank": 21
         },
         {
-          "player_id": "LA_DST",
-          "name": "LA D/ST",
+          "player_id": "ATL_DST",
+          "name": "ATL D/ST",
           "position": "DST",
-          "team": "LA",
-          "opponent": "LV",
+          "team": "ATL",
+          "opponent": "SF",
           "start_score": 4.0,
           "recent_ppg": 4.0,
           "games_this_season": 6,
@@ -4519,11 +4519,11 @@
           "rank": 22
         },
         {
-          "player_id": "ATL_DST",
-          "name": "ATL D/ST",
+          "player_id": "LA_DST",
+          "name": "LA D/ST",
           "position": "DST",
-          "team": "ATL",
-          "opponent": "SF",
+          "team": "LA",
+          "opponent": "LV",
           "start_score": 4.0,
           "recent_ppg": 4.0,
           "games_this_season": 6,
@@ -5390,24 +5390,6 @@
           "rank": 42
         },
         {
-          "player_id": "00-0027973",
-          "name": "Andy Dalton",
-          "position": "QB",
-          "team": "PHI",
-          "opponent": "DAL",
-          "start_score": 1.08,
-          "recent_ppg": -2.0,
-          "games_this_season": 1,
-          "matchup_adj": 2.08,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": true,
-          "team_qb_out": false,
-          "explain": "Averaging -2.0 ppg over 1 game(s) this season. Facing DAL, a favorable matchup for QBs this week. Andy Dalton is facing a former team this week, another motivation nudge factored in.",
-          "rank": 43
-        },
-        {
           "player_id": "00-0041194",
           "name": "Jack Strand",
           "position": "QB",
@@ -5423,7 +5405,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 2.0 ppg over 1 game(s) this season.",
-          "rank": 44
+          "rank": 43
         },
         {
           "player_id": "00-0036972",
@@ -5441,7 +5423,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging -0.2 ppg over 1 game(s) this season.",
-          "rank": 45
+          "rank": 44
         },
         {
           "player_id": "00-0034771",
@@ -5459,7 +5441,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 0.1 ppg over 2 game(s) this season.",
-          "rank": 46
+          "rank": 45
         },
         {
           "player_id": "00-0038102",
@@ -5477,7 +5459,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 1.0 ppg over 2 game(s) this season.",
-          "rank": 47
+          "rank": 46
         },
         {
           "player_id": "00-0040668",
@@ -5495,7 +5477,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 0.0 ppg over 1 game(s) this season.",
-          "rank": 48
+          "rank": 47
         },
         {
           "player_id": "00-0036212",
@@ -5513,6 +5495,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging -0.6 ppg over 1 game(s) this season.",
+          "rank": 48
+        },
+        {
+          "player_id": "00-0027973",
+          "name": "Andy Dalton",
+          "position": "QB",
+          "team": "ATL",
+          "opponent": "SF",
+          "start_score": -3.36,
+          "recent_ppg": -2.0,
+          "games_this_season": 1,
+          "matchup_adj": -1.36,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging -2.0 ppg over 1 game(s) this season.",
           "rank": 49
         }
       ],
@@ -7122,24 +7122,6 @@
           "rank": 39
         },
         {
-          "player_id": "00-0039739",
-          "name": "Roman Wilson",
-          "position": "WR",
-          "team": "PIT",
-          "opponent": "NO",
-          "start_score": 6.18,
-          "recent_ppg": 6.16,
-          "games_this_season": 5,
-          "matchup_adj": 0.02,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
-          "rank": 40
-        },
-        {
           "player_id": "00-0033555",
           "name": "Mack Hollins",
           "position": "WR",
@@ -7155,7 +7137,43 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.2 ppg over 4 game(s) this season.",
+          "rank": 40
+        },
+        {
+          "player_id": "00-0039739",
+          "name": "Roman Wilson",
+          "position": "WR",
+          "team": "PIT",
+          "opponent": "NO",
+          "start_score": 6.18,
+          "recent_ppg": 6.16,
+          "games_this_season": 5,
+          "matchup_adj": 0.02,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
           "rank": 41
+        },
+        {
+          "player_id": "00-0038824",
+          "name": "Ryan Miller",
+          "position": "WR",
+          "team": "NE",
+          "opponent": "CHI",
+          "start_score": 6.02,
+          "recent_ppg": 5.07,
+          "games_this_season": 3,
+          "matchup_adj": 0.95,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.1 ppg over 3 game(s) this season.",
+          "rank": 42
         },
         {
           "player_id": "00-0041511",
@@ -7173,7 +7191,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 9.7 ppg over 2 game(s) this season. Facing MIA, a tough matchup for WRs this week.",
-          "rank": 42
+          "rank": 43
         },
         {
           "player_id": "00-0041489",
@@ -7191,7 +7209,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.8 ppg over 5 game(s) this season.",
-          "rank": 43
+          "rank": 44
         },
         {
           "player_id": "00-0041042",
@@ -7209,7 +7227,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 3.8 ppg over 6 game(s) this season. Facing HOU, a favorable matchup for WRs this week.",
-          "rank": 44
+          "rank": 45
         },
         {
           "player_id": "00-0034348",
@@ -7227,7 +7245,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 3.0 ppg over 6 game(s) this season. Facing ARI, a favorable matchup for WRs this week.",
-          "rank": 45
+          "rank": 46
         },
         {
           "player_id": "00-0040129",
@@ -7245,7 +7263,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 7.2 ppg over 6 game(s) this season. Facing CAR, a tough matchup for WRs this week.",
-          "rank": 46
+          "rank": 47
         },
         {
           "player_id": "00-0038994",
@@ -7263,7 +7281,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.5 ppg over 4 game(s) this season.",
-          "rank": 47
+          "rank": 48
         },
         {
           "player_id": "00-0039424",
@@ -7281,7 +7299,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.9 ppg over 6 game(s) this season. Facing PIT, a tough matchup for WRs this week.",
-          "rank": 48
+          "rank": 49
         },
         {
           "player_id": "00-0038104",
@@ -7299,24 +7317,6 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 8.5 ppg over 4 game(s) this season. Facing SEA, a tough matchup for WRs this week.",
-          "rank": 49
-        },
-        {
-          "player_id": "00-0037741",
-          "name": "Jahan Dotson",
-          "position": "WR",
-          "team": "ATL",
-          "opponent": "SF",
-          "start_score": 5.12,
-          "recent_ppg": 5.93,
-          "games_this_season": 6,
-          "matchup_adj": -0.81,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.9 ppg over 6 game(s) this season.",
           "rank": 50
         }
       ],
@@ -7628,24 +7628,6 @@
           "rank": 17
         },
         {
-          "player_id": "00-0031610",
-          "name": "Darren Waller",
-          "position": "TE",
-          "team": "CAR",
-          "opponent": "TB",
-          "start_score": 6.03,
-          "recent_ppg": 5.36,
-          "games_this_season": 5,
-          "matchup_adj": 0.67,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.4 ppg over 5 game(s) this season.",
-          "rank": 18
-        },
-        {
           "player_id": "00-0040128",
           "name": "Tyler Warren",
           "position": "TE",
@@ -7661,6 +7643,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 8.0 ppg over 5 game(s) this season. Facing MIN, a tough matchup for TEs this week.",
+          "rank": 18
+        },
+        {
+          "player_id": "00-0031610",
+          "name": "Darren Waller",
+          "position": "TE",
+          "team": "CAR",
+          "opponent": "TB",
+          "start_score": 6.03,
+          "recent_ppg": 5.36,
+          "games_this_season": 5,
+          "matchup_adj": 0.67,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.4 ppg over 5 game(s) this season.",
           "rank": 19
         },
         {
@@ -8802,11 +8802,11 @@
           "rank": 3
         },
         {
-          "player_id": "CIN_DST",
-          "name": "CIN D/ST",
+          "player_id": "KC_DST",
+          "name": "KC D/ST",
           "position": "DST",
-          "team": "CIN",
-          "opponent": "BAL",
+          "team": "KC",
+          "opponent": "SEA",
           "start_score": 7.8,
           "recent_ppg": 7.8,
           "games_this_season": 5,
@@ -8820,11 +8820,11 @@
           "rank": 4
         },
         {
-          "player_id": "KC_DST",
-          "name": "KC D/ST",
+          "player_id": "CIN_DST",
+          "name": "CIN D/ST",
           "position": "DST",
-          "team": "KC",
-          "opponent": "SEA",
+          "team": "CIN",
+          "opponent": "BAL",
           "start_score": 7.8,
           "recent_ppg": 7.8,
           "games_this_season": 5,
@@ -9126,11 +9126,11 @@
           "rank": 21
         },
         {
-          "player_id": "LA_DST",
-          "name": "LA D/ST",
+          "player_id": "ATL_DST",
+          "name": "ATL D/ST",
           "position": "DST",
-          "team": "LA",
-          "opponent": "LV",
+          "team": "ATL",
+          "opponent": "SF",
           "start_score": 4.0,
           "recent_ppg": 4.0,
           "games_this_season": 6,
@@ -9144,11 +9144,11 @@
           "rank": 22
         },
         {
-          "player_id": "ATL_DST",
-          "name": "ATL D/ST",
+          "player_id": "LA_DST",
+          "name": "LA D/ST",
           "position": "DST",
-          "team": "ATL",
-          "opponent": "SF",
+          "team": "LA",
+          "opponent": "LV",
           "start_score": 4.0,
           "recent_ppg": 4.0,
           "games_this_season": 6,

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T09:56:50.809344+00:00"
+    "generated_at": "2026-10-20T13:31:12.478061+00:00"
   },
   "available": true,
   "season": 2026,
@@ -404,7 +404,7 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 11.6,
+        "mean_abs_rank_error": 11.9,
         "hit_rate_within_5": 0.296,
         "biggest_steals": [
           {
@@ -426,20 +426,11 @@
             "ppg": 10.4
           },
           {
-            "player_id": "00-0038428",
-            "name": "Andre Szmyt",
-            "preseason_rank": 36,
-            "actual_rank": 17,
-            "rank_error": -19,
-            "games": 6,
-            "ppg": 8.7
-          },
-          {
             "player_id": "00-0038567",
             "name": "Chad Ryland",
             "preseason_rank": 28,
-            "actual_rank": 10,
-            "rank_error": -18,
+            "actual_rank": 9,
+            "rank_error": -19,
             "games": 6,
             "ppg": 9.8
           },
@@ -451,6 +442,15 @@
             "rank_error": -18,
             "games": 6,
             "ppg": 9.3
+          },
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 18,
+            "rank_error": -18,
+            "games": 6,
+            "ppg": 8.7
           }
         ],
         "biggest_busts": [
@@ -494,8 +494,8 @@
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 24,
-            "rank_error": 11,
+            "actual_rank": 26,
+            "rank_error": 13,
             "games": 6,
             "ppg": 6.7
           }
@@ -503,7 +503,7 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.9,
+        "mean_abs_rank_error": 8.8,
         "hit_rate_within_5": 0.406,
         "biggest_steals": [
           {
@@ -519,8 +519,8 @@
             "player_id": "CIN_DST",
             "name": "CIN D/ST",
             "preseason_rank": 21,
-            "actual_rank": 5,
-            "rank_error": -16,
+            "actual_rank": 4,
+            "rank_error": -17,
             "games": 5,
             "ppg": 7.8
           },
@@ -528,8 +528,8 @@
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 12,
-            "rank_error": -16,
+            "actual_rank": 11,
+            "rank_error": -17,
             "games": 6,
             "ppg": 6.5
           },
@@ -537,8 +537,8 @@
             "player_id": "TEN_DST",
             "name": "TEN D/ST",
             "preseason_rank": 29,
-            "actual_rank": 13,
-            "rank_error": -16,
+            "actual_rank": 14,
+            "rank_error": -15,
             "games": 6,
             "ppg": 6.2
           },
@@ -566,8 +566,8 @@
             "player_id": "LA_DST",
             "name": "LA D/ST",
             "preseason_rank": 8,
-            "actual_rank": 26,
-            "rank_error": 18,
+            "actual_rank": 25,
+            "rank_error": 17,
             "games": 6,
             "ppg": 4.0
           },
@@ -581,6 +581,15 @@
             "ppg": 4.2
           },
           {
+            "player_id": "ATL_DST",
+            "name": "ATL D/ST",
+            "preseason_rank": 12,
+            "actual_rank": 26,
+            "rank_error": 14,
+            "games": 6,
+            "ppg": 4.0
+          },
+          {
             "player_id": "HOU_DST",
             "name": "HOU D/ST",
             "preseason_rank": 5,
@@ -588,15 +597,6 @@
             "rank_error": 14,
             "games": 6,
             "ppg": 5.5
-          },
-          {
-            "player_id": "BUF_DST",
-            "name": "BUF D/ST",
-            "preseason_rank": 14,
-            "actual_rank": 27,
-            "rank_error": 13,
-            "games": 6,
-            "ppg": 3.2
           }
         ]
       }
@@ -1000,7 +1000,7 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 11.6,
+        "mean_abs_rank_error": 11.9,
         "hit_rate_within_5": 0.296,
         "biggest_steals": [
           {
@@ -1022,20 +1022,11 @@
             "ppg": 10.4
           },
           {
-            "player_id": "00-0038428",
-            "name": "Andre Szmyt",
-            "preseason_rank": 36,
-            "actual_rank": 17,
-            "rank_error": -19,
-            "games": 6,
-            "ppg": 8.7
-          },
-          {
             "player_id": "00-0038567",
             "name": "Chad Ryland",
             "preseason_rank": 28,
-            "actual_rank": 10,
-            "rank_error": -18,
+            "actual_rank": 9,
+            "rank_error": -19,
             "games": 6,
             "ppg": 9.8
           },
@@ -1047,6 +1038,15 @@
             "rank_error": -18,
             "games": 6,
             "ppg": 9.3
+          },
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 18,
+            "rank_error": -18,
+            "games": 6,
+            "ppg": 8.7
           }
         ],
         "biggest_busts": [
@@ -1090,8 +1090,8 @@
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 24,
-            "rank_error": 11,
+            "actual_rank": 26,
+            "rank_error": 13,
             "games": 6,
             "ppg": 6.7
           }
@@ -1099,7 +1099,7 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.9,
+        "mean_abs_rank_error": 8.8,
         "hit_rate_within_5": 0.406,
         "biggest_steals": [
           {
@@ -1115,8 +1115,8 @@
             "player_id": "CIN_DST",
             "name": "CIN D/ST",
             "preseason_rank": 21,
-            "actual_rank": 5,
-            "rank_error": -16,
+            "actual_rank": 4,
+            "rank_error": -17,
             "games": 5,
             "ppg": 7.8
           },
@@ -1124,8 +1124,8 @@
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 12,
-            "rank_error": -16,
+            "actual_rank": 11,
+            "rank_error": -17,
             "games": 6,
             "ppg": 6.5
           },
@@ -1133,8 +1133,8 @@
             "player_id": "TEN_DST",
             "name": "TEN D/ST",
             "preseason_rank": 29,
-            "actual_rank": 13,
-            "rank_error": -16,
+            "actual_rank": 14,
+            "rank_error": -15,
             "games": 6,
             "ppg": 6.2
           },
@@ -1162,8 +1162,8 @@
             "player_id": "LA_DST",
             "name": "LA D/ST",
             "preseason_rank": 8,
-            "actual_rank": 26,
-            "rank_error": 18,
+            "actual_rank": 25,
+            "rank_error": 17,
             "games": 6,
             "ppg": 4.0
           },
@@ -1177,6 +1177,15 @@
             "ppg": 4.2
           },
           {
+            "player_id": "ATL_DST",
+            "name": "ATL D/ST",
+            "preseason_rank": 12,
+            "actual_rank": 26,
+            "rank_error": 14,
+            "games": 6,
+            "ppg": 4.0
+          },
+          {
             "player_id": "HOU_DST",
             "name": "HOU D/ST",
             "preseason_rank": 5,
@@ -1184,15 +1193,6 @@
             "rank_error": 14,
             "games": 6,
             "ppg": 5.5
-          },
-          {
-            "player_id": "BUF_DST",
-            "name": "BUF D/ST",
-            "preseason_rank": 14,
-            "actual_rank": 27,
-            "rank_error": 13,
-            "games": 6,
-            "ppg": 3.2
           }
         ]
       }
