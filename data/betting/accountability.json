@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T13:49:50.114449+00:00"
+    "generated_at": "2026-10-20T15:20:48.371720+00:00"
   },
   "weeks_graded": 7,
   "ats": {
@@ -1276,7 +1276,7 @@
     {
       "season": 2026,
       "week": 7,
-      "locked_at": "2026-10-20T13:49:50.109533+00:00",
+      "locked_at": "2026-10-20T15:20:48.367912+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -1306,8 +1306,8 @@
           "home_team": "BAL",
           "away_team": "CIN",
           "model_margin_home": 2.8,
-          "spread_home": 3.0,
-          "our_pick": "away",
+          "spread_home": 2.5,
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -1436,7 +1436,7 @@
           "home_team": "ATL",
           "away_team": "SF",
           "model_margin_home": -5.8,
-          "spread_home": -3.5,
+          "spread_home": -3.0,
           "our_pick": "away",
           "no_lean": false,
           "result": null,
