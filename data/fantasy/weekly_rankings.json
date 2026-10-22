@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T14:52:17.656223+00:00"
+    "generated_at": "2026-10-22T00:33:51.441043+00:00"
   },
   "available": true,
   "season": 2026,
@@ -2949,24 +2949,6 @@
           "rank": 14
         },
         {
-          "player_id": "00-0030506",
-          "name": "Travis Kelce",
-          "position": "TE",
-          "team": "KC",
-          "opponent": "SEA",
-          "start_score": 9.96,
-          "recent_ppg": 12.38,
-          "games_this_season": 5,
-          "matchup_adj": -2.42,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 12.4 ppg over 5 game(s) this season. Facing SEA, a tough matchup for TEs this week.",
-          "rank": 15
-        },
-        {
           "player_id": "00-0036040",
           "name": "Juwan Johnson",
           "position": "TE",
@@ -2982,6 +2964,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 11.0 ppg over 6 game(s) this season.",
+          "rank": 15
+        },
+        {
+          "player_id": "00-0030506",
+          "name": "Travis Kelce",
+          "position": "TE",
+          "team": "KC",
+          "opponent": "SEA",
+          "start_score": 9.96,
+          "recent_ppg": 12.38,
+          "games_this_season": 5,
+          "matchup_adj": -2.42,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 12.4 ppg over 5 game(s) this season. Facing SEA, a tough matchup for TEs this week.",
           "rank": 16
         },
         {
@@ -3111,8 +3111,8 @@
           "rank": 23
         },
         {
-          "player_id": "00-0031610",
-          "name": "Darren Waller",
+          "player_id": "00-0037005",
+          "name": "Tommy Tremble",
           "position": "TE",
           "team": "CAR",
           "opponent": "TB",
@@ -3129,8 +3129,8 @@
           "rank": 24
         },
         {
-          "player_id": "00-0037005",
-          "name": "Tommy Tremble",
+          "player_id": "00-0031610",
+          "name": "Darren Waller",
           "position": "TE",
           "team": "CAR",
           "opponent": "TB",
@@ -4339,11 +4339,11 @@
           "rank": 12
         },
         {
-          "player_id": "NE_DST",
-          "name": "NE D/ST",
+          "player_id": "TEN_DST",
+          "name": "TEN D/ST",
           "position": "DST",
-          "team": "NE",
-          "opponent": "CHI",
+          "team": "TEN",
+          "opponent": "CLE",
           "start_score": 6.17,
           "recent_ppg": 6.17,
           "games_this_season": 6,
@@ -4357,11 +4357,11 @@
           "rank": 13
         },
         {
-          "player_id": "TEN_DST",
-          "name": "TEN D/ST",
+          "player_id": "NE_DST",
+          "name": "NE D/ST",
           "position": "DST",
-          "team": "TEN",
-          "opponent": "CLE",
+          "team": "NE",
+          "opponent": "CHI",
           "start_score": 6.17,
           "recent_ppg": 6.17,
           "games_this_season": 6,
@@ -6906,24 +6906,6 @@
           "rank": 27
         },
         {
-          "player_id": "00-0040138",
-          "name": "Jaylin Noel",
-          "position": "WR",
-          "team": "HOU",
-          "opponent": "NYG",
-          "start_score": 7.91,
-          "recent_ppg": 8.0,
-          "games_this_season": 6,
-          "matchup_adj": -0.09,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 8.0 ppg over 6 game(s) this season.",
-          "rank": 28
-        },
-        {
           "player_id": "00-0032775",
           "name": "Demarcus Robinson",
           "position": "WR",
@@ -6939,6 +6921,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 7.2 ppg over 2 game(s) this season.",
+          "rank": 28
+        },
+        {
+          "player_id": "00-0040138",
+          "name": "Jaylin Noel",
+          "position": "WR",
+          "team": "HOU",
+          "opponent": "NYG",
+          "start_score": 7.91,
+          "recent_ppg": 8.0,
+          "games_this_season": 6,
+          "matchup_adj": -0.09,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 8.0 ppg over 6 game(s) this season.",
           "rank": 29
         },
         {
@@ -7122,24 +7122,6 @@
           "rank": 39
         },
         {
-          "player_id": "00-0039739",
-          "name": "Roman Wilson",
-          "position": "WR",
-          "team": "PIT",
-          "opponent": "NO",
-          "start_score": 6.18,
-          "recent_ppg": 6.16,
-          "games_this_season": 5,
-          "matchup_adj": 0.02,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
-          "rank": 40
-        },
-        {
           "player_id": "00-0033555",
           "name": "Mack Hollins",
           "position": "WR",
@@ -7155,6 +7137,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.2 ppg over 4 game(s) this season.",
+          "rank": 40
+        },
+        {
+          "player_id": "00-0039739",
+          "name": "Roman Wilson",
+          "position": "WR",
+          "team": "PIT",
+          "opponent": "NO",
+          "start_score": 6.18,
+          "recent_ppg": 6.16,
+          "games_this_season": 5,
+          "matchup_adj": 0.02,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 6.2 ppg over 5 game(s) this season.",
           "rank": 41
         },
         {
@@ -8964,11 +8964,11 @@
           "rank": 12
         },
         {
-          "player_id": "NE_DST",
-          "name": "NE D/ST",
+          "player_id": "TEN_DST",
+          "name": "TEN D/ST",
           "position": "DST",
-          "team": "NE",
-          "opponent": "CHI",
+          "team": "TEN",
+          "opponent": "CLE",
           "start_score": 6.17,
           "recent_ppg": 6.17,
           "games_this_season": 6,
@@ -8982,11 +8982,11 @@
           "rank": 13
         },
         {
-          "player_id": "TEN_DST",
-          "name": "TEN D/ST",
+          "player_id": "NE_DST",
+          "name": "NE D/ST",
           "position": "DST",
-          "team": "TEN",
-          "opponent": "CLE",
+          "team": "NE",
+          "opponent": "CHI",
           "start_score": 6.17,
           "recent_ppg": 6.17,
           "games_this_season": 6,

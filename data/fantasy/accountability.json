@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T14:52:17.656223+00:00"
+    "generated_at": "2026-10-22T00:33:51.441043+00:00"
   },
   "available": true,
   "season": 2026,
@@ -426,6 +426,15 @@
             "ppg": 10.4
           },
           {
+            "player_id": "00-0038567",
+            "name": "Chad Ryland",
+            "preseason_rank": 28,
+            "actual_rank": 9,
+            "rank_error": -19,
+            "games": 6,
+            "ppg": 9.8
+          },
+          {
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
@@ -433,15 +442,6 @@
             "rank_error": -19,
             "games": 6,
             "ppg": 8.7
-          },
-          {
-            "player_id": "00-0038567",
-            "name": "Chad Ryland",
-            "preseason_rank": 28,
-            "actual_rank": 10,
-            "rank_error": -18,
-            "games": 6,
-            "ppg": 9.8
           },
           {
             "player_id": "00-0040074",
@@ -473,29 +473,29 @@
             "ppg": 5.8
           },
           {
-            "player_id": "00-0040200",
-            "name": "Andy Borregales",
-            "preseason_rank": 9,
-            "actual_rank": 25,
-            "rank_error": 16,
-            "games": 6,
-            "ppg": 6.7
-          },
-          {
             "player_id": "00-0037692",
             "name": "Brandon Aubrey",
             "preseason_rank": 3,
-            "actual_rank": 19,
-            "rank_error": 16,
+            "actual_rank": 20,
+            "rank_error": 17,
             "games": 6,
             "ppg": 7.7
+          },
+          {
+            "player_id": "00-0040200",
+            "name": "Andy Borregales",
+            "preseason_rank": 9,
+            "actual_rank": 24,
+            "rank_error": 15,
+            "games": 6,
+            "ppg": 6.7
           },
           {
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 26,
-            "rank_error": 13,
+            "actual_rank": 25,
+            "rank_error": 12,
             "games": 6,
             "ppg": 6.7
           }
@@ -510,8 +510,8 @@
             "player_id": "NYJ_DST",
             "name": "NYJ D/ST",
             "preseason_rank": 32,
-            "actual_rank": 8,
-            "rank_error": -24,
+            "actual_rank": 9,
+            "rank_error": -23,
             "games": 6,
             "ppg": 6.8
           },
@@ -901,7 +901,7 @@
       },
       "TE": {
         "players_graded": 40,
-        "mean_abs_rank_error": 11.0,
+        "mean_abs_rank_error": 11.1,
         "hit_rate_within_5": 0.425,
         "biggest_steals": [
           {
@@ -1022,6 +1022,15 @@
             "ppg": 10.4
           },
           {
+            "player_id": "00-0038567",
+            "name": "Chad Ryland",
+            "preseason_rank": 28,
+            "actual_rank": 9,
+            "rank_error": -19,
+            "games": 6,
+            "ppg": 9.8
+          },
+          {
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
@@ -1029,15 +1038,6 @@
             "rank_error": -19,
             "games": 6,
             "ppg": 8.7
-          },
-          {
-            "player_id": "00-0038567",
-            "name": "Chad Ryland",
-            "preseason_rank": 28,
-            "actual_rank": 10,
-            "rank_error": -18,
-            "games": 6,
-            "ppg": 9.8
           },
           {
             "player_id": "00-0040074",
@@ -1069,29 +1069,29 @@
             "ppg": 5.8
           },
           {
-            "player_id": "00-0040200",
-            "name": "Andy Borregales",
-            "preseason_rank": 9,
-            "actual_rank": 25,
-            "rank_error": 16,
-            "games": 6,
-            "ppg": 6.7
-          },
-          {
             "player_id": "00-0037692",
             "name": "Brandon Aubrey",
             "preseason_rank": 3,
-            "actual_rank": 19,
-            "rank_error": 16,
+            "actual_rank": 20,
+            "rank_error": 17,
             "games": 6,
             "ppg": 7.7
+          },
+          {
+            "player_id": "00-0040200",
+            "name": "Andy Borregales",
+            "preseason_rank": 9,
+            "actual_rank": 24,
+            "rank_error": 15,
+            "games": 6,
+            "ppg": 6.7
           },
           {
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 26,
-            "rank_error": 13,
+            "actual_rank": 25,
+            "rank_error": 12,
             "games": 6,
             "ppg": 6.7
           }
@@ -1106,8 +1106,8 @@
             "player_id": "NYJ_DST",
             "name": "NYJ D/ST",
             "preseason_rank": 32,
-            "actual_rank": 8,
-            "rank_error": -24,
+            "actual_rank": 9,
+            "rank_error": -23,
             "games": 6,
             "ppg": 6.8
           },
