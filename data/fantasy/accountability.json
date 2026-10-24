@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-24T00:27:38.653404+00:00"
+    "generated_at": "2026-10-24T05:44:45.986422+00:00"
   },
   "available": true,
   "season": 2026,
@@ -426,15 +426,6 @@
             "ppg": 10.4
           },
           {
-            "player_id": "00-0038567",
-            "name": "Chad Ryland",
-            "preseason_rank": 28,
-            "actual_rank": 9,
-            "rank_error": -19,
-            "games": 6,
-            "ppg": 9.8
-          },
-          {
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
@@ -442,6 +433,15 @@
             "rank_error": -19,
             "games": 6,
             "ppg": 8.7
+          },
+          {
+            "player_id": "00-0038567",
+            "name": "Chad Ryland",
+            "preseason_rank": 28,
+            "actual_rank": 10,
+            "rank_error": -18,
+            "games": 6,
+            "ppg": 9.8
           },
           {
             "player_id": "00-0040074",
@@ -494,8 +494,8 @@
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 25,
-            "rank_error": 12,
+            "actual_rank": 26,
+            "rank_error": 13,
             "games": 6,
             "ppg": 6.7
           }
@@ -504,14 +504,14 @@
       "DST": {
         "players_graded": 32,
         "mean_abs_rank_error": 9.2,
-        "hit_rate_within_5": 0.406,
+        "hit_rate_within_5": 0.375,
         "biggest_steals": [
           {
             "player_id": "NYJ_DST",
             "name": "NYJ D/ST",
             "preseason_rank": 32,
-            "actual_rank": 8,
-            "rank_error": -24,
+            "actual_rank": 7,
+            "rank_error": -25,
             "games": 6,
             "ppg": 6.8
           },
@@ -537,8 +537,8 @@
             "player_id": "TEN_DST",
             "name": "TEN D/ST",
             "preseason_rank": 29,
-            "actual_rank": 13,
-            "rank_error": -16,
+            "actual_rank": 14,
+            "rank_error": -15,
             "games": 6,
             "ppg": 6.2
           },
@@ -1022,15 +1022,6 @@
             "ppg": 10.4
           },
           {
-            "player_id": "00-0038567",
-            "name": "Chad Ryland",
-            "preseason_rank": 28,
-            "actual_rank": 9,
-            "rank_error": -19,
-            "games": 6,
-            "ppg": 9.8
-          },
-          {
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
@@ -1038,6 +1029,15 @@
             "rank_error": -19,
             "games": 6,
             "ppg": 8.7
+          },
+          {
+            "player_id": "00-0038567",
+            "name": "Chad Ryland",
+            "preseason_rank": 28,
+            "actual_rank": 10,
+            "rank_error": -18,
+            "games": 6,
+            "ppg": 9.8
           },
           {
             "player_id": "00-0040074",
@@ -1090,8 +1090,8 @@
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 25,
-            "rank_error": 12,
+            "actual_rank": 26,
+            "rank_error": 13,
             "games": 6,
             "ppg": 6.7
           }
@@ -1100,14 +1100,14 @@
       "DST": {
         "players_graded": 32,
         "mean_abs_rank_error": 9.2,
-        "hit_rate_within_5": 0.406,
+        "hit_rate_within_5": 0.375,
         "biggest_steals": [
           {
             "player_id": "NYJ_DST",
             "name": "NYJ D/ST",
             "preseason_rank": 32,
-            "actual_rank": 8,
-            "rank_error": -24,
+            "actual_rank": 7,
+            "rank_error": -25,
             "games": 6,
             "ppg": 6.8
           },
@@ -1133,8 +1133,8 @@
             "player_id": "TEN_DST",
             "name": "TEN D/ST",
             "preseason_rank": 29,
-            "actual_rank": 13,
-            "rank_error": -16,
+            "actual_rank": 14,
+            "rank_error": -15,
             "games": 6,
             "ppg": 6.2
           },
