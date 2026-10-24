@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 7,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
+          "team": "NE",
+          "points": 27.4
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0036875",
+          "name": "Rhamondre Stevenson",
+          "team": "NE",
+          "points": 22.5
+        },
+        {
+          "player_id": "00-0036275",
+          "name": "D'Andre Swift",
+          "team": "CHI",
+          "points": 19.0
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0040735",
+          "name": "Luther Burden III",
+          "team": "CHI",
+          "points": 23.7
+        },
+        {
+          "player_id": "00-0039919",
+          "name": "Rome Odunze",
+          "team": "CHI",
+          "points": 10.9
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0040126",
+          "name": "Colston Loveland",
+          "team": "CHI",
+          "points": 19.9
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0041395",
+          "name": "Eli Raridon",
+          "team": "NE",
+          "points": 14.6
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0031203",
+          "name": "Cairo Santos",
+          "team": "CHI",
+          "points": 14.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "CHI_DST",
+          "name": "CHI D/ST",
+          "team": "CHI",
+          "points": 4.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 156.0,
+    "bench": [
+      {
+        "player_id": "00-0039918",
+        "name": "Caleb Williams",
+        "team": "CHI",
+        "position": "QB",
+        "points": 22.1
+      },
+      {
+        "player_id": "00-0033090",
+        "name": "Hunter Henry",
+        "team": "NE",
+        "position": "TE",
+        "points": 14.1
+      },
+      {
+        "player_id": "00-0035676",
+        "name": "A.J. Brown",
+        "team": "NE",
+        "position": "WR",
+        "points": 7.8
+      },
+      {
+        "player_id": "00-0038621",
+        "name": "DeMario Douglas",
+        "team": "NE",
+        "position": "WR",
+        "points": 5.3
+      },
+      {
+        "player_id": "00-0040734",
+        "name": "TreVeyon Henderson",
+        "team": "NE",
+        "position": "RB",
+        "points": 4.3
+      },
+      {
+        "player_id": "00-0040563",
+        "name": "Efton Chism III",
+        "team": "NE",
+        "position": "WR",
+        "points": 2.6
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 7,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039851",
+          "name": "Drake Maye",
+          "team": "NE",
+          "points": 27.4
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0036875",
+          "name": "Rhamondre Stevenson",
+          "team": "NE",
+          "points": 17.5
+        },
+        {
+          "player_id": "00-0036275",
+          "name": "D'Andre Swift",
+          "team": "CHI",
+          "points": 15.0
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0040735",
+          "name": "Luther Burden III",
+          "team": "CHI",
+          "points": 19.7
+        },
+        {
+          "player_id": "00-0039919",
+          "name": "Rome Odunze",
+          "team": "CHI",
+          "points": 6.9
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0040126",
+          "name": "Colston Loveland",
+          "team": "CHI",
+          "points": 12.9
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0041395",
+          "name": "Eli Raridon",
+          "team": "NE",
+          "points": 11.6
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0031203",
+          "name": "Cairo Santos",
+          "team": "CHI",
+          "points": 14.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "CHI_DST",
+          "name": "CHI D/ST",
+          "team": "CHI",
+          "points": 4.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 129.0,
+    "bench": [
+      {
+        "player_id": "00-0039918",
+        "name": "Caleb Williams",
+        "team": "CHI",
+        "position": "QB",
+        "points": 22.1
+      },
+      {
+        "player_id": "00-0033090",
+        "name": "Hunter Henry",
+        "team": "NE",
+        "position": "TE",
+        "points": 7.1
+      },
+      {
+        "player_id": "00-0035676",
+        "name": "A.J. Brown",
+        "team": "NE",
+        "position": "WR",
+        "points": 4.8
+      },
+      {
+        "player_id": "00-0040734",
+        "name": "TreVeyon Henderson",
+        "team": "NE",
+        "position": "RB",
+        "points": 2.3
+      },
+      {
+        "player_id": "00-0038621",
+        "name": "DeMario Douglas",
+        "team": "NE",
+        "position": "WR",
+        "points": 2.3
+      },
+      {
+        "player_id": "00-0040563",
+        "name": "Efton Chism III",
+        "team": "NE",
+        "position": "WR",
+        "points": 1.6
+      }
+    ]
+  }
+}
