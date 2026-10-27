@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-27T10:22:46.051347+00:00"
+    "generated_at": "2026-10-27T14:21:47.239166+00:00"
   },
   "available": true,
   "season": 2026,
@@ -206,7 +206,7 @@
       },
       "WR": {
         "players_graded": 44,
-        "mean_abs_rank_error": 14.9,
+        "mean_abs_rank_error": 14.8,
         "hit_rate_within_5": 0.364,
         "biggest_steals": [
           {
@@ -237,15 +237,6 @@
             "ppg": 14.0
           },
           {
-            "player_id": "00-0040124",
-            "name": "Tetairoa McMillan",
-            "preseason_rank": 28,
-            "actual_rank": 12,
-            "rank_error": -16,
-            "games": 6,
-            "ppg": 16.2
-          },
-          {
             "player_id": "00-0036322",
             "name": "Justin Jefferson",
             "preseason_rank": 35,
@@ -253,6 +244,15 @@
             "rank_error": -16,
             "games": 5,
             "ppg": 14.4
+          },
+          {
+            "player_id": "00-0040124",
+            "name": "Tetairoa McMillan",
+            "preseason_rank": 28,
+            "actual_rank": 13,
+            "rank_error": -15,
+            "games": 6,
+            "ppg": 16.2
           }
         ],
         "biggest_busts": [
@@ -435,15 +435,6 @@
             "ppg": 8.8
           },
           {
-            "player_id": "00-0038428",
-            "name": "Andre Szmyt",
-            "preseason_rank": 36,
-            "actual_rank": 16,
-            "rank_error": -20,
-            "games": 7,
-            "ppg": 8.6
-          },
-          {
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
@@ -451,6 +442,15 @@
             "rank_error": -19,
             "games": 7,
             "ppg": 9.9
+          },
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 17,
+            "rank_error": -19,
+            "games": 7,
+            "ppg": 8.6
           }
         ],
         "biggest_busts": [
@@ -458,8 +458,8 @@
             "player_id": "00-0037224",
             "name": "Cameron Dicker",
             "preseason_rank": 8,
-            "actual_rank": 28,
-            "rank_error": 20,
+            "actual_rank": 29,
+            "rank_error": 21,
             "games": 6,
             "ppg": 6.0
           },
@@ -473,15 +473,6 @@
             "ppg": 5.8
           },
           {
-            "player_id": "00-0034173",
-            "name": "Eddy Pineiro",
-            "preseason_rank": 13,
-            "actual_rank": 29,
-            "rank_error": 16,
-            "games": 7,
-            "ppg": 6.0
-          },
-          {
             "player_id": "00-0040200",
             "name": "Andy Borregales",
             "preseason_rank": 9,
@@ -489,6 +480,15 @@
             "rank_error": 16,
             "games": 7,
             "ppg": 6.7
+          },
+          {
+            "player_id": "00-0034173",
+            "name": "Eddy Pineiro",
+            "preseason_rank": 13,
+            "actual_rank": 28,
+            "rank_error": 15,
+            "games": 7,
+            "ppg": 6.0
           },
           {
             "player_id": "00-0037692",
@@ -504,8 +504,17 @@
       "DST": {
         "players_graded": 32,
         "mean_abs_rank_error": 9.1,
-        "hit_rate_within_5": 0.344,
+        "hit_rate_within_5": 0.312,
         "biggest_steals": [
+          {
+            "player_id": "NYJ_DST",
+            "name": "NYJ D/ST",
+            "preseason_rank": 32,
+            "actual_rank": 12,
+            "rank_error": -20,
+            "games": 7,
+            "ppg": 6.0
+          },
           {
             "player_id": "CIN_DST",
             "name": "CIN D/ST",
@@ -514,15 +523,6 @@
             "rank_error": -19,
             "games": 6,
             "ppg": 8.2
-          },
-          {
-            "player_id": "NYJ_DST",
-            "name": "NYJ D/ST",
-            "preseason_rank": 32,
-            "actual_rank": 13,
-            "rank_error": -19,
-            "games": 7,
-            "ppg": 6.0
           },
           {
             "player_id": "GB_DST",
@@ -537,8 +537,8 @@
             "player_id": "TEN_DST",
             "name": "TEN D/ST",
             "preseason_rank": 29,
-            "actual_rank": 12,
-            "rank_error": -17,
+            "actual_rank": 13,
+            "rank_error": -16,
             "games": 7,
             "ppg": 6.0
           },
@@ -802,7 +802,7 @@
       },
       "WR": {
         "players_graded": 44,
-        "mean_abs_rank_error": 17.9,
+        "mean_abs_rank_error": 18.0,
         "hit_rate_within_5": 0.273,
         "biggest_steals": [
           {
@@ -1031,15 +1031,6 @@
             "ppg": 8.8
           },
           {
-            "player_id": "00-0038428",
-            "name": "Andre Szmyt",
-            "preseason_rank": 36,
-            "actual_rank": 16,
-            "rank_error": -20,
-            "games": 7,
-            "ppg": 8.6
-          },
-          {
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
@@ -1047,6 +1038,15 @@
             "rank_error": -19,
             "games": 7,
             "ppg": 9.9
+          },
+          {
+            "player_id": "00-0038428",
+            "name": "Andre Szmyt",
+            "preseason_rank": 36,
+            "actual_rank": 17,
+            "rank_error": -19,
+            "games": 7,
+            "ppg": 8.6
           }
         ],
         "biggest_busts": [
@@ -1054,8 +1054,8 @@
             "player_id": "00-0037224",
             "name": "Cameron Dicker",
             "preseason_rank": 8,
-            "actual_rank": 28,
-            "rank_error": 20,
+            "actual_rank": 29,
+            "rank_error": 21,
             "games": 6,
             "ppg": 6.0
           },
@@ -1069,15 +1069,6 @@
             "ppg": 5.8
           },
           {
-            "player_id": "00-0034173",
-            "name": "Eddy Pineiro",
-            "preseason_rank": 13,
-            "actual_rank": 29,
-            "rank_error": 16,
-            "games": 7,
-            "ppg": 6.0
-          },
-          {
             "player_id": "00-0040200",
             "name": "Andy Borregales",
             "preseason_rank": 9,
@@ -1085,6 +1076,15 @@
             "rank_error": 16,
             "games": 7,
             "ppg": 6.7
+          },
+          {
+            "player_id": "00-0034173",
+            "name": "Eddy Pineiro",
+            "preseason_rank": 13,
+            "actual_rank": 28,
+            "rank_error": 15,
+            "games": 7,
+            "ppg": 6.0
           },
           {
             "player_id": "00-0037692",
@@ -1100,8 +1100,17 @@
       "DST": {
         "players_graded": 32,
         "mean_abs_rank_error": 9.1,
-        "hit_rate_within_5": 0.344,
+        "hit_rate_within_5": 0.312,
         "biggest_steals": [
+          {
+            "player_id": "NYJ_DST",
+            "name": "NYJ D/ST",
+            "preseason_rank": 32,
+            "actual_rank": 12,
+            "rank_error": -20,
+            "games": 7,
+            "ppg": 6.0
+          },
           {
             "player_id": "CIN_DST",
             "name": "CIN D/ST",
@@ -1110,15 +1119,6 @@
             "rank_error": -19,
             "games": 6,
             "ppg": 8.2
-          },
-          {
-            "player_id": "NYJ_DST",
-            "name": "NYJ D/ST",
-            "preseason_rank": 32,
-            "actual_rank": 13,
-            "rank_error": -19,
-            "games": 7,
-            "ppg": 6.0
           },
           {
             "player_id": "GB_DST",
@@ -1133,8 +1133,8 @@
             "player_id": "TEN_DST",
             "name": "TEN D/ST",
             "preseason_rank": 29,
-            "actual_rank": 12,
-            "rank_error": -17,
+            "actual_rank": 13,
+            "rank_error": -16,
             "games": 7,
             "ppg": 6.0
           },
