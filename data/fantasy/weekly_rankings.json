@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-27T15:48:17.359994+00:00"
+    "generated_at": "2026-10-29T01:42:10.346493+00:00"
   },
   "available": true,
   "season": 2026,
@@ -1109,24 +1109,6 @@
           "rank": 12
         },
         {
-          "player_id": "00-0040122",
-          "name": "Ashton Jeanty",
-          "position": "RB",
-          "team": "LV",
-          "opponent": "NYJ",
-          "start_score": 15.93,
-          "recent_ppg": 16.16,
-          "games_this_season": 7,
-          "matchup_adj": -0.23,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 16.2 ppg over 7 game(s) this season.",
-          "rank": 13
-        },
-        {
           "player_id": "00-0038120",
           "name": "Breece Hall",
           "position": "RB",
@@ -1142,6 +1124,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 14.2 ppg over 3 game(s) this season. Facing LV, a favorable matchup for RBs this week.",
+          "rank": 13
+        },
+        {
+          "player_id": "00-0040122",
+          "name": "Ashton Jeanty",
+          "position": "RB",
+          "team": "LV",
+          "opponent": "NYJ",
+          "start_score": 15.93,
+          "recent_ppg": 16.16,
+          "games_this_season": 7,
+          "matchup_adj": -0.23,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 16.2 ppg over 7 game(s) this season.",
           "rank": 14
         },
         {
@@ -4013,24 +4013,6 @@
           "rank": 23
         },
         {
-          "player_id": "00-0034794",
-          "name": "Jason Sanders",
-          "position": "K",
-          "team": "NYJ",
-          "opponent": "LV",
-          "start_score": 6.71,
-          "recent_ppg": 7.5,
-          "games_this_season": 7,
-          "matchup_adj": -0.79,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 7.5 ppg over 7 game(s) this season.",
-          "rank": 24
-        },
-        {
           "player_id": "00-0037224",
           "name": "Cameron Dicker",
           "position": "K",
@@ -4046,6 +4028,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.0 ppg over 6 game(s) this season.",
+          "rank": 24
+        },
+        {
+          "player_id": "00-0034794",
+          "name": "Jason Sanders",
+          "position": "K",
+          "team": "NYJ",
+          "opponent": "LV",
+          "start_score": 6.71,
+          "recent_ppg": 7.5,
+          "games_this_season": 7,
+          "matchup_adj": -0.79,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 7.5 ppg over 7 game(s) this season.",
           "rank": 25
         },
         {
@@ -4411,6 +4411,24 @@
           "rank": 14
         },
         {
+          "player_id": "LAC_DST",
+          "name": "LAC D/ST",
+          "position": "DST",
+          "team": "LAC",
+          "opponent": "LA",
+          "start_score": 5.0,
+          "recent_ppg": 5.0,
+          "games_this_season": 6,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.0 ppg over 6 game(s) this season.",
+          "rank": 15
+        },
+        {
           "player_id": "CAR_DST",
           "name": "CAR D/ST",
           "position": "DST",
@@ -4426,7 +4444,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.0 ppg over 6 game(s) this season.",
-          "rank": 15
+          "rank": 16
         },
         {
           "player_id": "ATL_DST",
@@ -4444,24 +4462,6 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.0 ppg over 7 game(s) this season.",
-          "rank": 16
-        },
-        {
-          "player_id": "LAC_DST",
-          "name": "LAC D/ST",
-          "position": "DST",
-          "team": "LAC",
-          "opponent": "LA",
-          "start_score": 5.0,
-          "recent_ppg": 5.0,
-          "games_this_season": 6,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.0 ppg over 6 game(s) this season.",
           "rank": 17
         },
         {
@@ -7014,24 +7014,6 @@
           "rank": 31
         },
         {
-          "player_id": "00-0039410",
-          "name": "Ryan Flournoy",
-          "position": "WR",
-          "team": "DAL",
-          "opponent": "ARI",
-          "start_score": 7.31,
-          "recent_ppg": 5.45,
-          "games_this_season": 7,
-          "matchup_adj": 1.86,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.5 ppg over 7 game(s) this season. Facing ARI, a favorable matchup for WRs this week.",
-          "rank": 32
-        },
-        {
           "player_id": "00-0040129",
           "name": "Emeka Egbuka",
           "position": "WR",
@@ -7047,6 +7029,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 7.2 ppg over 6 game(s) this season.",
+          "rank": 32
+        },
+        {
+          "player_id": "00-0039410",
+          "name": "Ryan Flournoy",
+          "position": "WR",
+          "team": "DAL",
+          "opponent": "ARI",
+          "start_score": 7.31,
+          "recent_ppg": 5.45,
+          "games_this_season": 7,
+          "matchup_adj": 1.86,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.5 ppg over 7 game(s) this season. Facing ARI, a favorable matchup for WRs this week.",
           "rank": 33
         },
         {
@@ -7158,24 +7158,6 @@
           "rank": 39
         },
         {
-          "player_id": "00-0041037",
-          "name": "Denzel Boston",
-          "position": "WR",
-          "team": "CLE",
-          "opponent": "PIT",
-          "start_score": 6.78,
-          "recent_ppg": 7.86,
-          "games_this_season": 7,
-          "matchup_adj": -1.08,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 7.9 ppg over 7 game(s) this season.",
-          "rank": 40
-        },
-        {
           "player_id": "00-0038994",
           "name": "Jordan Addison",
           "position": "WR",
@@ -7191,6 +7173,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 4.9 ppg over 5 game(s) this season. Facing DET, a favorable matchup for WRs this week.",
+          "rank": 40
+        },
+        {
+          "player_id": "00-0041037",
+          "name": "Denzel Boston",
+          "position": "WR",
+          "team": "CLE",
+          "opponent": "PIT",
+          "start_score": 6.78,
+          "recent_ppg": 7.86,
+          "games_this_season": 7,
+          "matchup_adj": -1.08,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 7.9 ppg over 7 game(s) this season.",
           "rank": 41
         },
         {
@@ -8674,24 +8674,6 @@
           "rank": 23
         },
         {
-          "player_id": "00-0034794",
-          "name": "Jason Sanders",
-          "position": "K",
-          "team": "NYJ",
-          "opponent": "LV",
-          "start_score": 6.71,
-          "recent_ppg": 7.5,
-          "games_this_season": 7,
-          "matchup_adj": -0.79,
-          "matchup_source": "current_season",
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 7.5 ppg over 7 game(s) this season.",
-          "rank": 24
-        },
-        {
           "player_id": "00-0037224",
           "name": "Cameron Dicker",
           "position": "K",
@@ -8707,6 +8689,24 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 6.0 ppg over 6 game(s) this season.",
+          "rank": 24
+        },
+        {
+          "player_id": "00-0034794",
+          "name": "Jason Sanders",
+          "position": "K",
+          "team": "NYJ",
+          "opponent": "LV",
+          "start_score": 6.71,
+          "recent_ppg": 7.5,
+          "games_this_season": 7,
+          "matchup_adj": -0.79,
+          "matchup_source": "current_season",
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 7.5 ppg over 7 game(s) this season.",
           "rank": 25
         },
         {
@@ -9072,6 +9072,24 @@
           "rank": 14
         },
         {
+          "player_id": "LAC_DST",
+          "name": "LAC D/ST",
+          "position": "DST",
+          "team": "LAC",
+          "opponent": "LA",
+          "start_score": 5.0,
+          "recent_ppg": 5.0,
+          "games_this_season": 6,
+          "matchup_adj": null,
+          "matchup_source": null,
+          "injury_status": null,
+          "former_coach_matchup": false,
+          "former_team_matchup": false,
+          "team_qb_out": false,
+          "explain": "Averaging 5.0 ppg over 6 game(s) this season.",
+          "rank": 15
+        },
+        {
           "player_id": "CAR_DST",
           "name": "CAR D/ST",
           "position": "DST",
@@ -9087,7 +9105,7 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.0 ppg over 6 game(s) this season.",
-          "rank": 15
+          "rank": 16
         },
         {
           "player_id": "ATL_DST",
@@ -9105,24 +9123,6 @@
           "former_team_matchup": false,
           "team_qb_out": false,
           "explain": "Averaging 5.0 ppg over 7 game(s) this season.",
-          "rank": 16
-        },
-        {
-          "player_id": "LAC_DST",
-          "name": "LAC D/ST",
-          "position": "DST",
-          "team": "LAC",
-          "opponent": "LA",
-          "start_score": 5.0,
-          "recent_ppg": 5.0,
-          "games_this_season": 6,
-          "matchup_adj": null,
-          "matchup_source": null,
-          "injury_status": null,
-          "former_coach_matchup": false,
-          "former_team_matchup": false,
-          "team_qb_out": false,
-          "explain": "Averaging 5.0 ppg over 6 game(s) this season.",
           "rank": 17
         },
         {
