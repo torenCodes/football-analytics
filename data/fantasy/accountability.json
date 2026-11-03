@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-03T16:07:02.489210+00:00"
+    "generated_at": "2026-11-03T17:39:24.873777+00:00"
   },
   "available": true,
   "season": 2026,
@@ -503,8 +503,8 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.3,
-        "hit_rate_within_5": 0.312,
+        "mean_abs_rank_error": 9.1,
+        "hit_rate_within_5": 0.344,
         "biggest_steals": [
           {
             "player_id": "GB_DST",
@@ -581,15 +581,6 @@
             "ppg": 4.5
           },
           {
-            "player_id": "HOU_DST",
-            "name": "HOU D/ST",
-            "preseason_rank": 5,
-            "actual_rank": 19,
-            "rank_error": 14,
-            "games": 7,
-            "ppg": 5.1
-          },
-          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -597,6 +588,15 @@
             "rank_error": 12,
             "games": 8,
             "ppg": 4.6
+          },
+          {
+            "player_id": "HOU_DST",
+            "name": "HOU D/ST",
+            "preseason_rank": 5,
+            "actual_rank": 16,
+            "rank_error": 11,
+            "games": 7,
+            "ppg": 5.1
           }
         ]
       }
@@ -703,7 +703,7 @@
       },
       "RB": {
         "players_graded": 39,
-        "mean_abs_rank_error": 11.8,
+        "mean_abs_rank_error": 11.7,
         "hit_rate_within_5": 0.333,
         "biggest_steals": [
           {
@@ -790,13 +790,13 @@
             "ppg": 5.1
           },
           {
-            "player_id": "00-0040730",
-            "name": "RJ Harvey",
-            "preseason_rank": 17,
-            "actual_rank": 37,
+            "player_id": "00-0034844",
+            "name": "Saquon Barkley",
+            "preseason_rank": 15,
+            "actual_rank": 35,
             "rank_error": 20,
             "games": 6,
-            "ppg": 7.1
+            "ppg": 7.2
           }
         ]
       },
@@ -865,8 +865,8 @@
             "player_id": "00-0039868",
             "name": "Troy Franklin",
             "preseason_rank": 50,
-            "actual_rank": 121,
-            "rank_error": 71,
+            "actual_rank": 120,
+            "rank_error": 70,
             "games": 7,
             "ppg": 1.1
           },
@@ -1099,8 +1099,8 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.3,
-        "hit_rate_within_5": 0.312,
+        "mean_abs_rank_error": 9.1,
+        "hit_rate_within_5": 0.344,
         "biggest_steals": [
           {
             "player_id": "GB_DST",
@@ -1177,15 +1177,6 @@
             "ppg": 4.5
           },
           {
-            "player_id": "HOU_DST",
-            "name": "HOU D/ST",
-            "preseason_rank": 5,
-            "actual_rank": 19,
-            "rank_error": 14,
-            "games": 7,
-            "ppg": 5.1
-          },
-          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -1193,6 +1184,15 @@
             "rank_error": 12,
             "games": 8,
             "ppg": 4.6
+          },
+          {
+            "player_id": "HOU_DST",
+            "name": "HOU D/ST",
+            "preseason_rank": 5,
+            "actual_rank": 16,
+            "rank_error": 11,
+            "games": 7,
+            "ppg": 5.1
           }
         ]
       }
