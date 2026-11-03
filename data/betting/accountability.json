@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-03T12:58:23.262980+00:00"
+    "generated_at": "2026-11-03T16:29:41.766795+00:00"
   },
   "weeks_graded": 9,
   "ats": {
@@ -1648,7 +1648,7 @@
     {
       "season": 2026,
       "week": 9,
-      "locked_at": "2026-11-03T12:58:23.258164+00:00",
+      "locked_at": "2026-11-03T16:29:41.760307+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -1678,7 +1678,7 @@
           "home_team": "SEA",
           "away_team": "ARI",
           "model_margin_home": 5.9,
-          "spread_home": 11.5,
+          "spread_home": 10.5,
           "our_pick": "away",
           "no_lean": false,
           "result": null,
@@ -1704,7 +1704,7 @@
           "home_team": "BAL",
           "away_team": "JAX",
           "model_margin_home": -4.8,
-          "spread_home": -8.5,
+          "spread_home": -9.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -1769,7 +1769,7 @@
           "home_team": "CAR",
           "away_team": "DEN",
           "model_margin_home": -0.8,
-          "spread_home": -3.0,
+          "spread_home": -2.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -1847,8 +1847,8 @@
           "home_team": "NE",
           "away_team": "GB",
           "model_margin_home": 2.7,
-          "spread_home": 3.0,
-          "our_pick": "away",
+          "spread_home": 2.5,
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,
