@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-03T12:43:11.024880+00:00"
+    "generated_at": "2026-11-03T16:07:02.489210+00:00"
   },
   "available": true,
   "season": 2026,
@@ -503,7 +503,7 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.1,
+        "mean_abs_rank_error": 9.3,
         "hit_rate_within_5": 0.312,
         "biggest_steals": [
           {
@@ -584,8 +584,8 @@
             "player_id": "HOU_DST",
             "name": "HOU D/ST",
             "preseason_rank": 5,
-            "actual_rank": 18,
-            "rank_error": 13,
+            "actual_rank": 19,
+            "rank_error": 14,
             "games": 7,
             "ppg": 5.1
           },
@@ -703,7 +703,7 @@
       },
       "RB": {
         "players_graded": 39,
-        "mean_abs_rank_error": 11.7,
+        "mean_abs_rank_error": 11.8,
         "hit_rate_within_5": 0.333,
         "biggest_steals": [
           {
@@ -790,19 +790,19 @@
             "ppg": 5.1
           },
           {
-            "player_id": "00-0034844",
-            "name": "Saquon Barkley",
-            "preseason_rank": 15,
-            "actual_rank": 35,
+            "player_id": "00-0040730",
+            "name": "RJ Harvey",
+            "preseason_rank": 17,
+            "actual_rank": 37,
             "rank_error": 20,
             "games": 6,
-            "ppg": 7.2
+            "ppg": 7.1
           }
         ]
       },
       "WR": {
         "players_graded": 45,
-        "mean_abs_rank_error": 18.4,
+        "mean_abs_rank_error": 18.3,
         "hit_rate_within_5": 0.333,
         "biggest_steals": [
           {
@@ -901,7 +901,7 @@
       },
       "TE": {
         "players_graded": 43,
-        "mean_abs_rank_error": 13.7,
+        "mean_abs_rank_error": 13.8,
         "hit_rate_within_5": 0.209,
         "biggest_steals": [
           {
@@ -1099,7 +1099,7 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.1,
+        "mean_abs_rank_error": 9.3,
         "hit_rate_within_5": 0.312,
         "biggest_steals": [
           {
@@ -1180,8 +1180,8 @@
             "player_id": "HOU_DST",
             "name": "HOU D/ST",
             "preseason_rank": 5,
-            "actual_rank": 18,
-            "rank_error": 13,
+            "actual_rank": 19,
+            "rank_error": 14,
             "games": 7,
             "ppg": 5.1
           },
