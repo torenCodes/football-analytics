@@ -17,9 +17,27 @@
     <a href="index.html" class="site-logo"><img src="images/logo_small_white.png" alt="" class="site-logo-img">Football Forecast</a>
     <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
     <ul class="site-nav-links">
-      <li><a href="index.html" class="site-nav-link active">Home</a></li>
-      <li><a href="fantasy.html" class="site-nav-link">Fantasy</a></li>
-      <li><a href="betting.html" class="site-nav-link">Game Picks</a></li>
+      <li class="nav-item has-sub">
+        <a href="index.html" class="site-nav-link active">Home</a>
+        <ul class="site-subnav">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="fantasy.html" class="site-nav-link">Fantasy</a>
+        <ul class="site-subnav">
+          <li><a href="fantasy.html#position-leaders">Position Leaders</a></li>
+          <li><a href="fantasy.html#draft-board">Draft Board</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="betting.html" class="site-nav-link">Game Picks</a>
+        <ul class="site-subnav">
+          <li><a href="betting.html#game-board-section">Game Board</a></li>
+          <li><a href="betting.html#track-record-section">Track Record</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>
@@ -90,7 +108,7 @@
     </section>
   </div>
 
-  <section class="section about-section">
+  <section class="section about-section" id="about">
     <div class="section-head">
       <div>
         <div class="section-kicker">About</div>
@@ -116,8 +134,8 @@
            continuity, head coach and coordinator continuity, and availability. The Dream Team isn't a
            top-14 list — it's a real pick-by-pick snake-draft simulation built on Value Over Replacement,
            the same math serious fantasy strategy runs on. The Game Picks side works the same way in reverse:
-           offense-vs-defense efficiency, rest, rivalry/revenge context, and weather, synthesized into a
-           plain-English storyline for every game instead of a bare number.</p>
+           offense-vs-defense efficiency, scoring margin and the QB situation, with rest, rivalries and weather
+           as context, synthesized into a plain-English storyline for every game instead of a bare number.</p>
       </div>
       <div>
         <div class="front-block-title">Why It's Different</div>
@@ -182,6 +200,10 @@ function toggleSiteNav(btn) {
   const open = links.classList.toggle('open');
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
 }
+// A link in the open menu may only jump within this page, so close it by hand.
+document.querySelector('.site-nav-links').addEventListener('click', e => {
+  if (e.target.closest('a') && e.currentTarget.classList.contains('open')) toggleSiteNav(document.querySelector('.nav-burger'));
+});
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 
 function fmt1(n) { return (n === null || n === undefined) ? '—' : (Math.round(n * 10) / 10).toFixed(1).replace('-', '−'); }
@@ -396,7 +418,9 @@ function gameRowHtml(g) {
   const tags = [];
   if (g.primetime) tags.push('<span class="mini-tag blue">Primetime</span>');
   if (g.div_game) tags.push('<span class="mini-tag">Rivalry</span>');
-  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) tags.push('<span class="mini-tag flag">Revenge</span>');
+  // Yellow only for what moves the margin; revenge left the margin in v2, but a locked v1 week still has it.
+  const scoredRevenge = (g.margin_breakdown || []).some(r => r.kind === 'revenge');
+  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) tags.push(`<span class="mini-tag${scoredRevenge ? ' flag' : ''}">Revenge</span>`);
   if (g.international_site) tags.push('<span class="mini-tag">International</span>');
   return `
     <div class="ticket">
@@ -434,8 +458,10 @@ async function loadBettingColumn() {
   }
 }
 
-loadFantasyColumn();
-loadBettingColumn();
+// The columns above About fill in after load; land on it once they have.
+Promise.all([loadFantasyColumn(), loadBettingColumn()]).then(() => {
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+});
 </script>
 </body>
 </html>

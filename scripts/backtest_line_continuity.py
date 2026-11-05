@@ -230,7 +230,7 @@ def model_test(G):
 
 def main():
     schedules = load_cache("schedules")
-    eff = bs.team_game_efficiency(load_cache("team_stats"))
+    eff = bs.team_game_efficiency(load_cache("team_stats"), load_cache("schedules"))
     print("Computing Week 1 O-line continuity, 2021-2025...")
     cont = continuity_table()
     for s in SEASONS:

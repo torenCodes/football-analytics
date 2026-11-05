@@ -1,18 +1,28 @@
 """Fit the Game Picks rating constants, then report how they hold up on data
 the fit never saw.
 
-Walk-forward over 2021-2024 regular-season games: each game is predicted
-with only the games before it (plus the prior season), using the exact same
-rating_inputs_asof/blend code betting_scan.py runs live. Grid over the blend
-shape (RHO_OFF, RHO_DEF, K_PLAYS); for each point, MARGIN_SCALE and
-HOME_FIELD_ADJ are solved exactly by least squares on final margins (not on
-ATS wins -- margins are a far more stable target than a coin-flip outcome).
-2025 is held out and reported separately with the constants currently in
-betting_scan.py.
+Walk-forward over 2021-2024 regular-season games (the same seasons as v1; 2020 had
+no crowds and home field sat near zero): each game is predicted with
+only the games before it (plus the prior season), from the same inputs
+betting_scan.py runs live. Grids over the blend shape; for each point the
+linear terms -- points per EPA, points per point of differential, the QB-swap
+term, home field -- are solved exactly by least squares on final margins (not
+on ATS wins: margins are a far more stable target than a coin-flip outcome).
+
+2025 and 2026 are held out and scored with the constants in betting_scan.py,
+next to v1 (the pre-Week 10 structure) and the Vegas line. One caveat travels
+with those holdouts: the decision to try point differential and QB swaps came
+from rating_lab.py, which did look at those seasons. The constants never did.
+
+Writes data/lab/model_compare.json for the Data Breakdown page.
 
 Local-only (not run in CI): python scripts/calibrate_game_model.py
 Needs data_cache/ populated by ingest_historical.py.
 """
+
+import json
+import os
+from datetime import datetime, timezone
 
 import numpy as np
 import polars as pl
@@ -21,99 +31,196 @@ import betting_scan as bs
 from shared import load_cache
 
 FIT_SEASONS = [2021, 2022, 2023, 2024]
-HOLDOUT_SEASON = 2025
-FEATURES = ["cur_off", "cur_off_plays", "prior_off", "cur_def", "cur_def_plays", "prior_def"]
+HOLDOUTS = {"2025": [2025], "2026": [2026]}
+V1 = {"scale": 50.0, "hfa": 2.0, "rho_off": 0.6, "rho_def": 0.2, "k": 480}
+FEATURES = ["cur_off", "cur_off_plays", "prior_off", "cur_def", "cur_def_plays", "prior_def", "cur_pd", "cur_games", "prior_pd", "qb_gap"]
+BOOT = 2000
+LAB_DIR = os.path.join(bs.BASE_DIR, "data", "lab")
+rng = np.random.default_rng(23)
+
+
+def load_inputs():
+    schedules = load_cache("schedules")
+    team_stats = load_cache("team_stats").filter(pl.col("season") < bs.UPCOMING_SEASON)
+    live = bs.load_live_team_stats(bs.UPCOMING_SEASON, allow_empty=True)
+    if live is not None and not live.is_empty():
+        team_stats = pl.concat([team_stats, live], how="diagonal_relaxed")
+    return schedules, bs.team_game_efficiency(team_stats, schedules)
 
 
 def game_features(eff, schedules, seasons):
-    rows = []
+    """One row per played game: each side's inputs plus the outcome columns."""
+    starter, primary = bs.qb_starts(schedules)
+    q = bs.qb_quality(load_cache("player_stats_weekly"))
+    rows, ids = [], []
     for season in seasons:
-        games = schedules.filter((pl.col("season") == season) & (pl.col("game_type") == "REG")).drop_nulls(["result", "spread_line"])
+        games = (schedules.filter((pl.col("season") == season) & (pl.col("game_type") == "REG"))
+                 .drop_nulls(["result", "spread_line"]).sort(["week", "game_id"]))
         for week in sorted(games["week"].unique().to_list()):
             inputs = bs.rating_inputs_asof(eff, season, week)
-            for r in games.filter(pl.col("week") == week).iter_rows(named=True):
+            week_games = games.filter(pl.col("week") == week)
+            starters = {t: starter.get((r["game_id"], t)) for r in week_games.iter_rows(named=True) for t in (r["home_team"], r["away_team"])}
+            gaps = bs.qb_gaps_for_week(starters, season, primary, q)
+            for r in week_games.iter_rows(named=True):
                 h, a = inputs.get(r["home_team"]), inputs.get(r["away_team"])
                 if h is None or a is None:
                     continue
-                rows.append([h[f] for f in FEATURES] + [a[f] for f in FEATURES]
+                side = lambda x, team: [x[f] for f in FEATURES[:-1]] + [gaps.get(team, 0.0)]
+                rows.append(side(h, r["home_team"]) + side(a, r["away_team"])
                             + [r["location"] == "Neutral", r["result"], r["spread_line"], season, week])
+                ids.append(r["game_id"])
     arr = np.array(rows, dtype=float)
     cols = {f"h_{f}": i for i, f in enumerate(FEATURES)}
     cols.update({f"a_{f}": i + len(FEATURES) for i, f in enumerate(FEATURES)})
     n = 2 * len(FEATURES)
     cols.update({"neutral": n, "result": n + 1, "spread": n + 2, "season": n + 3, "week": n + 4})
-    return arr, cols
+    return arr, cols, ids
 
 
-def raw_gap(X, c, rho_off, rho_def, k):
-    def side(prefix, part, rho):
+def design(X, c, rho_off, rho_def, k, rho_pd, k_games):
+    """The model's linear terms for one blend shape: EPA gap, differential gap,
+    QB-swap gap, home field."""
+    def share(prefix, part):
         plays = X[:, c[f"{prefix}_cur_{part}_plays"]]
-        w = plays / (plays + k)
+        return plays / (plays + k)
+
+    def rating(prefix, part, rho):
+        w = share(prefix, part)
         return w * X[:, c[f"{prefix}_cur_{part}"]] + (1 - w) * rho * X[:, c[f"{prefix}_prior_{part}"]]
-    return (side("h", "off", rho_off) - side("a", "off", rho_off)) + (side("a", "def", rho_def) - side("h", "def", rho_def))
+
+    def point_diff(prefix):
+        g = X[:, c[f"{prefix}_cur_games"]]
+        w = g / (g + k_games)
+        return w * X[:, c[f"{prefix}_cur_pd"]] + (1 - w) * rho_pd * X[:, c[f"{prefix}_prior_pd"]]
+
+    epa = (rating("h", "off", rho_off) - rating("a", "off", rho_off)) + (rating("a", "def", rho_def) - rating("h", "def", rho_def))
+    pd_gap = point_diff("h") - point_diff("a")
+    swap = (1 - share("h", "off")) * X[:, c["h_qb_gap"]] - (1 - share("a", "off")) * X[:, c["a_qb_gap"]]
+    return epa, pd_gap, swap, 1 - X[:, c["neutral"]]
 
 
-def solve_scale_hfa(raw, X, c):
-    A = np.column_stack([raw, 1 - X[:, c["neutral"]]])
-    (scale, hfa), *_ = np.linalg.lstsq(A, X[:, c["result"]], rcond=None)
-    return scale, hfa
+def predict_v1(X, c):
+    epa, _, _, home = design(X, c, V1["rho_off"], V1["rho_def"], V1["k"], 0.0, 1.0)
+    return V1["scale"] * epa + V1["hfa"] * home
 
 
-def report(label, margin, X, c):
+def predict_v2(X, c):
+    epa, pd_gap, swap, home = design(X, c, bs.RHO_OFF, bs.RHO_DEF, bs.K_PLAYS, bs.RHO_PD, bs.K_GAMES)
+    return bs.MARGIN_SCALE * epa + bs.PD_WEIGHT * pd_gap + bs.MARGIN_SCALE * bs.QB_SWAP_SHARE * swap + bs.HOME_FIELD_ADJ * home
+
+
+def scorecard(margin, X, c):
     actual, spread = X[:, c["result"]], X[:, c["spread"]]
     margin = np.round(margin, 1)
-    nz = (actual != 0) & (margin != 0)
-    push = actual == spread
-    lean = margin != spread
-    edge = margin - spread
-    graded = lean & ~push
-    ats = ((edge > 0) == (actual > spread))[graded]
-    fav = np.where(spread[graded] != 0, (edge[graded] > 0) == (spread[graded] > 0), False)
-    coef, *_ = np.linalg.lstsq(np.column_stack([spread, margin, np.ones(len(actual))]), actual, rcond=None)
-    print(f"\n--- {label} ({len(actual)} games) ---")
-    print(f"MAE      model {np.mean(np.abs(margin - actual)):5.2f} | spread {np.mean(np.abs(spread - actual)):5.2f}")
-    print(f"corr     model {np.corrcoef(margin, actual)[0, 1]:5.3f} | spread {np.corrcoef(spread, actual)[0, 1]:5.3f}")
-    print(f"result ~ {coef[0]:.2f}*spread + {coef[1]:.2f}*model + {coef[2]:.2f}   (model coef ~0 = adds nothing the spread lacks)")
-    mfav = (spread != 0) & (actual != 0)
-    print(f"outright winners  model {np.mean((margin[nz] > 0) == (actual[nz] > 0)):.3f} | market favorite {np.mean((spread[mfav] > 0) == (actual[mfav] > 0)):.3f}")
-    print(f"ATS      {ats.sum()}-{len(ats) - ats.sum()} = {ats.mean():.3f}  (no lean {np.sum(~lean)}, pushes {np.sum(push)}; break-even at -110 is 0.524)")
-    print(f"picks on the underdog: {np.mean(~fav):.2f} | ATS taking favorite {ats[fav].mean():.3f} ({fav.sum()}) | taking underdog {ats[~fav].mean():.3f} ({(~fav).sum()})")
-    for lo, hi in ((0, 1.5), (1.5, 3), (3, 5), (5, 99)):
-        b = (np.abs(edge[graded]) >= lo) & (np.abs(edge[graded]) < hi)
-        if b.sum():
-            print(f"  |gap| {lo:>3}-{hi:<3}: {ats[b].mean():.3f} on {b.sum()} games")
-    early = X[:, c["week"]] <= 4
-    if early.sum() and (early & graded).sum():
-        e = ((edge > 0) == (actual > spread))[early & graded]
-        print(f"weeks 1-4 slice: corr {np.corrcoef(margin[early], actual[early])[0, 1]:.3f} | ATS {e.mean():.3f} on {len(e)}")
+    graded = (margin != spread) & (actual != spread)
+    wins = ((margin > spread) == (actual > spread))[graded]
+    decided = (actual != 0) & (margin != 0)
+    return {
+        "games": len(actual),
+        "corr": round(float(np.corrcoef(margin, actual)[0, 1]), 3),
+        "mae": round(float(np.mean(np.abs(margin - actual))), 2),
+        "winners": round(float(np.mean((margin[decided] > 0) == (actual[decided] > 0))), 3),
+        "ats_wins": int(wins.sum()),
+        "ats_losses": int(len(wins) - wins.sum()),
+        "ats": round(float(wins.mean()), 3),
+    }
+
+
+def market_card(X, c):
+    actual, spread = X[:, c["result"]], X[:, c["spread"]]
+    decided = (spread != 0) & (actual != 0)
+    return {
+        "games": len(actual),
+        "corr": round(float(np.corrcoef(spread, actual)[0, 1]), 3),
+        "mae": round(float(np.mean(np.abs(spread - actual))), 2),
+        "winners": round(float(np.mean((spread[decided] > 0) == (actual[decided] > 0))), 3),
+    }
+
+
+def paired_mse(a, b, y):
+    d = (a - y) ** 2 - (b - y) ** 2
+    boots = [d[rng.integers(0, len(d), len(d))].mean() for _ in range(BOOT)]
+    lo, hi = np.percentile(boots, [2.5, 97.5])
+    return {"diff": round(float(d.mean()), 2), "lo": round(float(lo), 2), "hi": round(float(hi), 2)}
+
+
+def calibration(margin, spread, y):
+    """Average actual margin per bin of predicted margin -- away and home sides
+    folded together by symmetry, so a bin reads "picked to win by about N"."""
+    out = []
+    edges = [(0, 1.5), (1.5, 3), (3, 4.5), (4.5, 6.5), (6.5, 9), (9, 40)]
+    for name, pred in (("model", margin), ("vegas", spread)):
+        sign = np.sign(pred)
+        p, a = np.abs(pred), y * sign
+        rows = []
+        for lo, hi in edges:
+            m = (p >= lo) & (p < hi) & (sign != 0)
+            if m.sum() >= 15:
+                se = a[m].std(ddof=1) / np.sqrt(m.sum())
+                rows.append({"pred": round(float(p[m].mean()), 2), "actual": round(float(a[m].mean()), 2),
+                             "lo": round(float(a[m].mean() - 1.96 * se), 2), "hi": round(float(a[m].mean() + 1.96 * se), 2), "n": int(m.sum())})
+        out.append({"series": name, "bins": rows})
+    return out
 
 
 def main():
-    schedules = load_cache("schedules")
-    eff = bs.team_game_efficiency(load_cache("team_stats"))
+    schedules, eff = load_inputs()
+    print(f"Building walk-forward features for {FIT_SEASONS} and the holdouts...")
+    Xf, c, _ = game_features(eff, schedules, FIT_SEASONS)
+    y = Xf[:, c["result"]]
 
-    print(f"Building walk-forward features for {FIT_SEASONS} and {HOLDOUT_SEASON}...")
-    Xf, c = game_features(eff, schedules, FIT_SEASONS)
-    Xh, _ = game_features(eff, schedules, [HOLDOUT_SEASON])
-
+    print("\nBest blend shape for the two new terms (EPA blend held at the current constants):")
     results = []
-    for rho_off in np.arange(0, 1.01, 0.1):
-        for rho_def in np.arange(0, 1.01, 0.1):
-            for k in range(80, 1601, 40):
-                raw = raw_gap(Xf, c, rho_off, rho_def, k)
-                scale, hfa = solve_scale_hfa(raw, Xf, c)
-                mse = np.mean((scale * raw + hfa * (1 - Xf[:, c["neutral"]]) - Xf[:, c["result"]]) ** 2)
-                results.append((mse, round(rho_off, 1), round(rho_def, 1), k, scale, hfa))
+    for rho_pd in (0.2, 0.3, 0.4, 0.5, 0.6, 0.7):
+        for k_games in (2, 4, 6, 8, 10, 12):
+            A = np.column_stack(design(Xf, c, bs.RHO_OFF, bs.RHO_DEF, bs.K_PLAYS, rho_pd, k_games))
+            coef = np.linalg.lstsq(A, y, rcond=None)[0]
+            results.append((float(np.mean((A @ coef - y) ** 2)), rho_pd, k_games, *coef))
     results.sort()
-    print(f"\nTop 10 fits on {FIT_SEASONS[0]}-{FIT_SEASONS[-1]} (MSE, RHO_OFF, RHO_DEF, K_PLAYS, scale, HFA):")
-    for mse, ro, rd, k, s, h in results[:10]:
-        print(f"  {mse:7.2f}  rho_off {ro:.1f}  rho_def {rd:.1f}  K {k:>5}  scale {s:6.1f}  hfa {h:5.2f}")
+    for mse, rho_pd, k_games, scale, pdw, swap, hfa in results[:6]:
+        print(f"  {mse:7.2f}  rho_pd {rho_pd:.1f}  k_games {k_games:>2}  scale {scale:5.1f}  pd {pdw:.3f}  swap {swap:5.1f} (share {swap / scale:+.2f})  hfa {hfa:.2f}")
 
-    print(f"\nConstants currently in betting_scan.py: MARGIN_SCALE {bs.MARGIN_SCALE}, HOME_FIELD_ADJ {bs.HOME_FIELD_ADJ}, "
-          f"RHO_OFF {bs.RHO_OFF}, RHO_DEF {bs.RHO_DEF}, K_PLAYS {bs.K_PLAYS}")
-    for label, X in ((f"IN-SAMPLE {FIT_SEASONS[0]}-{FIT_SEASONS[-1]}", Xf), (f"HOLDOUT {HOLDOUT_SEASON} (never seen by the fit)", Xh)):
-        raw = raw_gap(X, c, bs.RHO_OFF, bs.RHO_DEF, bs.K_PLAYS)
-        report(label, bs.MARGIN_SCALE * raw + bs.HOME_FIELD_ADJ * (1 - X[:, c["neutral"]]), X, c)
+    print("\nRe-checking the EPA blend shape with those terms in the model:")
+    best = results[0]
+    grid = []
+    for rho_off in np.arange(0.2, 1.01, 0.1):
+        for rho_def in np.arange(0.0, 0.61, 0.1):
+            for k in range(240, 1001, 80):
+                A = np.column_stack(design(Xf, c, rho_off, rho_def, k, best[1], best[2]))
+                coef = np.linalg.lstsq(A, y, rcond=None)[0]
+                grid.append((float(np.mean((A @ coef - y) ** 2)), round(float(rho_off), 1), round(float(rho_def), 1), k, *coef))
+    grid.sort()
+    for mse, ro, rd, k, scale, pdw, swap, hfa in grid[:6]:
+        print(f"  {mse:7.2f}  rho_off {ro:.1f}  rho_def {rd:.1f}  K {k:>4}  scale {scale:5.1f}  pd {pdw:.3f}  swap {swap:5.1f}  hfa {hfa:.2f}")
+
+    print(f"\nIn betting_scan.py: scale {bs.MARGIN_SCALE}, pd {bs.PD_WEIGHT}, swap share {bs.QB_SWAP_SHARE}, hfa {bs.HOME_FIELD_ADJ}, "
+          f"rho {bs.RHO_OFF}/{bs.RHO_DEF}, K {bs.K_PLAYS}, rho_pd {bs.RHO_PD}, k_games {bs.K_GAMES}")
+    report = {"generated_at": datetime.now(timezone.utc).isoformat(), "fit_seasons": FIT_SEASONS, "holdouts": {}}
+    samples = {"fit": Xf}
+    for label, seasons in HOLDOUTS.items():
+        samples[label] = game_features(eff, schedules, seasons)[0]
+    for label, X in samples.items():
+        v1, v2 = predict_v1(X, c), predict_v2(X, c)
+        card = {"v1": scorecard(v1, X, c), "v2": scorecard(v2, X, c), "vegas": market_card(X, c),
+                "v2_minus_v1_mse": paired_mse(v2, v1, X[:, c["result"]])}
+        if X.size:
+            card["through_week"] = int(X[:, c["week"]].max())
+        report["holdouts"][label] = card
+        print(f"\n--- {label} ({len(X)} games) ---")
+        for k_, v in card.items():
+            print(f"  {k_}: {v}")
+
+    all_seasons = np.vstack([samples["fit"], samples["2025"], samples["2026"]])
+    report["calibration"] = calibration(predict_v2(all_seasons, c), all_seasons[:, c["spread"]], all_seasons[:, c["result"]])
+    report["calibration_games"] = len(all_seasons)
+    report["constants"] = {
+        "MARGIN_SCALE": bs.MARGIN_SCALE, "PD_WEIGHT": bs.PD_WEIGHT, "QB_SWAP_SHARE": bs.QB_SWAP_SHARE, "QB_OUT_PENALTY": bs.QB_OUT_PENALTY,
+        "HOME_FIELD_ADJ": bs.HOME_FIELD_ADJ, "RHO_OFF": bs.RHO_OFF, "RHO_DEF": bs.RHO_DEF, "RHO_PD": bs.RHO_PD, "K_PLAYS": bs.K_PLAYS, "K_GAMES": bs.K_GAMES,
+    }
+    os.makedirs(LAB_DIR, exist_ok=True)
+    with open(os.path.join(LAB_DIR, "model_compare.json"), "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=1)
+    print("\nWrote data/lab/model_compare.json")
 
 
 if __name__ == "__main__":

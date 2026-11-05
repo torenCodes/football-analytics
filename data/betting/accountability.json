@@ -1,22 +1,190 @@
 {
   "meta": {
-    "generated_at": "2026-11-05T02:44:44.179079+00:00"
+    "generated_at": "2026-11-05T20:46:28.247170+00:00"
   },
   "weeks_graded": 9,
   "ats": {
-    "graded": 108,
-    "correct": 57,
-    "accuracy": 0.528
+    "graded": 114,
+    "correct": 61,
+    "accuracy": 0.535
   },
   "outright": {
-    "graded": 114,
-    "correct": 66,
-    "accuracy": 0.579
+    "graded": 119,
+    "correct": 67,
+    "accuracy": 0.563
   },
+  "by_model": {
+    "v0": {
+      "weeks": [
+        1,
+        2
+      ],
+      "ats": {
+        "graded": 30,
+        "correct": 15,
+        "accuracy": 0.5
+      },
+      "outright": {
+        "graded": 32,
+        "correct": 16,
+        "accuracy": 0.5
+      },
+      "games": 32,
+      "model_corr": 0.027,
+      "vegas_corr": 0.445
+    },
+    "v1": {
+      "weeks": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ats": {
+        "graded": 84,
+        "correct": 46,
+        "accuracy": 0.548
+      },
+      "outright": {
+        "graded": 87,
+        "correct": 51,
+        "accuracy": 0.586
+      },
+      "games": 89,
+      "model_corr": 0.304,
+      "vegas_corr": 0.334
+    }
+  },
+  "season_to_date": [
+    {
+      "week": 1,
+      "games": 16,
+      "ats": {
+        "graded": 15,
+        "correct": 10,
+        "accuracy": 0.667
+      },
+      "model_corr": 0.092,
+      "vegas_corr": 0.334,
+      "model_mae": 14.77,
+      "vegas_mae": 11.41,
+      "model_winners": 0.562,
+      "vegas_winners": 0.75
+    },
+    {
+      "week": 2,
+      "games": 32,
+      "ats": {
+        "graded": 30,
+        "correct": 15,
+        "accuracy": 0.5
+      },
+      "model_corr": 0.027,
+      "vegas_corr": 0.445,
+      "model_mae": 15.48,
+      "vegas_mae": 11.59,
+      "model_winners": 0.5,
+      "vegas_winners": 0.719
+    },
+    {
+      "week": 3,
+      "games": 48,
+      "ats": {
+        "graded": 46,
+        "correct": 24,
+        "accuracy": 0.522
+      },
+      "model_corr": 0.033,
+      "vegas_corr": 0.31,
+      "model_mae": 13.17,
+      "vegas_mae": 10.56,
+      "model_winners": 0.5,
+      "vegas_winners": 0.646
+    },
+    {
+      "week": 4,
+      "games": 64,
+      "ats": {
+        "graded": 60,
+        "correct": 35,
+        "accuracy": 0.583
+      },
+      "model_corr": 0.076,
+      "vegas_corr": 0.298,
+      "model_mae": 11.33,
+      "vegas_mae": 9.75,
+      "model_winners": 0.547,
+      "vegas_winners": 0.625
+    },
+    {
+      "week": 5,
+      "games": 79,
+      "ats": {
+        "graded": 74,
+        "correct": 41,
+        "accuracy": 0.554
+      },
+      "model_corr": 0.106,
+      "vegas_corr": 0.324,
+      "model_mae": 11.19,
+      "vegas_mae": 9.85,
+      "model_winners": 0.564,
+      "vegas_winners": 0.628
+    },
+    {
+      "week": 6,
+      "games": 93,
+      "ats": {
+        "graded": 88,
+        "correct": 48,
+        "accuracy": 0.545
+      },
+      "model_corr": 0.128,
+      "vegas_corr": 0.328,
+      "model_mae": 10.5,
+      "vegas_mae": 9.33,
+      "model_winners": 0.56,
+      "vegas_winners": 0.63
+    },
+    {
+      "week": 7,
+      "games": 107,
+      "ats": {
+        "graded": 100,
+        "correct": 52,
+        "accuracy": 0.52
+      },
+      "model_corr": 0.109,
+      "vegas_corr": 0.329,
+      "model_mae": 10.63,
+      "vegas_mae": 9.45,
+      "model_winners": 0.543,
+      "vegas_winners": 0.642
+    },
+    {
+      "week": 8,
+      "games": 121,
+      "ats": {
+        "graded": 114,
+        "correct": 61,
+        "accuracy": 0.535
+      },
+      "model_corr": 0.15,
+      "vegas_corr": 0.356,
+      "model_mae": 10.64,
+      "vegas_mae": 9.63,
+      "model_winners": 0.563,
+      "vegas_winners": 0.65
+    }
+  ],
   "weeks": [
     {
       "season": 2026,
       "week": 1,
+      "model_version": "v0",
       "locked_at": "2026-09-08T18:51:15.826045+00:00",
       "ats": {
         "graded": 15,
@@ -242,6 +410,7 @@
     {
       "season": 2026,
       "week": 2,
+      "model_version": "v0",
       "locked_at": "2026-09-16T17:44:37.586260+00:00",
       "ats": {
         "graded": 15,
@@ -467,16 +636,17 @@
     {
       "season": 2026,
       "week": 3,
+      "model_version": "v1",
       "locked_at": "2026-09-26T06:36:07.108431+00:00",
       "ats": {
-        "graded": 15,
+        "graded": 16,
         "correct": 9,
-        "accuracy": 0.6
+        "accuracy": 0.562
       },
       "outright": {
-        "graded": 15,
+        "graded": 16,
         "correct": 8,
-        "accuracy": 0.533
+        "accuracy": 0.5
       },
       "games": [
         {
@@ -673,22 +843,36 @@
           "push": false,
           "correct": false,
           "winner_correct": false
+        },
+        {
+          "game_id": "2026_03_ATL_GB",
+          "home_team": "GB",
+          "away_team": "ATL",
+          "model_margin_home": 6.8,
+          "spread_home": 5.5,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": -21,
+          "push": false,
+          "correct": false,
+          "winner_correct": false
         }
       ]
     },
     {
       "season": 2026,
       "week": 4,
+      "model_version": "v1",
       "locked_at": "2026-10-03T07:05:09.266875+00:00",
       "ats": {
-        "graded": 13,
-        "correct": 10,
-        "accuracy": 0.769
+        "graded": 14,
+        "correct": 11,
+        "accuracy": 0.786
       },
       "outright": {
-        "graded": 15,
+        "graded": 16,
         "correct": 11,
-        "accuracy": 0.733
+        "accuracy": 0.688
       },
       "games": [
         {
@@ -885,22 +1069,36 @@
           "push": true,
           "correct": null,
           "winner_correct": true
+        },
+        {
+          "game_id": "2026_04_PIT_CLE",
+          "home_team": "CLE",
+          "away_team": "PIT",
+          "model_margin_home": -1.5,
+          "spread_home": -2.5,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": 3,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
         }
       ]
     },
     {
       "season": 2026,
       "week": 5,
+      "model_version": "v1",
       "locked_at": "2026-10-10T07:43:50.475963+00:00",
       "ats": {
-        "graded": 13,
-        "correct": 5,
-        "accuracy": 0.385
+        "graded": 14,
+        "correct": 6,
+        "accuracy": 0.429
       },
       "outright": {
-        "graded": 13,
+        "graded": 14,
         "correct": 9,
-        "accuracy": 0.692
+        "accuracy": 0.643
       },
       "games": [
         {
@@ -1084,17 +1282,31 @@
           "push": false,
           "correct": false,
           "winner_correct": true
+        },
+        {
+          "game_id": "2026_05_TB_DAL",
+          "home_team": "DAL",
+          "away_team": "TB",
+          "model_margin_home": 4.1,
+          "spread_home": 8.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": -8,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
         }
       ]
     },
     {
       "season": 2026,
       "week": 6,
+      "model_version": "v1",
       "locked_at": "2026-10-17T06:08:43.730696+00:00",
       "ats": {
-        "graded": 13,
-        "correct": 6,
-        "accuracy": 0.462
+        "graded": 14,
+        "correct": 7,
+        "accuracy": 0.5
       },
       "outright": {
         "graded": 13,
@@ -1270,22 +1482,36 @@
           "push": false,
           "correct": false,
           "winner_correct": true
+        },
+        {
+          "game_id": "2026_06_SEA_DEN",
+          "home_team": "DEN",
+          "away_team": "SEA",
+          "model_margin_home": -0.0,
+          "spread_home": -3.0,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": 3,
+          "push": false,
+          "correct": true,
+          "winner_correct": null
         }
       ]
     },
     {
       "season": 2026,
       "week": 7,
+      "model_version": "v1",
       "locked_at": "2026-10-24T06:26:23.710791+00:00",
       "ats": {
-        "graded": 11,
+        "graded": 12,
         "correct": 4,
-        "accuracy": 0.364
+        "accuracy": 0.333
       },
       "outright": {
-        "graded": 13,
+        "graded": 14,
         "correct": 6,
-        "accuracy": 0.462
+        "accuracy": 0.429
       },
       "games": [
         {
@@ -1456,22 +1682,36 @@
           "push": false,
           "correct": true,
           "winner_correct": true
+        },
+        {
+          "game_id": "2026_07_NE_CHI",
+          "home_team": "CHI",
+          "away_team": "NE",
+          "model_margin_home": -0.2,
+          "spread_home": 3.0,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": 6,
+          "push": false,
+          "correct": false,
+          "winner_correct": false
         }
       ]
     },
     {
       "season": 2026,
       "week": 8,
+      "model_version": "v1",
       "locked_at": "2026-10-31T07:29:04.923929+00:00",
       "ats": {
-        "graded": 13,
-        "correct": 8,
-        "accuracy": 0.615
+        "graded": 14,
+        "correct": 9,
+        "accuracy": 0.643
       },
       "outright": {
-        "graded": 13,
-        "correct": 9,
-        "accuracy": 0.692
+        "graded": 14,
+        "correct": 10,
+        "accuracy": 0.714
       },
       "games": [
         {
@@ -1642,12 +1882,26 @@
           "push": false,
           "correct": true,
           "winner_correct": true
+        },
+        {
+          "game_id": "2026_08_CAR_GB",
+          "home_team": "GB",
+          "away_team": "CAR",
+          "model_margin_home": 5.4,
+          "spread_home": 3.5,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": 8,
+          "push": false,
+          "correct": true,
+          "winner_correct": true
         }
       ]
     },
     {
       "season": 2026,
       "week": 9,
+      "model_version": "v1",
       "locked_at": "2026-11-03T17:59:58.902507+00:00",
       "ats": {
         "graded": 0,

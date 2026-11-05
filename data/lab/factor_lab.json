@@ -1,0 +1,368 @@
+{
+ "generated_at": "2026-11-05T03:12:41.707283+00:00",
+ "market_games": 5320,
+ "market_seasons": [
+  2006,
+  2026
+ ],
+ "model_games": 1976,
+ "model_seasons": [
+  2019,
+  2026
+ ],
+ "model_residual_sd": 13.1,
+ "market_residual_sd": 13.2,
+ "break_even": 0.524,
+ "factors": [
+  {
+   "key": "off_loss",
+   "label": "Coming off a loss",
+   "games": 2458,
+   "games_model": 905,
+   "model": {
+    "pts": -0.78,
+    "lo": -1.6,
+    "hi": 0.04,
+    "oos_mse": -0.02,
+    "oos_lo": -0.66,
+    "oos_hi": 0.61
+   },
+   "market": {
+    "pts": -0.21,
+    "lo": -0.72,
+    "hi": 0.29
+   },
+   "covers": {
+    "rate": 0.503,
+    "n": 2399,
+    "lo": 0.483,
+    "hi": 0.523
+   }
+  },
+  {
+   "key": "off_blowout_loss",
+   "label": "Coming off a 17+ point loss",
+   "games": 1149,
+   "games_model": 410,
+   "model": {
+    "pts": -0.06,
+    "lo": -1.25,
+    "hi": 1.1,
+    "oos_mse": 0.21,
+    "oos_lo": 0.07,
+    "oos_hi": 0.35
+   },
+   "market": {
+    "pts": 0.18,
+    "lo": -0.59,
+    "hi": 0.89
+   },
+   "covers": {
+    "rate": 0.523,
+    "n": 1127,
+    "lo": 0.493,
+    "hi": 0.552
+   }
+  },
+  {
+   "key": "off_blowout_win",
+   "label": "Coming off a 17+ point win",
+   "games": 1145,
+   "games_model": 410,
+   "model": {
+    "pts": 0.43,
+    "lo": -0.82,
+    "hi": 1.69,
+    "oos_mse": 0.18,
+    "oos_lo": -0.08,
+    "oos_hi": 0.44
+   },
+   "market": {
+    "pts": -0.19,
+    "lo": -0.97,
+    "hi": 0.56
+   },
+   "covers": {
+    "rate": 0.473,
+    "n": 1118,
+    "lo": 0.444,
+    "hi": 0.502
+   }
+  },
+  {
+   "key": "lost_cause",
+   "label": "Playoff race: 3+ games out (Week 11+)",
+   "games": 832,
+   "games_model": 283,
+   "model": {
+    "pts": -1.46,
+    "lo": -3.07,
+    "hi": 0.22,
+    "oos_mse": -0.14,
+    "oos_lo": -0.8,
+    "oos_hi": 0.5
+   },
+   "market": {
+    "pts": -0.84,
+    "lo": -1.75,
+    "hi": 0.1
+   },
+   "covers": {
+    "rate": 0.51,
+    "n": 813,
+    "lo": 0.476,
+    "hi": 0.545
+   }
+  },
+  {
+   "key": "on_the_cusp",
+   "label": "Playoff race: within a game of the last seed (Week 11+)",
+   "games": 1081,
+   "games_model": 374,
+   "model": {
+    "pts": -0.25,
+    "lo": -1.48,
+    "hi": 0.97,
+    "oos_mse": 0.03,
+    "oos_lo": -0.11,
+    "oos_hi": 0.16
+   },
+   "market": {
+    "pts": -0.14,
+    "lo": -0.9,
+    "hi": 0.64
+   },
+   "covers": {
+    "rate": 0.485,
+    "n": 1052,
+    "lo": 0.455,
+    "hi": 0.515
+   }
+  },
+  {
+   "key": "playoff_safe",
+   "label": "Playoff race: 3+ games clear (Week 11+)",
+   "games": 488,
+   "games_model": 209,
+   "model": {
+    "pts": 0.81,
+    "lo": -0.91,
+    "hi": 2.71,
+    "oos_mse": 0.03,
+    "oos_lo": -0.3,
+    "oos_hi": 0.34
+   },
+   "market": {
+    "pts": 0.76,
+    "lo": -0.34,
+    "hi": 1.94
+   },
+   "covers": {
+    "rate": 0.493,
+    "n": 477,
+    "lo": 0.448,
+    "hi": 0.538
+   }
+  },
+  {
+   "key": "off_bye",
+   "label": "Coming off a bye",
+   "games": 556,
+   "games_model": 192,
+   "model": {
+    "pts": 0.87,
+    "lo": -0.81,
+    "hi": 2.59,
+    "oos_mse": 0.17,
+    "oos_lo": -0.18,
+    "oos_hi": 0.54
+   },
+   "market": {
+    "pts": 0.65,
+    "lo": -0.4,
+    "hi": 1.68
+   },
+   "covers": {
+    "rate": 0.515,
+    "n": 542,
+    "lo": 0.473,
+    "hi": 0.557
+   }
+  },
+  {
+   "key": "rest_diff",
+   "label": "Rest advantage (per day)",
+   "games": 1790,
+   "games_model": 695,
+   "model": {
+    "pts": 0.23,
+    "lo": -0.01,
+    "hi": 0.46,
+    "oos_mse": -0.03,
+    "oos_lo": -0.64,
+    "oos_hi": 0.61
+   },
+   "market": {
+    "pts": 0.11,
+    "lo": -0.02,
+    "hi": 0.25
+   },
+   "covers": {
+    "rate": 0.51,
+    "n": 1747,
+    "lo": 0.487,
+    "hi": 0.533
+   }
+  },
+  {
+   "key": "revenge",
+   "label": "Revenge: lost the last division meeting",
+   "games": 1896,
+   "games_model": 701,
+   "model": {
+    "pts": -0.47,
+    "lo": -1.42,
+    "hi": 0.47,
+    "oos_mse": 0.17,
+    "oos_lo": -0.17,
+    "oos_hi": 0.55
+   },
+   "market": {
+    "pts": 0.06,
+    "lo": -0.52,
+    "hi": 0.62
+   },
+   "covers": {
+    "rate": 0.518,
+    "n": 1851,
+    "lo": 0.495,
+    "hi": 0.54
+   }
+  },
+  {
+   "key": "former_coach",
+   "label": "Facing last season's head coach",
+   "games": 8,
+   "games_model": 4,
+   "model": {
+    "pts": 9.09,
+    "lo": 4.41,
+    "hi": 13.36,
+    "oos_mse": -0.14,
+    "oos_lo": -0.34,
+    "oos_hi": 0.01
+   },
+   "market": {
+    "pts": 0.67,
+    "lo": -6.0,
+    "hi": 7.53
+   },
+   "covers": {
+    "rate": 0.5,
+    "n": 8,
+    "lo": 0.154,
+    "hi": 0.846
+   }
+  },
+  {
+   "key": "west_early",
+   "label": "West-coast team at a 1 PM ET kickoff (away)",
+   "games": 326,
+   "games_model": 139,
+   "model": {
+    "pts": 0.67,
+    "lo": -1.65,
+    "hi": 2.83,
+    "oos_mse": 0.05,
+    "oos_lo": -0.14,
+    "oos_hi": 0.27
+   },
+   "market": {
+    "pts": -0.49,
+    "lo": -1.94,
+    "hi": 1.02
+   },
+   "covers": {
+    "rate": 0.519,
+    "n": 322,
+    "lo": 0.464,
+    "hi": 0.573
+   }
+  },
+  {
+   "key": "backup_qb",
+   "label": "Starting someone other than the usual QB",
+   "games": 1421,
+   "games_model": 548,
+   "model": {
+    "pts": -1.82,
+    "lo": -2.88,
+    "hi": -0.76,
+    "oos_mse": -0.56,
+    "oos_lo": -1.73,
+    "oos_hi": 0.45
+   },
+   "market": {
+    "pts": -0.66,
+    "lo": -1.33,
+    "hi": -0.03
+   },
+   "covers": {
+    "rate": 0.497,
+    "n": 1383,
+    "lo": 0.47,
+    "hi": 0.523
+   }
+  },
+  {
+   "key": "qb_downgrade",
+   "label": "Usual QB replaced by a weaker track record",
+   "games": 414,
+   "games_model": 410,
+   "model": {
+    "pts": -2.6,
+    "lo": -3.84,
+    "hi": -1.34,
+    "oos_mse": -1.03,
+    "oos_lo": -2.39,
+    "oos_hi": 0.33
+   },
+   "market": {
+    "pts": -0.41,
+    "lo": -1.6,
+    "hi": 0.79
+   },
+   "covers": {
+    "rate": 0.517,
+    "n": 402,
+    "lo": 0.469,
+    "hi": 0.566
+   }
+  },
+  {
+   "key": "qb_upgrade",
+   "label": "Usual QB replaced by an equal or better one",
+   "games": 192,
+   "games_model": 192,
+   "model": {
+    "pts": 0.37,
+    "lo": -1.58,
+    "hi": 2.37,
+    "oos_mse": 0.12,
+    "oos_lo": -0.05,
+    "oos_hi": 0.29
+   },
+   "market": {
+    "pts": 0.75,
+    "lo": -1.1,
+    "hi": 2.52
+   },
+   "covers": {
+    "rate": 0.529,
+    "n": 187,
+    "lo": 0.458,
+    "hi": 0.601
+   }
+  }
+ ]
+}

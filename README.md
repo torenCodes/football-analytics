@@ -15,7 +15,7 @@ Six times a week — right after Monday Night Football wraps on Tuesday (with tw
 | Page | What it surfaces |
 |---|---|
 | **[Fantasy](https://footballforecast.net/fantasy.html)** | A frozen preseason Draft Board (VORP-based snake-draft simulation) that pivots to weekly in-season content once Week 1 starts: Weekly Rankings (start/sit), a Waiver Wire Watch for likely-undrafted players outperforming expectations, and an accountability section grading the preseason board against how the season actually went |
-| **[Game Picks](https://footballforecast.net/betting.html)** | A weekly against-the-spread board: team efficiency blended from last season into this one, plus a few situational adjustments, with each pick explained in plain English beside the real line. The season-long track record is shown both against the spread and on outright winners, next to a walk-forward backtest |
+| **[Game Picks](https://footballforecast.net/betting.html)** | A weekly against-the-spread board: team efficiency and scoring margin blended from last season into this one, plus the QB situation, with each pick explained in plain English beside the real line. The season-long track record is shown both against the spread and on outright winners, by model version, next to a walk-forward backtest |
 
 Both pages pull their "why" from the same shared logic (see `scripts/shared.py` below) rather than maintaining two independent, silently-drifting copies of it.
 
@@ -51,6 +51,17 @@ What it does instead is show both records, publish the backtest on the page, and
 
 It stays a context tag on the cards until more seasons say otherwise.
 
+**Week 9 review: motivation, and what Vegas already knows.** `scripts/factor_lab.py` tests each situational idea on 5,320 games back to 2006, using only what was known before kickoff, two ways: does it explain this model's misses, and does it explain the closing line's misses?
+- Teams out of the playoff race run about 1.5 points worse than the model expects, but the range includes zero and Vegas has moved about half of it. "On the cusp, keep trying" and bounce-backs after a blowout loss showed nothing. Revenge showed nothing across 1,896 games.
+- The one factor that clearly holds up is a step down at QB: a team replacing its usual QB with a weaker track record runs 2.6 points worse than expected (95% CI 1.3 to 3.8). An equal or better replacement runs about even, which is why a flat "backup" penalty was the wrong shape. Vegas prices this in too.
+- No factor gets the side that has it meaningfully past the 52.4% break-even.
+
+`scripts/rating_lab.py` tested the standard refinements to the rating on 1,992 games, each season predicted by a fit on the others. Weighting recent games more, adjusting for opponents and discounting rushing all made predictions worse. Point differential and a shift for a new starting QB helped, and together with the step-down flag they cut squared error by 3.0 (95% CI 0.8 to 5.2). That's **Game Picks v2**, live from Week 10, with revenge and former-coach games demoted to context. On the 2025 holdout, v2 correlates 0.40 with final margins against v1's 0.37 and Vegas's 0.50. It predicts better and still doesn't beat the spread.
+
+**Two more bugs the review turned up.** Every Friday scan rewrote that week's frozen file from a board that only lists unplayed games, which silently dropped the Thursday game: six games, Weeks 3 through 8, were never graded. `scripts/restore_thursday_games.py` put them back from their pre-kickoff commits (the record moved from 57–51 to 61–53), and games now lock one at a time. And Weekly Rankings kept ranking players on reserve lists, who drop off the injury report: Jalen Hurts was QB15 and Davante Adams WR10 with no flag.
+
+**Fantasy, against the experts.** `scripts/fantasy_lab.py` grades our rankings against seven years of FantasyPros history. Consensus beat a stats-only draft board in 29 of 30 position-seasons from 2021 to 2025, so the 2027 board leans 75% on consensus. (A 2026-only look suggested we beat consensus at kickers and defenses. Five more seasons said that was noise.) For weekly rankings, counting a player who sat out as zero points, the biggest gain by far is knowing who's playing (+0.18 rank correlation), then Vegas team totals (+0.09). Matchups and usage add about 0.01 each, and facing a former team or a receiver's QB being out add nothing. The Start Score is now fitted on those inputs instead of hand-set: 0.43 overall against the old score's 0.22 and FantasyPros' 0.46.
+
 ---
 
 ## The part I'd point a data team at
@@ -64,8 +75,8 @@ Before each week's games kick off, that week's model margins and lines (and the 
 **3. A real production incident, root-caused and fixed.**
 A scheduled GitHub Actions run silently didn't fire — no success, no failure, no log entry, the trigger itself never fired. Root-caused to GitHub's own documented advice that cron jobs scheduled on round minutes (`:00`/`:15`/`:30`/`:45`) face the worst scheduling contention, since every other repo's cron fires at those same marks. Fixed by pinning dependency versions (an unbounded `>=` had let a scheduled run silently resolve a different package version than what was tested locally), staggering both workflows off round minutes, and adding redundant backup runs rather than relying on a single scheduled trigger succeeding.
 
-**4. Explainable adjustments, calibrated against each other — not a black box.**
-Every signal is a small, named point adjustment layered onto a base production/efficiency number, deliberately sized relative to its neighbors (a "team facing their former coach" motivation nudge is calibrated softer than a concrete "starting QB is out" injury penalty, for instance) — see the table below. Nothing here is a hidden ML weight; every number in a projection traces back to a commented constant.
+**4. Explainable inputs, each one tested — not a black box.**
+Every signal is a named input with a weight fitted on past seasons or checked out of sample, and an idea that doesn't hold up on games it wasn't fit to gets dropped or demoted to a context tag, however good the story (revenge games, facing a former coach, a returning offensive line). See the table below. Every number in a projection traces back to a commented constant or the fitted weights file, and every game card shows the pieces its margin adds up from.
 
 ---
 
@@ -73,18 +84,17 @@ Every signal is a small, named point adjustment layered onto a base production/e
 
 | Signal | Where | Magnitude | Idea |
 |---|---|---|---|
-| Team efficiency rating | Game Picks | 50 pts per 1.0 EPA/play of combined gap | Offense and defense EPA/play vs. league average; last season (×0.6 offense, ×0.2 defense) blended into this season by plays played. Fitted walk-forward on 2021–24 |
+| Team efficiency rating | Game Picks | 37 pts per 1.0 EPA/play of combined gap | Offense and defense EPA/play vs. league average; last season (×0.6 offense, ×0.2 defense) blended into this season by plays played. Fitted walk-forward on 2021–24 |
+| Point differential | Game Picks | 0.25 pts per 1 pt/game of gap | Picks up what EPA misses on the scoreboard; last season (×0.6) blended in by games played |
+| New starting QB | Game Picks | About 15 pts per 1.0 EPA/dropback at the start of a season, fading | Last year's offense, shifted by the gap between the new starter's record and last season's primary QB |
 | Home-field | Game Picks | +2.0 pts, 0 at neutral sites | Fitted on 2021–24 final margins |
-| Starting QB out/doubtful | Game Picks | ±4.0 pts | Published estimates of a backup QB's scoring impact |
-| Revenge game (lost the last meeting) | Game Picks | ±1.0 pt | Division games only — where a real prior result exists |
-| Facing a former head coach | Both | ±1.0 pt (picks) / +0.5 pt (fantasy, skill positions) | The coach who ran this team last season is now coaching the opponent |
-| Facing a former team | Fantasy | +1.0 pt | A player individually facing a team they used to play for |
+| Step down at QB | Game Picks | ±2.5 pts | Starter ruled out, or usual QB replaced by a weaker track record. Backtested on 2019–26 |
+| Start Score | Fantasy | Fitted per position | Recent form, Vegas team total, the opposing defense, targets and carries, and availability, weighted by least squares on 2021–25 (`reference/start_score_weights.json`) |
+| Consensus blend | Fantasy Draft Board, from 2027 | 75% consensus, 25% our rank | Consensus out-predicted a stats-only board in 29 of 30 position-seasons |
 | O-line / D-line continuity | Fantasy (scored); shown as a factor tag in Game Picks, not scored there | 1.5 × (continuity% − 60%) | Returning starters (last season's regulars or its final starters) vs. a rebuilt unit, centered on a 60% baseline. Backtested for Game Picks and left out: no measurable gain |
 | Head coach / coordinator continuity | Fantasy | +0.2 / −0.5 pts | Scheme continuity vs. a new system to learn |
-| Matchup vs. league-average defense | Fantasy | ×0.5 of the raw gap | Softened, not full-strength, points-allowed differential |
-| Injury status (Questionable/Doubtful/Out) | Fantasy | −2.0 / −10.0 / −20.0 pts | Soft nudge, not a hard exclusion — an "Out" player still shows, clearly flagged |
 
-The Game Picks situational nudges (QB out, revenge, former coach) are in points on top of the fitted rating. They aren't part of the backtest, because they can't be reconstructed historically without leaking later news.
+The QB-out adjustment is in points on top of the fitted rating. The published backtest doesn't include it, because the injury report as it stood before kickoff isn't kept historically; `factor_lab.py` estimates it from who actually started.
 
 ---
 
@@ -130,13 +140,18 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 │   ├── shared.py                 # the shared "constitution" -- continuity + motivation signals
 │   ├── betting_scan.py            # game picks: model margin vs. the real Vegas line, storylines, backtest
 │   ├── calibrate_game_model.py     # fits the Game Picks constants walk-forward (local-only, not in CI)
+│   ├── factor_lab.py                # tests situational and motivation factors against the model and Vegas (local-only)
+│   ├── rating_lab.py                 # tests refinements to the rating, leave-one-season-out (local-only)
+│   ├── fantasy_lab.py                 # grades the rankings against FantasyPros history, fits the Start Score (local-only)
 │   ├── backtest_line_continuity.py # tests whether O-line continuity improves the picks (local-only; it doesn't, yet)
-│   ├── fantasy_scan.py             # Draft Board, Dream Team, Weekly Rankings, Waiver Wire
+│   ├── restore_thursday_games.py, backfill_weekly_rankings.py  # one-time repairs from git history
+│   ├── fantasy_scan.py             # Draft Board, Dream Team, Weekly Rankings, Waiver Wire, weekly report card
 │   ├── requirements.txt             # exact-pinned deps -- CI has no lockfile, so floors aren't safe
 │   └── reference/                    # hand-maintained data (coordinator continuity, stadium geocoords)
 ├── data/
 │   ├── betting/                       # game_board.json, accountability.json, best_calls_backtest.json, archive/
-│   └── fantasy/                        # draft_board.json, weekly_rankings.json, waiver_wire.json, archive/
+│   ├── fantasy/                        # draft_board.json, weekly_rankings.json, waiver_wire.json, weekly_accountability.json, archive/
+│   └── lab/                             # results of the local test scripts
 └── .github/workflows/                   # the two scheduled scans
 ```
 

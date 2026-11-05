@@ -1,0 +1,1033 @@
+{
+ "generated_at": "2026-11-05T02:58:52.238851+00:00",
+ "seasons": [
+  2021,
+  2026
+ ],
+ "draft": {
+  "by_position": {
+   "QB": {
+    "seasons": 5,
+    "means": {
+     "0.0": 0.63,
+     "0.25": 0.679,
+     "0.5": 0.744,
+     "0.75": 0.772,
+     "1.0": 0.779
+    },
+    "consensus_beat_ours": 5,
+    "by_season": [
+     {
+      "season": 2021,
+      "ours": 0.701,
+      "consensus": 0.904,
+      "blend": 0.887,
+      "n": 33
+     },
+     {
+      "season": 2022,
+      "ours": 0.605,
+      "consensus": 0.714,
+      "blend": 0.715,
+      "n": 38
+     },
+     {
+      "season": 2023,
+      "ours": 0.653,
+      "consensus": 0.755,
+      "blend": 0.756,
+      "n": 37
+     },
+     {
+      "season": 2024,
+      "ours": 0.656,
+      "consensus": 0.795,
+      "blend": 0.791,
+      "n": 39
+     },
+     {
+      "season": 2025,
+      "ours": 0.534,
+      "consensus": 0.728,
+      "blend": 0.711,
+      "n": 40
+     },
+     {
+      "season": 2026,
+      "ours": 0.527,
+      "consensus": 0.495,
+      "blend": 0.525,
+      "n": 31
+     }
+    ],
+    "season_2026": {
+     "0.0": 0.527,
+     "0.25": 0.573,
+     "0.5": 0.571,
+     "0.75": 0.525,
+     "1.0": 0.495
+    }
+   },
+   "RB": {
+    "seasons": 5,
+    "means": {
+     "0.0": 0.58,
+     "0.25": 0.635,
+     "0.5": 0.696,
+     "0.75": 0.725,
+     "1.0": 0.735
+    },
+    "consensus_beat_ours": 5,
+    "by_season": [
+     {
+      "season": 2021,
+      "ours": 0.628,
+      "consensus": 0.774,
+      "blend": 0.764,
+      "n": 44
+     },
+     {
+      "season": 2022,
+      "ours": 0.573,
+      "consensus": 0.795,
+      "blend": 0.771,
+      "n": 46
+     },
+     {
+      "season": 2023,
+      "ours": 0.383,
+      "consensus": 0.571,
+      "blend": 0.563,
+      "n": 44
+     },
+     {
+      "season": 2024,
+      "ours": 0.628,
+      "consensus": 0.733,
+      "blend": 0.728,
+      "n": 47
+     },
+     {
+      "season": 2025,
+      "ours": 0.687,
+      "consensus": 0.803,
+      "blend": 0.798,
+      "n": 41
+     },
+     {
+      "season": 2026,
+      "ours": 0.534,
+      "consensus": 0.71,
+      "blend": 0.686,
+      "n": 40
+     }
+    ],
+    "season_2026": {
+     "0.0": 0.534,
+     "0.25": 0.595,
+     "0.5": 0.641,
+     "0.75": 0.686,
+     "1.0": 0.71
+    }
+   },
+   "WR": {
+    "seasons": 5,
+    "means": {
+     "0.0": 0.473,
+     "0.25": 0.55,
+     "0.5": 0.625,
+     "0.75": 0.666,
+     "1.0": 0.681
+    },
+    "consensus_beat_ours": 5,
+    "by_season": [
+     {
+      "season": 2021,
+      "ours": 0.357,
+      "consensus": 0.568,
+      "blend": 0.548,
+      "n": 47
+     },
+     {
+      "season": 2022,
+      "ours": 0.537,
+      "consensus": 0.792,
+      "blend": 0.769,
+      "n": 47
+     },
+     {
+      "season": 2023,
+      "ours": 0.669,
+      "consensus": 0.77,
+      "blend": 0.777,
+      "n": 48
+     },
+     {
+      "season": 2024,
+      "ours": 0.46,
+      "consensus": 0.685,
+      "blend": 0.672,
+      "n": 50
+     },
+     {
+      "season": 2025,
+      "ours": 0.345,
+      "consensus": 0.59,
+      "blend": 0.564,
+      "n": 50
+     },
+     {
+      "season": 2026,
+      "ours": 0.615,
+      "consensus": 0.701,
+      "blend": 0.747,
+      "n": 45
+     }
+    ],
+    "season_2026": {
+     "0.0": 0.615,
+     "0.25": 0.691,
+     "0.5": 0.769,
+     "0.75": 0.747,
+     "1.0": 0.701
+    }
+   },
+   "TE": {
+    "seasons": 5,
+    "means": {
+     "0.0": 0.672,
+     "0.25": 0.717,
+     "0.5": 0.764,
+     "0.75": 0.779,
+     "1.0": 0.779
+    },
+    "consensus_beat_ours": 5,
+    "by_season": [
+     {
+      "season": 2021,
+      "ours": 0.613,
+      "consensus": 0.728,
+      "blend": 0.728,
+      "n": 42
+     },
+     {
+      "season": 2022,
+      "ours": 0.752,
+      "consensus": 0.796,
+      "blend": 0.813,
+      "n": 41
+     },
+     {
+      "season": 2023,
+      "ours": 0.741,
+      "consensus": 0.818,
+      "blend": 0.821,
+      "n": 44
+     },
+     {
+      "season": 2024,
+      "ours": 0.695,
+      "consensus": 0.734,
+      "blend": 0.739,
+      "n": 44
+     },
+     {
+      "season": 2025,
+      "ours": 0.56,
+      "consensus": 0.819,
+      "blend": 0.796,
+      "n": 47
+     },
+     {
+      "season": 2026,
+      "ours": 0.603,
+      "consensus": 0.759,
+      "blend": 0.73,
+      "n": 44
+     }
+    ],
+    "season_2026": {
+     "0.0": 0.603,
+     "0.25": 0.652,
+     "0.5": 0.708,
+     "0.75": 0.73,
+     "1.0": 0.759
+    }
+   },
+   "K": {
+    "seasons": 5,
+    "means": {
+     "0.0": 0.08,
+     "0.25": 0.102,
+     "0.5": 0.15,
+     "0.75": 0.191,
+     "1.0": 0.219
+    },
+    "consensus_beat_ours": 4,
+    "by_season": [
+     {
+      "season": 2021,
+      "ours": 0.007,
+      "consensus": 0.303,
+      "blend": 0.262,
+      "n": 28
+     },
+     {
+      "season": 2022,
+      "ours": 0.095,
+      "consensus": 0.244,
+      "blend": 0.237,
+      "n": 30
+     },
+     {
+      "season": 2023,
+      "ours": 0.08,
+      "consensus": 0.155,
+      "blend": 0.131,
+      "n": 28
+     },
+     {
+      "season": 2024,
+      "ours": 0.185,
+      "consensus": 0.172,
+      "blend": 0.185,
+      "n": 31
+     },
+     {
+      "season": 2025,
+      "ours": 0.035,
+      "consensus": 0.221,
+      "blend": 0.139,
+      "n": 30
+     },
+     {
+      "season": 2026,
+      "ours": 0.209,
+      "consensus": 0.153,
+      "blend": 0.125,
+      "n": 27
+     }
+    ],
+    "season_2026": {
+     "0.0": 0.209,
+     "0.25": 0.199,
+     "0.5": 0.197,
+     "0.75": 0.125,
+     "1.0": 0.153
+    }
+   },
+   "DST": {
+    "seasons": 5,
+    "means": {
+     "0.0": 0.207,
+     "0.25": 0.25,
+     "0.5": 0.306,
+     "0.75": 0.342,
+     "1.0": 0.374
+    },
+    "consensus_beat_ours": 5,
+    "by_season": [
+     {
+      "season": 2021,
+      "ours": 0.43,
+      "consensus": 0.47,
+      "blend": 0.473,
+      "n": 32
+     },
+     {
+      "season": 2022,
+      "ours": 0.27,
+      "consensus": 0.43,
+      "blend": 0.395,
+      "n": 32
+     },
+     {
+      "season": 2023,
+      "ours": 0.221,
+      "consensus": 0.449,
+      "blend": 0.437,
+      "n": 32
+     },
+     {
+      "season": 2024,
+      "ours": -0.058,
+      "consensus": 0.184,
+      "blend": 0.13,
+      "n": 32
+     },
+     {
+      "season": 2025,
+      "ours": 0.172,
+      "consensus": 0.339,
+      "blend": 0.276,
+      "n": 32
+     },
+     {
+      "season": 2026,
+      "ours": 0.265,
+      "consensus": 0.202,
+      "blend": 0.202,
+      "n": 32
+     }
+    ],
+    "season_2026": {
+     "0.0": 0.265,
+     "0.25": 0.265,
+     "0.5": 0.24,
+     "0.75": 0.202,
+     "1.0": 0.202
+    }
+   }
+  }
+ },
+ "weekly": {
+  "ppr": {
+   "position_weeks": 552,
+   "coefficients": {
+    "QB": {
+     "intercept": 12.17,
+     "form": 0.196,
+     "team_total": 0.463,
+     "matchup": 0.075,
+     "carries": 0.313,
+     "questionable": -2.351,
+     "doubtful": -4.078,
+     "out": -3.488,
+     "reserve": -2.416,
+     "not_starter": -12.83,
+     "n": 2040
+    },
+    "RB": {
+     "intercept": 2.123,
+     "form": 0.399,
+     "team_total": 0.244,
+     "matchup": 0.039,
+     "targets": 0.557,
+     "carries": 0.251,
+     "questionable": -3.613,
+     "doubtful": -13.353,
+     "out": -13.082,
+     "reserve": -11.604,
+     "n": 3060
+    },
+    "WR": {
+     "intercept": 2.95,
+     "form": 0.475,
+     "team_total": 0.171,
+     "matchup": 0.039,
+     "targets": 0.411,
+     "questionable": -4.322,
+     "doubtful": -12.206,
+     "out": -12.535,
+     "reserve": -11.334,
+     "n": 4080
+    },
+    "TE": {
+     "intercept": 1.132,
+     "form": 0.454,
+     "team_total": 0.176,
+     "matchup": 0.115,
+     "targets": 0.622,
+     "questionable": -3.17,
+     "doubtful": -10.019,
+     "out": -9.324,
+     "reserve": -8.324,
+     "n": 1530
+    },
+    "K": {
+     "intercept": 5.836,
+     "form": 0.183,
+     "team_total": 0.134,
+     "matchup": 0.177,
+     "questionable": -1.543,
+     "doubtful": -7.472,
+     "out": -7.419,
+     "reserve": -6.811,
+     "n": 1530
+    },
+    "DST": {
+     "intercept": 6.186,
+     "team_total": 0.418,
+     "n": 1530
+    }
+   },
+   "by_position": {
+    "QB": {
+     "recent_ppg": 0.239,
+     "start_score_v1": 0.34,
+     "form": 0.28,
+     "availability": 0.528,
+     "vegas": 0.424,
+     "matchup": 0.28,
+     "usage": 0.273,
+     "team_qb": 0.28,
+     "former_team": 0.285,
+     "fitted": 0.575,
+     "ecr": 0.545,
+     "blend": 0.571
+    },
+    "RB": {
+     "recent_ppg": 0.253,
+     "start_score_v1": 0.369,
+     "form": 0.26,
+     "availability": 0.507,
+     "vegas": 0.279,
+     "matchup": 0.262,
+     "usage": 0.275,
+     "team_qb": 0.26,
+     "former_team": 0.259,
+     "fitted": 0.521,
+     "ecr": 0.579,
+     "blend": 0.574
+    },
+    "WR": {
+     "recent_ppg": 0.17,
+     "start_score_v1": 0.299,
+     "form": 0.217,
+     "availability": 0.485,
+     "vegas": 0.241,
+     "matchup": 0.22,
+     "usage": 0.228,
+     "team_qb": 0.222,
+     "former_team": 0.217,
+     "fitted": 0.497,
+     "ecr": 0.548,
+     "blend": 0.545
+    },
+    "TE": {
+     "recent_ppg": 0.156,
+     "start_score_v1": 0.274,
+     "form": 0.22,
+     "availability": 0.459,
+     "vegas": 0.262,
+     "matchup": 0.223,
+     "usage": 0.272,
+     "team_qb": 0.217,
+     "former_team": 0.216,
+     "fitted": 0.505,
+     "ecr": 0.533,
+     "blend": 0.538
+    },
+    "K": {
+     "recent_ppg": -0.024,
+     "start_score_v1": 0.046,
+     "form": 0.02,
+     "availability": 0.121,
+     "vegas": 0.08,
+     "matchup": 0.068,
+     "usage": 0.02,
+     "team_qb": 0.02,
+     "former_team": 0.002,
+     "fitted": 0.202,
+     "ecr": 0.292,
+     "blend": 0.274
+    },
+    "DST": {
+     "recent_ppg": 0.007,
+     "start_score_v1": 0.007,
+     "form": 0.039,
+     "availability": 0.039,
+     "vegas": 0.271,
+     "matchup": 0.039,
+     "usage": 0.039,
+     "team_qb": 0.039,
+     "former_team": 0.039,
+     "fitted": 0.268,
+     "ecr": 0.234,
+     "blend": 0.26
+    }
+   },
+   "overall": {
+    "recent_ppg": 0.134,
+    "start_score_v1": 0.222,
+    "form": 0.173,
+    "availability": 0.357,
+    "vegas": 0.26,
+    "matchup": 0.182,
+    "usage": 0.185,
+    "team_qb": 0.173,
+    "former_team": 0.17,
+    "fitted": 0.428,
+    "ecr": 0.455,
+    "blend": 0.46
+   },
+   "season_2026": {
+    "recent_ppg": 0.163,
+    "start_score_v1": 0.252,
+    "form": 0.236,
+    "availability": 0.353,
+    "vegas": 0.302,
+    "matchup": 0.234,
+    "usage": 0.245,
+    "team_qb": 0.238,
+    "former_team": 0.234,
+    "fitted": 0.407,
+    "ecr": 0.4,
+    "blend": 0.41
+   },
+   "effects": {
+    "recent_ppg": {
+     "diff": -0.039,
+     "lo": -0.052,
+     "hi": -0.028,
+     "weeks": 92
+    },
+    "start_score_v1": {
+     "diff": 0.05,
+     "lo": 0.03,
+     "hi": 0.069,
+     "weeks": 92
+    },
+    "availability": {
+     "diff": 0.184,
+     "lo": 0.167,
+     "hi": 0.201,
+     "weeks": 92
+    },
+    "vegas": {
+     "diff": 0.087,
+     "lo": 0.07,
+     "hi": 0.105,
+     "weeks": 92
+    },
+    "matchup": {
+     "diff": 0.009,
+     "lo": 0.0,
+     "hi": 0.018,
+     "weeks": 92
+    },
+    "usage": {
+     "diff": 0.012,
+     "lo": 0.007,
+     "hi": 0.017,
+     "weeks": 92
+    },
+    "team_qb": {
+     "diff": 0.0,
+     "lo": -0.002,
+     "hi": 0.002,
+     "weeks": 92
+    },
+    "former_team": {
+     "diff": -0.003,
+     "lo": -0.006,
+     "hi": 0.0,
+     "weeks": 92
+    },
+    "fitted": {
+     "diff": 0.255,
+     "lo": 0.231,
+     "hi": 0.281,
+     "weeks": 92
+    },
+    "ecr": {
+     "diff": 0.273,
+     "lo": 0.249,
+     "hi": 0.297,
+     "weeks": 85
+    },
+    "blend": {
+     "diff": 0.278,
+     "lo": 0.255,
+     "hi": 0.301,
+     "weeks": 85
+    }
+   },
+   "vs_consensus": {
+    "fitted_minus_ecr": {
+     "diff": -0.027,
+     "lo": -0.038,
+     "hi": -0.016,
+     "weeks": 85
+    },
+    "blend_minus_ecr": {
+     "diff": 0.005,
+     "lo": -0.001,
+     "hi": 0.01,
+     "weeks": 85
+    },
+    "fitted_minus_v1": {
+     "diff": 0.205,
+     "lo": 0.187,
+     "hi": 0.224,
+     "weeks": 92
+    }
+   },
+   "weeks_2026": [
+    {
+     "week": 2,
+     "recent_ppg": 0.124,
+     "start_score_v1": 0.203,
+     "fitted": 0.309,
+     "ecr": 0.374
+    },
+    {
+     "week": 3,
+     "recent_ppg": 0.251,
+     "start_score_v1": 0.317,
+     "fitted": 0.38,
+     "ecr": 0.366
+    },
+    {
+     "week": 4,
+     "recent_ppg": 0.224,
+     "start_score_v1": 0.265,
+     "fitted": 0.444,
+     "ecr": 0.389
+    },
+    {
+     "week": 5,
+     "recent_ppg": 0.167,
+     "start_score_v1": 0.345,
+     "fitted": 0.553,
+     "ecr": 0.517
+    },
+    {
+     "week": 6,
+     "recent_ppg": 0.087,
+     "start_score_v1": 0.236,
+     "fitted": 0.406,
+     "ecr": 0.333
+    },
+    {
+     "week": 7,
+     "recent_ppg": 0.109,
+     "start_score_v1": 0.239,
+     "fitted": 0.411,
+     "ecr": 0.429
+    },
+    {
+     "week": 8,
+     "recent_ppg": 0.176,
+     "start_score_v1": 0.157,
+     "fitted": 0.343,
+     "ecr": 0.393
+    }
+   ]
+  },
+  "standard": {
+   "position_weeks": 552,
+   "coefficients": {
+    "QB": {
+     "intercept": 12.16,
+     "form": 0.196,
+     "team_total": 0.461,
+     "matchup": 0.076,
+     "carries": 0.319,
+     "questionable": -2.356,
+     "doubtful": -4.082,
+     "out": -3.501,
+     "reserve": -2.439,
+     "not_starter": -12.831,
+     "n": 2040
+    },
+    "RB": {
+     "intercept": 1.912,
+     "form": 0.335,
+     "team_total": 0.225,
+     "matchup": 0.048,
+     "targets": 0.421,
+     "carries": 0.257,
+     "questionable": -3.006,
+     "doubtful": -11.1,
+     "out": -10.607,
+     "reserve": -9.292,
+     "n": 3060
+    },
+    "WR": {
+     "intercept": 1.952,
+     "form": 0.324,
+     "team_total": 0.138,
+     "matchup": 0.02,
+     "targets": 0.429,
+     "questionable": -3.205,
+     "doubtful": -7.628,
+     "out": -7.956,
+     "reserve": -7.051,
+     "n": 4080
+    },
+    "TE": {
+     "intercept": 0.41,
+     "form": 0.456,
+     "team_total": 0.137,
+     "matchup": 0.113,
+     "targets": 0.395,
+     "questionable": -1.946,
+     "doubtful": -6.032,
+     "out": -5.573,
+     "reserve": -4.784,
+     "n": 1530
+    },
+    "K": {
+     "intercept": 5.839,
+     "form": 0.183,
+     "team_total": 0.137,
+     "matchup": 0.171,
+     "questionable": -1.705,
+     "doubtful": -7.479,
+     "out": -7.429,
+     "reserve": -6.82,
+     "n": 1530
+    },
+    "DST": {
+     "intercept": 6.189,
+     "team_total": 0.42,
+     "n": 1530
+    }
+   },
+   "by_position": {
+    "QB": {
+     "recent_ppg": 0.236,
+     "start_score_v1": 0.339,
+     "form": 0.278,
+     "availability": 0.528,
+     "vegas": 0.424,
+     "matchup": 0.28,
+     "usage": 0.27,
+     "team_qb": 0.278,
+     "former_team": 0.283,
+     "fitted": 0.574,
+     "ecr": 0.545,
+     "blend": 0.569
+    },
+    "RB": {
+     "recent_ppg": 0.215,
+     "start_score_v1": 0.339,
+     "form": 0.231,
+     "availability": 0.479,
+     "vegas": 0.248,
+     "matchup": 0.232,
+     "usage": 0.259,
+     "team_qb": 0.231,
+     "former_team": 0.229,
+     "fitted": 0.502,
+     "ecr": 0.555,
+     "blend": 0.549
+    },
+    "WR": {
+     "recent_ppg": 0.134,
+     "start_score_v1": 0.272,
+     "form": 0.199,
+     "availability": 0.467,
+     "vegas": 0.226,
+     "matchup": 0.198,
+     "usage": 0.225,
+     "team_qb": 0.205,
+     "former_team": 0.197,
+     "fitted": 0.493,
+     "ecr": 0.549,
+     "blend": 0.547
+    },
+    "TE": {
+     "recent_ppg": 0.113,
+     "start_score_v1": 0.226,
+     "form": 0.205,
+     "availability": 0.432,
+     "vegas": 0.246,
+     "matchup": 0.21,
+     "usage": 0.272,
+     "team_qb": 0.202,
+     "former_team": 0.195,
+     "fitted": 0.487,
+     "ecr": 0.532,
+     "blend": 0.526
+    },
+    "K": {
+     "recent_ppg": -0.027,
+     "start_score_v1": 0.047,
+     "form": 0.02,
+     "availability": 0.121,
+     "vegas": 0.079,
+     "matchup": 0.07,
+     "usage": 0.02,
+     "team_qb": 0.02,
+     "former_team": 0.001,
+     "fitted": 0.201,
+     "ecr": 0.289,
+     "blend": 0.272
+    },
+    "DST": {
+     "recent_ppg": 0.005,
+     "start_score_v1": 0.005,
+     "form": 0.041,
+     "availability": 0.041,
+     "vegas": 0.273,
+     "matchup": 0.041,
+     "usage": 0.041,
+     "team_qb": 0.041,
+     "former_team": 0.041,
+     "fitted": 0.272,
+     "ecr": 0.236,
+     "blend": 0.264
+    }
+   },
+   "overall": {
+    "recent_ppg": 0.113,
+    "start_score_v1": 0.205,
+    "form": 0.162,
+    "availability": 0.345,
+    "vegas": 0.25,
+    "matchup": 0.172,
+    "usage": 0.181,
+    "team_qb": 0.163,
+    "former_team": 0.158,
+    "fitted": 0.422,
+    "ecr": 0.451,
+    "blend": 0.455
+   },
+   "season_2026": {
+    "recent_ppg": 0.148,
+    "start_score_v1": 0.228,
+    "form": 0.234,
+    "availability": 0.346,
+    "vegas": 0.302,
+    "matchup": 0.243,
+    "usage": 0.246,
+    "team_qb": 0.234,
+    "former_team": 0.231,
+    "fitted": 0.408,
+    "ecr": 0.398,
+    "blend": 0.414
+   },
+   "effects": {
+    "recent_ppg": {
+     "diff": -0.05,
+     "lo": -0.062,
+     "hi": -0.037,
+     "weeks": 92
+    },
+    "start_score_v1": {
+     "diff": 0.042,
+     "lo": 0.023,
+     "hi": 0.062,
+     "weeks": 92
+    },
+    "availability": {
+     "diff": 0.183,
+     "lo": 0.165,
+     "hi": 0.2,
+     "weeks": 92
+    },
+    "vegas": {
+     "diff": 0.087,
+     "lo": 0.07,
+     "hi": 0.105,
+     "weeks": 92
+    },
+    "matchup": {
+     "diff": 0.01,
+     "lo": 0.001,
+     "hi": 0.018,
+     "weeks": 92
+    },
+    "usage": {
+     "diff": 0.019,
+     "lo": 0.012,
+     "hi": 0.026,
+     "weeks": 92
+    },
+    "team_qb": {
+     "diff": 0.001,
+     "lo": -0.001,
+     "hi": 0.002,
+     "weeks": 92
+    },
+    "former_team": {
+     "diff": -0.004,
+     "lo": -0.007,
+     "hi": -0.001,
+     "weeks": 92
+    },
+    "fitted": {
+     "diff": 0.259,
+     "lo": 0.237,
+     "hi": 0.282,
+     "weeks": 92
+    },
+    "ecr": {
+     "diff": 0.282,
+     "lo": 0.259,
+     "hi": 0.305,
+     "weeks": 85
+    },
+    "blend": {
+     "diff": 0.285,
+     "lo": 0.261,
+     "hi": 0.31,
+     "weeks": 85
+    }
+   },
+   "vs_consensus": {
+    "fitted_minus_ecr": {
+     "diff": -0.03,
+     "lo": -0.041,
+     "hi": -0.019,
+     "weeks": 85
+    },
+    "blend_minus_ecr": {
+     "diff": 0.004,
+     "lo": -0.003,
+     "hi": 0.01,
+     "weeks": 85
+    },
+    "fitted_minus_v1": {
+     "diff": 0.217,
+     "lo": 0.198,
+     "hi": 0.236,
+     "weeks": 92
+    }
+   },
+   "weeks_2026": [
+    {
+     "week": 2,
+     "recent_ppg": 0.095,
+     "start_score_v1": 0.178,
+     "fitted": 0.266,
+     "ecr": 0.321
+    },
+    {
+     "week": 3,
+     "recent_ppg": 0.251,
+     "start_score_v1": 0.31,
+     "fitted": 0.409,
+     "ecr": 0.368
+    },
+    {
+     "week": 4,
+     "recent_ppg": 0.196,
+     "start_score_v1": 0.259,
+     "fitted": 0.453,
+     "ecr": 0.397
+    },
+    {
+     "week": 5,
+     "recent_ppg": 0.14,
+     "start_score_v1": 0.305,
+     "fitted": 0.532,
+     "ecr": 0.506
+    },
+    {
+     "week": 6,
+     "recent_ppg": 0.147,
+     "start_score_v1": 0.232,
+     "fitted": 0.428,
+     "ecr": 0.393
+    },
+    {
+     "week": 7,
+     "recent_ppg": 0.087,
+     "start_score_v1": 0.157,
+     "fitted": 0.392,
+     "ecr": 0.399
+    },
+    {
+     "week": 8,
+     "recent_ppg": 0.124,
+     "start_score_v1": 0.155,
+     "fitted": 0.372,
+     "ecr": 0.404
+    }
+   ]
+  }
+ }
+}

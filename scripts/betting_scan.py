@@ -6,15 +6,24 @@ plus the in-progress season live from nflverse, and writes
 data/betting/{best_calls_backtest,game_board,accountability}.json.
 
 Core signal: each team's offensive EPA/play and defensive EPA/play ALLOWED,
-as deviations from league average. Each rating blends last season (shrunk
-toward average) with this season to date, weighted by plays played, so a
-team's rating moves off last year's tape gradually instead of all at once.
-margin = MARGIN_SCALE * [(home_off - away_off) + (away_def - home_def)] + HFA.
+as deviations from league average, plus its point differential per game. Each
+rating blends last season (shrunk toward average) with this season to date,
+weighted by plays or games played, so a team's rating moves off last year's
+tape gradually instead of all at once.
+margin = MARGIN_SCALE * [(home_off - away_off) + (away_def - home_def)]
+         + PD_WEIGHT * (home_pd - away_pd) + HFA.
 A defense that allows MORE EPA is worse, so the opponent's def number is
 ADDED -- an earlier version subtracted it, which made the model close to
-noise (0.06 correlation with 2025 results). Constants are fitted by
-scripts/calibrate_game_model.py. Situational factors (QB out, revenge,
-former coach) are layered on top as explainable point nudges.
+noise (0.06 correlation with 2025 results). When a team starts a different QB
+than last season, last year's offense is shifted by part of the gap between
+the two QBs' own records. Constants are fitted by
+scripts/calibrate_game_model.py. The one situational factor in the margin is
+a starting QB ruled out; revenge and former-coach games are context only
+(scripts/factor_lab.py found no support for scoring them).
+
+Model versions: picks are frozen per week and stamped with the version that
+made them. v1 (Weeks 1-9 of 2026) was the EPA rating plus QB-out (4.0),
+revenge (1.0) and former-coach (1.0) nudges. v2 runs from Week 10.
 
 The backtest runs the exact same rating code walk-forward: each 2025 game is
 predicted using only games before it, like the live board.
@@ -43,6 +52,7 @@ from shared import (
     json_safe,
     load_cache,
     REF_DIR,
+    starting_qb_by_team,
 )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,39 +61,87 @@ ARCHIVE_DIR = os.path.join(OUT_DIR, "archive")
 
 RETRO_SEASON = 2025  # most recently completed season -> backtest + prior-season baseline
 UPCOMING_SEASON = 2026
-# Fitted by scripts/calibrate_game_model.py on 2026-09-23 (least squares on final margins,
-# walk-forward over 2021-2024 REG games; best fit rho 0.6/0.2, K 520, scale 50.6, HFA 2.00 --
-# these round values are within noise of it). 2025 holdout, never seen by the fit: margin
-# correlation 0.37 (spread: 0.50), outright winners 62.6%, 47.6% against the spread. Kept
-# fixed through 2026 so the published 2025 backtest stays a true holdout -- refit after the season.
-MARGIN_SCALE = 50.0  # points per 1.0 EPA/play of combined off/def rating gap
+MODEL_VERSION = "v2"  # stamped on every archived week; older archives carry none and read as "v1"
+SIGN_BUG_WEEKS = {(2026, 1), (2026, 2)}  # locked before the defense sign fix on 2026-09-23 -- graded as "v0"
+# Fitted by scripts/calibrate_game_model.py on 2026-11-05 (least squares on final margins, walk-forward
+# over 2021-2024 REG games; best fit scale 37.2, differential 0.245, QB swap 0.40, HFA 2.01, rho_pd 0.6,
+# k_games 8 -- these round values are within noise of it). The fit never saw 2025 or 2026: on the 2025
+# holdout v2 beats v1 by 4.5 points of squared error [1.1, 8.0], correlation 0.40 vs. 0.37, and Vegas
+# still leads at 0.50. Refit after the season, not during it.
+MARGIN_SCALE = 37.0  # points per 1.0 EPA/play of combined off/def rating gap
+PD_WEIGHT = 0.25  # points per 1 point/game of blended point-differential gap. EPA ignores what happened
+# on the scoreboard (turnover returns, special teams, finishing); differential picks up part of that
+QB_SWAP_SHARE = 0.4  # EPA/play moved per 1.0 EPA/dropback between a team's new starter and last season's
+# primary QB -- about 15 points a game per 1.0 at the start of a season, fading as this season's plays take over
 HOME_FIELD_ADJ = 2.0  # points; 0 at neutral sites (schedules.location == "Neutral")
 RHO_OFF = 0.6  # share of last season's offensive rating carried into this one (offense is stickier)
 RHO_DEF = 0.2  # same for defense -- year-to-year defensive EPA barely persists
+RHO_PD = 0.6  # same for point differential
 K_PLAYS = 480  # plays of this season's data that count as much as last season's (shrunk) rating
+K_GAMES = 8  # the same idea for point differential, in games
+QB_SHRINK = 300  # dropbacks of replacement-level play mixed into every QB's track record
 MIN_BACKTEST_CORR = 0.2  # sanity guard: below this the model is broken (e.g. a sign flip), fail the run
-QB_OUT_PENALTY = 4.0  # points; backtested estimates of a backup QB's scoring impact commonly range
-# ~3-7 points -- 4 is a defensible, modest v1 value, consistent with this model's philosophy of small
-# explainable nudges rather than a fully-modeled per-player value system (that's a future project, not this one)
-REVENGE_BONUS = 1.0  # points, for a team that lost the last meeting against this same opponent (only
-# ever set for division games -- see last_meeting/revenge_flag). Below HOME_FIELD_ADJ, well under
-# QB_OUT_PENALTY (4.0) -- a psychological nudge stays softer than a concrete injury impact. Not
-# validated by the backtest (not reconstructable historically without leaking later news)
-FORMER_COACH_BONUS = 1.0  # points, for a team facing the coach who coached THEM last season -- same
-# magnitude as REVENGE_BONUS, same reasoning
+QB_OUT_PENALTY = 2.5  # points. scripts/factor_lab.py: on 2019-2026, a team replacing its usual QB with one
+# who has a weaker track record runs 2.6 points worse than this model expects, 95% CI [1.3, 3.8]. Replacing him
+# with one as good or better runs +0.4 [-1.6, +2.4], so that case isn't penalized. v1 used a flat 4.0 from
+# published estimates, outside what the backtest supports
+RACE_FROM_WEEK = 11  # playoff-race status (context only, never scored) means little earlier in the year
 INDOOR_ROOFS = ("dome", "closed")  # nflverse roof values where the forecast doesn't matter
 
 
-def team_game_efficiency(team_stats):
-    """Per (game_id, team) offensive EPA and plays, regular season only --
-    playoff games exist only for the best teams and would skew their season
-    numbers relative to everyone else's."""
+def classify_race(rows, seeds):
+    """{team: out | safe | cusp | middle} for one conference's (team, wins,
+    losses) rows, by games back of the last playoff seed. Win% to date, no
+    tiebreakers: a rough read of the picture, which is all a context tag needs."""
+    table = sorted(rows, key=lambda r: -(r[1] - r[2]))
+    if len(table) <= seeds:
+        return {}
+    last_in, first_out = table[seeds - 1], table[seeds]
+    out = {}
+    for team, w, l in table:
+        back = ((last_in[1] - w) + (l - last_in[2])) / 2
+        clear = ((w - first_out[1]) + (first_out[2] - l)) / 2
+        out[team] = "out" if back >= 3 else "safe" if clear >= 3 else "cusp" if abs(back) <= 1 else "middle"
+    return out
+
+
+def playoff_race(schedules, teams, season, week):
+    """Each team's place in the playoff picture before `week`, from Week 11 on.
+    Context only: factor_lab.py found teams out of the race do run a little
+    worse than the model expects, but adding it didn't improve predictions on
+    held-out seasons, and Vegas already prices about half of it."""
+    if week < RACE_FROM_WEEK:
+        return {}
+    played = schedules.filter(
+        (pl.col("season") == season) & (pl.col("game_type") == "REG") & (pl.col("week") < week) & pl.col("result").is_not_null()
+    )
+    record = {}
+    for r in played.iter_rows(named=True):
+        for team, margin in ((r["home_team"], r["result"]), (r["away_team"], -r["result"])):
+            w, l = record.get(team, (0, 0))
+            record[team] = (w + (margin > 0), l + (margin < 0))
+    conference = dict(zip(teams["team_abbr"].to_list(), teams["team_conf"].to_list()))
+    out = {}
+    for conf in ("AFC", "NFC"):
+        out.update(classify_race([(t, w, l) for t, (w, l) in record.items() if conference.get(t) == conf], seeds=7))
+    return out
+
+
+def team_game_efficiency(team_stats, schedules):
+    """Per (game_id, team) offensive EPA, plays and final point differential,
+    regular season only -- playoff games exist only for the best teams and
+    would skew their season numbers relative to everyone else's."""
     plays = (pl.col("attempts").fill_null(0) + pl.col("carries").fill_null(0)).alias("plays")
     epa_sum = (pl.col("passing_epa").fill_null(0.0) + pl.col("rushing_epa").fill_null(0.0)).alias("epa_sum")
+    margins = pl.concat([
+        schedules.select("game_id", pl.col("home_team").alias("team"), pl.col("result").cast(pl.Float64).alias("point_diff")),
+        schedules.select("game_id", pl.col("away_team").alias("team"), (-pl.col("result")).cast(pl.Float64).alias("point_diff")),
+    ])
     return (
         team_stats.filter(pl.col("season_type") == "REG")
         .with_columns([plays, epa_sum])
-        .select(["game_id", "season", "week", "team", "opponent_team", "plays", "epa_sum"])
+        .join(margins, on=["game_id", "team"], how="left")
+        .select(["game_id", "season", "week", "team", "opponent_team", "plays", "epa_sum", "point_diff"])
     )
 
 
@@ -97,12 +155,21 @@ def _side_totals(rows):
     return {t: (e, p) for t, e, p in off.iter_rows()}, {t: (e, p) for t, e, p in deff.iter_rows()}, mean
 
 
+def _point_diff_totals(rows):
+    """{team: (point differential per game, games)} over a set of played games."""
+    played = rows.drop_nulls("point_diff").group_by("team").agg(pl.col("point_diff").mean().alias("pd"), pl.len().alias("g"))
+    return {t: (d, g) for t, d, g in played.iter_rows()}
+
+
 def rating_inputs_asof(eff, season, week):
     """What a live model would know going into `season` week `week`: that
     season's REG games strictly before `week`, plus the full prior season.
-    Every number is a deviation from its own period's league average."""
-    cur_off, cur_def, cur_mean = _side_totals(eff.filter((pl.col("season") == season) & (pl.col("week") < week)))
-    pri_off, pri_def, pri_mean = _side_totals(eff.filter(pl.col("season") == season - 1))
+    Every EPA number is a deviation from its own period's league average;
+    point differential already averages to zero league-wide."""
+    current, prior = eff.filter((pl.col("season") == season) & (pl.col("week") < week)), eff.filter(pl.col("season") == season - 1)
+    cur_off, cur_def, cur_mean = _side_totals(current)
+    pri_off, pri_def, pri_mean = _side_totals(prior)
+    cur_pd, pri_pd = _point_diff_totals(current), _point_diff_totals(prior)
     inputs = {}
     for team in set(cur_off) | set(pri_off):
         co_e, co_p = cur_off.get(team, (0.0, 0))
@@ -116,34 +183,129 @@ def rating_inputs_asof(eff, season, week):
             "cur_def_plays": cd_p,
             "prior_off": po_e / po_p - pri_mean if po_p else 0.0,
             "prior_def": pd_e / pd_p - pri_mean if pd_p else 0.0,
+            "cur_pd": cur_pd.get(team, (0.0, 0))[0],
+            "cur_games": cur_pd.get(team, (0.0, 0))[1],
+            "prior_pd": pri_pd.get(team, (0.0, 0))[0],
         }
     return inputs
 
 
-def blend(inputs, rho_off=RHO_OFF, rho_def=RHO_DEF, k_plays=K_PLAYS):
-    """Per-team off/def rating: this season's deviation weighted by plays
-    played so far, the remainder from last season's deviation shrunk toward
-    average by rho. w_off/w_def = share of the rating that is this season."""
+def blend(inputs, qb_gaps=None):
+    """Per-team off/def rating and point differential: this season's number
+    weighted by plays or games so far, the remainder from last season's shrunk
+    toward average by rho. w_off/w_def = share of the rating that is this
+    season. qb_gaps ({team: EPA/dropback gap}, see qb_gaps_for_week) shifts
+    last season's offense for a team with a different starter: qb_adj is that
+    shift's share of "off", which fades as this season's plays take over."""
     ratings = {}
     for team, x in inputs.items():
-        w_off = x["cur_off_plays"] / (x["cur_off_plays"] + k_plays)
-        w_def = x["cur_def_plays"] / (x["cur_def_plays"] + k_plays)
+        w_off = x["cur_off_plays"] / (x["cur_off_plays"] + K_PLAYS)
+        w_def = x["cur_def_plays"] / (x["cur_def_plays"] + K_PLAYS)
+        w_pd = x["cur_games"] / (x["cur_games"] + K_GAMES)
+        qb_adj = (1 - w_off) * QB_SWAP_SHARE * (qb_gaps or {}).get(team, 0.0)
         ratings[team] = {
-            "off": w_off * x["cur_off"] + (1 - w_off) * rho_off * x["prior_off"],
-            "def": w_def * x["cur_def"] + (1 - w_def) * rho_def * x["prior_def"],
+            "off": w_off * x["cur_off"] + (1 - w_off) * RHO_OFF * x["prior_off"] + qb_adj,
+            "def": w_def * x["cur_def"] + (1 - w_def) * RHO_DEF * x["prior_def"],
+            "pd": w_pd * x["cur_pd"] + (1 - w_pd) * RHO_PD * x["prior_pd"],
+            "qb_adj": qb_adj,
             "w_off": w_off,
             "w_def": w_def,
         }
     return ratings
 
 
-def base_margin(ratings, home, away, neutral, scale=MARGIN_SCALE, hfa=HOME_FIELD_ADJ):
-    """Home-relative margin before situational nudges. "def" is EPA/play a
+def base_margin(ratings, home, away, neutral):
+    """Home-relative margin before the QB-out adjustment. "def" is EPA/play a
     defense ALLOWS (higher = worse), so the opponent's def rating is added."""
     h, a = ratings.get(home), ratings.get(away)
     if h is None or a is None:
         return None
-    return scale * ((h["off"] - a["off"]) + (a["def"] - h["def"])) + (0.0 if neutral else hfa)
+    return (
+        MARGIN_SCALE * ((h["off"] - a["off"]) + (a["def"] - h["def"]))
+        + PD_WEIGHT * (h["pd"] - a["pd"])
+        + (0.0 if neutral else HOME_FIELD_ADJ)
+    )
+
+
+def qb_starts(schedules):
+    """Who started at QB: {(game_id, team): gsis_id} from the schedule's own
+    starter columns, and each team's primary starter (most starts) by season."""
+    starter, counts = {}, {}
+    for r in schedules.filter(pl.col("game_type") == "REG").iter_rows(named=True):
+        for side in ("home", "away"):
+            qb, team = r[f"{side}_qb_id"], r[f"{side}_team"]
+            if qb:
+                starter[(r["game_id"], team)] = qb
+                if r["result"] is not None:
+                    tally = counts.setdefault((r["season"], team), {})
+                    tally[qb] = tally.get(qb, 0) + 1
+    return starter, {key: max(tally, key=tally.get) for key, tally in counts.items()}
+
+
+def qb_quality(player_stats):
+    """q(player, season): a QB's EPA per dropback going into a season -- the two
+    seasons before it, the nearer one counted double, mixed with QB_SHRINK
+    dropbacks of replacement-level play (the average of low-volume passers),
+    so a 120-dropback cameo isn't taken at face value and a rookie is
+    replacement level."""
+    qbs = player_stats.filter((pl.col("season_type") == "REG") & (pl.col("position") == "QB"))
+    by_season = qbs.group_by(["player_id", "season"]).agg(
+        pl.col("passing_epa").fill_null(0).sum().alias("epa"),
+        (pl.col("attempts").fill_null(0) + pl.col("sacks_suffered").fill_null(0)).sum().alias("dropbacks"),
+    )
+    low = by_season.filter((pl.col("dropbacks") > 20) & (pl.col("dropbacks") < 150))
+    replacement = low["epa"].sum() / low["dropbacks"].sum()
+    record = {(r["player_id"], r["season"]): (r["epa"], r["dropbacks"]) for r in by_season.iter_rows(named=True)}
+
+    def q(player, season):
+        epa = dropbacks = 0.0
+        for back, weight in ((1, 1.0), (2, 0.5)):
+            e, d = record.get((player, season - back), (0.0, 0))
+            epa, dropbacks = epa + weight * e, dropbacks + weight * d
+        return (epa + QB_SHRINK * replacement) / (dropbacks + QB_SHRINK)
+
+    return q
+
+
+def qb_gaps_for_week(starters, season, primary, q):
+    """{team: EPA/dropback gap} for each team starting someone other than last
+    season's primary QB. starters: {team: gsis_id}, each team's QB this week."""
+    gaps = {}
+    for team, qb in starters.items():
+        last = primary.get((season - 1, team))
+        if qb and last and qb != last:
+            gaps[team] = q(qb, season) - q(last, season)
+    return gaps
+
+
+def usual_qb_by_team(schedules, season, week):
+    """Each team's most-started QB this season before `week`, once he has at
+    least two starts -- the same rule factor_lab.py's backup_qb test uses."""
+    counts = {}
+    played = schedules.filter(
+        (pl.col("season") == season) & (pl.col("game_type") == "REG") & (pl.col("week") < week) & pl.col("result").is_not_null()
+    )
+    for r in played.iter_rows(named=True):
+        for side in ("home", "away"):
+            if r[f"{side}_qb_id"]:
+                tally = counts.setdefault(r[f"{side}_team"], {})
+                tally[r[f"{side}_qb_id"]] = tally.get(r[f"{side}_qb_id"], 0) + 1
+    return {t: max(tally, key=tally.get) for t, tally in counts.items() if sum(tally.values()) >= 2}
+
+
+def live_qb_starters(schedules, depth_charts, season, week):
+    """Each team's expected QB for an upcoming week, when the schedule hasn't
+    named one: the depth chart's starter, else whoever started most recently."""
+    played = schedules.filter(
+        (pl.col("season") == season) & (pl.col("game_type") == "REG") & (pl.col("week") < week) & pl.col("result").is_not_null()
+    ).sort("week")
+    starters = {}
+    for r in played.iter_rows(named=True):
+        for side in ("home", "away"):
+            if r[f"{side}_qb_id"]:
+                starters[r[f"{side}_team"]] = r[f"{side}_qb_id"]
+    starters.update({t: qb for t, qb in starting_qb_by_team(depth_charts, season).items() if qb})
+    return starters
 
 
 def ats_pick(margin_home, spread_home):
@@ -173,17 +335,21 @@ def _corr(xs, ys):
     return round(sxy / (sxx * syy) ** 0.5, 3) if sxx and syy else None
 
 
-def build_backtest(schedules, eff):
+def build_backtest(schedules, eff, q):
     """Walk-forward: each RETRO_SEASON REG game predicted by the same rating
     code the live board runs, using only games before it plus the prior
     season, then picked against the closing spread with the same ats_pick
-    rule. Base model only -- the QB/revenge/former-coach nudges can't be
-    reconstructed historically without leaking later news."""
+    rule. New-starter shifts use the QB who actually started; the QB-out
+    adjustment isn't reconstructed, since the injury report as it stood before
+    kickoff isn't kept historically."""
     games = schedules.filter((pl.col("season") == RETRO_SEASON) & (pl.col("game_type") == "REG")).drop_nulls(["result", "spread_line"])
+    starter, primary = qb_starts(schedules)
     picks = []
     for week in sorted(games["week"].unique().to_list()):
-        ratings = blend(rating_inputs_asof(eff, RETRO_SEASON, week))
-        for r in games.filter(pl.col("week") == week).iter_rows(named=True):
+        week_games = games.filter(pl.col("week") == week)
+        starters = {t: starter.get((r["game_id"], t)) for r in week_games.iter_rows(named=True) for t in (r["home_team"], r["away_team"])}
+        ratings = blend(rating_inputs_asof(eff, RETRO_SEASON, week), qb_gaps_for_week(starters, RETRO_SEASON, primary, q))
+        for r in week_games.iter_rows(named=True):
             margin = base_margin(ratings, r["home_team"], r["away_team"], r["location"] == "Neutral")
             if margin is None:
                 continue
@@ -221,8 +387,8 @@ def build_backtest(schedules, eff):
         "method": (
             f"Walk-forward: each {RETRO_SEASON} regular-season game predicted with only the games before it plus "
             f"{RETRO_SEASON - 1}, using the same rating code as the live board, then picked against the closing spread. "
-            f"Base model only — QB-injury, revenge and former-coach adjustments aren't backtested. Constants were fitted on "
-            f"2021-{RETRO_SEASON - 1}, so {RETRO_SEASON} is data the fit never saw."
+            f"The QB-out adjustment isn't backtested. Constants were fitted on 2021-{RETRO_SEASON - 1}, so {RETRO_SEASON} is data "
+            f"the fit never saw."
         ),
         "games": len(picks),
         "ats": _record(ats),
@@ -238,14 +404,15 @@ def build_backtest(schedules, eff):
     }
 
 
-def last_meeting(schedules, home_team, away_team, before_season):
+def last_meeting(schedules, home_team, away_team):
+    """The most recent completed game between two teams, this season's included
+    (a December rematch's last meeting is September's game, not last year's)."""
     prior = (
         schedules.filter(
             (
                 ((pl.col("home_team") == home_team) & (pl.col("away_team") == away_team))
                 | ((pl.col("home_team") == away_team) & (pl.col("away_team") == home_team))
             )
-            & (pl.col("season") < before_season)
             & pl.col("result").is_not_null()
         )
         .sort(["season", "week"], descending=True)
@@ -314,9 +481,13 @@ def margin_breakdown(ratings, home, away, neutral, adjustments, margin_home):
     margin shown."""
     h, a = ratings[home], ratings[away]
     rows = [
-        {"kind": "offense", "team": home, "opp": away, "raw": MARGIN_SCALE * (h["off"] + a["def"])},
-        {"kind": "offense", "team": away, "opp": home, "raw": -MARGIN_SCALE * (a["off"] + h["def"])},
+        {"kind": "offense", "team": home, "opp": away, "raw": MARGIN_SCALE * (h["off"] - h["qb_adj"] + a["def"])},
+        {"kind": "offense", "team": away, "opp": home, "raw": -MARGIN_SCALE * (a["off"] - a["qb_adj"] + h["def"])},
+        {"kind": "point_diff", "home_pd": round(h["pd"], 1), "away_pd": round(a["pd"], 1), "raw": PD_WEIGHT * (h["pd"] - a["pd"])},
     ]
+    for team, sign, r in ((home, 1, h), (away, -1, a)):
+        if r["qb_adj"]:
+            rows.append({"kind": "new_qb", "team": team, "raw": sign * MARGIN_SCALE * r["qb_adj"]})
     if not neutral:
         rows.append({"kind": "home_field", "team": home, "raw": HOME_FIELD_ADJ})
     rows += adjustments
@@ -350,7 +521,14 @@ def _half(x):
     return f"{round(x * 2) / 2:g}"
 
 
+def _signed(x):
+    """A per-game differential as prose: "+6.2", "−3.1"."""
+    return f"{'+' if x >= 0 else '−'}{abs(x):.1f}"
+
+
 def _qb_status(flag):
+    if flag["status"] == "Backup starting":
+        return "out of the lineup for a lower-rated replacement"
     return "on Reserve" if flag["status"] == "Reserve" else f"listed {flag['status']}"
 
 
@@ -414,6 +592,17 @@ def driver_sentence(phr, home, away, margin_home, rows, ranks, qb_injury):
             f"{l}'s starting QB is {status}, and that {QB_OUT_PENALTY:g}-point adjustment is the biggest single piece of the model's number.",
             f"The headline is under center: {l}'s starting QB is {status}, which costs them {QB_OUT_PENALTY:g} points in the model.",
         ]), "qb_out"
+    if best["kind"] == "point_diff":
+        wpd, lpd = (best["home_pd"], best["away_pd"]) if w == home else (best["away_pd"], best["home_pd"])
+        return phr.pick("drv_pd", [
+            f"The scoreboard does most of the talking: {w} carries a {_signed(wpd)} point differential per game in the model's blend, {l} a {_signed(lpd)}.",
+            f"Start with the results. {w} sits at {_signed(wpd)} points a game in the model's blended differential, against {_signed(lpd)} for {l}.",
+        ]), "point_diff"
+    if best["kind"] == "new_qb":
+        return phr.pick("drv_new_qb", [
+            f"{w} has a different starter from last season, and his track record is worth about {pts} points here.",
+            f"The biggest piece is {w}'s change at QB: the model credits about {pts} points for the upgrade from last year's starter.",
+        ]), "new_qb"
     return f"The model's numbers tilt toward {w}.", best["kind"]
 
 
@@ -452,6 +641,10 @@ def counter_sentence(phr, home, away, margin_home, rows, ranks):
         ])
     if best["kind"] == "home_field":
         return f"{l} does get {HOME_FIELD_ADJ:g} points of home field back."
+    if best["kind"] == "point_diff":
+        return f"{l}'s results have been better than its efficiency, though, and that differential gives back about {_half(pts)} points."
+    if best["kind"] == "new_qb":
+        return f"{l}'s change at QB since last season gives back about {_half(pts)} points."
     return None
 
 
@@ -511,7 +704,7 @@ def build_storyline(
     oline_home, oline_away, coach_home, coach_away, revenge_flag,
     weather, international_site, neutral_site, roof, breakdown=None, ranks=None,
     qb_injury_home=None, qb_injury_away=None, former_coach_home=None, former_coach_away=None,
-    phrasing=None,
+    phrasing=None, race=None,
 ):
     """A short prose readout of *why* the model landed where it did --
     the same factors already computed for this game, synthesized into
@@ -567,7 +760,7 @@ def build_storyline(
     if weights:
         share = sum(weights[s][p] for s in ("home", "away") for p in ("off", "def")) / 4
         pct = round(share * 100)
-        if pct < 50:
+        if pct < 35:
             sentences.append(
                 f"Early-season read: only about {pct}% of these ratings come from {UPCOMING_SEASON} games so far — "
                 f"the rest is {UPCOMING_SEASON - 1}'s tape, shrunk toward average, so expect it to move."
@@ -595,13 +788,17 @@ def build_storyline(
 
     if revenge_flag and (revenge_flag.get("home") or revenge_flag.get("away")):
         revenge_team = home if revenge_flag.get("home") else away
-        sentences.append(f"{revenge_team} lost the last meeting between these division rivals — worth a {REVENGE_BONUS:g}-point nudge in the model.")
+        sentences.append(f"{revenge_team} lost the last meeting between these division rivals — a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it.")
 
     if former_coach_home or former_coach_away:
         team, coach = (home, former_coach_home) if former_coach_home else (away, former_coach_away)
-        sentences.append(
-            f"{team} is also facing {coach['coach_name']}, who coached {team} last season — worth a {FORMER_COACH_BONUS:g}-point nudge in the model."
-        )
+        sentences.append(f"{team} is also facing {coach['coach_name']}, who coached {team} last season — context, not something the model scores.")
+
+    out_of_race = [t for t in (home, away) if (race or {}).get(t) == "out"]
+    if out_of_race:
+        who = " and ".join(out_of_race)
+        verb = "are" if len(out_of_race) > 1 else "is"
+        sentences.append(f"{who} {verb} three or more games out of the playoff picture. Teams in that spot do tend to fade a little, but Vegas prices much of it in, so the model doesn't score it.")
 
     if neutral_site:
         where = "an international neutral site" if international_site else "a neutral site"
@@ -649,7 +846,7 @@ def build_market(r, model_margin_home):
     }
 
 
-def build_game_board(schedules, eff, injuries, rosters=None):
+def build_game_board(schedules, eff, injuries, q, rosters=None):
     with open(os.path.join(REF_DIR, "stadiums.json"), encoding="utf-8") as f:
         stadiums = json.load(f)
 
@@ -673,16 +870,26 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         top = counts.group_by("home_team").first()
         primary_stadium_name = dict(zip(top["home_team"].to_list(), top["stadium"].to_list()))
 
-    ratings = blend(rating_inputs_asof(eff, UPCOMING_SEASON, next_week))
+    depth_charts = load_cache("depth_charts")
+    _, primary = qb_starts(schedules)
+    starters = live_qb_starters(schedules, depth_charts, UPCOMING_SEASON, next_week)
+    ratings = blend(rating_inputs_asof(eff, UPCOMING_SEASON, next_week), qb_gaps_for_week(starters, UPCOMING_SEASON, primary, q))
     ranks = unit_ranks(ratings)
     phrasing = Phrasing(seed=f"{UPCOMING_SEASON}-{next_week}")
+    race = playoff_race(schedules, load_cache("teams"), UPCOMING_SEASON, next_week)
 
     print("Computing continuity for game board...")
-    depth_charts = load_cache("depth_charts")
     oline_continuity = build_oline_continuity(depth_charts, RETRO_SEASON, UPCOMING_SEASON)
     coach_continuity = build_coach_continuity(schedules, RETRO_SEASON, UPCOMING_SEASON)
     former_coach_matchups = build_former_coach_matchups(schedules, RETRO_SEASON, UPCOMING_SEASON)
     qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week, rosters=rosters)
+    # Once a depth chart moves the backup up, the injury report no longer flags
+    # anyone -- but the team is still playing without the QB its numbers came from.
+    # Only a step down counts: a starter returning from injury isn't a penalty.
+    for team, usual in usual_qb_by_team(schedules, UPCOMING_SEASON, next_week).items():
+        new = starters.get(team)
+        if team not in qb_injury_flags and new and new != usual and q(new, UPCOMING_SEASON) < q(usual, UPCOMING_SEASON):
+            qb_injury_flags[team] = {"gsis_id": usual, "status": "Backup starting"}
 
     picks = []
     for r in week_games.iter_rows(named=True):
@@ -690,7 +897,7 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         neutral_site = r["location"] == "Neutral"
         model_margin_home = base_margin(ratings, home, away, neutral_site)
 
-        meeting = last_meeting(schedules, home, away, UPCOMING_SEASON)
+        meeting = last_meeting(schedules, home, away)
         revenge_flag = None
         if meeting and r["div_game"]:
             revenge_flag = {"home": meeting["winner"] == away, "away": meeting["winner"] == home, "last_season": meeting["season"]}
@@ -699,19 +906,11 @@ def build_game_board(schedules, eff, injuries, rosters=None):
         former_coach_away = former_coach_matchups.get(away) if former_coach_matchups.get(away, {}).get("now_with") == home else None
 
         qb_injury_home, qb_injury_away = qb_injury_flags.get(home), qb_injury_flags.get(away)
-        adjustments = []  # the same nudges as breakdown rows (home-relative points)
+        adjustments = []  # breakdown rows on top of the base margin (home-relative points)
         if qb_injury_home:
             adjustments.append({"kind": "qb_out", "team": home, "raw": -QB_OUT_PENALTY})
         if qb_injury_away:
             adjustments.append({"kind": "qb_out", "team": away, "raw": QB_OUT_PENALTY})
-        if revenge_flag and revenge_flag.get("home"):
-            adjustments.append({"kind": "revenge", "team": home, "raw": REVENGE_BONUS})
-        if revenge_flag and revenge_flag.get("away"):
-            adjustments.append({"kind": "revenge", "team": away, "raw": -REVENGE_BONUS})
-        if former_coach_home:
-            adjustments.append({"kind": "former_coach", "team": home, "coach": former_coach_home["coach_name"], "raw": FORMER_COACH_BONUS})
-        if former_coach_away:
-            adjustments.append({"kind": "former_coach", "team": away, "coach": former_coach_away["coach_name"], "raw": -FORMER_COACH_BONUS})
         breakdown = None
         if model_margin_home is not None:
             model_margin_home = round(model_margin_home + sum(a["raw"] for a in adjustments), 1)
@@ -770,13 +969,14 @@ def build_game_board(schedules, eff, injuries, rosters=None):
             breakdown=breakdown, ranks={home: ranks[home], away: ranks[away]} if game_ranks else None,
             qb_injury_home=qb_injury_home, qb_injury_away=qb_injury_away,
             former_coach_home=former_coach_home, former_coach_away=former_coach_away,
-            phrasing=phrasing,
+            phrasing=phrasing, race=race,
         )
         market = build_market(r, model_margin_home)
 
         picks.append(
             {
                 "game_id": r["game_id"],
+                "model_version": MODEL_VERSION,
                 "week": r["week"],
                 "gameday": r["gameday"],
                 "weekday": weekday,
@@ -797,6 +997,11 @@ def build_game_board(schedules, eff, injuries, rosters=None):
                 "oline_continuity": {"home": oline_home, "away": oline_away},
                 "coach_continuity": {"home": coach_home, "away": coach_away},
                 "qb_injury": {"home": qb_injury_home, "away": qb_injury_away},
+                "qb_change": {
+                    "home": bool(game_ranks and ratings[home]["qb_adj"]),
+                    "away": bool(game_ranks and ratings[away]["qb_adj"]),
+                },
+                "playoff_race": {"home": race.get(home), "away": race.get(away)} if race else None,
                 "revenge_game": revenge_flag,
                 "former_coach": {"home": former_coach_home, "away": former_coach_away} if (former_coach_home or former_coach_away) else None,
                 "roof": r["roof"],
@@ -813,30 +1018,68 @@ def build_game_board(schedules, eff, injuries, rosters=None):
     return {"season": UPCOMING_SEASON, "week": next_week, "games": picks}
 
 
+def archive_path(season, week):
+    return os.path.join(ARCHIVE_DIR, f"{season}-w{week:02d}.json")
+
+
 def archive_current_week(game_board):
-    """Freeze this week's picks before kickoff so they can be graded later
-    against the actual final results without any risk of a later re-run
-    silently rewriting a pick after the fact. Only ever writes/overwrites
-    the archive file for a week where NONE of its games have started yet
-    (by calendar day, not by whether a score has posted -- a manual
-    workflow_dispatch re-run mid-week could otherwise land between two of
-    the week's games and mix a completed one with an unplayed one into a
-    single "frozen" week). Once any game in the week has kicked off, that
-    week's archive is permanently left alone."""
+    """Freeze picks before kickoff, game by game, so they can be graded later
+    with no risk of a re-run rewriting a pick after the fact. A game stays open
+    until its kickoff date (by calendar day, not by whether a score has
+    posted), so Sunday's games pick up Friday's final injury report; from that
+    day on its numbers never change. A week locked by an earlier model version
+    is left alone entirely.
+
+    Before Week 10 this replaced the whole file on every run, and the board
+    only lists unplayed games -- so a Friday run dropped each week's Thursday
+    game. scripts/restore_thursday_games.py put those back from git history."""
     games = game_board.get("games") or []
     if not games:
         return
     season, week = game_board["season"], game_board["week"]
+    path = archive_path(season, week)
+    existing = None
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            existing = json.load(f)
+        if existing.get("model_version", "v1") != MODEL_VERSION:
+            print(f"  Week {week} was locked by {existing.get('model_version', 'v1')} -- leaving its archive untouched.")
+            return
     today = datetime.now(timezone.utc).date().isoformat()
-    if any((g.get("gameday") or "9999-99-99") <= today for g in games):
-        print(f"  Week {week} has already started -- leaving its archive untouched.")
+    has_started = lambda g: (g.get("gameday") or "9999-99-99") <= today
+    kept = [g for g in (existing or {}).get("games", []) if has_started(g)]
+    kept_ids = {g["game_id"] for g in kept}
+    fresh = [g for g in games if not has_started(g) and g["game_id"] not in kept_ids]
+    if not fresh:
+        print(f"  Every game in week {week} has reached its kickoff date -- nothing left to lock.")
         return
+    now = datetime.now(timezone.utc).isoformat()
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
-    path = os.path.join(ARCHIVE_DIR, f"{season}-w{week:02d}.json")
-    payload = {"season": season, "week": week, "locked_at": datetime.now(timezone.utc).isoformat(), "pick_rule": "ats", "games": games}
+    payload = {
+        "season": season, "week": week, "locked_at": now, "pick_rule": "ats", "model_version": MODEL_VERSION,
+        "games": kept + [{**g, "locked_at": now} for g in fresh],
+    }
     with open(path, "w") as f:
         json.dump(json_safe(payload), f, indent=2)
-    print(f"  Locked picks for {season} week {week} ({len(games)} games) -> archive/{season}-w{week:02d}.json")
+    print(f"  Locked {len(fresh)} open games for {season} week {week} ({len(kept)} already frozen) -> archive/{season}-w{week:02d}.json")
+
+
+def hold_locked_week(game_board):
+    """A week locked by an earlier model version keeps showing its locked
+    numbers on the board until it's over, so the switch to a new version can't
+    change a pick that's already being graded."""
+    if not game_board.get("games"):
+        return game_board
+    path = archive_path(game_board["season"], game_board["week"])
+    if not os.path.exists(path):
+        return game_board
+    with open(path, encoding="utf-8") as f:
+        archived = json.load(f)
+    version = archived.get("model_version", "v1")
+    if version == MODEL_VERSION:
+        return game_board
+    unplayed = {g["game_id"] for g in game_board["games"]}
+    return {**game_board, "model_version": version, "games": [g for g in archived["games"] if g["game_id"] in unplayed]}
 
 
 def grade_archived_weeks(schedules):
@@ -850,7 +1093,7 @@ def grade_archived_weeks(schedules):
     paths = sorted(glob.glob(os.path.join(ARCHIVE_DIR, "*-w*.json")))
     result_by_game = dict(zip(schedules["game_id"].to_list(), schedules["result"].to_list()))
 
-    weeks, all_ats, all_outright = [], [], []
+    weeks, all_ats, all_outright, by_model = [], [], [], {}
     for path in paths:
         with open(path, encoding="utf-8") as f:
             archived = json.load(f)
@@ -887,10 +1130,21 @@ def grade_archived_weeks(schedules):
                     "winner_correct": winner_correct,
                 }
             )
+        version = "v0" if (archived["season"], archived["week"]) in SIGN_BUG_WEEKS else archived.get("model_version", "v1")
+        tally = by_model.setdefault(version, {"weeks": [], "ats": [], "outright": [], "margins": [], "spreads": [], "results": []})
+        tally["weeks"].append(archived["week"])
+        tally["ats"] += week_ats
+        tally["outright"] += week_outright
+        for g in week_games:
+            if g["result"] is not None and g["model_margin_home"] is not None and g["spread_home"] is not None:
+                tally["margins"].append(g["model_margin_home"])
+                tally["spreads"].append(g["spread_home"])
+                tally["results"].append(g["result"])
         weeks.append(
             {
                 "season": archived["season"],
                 "week": archived["week"],
+                "model_version": version,
                 "locked_at": archived.get("locked_at"),
                 "ats": _record(week_ats),
                 "outright": _record(week_outright),
@@ -900,12 +1154,51 @@ def grade_archived_weeks(schedules):
         all_ats += week_ats
         all_outright += week_outright
 
+    weeks = sorted(weeks, key=lambda w: (w["season"], w["week"]))
     return {
         "weeks_graded": len(weeks),
         "ats": _record(all_ats),
         "outright": _record(all_outright),
-        "weeks": sorted(weeks, key=lambda w: (w["season"], w["week"])),
+        "by_model": {
+            v: {
+                "weeks": sorted(t["weeks"]), "ats": _record(t["ats"]), "outright": _record(t["outright"]), "games": len(t["results"]),
+                "model_corr": _corr(t["margins"], t["results"]), "vegas_corr": _corr(t["spreads"], t["results"]),
+            }
+            for v, t in sorted(by_model.items())
+        },
+        "season_to_date": season_to_date(weeks),
+        "weeks": weeks,
     }
+
+
+def season_to_date(weeks):
+    """Running numbers after each graded week, for the Data Breakdown charts:
+    the ATS record and how the model's and Vegas's margins correlate with
+    final margins, each using every game graded so far. Correlation over one
+    week's 14-16 games is mostly noise, so nothing here is per-week."""
+    out, margins, spreads, results, ats = [], [], [], [], []
+    for w in weeks:
+        played = [g for g in w["games"] if g["result"] is not None and g["model_margin_home"] is not None and g["spread_home"] is not None]
+        if not played:
+            continue
+        margins += [g["model_margin_home"] for g in played]
+        spreads += [g["spread_home"] for g in played]
+        results += [g["result"] for g in played]
+        ats += [g["correct"] for g in played if g["correct"] is not None]
+        favorites = [(s > 0) == (r > 0) for s, r in zip(spreads, results) if s != 0 and r != 0]
+        winners = [(m > 0) == (r > 0) for m, r in zip(margins, results) if m != 0 and r != 0]
+        out.append({
+            "week": w["week"],
+            "games": len(results),
+            "ats": _record(ats),
+            "model_corr": _corr(margins, results),
+            "vegas_corr": _corr(spreads, results),
+            "model_mae": round(sum(abs(m - r) for m, r in zip(margins, results)) / len(results), 2),
+            "vegas_mae": round(sum(abs(s - r) for s, r in zip(spreads, results)) / len(results), 2),
+            "model_winners": round(sum(winners) / len(winners), 3) if winners else None,
+            "vegas_winners": round(sum(favorites) / len(favorites), 3) if favorites else None,
+        })
+    return out
 
 
 def main():
@@ -920,10 +1213,11 @@ def main():
     live_stats = load_live_team_stats(UPCOMING_SEASON, allow_empty=True)
     if live_stats is not None and not live_stats.is_empty():
         team_stats = pl.concat([team_stats, live_stats], how="diagonal_relaxed")
-    eff = team_game_efficiency(team_stats)
+    eff = team_game_efficiency(team_stats, schedules)
+    q = qb_quality(load_cache("player_stats_weekly"))
 
     print(f"Building {RETRO_SEASON} walk-forward backtest...")
-    backtest = build_backtest(schedules, eff)
+    backtest = build_backtest(schedules, eff, q)
     print(f"  {backtest['games']} games | corr {backtest['correlation']} | ATS {backtest['ats']} | outright {backtest['outright']}")
     if backtest["correlation"] is None or backtest["correlation"] < MIN_BACKTEST_CORR:
         # A failed run commits nothing, so the site keeps its last good data instead of
@@ -934,11 +1228,12 @@ def main():
     injuries_hist = load_cache("injuries")
     injuries_current = load_current_season_injuries(UPCOMING_SEASON, allow_empty=True)
     all_injuries = pl.concat([injuries_hist, injuries_current], how="diagonal_relaxed") if injuries_current is not None else injuries_hist
-    game_board = build_game_board(schedules, eff, all_injuries, rosters=rosters)
+    game_board = build_game_board(schedules, eff, all_injuries, q, rosters=rosters)
     print(f"  {len(game_board.get('games', []))} games in week {game_board.get('week')}")
 
-    print("Archiving this week's picks (skipped if the week has already started)...")
+    print("Archiving this week's open picks (a game freezes on its kickoff date)...")
     archive_current_week(game_board)
+    game_board = hold_locked_week(game_board)
 
     print("Grading archived weeks against final results...")
     accountability = grade_archived_weeks(schedules)

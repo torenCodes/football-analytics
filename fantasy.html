@@ -17,9 +17,27 @@
     <a href="index.html" class="site-logo"><img src="images/logo_small_white.png" alt="" class="site-logo-img">Football Forecast</a>
     <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
     <ul class="site-nav-links">
-      <li><a href="index.html" class="site-nav-link">Home</a></li>
-      <li><a href="fantasy.html" class="site-nav-link active">Fantasy</a></li>
-      <li><a href="betting.html" class="site-nav-link">Game Picks</a></li>
+      <li class="nav-item has-sub">
+        <a href="index.html" class="site-nav-link">Home</a>
+        <ul class="site-subnav">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="fantasy.html" class="site-nav-link active">Fantasy</a>
+        <ul class="site-subnav">
+          <li><a href="fantasy.html#position-leaders">Position Leaders</a></li>
+          <li><a href="fantasy.html#draft-board">Draft Board</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="betting.html" class="site-nav-link">Game Picks</a>
+        <ul class="site-subnav">
+          <li><a href="betting.html#game-board-section">Game Board</a></li>
+          <li><a href="betting.html#track-record-section">Track Record</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>
@@ -112,7 +130,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="position-leaders">
     <div class="toggle-group" id="leaders-weekly-tabs" style="margin-bottom: 1.5rem;">
       <button class="toggle-btn active" data-tab="leaders">2025 Leaders</button>
       <button class="toggle-btn" data-tab="weekly" id="weekly-rankings-tab-btn" style="display: none;">Weekly Rankings</button>
@@ -141,7 +159,7 @@
           <div class="section-kicker" id="weekly-rankings-kicker">This Week</div>
           <h2>Weekly Rankings</h2>
         </div>
-        <span class="section-note">Start Score = recency-weighted production + matchup + injury status. The in-season successor to the Draft Board.</span>
+        <span class="section-note">Start Score projects the week's points from recent form, Vegas's team total, the opposing defense, targets and carries, and whether the player is expected to play. FP Rank = FantasyPros consensus at the position.</span>
       </div>
       <div class="pos-tabs" id="weekly-rankings-pos-tabs"></div>
       <div class="card card-accent-fantasy table-scroll">
@@ -170,7 +188,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="draft-board">
     <div class="section-head">
       <div>
         <div class="section-kicker" id="draft-board-kicker">2026 Draft Prep</div>
@@ -202,6 +220,23 @@
     </div>
     <div class="pos-tabs" id="accountability-pos-tabs"></div>
     <div id="accountability-body"></div>
+  </section>
+
+  <section class="section" id="weekly-report-section" style="display: none;">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Accountability</div>
+        <h2>Weekly Rankings Report Card</h2>
+      </div>
+      <span class="section-note" id="weekly-report-note"></span>
+    </div>
+    <p class="section-note tr-note">
+      Each week's rankings are frozen before kickoff and graded afterward. <strong>Head-to-head</strong> takes every
+      pair of startable players and asks: did the one ranked higher score more? 50% is a coin flip. A player who
+      sat out counts as zero points, because that's what starting him would have cost you. FantasyPros, the Start
+      Score and plain recent points per game are graded on the same players.
+    </p>
+    <div id="weekly-report-body"></div>
   </section>
 
   <div class="disclaimer">
@@ -255,6 +290,10 @@ function toggleSiteNav(btn) {
   const open = links.classList.toggle('open');
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
 }
+// A link in the open menu may only jump within this page, so close it by hand.
+document.querySelector('.site-nav-links').addEventListener('click', e => {
+  if (e.target.closest('a') && e.currentTarget.classList.contains('open')) toggleSiteNav(document.querySelector('.nav-burger'));
+});
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 
 function selectSeasonTab(tab) {
@@ -290,6 +329,7 @@ let preseasonDreamTeamData = null;
 let accountabilityData = null;
 let weeklyRankingsData = null;
 let waiverWireData = null;
+let weeklyAccountabilityData = null;
 let currentFormat = 'ppr';
 let currentLeadersPos = 'QB';
 let currentBoardPos = 'QB';
@@ -549,7 +589,11 @@ function renderAccountability() {
     el.innerHTML = `<p class="empty-state">Not enough graded players at this position yet.</p>`;
     return;
   }
-  noteEl.textContent = `${posData.players_graded} players graded · avg rank error ${posData.mean_abs_rank_error} · ${(posData.hit_rate_within_5 * 100).toFixed(0)}% within 5 spots`;
+  const vs = posData.vs_consensus;
+  const consensusNote = vs && vs.ours_rho !== null && vs.market_rho !== null
+    ? ` · rank correlation with results: ours ${vs.ours_rho.toFixed(2)}, FantasyPros ${vs.market_rho.toFixed(2)}`
+    : '';
+  noteEl.textContent = `${posData.players_graded} players graded · avg rank error ${posData.mean_abs_rank_error} · ${(posData.hit_rate_within_5 * 100).toFixed(0)}% within 5 spots${consensusNote}`;
 
   const gradeRow = (g) => `
     <div class="tr-game-row">
@@ -571,6 +615,34 @@ function renderAccountability() {
   `;
 }
 
+const START_SCORE_NOTES = {
+  v1: 'Hand-set adjustments, as published through Week 8',
+  v2: 'Fitted on 2021–2025, from Week 9',
+};
+
+function renderWeeklyReport() {
+  const section = document.getElementById('weekly-report-section');
+  const data = weeklyAccountabilityData;
+  if (!data || !data.available) { section.style.display = 'none'; return; }
+  section.style.display = '';
+  const pct = v => (v === null || v === undefined) ? '—' : `${(v * 100).toFixed(1)}%`;
+  document.getElementById('weekly-report-note').textContent = `Weeks ${data.weeks[0].week}–${data.weeks[data.weeks.length - 1].week} · ${currentFormat.toUpperCase()}`;
+  document.getElementById('weekly-report-body').innerHTML = Object.entries(data.by_version).map(([version, v]) => {
+    const rows = ROSTER_POS.filter(pos => v[currentFormat][pos]).map(pos => {
+      const c = v[currentFormat][pos];
+      return `<tr><td><span class="pill pos">${pos}</span></td><td class="num-center">${pct(c.start_score)}</td><td class="num-center">${pct(c.recent_ppg)}</td><td class="num-center">${pct(c.market)}</td><td class="num-center">${c.weeks}</td></tr>`;
+    }).join('');
+    return `
+      <div class="front-block-title" style="margin-bottom: 0.5rem;">Start Score ${version} <span class="section-note">${START_SCORE_NOTES[version] || ''}</span></div>
+      <div class="card card-accent-fantasy table-scroll" style="margin-bottom: 1.25rem;">
+        <table class="data-table">
+          <thead><tr><th class="w-xs">Pos</th><th class="num-center">Start Score</th><th class="num-center">Recent PPG</th><th class="num-center">FantasyPros</th><th class="num-center w-sm">Weeks</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }).join('');
+}
+
 function selectAccountabilityPos(pos) {
   currentAccountabilityPos = pos;
   renderPosTabs('accountability-pos-tabs', currentAccountabilityPos, selectAccountabilityPos);
@@ -579,6 +651,7 @@ function selectAccountabilityPos(pos) {
 
 function injuryPill(status) {
   if (!status) return '—';
+  // Questionable players usually play; everyone else here isn't expected to.
   const cls = status === 'Questionable' ? 'pos' : 'down';
   return `<span class="pill ${cls}">${status}</span>`;
 }
@@ -600,8 +673,8 @@ function renderWeeklyRankings() {
   const rows = data.rankings_by_position[currentWeeklyRankingsPos] || [];
   thead.innerHTML = `<tr>
     <th class="w-xs">Rank</th><th class="w-player">Player</th><th class="w-sm">Team</th><th class="w-sm">Opp</th>
-    <th class="num-center w-lg">Start Score</th><th class="num-center w-lg">Recent PPG</th>
-    <th class="num w-md">Matchup</th><th class="center w-md">Injury</th>
+    <th class="num-center w-md">Start Score</th><th class="num-center w-lg">Recent PPG</th><th class="num-center w-sm">FP Rank</th>
+    <th class="num w-md">Matchup</th><th class="center w-md">Status</th>
   </tr>`;
   tbody.innerHTML = rows.map(p => {
     const matchupPill = p.matchup_adj === null ? '—' :
@@ -614,10 +687,11 @@ function renderWeeklyRankings() {
       <td>${p.opponent}</td>
       <td class="num-center">${fmt1(p.start_score)}</td>
       <td class="num-center">${fmt1(p.recent_ppg)} (${p.games_this_season})</td>
+      <td class="num-center">${p.market_rank !== null && p.market_rank !== undefined ? Math.round(p.market_rank) : '—'}</td>
       <td class="num">${matchupPill}</td>
       <td class="center">${injuryPill(p.injury_status)}</td>
     </tr>`;
-  }).join('') || `<tr><td colspan="8" class="empty-state">No data</td></tr>`;
+  }).join('') || `<tr><td colspan="9" class="empty-state">No data</td></tr>`;
 }
 
 function selectWeeklyRankingsPos(pos) {
@@ -665,6 +739,7 @@ function renderAll() {
     renderAccountability();
     renderWeeklyRankings();
     renderWaiverWire();
+    renderWeeklyReport();
   }
 }
 
@@ -691,13 +766,14 @@ async function applySeasonPivot() {
   const season = seasonState.season;
   const week = seasonState.current_week;
   const safeJson = (url) => fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
-  [accountabilityData, preseasonDraftBoardData, preseasonDreamTeamData, teamOfWeekData, weeklyRankingsData, waiverWireData] = await Promise.all([
+  [accountabilityData, preseasonDraftBoardData, preseasonDreamTeamData, teamOfWeekData, weeklyRankingsData, waiverWireData, weeklyAccountabilityData] = await Promise.all([
     safeJson('data/fantasy/accountability.json'),
     safeJson(`data/fantasy/archive/${season}-preseason-draft-board.json`),
     safeJson(`data/fantasy/archive/${season}-preseason-dream-team.json`),
     week ? safeJson(`data/fantasy/archive/${season}-w${String(week).padStart(2, '0')}-team-of-week.json`) : Promise.resolve(null),
     safeJson('data/fantasy/weekly_rankings.json'),
     safeJson('data/fantasy/waiver_wire.json'),
+    safeJson('data/fantasy/weekly_accountability.json'),
   ]);
 
   document.getElementById('draft-board-kicker').textContent = 'Archived — 2026 Preseason Prep';
@@ -771,6 +847,19 @@ async function init() {
   renderPosTabs('waiver-wire-pos-tabs', currentWaiverWirePos, selectWaiverWirePos);
 
   renderAll();
+  followHash();
+  window.addEventListener('hashchange', followHash);
+}
+
+// The header's sub-links point at content that may be tucked away: Position
+// Leaders shares a tab group with Weekly Rankings, and the Draft Board collapses
+// in season. Reveal it first, then land on it (the page has finished filling in).
+function followHash() {
+  const target = location.hash && document.querySelector(location.hash);
+  if (!target) return;
+  if (location.hash === '#position-leaders') selectLeadersWeeklyTab('leaders');
+  if (location.hash === '#draft-board') document.getElementById('draft-board-details').setAttribute('open', '');
+  target.scrollIntoView();
 }
 
 init();

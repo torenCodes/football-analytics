@@ -1455,6 +1455,115 @@
         "market_favorite": "away",
         "edge_vs_market": -2.1
       }
+    },
+    {
+      "game_id": "2026_06_SEA_DEN",
+      "week": 6,
+      "gameday": "2026-10-15",
+      "weekday": "Thursday",
+      "gametime": "20:15",
+      "primetime": true,
+      "juice_score": 4,
+      "home_team": "DEN",
+      "away_team": "SEA",
+      "div_game": false,
+      "model_margin_home": -0.0,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "DEN",
+          "opp": "SEA",
+          "pts_home": -4.6
+        },
+        {
+          "kind": "offense",
+          "team": "SEA",
+          "opp": "DEN",
+          "pts_home": 2.6
+        },
+        {
+          "kind": "home_field",
+          "team": "DEN",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 19,
+          "def": 10
+        },
+        "away": {
+          "off": 22,
+          "def": 2
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.37,
+          "def": 0.4
+        },
+        "away": {
+          "off": 0.37,
+          "def": 0.38
+        }
+      },
+      "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Sean Payton",
+          "coach_current": "Sean Payton",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Mike Macdonald",
+          "coach_current": "Mike Macdonald",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "revenge_game": null,
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Rain Showers",
+        "temperature_f": 55,
+        "wind": "7 to 17 mph"
+      },
+      "storyline": "The model can barely separate these two. The model calls it a dead heat; Vegas has SEA by 3. That's enough to lean DEN +3. Early-season read: only about 38% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. DEN brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Rain Showers, 55\u00b0F, wind 7 to 17 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model can barely separate these two. The model calls it a dead heat; Vegas has SEA by 3. That's enough to lean DEN +3.",
+      "market": {
+        "spread_home": -3.0,
+        "spread_home_odds": -118,
+        "spread_away_odds": -102,
+        "moneyline_home": 130,
+        "moneyline_away": -155,
+        "total": 40.5,
+        "over_odds": -112,
+        "under_odds": -108,
+        "market_favorite": "away",
+        "edge_vs_market": 3.0
+      },
+      "locked_at": "2026-10-13T17:46:41.208412+00:00",
+      "restored_from": "cd837459"
     }
   ]
 }

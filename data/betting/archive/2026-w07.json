@@ -1418,6 +1418,115 @@
         "market_favorite": "away",
         "edge_vs_market": -4.1
       }
+    },
+    {
+      "game_id": "2026_07_NE_CHI",
+      "week": 7,
+      "gameday": "2026-10-22",
+      "weekday": "Thursday",
+      "gametime": "20:15",
+      "primetime": true,
+      "juice_score": 4,
+      "home_team": "CHI",
+      "away_team": "NE",
+      "div_game": false,
+      "model_margin_home": -0.2,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "CHI",
+          "opp": "NE",
+          "pts_home": 1.3
+        },
+        {
+          "kind": "offense",
+          "team": "NE",
+          "opp": "CHI",
+          "pts_home": -3.5
+        },
+        {
+          "kind": "home_field",
+          "team": "CHI",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 11,
+          "def": 16
+        },
+        "away": {
+          "off": 4,
+          "def": 17
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.47,
+          "def": 0.37
+        },
+        "away": {
+          "off": 0.44,
+          "def": 0.41
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Ben Johnson",
+          "coach_current": "Ben Johnson",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Mike Vrabel",
+          "coach_current": "Mike Vrabel",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "revenge_game": null,
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Sunny",
+        "temperature_f": 66,
+        "wind": "0 to 5 mph"
+      },
+      "storyline": "The model sees close to a coin flip here. Upset call: Vegas favors CHI by 3, but the model has NE winning outright by 0.2. Early-season read: only about 42% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. Forecast for kickoff: Sunny, 66\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model sees close to a coin flip here. Upset call: Vegas favors CHI by 3, but the model has NE winning outright by 0.2.",
+      "market": {
+        "spread_home": 3.0,
+        "spread_home_odds": -102,
+        "spread_away_odds": -118,
+        "moneyline_home": -148,
+        "moneyline_away": 124,
+        "total": 50.5,
+        "over_odds": -115,
+        "under_odds": -105,
+        "market_favorite": "home",
+        "edge_vs_market": -3.2
+      },
+      "locked_at": "2026-10-20T15:20:48.367912+00:00",
+      "restored_from": "7b6632e4"
     }
   ]
 }

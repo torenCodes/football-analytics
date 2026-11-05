@@ -17,9 +17,27 @@
     <a href="index.html" class="site-logo"><img src="images/logo_small_white.png" alt="" class="site-logo-img">Football Forecast</a>
     <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
     <ul class="site-nav-links">
-      <li><a href="index.html" class="site-nav-link">Home</a></li>
-      <li><a href="fantasy.html" class="site-nav-link">Fantasy</a></li>
-      <li><a href="betting.html" class="site-nav-link active">Game Picks</a></li>
+      <li class="nav-item has-sub">
+        <a href="index.html" class="site-nav-link">Home</a>
+        <ul class="site-subnav">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="fantasy.html" class="site-nav-link">Fantasy</a>
+        <ul class="site-subnav">
+          <li><a href="fantasy.html#position-leaders">Position Leaders</a></li>
+          <li><a href="fantasy.html#draft-board">Draft Board</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="betting.html" class="site-nav-link active">Game Picks</a>
+        <ul class="site-subnav">
+          <li><a href="betting.html#game-board-section">Game Board</a></li>
+          <li><a href="betting.html#track-record-section">Track Record</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 </header>
@@ -28,12 +46,12 @@
   <div class="masthead-strip">
     <div>
       <h1>Game Picks</h1>
-      <div class="masthead-sub">Team efficiency (offense vs. defense EPA/play), blended from last season into this one, plus a few explainable situational adjustments — set against the real spread, not a black-box number.</div>
+      <div class="masthead-sub">Team efficiency (offense vs. defense EPA/play) and scoring margin, blended from last season into this one, plus the QB situation — set against the real spread, not a black-box number.</div>
     </div>
     <div class="masthead-date" id="betting-week-label"></div>
   </div>
 
-  <section class="section">
+  <section class="section" id="game-board-section">
     <div class="section-head">
       <div>
         <div class="section-kicker betting">2026 Season</div>
@@ -81,6 +99,7 @@
       win by 1.5 yet pick DEN +3, because 1.5 falls short of KC's 3-point spread.
     </p>
     <p class="section-note tr-note" id="backtest-summary"></p>
+    <div class="card table-scroll tr-versions" id="track-record-versions"></div>
     <div id="track-record"></div>
   </section>
 
@@ -135,6 +154,10 @@ function toggleSiteNav(btn) {
   const open = links.classList.toggle('open');
   btn.innerHTML = open ? '&#10005;' : '&#9776;';
 }
+// A link in the open menu may only jump within this page, so close it by hand.
+document.querySelector('.site-nav-links').addEventListener('click', e => {
+  if (e.target.closest('a') && e.currentTarget.classList.contains('open')) toggleSiteNav(document.querySelector('.nav-burger'));
+});
 document.getElementById('footer-year').textContent = new Date().getFullYear();
 
 function fmt1(n) { return (n === null || n === undefined) ? '—' : (Math.round(n * 10) / 10).toFixed(1).replace('-', '−'); }
@@ -198,25 +221,41 @@ function colorStoryline(text, home, away) {
 }
 
 // Yellow penalty flags (.flag) are reserved for factors that actually move the
-// model's margin -- a starting QB out, a revenge game, a former coach -- per the
-// design system's Tag rule. Everything else is context, shown as a neutral tag.
+// model's margin, per the design system's Tag rule: a starting QB out or a new
+// starter. Everything else is context, shown as a neutral tag. Revenge and
+// former-coach games left the margin in v2, but a week locked by v1 still has them.
+function scored(g, kind) { return (g.margin_breakdown || []).some(r => r.kind === kind); }
+
+const RACE_LABEL = {
+  out: 'is 3+ games out of the playoff race',
+  safe: 'is 3+ games clear in the playoff race',
+  cusp: 'is within a game of the last playoff seed',
+};
+
 function factorTags(g) {
   const tags = [];
   if (g.primetime) tags.push(`<span class="factor-tag">Primetime</span>`);
   if (g.div_game) tags.push(`<span class="factor-tag">Division game</span>`);
   const homeQbOut = g.qb_injury && g.qb_injury.home;
   const awayQbOut = g.qb_injury && g.qb_injury.away;
-  const qbStatusLabel = s => s === 'Reserve' ? 'on Reserve' : s;
-  if (homeQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.home_team)} QB ${qbStatusLabel(homeQbOut.status)}</span>`);
-  if (awayQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.away_team)} QB ${qbStatusLabel(awayQbOut.status)}</span>`);
+  const qbStatusLabel = s => s === 'Reserve' ? 'QB on Reserve' : s === 'Backup starting' ? 'backup QB starting' : `QB ${s}`;
+  if (homeQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.home_team)} ${qbStatusLabel(homeQbOut.status)}</span>`);
+  if (awayQbOut) tags.push(`<span class="factor-tag flag">${teamSpan(g.away_team)} ${qbStatusLabel(awayQbOut.status)}</span>`);
+  for (const side of ['away', 'home']) {
+    if (g.qb_change && g.qb_change[side]) tags.push(`<span class="factor-tag flag">${teamSpan(g[side + '_team'])} new QB since last season</span>`);
+  }
   if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) {
     const who = g.revenge_game.home ? g.home_team : g.away_team;
-    tags.push(`<span class="factor-tag flag">Revenge game: ${teamSpan(who)} lost last meeting (${g.revenge_game.last_season})</span>`);
+    tags.push(`<span class="factor-tag${scored(g, 'revenge') ? ' flag' : ''}">Revenge game: ${teamSpan(who)} lost last meeting (${g.revenge_game.last_season})</span>`);
   }
   if (g.former_coach && (g.former_coach.home || g.former_coach.away)) {
     const fc = g.former_coach.home || g.former_coach.away;
     const who = g.former_coach.home ? g.home_team : g.away_team;
-    tags.push(`<span class="factor-tag flag">${teamSpan(who)} faces former coach ${fc.coach_name}</span>`);
+    tags.push(`<span class="factor-tag${scored(g, 'former_coach') ? ' flag' : ''}">${teamSpan(who)} faces former coach ${fc.coach_name}</span>`);
+  }
+  for (const side of ['away', 'home']) {
+    const race = g.playoff_race && RACE_LABEL[g.playoff_race[side]];
+    if (race) tags.push(`<span class="factor-tag">${teamSpan(g[side + '_team'])} ${race}</span>`);
   }
   if (g.rest_days_edge_home !== null && g.rest_days_edge_home !== 0) {
     const who = g.rest_days_edge_home > 0 ? g.home_team : g.away_team;
@@ -328,6 +367,8 @@ function rankPill(r) {
 
 const BREAKDOWN_LABEL = {
   offense: r => `${teamSpan(r.team)} offense vs. ${teamSpan(r.opp)} defense`,
+  point_diff: () => 'Season point differential',
+  new_qb: r => `${teamSpan(r.team)} new starting QB`,
   home_field: () => 'Home field',
   qb_out: r => `${teamSpan(r.team)} starting QB out`,
   revenge: r => `${teamSpan(r.team)} revenge game`,
@@ -369,8 +410,8 @@ function summaryChips(g) {
   for (const side of ['away', 'home']) {
     if (g.qb_injury && g.qb_injury[side]) chips.push(`<span class="mini-tag flag">${g[side + '_team']} QB out</span>`);
   }
-  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) chips.push('<span class="mini-tag flag">Revenge</span>');
-  if (g.former_coach) chips.push('<span class="mini-tag flag">Former coach</span>');
+  if (g.revenge_game && (g.revenge_game.home || g.revenge_game.away)) chips.push(`<span class="mini-tag${scored(g, 'revenge') ? ' flag' : ''}">Revenge</span>`);
+  if (g.former_coach) chips.push(`<span class="mini-tag${scored(g, 'former_coach') ? ' flag' : ''}">Former coach</span>`);
   if (g.neutral_site) chips.push('<span class="mini-tag">Neutral site</span>');
   else if (g.international_site) chips.push('<span class="mini-tag">International</span>');
   return chips.join('');
@@ -470,10 +511,40 @@ async function loadBacktestSummary() {
     el.innerHTML = `<strong>${bt.season} backtest</strong> (same model, run week by week on games it hadn't seen yet): `
       + `spread picks went ${ats} — short of the 52.4% needed to profit at standard odds — and it picked the winner ${outright}`
       + (fav ? ` (the Vegas favorite won ${(fav * 100).toFixed(1)}%)` : '')
-      + `. Base model only; injury, revenge and former-coach adjustments aren't backtested.`;
+      + `. The QB-out adjustment isn't backtested.`;
   } catch (e) {
     el.textContent = '';
   }
+}
+
+const MODEL_NOTES = {
+  v0: 'Before the defense sign fix, so these margins are close to noise.',
+  v1: 'EPA rating plus QB-out, revenge and former-coach nudges.',
+  v2: 'Adds scoring margin and QB changes; a smaller penalty, only for a step down at QB; revenge and former coach are context only.',
+};
+
+function weekRange(weeks) {
+  return weeks.length > 1 ? `${weeks[0]}–${weeks[weeks.length - 1]}` : `${weeks[0]}`;
+}
+
+function renderModelVersions(acc) {
+  const el = document.getElementById('track-record-versions');
+  const rows = Object.entries(acc.by_model || {});
+  // Every week gets its own version's record; v2 appears once its first week is locked.
+  if (!rows.length) { el.style.display = 'none'; return; }
+  el.innerHTML = `
+    <table class="data-table">
+      <thead><tr><th class="w-sm">Model</th><th class="w-sm">Weeks</th><th class="w-lg">Spread picks</th><th class="w-lg">Picked winner</th><th class="left">What it is</th></tr></thead>
+      <tbody>${rows.map(([v, m]) => `
+        <tr>
+          <td class="center"><span class="pill pos">${v}</span></td>
+          <td class="num-center">${weekRange(m.weeks)}</td>
+          <td class="num-center">${recordText(m.ats) || 'Pending'}</td>
+          <td class="num-center">${recordText(m.outright) || 'Pending'}</td>
+          <td class="wrap">${MODEL_NOTES[v] || ''}</td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
 }
 
 async function loadTrackRecord() {
@@ -489,6 +560,7 @@ async function loadTrackRecord() {
     overallEl.textContent = seasonAts
       ? `Spread picks: ${seasonAts} · Picked the winner: ${seasonOutright || '—'}`
       : '';
+    renderModelVersions(acc);
     el.innerHTML = [...acc.weeks].reverse().map(w => {
       const wAts = recordText(w.ats), wOutright = recordText(w.outright);
       const wRecord = wAts
@@ -510,7 +582,7 @@ async function loadTrackRecord() {
         <details class="game-card">
           <summary>
             <div class="game-card-top">
-              <div class="matchup-line"><div class="game-matchup">Week ${w.week}</div></div>
+              <div class="matchup-line"><div class="game-matchup">Week ${w.week}</div><span class="pill pos">${w.model_version}</span></div>
               <div class="game-pick">${wRecord}</div>
             </div>
           </summary>
@@ -525,9 +597,10 @@ async function loadTrackRecord() {
   }
 }
 
-loadGameBoard();
-loadTrackRecord();
-loadBacktestSummary();
+// The board above Track Record fills in after load; land on the section once it has.
+Promise.all([loadGameBoard(), loadTrackRecord(), loadBacktestSummary()]).then(() => {
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+});
 </script>
 </body>
 </html>

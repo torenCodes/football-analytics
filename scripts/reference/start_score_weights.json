@@ -1,0 +1,140 @@
+{
+ "_comment": "Written by scripts/fantasy_lab.py. Start Score weights per format and position, least squares on 2021-2025 player-weeks. form = this season's recent PPG with PRIOR_GAMES games of last season mixed in; team_total = Vegas implied points minus 22.5 (the opponent's, negated, for DST); matchup = points allowed to the position vs. league average; targets and carries per game over the last six.",
+ "prior_games": 2,
+ "ppr": {
+  "QB": {
+   "intercept": 12.17,
+   "form": 0.196,
+   "team_total": 0.463,
+   "matchup": 0.075,
+   "carries": 0.313,
+   "questionable": -2.351,
+   "doubtful": -4.078,
+   "out": -3.488,
+   "reserve": -2.416,
+   "not_starter": -12.83,
+   "n": 2040
+  },
+  "RB": {
+   "intercept": 2.123,
+   "form": 0.399,
+   "team_total": 0.244,
+   "matchup": 0.039,
+   "targets": 0.557,
+   "carries": 0.251,
+   "questionable": -3.613,
+   "doubtful": -13.353,
+   "out": -13.082,
+   "reserve": -11.604,
+   "n": 3060
+  },
+  "WR": {
+   "intercept": 2.95,
+   "form": 0.475,
+   "team_total": 0.171,
+   "matchup": 0.039,
+   "targets": 0.411,
+   "questionable": -4.322,
+   "doubtful": -12.206,
+   "out": -12.535,
+   "reserve": -11.334,
+   "n": 4080
+  },
+  "TE": {
+   "intercept": 1.132,
+   "form": 0.454,
+   "team_total": 0.176,
+   "matchup": 0.115,
+   "targets": 0.622,
+   "questionable": -3.17,
+   "doubtful": -10.019,
+   "out": -9.324,
+   "reserve": -8.324,
+   "n": 1530
+  },
+  "K": {
+   "intercept": 5.836,
+   "form": 0.183,
+   "team_total": 0.134,
+   "matchup": 0.177,
+   "questionable": -1.543,
+   "doubtful": -7.472,
+   "out": -7.419,
+   "reserve": -6.811,
+   "n": 1530
+  },
+  "DST": {
+   "intercept": 6.186,
+   "team_total": 0.418,
+   "n": 1530
+  }
+ },
+ "standard": {
+  "QB": {
+   "intercept": 12.16,
+   "form": 0.196,
+   "team_total": 0.461,
+   "matchup": 0.076,
+   "carries": 0.319,
+   "questionable": -2.356,
+   "doubtful": -4.082,
+   "out": -3.501,
+   "reserve": -2.439,
+   "not_starter": -12.831,
+   "n": 2040
+  },
+  "RB": {
+   "intercept": 1.912,
+   "form": 0.335,
+   "team_total": 0.225,
+   "matchup": 0.048,
+   "targets": 0.421,
+   "carries": 0.257,
+   "questionable": -3.006,
+   "doubtful": -11.1,
+   "out": -10.607,
+   "reserve": -9.292,
+   "n": 3060
+  },
+  "WR": {
+   "intercept": 1.952,
+   "form": 0.324,
+   "team_total": 0.138,
+   "matchup": 0.02,
+   "targets": 0.429,
+   "questionable": -3.205,
+   "doubtful": -7.628,
+   "out": -7.956,
+   "reserve": -7.051,
+   "n": 4080
+  },
+  "TE": {
+   "intercept": 0.41,
+   "form": 0.456,
+   "team_total": 0.137,
+   "matchup": 0.113,
+   "targets": 0.395,
+   "questionable": -1.946,
+   "doubtful": -6.032,
+   "out": -5.573,
+   "reserve": -4.784,
+   "n": 1530
+  },
+  "K": {
+   "intercept": 5.839,
+   "form": 0.183,
+   "team_total": 0.137,
+   "matchup": 0.171,
+   "questionable": -1.705,
+   "doubtful": -7.479,
+   "out": -7.429,
+   "reserve": -6.82,
+   "n": 1530
+  },
+  "DST": {
+   "intercept": 6.189,
+   "team_total": 0.42,
+   "n": 1530
+  }
+ }
+}

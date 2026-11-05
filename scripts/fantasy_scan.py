@@ -15,6 +15,7 @@ Run standalone, re-run anytime (weekly via GitHub Actions once the season
 is live) to refresh.
 """
 
+import glob
 import json
 import os
 from datetime import datetime, timezone
@@ -24,15 +25,13 @@ import polars as pl
 from shared import (
     DEFENSIVE_LINE_POS,
     REF_DIR,
-    TEAM_CODE_ALIASES,
     build_coach_continuity,
     build_current_team_lookup,
-    build_former_coach_matchups,
     build_oline_continuity,
-    build_qb_injury_flags,
     json_safe,
     load_cache,
     ordinal,
+    starting_qb_by_team,
 )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -52,27 +51,16 @@ MIN_GAMES_FOR_WEEKLY_RANKINGS = 1  # deliberately looser than the Draft Board's 
 # useful starting Week 2, not Week 5; games_this_season is shown alongside the score so a thin sample
 # is visibly a thin sample rather than silently blended away
 MATCHUP_POS = SKILL_POS + ["K"]  # positions the defense-vs-position matchup signal is computed for --
-# DST is excluded (see build_dst_weekly's opponent_team comment): "who does this DST face" needs an
-# inverted offense-strength model, out of scope for v1
-MATCHUP_ADJ_WEIGHT = 0.5  # half the raw points-allowed-vs-league-average differential -- a modest
-# nudge, same philosophy as CONTINUITY_ADJ_WEIGHT below
+# DST is excluded (see build_dst_weekly's opponent_team comment); its matchup is the opponent's Vegas total
 MIN_GAMES_FOR_DEFENSE_SAMPLE = 3  # below this, fall back to the defense's full-prior-season number --
 # a hard switch chosen by judgment, not fitted (betting_scan.py's game model now blends prior and
 # current season gradually by plays played; a 3-game points-allowed-to-position total is a small,
 # high-variance sample either way -- an acceptable, explicitly-flagged judgment call)
-QUESTIONABLE_PENALTY, DOUBTFUL_PENALTY, OUT_PENALTY = -2.0, -10.0, -20.0  # soft nudges, never a hard
-# exclusion -- an "Out" player still shows up, clearly flagged, sunk to the bottom of their position
-# group (a typical 8-20 ppg skill player's score goes negative), same "explainable, not a black box"
-# philosophy as betting_scan.py's QB_OUT_PENALTY
-TEAM_QB_OUT_PENALTY = -2.0  # points, for a WR/TE whose team's starting QB is Out/Doubtful (or on
-# Reserve) this week -- half of betting_scan.py's QB_OUT_PENALTY (4.0, the whole offense's margin),
-# proportionate for one player absorbing part of that. Landed at QUESTIONABLE_PENALTY's tier
-# deliberately: a real, mechanical, first-order effect (a different QB throwing every pass), not a
-# soft motivation nudge (the 0.5-1.0 tier below), but well short of the -10/-20 tier reserved for the
-# receiver's own availability being in doubt. Flat across WR/TE, not scaled by target share or
-# depth-chart rank -- deliberately simple, same as every other adjustment here; a true WR1 likely
-# absorbs less of this in reality (volume/checkdowns partially offset QB-quality decline) while a
-# WR3/4 likely absorbs more -- an acceptable, disclosed v1 simplification, not something to model around
+TYPICAL_TEAM_TOTAL = 22.5  # the league's usual Vegas implied points -- team_total is measured from here
+# The Start Score is a fitted projection: every input's weight comes from scripts/fantasy_lab.py
+# (least squares per position on 2021-2025 player-weeks, reference/start_score_weights.json). Tested and
+# left out, because they added nothing on held-out seasons: facing a former team or coach, and a
+# receiver's QB being out. Those were hand-set nudges through Week 8 of 2026.
 MIN_GAMES_FOR_WAIVER_WIRE = 1  # a single monster game is often exactly what should trigger a waiver
 # pickup in the first place -- requiring 2+ games would leave this section completely empty for the
 # first two weeks of the season, missing the exact window a hot pickup is most available. games is
@@ -86,12 +74,10 @@ MIN_GAMES_FOR_WAIVER_WIRE = 1  # a single monster game is often exactly what sho
 # else on the site.
 WAIVER_DRAFTABLE_DEPTH = {"QB": 24, "RB": 60, "WR": 72, "TE": 24, "K": 14, "DST": 14}
 
-FORMER_COACH_TEAM_BONUS = 0.5  # points, for a SKILL_POS player whose team faces the coach who ran
-# them last season -- above the Draft Board's flat SAME_HC_BONUS (0.2), below the injury penalties: a
-# genuinely matchup-specific motivation signal, still clearly softer than "this player might not play"
-FORMER_TEAM_BONUS = 1.0  # points, for a player individually facing a team they used to play for --
-# a bigger, more personal storyline than facing a former coach, same magnitude as betting_scan.py's
-# REVENGE_BONUS/FORMER_COACH_BONUS
+# How far next year's Draft Board leans on FantasyPros consensus, in rank space. scripts/fantasy_lab.py:
+# consensus out-predicted a stats-only board in 29 of 30 position-seasons over 2021-2025, and 75/25 scores
+# within 0.03 of pure consensus at every position while keeping a real signal for where the numbers disagree.
+CONSENSUS_WEIGHT = 0.75
 
 UNIFIED_COLS = ["player_id", "player_display_name", "position", "team", "week", "season", "season_type", "fpts_ppr", "fpts_standard", "opponent_team"]
 
@@ -453,6 +439,19 @@ def freeze_preseason_board_if_needed(draft_board, dream_team, schedules):
     return wrote_any
 
 
+def _spearman(xs, ys):
+    """Rank correlation (ties broken by position, fine for ranks and points at this size)."""
+    n = len(xs)
+    if n < 5:
+        return None
+    rank = lambda v: {i: r for r, i in enumerate(sorted(range(n), key=lambda i: v[i]))}
+    rx, ry = rank(xs), rank(ys)
+    mean = (n - 1) / 2
+    sxy = sum((rx[i] - mean) * (ry[i] - mean) for i in range(n))
+    sxx = sum((rx[i] - mean) ** 2 for i in range(n))
+    return round(sxy / sxx, 3)
+
+
 def compute_draft_board_accountability(stats, schedules):
     """Preseason Draft Board rank vs. actual 2026 season-to-date PPG rank,
     per position. Mirrors the site's existing market_gap convention
@@ -478,10 +477,11 @@ def compute_draft_board_accountability(stats, schedules):
 
     out = {}
     for fmt, points_col in (("ppr", "total_ppr"), ("standard", "total_standard")):
-        preseason_rank_by_id = {}
+        preseason_rank_by_id, market_rank_by_id = {}, {}
         for pos, rows in preseason_board[fmt]["rankings_by_position"].items():
             for row in rows:
                 preseason_rank_by_id[row["player_id"]] = row["our_rank"]
+                market_rank_by_id[row["player_id"]] = row.get("market_rank")
 
         by_pos = {}
         for pos in ROSTER_POS:
@@ -508,10 +508,17 @@ def compute_draft_board_accountability(stats, schedules):
                 )
             graded.sort(key=lambda g: g["rank_error"])
             n = len(graded)
+            both = [g for g in graded if market_rank_by_id.get(g["player_id"]) is not None]
+            consensus = {
+                "players": len(both),
+                "ours_rho": _spearman([g["preseason_rank"] for g in both], [g["actual_rank"] for g in both]),
+                "market_rho": _spearman([market_rank_by_id[g["player_id"]] for g in both], [g["actual_rank"] for g in both]),
+            }
             by_pos[pos] = {
                 "players_graded": n,
                 "mean_abs_rank_error": round(sum(abs(g["rank_error"]) for g in graded) / n, 1) if n else None,
                 "hit_rate_within_5": round(sum(1 for g in graded if abs(g["rank_error"]) <= 5) / n, 3) if n else None,
+                "vs_consensus": consensus,
                 "biggest_steals": graded[:5],
                 "biggest_busts": graded[-5:][::-1],
             }
@@ -752,10 +759,19 @@ def compute_draft_board(stats, oline_continuity, dline_continuity, coach_continu
                 (x for x in rows if x["position"] == pos and x["games_played_2025"] >= MIN_GAMES_FOR_DRAFT_BOARD),
                 key=lambda x: -x["edge_score"],
             )
+            # The gap stays "consensus vs. our numbers alone" -- it's where the two disagree.
+            # The final order leans on consensus; the point scale stays ours, so the Dream
+            # Team's VOR math still reads in fantasy points.
+            scores = [x["edge_score"] for x in pos_rows]
             for i, x in enumerate(pos_rows, start=1):
-                x["our_rank"] = i
+                x["model_rank"] = i
                 x["market_gap"] = round(x["market_rank"] - i, 1) if x["market_rank"] is not None else None
                 x["explain"] = build_draft_board_explain(x)
+            blended = lambda x: (1 - CONSENSUS_WEIGHT) * x["model_rank"] + CONSENSUS_WEIGHT * (x["market_rank"] if x["market_rank"] is not None else x["model_rank"])
+            pos_rows.sort(key=blended)
+            for i, x in enumerate(pos_rows, start=1):
+                x["our_rank"] = i
+                x["edge_score"] = scores[i - 1]
             by_pos[pos] = pos_rows[:50]
         board[fmt] = {"season_baseline": RETRO_SEASON, "draft_season": UPCOMING_SEASON, "rankings_by_position": by_pos}
     return board
@@ -987,58 +1003,53 @@ def _defense_vs_position(stats, season):
     return by_team_pos, league_avg
 
 
-def build_player_former_teams(rosters):
-    """gsis_id -> set of teams this player was ACTIVE on in a prior season,
-    excluding their current team. Filtered to status=="ACT" -- unfiltered,
-    over half of all (player, team) pairs in the roster history are
-    practice-squad/cut-before-a-snap stints, not real former-team stories.
-    Applies the same TEAM_CODE_ALIASES normalization build_current_team_lookup
-    already uses, so a pre-2020 Raiders stint (tagged "OAK") still matches
-    against today's "LV" -- otherwise it silently never would."""
-    active = rosters.filter((pl.col("status") == "ACT") & pl.col("gsis_id").is_not_null()).with_columns(
-        pl.col("team").replace(TEAM_CODE_ALIASES).alias("team")
-    )
-    by_player = active.group_by("gsis_id").agg(pl.col("team").unique().alias("teams"))
-    return dict(zip(by_player["gsis_id"].to_list(), (set(t) for t in by_player["teams"].to_list())))
-
-
 def build_weekly_ranking_explain(row):
     """Short prose readout of why this player's Start Score landed where it
-    did -- same explainable-nudge spirit as build_draft_board_explain and
+    did -- same explainable spirit as build_draft_board_explain and
     betting_scan.py's build_storyline, surfaced as this row's tooltip."""
     sentences = [f"Averaging {row['recent_ppg']:.1f} ppg over {row['games_this_season']} game(s) this season."]
+    if row["implied_points"] is not None:
+        sentences.append(f"Vegas has {row['team']} at about {row['implied_points']:.0f} points against {row['opponent']}.")
     if row["matchup_adj"] is not None:
-        if row["matchup_adj"] >= 1.5:
-            sentences.append(f"Facing {row['opponent']}, a favorable matchup for {row['position']}s this week.")
-        elif row["matchup_adj"] <= -1.5:
-            sentences.append(f"Facing {row['opponent']}, a tough matchup for {row['position']}s this week.")
-    if row["injury_status"]:
-        sentences.append(f"Listed {row['injury_status']} on the official injury report.")
-    if row.get("team_qb_out"):
-        sentences.append(f"{row['team']}'s starting QB is out this week, a modest drag on the passing game.")
-    if row.get("former_coach_matchup"):
-        sentences.append(f"{row['team']} also faces the coach who ran them last season — extra motivation baked into the score.")
-    if row.get("former_team_matchup"):
-        sentences.append(f"{row['name']} is facing a former team this week, another motivation nudge factored in.")
+        if row["matchup_adj"] >= 1.0:
+            sentences.append(f"That's a favorable spot for {row['position']}s, worth about +{row['matchup_adj']:.1f}.")
+        elif row["matchup_adj"] <= -1.0:
+            sentences.append(f"That's a tough spot for {row['position']}s, worth about {row['matchup_adj']:.1f}.")
+    status = row["injury_status"]
+    if status == "Reserve":
+        sentences.append("On a reserve list, so not expected to play.")
+    elif status == "Backup":
+        sentences.append(f"Not the starter on {row['team']}'s depth chart.")
+    elif status:
+        sentences.append(f"Listed {status} on the official injury report.")
     return " ".join(sentences)
 
 
-def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, depth_charts):
+def load_start_score_weights():
+    with open(os.path.join(REF_DIR, "start_score_weights.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def compute_weekly_rankings(stats, usage, schedules, injuries, current_team, rosters, depth_charts, market_weekly=None):
     """Forward-looking start/sit rankings for the upcoming week -- the
-    in-season successor to the Draft Board, using the exact same
-    recency-weighted-production-plus-explainable-adjustments philosophy,
-    just recomputed weekly against the actual next matchup instead of
-    frozen once at the start of the season."""
+    in-season successor to the Draft Board. The Start Score is a projection of
+    the week's fantasy points: recent form (with a couple of games' worth of
+    last season mixed in), the team's Vegas implied points, the opposing
+    defense, recent targets and carries, and whether the player is expected to
+    play, each weighted by a fit on past seasons (scripts/fantasy_lab.py)."""
     upcoming = schedules.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("game_type") == "REG") & pl.col("home_score").is_null())
     if upcoming.is_empty():
         return {"available": False, "note": "No upcoming games found in the cached schedule."}
     next_week = int(upcoming["week"].min())
     week_games = upcoming.filter(pl.col("week") == next_week)
 
-    opponent_by_team = {}
+    opponent_by_team, implied_by_team = {}, {}
     for r in week_games.iter_rows(named=True):
         opponent_by_team[r["home_team"]] = r["away_team"]
         opponent_by_team[r["away_team"]] = r["home_team"]
+        if r["total_line"] is not None and r["spread_line"] is not None:
+            implied_by_team[r["home_team"]] = (r["total_line"] + r["spread_line"]) / 2
+            implied_by_team[r["away_team"]] = (r["total_line"] - r["spread_line"]) / 2
 
     # Soft, data-driven gate rather than _season_started(): a mid-week
     # workflow_dispatch re-run (e.g. Thursday night after only one Week-1
@@ -1069,40 +1080,57 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, d
     )
     merged = season_agg.join(last6, on="player_id", how="left")
 
+    prior_season = stats.filter((pl.col("season") == RETRO_SEASON) & (pl.col("season_type") == "REG")).group_by("player_id").agg(
+        pl.col("fpts_ppr").mean().alias("ppr"), pl.col("fpts_standard").mean().alias("standard")
+    )
+    prior_ppg = {r["player_id"]: r for r in prior_season.iter_rows(named=True)}
+
+    recent_use = (
+        usage.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("season_type") == "REG") & (pl.col("week") < next_week))
+        .sort("week").group_by("player_id").agg(pl.col("targets").tail(6).mean(), pl.col("carries").tail(6).mean())
+    )
+    usage_by_player = {r["player_id"]: r for r in recent_use.iter_rows(named=True)}
+
     current_by_team_pos, league_avg_current = _defense_vs_position(stats, UPCOMING_SEASON)
     fallback_by_team_pos, league_avg_fallback = _defense_vs_position(stats, RETRO_SEASON)
     games_played_by_defense = {}
     for (team, _pos), row in current_by_team_pos.items():
         games_played_by_defense[team] = max(games_played_by_defense.get(team, 0), row["games"])
 
-    def defense_allowed(team, position, fmt):
-        ppg_key = f"{fmt}_ppg"
+    def defense_edge(team, position, fmt):
+        """Points this defense allows the position above league average, and whose numbers those are."""
+        key = f"{fmt}_ppg"
         if games_played_by_defense.get(team, 0) >= MIN_GAMES_FOR_DEFENSE_SAMPLE and (team, position) in current_by_team_pos:
-            return current_by_team_pos[(team, position)][ppg_key], league_avg_current.get(position, {}).get(ppg_key), "current_season"
+            return current_by_team_pos[(team, position)][key] - league_avg_current.get(position, {}).get(key, 0.0), "current_season"
         if (team, position) in fallback_by_team_pos:
-            return fallback_by_team_pos[(team, position)][ppg_key], league_avg_fallback.get(position, {}).get(ppg_key), "prior_season_fallback"
-        return None, None, None
+            return fallback_by_team_pos[(team, position)][key] - league_avg_fallback.get(position, {}).get(key, 0.0), "prior_season_fallback"
+        return None, None
 
     injury_by_player = {}
     if injuries is not None and not injuries.is_empty():
         wk_injuries = injuries.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("week") == next_week))
         if not wk_injuries.is_empty():
             injury_by_player = dict(zip(wk_injuries["gsis_id"].to_list(), wk_injuries["report_status"].to_list()))
-    injury_penalty_by_status = {"Questionable": QUESTIONABLE_PENALTY, "Doubtful": DOUBTFUL_PENALTY, "Out": OUT_PENALTY}
 
-    former_coach_matchups = build_former_coach_matchups(schedules, RETRO_SEASON, UPCOMING_SEASON)
-    player_former_teams = build_player_former_teams(rosters)
-    qb_injury_flags = build_qb_injury_flags(depth_charts, injuries, UPCOMING_SEASON, next_week, rosters=rosters)
+    # The weekly report drops players once they go on a reserve list, so a starter
+    # on IR would otherwise rank on his old numbers with no flag at all.
+    snap = rosters.filter((pl.col("season") == UPCOMING_SEASON) & pl.col("gsis_id").is_not_null())
+    latest = snap.group_by("gsis_id").agg(pl.col("week").max().alias("week"))
+    on_reserve = set(snap.join(latest, on=["gsis_id", "week"], how="inner").filter(pl.col("status") == "RES")["gsis_id"].to_list())
+    starters = starting_qb_by_team(depth_charts, UPCOMING_SEASON)
 
-    board = {}
-    for fmt, season_col, last6_col in (("ppr", "season_ppr", "last6_ppr_total"), ("standard", "season_standard", "last6_standard_total")):
+    weights = load_start_score_weights()
+    prior_games = weights["prior_games"]
+
+    def build_rows(fmt, season_col, last6_col):
         rows = []
         for r in merged.iter_rows(named=True):
             position = r["position"]
+            pid = r["player_id"]
             # DST player_ids ("<TEAM>_DST") aren't real gsis_ids so they
             # always miss current_team -- recover the team directly, same
             # reasoning as compute_draft_board's team-resolution comment.
-            team = r["player_id"].removesuffix("_DST") if position == "DST" else current_team.get(r["player_id"])
+            team = pid.removesuffix("_DST") if position == "DST" else current_team.get(pid)
             if team is None or team not in opponent_by_team:
                 continue  # unresolved current team, or this team has a bye this week
 
@@ -1112,46 +1140,68 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, d
             last6_games = r["last6_games"] or 0
             last6_ppg = (r[last6_col] / last6_games) if last6_games else season_ppg
             recent_ppg = RECENCY_WEIGHT * last6_ppg + (1 - RECENCY_WEIGHT) * season_ppg
+            prior = prior_ppg.get(pid, {}).get(fmt)
+            form = recent_ppg if prior is None else (games * recent_ppg + prior_games * prior) / (games + prior_games)
 
-            matchup_adj, matchup_source = None, None
-            if position in MATCHUP_POS:
-                allowed_ppg, league_ppg, source = defense_allowed(opponent, position, fmt)
-                if allowed_ppg is not None and league_ppg is not None:
-                    matchup_adj = round(MATCHUP_ADJ_WEIGHT * (allowed_ppg - league_ppg), 2)
-                    matchup_source = source
+            defense, matchup_source = defense_edge(opponent, position, fmt) if position in MATCHUP_POS else (None, None)
+            implied = implied_by_team.get(team)
+            if position == "DST":
+                opp_implied = implied_by_team.get(opponent)
+                team_total = -(opp_implied - TYPICAL_TEAM_TOTAL) if opp_implied is not None else 0.0
+            else:
+                team_total = implied - TYPICAL_TEAM_TOTAL if implied is not None else 0.0
 
-            injury_status = injury_by_player.get(r["player_id"])
-            injury_penalty = injury_penalty_by_status.get(injury_status, 0.0)
-
-            former_coach_matchup = position in SKILL_POS and former_coach_matchups.get(team, {}).get("now_with") == opponent
-            former_team_matchup = opponent in player_former_teams.get(r["player_id"], set())
-            motivation_bonus = (FORMER_COACH_TEAM_BONUS if former_coach_matchup else 0.0) + (FORMER_TEAM_BONUS if former_team_matchup else 0.0)
-
-            team_qb_out = position in ("WR", "TE") and team in qb_injury_flags
-            qb_out_penalty = TEAM_QB_OUT_PENALTY if team_qb_out else 0.0
-
-            start_score = round(recent_ppg + (matchup_adj or 0.0) + injury_penalty + motivation_bonus + qb_out_penalty, 2)
+            status = injury_by_player.get(pid)
+            if status not in ("Questionable", "Doubtful", "Out"):
+                status = None
+            not_starter = position == "QB" and bool(starters.get(team)) and starters[team] != pid
+            if status is None and pid in on_reserve:
+                status = "Reserve"
+            elif status is None and not_starter:
+                status = "Backup"
+            # The fit's not_starter means "someone else takes the snaps": a QB ruled out counts, even
+            # while the depth chart still lists him.
+            not_starter = not_starter or (position == "QB" and status in ("Out", "Reserve"))
+            use = usage_by_player.get(pid, {})
+            inputs = {
+                "form": form,
+                "team_total": team_total,
+                "matchup": defense or 0.0,
+                "targets": use.get("targets") or 0.0,
+                "carries": use.get("carries") or 0.0,
+                "questionable": float(status == "Questionable"),
+                "doubtful": float(status == "Doubtful"),
+                "out": float(status == "Out"),
+                "reserve": float(status == "Reserve"),
+                "not_starter": float(not_starter),
+            }
+            w = weights[fmt][position]
+            score = w["intercept"] + sum(w.get(k, 0.0) * v for k, v in inputs.items())
+            spot = w.get("team_total", 0.0) * team_total + w.get("matchup", 0.0) * inputs["matchup"]
 
             row = {
-                "player_id": r["player_id"],
+                "player_id": pid,
                 "name": r["player_display_name"],
                 "position": position,
                 "team": team,
                 "opponent": opponent,
-                "start_score": start_score,
+                "start_score": round(score, 2),
                 "recent_ppg": round(recent_ppg, 2),
                 "games_this_season": r["games"],
-                "matchup_adj": matchup_adj,
+                "matchup_adj": round(spot, 2),
                 "matchup_source": matchup_source,
-                "injury_status": injury_status,
-                "former_coach_matchup": former_coach_matchup,
-                "former_team_matchup": former_team_matchup,
-                "team_qb_out": team_qb_out,
+                "implied_points": round(implied, 1) if implied is not None else None,
+                "injury_status": status,
+                "market_rank": (market_weekly or {}).get(pid),
             }
             row["explain"] = build_weekly_ranking_explain(row)
             rows.append(row)
+        return rows
 
-        by_pos = {}
+    board, frozen = {}, {}
+    for fmt, season_col, last6_col in (("ppr", "season_ppr", "last6_ppr_total"), ("standard", "season_standard", "last6_standard_total")):
+        rows = build_rows(fmt, season_col, last6_col)
+        by_pos, all_by_pos = {}, {}
         for pos in ROSTER_POS:
             pos_rows = sorted(
                 (x for x in rows if x["position"] == pos and x["games_this_season"] >= MIN_GAMES_FOR_WEEKLY_RANKINGS),
@@ -1160,9 +1210,176 @@ def compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, d
             for i, x in enumerate(pos_rows, start=1):
                 x["rank"] = i
             by_pos[pos] = pos_rows[:50]
+            all_by_pos[pos] = pos_rows
         board[fmt] = {"week": next_week, "rankings_by_position": by_pos}
+        frozen[fmt] = all_by_pos
 
-    return {"available": True, "season": UPCOMING_SEASON, **board}
+    return {"available": True, "season": UPCOMING_SEASON, **board, "_all_rows": frozen, "_week_games": week_games}
+
+
+# ---- Weekly receipts: every week's rankings frozen before kickoff, graded after.
+
+WEEKLY_ARCHIVE_FIELDS = ["player_id", "name", "position", "team", "opponent", "start_score", "recent_ppg", "matchup_adj", "injury_status", "market_rank"]
+RECEIPT_POOL = {"QB": 24, "RB": 36, "WR": 48, "TE": 18, "K": 18, "DST": 18}  # roughly the startable pool in a 12-team league
+START_SCORE_VERSION = "v2"  # v1 (through Week 8 of 2026) was hand-set; v2 is fitted by scripts/fantasy_lab.py
+
+
+def weekly_archive_path(season, week):
+    return os.path.join(ARCHIVE_DIR, f"{season}-w{week:02d}-weekly-rankings.json")
+
+
+def merge_frozen_rows(old_rows, new_rows, started_teams):
+    """A player's row stays open until his team's kickoff date, then never
+    changes: rows for teams that have started come from what was frozen, the
+    rest from the newest rankings."""
+    kept = [x for x in old_rows if x["team"] in started_teams]
+    return kept + [{k: x.get(k) for k in WEEKLY_ARCHIVE_FIELDS} for x in new_rows if x["team"] not in started_teams]
+
+
+def archive_weekly_rankings(weekly_rankings):
+    """Freeze the week's rankings, team by team, so the report card grades what
+    was actually published. Same calendar-day rule as betting_scan's archive."""
+    if not weekly_rankings.get("available"):
+        return
+    week = weekly_rankings["ppr"]["week"]
+    week_games = weekly_rankings["_week_games"]
+    today = datetime.now(timezone.utc).date().isoformat()
+    started = set()
+    for r in week_games.iter_rows(named=True):
+        if r["gameday"] <= today:
+            started.update((r["home_team"], r["away_team"]))
+    path = weekly_archive_path(UPCOMING_SEASON, week)
+    existing = None
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            existing = json.load(f)
+    payload = {"season": UPCOMING_SEASON, "week": week, "start_score_version": (existing or {}).get("start_score_version", START_SCORE_VERSION),
+               "locked_at": datetime.now(timezone.utc).isoformat(), "rankings": {}}
+    for fmt in ("ppr", "standard"):
+        payload["rankings"][fmt] = {}
+        for pos in ROSTER_POS:
+            old = (existing or {}).get("rankings", {}).get(fmt, {}).get(pos, [])
+            payload["rankings"][fmt][pos] = merge_frozen_rows(old, weekly_rankings["_all_rows"][fmt][pos], started)
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(json_safe(payload), f, indent=1)
+    print(f"  Froze week {week} rankings ({len(started)} teams already locked).")
+
+
+def _head_to_head(order, points):
+    """Across every pair of players, how often the one ranked higher outscored
+    the other. 50% is a coin flip. Ties in either list don't count."""
+    right = total = 0
+    n = len(order)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if order[i] == order[j] or points[i] == points[j]:
+                continue
+            total += 1
+            right += (order[i] > order[j]) == (points[i] > points[j])
+    return round(right / total, 3) if total else None
+
+
+def compute_weekly_accountability(stats, schedules):
+    """Each frozen week's rankings against what happened: the Start Score, plain
+    recent PPG and the FantasyPros weekly consensus, on the same players. A
+    player whose team played but who didn't scores zero -- that's what starting
+    him would have cost, and it's the only way injury news can earn credit."""
+    paths = sorted(glob.glob(os.path.join(ARCHIVE_DIR, f"{UPCOMING_SEASON}-w*-weekly-rankings.json")))
+    final = schedules.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("game_type") == "REG") & pl.col("result").is_not_null())
+    played = {}
+    for r in final.iter_rows(named=True):
+        played.setdefault(r["week"], set()).update((r["home_team"], r["away_team"]))
+    reg = stats.filter((pl.col("season") == UPCOMING_SEASON) & (pl.col("season_type") == "REG"))
+
+    weeks = []
+    for path in paths:
+        with open(path, encoding="utf-8") as f:
+            archived = json.load(f)
+        week = archived["week"]
+        teams = played.get(week, set())
+        if not teams:
+            continue
+        now = reg.filter(pl.col("week") == week)
+        out = {"week": week, "start_score_version": archived.get("start_score_version", "v1"), "by_format": {}}
+        for fmt, col in (("ppr", "fpts_ppr"), ("standard", "fpts_standard")):
+            actual = dict(zip(now["player_id"].to_list(), now[col].to_list()))
+            by_pos = {}
+            for pos in ROSTER_POS:
+                rows = [x for x in archived["rankings"][fmt].get(pos, []) if x["team"] in teams]
+                if len(rows) < 8:
+                    continue
+                top = RECEIPT_POOL[pos]
+                worst_market = max((x["market_rank"] for x in rows if x.get("market_rank") is not None), default=None)
+                market = lambda x: -(x["market_rank"] if x.get("market_rank") is not None else (worst_market or 0) + 1)
+                pool = {x["player_id"]: x for key in (lambda x: x["start_score"], lambda x: x["recent_ppg"] or 0, market)
+                        for x in sorted(rows, key=key, reverse=True)[:top]}
+                pool = list(pool.values())
+                points = [actual.get(x["player_id"], 0.0) for x in pool]
+                score = [x["start_score"] for x in pool]
+                recent = [x["recent_ppg"] or 0 for x in pool]
+                by_pos[pos] = {
+                    "players": len(pool),
+                    "start_score": _head_to_head(score, points),
+                    "recent_ppg": _head_to_head(recent, points),
+                    "start_score_rho": _spearman(score, points),
+                    "recent_ppg_rho": _spearman(recent, points),
+                }
+                if worst_market is not None:
+                    ranks = [market(x) for x in pool]
+                    by_pos[pos]["market"] = _head_to_head(ranks, points)
+                    by_pos[pos]["market_rho"] = _spearman(ranks, points)
+            out["by_format"][fmt] = by_pos
+        weeks.append(out)
+    if not weeks:
+        return {"available": False, "note": "The weekly report card starts once a frozen week has been played."}
+
+    def average(version, fmt):
+        cells = {}
+        for pos in ROSTER_POS:
+            rows = [w["by_format"][fmt][pos] for w in weeks if pos in w["by_format"][fmt] and (version is None or w["start_score_version"] == version)]
+            if rows:
+                cells[pos] = {k: round(sum(r[k] for r in rows if r.get(k) is not None) / max(sum(1 for r in rows if r.get(k) is not None), 1), 3)
+                              for k in ("start_score", "recent_ppg", "market", "start_score_rho", "recent_ppg_rho", "market_rho") if any(r.get(k) is not None for r in rows)}
+                cells[pos]["weeks"] = len(rows)
+        return cells
+
+    versions = sorted({w["start_score_version"] for w in weeks})
+    return {
+        "available": True,
+        "season": UPCOMING_SEASON,
+        "weeks": weeks,
+        "season_by_format": {fmt: average(None, fmt) for fmt in ("ppr", "standard")},
+        "by_version": {v: {"weeks": [w["week"] for w in weeks if w["start_score_version"] == v],
+                           **{fmt: average(v, fmt) for fmt in ("ppr", "standard")}} for v in versions},
+    }
+
+
+def load_weekly_consensus(raw_stats, teams):
+    """This week's FantasyPros positional consensus: {player_id: rank}. Same
+    id matching as load_market_consensus: crosswalk, kicker names, team names."""
+    import nflreadpy as nfl
+
+    weekly = nfl.load_ff_rankings(type="week").filter(pl.col("page_pos").is_in(["QB", "RB", "WR", "TE", "K", "DST"]))
+    if weekly.is_empty():
+        return {}
+    ids = nfl.load_ff_playerids().select(["fantasypros_id", "gsis_id"]).drop_nulls()
+    by_fp = dict(zip(ids["fantasypros_id"].to_list(), ids["gsis_id"].to_list()))
+    kickers = raw_stats.filter(pl.col("position") == "K").select(["player_id", "player_display_name"]).unique()
+    by_kicker = {_normalize_name(n): i for i, n in zip(kickers["player_id"].to_list(), kickers["player_display_name"].to_list())}
+    team_abbr = dict(zip(teams["team_name"].to_list(), teams["team_abbr"].to_list()))
+    out = {}
+    for r in weekly.iter_rows(named=True):
+        if r["page_pos"] == "K":
+            pid = by_kicker.get(_normalize_name(r["player_name"]))
+        elif r["page_pos"] == "DST":
+            abbr = team_abbr.get(r["player_name"])
+            pid = f"{abbr}_DST" if abbr else None
+        else:
+            pid = by_fp.get(r["fantasypros_id"])
+        if pid:
+            out[pid] = r["ecr"]
+    return out
 
 
 def main():
@@ -1244,9 +1461,24 @@ def main():
     print("Loading live 2026 injury reports...")
     injuries = load_current_season_injuries(UPCOMING_SEASON, allow_empty=True)
 
+    print("Loading this week's FantasyPros consensus...")
+    try:
+        market_weekly = load_weekly_consensus(raw_stats, teams)
+        print(f"  {len(market_weekly)} players/teams matched")
+    except Exception as e:
+        print(f"  WARNING: weekly consensus unavailable ({e}), continuing without it")
+        market_weekly = {}
+
     print("Computing weekly start/sit rankings...")
-    weekly_rankings = compute_weekly_rankings(stats, schedules, injuries, current_team, rosters, depth_charts)
+    usage = raw_stats.select(["player_id", "season", "week", "season_type", "targets", "carries"])
+    weekly_rankings = compute_weekly_rankings(stats, usage, schedules, injuries, current_team, rosters, depth_charts, market_weekly)
     print(f"  available={weekly_rankings['available']}")
+
+    print("Freezing this week's rankings and grading finished weeks...")
+    archive_weekly_rankings(weekly_rankings)
+    weekly_accountability = compute_weekly_accountability(stats, schedules)
+    print(f"  available={weekly_accountability['available']}")
+    weekly_rankings = {k: v for k, v in weekly_rankings.items() if not k.startswith("_")}
 
     print("Computing waiver wire watch (likely-undrafted players outperforming expectations)...")
     waiver_wire = compute_waiver_wire(stats, schedules)
@@ -1266,6 +1498,8 @@ def main():
         json.dump(json_safe({"meta": meta, **season_state}), f, indent=2)
     with open(os.path.join(OUT_DIR, "weekly_rankings.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **weekly_rankings}), f, indent=2)
+    with open(os.path.join(OUT_DIR, "weekly_accountability.json"), "w") as f:
+        json.dump(json_safe({"meta": meta, **weekly_accountability}), f, indent=1)
     with open(os.path.join(OUT_DIR, "waiver_wire.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **waiver_wire}), f, indent=2)
 
