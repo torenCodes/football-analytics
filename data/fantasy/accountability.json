@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-05T20:55:47.567945+00:00"
+    "generated_at": "2026-11-05T21:05:15.453523+00:00"
   },
   "available": true,
   "season": 2026,
@@ -320,12 +320,12 @@
       },
       "TE": {
         "players_graded": 43,
-        "mean_abs_rank_error": 12.1,
+        "mean_abs_rank_error": 12.0,
         "hit_rate_within_5": 0.326,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.549,
-          "market_rho": 0.741
+          "ours_rho": 0.551,
+          "market_rho": 0.745
         },
         "biggest_steals": [
           {
@@ -424,12 +424,12 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 11.3,
+        "mean_abs_rank_error": 11.4,
         "hit_rate_within_5": 0.259,
         "vs_consensus": {
           "players": 27,
-          "ours_rho": 0.232,
-          "market_rho": 0.158
+          "ours_rho": 0.229,
+          "market_rho": 0.159
         },
         "biggest_steals": [
           {
@@ -532,8 +532,8 @@
         "hit_rate_within_5": 0.344,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.299,
-          "market_rho": 0.243
+          "ours_rho": 0.296,
+          "market_rho": 0.24
         },
         "biggest_steals": [
           {
@@ -910,8 +910,8 @@
             "player_id": "00-0039868",
             "name": "Troy Franklin",
             "preseason_rank": 50,
-            "actual_rank": 121,
-            "rank_error": 71,
+            "actual_rank": 120,
+            "rank_error": 70,
             "games": 7,
             "ppg": 1.1
           },
@@ -946,12 +946,12 @@
       },
       "TE": {
         "players_graded": 43,
-        "mean_abs_rank_error": 13.9,
+        "mean_abs_rank_error": 13.8,
         "hit_rate_within_5": 0.209,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.573,
-          "market_rho": 0.756
+          "ours_rho": 0.575,
+          "market_rho": 0.759
         },
         "biggest_steals": [
           {
@@ -1050,12 +1050,12 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 11.3,
+        "mean_abs_rank_error": 11.4,
         "hit_rate_within_5": 0.259,
         "vs_consensus": {
           "players": 27,
-          "ours_rho": 0.232,
-          "market_rho": 0.158
+          "ours_rho": 0.229,
+          "market_rho": 0.159
         },
         "biggest_steals": [
           {
@@ -1158,8 +1158,8 @@
         "hit_rate_within_5": 0.344,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.299,
-          "market_rho": 0.243
+          "ours_rho": 0.296,
+          "market_rho": 0.24
         },
         "biggest_steals": [
           {
