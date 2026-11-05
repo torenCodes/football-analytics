@@ -15,7 +15,7 @@ Six times a week — right after Monday Night Football wraps on Tuesday (with tw
 | Page | What it surfaces |
 |---|---|
 | **[Fantasy](https://footballforecast.net/fantasy.html)** | A frozen preseason Draft Board (VORP-based snake-draft simulation) that pivots to weekly in-season content once Week 1 starts: Weekly Rankings (start/sit), a Waiver Wire Watch for likely-undrafted players outperforming expectations, and an accountability section grading the preseason board against how the season actually went |
-| **[Game Picks](https://footballforecast.net/betting.html)** | A weekly against-the-spread board: team efficiency and scoring margin blended from last season into this one, plus the QB situation, with each pick explained in plain English beside the real line. The season-long track record is shown both against the spread and on outright winners, by model version, next to a walk-forward backtest |
+| **[Game Picks](https://footballforecast.net/betting.html)** | A weekly board: team efficiency and scoring margin blended from last season into this one, plus the QB situation, with each pick explained beside the real line. Each card answers "is this team for real?" from how similar teams finished, and Wind Watch flags over/unders with 10+ mph of forecast wind as a live test. The season-long track record is shown by model version, next to a walk-forward backtest |
 
 Both pages pull their "why" from the same shared logic (see `scripts/shared.py` below) rather than maintaining two independent, silently-drifting copies of it.
 
@@ -62,6 +62,11 @@ It stays a context tag on the cards until more seasons say otherwise.
 
 **Fantasy, against the experts.** `scripts/fantasy_lab.py` grades our rankings against seven years of FantasyPros history. Consensus beat a stats-only draft board in 29 of 30 position-seasons from 2021 to 2025, so the 2027 board leans 75% on consensus. (A 2026-only look suggested we beat consensus at kickers and defenses. Five more seasons said that was noise.) For weekly rankings, counting a player who sat out as zero points, the biggest gain by far is knowing who's playing (+0.18 rank correlation), then Vegas team totals (+0.09). Matchups and usage add about 0.01 each, and facing a former team or a receiver's QB being out add nothing. The Start Score is now fitted on those inputs instead of hand-set: 0.43 overall against the old score's 0.22 and FantasyPros' 0.46.
 
+**Looking for an edge.** A dozen richer team ratings built from full play-by-play (turnovers removed, garbage time removed, success rate, special teams) all landed within noise of v2, and a team's past misses don't predict its next one, so the rating sits on a plateau. The search moved to spots the rating doesn't touch:
+- `scripts/wind_lab.py`: totals under-react to wind. With 10+ mph forecast at an open-air stadium, games went under 58.5% of the time (147 games, 2022 to 2026), and recorded wind points the same way in both 2006-18 and 2019-26. Promising, not proven: the 95% range reaches 50.5%, below the 52.4% break-even. So it runs as Wind Watch, a rule fixed in advance and graded live.
+- `scripts/streaming_lab.py`: among defenses rostered in half of leagues or fewer, the one facing the lowest Vegas total has averaged 8.8 fantasy points a week against 7.7 for FantasyPros' top pick from the same group (87 weeks, +1.1, 95% CI 0.2 to 2.1).
+- `scripts/team_lab.py`: "is this team for real?", tested. Top-10 defenses with a top-10 QB hit rate stay top 10 52% of the time against 40% without one. Takeaway-heavy defenses don't fade any faster, which goes against the usual luck story.
+
 ---
 
 ## The part I'd point a data team at
@@ -91,6 +96,7 @@ Every signal is a named input with a weight fitted on past seasons or checked ou
 | Step down at QB | Game Picks | ±2.5 pts | Starter ruled out, or usual QB replaced by a weaker track record. Backtested on 2019–26 |
 | Start Score | Fantasy | Fitted per position | Recent form, Vegas team total, the opposing defense, targets and carries, and availability, weighted by least squares on 2021–25 (`reference/start_score_weights.json`) |
 | Consensus blend | Fantasy Draft Board, from 2027 | 75% consensus, 25% our rank | Consensus out-predicted a stats-only board in 29 of 30 position-seasons |
+| Wind Watch | Game Picks, over/unders only | Lean under at 10+ mph forecast, open-air stadiums | Fixed before any live game was graded; frozen at each kickoff |
 | O-line / D-line continuity | Fantasy (scored); shown as a factor tag in Game Picks, not scored there | 1.5 × (continuity% − 60%) | Returning starters (last season's regulars or its final starters) vs. a rebuilt unit, centered on a 60% baseline. Backtested for Game Picks and left out: no measurable gain |
 | Head coach / coordinator continuity | Fantasy | +0.2 / −0.5 pts | Scheme continuity vs. a new system to learn |
 
@@ -121,7 +127,7 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 
 **Design note:** the scan scripts are fully decoupled from the web tier. They write JSON into the repo; the commit itself is the deployment trigger. No database, no server to keep running, no runtime API calls from the browser — pages load pre-computed JSON instantly and can't fail because an upstream data source is briefly down.
 
-**Tech:** Python (polars, [nflreadpy](https://github.com/nflverse/nflreadpy)) · vanilla JS + HTML/CSS (no frontend framework, no build step) · GitHub Actions · Render · [nflverse](https://github.com/nflverse) / [FantasyPros ECR](https://www.fantasypros.com/) / National Weather Service as data sources
+**Tech:** Python (polars, [nflreadpy](https://github.com/nflverse/nflreadpy)) · vanilla JS + HTML/CSS (no frontend framework, no build step) · GitHub Actions · Render · [nflverse](https://github.com/nflverse) / [FantasyPros ECR](https://www.fantasypros.com/) / National Weather Service / [Open-Meteo](https://open-meteo.com) as data sources
 
 ---
 
@@ -143,6 +149,8 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 │   ├── factor_lab.py                # tests situational and motivation factors against the model and Vegas (local-only)
 │   ├── rating_lab.py                 # tests refinements to the rating, leave-one-season-out (local-only)
 │   ├── fantasy_lab.py                 # grades the rankings against FantasyPros history, fits the Start Score (local-only)
+│   ├── wind_lab.py, streaming_lab.py, team_lab.py  # the evidence behind Wind Watch, defense streaming and team verdicts (local-only)
+│   ├── wind_watch.py, team_profile.py  # Wind Watch spots and "is this team for real?" (in CI)
 │   ├── backtest_line_continuity.py # tests whether O-line continuity improves the picks (local-only; it doesn't, yet)
 │   ├── restore_thursday_games.py, backfill_weekly_rankings.py  # one-time repairs from git history
 │   ├── fantasy_scan.py             # Draft Board, Dream Team, Weekly Rankings, Waiver Wire, weekly report card

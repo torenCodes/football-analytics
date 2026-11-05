@@ -36,6 +36,7 @@
         <ul class="site-subnav">
           <li><a href="betting.html#game-board-section">Game Board</a></li>
           <li><a href="betting.html#track-record-section">Track Record</a></li>
+          <li><a href="betting.html#wind-watch-section">Wind Watch</a></li>
         </ul>
       </li>
     </ul>
@@ -171,6 +172,18 @@
     </div>
   </section>
 
+  <section class="section" id="defense-streaming-section" style="display: none;">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker" id="defense-streaming-kicker">This Week</div>
+        <h2>Defenses to Stream</h2>
+      </div>
+      <span class="section-note" id="defense-streaming-note"></span>
+    </div>
+    <p class="prose" id="defense-streaming-intro"></p>
+    <div id="defense-streaming-cards" class="lineup-grid stream-grid"></div>
+  </section>
+
   <section class="section" id="waiver-wire-section" style="display: none;">
     <div class="section-head">
       <div>
@@ -275,6 +288,7 @@
         <li><a href="https://github.com/nflverse">nflverse</a></li>
         <li><a href="https://www.fantasypros.com">FantasyPros</a> consensus</li>
         <li><a href="https://www.weather.gov">National Weather Service</a></li>
+        <li><a href="https://open-meteo.com">Open-Meteo</a> wind forecasts</li>
       </ul>
     </div>
   </div>
@@ -700,6 +714,32 @@ function selectWeeklyRankingsPos(pos) {
   renderWeeklyRankings();
 }
 
+function renderDefenseStreaming() {
+  const section = document.getElementById('defense-streaming-section');
+  const s = weeklyRankingsData && weeklyRankingsData.available && weeklyRankingsData.defense_streaming;
+  if (!s || !s.picks.length) { section.style.display = 'none'; return; }
+  section.style.display = '';
+  document.getElementById('defense-streaming-kicker').textContent = `Week ${s.week} · ${weeklyRankingsData.season}`;
+  document.getElementById('defense-streaming-note').textContent = `Rostered in ${s.max_rostered.toFixed(0)}% of leagues or fewer.`;
+  const b = s.backtest;
+  if (b) {
+    const ahead = b.by_season.filter(y => y.ours > y.fantasypros).length;
+    document.getElementById('defense-streaming-intro').textContent =
+      `Don't chase last week's defense. Look for the weakest projected offense. Since ${b.by_season[0].season}, the widely available defense facing the lowest Vegas team total has averaged ` +
+      `${b.ours.toFixed(1)} fantasy points a week. FantasyPros' top pick from the same group averaged ${b.fantasypros.toFixed(1)}, and the average defense in it ${b.pool_average.toFixed(1)}. ` +
+      `That's ${b.weeks} weeks, ahead in ${ahead} of ${b.by_season.length} seasons.`;
+  }
+  document.getElementById('defense-streaming-cards').innerHTML = s.picks.map((p, i) => `
+    <div class="lineup-slot">
+      <div class="slot-label">${i === 0 ? 'Top pick' : `Option ${i + 1}`}</div>
+      <div class="slot-name">${TEAM_NAMES[p.team] || p.team}</div>
+      <div class="slot-team">vs. ${p.opponent}${p.opponent_total ? `, projected for ${Math.round(p.opponent_total)}` : ''}</div>
+      <div class="slot-pts">${fmt1(p.start_score)} pts</div>
+      <div class="slot-team">${p.market_rank ? `FP #${Math.round(p.market_rank)}` : 'FP unranked'}${p.rostered_pct !== null && p.rostered_pct !== undefined ? ` · ${Math.round(p.rostered_pct)}% rostered` : ''}</div>
+    </div>
+  `).join('');
+}
+
 function renderWaiverWire() {
   const thead = document.querySelector('#waiver-wire-table thead');
   const tbody = document.querySelector('#waiver-wire-table tbody');
@@ -740,6 +780,7 @@ function renderAll() {
     renderWeeklyRankings();
     renderWaiverWire();
     renderWeeklyReport();
+    renderDefenseStreaming();
   }
 }
 

@@ -846,6 +846,10 @@ def build_market(r, model_margin_home):
     }
 
 
+def kickoff_order(game):
+    return (game.get("gameday") or "", game.get("gametime") or "", game["game_id"])
+
+
 def build_game_board(schedules, eff, injuries, q, rosters=None):
     with open(os.path.join(REF_DIR, "stadiums.json"), encoding="utf-8") as f:
         stadiums = json.load(f)
@@ -933,17 +937,6 @@ def build_game_board(schedules, eff, injuries, q, rosters=None):
         gametime = r.get("gametime")
         primetime = bool(gametime and gametime >= "18:00")
 
-        # "Juicy" ranking for the homepage/game-board ordering: primetime
-        # billing and rivalry/revenge storylines surface first, tie-broken by
-        # kickoff time. This is a display-ordering heuristic, not part of the
-        # pick model itself.
-        juice_score = (
-            (4 if primetime else 0)
-            + (2 if r["div_game"] else 0)
-            + (2 if revenge_flag and (revenge_flag["home"] or revenge_flag["away"]) else 0)
-            + (2 if former_coach_home or former_coach_away else 0)
-        )
-
         spread_home = r.get("spread_line")
         our_pick = ats_pick(model_margin_home, spread_home)
         if model_margin_home is None:
@@ -982,7 +975,6 @@ def build_game_board(schedules, eff, injuries, q, rosters=None):
                 "weekday": weekday,
                 "gametime": gametime,
                 "primetime": primetime,
-                "juice_score": juice_score,
                 "home_team": home,
                 "away_team": away,
                 "div_game": bool(r["div_game"]),
@@ -1013,7 +1005,7 @@ def build_game_board(schedules, eff, injuries, q, rosters=None):
             }
         )
 
-    picks.sort(key=lambda g: (-g["juice_score"], g["gametime"] or "", g["game_id"]))
+    picks.sort(key=kickoff_order)
 
     return {"season": UPCOMING_SEASON, "week": next_week, "games": picks}
 
@@ -1079,7 +1071,8 @@ def hold_locked_week(game_board):
     if version == MODEL_VERSION:
         return game_board
     unplayed = {g["game_id"] for g in game_board["games"]}
-    return {**game_board, "model_version": version, "games": [g for g in archived["games"] if g["game_id"] in unplayed]}
+    held = sorted((g for g in archived["games"] if g["game_id"] in unplayed), key=kickoff_order)
+    return {**game_board, "model_version": version, "games": held}
 
 
 def grade_archived_weeks(schedules):

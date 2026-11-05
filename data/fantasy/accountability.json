@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-05T20:46:18.473805+00:00"
+    "generated_at": "2026-11-05T20:55:47.567945+00:00"
   },
   "available": true,
   "season": 2026,
@@ -320,7 +320,7 @@
       },
       "TE": {
         "players_graded": 43,
-        "mean_abs_rank_error": 12.0,
+        "mean_abs_rank_error": 12.1,
         "hit_rate_within_5": 0.326,
         "vs_consensus": {
           "players": 43,
@@ -385,6 +385,15 @@
             "ppg": 2.7
           },
           {
+            "player_id": "00-0037004",
+            "name": "Hunter Long",
+            "preseason_rank": 45,
+            "actual_rank": 77,
+            "rank_error": 32,
+            "games": 4,
+            "ppg": 0.9
+          },
+          {
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 10,
@@ -392,15 +401,6 @@
             "rank_error": 32,
             "games": 6,
             "ppg": 5.0
-          },
-          {
-            "player_id": "00-0037004",
-            "name": "Hunter Long",
-            "preseason_rank": 45,
-            "actual_rank": 76,
-            "rank_error": 31,
-            "games": 4,
-            "ppg": 0.9
           },
           {
             "player_id": "00-0039847",
@@ -425,7 +425,7 @@
       "K": {
         "players_graded": 27,
         "mean_abs_rank_error": 11.3,
-        "hit_rate_within_5": 0.222,
+        "hit_rate_within_5": 0.259,
         "vs_consensus": {
           "players": 27,
           "ours_rho": 0.232,
@@ -528,12 +528,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.2,
-        "hit_rate_within_5": 0.312,
+        "mean_abs_rank_error": 9.1,
+        "hit_rate_within_5": 0.344,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.288,
-          "market_rho": 0.256
+          "ours_rho": 0.299,
+          "market_rho": 0.243
         },
         "biggest_steals": [
           {
@@ -611,6 +611,15 @@
             "ppg": 4.5
           },
           {
+            "player_id": "HOU_DST",
+            "name": "HOU D/ST",
+            "preseason_rank": 5,
+            "actual_rank": 18,
+            "rank_error": 13,
+            "games": 7,
+            "ppg": 5.1
+          },
+          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -618,15 +627,6 @@
             "rank_error": 12,
             "games": 8,
             "ppg": 4.6
-          },
-          {
-            "player_id": "HOU_DST",
-            "name": "HOU D/ST",
-            "preseason_rank": 5,
-            "actual_rank": 17,
-            "rank_error": 12,
-            "games": 7,
-            "ppg": 5.1
           }
         ]
       }
@@ -910,8 +910,8 @@
             "player_id": "00-0039868",
             "name": "Troy Franklin",
             "preseason_rank": 50,
-            "actual_rank": 120,
-            "rank_error": 70,
+            "actual_rank": 121,
+            "rank_error": 71,
             "games": 7,
             "ppg": 1.1
           },
@@ -946,12 +946,12 @@
       },
       "TE": {
         "players_graded": 43,
-        "mean_abs_rank_error": 13.8,
+        "mean_abs_rank_error": 13.9,
         "hit_rate_within_5": 0.209,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.576,
-          "market_rho": 0.757
+          "ours_rho": 0.573,
+          "market_rho": 0.756
         },
         "biggest_steals": [
           {
@@ -1032,8 +1032,8 @@
             "player_id": "00-0037004",
             "name": "Hunter Long",
             "preseason_rank": 42,
-            "actual_rank": 75,
-            "rank_error": 33,
+            "actual_rank": 76,
+            "rank_error": 34,
             "games": 4,
             "ppg": 0.4
           },
@@ -1051,7 +1051,7 @@
       "K": {
         "players_graded": 27,
         "mean_abs_rank_error": 11.3,
-        "hit_rate_within_5": 0.222,
+        "hit_rate_within_5": 0.259,
         "vs_consensus": {
           "players": 27,
           "ours_rho": 0.232,
@@ -1154,12 +1154,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.2,
-        "hit_rate_within_5": 0.312,
+        "mean_abs_rank_error": 9.1,
+        "hit_rate_within_5": 0.344,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.288,
-          "market_rho": 0.256
+          "ours_rho": 0.299,
+          "market_rho": 0.243
         },
         "biggest_steals": [
           {
@@ -1237,6 +1237,15 @@
             "ppg": 4.5
           },
           {
+            "player_id": "HOU_DST",
+            "name": "HOU D/ST",
+            "preseason_rank": 5,
+            "actual_rank": 18,
+            "rank_error": 13,
+            "games": 7,
+            "ppg": 5.1
+          },
+          {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
@@ -1244,15 +1253,6 @@
             "rank_error": 12,
             "games": 8,
             "ppg": 4.6
-          },
-          {
-            "player_id": "HOU_DST",
-            "name": "HOU D/ST",
-            "preseason_rank": 5,
-            "actual_rank": 17,
-            "rank_error": 12,
-            "games": 7,
-            "ppg": 5.1
           }
         ]
       }

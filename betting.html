@@ -36,6 +36,7 @@
         <ul class="site-subnav">
           <li><a href="betting.html#game-board-section">Game Board</a></li>
           <li><a href="betting.html#track-record-section">Track Record</a></li>
+          <li><a href="betting.html#wind-watch-section">Wind Watch</a></li>
         </ul>
       </li>
     </ul>
@@ -103,6 +104,18 @@
     <div id="track-record"></div>
   </section>
 
+  <section class="section" id="wind-watch-section" style="display: none;">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker betting">Testing Live</div>
+        <h2>Wind Watch</h2>
+      </div>
+      <span class="section-note" id="wind-watch-record"></span>
+    </div>
+    <p class="prose" id="wind-watch-intro"></p>
+    <div class="wind-grid" id="wind-watch-spots"></div>
+  </section>
+
   <div class="disclaimer">
     <p>
       Educational research project, not betting advice. Picks come from one tunable model's output, not a
@@ -139,6 +152,7 @@
         <li><a href="https://github.com/nflverse">nflverse</a></li>
         <li><a href="https://www.fantasypros.com">FantasyPros</a> consensus</li>
         <li><a href="https://www.weather.gov">National Weather Service</a></li>
+        <li><a href="https://open-meteo.com">Open-Meteo</a> wind forecasts</li>
       </ul>
     </div>
   </div>
@@ -289,6 +303,71 @@ function pickLabel(side, spreadHome, home, away) {
   return `${teamSpan(team)} ${teamLine(spreadHome, side)}`;
 }
 
+// ---- Wind Watch: over/under spots with 10+ mph of forecast wind.
+
+let windSpots = new Map();
+let teamProfiles = null;
+
+function renderWindWatch(w) {
+  const section = document.getElementById('wind-watch-section');
+  if (!w || !w.backtest) return;
+  section.style.display = '';
+  const b = w.backtest, fc = b.forecast.rule;
+  const old = b.recorded['2006-2018'], recent = b.recorded['2019-2026'];
+  document.getElementById('wind-watch-intro').textContent =
+    `When the forecast calls for ${w.rule_mph}+ mph of wind at an open-air stadium, totals have tended to come in too high. ` +
+    `Those games went under ${(fc.rate * 100).toFixed(1)}% of the time from 2022 to 2026 (${fc.n} games), and recorded wind tells the same story back to 2006 ` +
+    `(${(old.rate * 100).toFixed(1)}% and ${(recent.rate * 100).toFixed(1)}% in two separate eras). Break-even is ${(b.break_even * 100).toFixed(1)}%, and it's not proven yet, ` +
+    `so we're testing it in public: each spot freezes at kickoff and gets graded here.`;
+  const r = w.record, graded = r.under + r.over;
+  document.getElementById('wind-watch-record').textContent = graded
+    ? `Live record: ${r.under}–${r.over}${r.push ? `–${r.push}` : ''} on the under`
+    : '';
+  const box = document.getElementById('wind-watch-spots');
+  if (!w.live) {
+    box.innerHTML = `<p class="empty-state">Wind Watch starts with Week ${w.first_week}'s games.</p>`;
+    return;
+  }
+  if (!w.spots.length) {
+    box.innerHTML = `<p class="empty-state">No open-air game clears ${w.rule_mph} mph in the forecast right now. Forecasts refresh through kickoff.</p>`;
+    return;
+  }
+  windSpots = new Map(w.spots.map(s => [s.game_id, s]));
+  box.innerHTML = w.spots.map(s => `
+    <div class="ticket">
+      <div class="ticket-bar"></div>
+      <div class="ticket-body">
+        <div class="ticket-matchup">${teamSpan(s.away_team)} @ ${teamSpan(s.home_team)}</div>
+        <div class="ticket-time">${kickoff(s)}</div>
+        <div class="ticket-tags"><span class="mini-tag flag">${Math.round(s.forecast_mph)} mph forecast</span>${s.gust_mph > s.forecast_mph + 1 ? `<span class="mini-tag">Gusts ${Math.round(s.gust_mph)}</span>` : ''}</div>
+      </div>
+      <div class="ticket-perf"></div>
+      <div class="ticket-stub">
+        <div class="pick-label">Lean</div>
+        <div class="pick-team">Under</div>
+        <div class="pick-line">${s.total}</div>
+      </div>
+    </div>`).join('');
+}
+
+// ---- "Is this team for real?" Verdict and odds come from team_profile.py.
+
+const VERDICT_PILL = { for_real: 'up', better_than_record: 'up', sell_high: 'down', real_problems: 'down', middle: 'pos' };
+
+function forRealHtml(g) {
+  if (!teamProfiles || !teamProfiles.available) return '';
+  const rows = [g.away_team, g.home_team].map(team => {
+    const p = teamProfiles.teams[team];
+    if (!p) return '';
+    return `
+      <div class="for-real-row">
+        <div class="for-real-head">${teamSpan(team)} <span class="pill ${VERDICT_PILL[p.verdict]}">${p.verdict_label}</span></div>
+        <p>${p.story}</p>
+      </div>`;
+  }).join('');
+  return rows.trim() ? `<div class="for-real"><div class="box-title">Is this team for real?</div>${rows}</div>` : '';
+}
+
 function pickHeader(g) {
   if (g.pick_status === 'pick' && g.our_pick && g.market) {
     const team = g.our_pick === 'home' ? g.home_team : g.away_team;
@@ -403,6 +482,8 @@ function matchupMathHtml(g) {
 // factor that actually moves the model's number (yellow flags).
 function summaryChips(g) {
   const chips = [];
+  const wind = windSpots.get(g.game_id);
+  if (wind) chips.push(`<span class="mini-tag flag">Wind Watch: under ${wind.total}</span>`);
   const m = g.model_margin_home, s = g.market ? g.market.spread_home : null;
   if (m !== null && m !== undefined && s !== null && s !== undefined && m * s < 0) chips.push('<span class="mini-tag upset">Upset call</span>');
   if (g.primetime) chips.push('<span class="mini-tag blue">Primetime</span>');
@@ -456,6 +537,7 @@ async function loadGameBoard() {
               ${matchupMathHtml(g)}
               ${marketOddsHtml(g)}
             </div>
+            ${forRealHtml(g)}
             ${rest ? `<p class="game-storyline">${colorStoryline(rest, g.home_team, g.away_team)}</p>` : ''}
             <div class="factor-tags">${factorTags(g)}</div>
           </div>
@@ -598,7 +680,13 @@ async function loadTrackRecord() {
 }
 
 // The board above Track Record fills in after load; land on the section once it has.
-Promise.all([loadGameBoard(), loadTrackRecord(), loadBacktestSummary()]).then(() => {
+const safeJson = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() => null);
+
+Promise.all([safeJson('data/betting/wind_watch.json'), safeJson('data/betting/team_profiles.json')]).then(([wind, profiles]) => {
+  teamProfiles = profiles;
+  renderWindWatch(wind);
+  return Promise.all([loadGameBoard(), loadTrackRecord(), loadBacktestSummary()]);
+}).then(() => {
   if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
 });
 </script>

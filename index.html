@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Football Forecast — NFL Fantasy &amp; Game Picks Research</title>
-<meta name="description" content="Data-driven NFL fantasy and individual-game research: efficiency stats, roster continuity, and situational edges the market overlooks.">
+<meta name="description" content="Who to start, which NFL teams are for real, and where the wind changes the game: fantasy rankings and game-by-game numbers, frozen before kickoff and graded after.">
 <meta name="theme-color" content="#15331f">
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="styles.css">
@@ -36,6 +36,7 @@
         <ul class="site-subnav">
           <li><a href="betting.html#game-board-section">Game Board</a></li>
           <li><a href="betting.html#track-record-section">Track Record</a></li>
+          <li><a href="betting.html#wind-watch-section">Wind Watch</a></li>
         </ul>
       </li>
     </ul>
@@ -44,7 +45,7 @@
 
 <main class="container">
   <div class="masthead-strip">
-    <h1 class="masthead-sub">Efficiency stats, roster &amp; coaching continuity, and situational edges the market overlooks.</h1>
+    <h1 class="masthead-sub">Who to start, which teams are for real, and where the wind changes the game: NFL numbers, frozen before kickoff and graded after.</h1>
     <div class="masthead-date" id="masthead-date"></div>
   </div>
 
@@ -75,6 +76,8 @@
         </div>
       </div>
 
+      <p class="stat-line" id="stream-teaser" style="display: none;"></p>
+
       <div class="front-block" id="waiver-wire-teaser" style="display: none;">
         <div class="front-block-title">Waiver Wire Watch</div>
         <div class="table-scroll">
@@ -103,6 +106,11 @@
       <a href="betting.html" class="col-cta betting">Open Game Picks dashboard &rarr;</a>
 
       <div id="game-list"></div>
+
+      <div class="front-block" id="wind-teaser" style="display: none;">
+        <div class="front-block-title">Wind Watch</div>
+        <div id="wind-teaser-list"></div>
+      </div>
 
       <a href="betting.html" class="view-more">View full Game Picks dashboard — factors &amp; storylines &rarr;</a>
     </section>
@@ -185,6 +193,7 @@
         <li><a href="https://github.com/nflverse">nflverse</a></li>
         <li><a href="https://www.fantasypros.com">FantasyPros</a> consensus</li>
         <li><a href="https://www.weather.gov">National Weather Service</a></li>
+        <li><a href="https://open-meteo.com">Open-Meteo</a> wind forecasts</li>
       </ul>
     </div>
   </div>
@@ -386,6 +395,12 @@ async function loadFantasyColumnInSeason(seasonState) {
   // Sneak peek only -- full position-tabbed listings live on the Fantasy
   // dashboard. Cross-position, same RB/WR/TE focus as the value-gap table
   // above it (the "sleeper story" positions, not QB/K/DST streaming).
+  const stream = weeklyRankings && weeklyRankings.defense_streaming;
+  if (stream && stream.picks.length) {
+    const p = stream.picks[0];
+    document.getElementById('stream-teaser').style.display = '';
+    document.getElementById('stream-teaser').innerHTML = `<strong>Defense to stream:</strong> ${teamSpan(p.team)} vs. ${teamSpan(p.opponent)}${p.opponent_total ? `, with ${p.opponent} projected for ${Math.round(p.opponent_total)} points` : ''}.`;
+  }
   if (waiverWire && waiverWire.available) {
     const ww = waiverWire.by_position.ppr;
     let candidates = [];
@@ -440,6 +455,15 @@ function gameRowHtml(g) {
   `;
 }
 
+async function loadWindTeaser() {
+  const wind = await fetch('data/betting/wind_watch.json').then(r => (r.ok ? r.json() : null)).catch(() => null);
+  if (!wind || !wind.live || !wind.spots.length) return;
+  document.getElementById('wind-teaser').style.display = '';
+  document.getElementById('wind-teaser-list').innerHTML = wind.spots.map(s => `
+    <div class="stat-line">${teamSpan(s.away_team)} @ ${teamSpan(s.home_team)}: <strong>under ${s.total}</strong>, ${Math.round(s.forecast_mph)} mph forecast</div>
+  `).join('');
+}
+
 async function loadBettingColumn() {
   try {
     const gameBoard = await fetch('data/betting/game_board.json').then(r => r.json());
@@ -459,7 +483,7 @@ async function loadBettingColumn() {
 }
 
 // The columns above About fill in after load; land on it once they have.
-Promise.all([loadFantasyColumn(), loadBettingColumn()]).then(() => {
+Promise.all([loadFantasyColumn(), loadBettingColumn(), loadWindTeaser()]).then(() => {
   if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
 });
 </script>

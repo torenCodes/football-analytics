@@ -60,6 +60,10 @@ jobs:
         run: python scripts/ingest_historical.py
       - name: Run Betting scan
         run: python scripts/betting_scan.py
+      - name: Run Wind Watch
+        run: python scripts/wind_watch.py
+      - name: Build team profiles
+        run: python scripts/team_profile.py
       - name: Commit results
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

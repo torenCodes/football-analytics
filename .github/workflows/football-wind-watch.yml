@@ -1,0 +1,48 @@
+name: Football Wind Watch
+
+on:
+  schedule:
+    # Game-day refreshes, so a Wind Watch spot reflects the forecast close to kickoff
+    # (the rule was tested on short-range forecasts). A game's numbers freeze at its own
+    # kickoff, so a run only ever touches games that haven't started. The Tuesday-Friday
+    # refreshes come from the Betting scan, which runs this script too.
+    # NOTE: cron is UTC-only -- these assume EST (UTC-5). During EDT they fire an hour later in ET.
+    - cron: '17 21 * * 4'  # Thursday ~4pm ET, before the night game
+    - cron: '17 17 * * 6'  # Saturday ~noon ET, for late-season Saturday games
+    - cron: '17 15 * * 0'  # Sunday ~10am ET, before the early games
+    - cron: '17 19 * * 0'  # Sunday ~2pm ET, before the late games
+    - cron: '17 23 * * 0'  # Sunday ~6pm ET, before the night game
+    - cron: '17 22 * * 1'  # Monday ~5pm ET, before the night game
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Shares the Betting scan's queue: both write data/betting.
+concurrency:
+  group: football-betting-scan
+  cancel-in-progress: false
+
+jobs:
+  wind-watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+      - name: Run Wind Watch
+        run: python scripts/wind_watch.py
+      - name: Commit results
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          git add data/betting
+          git diff --staged --quiet || git commit -m "chore: wind watch $(date -u +%Y-%m-%dT%H:%M)Z"
+          git pull --rebase -Xtheirs origin ${{ github.ref_name }}
+          git push origin HEAD:${{ github.ref_name }}

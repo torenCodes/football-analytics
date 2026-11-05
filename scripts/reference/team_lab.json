@@ -1,0 +1,420 @@
+{
+ "generated_at": "2026-11-05T20:56:43.894528+00:00",
+ "seasons": [
+  2019,
+  2025
+ ],
+ "checkpoints": 1344,
+ "periods": {
+  "early": [
+   0,
+   6
+  ],
+  "mid": [
+   7,
+   10
+  ],
+  "late": [
+   11,
+   99
+  ]
+ },
+ "forecast_weights": {
+  "early": {
+   "pd": 0.312,
+   "off": 7.187,
+   "dfn": 1.011,
+   "off_prior": 12.422,
+   "def_prior": -3.503,
+   "intercept": -0.174
+  },
+  "mid": {
+   "pd": 0.308,
+   "off": 13.689,
+   "dfn": -1.636,
+   "off_prior": 10.458,
+   "def_prior": -0.259,
+   "intercept": -0.228
+  },
+  "late": {
+   "pd": 0.529,
+   "off": 11.887,
+   "dfn": 5.658,
+   "off_prior": 11.811,
+   "def_prior": 4.357,
+   "intercept": -0.223
+  }
+ },
+ "hold_rates": {
+  "offense": {
+   "early": [
+    {
+     "lo": 1,
+     "hi": 5,
+     "n": 70,
+     "top10": 0.671,
+     "avg_rank": 8.8
+    },
+    {
+     "lo": 6,
+     "hi": 10,
+     "n": 70,
+     "top10": 0.386,
+     "avg_rank": 13.5
+    },
+    {
+     "lo": 11,
+     "hi": 16,
+     "n": 84,
+     "top10": 0.357,
+     "avg_rank": 13.9
+    },
+    {
+     "lo": 17,
+     "hi": 22,
+     "n": 84,
+     "top10": 0.167,
+     "avg_rank": 18.7
+    },
+    {
+     "lo": 23,
+     "hi": 32,
+     "n": 140,
+     "top10": 0.157,
+     "avg_rank": 22.1
+    }
+   ],
+   "mid": [
+    {
+     "lo": 1,
+     "hi": 5,
+     "n": 70,
+     "top10": 0.657,
+     "avg_rank": 9.2
+    },
+    {
+     "lo": 6,
+     "hi": 10,
+     "n": 70,
+     "top10": 0.429,
+     "avg_rank": 12.3
+    },
+    {
+     "lo": 11,
+     "hi": 16,
+     "n": 84,
+     "top10": 0.333,
+     "avg_rank": 14.5
+    },
+    {
+     "lo": 17,
+     "hi": 22,
+     "n": 84,
+     "top10": 0.274,
+     "avg_rank": 16.9
+    },
+    {
+     "lo": 23,
+     "hi": 32,
+     "n": 140,
+     "top10": 0.093,
+     "avg_rank": 23.3
+    }
+   ],
+   "late": [
+    {
+     "lo": 1,
+     "hi": 5,
+     "n": 70,
+     "top10": 0.643,
+     "avg_rank": 9.5
+    },
+    {
+     "lo": 6,
+     "hi": 10,
+     "n": 70,
+     "top10": 0.557,
+     "avg_rank": 12.1
+    },
+    {
+     "lo": 11,
+     "hi": 16,
+     "n": 84,
+     "top10": 0.274,
+     "avg_rank": 14.9
+    },
+    {
+     "lo": 17,
+     "hi": 22,
+     "n": 84,
+     "top10": 0.238,
+     "avg_rank": 17.9
+    },
+    {
+     "lo": 23,
+     "hi": 32,
+     "n": 140,
+     "top10": 0.093,
+     "avg_rank": 22.3
+    }
+   ]
+  },
+  "defense": {
+   "early": [
+    {
+     "lo": 1,
+     "hi": 5,
+     "n": 70,
+     "top10": 0.571,
+     "avg_rank": 10.4
+    },
+    {
+     "lo": 6,
+     "hi": 10,
+     "n": 70,
+     "top10": 0.357,
+     "avg_rank": 14.6
+    },
+    {
+     "lo": 11,
+     "hi": 16,
+     "n": 84,
+     "top10": 0.274,
+     "avg_rank": 17.4
+    },
+    {
+     "lo": 17,
+     "hi": 22,
+     "n": 84,
+     "top10": 0.19,
+     "avg_rank": 18.5
+    },
+    {
+     "lo": 23,
+     "hi": 32,
+     "n": 140,
+     "top10": 0.257,
+     "avg_rank": 18.7
+    }
+   ],
+   "mid": [
+    {
+     "lo": 1,
+     "hi": 5,
+     "n": 70,
+     "top10": 0.443,
+     "avg_rank": 11.7
+    },
+    {
+     "lo": 6,
+     "hi": 10,
+     "n": 70,
+     "top10": 0.457,
+     "avg_rank": 13.4
+    },
+    {
+     "lo": 11,
+     "hi": 16,
+     "n": 84,
+     "top10": 0.262,
+     "avg_rank": 17.4
+    },
+    {
+     "lo": 17,
+     "hi": 22,
+     "n": 84,
+     "top10": 0.31,
+     "avg_rank": 16.5
+    },
+    {
+     "lo": 23,
+     "hi": 32,
+     "n": 140,
+     "top10": 0.207,
+     "avg_rank": 19.9
+    }
+   ],
+   "late": [
+    {
+     "lo": 1,
+     "hi": 5,
+     "n": 70,
+     "top10": 0.443,
+     "avg_rank": 13.9
+    },
+    {
+     "lo": 6,
+     "hi": 10,
+     "n": 70,
+     "top10": 0.5,
+     "avg_rank": 11.9
+    },
+    {
+     "lo": 11,
+     "hi": 16,
+     "n": 84,
+     "top10": 0.298,
+     "avg_rank": 16.2
+    },
+    {
+     "lo": 17,
+     "hi": 22,
+     "n": 84,
+     "top10": 0.333,
+     "avg_rank": 15.5
+    },
+    {
+     "lo": 23,
+     "hi": 32,
+     "n": 140,
+     "top10": 0.15,
+     "avg_rank": 20.9
+    }
+   ]
+  }
+ },
+ "splits": {
+  "defense with top-10 QB hit rate": {
+   "with": 0.518,
+   "without": 0.398,
+   "n_with": 224,
+   "n_without": 196,
+   "diff_lo": -0.011,
+   "diff_hi": 0.252
+  },
+  "defense leaning on takeaways": {
+   "with": 0.537,
+   "without": 0.444,
+   "n_with": 80,
+   "n_without": 340,
+   "diff_lo": -0.082,
+   "diff_hi": 0.248
+  },
+  "defense top 10 without takeaways": {
+   "with": 0.45,
+   "without": 0.505,
+   "n_with": 327,
+   "n_without": 93,
+   "diff_lo": -0.233,
+   "diff_hi": 0.125
+  },
+  "offense led by the pass": {
+   "with": 0.577,
+   "without": 0.521,
+   "n_with": 274,
+   "n_without": 146,
+   "diff_lo": -0.103,
+   "diff_hi": 0.214
+  },
+  "offense top 10 in both pass and run": {
+   "with": 0.629,
+   "without": 0.506,
+   "n_with": 175,
+   "n_without": 245,
+   "diff_lo": -0.027,
+   "diff_hi": 0.258
+  }
+ },
+ "carried": {
+  "bottom_half_offense": {
+   "n": 70,
+   "team_seasons": 31,
+   "margin_so_far": 5.5,
+   "margin_later": 1.8,
+   "later_lo": -0.6,
+   "later_hi": 4.2,
+   "rank_so_far": 7.2,
+   "rank_later": 14.1,
+   "top10_later": 0.429
+  },
+  "bottom_half_defense": {
+   "n": 80,
+   "team_seasons": 34,
+   "margin_so_far": 5.8,
+   "margin_later": 5.7,
+   "later_lo": 2.9,
+   "later_hi": 8.4,
+   "rank_so_far": 7.0,
+   "rank_later": 10.1,
+   "top10_later": 0.6
+  },
+  "both_top_half": {
+   "n": 270,
+   "team_seasons": 80,
+   "margin_so_far": 8.9,
+   "margin_later": 5.0,
+   "later_lo": 3.5,
+   "later_hi": 6.4,
+   "rank_so_far": 4.6,
+   "rank_later": 10.2,
+   "top10_later": 0.596
+  }
+ },
+ "verdicts": {
+  "better_than_record": {
+   "n": 66,
+   "margin_so_far": -2.8,
+   "forecast": 0.7,
+   "margin_later": -0.4,
+   "rank_so_far": 22.2,
+   "rank_later": 16.8,
+   "top10_later": 0.303,
+   "bottom10_later": 0.348,
+   "vs_margin_only": 1.03,
+   "vs_margin_only_lo": -1.28,
+   "vs_margin_only_hi": 3.45
+  },
+  "for_real": {
+   "n": 395,
+   "margin_so_far": 7.7,
+   "forecast": 4.6,
+   "margin_later": 4.8,
+   "rank_so_far": 5.7,
+   "rank_later": 10.7,
+   "top10_later": 0.577,
+   "bottom10_later": 0.116,
+   "vs_margin_only": 0.78,
+   "vs_margin_only_lo": -0.53,
+   "vs_margin_only_hi": 2.15
+  },
+  "middle": {
+   "n": 419,
+   "margin_so_far": -0.0,
+   "forecast": 0.1,
+   "margin_later": -0.2,
+   "rank_so_far": 16.7,
+   "rank_later": 16.9,
+   "top10_later": 0.253,
+   "bottom10_later": 0.277,
+   "vs_margin_only": -0.16,
+   "vs_margin_only_lo": -1.35,
+   "vs_margin_only_hi": 1.06
+  },
+  "real_problems": {
+   "n": 373,
+   "margin_so_far": -8.1,
+   "forecast": -4.6,
+   "margin_later": -4.9,
+   "rank_so_far": 27.6,
+   "rank_later": 22.3,
+   "top10_later": 0.107,
+   "bottom10_later": 0.576,
+   "vs_margin_only": -0.64,
+   "vs_margin_only_lo": -2.01,
+   "vs_margin_only_hi": 0.84
+  },
+  "sell_high": {
+   "n": 91,
+   "margin_so_far": 2.0,
+   "forecast": -1.0,
+   "margin_later": 0.3,
+   "rank_so_far": 12.6,
+   "rank_later": 16.0,
+   "top10_later": 0.286,
+   "bottom10_later": 0.22,
+   "vs_margin_only": -0.76,
+   "vs_margin_only_lo": -2.23,
+   "vs_margin_only_hi": 0.7
+  }
+ }
+}

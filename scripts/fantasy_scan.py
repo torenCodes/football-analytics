@@ -74,6 +74,8 @@ MIN_GAMES_FOR_WAIVER_WIRE = 1  # a single monster game is often exactly what sho
 # else on the site.
 WAIVER_DRAFTABLE_DEPTH = {"QB": 24, "RB": 60, "WR": 72, "TE": 24, "K": 14, "DST": 14}
 
+MAX_ROSTERED_TO_STREAM = 50.0  # a streaming defense has to actually be out there: rostered in half of leagues or fewer
+STREAMING_LAB = os.path.join(BASE_DIR, "data", "lab", "streaming_lab.json")
 # How far next year's Draft Board leans on FantasyPros consensus, in rank space. scripts/fantasy_lab.py:
 # consensus out-predicted a stats-only board in 29 of 30 position-seasons over 2021-2025, and 75/25 scores
 # within 0.03 of pure consensus at every position while keeping a real signal for where the numbers disagree.
@@ -1192,7 +1194,8 @@ def compute_weekly_rankings(stats, usage, schedules, injuries, current_team, ros
                 "matchup_source": matchup_source,
                 "implied_points": round(implied, 1) if implied is not None else None,
                 "injury_status": status,
-                "market_rank": (market_weekly or {}).get(pid),
+                "market_rank": (market_weekly or {}).get(pid, {}).get("rank"),
+                "rostered_pct": (market_weekly or {}).get(pid, {}).get("rostered"),
             }
             row["explain"] = build_weekly_ranking_explain(row)
             rows.append(row)
@@ -1214,12 +1217,39 @@ def compute_weekly_rankings(stats, usage, schedules, injuries, current_team, ros
         board[fmt] = {"week": next_week, "rankings_by_position": by_pos}
         frozen[fmt] = all_by_pos
 
-    return {"available": True, "season": UPCOMING_SEASON, **board, "_all_rows": frozen, "_week_games": week_games}
+    return {
+        "available": True, "season": UPCOMING_SEASON, **board,
+        "defense_streaming": defense_streaming(frozen["ppr"]["DST"], implied_by_team, next_week),
+        "_all_rows": frozen, "_week_games": week_games,
+    }
+
+
+def streaming_picks(rows):
+    """Available defenses, best Start Score first. A defense whose roster share
+    isn't known counts as available rather than being dropped."""
+    return [x for x in rows if x.get("rostered_pct") is None or x["rostered_pct"] <= MAX_ROSTERED_TO_STREAM]
+
+
+def defense_streaming(rows, implied_by_team, week):
+    """The week's best widely available defenses. A defense's Start Score is
+    entirely its opponent's Vegas total, so this is the lowest-total pick the
+    streaming test backs (scripts/streaming_lab.py)."""
+    picks = []
+    for x in streaming_picks(rows)[:3]:
+        picks.append({
+            "team": x["team"], "opponent": x["opponent"], "start_score": x["start_score"], "market_rank": x.get("market_rank"),
+            "rostered_pct": x.get("rostered_pct"), "opponent_total": implied_by_team.get(x["opponent"]),
+        })
+    backtest = None
+    if os.path.exists(STREAMING_LAB):
+        with open(STREAMING_LAB, encoding="utf-8") as f:
+            backtest = json.load(f)
+    return {"week": week, "max_rostered": MAX_ROSTERED_TO_STREAM, "picks": picks, "backtest": backtest}
 
 
 # ---- Weekly receipts: every week's rankings frozen before kickoff, graded after.
 
-WEEKLY_ARCHIVE_FIELDS = ["player_id", "name", "position", "team", "opponent", "start_score", "recent_ppg", "matchup_adj", "injury_status", "market_rank"]
+WEEKLY_ARCHIVE_FIELDS = ["player_id", "name", "position", "team", "opponent", "start_score", "recent_ppg", "matchup_adj", "injury_status", "market_rank", "rostered_pct"]
 RECEIPT_POOL = {"QB": 24, "RB": 36, "WR": 48, "TE": 18, "K": 18, "DST": 18}  # roughly the startable pool in a 12-team league
 START_SCORE_VERSION = "v2"  # v1 (through Week 8 of 2026) was hand-set; v2 is fitted by scripts/fantasy_lab.py
 
@@ -1330,6 +1360,18 @@ def compute_weekly_accountability(stats, schedules):
                     by_pos[pos]["market"] = _head_to_head(ranks, points)
                     by_pos[pos]["market_rho"] = _spearman(ranks, points)
             out["by_format"][fmt] = by_pos
+        # The streaming pick as published, against FantasyPros' top pick from the same pool.
+        pool = [x for x in streaming_picks(archived["rankings"]["ppr"].get("DST", [])) if x["team"] in teams]
+        if pool and any(x.get("rostered_pct") is not None for x in pool):
+            scored = dict(zip(now["player_id"].to_list(), now["fpts_ppr"].to_list()))
+            ours = max(pool, key=lambda x: x["start_score"])
+            ranked = [x for x in pool if x.get("market_rank") is not None]
+            fp = min(ranked, key=lambda x: x["market_rank"]) if ranked else None
+            out["streaming"] = {
+                "pick": ours["team"], "points": scored.get(ours["player_id"], 0.0),
+                "fp_pick": fp["team"] if fp else None, "fp_points": scored.get(fp["player_id"], 0.0) if fp else None,
+                "pool_average": round(sum(scored.get(x["player_id"], 0.0) for x in pool) / len(pool), 1),
+            }
         weeks.append(out)
     if not weeks:
         return {"available": False, "note": "The weekly report card starts once a frozen week has been played."}
@@ -1356,8 +1398,8 @@ def compute_weekly_accountability(stats, schedules):
 
 
 def load_weekly_consensus(raw_stats, teams):
-    """This week's FantasyPros positional consensus: {player_id: rank}. Same
-    id matching as load_market_consensus: crosswalk, kicker names, team names."""
+    """This week's FantasyPros positional consensus: {player_id: {rank, rostered}}.
+    Same id matching as load_market_consensus: crosswalk, kicker names, team names."""
     import nflreadpy as nfl
 
     weekly = nfl.load_ff_rankings(type="week").filter(pl.col("page_pos").is_in(["QB", "RB", "WR", "TE", "K", "DST"]))
@@ -1378,7 +1420,7 @@ def load_weekly_consensus(raw_stats, teams):
         else:
             pid = by_fp.get(r["fantasypros_id"])
         if pid:
-            out[pid] = r["ecr"]
+            out[pid] = {"rank": r["ecr"], "rostered": r["player_owned_avg"]}
     return out
 
 
