@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Breakdown — Football Forecast</title>
+<meta name="description" content="Under the hood at Football Forecast: the evidence behind Wind Watch, team verdicts and defense streaming, the models with their real weights, and every idea tested along the way.">
+<meta name="theme-color" content="#15331f">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a href="index.html" class="site-logo"><img src="images/logo_small_white.png" alt="" class="site-logo-img">Football Forecast</a>
+    <button class="nav-burger" aria-label="Menu" onclick="toggleSiteNav(this)">&#9776;</button>
+    <ul class="site-nav-links">
+      <li class="nav-item has-sub">
+        <a href="index.html" class="site-nav-link">Home</a>
+        <ul class="site-subnav">
+          <li><a href="index.html">Main</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="fantasy.html" class="site-nav-link">Fantasy</a>
+        <ul class="site-subnav">
+          <li><a href="fantasy.html#position-leaders">Position Leaders</a></li>
+          <li><a href="fantasy.html#draft-board">Draft Board</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-sub">
+        <a href="betting.html" class="site-nav-link">Game Picks</a>
+        <ul class="site-subnav">
+          <li><a href="betting.html#game-board-section">Game Board</a></li>
+          <li><a href="betting.html#track-record-section">Track Record</a></li>
+          <li><a href="betting.html#wind-watch-section">Wind Watch</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="data.html" class="site-nav-link active">Data</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <div class="masthead-strip">
+    <div>
+      <h1>Data Breakdown</h1>
+      <div class="masthead-sub">Under the hood: the evidence behind each feature, the models with their real weights, the data going in, and every result coming out.</div>
+    </div>
+    <div class="masthead-date" id="data-through"></div>
+  </div>
+
+  <nav class="page-toc" aria-label="On this page">
+    <a href="#wind">Wind Watch</a>
+    <a href="#verdicts">Team verdicts</a>
+    <a href="#streaming">Defense streaming</a>
+    <a href="#start-score">Start Score</a>
+    <a href="#game-model">Game model</a>
+    <a href="#season">2026 results</a>
+    <a href="#factors">Factor lab</a>
+    <a href="#edge-hunt">Edge hunt</a>
+    <a href="#pipeline">Pipeline &amp; data</a>
+    <a href="#log">Lab notebook</a>
+    <a href="#method">Method</a>
+  </nav>
+
+  <section class="section" id="found">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">The Findings</div>
+        <h2>What the Numbers Turned Up</h2>
+      </div>
+    </div>
+    <div class="stat-tiles feature-tiles" id="feature-tiles"></div>
+  </section>
+
+  <section class="section" id="wind">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker betting">Game Picks · Live Test</div>
+        <h2>Wind Watch</h2>
+      </div>
+      <span class="section-note" id="wind-live-note"></span>
+    </div>
+    <p class="prose" id="wind-intro"></p>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-wind-buckets">
+        <figcaption><h3 class="viz-title">Totals run high once the forecast reaches 10 mph</h3><p class="viz-sub" id="viz-wind-buckets-sub"></p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-wind-seasons">
+        <figcaption><h3 class="viz-title">It shows up in most seasons, not all of them</h3><p class="viz-sub">How often the 10+ mph rule hit, by season on archived forecasts, then on wind recorded at the game in two separate eras.</p></figcaption>
+      </figure>
+    </div>
+    <figure class="viz card" id="viz-wind-week">
+      <figcaption><h3 class="viz-title" id="viz-wind-week-title"></h3><p class="viz-sub">The live input: forecast wind at each open-air stadium, averaged over the first four hours from kickoff, with the peak gust as the whisker. Each game keeps updating until its own kickoff, then freezes.</p></figcaption>
+    </figure>
+  </section>
+
+  <section class="section" id="verdicts">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker betting">Game Picks</div>
+        <h2>Is This Team for Real?</h2>
+      </div>
+      <span class="section-note" id="verdicts-note"></span>
+    </div>
+    <p class="prose" id="verdicts-intro"></p>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-team-forecast">
+        <figcaption><h3 class="viz-title">Who the numbers like more, or less, than the scoreboard</h3><p class="viz-sub">Each team's rank by point margin so far against its rank by forecast from here on. A team six or more spots off the diagonal gets a verdict for it.</p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-team-build">
+        <figcaption><h3 class="viz-title">How each team is built</h3><p class="viz-sub">This season's offensive EPA per play against defensive EPA per play allowed, with up and right both better. Dot color shows the team's verdict.</p></figcaption>
+      </figure>
+    </div>
+    <figure class="viz card" id="viz-team-heat">
+      <figcaption><h3 class="viz-title">Every unit, every team</h3><p class="viz-sub">Ranks of 32 for the numbers each verdict is built on. Blue is better, brown is worse. Click a column to sort.</p></figcaption>
+      <div class="table-scroll heat-wrap" id="team-heat"></div>
+    </figure>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-carried">
+        <figcaption><h3 class="viz-title">Winners carried by defense fade. Winners carried by offense hold.</h3><p class="viz-sub" id="viz-carried-sub"></p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-verdict-history">
+        <figcaption><h3 class="viz-title">How each verdict has actually finished</h3><p class="viz-sub" id="viz-verdict-history-sub"></p></figcaption>
+      </figure>
+    </div>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-hold">
+        <figcaption><h3 class="viz-title">Offense holds up better than defense</h3><p class="viz-sub">How often a unit ranked here finishes top 10 over the rest of the season. Offensive rank carries real information. Defensive rank is much flatter.</p></figcaption>
+        <div class="toggle-group viz-controls" id="hold-periods"></div>
+      </figure>
+      <figure class="viz card" id="viz-stories">
+        <figcaption><h3 class="viz-title">The stories fans tell: nothing conclusive yet</h3><p class="viz-sub">Among top-10 units, the change in odds of staying top 10. Ranges resample whole team-seasons. All of them cross zero, though pressure and balance come close, and takeaway-heavy defenses show no sign of the fade the luck story predicts.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="streaming">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Fantasy</div>
+        <h2>Defenses to Stream</h2>
+      </div>
+      <span class="section-note" id="streaming-note"></span>
+    </div>
+    <p class="prose" id="streaming-intro"></p>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-stream-seasons">
+        <figcaption><h3 class="viz-title" id="viz-stream-seasons-title"></h3><p class="viz-sub">Fantasy points per week from one pick a week, among defenses rostered in half of leagues or fewer.</p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-stream-map">
+        <figcaption><h3 class="viz-title" id="viz-stream-map-title"></h3><p class="viz-sub">Every defense's Start Score against how widely it's rostered. The shaded band is the streaming pool, and the labeled dots in it are this week's picks.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="start-score">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Fantasy</div>
+        <h2>The Start Score, Opened Up</h2>
+      </div>
+    </div>
+    <figure class="viz card" id="viz-score-explorer">
+      <figcaption><h3 class="viz-title">Pick a player and see the math</h3><p class="viz-sub" id="viz-score-explorer-sub"></p></figcaption>
+      <div class="dream-team-controls viz-controls">
+        <label>Position <select id="score-position"></select></label>
+        <label>Player <select id="score-player"></select></label>
+      </div>
+    </figure>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-gains">
+        <figcaption><h3 class="viz-title">What actually improves a weekly ranking</h3><p class="viz-sub" id="viz-gains-sub"></p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-weekly">
+        <figcaption><h3 class="viz-title" id="viz-weekly-title"></h3><p class="viz-sub" id="viz-weekly-sub"></p></figcaption>
+      </figure>
+    </div>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-receipts">
+        <figcaption><h3 class="viz-title" id="viz-receipts-title"></h3><p class="viz-sub">The rankings as they were published, frozen before kickoff. When two players were ranked, how often did the higher one score more? 50% is a coin flip. Players who sat out count as zero.</p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-draft">
+        <figcaption><h3 class="viz-title" id="viz-draft-title"></h3><p class="viz-sub" id="viz-draft-sub"></p></figcaption>
+      </figure>
+    </div>
+    <details class="methodology-details lab-details" open>
+      <summary>The fitted weights</summary>
+      <p class="section-note">Fantasy points added per unit of each input, PPR scoring, fit by least squares on 2021–2025. These are the real numbers the site runs on. Team total is Vegas's implied points minus 22.5. Defense is points that defense allows the position above league average.</p>
+      <div class="table-scroll card" id="weights-table"></div>
+    </details>
+  </section>
+
+  <section class="section" id="game-model">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker betting">Game Picks</div>
+        <h2>The Game Model</h2>
+      </div>
+    </div>
+    <div class="formula card" id="model-formula"></div>
+    <figure class="viz card" id="viz-game-explorer">
+      <figcaption><h3 class="viz-title">Pick a game and see the margin get built</h3><p class="viz-sub">Every piece of the model's number for this week's board, against the Vegas line. Right is toward the home team.</p></figcaption>
+      <div class="dream-team-controls viz-controls">
+        <label>Game <select id="game-select"></select></label>
+      </div>
+    </figure>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-calibration">
+        <figcaption><h3 class="viz-title">When the model says 7, does the team win by 7?</h3><p class="viz-sub" id="viz-calibration-sub"></p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-compare">
+        <figcaption><h3 class="viz-title">v1 and v2 on seasons they never saw</h3><p class="viz-sub">Each model replayed week by week, on the same games, without the QB-out adjustment (the injury report as it stood before kickoff isn't kept historically). This is a test, not the frozen record.</p></figcaption>
+      </figure>
+    </div>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-gaps">
+        <figcaption><h3 class="viz-title">Bigger gaps from Vegas haven't meant better picks</h3><p class="viz-sub" id="viz-gaps-sub"></p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-blend">
+        <figcaption><h3 class="viz-title">Every mix of the model and Vegas is worse than Vegas alone</h3><p class="viz-sub" id="viz-blend-sub"></p></figcaption>
+      </figure>
+    </div>
+    <figure class="viz card" id="viz-rating">
+      <figcaption><h3 class="viz-title" id="viz-rating-title"></h3><p class="viz-sub" id="viz-rating-sub"></p></figcaption>
+    </figure>
+  </section>
+
+  <section class="section" id="season">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker betting">Live</div>
+        <h2>2026 Results So Far</h2>
+      </div>
+      <span class="section-note">These charts refresh with every scan.</span>
+    </div>
+    <div class="stat-tiles" id="stat-tiles"></div>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-ats">
+        <figcaption><h3 class="viz-title" id="viz-ats-title"></h3><p class="viz-sub">Spread picks right so far, season to date, against the 52.4% needed to break even at standard odds.</p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-corr">
+        <figcaption><h3 class="viz-title" id="viz-corr-title"></h3><p class="viz-sub">How closely each projected margin tracks the final margin, season to date. 1.0 is perfect, 0 is no relationship.</p></figcaption>
+      </figure>
+    </div>
+    <figure class="viz card" id="viz-scatter">
+      <figcaption><h3 class="viz-title" id="viz-scatter-title"></h3><p class="viz-sub">Every graded game: projected home margin across, actual home margin up. A perfect forecast sits on the gray diagonal. The colored line is the best fit through the dots.</p></figcaption>
+    </figure>
+  </section>
+
+  <section class="section" id="factors">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker betting">The Factor Lab</div>
+        <h2>Motivation, Luck and What Lasts</h2>
+      </div>
+    </div>
+    <p class="prose" id="motivation-intro"></p>
+    <figure class="viz card" id="viz-forest">
+      <figcaption><h3 class="viz-title" id="viz-forest-title"></h3><p class="viz-sub">Points gained or lost by the team with the factor, compared with what each forecast expected. Each bar is a 95% confidence range: if it crosses zero, the effect can't be told apart from noise. An effect against Vegas is the only kind that could ever beat the line.</p></figcaption>
+    </figure>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-lasts">
+        <figcaption><h3 class="viz-title">What repeats, and what doesn't</h3><p class="viz-sub">Correlation of each team stat from the first half of a season to the second, 2019–2025. Offense repeats more than defense at nearly every stat. Turnovers barely repeat at all.</p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-explained">
+        <figcaption><h3 class="viz-title" id="viz-explained-title"></h3><p class="viz-sub">Share of each forecast's misses explained by what happened in that game. No pregame forecast sees these, and past misses don't predict the next one either.</p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="edge-hunt">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">The Edge Hunt</div>
+        <h2>Everything Else We Tried</h2>
+      </div>
+      <span class="section-note">Out of sample, on seasons each idea wasn't fit to.</span>
+    </div>
+    <figure class="viz card" id="viz-pbp">
+      <figcaption><h3 class="viz-title" id="viz-pbp-title"></h3><p class="viz-sub" id="viz-pbp-sub"></p></figcaption>
+    </figure>
+    <figure class="viz card" id="viz-rules">
+      <figcaption><h3 class="viz-title" id="viz-rules-title"></h3><p class="viz-sub">Each rule checked on 2006–2018, then again on 2019–2026. The vertical line is the 52.4% break-even, and a real rule has to clear it in both eras.</p></figcaption>
+    </figure>
+    <div class="viz-grid">
+      <figure class="viz card" id="viz-moneyline">
+        <figcaption><h3 class="viz-title">No moneyline price pays</h3><p class="viz-sub">Return per dollar on a flat bet at every price, closing line, vig included. Zero is break-even.</p></figcaption>
+      </figure>
+      <figure class="viz card" id="viz-combined">
+        <figcaption><h3 class="viz-title" id="viz-combined-title"></h3><p class="viz-sub" id="viz-combined-sub"></p></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="pipeline">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">The Pipeline</div>
+        <h2>From Raw Data to the Page</h2>
+      </div>
+      <span class="section-note">No database and no server: scheduled jobs write JSON, and a commit deploys the site.</span>
+    </div>
+    <ol class="pipe">
+      <li class="pipe-step">
+        <div class="pipe-title">1. Public data</div>
+        <p>Play-by-play, rosters, injuries and lines from nflverse. Expert rankings from FantasyPros. Forecasts from Open-Meteo and the National Weather Service.</p>
+      </li>
+      <li class="pipe-step">
+        <div class="pipe-title">2. Scheduled scans</div>
+        <p>GitHub Actions re-scores every game and player six times a week, with extra game-day runs for Wind Watch forecasts.</p>
+      </li>
+      <li class="pipe-step">
+        <div class="pipe-title">3. Freeze</div>
+        <p>Each pick, ranking and wind spot locks by its own game and never changes, so nothing can be graded with hindsight.</p>
+      </li>
+      <li class="pipe-step">
+        <div class="pipe-title">4. Grade</div>
+        <p>Every frozen number is scored against the final result and set beside Vegas or FantasyPros, on the same games.</p>
+      </li>
+      <li class="pipe-step">
+        <div class="pipe-title">5. Publish</div>
+        <p>The scan commits JSON to GitHub, which redeploys a static site on Render. Pages just read those files.</p>
+      </li>
+    </ol>
+    <div class="pipe-loop">
+      <div class="pipe-title">The feedback loop</div>
+      <p>New ideas don't go straight into a model. Separate test scripts run each one against past seasons it wasn't fit on, and only what holds up there moves into the scans.</p>
+    </div>
+    <div class="card table-scroll inventory" id="inventory"></div>
+  </section>
+
+  <section class="section" id="log">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">The Lab Notebook</div>
+        <h2>Tested, Changed or Left Out</h2>
+      </div>
+      <span class="section-note">Newest first. Wrong turns stay on the record.</span>
+    </div>
+    <div class="card table-scroll">
+      <table class="data-table log-table">
+        <thead><tr><th class="w-md">When</th><th class="w-lg">Outcome</th><th class="left">What happened</th></tr></thead>
+        <tbody>
+          <tr><td>Nov 2026</td><td><span class="pill up">Adopted</span></td><td>Wind Watch, a live test of unders at 10+ mph of forecast wind. The rule was fixed before any live game was graded, and the first spots run on Week 9's Sunday games.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill up">Adopted</span></td><td>Defense streaming on the lowest opponent Vegas total, after it beat FantasyPros' top streamer by 1.1 points a week over 87 weeks.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill up">Adopted</span></td><td>Team verdicts, each one checked against how teams in the same spot finished from 2019 to 2025.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill down">Corrected</span></td><td>The first pass at those team tests counted the same team-season several times, which made the ranges far too tight. Resampling whole team-seasons took the pressure and balance effects from clear to suggestive.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill pos">Left out</span></td><td>A dozen richer ratings from full play-by-play, our own totals model, moneylines, big home underdogs and special teams against the spread. None held up on seasons they weren't fit to.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill up">Adopted</span></td><td>Game Picks v2: point differential, a shift for a new starting QB, and a QB-out adjustment cut from 4.0 points to 2.5. The penalty now applies only when the replacement has a weaker record: those teams ran 2.6 points below expectations, while teams with an equal or better replacement ran about even. Starts Week 10.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill up">Adopted</span></td><td>A fitted Start Score, replacing hand-set adjustments. It adds Vegas team totals and recent usage, and drops the former-team, former-coach and receiver's-QB nudges, which added nothing.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill up">Adopted</span></td><td>From 2027, the Draft Board's order leans 75% on FantasyPros consensus. A look at 2026 alone suggested we beat consensus at kickers and defenses; five more seasons showed that was noise.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill pos">Left out</span></td><td>Revenge games and facing a former coach, each worth a hand-set point in v1. Revenge showed nothing across 1,896 games. Former-coach games came up 8 times in 20 seasons, too few to test. Both are context now.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill pos">Context only</span></td><td>Playoff-race motivation. Teams 3+ games out do fade a little, but adding it didn't improve predictions on held-out seasons. "On the cusp, keep trying" showed nothing at all. Late-season cards carry it as a tag.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill down">Bug fixed</span></td><td>A Friday scan rewrote each week's frozen file from a board that only lists unplayed games, which dropped that week's Thursday game. Six went ungraded. They're restored from their pre-kickoff commits, and games now lock one at a time.</td></tr>
+          <tr><td>Nov 2026</td><td><span class="pill down">Bug fixed</span></td><td>Weekly Rankings still ranked players on reserve lists, because those players drop off the injury report, along with backup QBs whose numbers came from a game or two. Both now count as not playing.</td></tr>
+          <tr><td>Oct 2026</td><td><span class="pill pos">Left out</span></td><td>Offensive-line continuity. A returning line sounds like an obvious edge, but across 1,359 games it didn't lift offenses or improve predictions on held-out seasons. It stays a context tag.</td></tr>
+          <tr><td>Sep 2026</td><td><span class="pill down">Bug fixed</span></td><td>The board picked winners but graded them against the spread. Every past week was re-graded from its frozen margin and line, and the record went from 17–14 to 15–15.</td></tr>
+          <tr><td>Sep 2026</td><td><span class="pill down">Bug fixed</span></td><td>A sign error counted each defense backward, which nearly cancelled the whole rating: margins correlated 0.06 with results. After the fix, 0.37. Weeks 1–2 stay on the record as v0.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">Method</div>
+        <h2>How to Read This Page</h2>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <div class="front-block-title">The terms</div>
+        <p><strong>EPA</strong> (expected points added) measures how much each play changed a team's scoring chances. <strong>Correlation</strong> runs from 0 (no relationship) to 1 (perfect). <strong>Against the spread</strong> asks whether a team beat Vegas's handicap, and 52.4% right is the break-even point at standard odds. A <strong>95% range</strong> is where the true effect plausibly sits, given how noisy the sample is.</p>
+      </div>
+      <div>
+        <div class="front-block-title">Out of sample</div>
+        <p>A model always looks good on the data it was fit to, so the numbers here come from games it never saw. Game constants are fit on 2021–2024 and scored on 2025 and 2026. The other tests hold out one season at a time, fit on the rest, and predict the one left out. Where a test's ideas came from seeing those same seasons, the note says so.</p>
+      </div>
+      <div>
+        <div class="front-block-title">The code</div>
+        <p>All of it is public: the <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/betting_scan.py">game model</a>, <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/fantasy_scan.py">fantasy scan</a>, and the <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/wind_lab.py">wind</a>, <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/team_lab.py">team</a>, <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/streaming_lab.py">streaming</a>, <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/factor_lab.py">factor</a>, <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/rating_lab.py">rating</a>, <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/fantasy_lab.py">fantasy</a> and <a href="https://github.com/torenCodes/football-analytics/blob/main/scripts/edge_lab.py">edge</a> labs. <span id="lab-dates"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    <p>
+      Educational research project, not betting or financial advice. Everything here is one tunable model's output
+      and a set of backtests, not a guarantee of results.
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="site-logo"><img src="images/logo_small_white.png" alt="" class="site-logo-img">Football Forecast</a>
+      <p>NFL fantasy and Game Picks research built on public data — every pick is frozen before kickoff and graded in public afterward.</p>
+      <p class="footer-project">This site is a <a href="https://databytoren.com">databytoren.com</a> project.</p>
+      <p>The code, data pipeline and methodology are open on <a href="https://github.com/torenCodes/football-analytics">GitHub</a>.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <div class="footer-heading">Explore</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fantasy.html">Fantasy</a></li>
+        <li><a href="betting.html">Game Picks</a></li>
+        <li><a href="betting.html#track-record-section">Track Record</a></li>
+        <li><a href="data.html">Data Breakdown</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <div class="footer-heading">Data from</div>
+      <ul>
+        <li><a href="https://github.com/nflverse">nflverse</a></li>
+        <li><a href="https://www.fantasypros.com">FantasyPros</a> consensus</li>
+        <li><a href="https://www.weather.gov">National Weather Service</a></li>
+        <li><a href="https://open-meteo.com">Open-Meteo</a> wind forecasts</li>
+      </ul>
+    </div>
+  </div>
+  <div class="site-footer-bottom">
+    <span>&copy; <span id="footer-year">2026</span> DataByToren. Not affiliated with or endorsed by the NFL or any of its teams.</span>
+    <a href="#">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<div class="viz-tip" id="viz-tip" hidden></div>
+
+<script>
+function toggleSiteNav(btn) {
+  const links = document.querySelector('.site-nav-links');
+  const open = links.classList.toggle('open');
+  btn.innerHTML = open ? '&#10005;' : '&#9776;';
+}
+// A link in the open menu may only jump within this page, so close it by hand.
+document.querySelector('.site-nav-links').addEventListener('click', e => {
+  if (e.target.closest('a') && e.currentTarget.classList.contains('open')) toggleSiteNav(document.querySelector('.nav-burger'));
+});
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+<script src="data.js"></script>
+</body>
+</html>

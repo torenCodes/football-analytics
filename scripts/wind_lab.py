@@ -40,7 +40,7 @@ def summary(under):
 def slope(x, y):
     b = np.polyfit(x, y, 1)[0]
     boots = [np.polyfit(x[i], y[i], 1)[0] for i in (rng.integers(0, len(x), len(x)) for _ in range(2000))]
-    return {"pts_per_mph": round(float(b), 3), "lo": round(float(np.percentile(boots, 2.5)), 3), "hi": round(float(np.percentile(boots, 97.5)), 3)}
+    return {"pts_per_mph": round(float(b), 3), "slope_lo": round(float(np.percentile(boots, 2.5)), 3), "slope_hi": round(float(np.percentile(boots, 97.5)), 3)}
 
 
 def recorded():
@@ -100,7 +100,7 @@ def forecast():
     under, ok = tot < line, tot != line
     buckets = []
     for lo, hi in ((0, 6), (6, 10), (10, 15), (15, 99)):
-        buckets.append({"lo": lo, "hi": hi, **summary(under[ok & (fc >= lo) & (fc < hi)])})
+        buckets.append({"from_mph": lo, "to_mph": hi, **summary(under[ok & (fc >= lo) & (fc < hi)])})
     by_season = {str(y): summary(under[ok & (fc >= RULE_MPH) & (season == y)]) for y in np.unique(season).astype(int) if (ok & (fc >= RULE_MPH) & (season == y)).sum()}
     return {"games": len(a), "rule": summary(under[ok & (fc >= RULE_MPH)]), "buckets": buckets, "by_season": by_season, **slope(fc, tot - line)}
 

@@ -569,3 +569,37 @@ table.log-table { min-width: 0; }
 .for-real p { font-size: 14px; line-height: 1.55; color: var(--text-2); margin: 4px 0 0; }
 /* Defense streaming cards stay a tidy row. */
 .stream-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+
+/* Data Breakdown: lead tiles, formula, chart extras, heat table. */
+.feature-tile { display: block; color: inherit; text-decoration: none; border-top: 4px solid var(--turf); }
+.feature-tile:hover { box-shadow: var(--shadow-md); }
+.tile-more { font-size: 13px; font-weight: 600; color: var(--turf-text); margin-top: var(--space-2); text-decoration: underline; text-underline-offset: 3px; }
+.feature-tiles { margin-bottom: 0; }
+.viz-controls { margin-bottom: var(--space-3); }
+rect.viz-band { fill: var(--surface-raised); }
+line.viz-marker { stroke: var(--text); stroke-width: 2; }
+text.viz-team { font-family: var(--font-condensed); font-size: 12px; font-weight: 600; fill: var(--text-2); }
+text.viz-team.strong { fill: var(--text); font-weight: 700; }
+.viz-key.marker { width: 3px; height: 14px; background: var(--text); border-radius: 1px; }
+.formula { padding: var(--space-4); margin-bottom: var(--space-4); }
+.formula-row { display: grid; grid-template-columns: 4.5rem 1.2rem minmax(0, 1fr); gap: var(--space-1) var(--space-2); font-family: var(--font-mono); font-size: 13px; line-height: 1.6; color: var(--text); padding: 2px 0; }
+.formula-name { font-weight: 700; color: var(--pigskin-text); }
+.formula-eq { color: var(--text-3); }
+.heat-wrap { padding: 0; }
+table.heat-table { min-width: 880px; table-layout: auto; font-size: 13px; }
+table.heat-table th { padding: 6px 2px; white-space: normal; line-height: 1.15; }
+table.heat-table td { padding: 4px 6px; text-align: center; }
+table.heat-table td.heat { font-family: var(--font-mono); font-weight: 700; color: var(--text); border-bottom: 1px solid var(--surface); border-right: 1px solid var(--surface); }
+table.heat-table td.team-cell { font-family: var(--font-condensed); font-size: 15px; font-weight: 700; text-align: left; }
+table.heat-table td.left-cell { text-align: left; }
+table.heat-table th.unit-start { border-left: 2px solid var(--line-strong); }
+table.heat-table tbody tr:nth-child(even) { background: none; }
+.heat-sort { background: none; border: none; padding: 2px 4px; cursor: pointer; font: inherit; color: inherit; text-transform: inherit; letter-spacing: inherit; }
+.heat-sort:hover { color: var(--text); text-decoration: underline; }
+th[aria-sort="ascending"] .heat-sort::after { content: ' \25B2'; font-size: 0.75em; }
+th[aria-sort="descending"] .heat-sort::after { content: ' \25BC'; font-size: 0.75em; }
+.inventory { margin-top: var(--space-4); }
+table.inventory-table { min-width: 640px; table-layout: auto; }
+.inventory-table td.wrap { white-space: normal; font-weight: 400; color: var(--text-2); }
+.inventory-table td.wrap:first-child { font-weight: 600; color: var(--text); }
+.inventory-table th.left { text-align: left; }

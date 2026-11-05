@@ -1194,6 +1194,7 @@ def compute_weekly_rankings(stats, usage, schedules, injuries, current_team, ros
                 "matchup_source": matchup_source,
                 "implied_points": round(implied, 1) if implied is not None else None,
                 "injury_status": status,
+                "inputs": {k: round(v, 2) for k, v in inputs.items() if k in w and v},
                 "market_rank": (market_weekly or {}).get(pid, {}).get("rank"),
                 "rostered_pct": (market_weekly or {}).get(pid, {}).get("rostered"),
             }
@@ -1201,9 +1202,14 @@ def compute_weekly_rankings(stats, usage, schedules, injuries, current_team, ros
             rows.append(row)
         return rows
 
-    board, frozen = {}, {}
+    board, frozen, explorer = {}, {}, {}
     for fmt, season_col, last6_col in (("ppr", "season_ppr", "last6_ppr_total"), ("standard", "season_standard", "last6_standard_total")):
         rows = build_rows(fmt, season_col, last6_col)
+        if fmt == "ppr":
+            explorer = {pos: sorted(({"name": x["name"], "team": x["team"], "opponent": x["opponent"], "score": x["start_score"], "status": x["injury_status"], "inputs": x["inputs"]}
+                                     for x in rows if x["position"] == pos), key=lambda x: -x["score"])[:40] for pos in ROSTER_POS}
+        for x in rows:
+            del x["inputs"]
         by_pos, all_by_pos = {}, {}
         for pos in ROSTER_POS:
             pos_rows = sorted(
@@ -1221,6 +1227,7 @@ def compute_weekly_rankings(stats, usage, schedules, injuries, current_team, ros
         "available": True, "season": UPCOMING_SEASON, **board,
         "defense_streaming": defense_streaming(frozen["ppr"]["DST"], implied_by_team, next_week),
         "_all_rows": frozen, "_week_games": week_games,
+        "_explorer": {"season": UPCOMING_SEASON, "week": next_week, "weights": weights["ppr"], "players": explorer},
     }
 
 
@@ -1520,6 +1527,7 @@ def main():
     archive_weekly_rankings(weekly_rankings)
     weekly_accountability = compute_weekly_accountability(stats, schedules)
     print(f"  available={weekly_accountability['available']}")
+    explorer = weekly_rankings.get("_explorer")
     weekly_rankings = {k: v for k, v in weekly_rankings.items() if not k.startswith("_")}
 
     print("Computing waiver wire watch (likely-undrafted players outperforming expectations)...")
@@ -1540,6 +1548,9 @@ def main():
         json.dump(json_safe({"meta": meta, **season_state}), f, indent=2)
     with open(os.path.join(OUT_DIR, "weekly_rankings.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **weekly_rankings}), f, indent=2)
+    if explorer:
+        with open(os.path.join(OUT_DIR, "start_score_inputs.json"), "w") as f:
+            json.dump(json_safe({"meta": meta, **explorer}), f, indent=1)
     with open(os.path.join(OUT_DIR, "weekly_accountability.json"), "w") as f:
         json.dump(json_safe({"meta": meta, **weekly_accountability}), f, indent=1)
     with open(os.path.join(OUT_DIR, "waiver_wire.json"), "w") as f:

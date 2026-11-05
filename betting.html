@@ -39,6 +39,7 @@
           <li><a href="betting.html#wind-watch-section">Wind Watch</a></li>
         </ul>
       </li>
+      <li class="nav-item"><a href="data.html" class="site-nav-link">Data</a></li>
     </ul>
   </nav>
 </header>
@@ -144,6 +145,7 @@
         <li><a href="fantasy.html">Fantasy</a></li>
         <li><a href="betting.html">Game Picks</a></li>
         <li><a href="betting.html#track-record-section">Track Record</a></li>
+        <li><a href="data.html">Data Breakdown</a></li>
       </ul>
     </nav>
     <div class="footer-col">
@@ -318,7 +320,7 @@ function renderWindWatch(w) {
     `When the forecast calls for ${w.rule_mph}+ mph of wind at an open-air stadium, totals have tended to come in too high. ` +
     `Those games went under ${(fc.rate * 100).toFixed(1)}% of the time from 2022 to 2026 (${fc.n} games), and recorded wind tells the same story back to 2006 ` +
     `(${(old.rate * 100).toFixed(1)}% and ${(recent.rate * 100).toFixed(1)}% in two separate eras). Break-even is ${(b.break_even * 100).toFixed(1)}%, and it's not proven yet, ` +
-    `so we're testing it in public: each spot freezes at kickoff and gets graded here.`;
+    `so we're testing it in public: each spot freezes at kickoff and gets graded here. The full evidence is on the Data Breakdown page.`;
   const r = w.record, graded = r.under + r.over;
   document.getElementById('wind-watch-record').textContent = graded
     ? `Live record: ${r.under}–${r.over}${r.push ? `–${r.push}` : ''} on the under`
@@ -593,7 +595,7 @@ async function loadBacktestSummary() {
     el.innerHTML = `<strong>${bt.season} backtest</strong> (same model, run week by week on games it hadn't seen yet): `
       + `spread picks went ${ats} — short of the 52.4% needed to profit at standard odds — and it picked the winner ${outright}`
       + (fav ? ` (the Vegas favorite won ${(fav * 100).toFixed(1)}%)` : '')
-      + `. The QB-out adjustment isn't backtested.`;
+      + `. The QB-out adjustment isn't backtested. <a href="data.html#game-model">How the model works</a>.`;
   } catch (e) {
     el.textContent = '';
   }

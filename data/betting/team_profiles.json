@@ -1,10 +1,11 @@
 {
  "meta": {
-  "generated_at": "2026-11-05T21:06:47.276626+00:00"
+  "generated_at": "2026-11-05T21:29:41.501562+00:00"
  },
  "season": 2026,
  "available": true,
  "through_week": 8,
+ "period": "mid",
  "teams": {
   "ARI": {
    "record": "3-5",
@@ -16,7 +17,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 19,
-   "defense_rank": 27
+   "defense_rank": 27,
+   "offense_epa": -0.007,
+   "defense_epa": 0.084,
+   "ranks": {
+    "pass": 22,
+    "rush": 12,
+    "success": 13,
+    "explosive": 31,
+    "def_pass": 31,
+    "def_rush": 8,
+    "hits": 23,
+    "sacks": 8,
+    "takeaways": 26
+   }
   },
   "ATL": {
    "record": "3-5",
@@ -28,7 +42,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 27,
-   "defense_rank": 10
+   "defense_rank": 10,
+   "offense_epa": -0.08,
+   "defense_epa": -0.038,
+   "ranks": {
+    "pass": 29,
+    "rush": 8,
+    "success": 16,
+    "explosive": 10,
+    "def_pass": 11,
+    "def_rush": 14,
+    "hits": 7,
+    "sacks": 18,
+    "takeaways": 17
+   }
   },
   "BAL": {
    "record": "4-4",
@@ -40,7 +67,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 15,
-   "defense_rank": 18
+   "defense_rank": 18,
+   "offense_epa": 0.017,
+   "defense_epa": 0.021,
+   "ranks": {
+    "pass": 15,
+    "rush": 13,
+    "success": 12,
+    "explosive": 17,
+    "def_pass": 17,
+    "def_rush": 23,
+    "hits": 9,
+    "sacks": 19,
+    "takeaways": 22
+   }
   },
   "BUF": {
    "record": "6-1",
@@ -52,7 +92,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 1,
-   "defense_rank": 28
+   "defense_rank": 28,
+   "offense_epa": 0.169,
+   "defense_epa": 0.085,
+   "ranks": {
+    "pass": 1,
+    "rush": 3,
+    "success": 4,
+    "explosive": 1,
+    "def_pass": 26,
+    "def_rush": 19,
+    "hits": 4,
+    "sacks": 26,
+    "takeaways": 14
+   }
   },
   "CAR": {
    "record": "3-4",
@@ -64,7 +117,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 16,
-   "defense_rank": 19
+   "defense_rank": 19,
+   "offense_epa": 0.013,
+   "defense_epa": 0.033,
+   "ranks": {
+    "pass": 18,
+    "rush": 16,
+    "success": 24,
+    "explosive": 15,
+    "def_pass": 18,
+    "def_rush": 25,
+    "hits": 30,
+    "sacks": 29,
+    "takeaways": 19
+   }
   },
   "CHI": {
    "record": "6-2",
@@ -76,7 +142,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 8,
-   "defense_rank": 12
+   "defense_rank": 12,
+   "offense_epa": 0.066,
+   "defense_epa": -0.022,
+   "ranks": {
+    "pass": 9,
+    "rush": 11,
+    "success": 6,
+    "explosive": 6,
+    "def_pass": 12,
+    "def_rush": 12,
+    "hits": 15,
+    "sacks": 2,
+    "takeaways": 15
+   }
   },
   "CIN": {
    "record": "5-2",
@@ -88,7 +167,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 6,
-   "defense_rank": 15
+   "defense_rank": 15,
+   "offense_epa": 0.116,
+   "defense_epa": -0.001,
+   "ranks": {
+    "pass": 4,
+    "rush": 22,
+    "success": 2,
+    "explosive": 18,
+    "def_pass": 13,
+    "def_rush": 22,
+    "hits": 14,
+    "sacks": 4,
+    "takeaways": 7
+   }
   },
   "CLE": {
    "record": "5-3",
@@ -100,7 +192,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 25,
-   "defense_rank": 13
+   "defense_rank": 13,
+   "offense_epa": -0.065,
+   "defense_epa": -0.02,
+   "ranks": {
+    "pass": 24,
+    "rush": 27,
+    "success": 18,
+    "explosive": 13,
+    "def_pass": 7,
+    "def_rush": 28,
+    "hits": 8,
+    "sacks": 10,
+    "takeaways": 12
+   }
   },
   "DAL": {
    "record": "3-5",
@@ -112,7 +217,20 @@
    "verdict": "better_than_record",
    "verdict_label": "Better than the record",
    "offense_rank": 4,
-   "defense_rank": 32
+   "defense_rank": 32,
+   "offense_epa": 0.119,
+   "defense_epa": 0.133,
+   "ranks": {
+    "pass": 8,
+    "rush": 9,
+    "success": 7,
+    "explosive": 26,
+    "def_pass": 30,
+    "def_rush": 30,
+    "hits": 20,
+    "sacks": 25,
+    "takeaways": 30
+   }
   },
   "DEN": {
    "record": "6-2",
@@ -124,7 +242,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 20,
-   "defense_rank": 11
+   "defense_rank": 11,
+   "offense_epa": -0.009,
+   "defense_epa": -0.024,
+   "ranks": {
+    "pass": 20,
+    "rush": 15,
+    "success": 29,
+    "explosive": 30,
+    "def_pass": 8,
+    "def_rush": 26,
+    "hits": 2,
+    "sacks": 13,
+    "takeaways": 18
+   }
   },
   "DET": {
    "record": "5-2",
@@ -136,7 +267,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 5,
-   "defense_rank": 30
+   "defense_rank": 30,
+   "offense_epa": 0.116,
+   "defense_epa": 0.122,
+   "ranks": {
+    "pass": 3,
+    "rush": 14,
+    "success": 3,
+    "explosive": 19,
+    "def_pass": 29,
+    "def_rush": 17,
+    "hits": 5,
+    "sacks": 7,
+    "takeaways": 25
+   }
   },
   "GB": {
    "record": "5-3",
@@ -148,7 +292,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 17,
-   "defense_rank": 7
+   "defense_rank": 7,
+   "offense_epa": 0.012,
+   "defense_epa": -0.043,
+   "ranks": {
+    "pass": 11,
+    "rush": 32,
+    "success": 28,
+    "explosive": 2,
+    "def_pass": 10,
+    "def_rush": 11,
+    "hits": 17,
+    "sacks": 12,
+    "takeaways": 3
+   }
   },
   "HOU": {
    "record": "2-5",
@@ -160,7 +317,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 13,
-   "defense_rank": 22
+   "defense_rank": 22,
+   "offense_epa": 0.033,
+   "defense_epa": 0.047,
+   "ranks": {
+    "pass": 12,
+    "rush": 25,
+    "success": 15,
+    "explosive": 7,
+    "def_pass": 22,
+    "def_rush": 27,
+    "hits": 12,
+    "sacks": 5,
+    "takeaways": 28
+   }
   },
   "IND": {
    "record": "2-6",
@@ -172,7 +342,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 31,
-   "defense_rank": 23
+   "defense_rank": 23,
+   "offense_epa": -0.111,
+   "defense_epa": 0.048,
+   "ranks": {
+    "pass": 31,
+    "rush": 5,
+    "success": 20,
+    "explosive": 29,
+    "def_pass": 20,
+    "def_rush": 29,
+    "hits": 25,
+    "sacks": 17,
+    "takeaways": 31
+   }
   },
   "JAX": {
    "record": "5-2",
@@ -184,7 +367,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 3,
-   "defense_rank": 3
+   "defense_rank": 3,
+   "offense_epa": 0.121,
+   "defense_epa": -0.081,
+   "ranks": {
+    "pass": 5,
+    "rush": 6,
+    "success": 9,
+    "explosive": 3,
+    "def_pass": 4,
+    "def_rush": 2,
+    "hits": 16,
+    "sacks": 22,
+    "takeaways": 2
+   }
   },
   "KC": {
    "record": "5-2",
@@ -196,7 +392,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 7,
-   "defense_rank": 14
+   "defense_rank": 14,
+   "offense_epa": 0.111,
+   "defense_epa": -0.018,
+   "ranks": {
+    "pass": 13,
+    "rush": 2,
+    "success": 8,
+    "explosive": 11,
+    "def_pass": 14,
+    "def_rush": 9,
+    "hits": 28,
+    "sacks": 31,
+    "takeaways": 13
+   }
   },
   "LA": {
    "record": "4-4",
@@ -208,7 +417,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 10,
-   "defense_rank": 4
+   "defense_rank": 4,
+   "offense_epa": 0.043,
+   "defense_epa": -0.078,
+   "ranks": {
+    "pass": 16,
+    "rush": 10,
+    "success": 5,
+    "explosive": 23,
+    "def_pass": 5,
+    "def_rush": 6,
+    "hits": 29,
+    "sacks": 28,
+    "takeaways": 21
+   }
   },
   "LAC": {
    "record": "0-7",
@@ -220,7 +442,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 32,
-   "defense_rank": 8
+   "defense_rank": 8,
+   "offense_epa": -0.231,
+   "defense_epa": -0.038,
+   "ranks": {
+    "pass": 32,
+    "rush": 31,
+    "success": 32,
+    "explosive": 27,
+    "def_pass": 9,
+    "def_rush": 24,
+    "hits": 10,
+    "sacks": 21,
+    "takeaways": 8
+   }
   },
   "LV": {
    "record": "4-4",
@@ -232,7 +467,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 12,
-   "defense_rank": 25
+   "defense_rank": 25,
+   "offense_epa": 0.041,
+   "defense_epa": 0.062,
+   "ranks": {
+    "pass": 7,
+    "rush": 30,
+    "success": 14,
+    "explosive": 16,
+    "def_pass": 25,
+    "def_rush": 21,
+    "hits": 6,
+    "sacks": 15,
+    "takeaways": 5
+   }
   },
   "MIA": {
    "record": "1-6",
@@ -244,7 +492,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 24,
-   "defense_rank": 31
+   "defense_rank": 31,
+   "offense_epa": -0.046,
+   "defense_epa": 0.125,
+   "ranks": {
+    "pass": 23,
+    "rush": 21,
+    "success": 27,
+    "explosive": 22,
+    "def_pass": 32,
+    "def_rush": 20,
+    "hits": 22,
+    "sacks": 27,
+    "takeaways": 24
+   }
   },
   "MIN": {
    "record": "6-1",
@@ -256,7 +517,20 @@
    "verdict": "sell_high",
    "verdict_label": "Regression watch",
    "offense_rank": 29,
-   "defense_rank": 1
+   "defense_rank": 1,
+   "offense_epa": -0.094,
+   "defense_epa": -0.191,
+   "ranks": {
+    "pass": 25,
+    "rush": 28,
+    "success": 30,
+    "explosive": 20,
+    "def_pass": 1,
+    "def_rush": 5,
+    "hits": 1,
+    "sacks": 1,
+    "takeaways": 4
+   }
   },
   "NE": {
    "record": "5-3",
@@ -268,7 +542,20 @@
    "verdict": "better_than_record",
    "verdict_label": "Better than the record",
    "offense_rank": 9,
-   "defense_rank": 16
+   "defense_rank": 16,
+   "offense_epa": 0.059,
+   "defense_epa": 0.007,
+   "ranks": {
+    "pass": 6,
+    "rush": 26,
+    "success": 10,
+    "explosive": 5,
+    "def_pass": 16,
+    "def_rush": 13,
+    "hits": 11,
+    "sacks": 6,
+    "takeaways": 20
+   }
   },
   "NO": {
    "record": "2-5",
@@ -280,7 +567,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 22,
-   "defense_rank": 26
+   "defense_rank": 26,
+   "offense_epa": -0.03,
+   "defense_epa": 0.076,
+   "ranks": {
+    "pass": 21,
+    "rush": 24,
+    "success": 22,
+    "explosive": 28,
+    "def_pass": 23,
+    "def_rush": 32,
+    "hits": 26,
+    "sacks": 11,
+    "takeaways": 23
+   }
   },
   "NYG": {
    "record": "4-2-1",
@@ -292,7 +592,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 14,
-   "defense_rank": 17
+   "defense_rank": 17,
+   "offense_epa": 0.028,
+   "defense_epa": 0.018,
+   "ranks": {
+    "pass": 14,
+    "rush": 17,
+    "success": 17,
+    "explosive": 14,
+    "def_pass": 19,
+    "def_rush": 18,
+    "hits": 31,
+    "sacks": 30,
+    "takeaways": 16
+   }
   },
   "NYJ": {
    "record": "2-6",
@@ -304,7 +617,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 11,
-   "defense_rank": 21
+   "defense_rank": 21,
+   "offense_epa": 0.043,
+   "defense_epa": 0.044,
+   "ranks": {
+    "pass": 10,
+    "rush": 19,
+    "success": 11,
+    "explosive": 12,
+    "def_pass": 28,
+    "def_rush": 7,
+    "hits": 18,
+    "sacks": 9,
+    "takeaways": 27
+   }
   },
   "PHI": {
    "record": "2-6",
@@ -316,7 +642,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 30,
-   "defense_rank": 29
+   "defense_rank": 29,
+   "offense_epa": -0.096,
+   "defense_epa": 0.094,
+   "ranks": {
+    "pass": 27,
+    "rush": 23,
+    "success": 31,
+    "explosive": 32,
+    "def_pass": 24,
+    "def_rush": 31,
+    "hits": 32,
+    "sacks": 32,
+    "takeaways": 32
+   }
   },
   "PIT": {
    "record": "6-2",
@@ -328,7 +667,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 21,
-   "defense_rank": 6
+   "defense_rank": 6,
+   "offense_epa": -0.011,
+   "defense_epa": -0.068,
+   "ranks": {
+    "pass": 28,
+    "rush": 1,
+    "success": 19,
+    "explosive": 9,
+    "def_pass": 6,
+    "def_rush": 4,
+    "hits": 13,
+    "sacks": 3,
+    "takeaways": 6
+   }
   },
   "SEA": {
    "record": "4-4",
@@ -340,7 +692,20 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 23,
-   "defense_rank": 5
+   "defense_rank": 5,
+   "offense_epa": -0.046,
+   "defense_epa": -0.075,
+   "ranks": {
+    "pass": 17,
+    "rush": 29,
+    "success": 23,
+    "explosive": 21,
+    "def_pass": 3,
+    "def_rush": 10,
+    "hits": 3,
+    "sacks": 16,
+    "takeaways": 9
+   }
   },
   "SF": {
    "record": "6-1",
@@ -352,7 +717,20 @@
    "verdict": "for_real",
    "verdict_label": "For real",
    "offense_rank": 2,
-   "defense_rank": 9
+   "defense_rank": 9,
+   "offense_epa": 0.156,
+   "defense_epa": -0.038,
+   "ranks": {
+    "pass": 2,
+    "rush": 4,
+    "success": 1,
+    "explosive": 4,
+    "def_pass": 15,
+    "def_rush": 1,
+    "hits": 24,
+    "sacks": 20,
+    "takeaways": 29
+   }
   },
   "TB": {
    "record": "3-5",
@@ -364,7 +742,20 @@
    "verdict": "sell_high",
    "verdict_label": "Regression watch",
    "offense_rank": 28,
-   "defense_rank": 2
+   "defense_rank": 2,
+   "offense_epa": -0.091,
+   "defense_epa": -0.15,
+   "ranks": {
+    "pass": 30,
+    "rush": 7,
+    "success": 26,
+    "explosive": 24,
+    "def_pass": 2,
+    "def_rush": 3,
+    "hits": 27,
+    "sacks": 24,
+    "takeaways": 1
+   }
   },
   "TEN": {
    "record": "1-7",
@@ -376,7 +767,20 @@
    "verdict": "real_problems",
    "verdict_label": "Real problems",
    "offense_rank": 26,
-   "defense_rank": 24
+   "defense_rank": 24,
+   "offense_epa": -0.076,
+   "defense_epa": 0.059,
+   "ranks": {
+    "pass": 26,
+    "rush": 18,
+    "success": 21,
+    "explosive": 25,
+    "def_pass": 27,
+    "def_rush": 15,
+    "hits": 19,
+    "sacks": 14,
+    "takeaways": 11
+   }
   },
   "WAS": {
    "record": "2-4-1",
@@ -388,7 +792,399 @@
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 18,
-   "defense_rank": 20
+   "defense_rank": 20,
+   "offense_epa": -0.003,
+   "defense_epa": 0.033,
+   "ranks": {
+    "pass": 19,
+    "rush": 20,
+    "success": 25,
+    "explosive": 8,
+    "def_pass": 21,
+    "def_rush": 16,
+    "hits": 21,
+    "sacks": 23,
+    "takeaways": 10
+   }
+  }
+ },
+ "history": {
+  "seasons": [
+   2019,
+   2025
+  ],
+  "checkpoints": 1344,
+  "hold_rates": {
+   "offense": {
+    "early": [
+     {
+      "lo": 1,
+      "hi": 5,
+      "n": 70,
+      "top10": 0.671,
+      "avg_rank": 8.8
+     },
+     {
+      "lo": 6,
+      "hi": 10,
+      "n": 70,
+      "top10": 0.386,
+      "avg_rank": 13.5
+     },
+     {
+      "lo": 11,
+      "hi": 16,
+      "n": 84,
+      "top10": 0.357,
+      "avg_rank": 13.9
+     },
+     {
+      "lo": 17,
+      "hi": 22,
+      "n": 84,
+      "top10": 0.167,
+      "avg_rank": 18.7
+     },
+     {
+      "lo": 23,
+      "hi": 32,
+      "n": 140,
+      "top10": 0.157,
+      "avg_rank": 22.1
+     }
+    ],
+    "mid": [
+     {
+      "lo": 1,
+      "hi": 5,
+      "n": 70,
+      "top10": 0.657,
+      "avg_rank": 9.2
+     },
+     {
+      "lo": 6,
+      "hi": 10,
+      "n": 70,
+      "top10": 0.429,
+      "avg_rank": 12.3
+     },
+     {
+      "lo": 11,
+      "hi": 16,
+      "n": 84,
+      "top10": 0.333,
+      "avg_rank": 14.5
+     },
+     {
+      "lo": 17,
+      "hi": 22,
+      "n": 84,
+      "top10": 0.274,
+      "avg_rank": 16.9
+     },
+     {
+      "lo": 23,
+      "hi": 32,
+      "n": 140,
+      "top10": 0.093,
+      "avg_rank": 23.3
+     }
+    ],
+    "late": [
+     {
+      "lo": 1,
+      "hi": 5,
+      "n": 70,
+      "top10": 0.643,
+      "avg_rank": 9.5
+     },
+     {
+      "lo": 6,
+      "hi": 10,
+      "n": 70,
+      "top10": 0.557,
+      "avg_rank": 12.1
+     },
+     {
+      "lo": 11,
+      "hi": 16,
+      "n": 84,
+      "top10": 0.274,
+      "avg_rank": 14.9
+     },
+     {
+      "lo": 17,
+      "hi": 22,
+      "n": 84,
+      "top10": 0.238,
+      "avg_rank": 17.9
+     },
+     {
+      "lo": 23,
+      "hi": 32,
+      "n": 140,
+      "top10": 0.093,
+      "avg_rank": 22.3
+     }
+    ]
+   },
+   "defense": {
+    "early": [
+     {
+      "lo": 1,
+      "hi": 5,
+      "n": 70,
+      "top10": 0.571,
+      "avg_rank": 10.4
+     },
+     {
+      "lo": 6,
+      "hi": 10,
+      "n": 70,
+      "top10": 0.357,
+      "avg_rank": 14.6
+     },
+     {
+      "lo": 11,
+      "hi": 16,
+      "n": 84,
+      "top10": 0.274,
+      "avg_rank": 17.4
+     },
+     {
+      "lo": 17,
+      "hi": 22,
+      "n": 84,
+      "top10": 0.19,
+      "avg_rank": 18.5
+     },
+     {
+      "lo": 23,
+      "hi": 32,
+      "n": 140,
+      "top10": 0.257,
+      "avg_rank": 18.7
+     }
+    ],
+    "mid": [
+     {
+      "lo": 1,
+      "hi": 5,
+      "n": 70,
+      "top10": 0.443,
+      "avg_rank": 11.7
+     },
+     {
+      "lo": 6,
+      "hi": 10,
+      "n": 70,
+      "top10": 0.457,
+      "avg_rank": 13.4
+     },
+     {
+      "lo": 11,
+      "hi": 16,
+      "n": 84,
+      "top10": 0.262,
+      "avg_rank": 17.4
+     },
+     {
+      "lo": 17,
+      "hi": 22,
+      "n": 84,
+      "top10": 0.31,
+      "avg_rank": 16.5
+     },
+     {
+      "lo": 23,
+      "hi": 32,
+      "n": 140,
+      "top10": 0.207,
+      "avg_rank": 19.9
+     }
+    ],
+    "late": [
+     {
+      "lo": 1,
+      "hi": 5,
+      "n": 70,
+      "top10": 0.443,
+      "avg_rank": 13.9
+     },
+     {
+      "lo": 6,
+      "hi": 10,
+      "n": 70,
+      "top10": 0.5,
+      "avg_rank": 11.9
+     },
+     {
+      "lo": 11,
+      "hi": 16,
+      "n": 84,
+      "top10": 0.298,
+      "avg_rank": 16.2
+     },
+     {
+      "lo": 17,
+      "hi": 22,
+      "n": 84,
+      "top10": 0.333,
+      "avg_rank": 15.5
+     },
+     {
+      "lo": 23,
+      "hi": 32,
+      "n": 140,
+      "top10": 0.15,
+      "avg_rank": 20.9
+     }
+    ]
+   }
+  },
+  "splits": {
+   "defense with top-10 QB hit rate": {
+    "with": 0.518,
+    "without": 0.398,
+    "n_with": 224,
+    "n_without": 196,
+    "diff_lo": -0.011,
+    "diff_hi": 0.252
+   },
+   "defense leaning on takeaways": {
+    "with": 0.537,
+    "without": 0.444,
+    "n_with": 80,
+    "n_without": 340,
+    "diff_lo": -0.082,
+    "diff_hi": 0.248
+   },
+   "defense top 10 without takeaways": {
+    "with": 0.45,
+    "without": 0.505,
+    "n_with": 327,
+    "n_without": 93,
+    "diff_lo": -0.233,
+    "diff_hi": 0.125
+   },
+   "offense led by the pass": {
+    "with": 0.577,
+    "without": 0.521,
+    "n_with": 274,
+    "n_without": 146,
+    "diff_lo": -0.103,
+    "diff_hi": 0.214
+   },
+   "offense top 10 in both pass and run": {
+    "with": 0.629,
+    "without": 0.506,
+    "n_with": 175,
+    "n_without": 245,
+    "diff_lo": -0.027,
+    "diff_hi": 0.258
+   }
+  },
+  "carried": {
+   "bottom_half_offense": {
+    "n": 70,
+    "team_seasons": 31,
+    "margin_so_far": 5.5,
+    "margin_later": 1.8,
+    "later_lo": -0.6,
+    "later_hi": 4.2,
+    "rank_so_far": 7.2,
+    "rank_later": 14.1,
+    "top10_later": 0.429
+   },
+   "bottom_half_defense": {
+    "n": 80,
+    "team_seasons": 34,
+    "margin_so_far": 5.8,
+    "margin_later": 5.7,
+    "later_lo": 2.9,
+    "later_hi": 8.4,
+    "rank_so_far": 7.0,
+    "rank_later": 10.1,
+    "top10_later": 0.6
+   },
+   "both_top_half": {
+    "n": 270,
+    "team_seasons": 80,
+    "margin_so_far": 8.9,
+    "margin_later": 5.0,
+    "later_lo": 3.5,
+    "later_hi": 6.4,
+    "rank_so_far": 4.6,
+    "rank_later": 10.2,
+    "top10_later": 0.596
+   }
+  },
+  "verdicts": {
+   "better_than_record": {
+    "n": 66,
+    "margin_so_far": -2.8,
+    "forecast": 0.7,
+    "margin_later": -0.4,
+    "rank_so_far": 22.2,
+    "rank_later": 16.8,
+    "top10_later": 0.303,
+    "bottom10_later": 0.348,
+    "vs_margin_only": 1.03,
+    "vs_margin_only_lo": -1.28,
+    "vs_margin_only_hi": 3.45
+   },
+   "for_real": {
+    "n": 395,
+    "margin_so_far": 7.7,
+    "forecast": 4.6,
+    "margin_later": 4.8,
+    "rank_so_far": 5.7,
+    "rank_later": 10.7,
+    "top10_later": 0.577,
+    "bottom10_later": 0.116,
+    "vs_margin_only": 0.78,
+    "vs_margin_only_lo": -0.53,
+    "vs_margin_only_hi": 2.15
+   },
+   "middle": {
+    "n": 419,
+    "margin_so_far": -0.0,
+    "forecast": 0.1,
+    "margin_later": -0.2,
+    "rank_so_far": 16.7,
+    "rank_later": 16.9,
+    "top10_later": 0.253,
+    "bottom10_later": 0.277,
+    "vs_margin_only": -0.16,
+    "vs_margin_only_lo": -1.35,
+    "vs_margin_only_hi": 1.06
+   },
+   "real_problems": {
+    "n": 373,
+    "margin_so_far": -8.1,
+    "forecast": -4.6,
+    "margin_later": -4.9,
+    "rank_so_far": 27.6,
+    "rank_later": 22.3,
+    "top10_later": 0.107,
+    "bottom10_later": 0.576,
+    "vs_margin_only": -0.64,
+    "vs_margin_only_lo": -2.01,
+    "vs_margin_only_hi": 0.84
+   },
+   "sell_high": {
+    "n": 91,
+    "margin_so_far": 2.0,
+    "forecast": -1.0,
+    "margin_later": 0.3,
+    "rank_so_far": 12.6,
+    "rank_later": 16.0,
+    "top10_later": 0.286,
+    "bottom10_later": 0.22,
+    "vs_margin_only": -0.76,
+    "vs_margin_only_lo": -2.23,
+    "vs_margin_only_hi": 0.7
+   }
   }
  }
 }

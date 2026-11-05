@@ -1,0 +1,904 @@
+{
+ "generated_at": "2026-11-05T21:38:26.906028+00:00",
+ "inventory": {
+  "team_games": 4496,
+  "plays": 292425,
+  "pbp_seasons": [
+   2018,
+   2026
+  ],
+  "market_games": 5320,
+  "market_seasons": [
+   2006,
+   2026
+  ],
+  "model_games": 1976
+ },
+ "ratings": {
+  "vegas": {
+   "mse": 160.73,
+   "corr": 0.454,
+   "miss": 9.8
+  },
+  "games": 1976,
+  "variants": [
+   {
+    "name": "v2 as it runs",
+    "mse": 170.69,
+    "corr": 0.395,
+    "miss": 10.17,
+    "winners": 0.64,
+    "ats": 0.503,
+    "weight": -0.08,
+    "weight_lo": -0.3,
+    "weight_hi": 0.14
+   },
+   {
+    "name": "EPA without turnovers",
+    "mse": 170.52,
+    "corr": 0.397,
+    "miss": 10.18,
+    "winners": 0.636,
+    "ats": 0.497,
+    "weight": -0.06,
+    "weight_lo": -0.29,
+    "weight_hi": 0.17,
+    "diff": -0.17,
+    "lo": -0.78,
+    "hi": 0.43
+   },
+   {
+    "name": "Neutral-game EPA (no garbage time)",
+    "mse": 170.92,
+    "corr": 0.394,
+    "miss": 10.17,
+    "winners": 0.641,
+    "ats": 0.495,
+    "weight": -0.08,
+    "weight_lo": -0.29,
+    "weight_hi": 0.14,
+    "diff": 0.23,
+    "lo": -0.43,
+    "hi": 0.87
+   },
+   {
+    "name": "Early-down EPA",
+    "mse": 170.74,
+    "corr": 0.395,
+    "miss": 10.17,
+    "winners": 0.639,
+    "ats": 0.503,
+    "weight": -0.06,
+    "weight_lo": -0.27,
+    "weight_hi": 0.17,
+    "diff": 0.05,
+    "lo": -0.66,
+    "hi": 0.74
+   },
+   {
+    "name": "Success rate",
+    "mse": 170.14,
+    "corr": 0.399,
+    "miss": 10.14,
+    "winners": 0.632,
+    "ats": 0.504,
+    "weight": -0.02,
+    "weight_lo": -0.21,
+    "weight_hi": 0.2,
+    "diff": -0.55,
+    "lo": -1.54,
+    "hi": 0.51
+   },
+   {
+    "name": "Success rate + EPA",
+    "mse": 170.41,
+    "corr": 0.397,
+    "miss": 10.15,
+    "winners": 0.633,
+    "ats": 0.5,
+    "weight": -0.05,
+    "weight_lo": -0.27,
+    "weight_hi": 0.17,
+    "diff": -0.28,
+    "lo": -1.14,
+    "hi": 0.53
+   },
+   {
+    "name": "No-turnover EPA + turnovers apart",
+    "mse": 171.25,
+    "corr": 0.392,
+    "miss": 10.21,
+    "winners": 0.638,
+    "ats": 0.498,
+    "weight": -0.05,
+    "weight_lo": -0.27,
+    "weight_hi": 0.14,
+    "diff": 0.56,
+    "lo": -0.45,
+    "hi": 1.49
+   },
+   {
+    "name": "Offense and defense weighted apart",
+    "mse": 170.56,
+    "corr": 0.396,
+    "miss": 10.16,
+    "winners": 0.647,
+    "ats": 0.504,
+    "weight": -0.06,
+    "weight_lo": -0.27,
+    "weight_hi": 0.16,
+    "diff": -0.13,
+    "lo": -1.15,
+    "hi": 0.89
+   },
+   {
+    "name": "Pass and rush weighted apart",
+    "mse": 170.02,
+    "corr": 0.4,
+    "miss": 10.17,
+    "winners": 0.64,
+    "ats": 0.501,
+    "weight": 0.03,
+    "weight_lo": -0.18,
+    "weight_hi": 0.23,
+    "diff": -0.67,
+    "lo": -1.98,
+    "hi": 0.72
+   },
+   {
+    "name": "v2 + special teams",
+    "mse": 170.13,
+    "corr": 0.399,
+    "miss": 10.17,
+    "winners": 0.638,
+    "ats": 0.5,
+    "weight": 0.01,
+    "weight_lo": -0.2,
+    "weight_hi": 0.22,
+    "diff": -0.56,
+    "lo": -1.56,
+    "hi": 0.41
+   },
+   {
+    "name": "v2 + explosive plays",
+    "mse": 170.8,
+    "corr": 0.395,
+    "miss": 10.17,
+    "winners": 0.638,
+    "ats": 0.504,
+    "weight": -0.08,
+    "weight_lo": -0.28,
+    "weight_hi": 0.13,
+    "diff": 0.11,
+    "lo": -0.02,
+    "hi": 0.23
+   },
+   {
+    "name": "v2 + sack rates",
+    "mse": 170.32,
+    "corr": 0.398,
+    "miss": 10.15,
+    "winners": 0.639,
+    "ats": 0.503,
+    "weight": -0.03,
+    "weight_lo": -0.24,
+    "weight_hi": 0.19,
+    "diff": -0.37,
+    "lo": -1.51,
+    "hi": 0.75
+   },
+   {
+    "name": "Everything",
+    "mse": 169.7,
+    "corr": 0.402,
+    "miss": 10.15,
+    "winners": 0.647,
+    "ats": 0.517,
+    "weight": 0.12,
+    "weight_lo": -0.07,
+    "weight_hi": 0.3,
+    "diff": -0.99,
+    "lo": -3.18,
+    "hi": 1.0
+   }
+  ]
+ },
+ "misses": [
+  {
+   "name": "Our misses so far, our next miss",
+   "slope": 0.005,
+   "lo": -0.078,
+   "hi": 0.087
+  },
+  {
+   "name": "Our last 3 misses, our next miss",
+   "slope": 0.013,
+   "lo": -0.045,
+   "hi": 0.076
+  },
+  {
+   "name": "Vegas misses so far, Vegas's next miss",
+   "slope": -0.033,
+   "lo": -0.124,
+   "hi": 0.049
+  },
+  {
+   "name": "Vegas's last 3 misses, Vegas's next miss",
+   "slope": -0.034,
+   "lo": -0.098,
+   "hi": 0.026
+  },
+  {
+   "name": "Our misses so far, Vegas's next miss",
+   "slope": -0.011,
+   "lo": -0.087,
+   "hi": 0.063
+  }
+ ],
+ "explained": {
+  "model": {
+   "turnovers": 0.306,
+   "plus_special_teams": 0.325,
+   "plus_offense": 0.772
+  },
+  "vegas": {
+   "turnovers": 0.303,
+   "plus_special_teams": 0.324,
+   "plus_offense": 0.744
+  },
+  "points_per_turnover": 3.5
+ },
+ "lasts": {
+  "offense": [
+   {
+    "stat": "EPA/play",
+    "half": 0.53,
+    "year": 0.4
+   },
+   {
+    "stat": "EPA excl. turnovers",
+    "half": 0.55,
+    "year": 0.45
+   },
+   {
+    "stat": "Success rate",
+    "half": 0.55,
+    "year": 0.38
+   },
+   {
+    "stat": "Pass EPA/play",
+    "half": 0.48,
+    "year": 0.4
+   },
+   {
+    "stat": "Rush EPA/play",
+    "half": 0.31,
+    "year": 0.32
+   },
+   {
+    "stat": "Explosive rate",
+    "half": 0.36,
+    "year": 0.23
+   },
+   {
+    "stat": "Turnover rate",
+    "half": 0.15,
+    "year": 0.07
+   },
+   {
+    "stat": "Sack rate",
+    "half": 0.45,
+    "year": 0.35
+   },
+   {
+    "stat": "QB hit rate",
+    "half": 0.57,
+    "year": 0.44
+   }
+  ],
+  "defense": [
+   {
+    "stat": "EPA/play",
+    "half": 0.34,
+    "year": 0.23
+   },
+   {
+    "stat": "EPA excl. turnovers",
+    "half": 0.32,
+    "year": 0.23
+   },
+   {
+    "stat": "Success rate",
+    "half": 0.34,
+    "year": 0.24
+   },
+   {
+    "stat": "Pass EPA/play",
+    "half": 0.26,
+    "year": 0.21
+   },
+   {
+    "stat": "Rush EPA/play",
+    "half": 0.22,
+    "year": 0.25
+   },
+   {
+    "stat": "Explosive rate",
+    "half": 0.16,
+    "year": 0.19
+   },
+   {
+    "stat": "Turnover rate",
+    "half": 0.13,
+    "year": 0.23
+   },
+   {
+    "stat": "Sack rate",
+    "half": 0.2,
+    "year": 0.14
+   },
+   {
+    "stat": "QB hit rate",
+    "half": 0.35,
+    "year": 0.29
+   }
+  ]
+ },
+ "totals": {
+  "line_corr": 0.318,
+  "line_miss": 10.39,
+  "model_corr": 0.207,
+  "model_miss": 10.79,
+  "gaps": [
+   {
+    "gap_from": 0,
+    "gap_to": 1.5,
+    "rate": 0.521,
+    "n": 634,
+    "lo": 0.482,
+    "hi": 0.559
+   },
+   {
+    "gap_from": 1.5,
+    "gap_to": 3,
+    "rate": 0.483,
+    "n": 534,
+    "lo": 0.441,
+    "hi": 0.526
+   },
+   {
+    "gap_from": 3,
+    "gap_to": 5,
+    "rate": 0.458,
+    "n": 459,
+    "lo": 0.412,
+    "hi": 0.503
+   },
+   {
+    "gap_from": 5,
+    "gap_to": 99,
+    "rate": 0.518,
+    "n": 332,
+    "lo": 0.464,
+    "hi": 0.572
+   }
+  ]
+ },
+ "rules": {
+  "spread": [
+   {
+    "name": "Home underdogs",
+    "old": {
+     "rate": 0.496,
+     "n": 1105,
+     "lo": 0.466,
+     "hi": 0.525
+    },
+    "new": {
+     "rate": 0.504,
+     "n": 780,
+     "lo": 0.469,
+     "hi": 0.539
+    }
+   },
+   {
+    "name": "Road underdogs",
+    "old": {
+     "rate": 0.516,
+     "n": 2130,
+     "lo": 0.495,
+     "hi": 0.537
+    },
+    "new": {
+     "rate": 0.527,
+     "n": 1163,
+     "lo": 0.498,
+     "hi": 0.556
+    }
+   },
+   {
+    "name": "Home underdogs of 7+",
+    "old": {
+     "rate": 0.533,
+     "n": 227,
+     "lo": 0.468,
+     "hi": 0.598
+    },
+    "new": {
+     "rate": 0.584,
+     "n": 173,
+     "lo": 0.51,
+     "hi": 0.657
+    }
+   },
+   {
+    "name": "Road underdogs of 7+",
+    "old": {
+     "rate": 0.497,
+     "n": 783,
+     "lo": 0.462,
+     "hi": 0.532
+    },
+    "new": {
+     "rate": 0.504,
+     "n": 381,
+     "lo": 0.454,
+     "hi": 0.554
+    }
+   },
+   {
+    "name": "Home favorites of 10+",
+    "old": {
+     "rate": 0.471,
+     "n": 363,
+     "lo": 0.42,
+     "hi": 0.522
+    },
+    "new": {
+     "rate": 0.52,
+     "n": 179,
+     "lo": 0.446,
+     "hi": 0.593
+    }
+   },
+   {
+    "name": "Division underdogs",
+    "old": {
+     "rate": 0.512,
+     "n": 1214,
+     "lo": 0.483,
+     "hi": 0.54
+    },
+    "new": {
+     "rate": 0.539,
+     "n": 699,
+     "lo": 0.502,
+     "hi": 0.576
+    }
+   },
+   {
+    "name": "Primetime underdogs",
+    "old": {
+     "rate": 0.481,
+     "n": 597,
+     "lo": 0.441,
+     "hi": 0.521
+    },
+    "new": {
+     "rate": 0.528,
+     "n": 405,
+     "lo": 0.48,
+     "hi": 0.577
+    }
+   },
+   {
+    "name": "Thursday underdogs",
+    "old": {
+     "rate": 0.395,
+     "n": 172,
+     "lo": 0.322,
+     "hi": 0.468
+    },
+    "new": {
+     "rate": 0.562,
+     "n": 130,
+     "lo": 0.476,
+     "hi": 0.647
+    }
+   },
+   {
+    "name": "Week 1 underdogs",
+    "old": {
+     "rate": 0.515,
+     "n": 202,
+     "lo": 0.446,
+     "hi": 0.584
+    },
+    "new": {
+     "rate": 0.524,
+     "n": 126,
+     "lo": 0.437,
+     "hi": 0.611
+    }
+   }
+  ],
+  "totals": [
+   {
+    "name": "Wind 10+ mph",
+    "old": {
+     "rate": 0.537,
+     "n": 849,
+     "lo": 0.504,
+     "hi": 0.571
+    },
+    "new": {
+     "rate": 0.58,
+     "n": 407,
+     "lo": 0.532,
+     "hi": 0.628
+    }
+   },
+   {
+    "name": "Wind 15+ mph",
+    "old": {
+     "rate": 0.559,
+     "n": 299,
+     "lo": 0.502,
+     "hi": 0.615
+    },
+    "new": {
+     "rate": 0.541,
+     "n": 135,
+     "lo": 0.457,
+     "hi": 0.625
+    }
+   },
+   {
+    "name": "Wind 20+ mph",
+    "old": {
+     "rate": 0.568,
+     "n": 81,
+     "lo": 0.46,
+     "hi": 0.676
+    },
+    "new": {
+     "rate": 0.467,
+     "n": 30,
+     "lo": 0.288,
+     "hi": 0.645
+    }
+   },
+   {
+    "name": "32 degrees or colder",
+    "old": {
+     "rate": 0.462,
+     "n": 156,
+     "lo": 0.383,
+     "hi": 0.54
+    },
+    "new": {
+     "rate": 0.469,
+     "n": 64,
+     "lo": 0.346,
+     "hi": 0.591
+    }
+   },
+   {
+    "name": "Primetime",
+    "old": {
+     "rate": 0.49,
+     "n": 604,
+     "lo": 0.45,
+     "hi": 0.53
+    },
+    "new": {
+     "rate": 0.561,
+     "n": 408,
+     "lo": 0.513,
+     "hi": 0.609
+    }
+   },
+   {
+    "name": "Thursday",
+    "old": {
+     "rate": 0.491,
+     "n": 171,
+     "lo": 0.416,
+     "hi": 0.566
+    },
+    "new": {
+     "rate": 0.504,
+     "n": 135,
+     "lo": 0.419,
+     "hi": 0.588
+    }
+   },
+   {
+    "name": "Monday",
+    "old": {
+     "rate": 0.509,
+     "n": 222,
+     "lo": 0.443,
+     "hi": 0.575
+    },
+    "new": {
+     "rate": 0.567,
+     "n": 141,
+     "lo": 0.486,
+     "hi": 0.649
+    }
+   },
+   {
+    "name": "Sunday night",
+    "old": {
+     "rate": 0.454,
+     "n": 216,
+     "lo": 0.387,
+     "hi": 0.52
+    },
+    "new": {
+     "rate": 0.602,
+     "n": 128,
+     "lo": 0.517,
+     "hi": 0.686
+    }
+   },
+   {
+    "name": "Division games",
+    "old": {
+     "rate": 0.528,
+     "n": 1223,
+     "lo": 0.5,
+     "hi": 0.556
+    },
+    "new": {
+     "rate": 0.5,
+     "n": 706,
+     "lo": 0.463,
+     "hi": 0.537
+    }
+   },
+   {
+    "name": "Total of 50+",
+    "old": {
+     "rate": 0.512,
+     "n": 322,
+     "lo": 0.458,
+     "hi": 0.567
+    },
+    "new": {
+     "rate": 0.509,
+     "n": 269,
+     "lo": 0.45,
+     "hi": 0.569
+    }
+   },
+   {
+    "name": "Total of 40 or less",
+    "old": {
+     "rate": 0.467,
+     "n": 676,
+     "lo": 0.43,
+     "hi": 0.505
+    },
+    "new": {
+     "rate": 0.498,
+     "n": 253,
+     "lo": 0.436,
+     "hi": 0.56
+    }
+   },
+   {
+    "name": "Week 13 on",
+    "old": {
+     "rate": 0.522,
+     "n": 1015,
+     "lo": 0.491,
+     "hi": 0.553
+    },
+    "new": {
+     "rate": 0.472,
+     "n": 615,
+     "lo": 0.432,
+     "hi": 0.511
+    }
+   },
+   {
+    "name": "Weeks 1-4",
+    "old": {
+     "rate": 0.474,
+     "n": 799,
+     "lo": 0.44,
+     "hi": 0.509
+    },
+    "new": {
+     "rate": 0.528,
+     "n": 508,
+     "lo": 0.484,
+     "hi": 0.571
+    }
+   },
+   {
+    "name": "Indoors",
+    "old": {
+     "rate": 0.491,
+     "n": 788,
+     "lo": 0.456,
+     "hi": 0.526
+    },
+    "new": {
+     "rate": 0.477,
+     "n": 612,
+     "lo": 0.438,
+     "hi": 0.517
+    }
+   }
+  ],
+  "luck": {
+   "Wind 10+ mph": 0.185,
+   "Road underdogs": 0.698,
+   "Home underdogs of 7+": 0.937,
+   "Wind 15+ mph": 0.95
+  }
+ },
+ "moneyline": [
+  {
+   "name": "Favorites \u22122000 to \u2212400",
+   "old": {
+    "roi": -0.007,
+    "n": 487
+   },
+   "new": {
+    "roi": -0.033,
+    "n": 305
+   }
+  },
+  {
+   "name": "Favorites \u2212400 to \u2212250",
+   "old": {
+    "roi": -0.015,
+    "n": 700
+   },
+   "new": {
+    "roi": -0.016,
+    "n": 434
+   }
+  },
+  {
+   "name": "Favorites \u2212250 to \u2212150",
+   "old": {
+    "roi": -0.061,
+    "n": 1185
+   },
+   "new": {
+    "roi": -0.034,
+    "n": 750
+   }
+  },
+  {
+   "name": "Favorites \u2212150 to \u2212100",
+   "old": {
+    "roi": -0.015,
+    "n": 883
+   },
+   "new": {
+    "roi": -0.044,
+    "n": 563
+   }
+  },
+  {
+   "name": "Underdogs +100 to +150",
+   "old": {
+    "roi": 0.007,
+    "n": 930
+   },
+   "new": {
+    "roi": -0.052,
+    "n": 653
+   }
+  },
+  {
+   "name": "Underdogs +150 to +250",
+   "old": {
+    "roi": 0.016,
+    "n": 1167
+   },
+   "new": {
+    "roi": -0.013,
+    "n": 683
+   }
+  },
+  {
+   "name": "Underdogs +250 to +400",
+   "old": {
+    "roi": -0.06,
+    "n": 637
+   },
+   "new": {
+    "roi": -0.08,
+    "n": 396
+   }
+  },
+  {
+   "name": "Underdogs +400 and up",
+   "old": {
+    "roi": -0.156,
+    "n": 376
+   },
+   "new": {
+    "roi": -0.103,
+    "n": 181
+   }
+  }
+ ],
+ "combined": {
+  "leave_one_season_out": {
+   "rate": 0.543,
+   "n": 1927,
+   "lo": 0.521,
+   "hi": 0.565
+  },
+  "trained_on_the_past": {
+   "rate": 0.527,
+   "n": 1441,
+   "lo": 0.502,
+   "hi": 0.553
+  },
+  "by_season": [
+   {
+    "season": 2021,
+    "rate": 0.541,
+    "n": 268,
+    "lo": 0.481,
+    "hi": 0.601
+   },
+   {
+    "season": 2022,
+    "rate": 0.479,
+    "n": 261,
+    "lo": 0.418,
+    "hi": 0.54
+   },
+   {
+    "season": 2023,
+    "rate": 0.543,
+    "n": 258,
+    "lo": 0.482,
+    "hi": 0.603
+   },
+   {
+    "season": 2024,
+    "rate": 0.537,
+    "n": 268,
+    "lo": 0.478,
+    "hi": 0.597
+   },
+   {
+    "season": 2025,
+    "rate": 0.554,
+    "n": 271,
+    "lo": 0.494,
+    "hi": 0.613
+   },
+   {
+    "season": 2026,
+    "rate": 0.487,
+    "n": 115,
+    "lo": 0.396,
+    "hi": 0.578
+   }
+  ],
+  "always_underdog": {
+   "rate": 0.517,
+   "n": 1927,
+   "lo": 0.495,
+   "hi": 0.539
+  },
+  "top_decile": {
+   "rate": 0.51,
+   "n": 145,
+   "lo": 0.429,
+   "hi": 0.592
+  }
+ }
+}

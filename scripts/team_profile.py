@@ -53,6 +53,8 @@ def team_game_tables(pbp):
     ).with_columns(
         ((pl.col("interception").fill_null(0) == 1) | (pl.col("fumble_lost").fill_null(0) == 1)).alias("to"),
         (pl.col("yards_gained").fill_null(0) >= 20).alias("explosive"),
+        pl.col("wp").is_between(0.1, 0.9).fill_null(False).alias("neutral"),
+        (pl.col("down").fill_null(0) <= 2).alias("early"),
     )
 
     def agg(by):
@@ -61,6 +63,10 @@ def team_game_tables(pbp):
             pl.col("epa").sum().alias("epa"),
             pl.col("epa").filter(~pl.col("to")).sum().alias("epa_no_to"),
             (~pl.col("to")).sum().alias("plays_no_to"),
+            pl.col("epa").filter(pl.col("neutral")).sum().alias("epa_neutral"),
+            pl.col("neutral").sum().alias("plays_neutral"),
+            pl.col("epa").filter(pl.col("early")).sum().alias("epa_early"),
+            pl.col("early").sum().alias("plays_early"),
             pl.col("success").fill_null(0).sum().alias("success"),
             pl.col("explosive").sum().alias("explosive"),
             pl.col("to").sum().alias("turnovers"),
@@ -73,7 +79,12 @@ def team_game_tables(pbp):
             (pl.col("rush") == 1).sum().alias("rush_plays"),
         ).rename({by: "team"})
 
-    return agg("posteam"), agg("defteam")
+    special = pbp.filter((pl.col("season_type") == "REG") & (pl.col("special_teams_play").fill_null(0) == 1) & pl.col("epa").is_not_null() & pl.col("posteam").is_not_null())
+    st_for = special.group_by(["game_id", "posteam"]).agg(pl.col("epa").sum().alias("a")).rename({"posteam": "team"})
+    st_against = special.group_by(["game_id", "defteam"]).agg((-pl.col("epa")).sum().alias("b")).rename({"defteam": "team"})
+    offense = agg("posteam").join(st_for, on=["game_id", "team"], how="left").join(st_against, on=["game_id", "team"], how="left").with_columns(
+        (pl.col("a").fill_null(0) + pl.col("b").fill_null(0)).alias("st")).drop("a", "b")
+    return offense, agg("defteam")
 
 
 def _rank(values, best_high=True):
@@ -215,8 +226,15 @@ def build_profiles(off, dfn, schedules, prior_off, prior_dfn, lab):
             "verdict_label": VERDICT_TEXT[verdict],
             "offense_rank": r_off[x],
             "defense_rank": r_def[x],
+            "offense_epa": round(off_epa[x], 3),
+            "defense_epa": round(def_epa[x], 3),
+            "ranks": {
+                "pass": r_pass[x], "rush": r_rush[x], "success": r_succ[x], "explosive": r_expl[x],
+                "def_pass": r_dpass[x], "def_rush": r_drush[x], "hits": r_hit[x], "sacks": r_sack[x], "takeaways": r_take[x],
+            },
         }
-    return {"season": SEASON, "available": True, "through_week": through, "teams": profiles}
+    history = {k: lab[k] for k in ("seasons", "checkpoints", "hold_rates", "splits", "carried", "verdicts")}
+    return {"season": SEASON, "available": True, "through_week": through, "period": period, "teams": profiles, "history": history}
 
 
 def main():

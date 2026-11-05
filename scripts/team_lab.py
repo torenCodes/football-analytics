@@ -38,7 +38,7 @@ PERIODS = {"early": (0, 6), "mid": (7, 10), "late": (11, 99)}
 def load_tables():
     if not (os.path.exists(CACHE_OFF) and os.path.exists(CACHE_DEF)):
         import nflreadpy as nfl
-        off, dfn = team_game_tables(nfl.load_pbp(seasons=list(range(2018, 2026))))
+        off, dfn = team_game_tables(nfl.load_pbp(seasons=list(range(2018, 2027))))
         off.write_parquet(CACHE_OFF)
         dfn.write_parquet(CACHE_DEF)
     fix = lambda t: t.with_columns(pl.col("team").replace(TEAM_CODE_ALIASES))

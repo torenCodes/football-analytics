@@ -163,6 +163,33 @@ def calibration(margin, spread, y):
     return out
 
 
+def versus_vegas(pred, X, c):
+    """Does the model add anything Vegas doesn't already have?"""
+    y, s, season = X[:, c["result"]], X[:, c["spread"]], X[:, c["season"]]
+    m = np.round(pred, 1)
+
+    def weight(mask):
+        A = np.column_stack([s[mask], pred[mask], np.ones(mask.sum())])
+        b = np.linalg.lstsq(A, y[mask], rcond=None)[0]
+        draws = [np.linalg.lstsq(A[i], y[mask][i], rcond=None)[0] for i in (rng.integers(0, mask.sum(), mask.sum()) for _ in range(BOOT))]
+        lo, hi = np.percentile(draws, [2.5, 97.5], axis=0)
+        return {"vegas": round(float(b[0]), 2), "vegas_lo": round(float(lo[0]), 2), "vegas_hi": round(float(hi[0]), 2), "model": round(float(b[1]), 2), "model_lo": round(float(lo[1]), 2), "model_hi": round(float(hi[1]), 2)}
+
+    def rate(w):
+        p = float(w.mean())
+        se = float(np.sqrt(p * (1 - p) / len(w)))
+        return {"rate": round(p, 3), "n": int(len(w)), "lo": round(p - 1.96 * se, 3), "hi": round(p + 1.96 * se, 3)}
+
+    gaps = []
+    for lo, hi in ((0, 1), (1, 2), (2, 3), (3, 5), (5, 8), (8, 99)):
+        g = (np.abs(m - s) >= lo) & (np.abs(m - s) < hi) & (m != s) & (y != s)
+        gaps.append({"gap_from": lo, "gap_to": hi, **rate((m[g] > s[g]) == (y[g] > s[g]))})
+    unseen = season >= 2025
+    blend = [{"model_share": w, "squared_error": round(float(np.mean(((1 - w) * s[unseen] + w * pred[unseen] - y[unseen]) ** 2)), 2), "avg_miss": round(float(np.mean(np.abs((1 - w) * s[unseen] + w * pred[unseen] - y[unseen]))), 3)} for w in (0, 0.1, 0.2, 0.3, 0.5, 1.0)]
+    differ = (np.sign(m) != np.sign(s)) & (m != 0) & (s != 0) & (y != 0)
+    return {"weight_all": weight(season >= 2021), "weight_unseen": weight(unseen), "gaps": gaps, "blend": blend, "different_winner": rate(np.sign(m[differ]) == np.sign(y[differ]))}
+
+
 def main():
     schedules, eff = load_inputs()
     print(f"Building walk-forward features for {FIT_SEASONS} and the holdouts...")
@@ -213,6 +240,7 @@ def main():
     all_seasons = np.vstack([samples["fit"], samples["2025"], samples["2026"]])
     report["calibration"] = calibration(predict_v2(all_seasons, c), all_seasons[:, c["spread"]], all_seasons[:, c["result"]])
     report["calibration_games"] = len(all_seasons)
+    report["vs_vegas"] = versus_vegas(predict_v2(all_seasons, c), all_seasons, c)
     report["constants"] = {
         "MARGIN_SCALE": bs.MARGIN_SCALE, "PD_WEIGHT": bs.PD_WEIGHT, "QB_SWAP_SHARE": bs.QB_SWAP_SHARE, "QB_OUT_PENALTY": bs.QB_OUT_PENALTY,
         "HOME_FIELD_ADJ": bs.HOME_FIELD_ADJ, "RHO_OFF": bs.RHO_OFF, "RHO_DEF": bs.RHO_DEF, "RHO_PD": bs.RHO_PD, "K_PLAYS": bs.K_PLAYS, "K_GAMES": bs.K_GAMES,

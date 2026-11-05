@@ -16,6 +16,7 @@ Six times a week — right after Monday Night Football wraps on Tuesday (with tw
 |---|---|
 | **[Fantasy](https://footballforecast.net/fantasy.html)** | A frozen preseason Draft Board (VORP-based snake-draft simulation) that pivots to weekly in-season content once Week 1 starts: Weekly Rankings (start/sit), a Waiver Wire Watch for likely-undrafted players outperforming expectations, and an accountability section grading the preseason board against how the season actually went |
 | **[Game Picks](https://footballforecast.net/betting.html)** | A weekly board: team efficiency and scoring margin blended from last season into this one, plus the QB situation, with each pick explained beside the real line. Each card answers "is this team for real?" from how similar teams finished, and Wind Watch flags over/unders with 10+ mph of forecast wind as a live test. The season-long track record is shown by model version, next to a walk-forward backtest |
+| **[Data Breakdown](https://footballforecast.net/data.html)** | Under the hood: the evidence behind Wind Watch, team verdicts and defense streaming, the models with their real weights, explorers that show each margin and Start Score being built, and a log of everything tried and rejected |
 
 Both pages pull their "why" from the same shared logic (see `scripts/shared.py` below) rather than maintaining two independent, silently-drifting copies of it.
 
@@ -119,7 +120,7 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
                                       │ push triggers auto-deploy
                                       ▼
                             Render (static site, no build step)
-                            └─ index.html / fantasy.html / betting.html
+                            └─ index.html / fantasy.html / betting.html / data.html
                                       │  fetch their own data/*.json
                                       ▼
                             footballforecast.net
@@ -137,6 +138,7 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 ├── index.html                # homepage -- season-aware teaser, waiver wire sneak peek
 ├── fantasy.html               # Draft Board, Dream Team, Weekly Rankings, Waiver Wire, accountability
 ├── betting.html                # Game Picks board, storylines, ATS track record
+├── data.html, data.js           # Data Breakdown -- every chart is plain SVG from the site's own JSON
 ├── tokens.css                 # design tokens (colors per theme, spacing, type) from the Claude Design system
 ├── styles.css                 # component styles -- the design system's bundle.css plus a short site-additions block
 ├── app.py                     # local-dev file server only -- Render serves this same folder statically
@@ -150,6 +152,7 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 │   ├── rating_lab.py                 # tests refinements to the rating, leave-one-season-out (local-only)
 │   ├── fantasy_lab.py                 # grades the rankings against FantasyPros history, fits the Start Score (local-only)
 │   ├── wind_lab.py, streaming_lab.py, team_lab.py  # the evidence behind Wind Watch, defense streaming and team verdicts (local-only)
+│   ├── edge_lab.py                      # richer ratings, market rules, moneylines, what lasts (local-only)
 │   ├── wind_watch.py, team_profile.py  # Wind Watch spots and "is this team for real?" (in CI)
 │   ├── backtest_line_continuity.py # tests whether O-line continuity improves the picks (local-only; it doesn't, yet)
 │   ├── restore_thursday_games.py, backfill_weekly_rankings.py  # one-time repairs from git history
@@ -159,7 +162,7 @@ GitHub Actions (2 scheduled workflows, 6 runs/week: Tue ~1/4/6am
 ├── data/
 │   ├── betting/                       # game_board.json, accountability.json, best_calls_backtest.json, archive/
 │   ├── fantasy/                        # draft_board.json, weekly_rankings.json, waiver_wire.json, weekly_accountability.json, archive/
-│   └── lab/                             # results of the local test scripts
+│   └── lab/                             # results of the local test scripts, read by the Data Breakdown page
 └── .github/workflows/                   # the two scheduled scans
 ```
 

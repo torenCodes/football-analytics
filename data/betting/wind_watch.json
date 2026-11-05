@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-05T21:06:40.975467+00:00"
+  "generated_at": "2026-11-05T21:38:12.945243+00:00"
  },
  "season": 2026,
  "week": 9,
@@ -21,7 +21,7 @@
    "gust_mph": 11.0,
    "total": 50.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:06:40.975467+00:00"
+   "locked_at": "2026-11-05T21:38:12.945243+00:00"
   },
   {
    "game_id": "2026_09_NYG_PHI",
@@ -33,10 +33,10 @@
    "away_team": "NYG",
    "home_team": "PHI",
    "forecast_mph": 11.9,
-   "gust_mph": 20.8,
+   "gust_mph": 21.0,
    "total": 38.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:06:40.975467+00:00"
+   "locked_at": "2026-11-05T21:38:12.945243+00:00"
   },
   {
    "game_id": "2026_09_LA_WAS",
@@ -48,10 +48,10 @@
    "away_team": "LA",
    "home_team": "WAS",
    "forecast_mph": 11.6,
-   "gust_mph": 20.4,
+   "gust_mph": 17.9,
    "total": 48.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:06:40.975467+00:00"
+   "locked_at": "2026-11-05T21:38:12.945243+00:00"
   },
   {
    "game_id": "2026_09_GB_NE",
@@ -63,10 +63,10 @@
    "away_team": "GB",
    "home_team": "NE",
    "forecast_mph": 10.8,
-   "gust_mph": 21.5,
+   "gust_mph": 28.9,
    "total": 45.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:06:40.975467+00:00"
+   "locked_at": "2026-11-05T21:38:12.945243+00:00"
   }
  ],
  "outdoor_games": 9,
@@ -87,28 +87,36 @@
    },
    "buckets": [
     {
-     "lo": 0.413,
-     "hi": 0.518,
+     "from_mph": 0,
+     "to_mph": 6,
      "rate": 0.466,
-     "n": 348
+     "n": 348,
+     "lo": 0.413,
+     "hi": 0.518
     },
     {
-     "lo": 0.463,
-     "hi": 0.577,
+     "from_mph": 6,
+     "to_mph": 10,
      "rate": 0.52,
-     "n": 296
+     "n": 296,
+     "lo": 0.463,
+     "hi": 0.577
     },
     {
-     "lo": 0.526,
-     "hi": 0.696,
+     "from_mph": 10,
+     "to_mph": 15,
      "rate": 0.611,
-     "n": 126
+     "n": 126,
+     "lo": 0.526,
+     "hi": 0.696
     },
     {
-     "lo": 0.217,
-     "hi": 0.64,
+     "from_mph": 15,
+     "to_mph": 99,
      "rate": 0.429,
-     "n": 21
+     "n": 21,
+     "lo": 0.217,
+     "hi": 0.64
     }
    ],
    "by_season": {
@@ -144,23 +152,27 @@
     }
    },
    "pts_per_mph": -0.32,
-   "lo": -0.562,
-   "hi": -0.081
+   "slope_lo": -0.562,
+   "slope_hi": -0.081
   },
   "recorded": {
    "2006-2018": {
     "rate": 0.537,
     "n": 849,
-    "lo": -0.288,
-    "hi": -0.092,
-    "pts_per_mph": -0.188
+    "lo": 0.504,
+    "hi": 0.571,
+    "pts_per_mph": -0.188,
+    "slope_lo": -0.288,
+    "slope_hi": -0.092
    },
    "2019-2026": {
     "rate": 0.58,
     "n": 407,
-    "lo": -0.322,
-    "hi": -0.002,
-    "pts_per_mph": -0.164
+    "lo": 0.532,
+    "hi": 0.628,
+    "pts_per_mph": -0.164,
+    "slope_lo": -0.322,
+    "slope_hi": -0.002
    }
   },
   "break_even": 0.524

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T03:12:43.717860+00:00",
+ "generated_at": "2026-11-05T21:38:18.477806+00:00",
  "fit_seasons": [
   2021,
   2022,
@@ -201,6 +201,112 @@
   }
  ],
  "calibration_games": 1480,
+ "vs_vegas": {
+  "weight_all": {
+   "vegas": 1.14,
+   "vegas_lo": 0.93,
+   "vegas_hi": 1.35,
+   "model": -0.11,
+   "model_lo": -0.35,
+   "model_hi": 0.13
+  },
+  "weight_unseen": {
+   "vegas": 1.35,
+   "vegas_lo": 0.97,
+   "vegas_hi": 1.75,
+   "model": -0.32,
+   "model_lo": -0.76,
+   "model_hi": 0.11
+  },
+  "gaps": [
+   {
+    "gap_from": 0,
+    "gap_to": 1,
+    "rate": 0.516,
+    "n": 370,
+    "lo": 0.465,
+    "hi": 0.567
+   },
+   {
+    "gap_from": 1,
+    "gap_to": 2,
+    "rate": 0.507,
+    "n": 371,
+    "lo": 0.456,
+    "hi": 0.558
+   },
+   {
+    "gap_from": 2,
+    "gap_to": 3,
+    "rate": 0.442,
+    "n": 265,
+    "lo": 0.382,
+    "hi": 0.501
+   },
+   {
+    "gap_from": 3,
+    "gap_to": 5,
+    "rate": 0.498,
+    "n": 289,
+    "lo": 0.441,
+    "hi": 0.556
+   },
+   {
+    "gap_from": 5,
+    "gap_to": 8,
+    "rate": 0.477,
+    "n": 107,
+    "lo": 0.382,
+    "hi": 0.571
+   },
+   {
+    "gap_from": 8,
+    "gap_to": 99,
+    "rate": 0.522,
+    "n": 23,
+    "lo": 0.318,
+    "hi": 0.726
+   }
+  ],
+  "blend": [
+   {
+    "model_share": 0,
+    "squared_error": 149.87,
+    "avg_miss": 9.676
+   },
+   {
+    "model_share": 0.1,
+    "squared_error": 150.62,
+    "avg_miss": 9.7
+   },
+   {
+    "model_share": 0.2,
+    "squared_error": 151.55,
+    "avg_miss": 9.728
+   },
+   {
+    "model_share": 0.3,
+    "squared_error": 152.68,
+    "avg_miss": 9.763
+   },
+   {
+    "model_share": 0.5,
+    "squared_error": 155.51,
+    "avg_miss": 9.845
+   },
+   {
+    "model_share": 1.0,
+    "squared_error": 165.93,
+    "avg_miss": 10.112
+   }
+  ],
+  "different_winner": {
+   "rate": 0.372,
+   "n": 215,
+   "lo": 0.307,
+   "hi": 0.437
+  }
+ },
  "constants": {
   "MARGIN_SCALE": 37.0,
   "PD_WEIGHT": 0.25,
