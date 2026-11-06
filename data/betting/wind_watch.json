@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-05T21:54:28.260786+00:00"
+  "generated_at": "2026-11-06T01:35:42.463916+00:00"
  },
  "season": 2026,
  "week": 9,
@@ -17,11 +17,11 @@
    "kickoff_utc": "2026-11-08T18:00:00+00:00",
    "away_team": "DET",
    "home_team": "MIA",
-   "forecast_mph": 11.0,
-   "gust_mph": 11.0,
+   "forecast_mph": 10.7,
+   "gust_mph": 10.7,
    "total": 50.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:54:28.260786+00:00"
+   "locked_at": "2026-11-06T01:35:42.463916+00:00"
   },
   {
    "game_id": "2026_09_NYG_PHI",
@@ -32,11 +32,11 @@
    "kickoff_utc": "2026-11-08T18:00:00+00:00",
    "away_team": "NYG",
    "home_team": "PHI",
-   "forecast_mph": 11.9,
+   "forecast_mph": 10.1,
    "gust_mph": 21.0,
    "total": 38.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:54:28.260786+00:00"
+   "locked_at": "2026-11-06T01:35:42.463916+00:00"
   },
   {
    "game_id": "2026_09_LA_WAS",
@@ -47,11 +47,11 @@
    "kickoff_utc": "2026-11-08T18:00:00+00:00",
    "away_team": "LA",
    "home_team": "WAS",
-   "forecast_mph": 11.6,
+   "forecast_mph": 10.0,
    "gust_mph": 17.9,
    "total": 48.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:54:28.260786+00:00"
+   "locked_at": "2026-11-06T01:35:42.463916+00:00"
   },
   {
    "game_id": "2026_09_GB_NE",
@@ -64,9 +64,24 @@
    "home_team": "NE",
    "forecast_mph": 10.8,
    "gust_mph": 28.9,
-   "total": 45.5,
+   "total": 44.5,
    "spot": true,
-   "locked_at": "2026-11-05T21:54:28.260786+00:00"
+   "locked_at": "2026-11-06T01:35:42.463916+00:00"
+  },
+  {
+   "game_id": "2026_09_ARI_SEA",
+   "week": 9,
+   "gameday": "2026-11-08",
+   "gametime": "16:25",
+   "weekday": "Sunday",
+   "kickoff_utc": "2026-11-08T21:25:00+00:00",
+   "away_team": "ARI",
+   "home_team": "SEA",
+   "forecast_mph": 10.8,
+   "gust_mph": 15.0,
+   "total": 39.5,
+   "spot": true,
+   "locked_at": "2026-11-06T01:35:42.463916+00:00"
   }
  ],
  "outdoor_games": 9,
