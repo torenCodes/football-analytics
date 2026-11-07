@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-05T21:55:15.432612+00:00"
+  "generated_at": "2026-11-07T01:46:25.651539+00:00"
  },
  "available": true,
  "season": 2026,
@@ -830,6 +830,14 @@
      }
     }
    }
+  },
+  {
+   "week": 9,
+   "start_score_version": "v2",
+   "by_format": {
+    "ppr": {},
+    "standard": {}
+   }
   }
  ],
  "season_by_format": {
@@ -1069,6 +1077,13 @@
      "weeks": 7
     }
    }
+  },
+  "v2": {
+   "weeks": [
+    9
+   ],
+   "ppr": {},
+   "standard": {}
   }
  }
 }

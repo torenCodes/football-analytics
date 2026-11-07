@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 9,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0036971",
+          "name": "Trevor Lawrence",
+          "team": "JAX",
+          "points": 13.6
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0034975",
+          "name": "Justice Hill",
+          "team": "BAL",
+          "points": 18.2
+        },
+        {
+          "player_id": "00-0038611",
+          "name": "Chris Rodriguez Jr.",
+          "team": "JAX",
+          "points": 11.2
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038606",
+          "name": "Parker Washington",
+          "team": "JAX",
+          "points": 14.1
+        },
+        {
+          "player_id": "00-0034960",
+          "name": "Jakobi Meyers",
+          "team": "JAX",
+          "points": 10.5
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0041503",
+          "name": "Nate Boerkircher",
+          "team": "JAX",
+          "points": 8.1
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0040719",
+          "name": "Bhayshul Tuten",
+          "team": "JAX",
+          "points": 8.9
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0039409",
+          "name": "Cam Little",
+          "team": "JAX",
+          "points": 17.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "JAX_DST",
+          "name": "JAX D/ST",
+          "team": "JAX",
+          "points": 11.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 112.6,
+    "bench": [
+      {
+        "player_id": "00-0032764",
+        "name": "Derrick Henry",
+        "team": "BAL",
+        "position": "RB",
+        "points": 5.6
+      },
+      {
+        "player_id": "00-0039064",
+        "name": "Zay Flowers",
+        "team": "BAL",
+        "position": "WR",
+        "points": 5.3
+      },
+      {
+        "player_id": "00-0038935",
+        "name": "Brenton Strange",
+        "team": "JAX",
+        "position": "TE",
+        "points": 4.2
+      },
+      {
+        "player_id": "00-0032104",
+        "name": "Ameer Abdullah",
+        "team": "JAX",
+        "position": "RB",
+        "points": 3.0
+      },
+      {
+        "player_id": "00-0040075",
+        "name": "LaJohntay Wester",
+        "team": "BAL",
+        "position": "WR",
+        "points": 2.4
+      },
+      {
+        "player_id": "00-0036550",
+        "name": "Rashod Bateman",
+        "team": "BAL",
+        "position": "WR",
+        "points": 1.6
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 9,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0036971",
+          "name": "Trevor Lawrence",
+          "team": "JAX",
+          "points": 13.6
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0034975",
+          "name": "Justice Hill",
+          "team": "BAL",
+          "points": 15.2
+        },
+        {
+          "player_id": "00-0038611",
+          "name": "Chris Rodriguez Jr.",
+          "team": "JAX",
+          "points": 9.2
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0038606",
+          "name": "Parker Washington",
+          "team": "JAX",
+          "points": 12.1
+        },
+        {
+          "player_id": "00-0034960",
+          "name": "Jakobi Meyers",
+          "team": "JAX",
+          "points": 6.5
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0041503",
+          "name": "Nate Boerkircher",
+          "team": "JAX",
+          "points": 6.1
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0040719",
+          "name": "Bhayshul Tuten",
+          "team": "JAX",
+          "points": 8.9
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0039409",
+          "name": "Cam Little",
+          "team": "JAX",
+          "points": 17.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "JAX_DST",
+          "name": "JAX D/ST",
+          "team": "JAX",
+          "points": 11.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 99.6,
+    "bench": [
+      {
+        "player_id": "00-0032764",
+        "name": "Derrick Henry",
+        "team": "BAL",
+        "position": "RB",
+        "points": 5.6
+      },
+      {
+        "player_id": "00-0032104",
+        "name": "Ameer Abdullah",
+        "team": "JAX",
+        "position": "RB",
+        "points": 3.0
+      },
+      {
+        "player_id": "00-0039064",
+        "name": "Zay Flowers",
+        "team": "BAL",
+        "position": "WR",
+        "points": 2.3
+      },
+      {
+        "player_id": "00-0038935",
+        "name": "Brenton Strange",
+        "team": "JAX",
+        "position": "TE",
+        "points": 2.2
+      },
+      {
+        "player_id": "00-0040075",
+        "name": "LaJohntay Wester",
+        "team": "BAL",
+        "position": "WR",
+        "points": 1.4
+      },
+      {
+        "player_id": "00-0036550",
+        "name": "Rashod Bateman",
+        "team": "BAL",
+        "position": "WR",
+        "points": 0.6
+      }
+    ]
+  }
+}

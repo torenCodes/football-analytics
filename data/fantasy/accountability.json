@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-05T21:55:15.432612+00:00"
+    "generated_at": "2026-11-07T01:46:25.651539+00:00"
   },
   "available": true,
   "season": 2026,
@@ -8,12 +8,12 @@
     "ppr": {
       "QB": {
         "players_graded": 31,
-        "mean_abs_rank_error": 9.4,
+        "mean_abs_rank_error": 9.5,
         "hit_rate_within_5": 0.323,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.49,
-          "market_rho": 0.495
+          "ours_rho": 0.47,
+          "market_rho": 0.483
         },
         "biggest_steals": [
           {
@@ -47,8 +47,8 @@
             "player_id": "00-0039163",
             "name": "C.J. Stroud",
             "preseason_rank": 24,
-            "actual_rank": 10,
-            "rank_error": -14,
+            "actual_rank": 9,
+            "rank_error": -15,
             "games": 7,
             "ppg": 19.0
           },
@@ -112,12 +112,12 @@
       },
       "RB": {
         "players_graded": 39,
-        "mean_abs_rank_error": 11.6,
-        "hit_rate_within_5": 0.333,
+        "mean_abs_rank_error": 11.7,
+        "hit_rate_within_5": 0.308,
         "vs_consensus": {
           "players": 39,
-          "ours_rho": 0.559,
-          "market_rho": 0.698
+          "ours_rho": 0.552,
+          "market_rho": 0.696
         },
         "biggest_steals": [
           {
@@ -180,8 +180,8 @@
             "player_id": "00-0040734",
             "name": "TreVeyon Henderson",
             "preseason_rank": 19,
-            "actual_rank": 51,
-            "rank_error": 32,
+            "actual_rank": 52,
+            "rank_error": 33,
             "games": 6,
             "ppg": 5.6
           },
@@ -189,8 +189,8 @@
             "player_id": "00-0036919",
             "name": "Kenny Gainwell",
             "preseason_rank": 16,
-            "actual_rank": 44,
-            "rank_error": 28,
+            "actual_rank": 46,
+            "rank_error": 30,
             "games": 8,
             "ppg": 6.6
           },
@@ -216,11 +216,11 @@
       },
       "WR": {
         "players_graded": 45,
-        "mean_abs_rank_error": 15.7,
-        "hit_rate_within_5": 0.333,
+        "mean_abs_rank_error": 15.6,
+        "hit_rate_within_5": 0.356,
         "vs_consensus": {
           "players": 45,
-          "ours_rho": 0.655,
+          "ours_rho": 0.653,
           "market_rho": 0.752
         },
         "biggest_steals": [
@@ -228,8 +228,8 @@
             "player_id": "00-0036912",
             "name": "DeVonta Smith",
             "preseason_rank": 37,
-            "actual_rank": 10,
-            "rank_error": -27,
+            "actual_rank": 9,
+            "rank_error": -28,
             "games": 4,
             "ppg": 17.2
           },
@@ -308,13 +308,13 @@
             "ppg": 5.4
           },
           {
-            "player_id": "00-0033921",
-            "name": "Chris Godwin Jr.",
-            "preseason_rank": 38,
-            "actual_rank": 72,
-            "rank_error": 34,
-            "games": 8,
-            "ppg": 6.6
+            "player_id": "00-0039849",
+            "name": "Marvin Harrison Jr.",
+            "preseason_rank": 45,
+            "actual_rank": 78,
+            "rank_error": 33,
+            "games": 6,
+            "ppg": 5.6
           }
         ]
       },
@@ -324,8 +324,8 @@
         "hit_rate_within_5": 0.326,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.553,
-          "market_rho": 0.747
+          "ours_rho": 0.557,
+          "market_rho": 0.748
         },
         "biggest_steals": [
           {
@@ -365,13 +365,13 @@
             "ppg": 9.9
           },
           {
-            "player_id": "00-0034753",
-            "name": "Mark Andrews",
-            "preseason_rank": 43,
-            "actual_rank": 27,
+            "player_id": "00-0035644",
+            "name": "Noah Fant",
+            "preseason_rank": 47,
+            "actual_rank": 31,
             "rank_error": -16,
-            "games": 8,
-            "ppg": 6.9
+            "games": 6,
+            "ppg": 6.2
           }
         ],
         "biggest_busts": [
@@ -388,8 +388,8 @@
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 10,
-            "actual_rank": 42,
-            "rank_error": 32,
+            "actual_rank": 43,
+            "rank_error": 33,
             "games": 6,
             "ppg": 5.0
           },
@@ -424,12 +424,12 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 11.3,
-        "hit_rate_within_5": 0.259,
+        "mean_abs_rank_error": 11.0,
+        "hit_rate_within_5": 0.333,
         "vs_consensus": {
           "players": 27,
-          "ours_rho": 0.226,
-          "market_rho": 0.158
+          "ours_rho": 0.263,
+          "market_rho": 0.185
         },
         "biggest_steals": [
           {
@@ -454,8 +454,8 @@
             "player_id": "00-0040279",
             "name": "Ryan Fitzgerald",
             "preseason_rank": 34,
-            "actual_rank": 14,
-            "rank_error": -20,
+            "actual_rank": 15,
+            "rank_error": -19,
             "games": 7,
             "ppg": 8.9
           },
@@ -463,8 +463,8 @@
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
-            "actual_rank": 8,
-            "rank_error": -19,
+            "actual_rank": 9,
+            "rank_error": -18,
             "games": 8,
             "ppg": 9.6
           },
@@ -519,8 +519,8 @@
             "player_id": "00-0031492",
             "name": "Jason Myers",
             "preseason_rank": 2,
-            "actual_rank": 15,
-            "rank_error": 13,
+            "actual_rank": 16,
+            "rank_error": 14,
             "games": 8,
             "ppg": 8.8
           }
@@ -528,12 +528,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.2,
-        "hit_rate_within_5": 0.312,
+        "mean_abs_rank_error": 9.0,
+        "hit_rate_within_5": 0.344,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.288,
-          "market_rho": 0.256
+          "ours_rho": 0.308,
+          "market_rho": 0.254
         },
         "biggest_steals": [
           {
@@ -634,12 +634,12 @@
     "standard": {
       "QB": {
         "players_graded": 31,
-        "mean_abs_rank_error": 9.3,
+        "mean_abs_rank_error": 9.4,
         "hit_rate_within_5": 0.323,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.494,
-          "market_rho": 0.495
+          "ours_rho": 0.474,
+          "market_rho": 0.483
         },
         "biggest_steals": [
           {
@@ -673,8 +673,8 @@
             "player_id": "00-0039163",
             "name": "C.J. Stroud",
             "preseason_rank": 24,
-            "actual_rank": 10,
-            "rank_error": -14,
+            "actual_rank": 9,
+            "rank_error": -15,
             "games": 7,
             "ppg": 19.0
           },
@@ -739,11 +739,11 @@
       "RB": {
         "players_graded": 39,
         "mean_abs_rank_error": 11.8,
-        "hit_rate_within_5": 0.333,
+        "hit_rate_within_5": 0.308,
         "vs_consensus": {
           "players": 39,
-          "ours_rho": 0.478,
-          "market_rho": 0.68
+          "ours_rho": 0.493,
+          "market_rho": 0.684
         },
         "biggest_steals": [
           {
@@ -759,10 +759,10 @@
             "player_id": "00-0040719",
             "name": "Bhayshul Tuten",
             "preseason_rank": 44,
-            "actual_rank": 10,
-            "rank_error": -34,
-            "games": 7,
-            "ppg": 14.8
+            "actual_rank": 14,
+            "rank_error": -30,
+            "games": 8,
+            "ppg": 14.0
           },
           {
             "player_id": "00-0038134",
@@ -803,6 +803,15 @@
             "ppg": 4.8
           },
           {
+            "player_id": "00-0039384",
+            "name": "Tyrone Tracy Jr.",
+            "preseason_rank": 29,
+            "actual_rank": 55,
+            "rank_error": 26,
+            "games": 7,
+            "ppg": 3.8
+          },
+          {
             "player_id": "00-0038597",
             "name": "Chase Brown",
             "preseason_rank": 4,
@@ -810,15 +819,6 @@
             "rank_error": 26,
             "games": 7,
             "ppg": 7.8
-          },
-          {
-            "player_id": "00-0039384",
-            "name": "Tyrone Tracy Jr.",
-            "preseason_rank": 29,
-            "actual_rank": 54,
-            "rank_error": 25,
-            "games": 7,
-            "ppg": 3.8
           },
           {
             "player_id": "00-0036919",
@@ -830,32 +830,32 @@
             "ppg": 5.1
           },
           {
-            "player_id": "00-0040730",
-            "name": "RJ Harvey",
-            "preseason_rank": 17,
-            "actual_rank": 37,
+            "player_id": "00-0034844",
+            "name": "Saquon Barkley",
+            "preseason_rank": 15,
+            "actual_rank": 35,
             "rank_error": 20,
             "games": 6,
-            "ppg": 7.1
+            "ppg": 7.2
           }
         ]
       },
       "WR": {
         "players_graded": 45,
-        "mean_abs_rank_error": 18.3,
+        "mean_abs_rank_error": 18.2,
         "hit_rate_within_5": 0.333,
         "vs_consensus": {
           "players": 45,
-          "ours_rho": 0.665,
-          "market_rho": 0.745
+          "ours_rho": 0.663,
+          "market_rho": 0.744
         },
         "biggest_steals": [
           {
             "player_id": "00-0036912",
             "name": "DeVonta Smith",
             "preseason_rank": 42,
-            "actual_rank": 12,
-            "rank_error": -30,
+            "actual_rank": 11,
+            "rank_error": -31,
             "games": 4,
             "ppg": 10.8
           },
@@ -910,8 +910,8 @@
             "player_id": "00-0039868",
             "name": "Troy Franklin",
             "preseason_rank": 50,
-            "actual_rank": 120,
-            "rank_error": 70,
+            "actual_rank": 121,
+            "rank_error": 71,
             "games": 7,
             "ppg": 1.1
           },
@@ -937,8 +937,8 @@
             "player_id": "00-0033921",
             "name": "Chris Godwin Jr.",
             "preseason_rank": 39,
-            "actual_rank": 88,
-            "rank_error": 49,
+            "actual_rank": 87,
+            "rank_error": 48,
             "games": 8,
             "ppg": 3.3
           }
@@ -947,11 +947,11 @@
       "TE": {
         "players_graded": 43,
         "mean_abs_rank_error": 13.7,
-        "hit_rate_within_5": 0.209,
+        "hit_rate_within_5": 0.163,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.577,
-          "market_rho": 0.76
+          "ours_rho": 0.574,
+          "market_rho": 0.756
         },
         "biggest_steals": [
           {
@@ -976,8 +976,8 @@
             "player_id": "00-0040736",
             "name": "Mason Taylor",
             "preseason_rank": 40,
-            "actual_rank": 19,
-            "rank_error": -21,
+            "actual_rank": 18,
+            "rank_error": -22,
             "games": 5,
             "ppg": 5.5
           },
@@ -1050,12 +1050,12 @@
       },
       "K": {
         "players_graded": 27,
-        "mean_abs_rank_error": 11.3,
-        "hit_rate_within_5": 0.259,
+        "mean_abs_rank_error": 11.0,
+        "hit_rate_within_5": 0.333,
         "vs_consensus": {
           "players": 27,
-          "ours_rho": 0.226,
-          "market_rho": 0.158
+          "ours_rho": 0.263,
+          "market_rho": 0.185
         },
         "biggest_steals": [
           {
@@ -1080,8 +1080,8 @@
             "player_id": "00-0040279",
             "name": "Ryan Fitzgerald",
             "preseason_rank": 34,
-            "actual_rank": 14,
-            "rank_error": -20,
+            "actual_rank": 15,
+            "rank_error": -19,
             "games": 7,
             "ppg": 8.9
           },
@@ -1089,8 +1089,8 @@
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
-            "actual_rank": 8,
-            "rank_error": -19,
+            "actual_rank": 9,
+            "rank_error": -18,
             "games": 8,
             "ppg": 9.6
           },
@@ -1145,8 +1145,8 @@
             "player_id": "00-0031492",
             "name": "Jason Myers",
             "preseason_rank": 2,
-            "actual_rank": 15,
-            "rank_error": 13,
+            "actual_rank": 16,
+            "rank_error": 14,
             "games": 8,
             "ppg": 8.8
           }
@@ -1154,12 +1154,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 9.2,
-        "hit_rate_within_5": 0.312,
+        "mean_abs_rank_error": 9.0,
+        "hit_rate_within_5": 0.344,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.288,
-          "market_rho": 0.256
+          "ours_rho": 0.308,
+          "market_rho": 0.254
         },
         "biggest_steals": [
           {
