@@ -1,44 +1,13 @@
 {
  "meta": {
-  "generated_at": "2026-11-07T07:45:12.263390+00:00"
+  "generated_at": "2026-11-07T20:55:16.163498+00:00"
  },
  "season": 2026,
  "week": 9,
  "first_week": 9,
  "live": true,
  "rule_mph": 10,
- "spots": [
-  {
-   "game_id": "2026_09_NYG_PHI",
-   "week": 9,
-   "gameday": "2026-11-08",
-   "gametime": "13:00",
-   "weekday": "Sunday",
-   "kickoff_utc": "2026-11-08T18:00:00+00:00",
-   "away_team": "NYG",
-   "home_team": "PHI",
-   "forecast_mph": 10.0,
-   "gust_mph": 19.5,
-   "total": 38.5,
-   "spot": true,
-   "locked_at": "2026-11-07T07:45:12.263390+00:00"
-  },
-  {
-   "game_id": "2026_09_LA_WAS",
-   "week": 9,
-   "gameday": "2026-11-08",
-   "gametime": "13:00",
-   "weekday": "Sunday",
-   "kickoff_utc": "2026-11-08T18:00:00+00:00",
-   "away_team": "LA",
-   "home_team": "WAS",
-   "forecast_mph": 10.1,
-   "gust_mph": 22.1,
-   "total": 47.5,
-   "spot": true,
-   "locked_at": "2026-11-07T07:45:12.263390+00:00"
-  }
- ],
+ "spots": [],
  "outdoor_games": 9,
  "record": {
   "under": 0,
