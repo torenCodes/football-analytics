@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-11-05T21:54:27.701818+00:00"
+    "generated_at": "2026-11-07T02:21:34.730193+00:00"
   },
   "weeks_graded": 9,
   "ats": {
-    "graded": 114,
+    "graded": 115,
     "correct": 61,
-    "accuracy": 0.535
+    "accuracy": 0.53
   },
   "outright": {
-    "graded": 119,
-    "correct": 67,
-    "accuracy": 0.563
+    "graded": 120,
+    "correct": 68,
+    "accuracy": 0.567
   },
   "by_model": {
     "v0": {
@@ -44,18 +44,18 @@
         9
       ],
       "ats": {
-        "graded": 84,
+        "graded": 85,
         "correct": 46,
-        "accuracy": 0.548
+        "accuracy": 0.541
       },
       "outright": {
-        "graded": 87,
-        "correct": 51,
-        "accuracy": 0.586
+        "graded": 88,
+        "correct": 52,
+        "accuracy": 0.591
       },
-      "games": 89,
-      "model_corr": 0.304,
-      "vegas_corr": 0.334
+      "games": 90,
+      "model_corr": 0.325,
+      "vegas_corr": 0.363
     }
   },
   "season_to_date": [
@@ -178,6 +178,21 @@
       "vegas_mae": 9.63,
       "model_winners": 0.563,
       "vegas_winners": 0.65
+    },
+    {
+      "week": 9,
+      "games": 122,
+      "ats": {
+        "graded": 115,
+        "correct": 61,
+        "accuracy": 0.53
+      },
+      "model_corr": 0.161,
+      "vegas_corr": 0.377,
+      "model_mae": 10.7,
+      "vegas_mae": 9.66,
+      "model_winners": 0.567,
+      "vegas_winners": 0.653
     }
   ],
   "weeks": [
@@ -1904,14 +1919,14 @@
       "model_version": "v1",
       "locked_at": "2026-11-03T17:59:58.902507+00:00",
       "ats": {
-        "graded": 0,
+        "graded": 1,
         "correct": 0,
-        "accuracy": null
+        "accuracy": 0.0
       },
       "outright": {
-        "graded": 0,
-        "correct": 0,
-        "accuracy": null
+        "graded": 1,
+        "correct": 1,
+        "accuracy": 1.0
       },
       "games": [
         {
@@ -1961,10 +1976,10 @@
           "spread_home": -9.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -23,
+          "push": false,
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_09_TB_CHI",
