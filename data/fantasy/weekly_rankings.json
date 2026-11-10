@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-10T16:22:00.202088+00:00"
+    "generated_at": "2026-11-10T17:37:25.394041+00:00"
   },
   "available": true,
   "season": 2026,
@@ -189,24 +189,6 @@
           "rank": 10
         },
         {
-          "player_id": "00-0036264",
-          "name": "Jordan Love",
-          "position": "QB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 16.58,
-          "recent_ppg": 21.49,
-          "games_this_season": 9,
-          "matchup_adj": -0.12,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 11.8,
-          "rostered_pct": 82.1,
-          "explain": "Averaging 21.5 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
-          "rank": 11
-        },
-        {
           "player_id": "00-0039163",
           "name": "C.J. Stroud",
           "position": "QB",
@@ -222,7 +204,7 @@
           "market_rank": 14.1,
           "rostered_pct": 61.3,
           "explain": "Averaging 21.4 ppg over 8 game(s) this season. Vegas has HOU at about 22 points against CLE.",
-          "rank": 12
+          "rank": 11
         },
         {
           "player_id": "00-0039150",
@@ -240,6 +222,24 @@
           "market_rank": 20.41,
           "rostered_pct": 53.6,
           "explain": "Averaging 17.3 ppg over 8 game(s) this season. Vegas has CAR at about 24 points against NO.",
+          "rank": 12
+        },
+        {
+          "player_id": "00-0036264",
+          "name": "Jordan Love",
+          "position": "QB",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 16.35,
+          "recent_ppg": 21.49,
+          "games_this_season": 9,
+          "matchup_adj": -0.36,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 11.8,
+          "rostered_pct": 82.1,
+          "explain": "Averaging 21.5 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 13
         },
         {
@@ -446,16 +446,16 @@
           "position": "QB",
           "team": "MIN",
           "opponent": "GB",
-          "start_score": 14.39,
+          "start_score": 13.7,
           "recent_ppg": 12.26,
           "games_this_season": 6,
-          "matchup_adj": -1.86,
+          "matchup_adj": -2.55,
           "matchup_source": "current_season",
-          "implied_points": 19.0,
+          "implied_points": 17.5,
           "injury_status": null,
           "market_rank": null,
           "rostered_pct": null,
-          "explain": "Averaging 12.3 ppg over 6 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for QBs, worth about -1.9.",
+          "explain": "Averaging 12.3 ppg over 6 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for QBs, worth about -2.5.",
           "rank": 25
         },
         {
@@ -711,24 +711,6 @@
           "rank": 39
         },
         {
-          "player_id": "00-0028118",
-          "name": "Tyrod Taylor",
-          "position": "QB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 1.17,
-          "recent_ppg": -0.2,
-          "games_this_season": 1,
-          "matchup_adj": -0.12,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": "Backup",
-          "market_rank": 55.25,
-          "rostered_pct": 0.6,
-          "explain": "Averaging -0.2 ppg over 1 game(s) this season. Vegas has GB at about 24 points against MIN. Not the starter on GB's depth chart.",
-          "rank": 40
-        },
-        {
           "player_id": "00-0038476",
           "name": "Tommy DeVito",
           "position": "QB",
@@ -744,7 +726,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 1.1 ppg over 2 game(s) this season. Vegas has NE at about 24 points against DET. That's a favorable spot for QBs, worth about +1.4. Not the starter on NE's depth chart.",
-          "rank": 41
+          "rank": 40
         },
         {
           "player_id": "00-0034796",
@@ -762,7 +744,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 16.2 ppg over 5 game(s) this season. Vegas has BAL at about 22 points against LAC. On a reserve list, so not expected to play.",
-          "rank": 42
+          "rank": 41
         },
         {
           "player_id": "00-0036898",
@@ -780,6 +762,24 @@
           "market_rank": 60.5,
           "rostered_pct": 1.1,
           "explain": "Averaging 0.1 ppg over 1 game(s) this season. Vegas has HOU at about 22 points against CLE. Not the starter on HOU's depth chart.",
+          "rank": 42
+        },
+        {
+          "player_id": "00-0028118",
+          "name": "Tyrod Taylor",
+          "position": "QB",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 0.94,
+          "recent_ppg": -0.2,
+          "games_this_season": 1,
+          "matchup_adj": -0.36,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": "Backup",
+          "market_rank": 55.25,
+          "rostered_pct": 0.6,
+          "explain": "Averaging -0.2 ppg over 1 game(s) this season. Vegas has GB at about 23 points against MIN. Not the starter on GB's depth chart.",
           "rank": 43
         },
         {
@@ -801,24 +801,6 @@
           "rank": 44
         },
         {
-          "player_id": "00-0032950",
-          "name": "Carson Wentz",
-          "position": "QB",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 0.42,
-          "recent_ppg": 7.59,
-          "games_this_season": 3,
-          "matchup_adj": -1.86,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": "Backup",
-          "market_rank": 22.66,
-          "rostered_pct": 3.9,
-          "explain": "Averaging 7.6 ppg over 3 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for QBs, worth about -1.9. Not the starter on MIN's depth chart.",
-          "rank": 45
-        },
-        {
           "player_id": "00-0034771",
           "name": "Mason Rudolph",
           "position": "QB",
@@ -834,7 +816,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 0.1 ppg over 2 game(s) this season. Vegas has PIT at about 22 points against CIN. Not the starter on PIT's depth chart.",
-          "rank": 46
+          "rank": 45
         },
         {
           "player_id": "00-0040981",
@@ -852,7 +834,7 @@
           "market_rank": 29.95,
           "rostered_pct": 0.7,
           "explain": "Averaging -0.2 ppg over 2 game(s) this season. Vegas has BAL at about 22 points against LAC. Not the starter on BAL's depth chart.",
-          "rank": 47
+          "rank": 46
         },
         {
           "player_id": "00-0040668",
@@ -870,7 +852,7 @@
           "market_rank": 26.71,
           "rostered_pct": 4.3,
           "explain": "Averaging 7.6 ppg over 3 game(s) this season. Vegas has CLE at about 18 points against HOU. That's a tough spot for QBs, worth about -2.2. Not the starter on CLE's depth chart.",
-          "rank": 48
+          "rank": 47
         },
         {
           "player_id": "00-0035993",
@@ -888,7 +870,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 11.3 ppg over 5 game(s) this season. Vegas has BAL at about 22 points against LAC. On a reserve list, so not expected to play.",
-          "rank": 49
+          "rank": 48
         },
         {
           "player_id": "00-0036212",
@@ -906,6 +888,24 @@
           "market_rank": 47.8,
           "rostered_pct": 4.8,
           "explain": "Averaging -0.6 ppg over 1 game(s) this season. Vegas has ATL at about 21 points against KC. That's a tough spot for QBs, worth about -1.0. Not the starter on ATL's depth chart.",
+          "rank": 49
+        },
+        {
+          "player_id": "00-0039164",
+          "name": "Anthony Richardson",
+          "position": "QB",
+          "team": "IND",
+          "opponent": "MIA",
+          "start_score": -0.2,
+          "recent_ppg": 0.72,
+          "games_this_season": 1,
+          "matchup_adj": -0.36,
+          "matchup_source": "current_season",
+          "implied_points": 21.5,
+          "injury_status": "Backup",
+          "market_rank": 38.67,
+          "rostered_pct": 1.5,
+          "explain": "Averaging 0.7 ppg over 1 game(s) this season. Vegas has IND at about 22 points against MIA. Not the starter on IND's depth chart.",
           "rank": 50
         }
       ],
@@ -1132,16 +1132,16 @@
           "position": "RB",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 13.7,
+          "start_score": 13.58,
           "recent_ppg": 14.6,
           "games_this_season": 3,
-          "matchup_adj": 0.13,
+          "matchup_adj": 0.01,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 15.06,
           "rostered_pct": 96.3,
-          "explain": "Averaging 14.6 ppg over 3 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 14.6 ppg over 3 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 13
         },
         {
@@ -1325,24 +1325,6 @@
           "rank": 23
         },
         {
-          "player_id": "00-0033293",
-          "name": "Aaron Jones",
-          "position": "RB",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 10.82,
-          "recent_ppg": 10.38,
-          "games_this_season": 8,
-          "matchup_adj": -0.7,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 32.75,
-          "rostered_pct": 81.8,
-          "explain": "Averaging 10.4 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 24
-        },
-        {
           "player_id": "00-0040198",
           "name": "Ollie Gordon II",
           "position": "RB",
@@ -1358,7 +1340,7 @@
           "market_rank": 16.39,
           "rostered_pct": 88.9,
           "explain": "Averaging 12.3 ppg over 7 game(s) this season. Vegas has MIA at about 19 points against IND.",
-          "rank": 25
+          "rank": 24
         },
         {
           "player_id": "00-0039165",
@@ -1376,7 +1358,7 @@
           "market_rank": 30.56,
           "rostered_pct": 70.3,
           "explain": "Averaging 7.8 ppg over 2 game(s) this season. Vegas has SEA at about 24 points against LV.",
-          "rank": 26
+          "rank": 25
         },
         {
           "player_id": "00-0039738",
@@ -1394,6 +1376,24 @@
           "market_rank": 28.97,
           "rostered_pct": 81.8,
           "explain": "Averaging 11.6 ppg over 9 game(s) this season. Vegas has LA at about 25 points against ARI.",
+          "rank": 26
+        },
+        {
+          "player_id": "00-0033293",
+          "name": "Aaron Jones",
+          "position": "RB",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 10.45,
+          "recent_ppg": 10.38,
+          "games_this_season": 8,
+          "matchup_adj": -1.07,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 32.75,
+          "rostered_pct": 81.8,
+          "explain": "Averaging 10.4 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for RBs, worth about -1.1.",
           "rank": 27
         },
         {
@@ -1451,24 +1451,6 @@
           "rank": 30
         },
         {
-          "player_id": "00-0037256",
-          "name": "Rachaad White",
-          "position": "RB",
-          "team": "WAS",
-          "opponent": "NYG",
-          "start_score": 9.09,
-          "recent_ppg": 10.7,
-          "games_this_season": 7,
-          "matchup_adj": -0.83,
-          "matchup_source": "current_season",
-          "implied_points": 19.5,
-          "injury_status": null,
-          "market_rank": 25.58,
-          "rostered_pct": 75.3,
-          "explain": "Averaging 10.7 ppg over 7 game(s) this season. Vegas has WAS at about 20 points against NYG.",
-          "rank": 31
-        },
-        {
           "player_id": "00-0035685",
           "name": "David Montgomery",
           "position": "RB",
@@ -1484,6 +1466,24 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 9.1 ppg over 5 game(s) this season. Vegas has HOU at about 22 points against CLE.",
+          "rank": 31
+        },
+        {
+          "player_id": "00-0037256",
+          "name": "Rachaad White",
+          "position": "RB",
+          "team": "WAS",
+          "opponent": "NYG",
+          "start_score": 9.09,
+          "recent_ppg": 10.7,
+          "games_this_season": 7,
+          "matchup_adj": -0.83,
+          "matchup_source": "current_season",
+          "implied_points": 19.5,
+          "injury_status": null,
+          "market_rank": 25.58,
+          "rostered_pct": 75.3,
+          "explain": "Averaging 10.7 ppg over 7 game(s) this season. Vegas has WAS at about 20 points against NYG.",
           "rank": 32
         },
         {
@@ -1672,53 +1672,17 @@
           "position": "RB",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 7.75,
+          "start_score": 7.63,
           "recent_ppg": 6.53,
           "games_this_season": 8,
-          "matchup_adj": 0.13,
+          "matchup_adj": 0.01,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": null,
           "rostered_pct": null,
-          "explain": "Averaging 6.5 ppg over 8 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 6.5 ppg over 8 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 43
-        },
-        {
-          "player_id": "00-0037525",
-          "name": "Jordan Mason",
-          "position": "RB",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 7.74,
-          "recent_ppg": 6.73,
-          "games_this_season": 4,
-          "matchup_adj": -0.7,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 32.5,
-          "rostered_pct": 71.0,
-          "explain": "Averaging 6.7 ppg over 4 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 44
-        },
-        {
-          "player_id": "00-0038098",
-          "name": "Pierre Strong",
-          "position": "RB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 7.69,
-          "recent_ppg": 5.5,
-          "games_this_season": 4,
-          "matchup_adj": 0.13,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 65.58,
-          "rostered_pct": 1.9,
-          "explain": "Averaging 5.5 ppg over 4 game(s) this season. Vegas has GB at about 24 points against MIN.",
-          "rank": 45
         },
         {
           "player_id": "00-0039405",
@@ -1736,7 +1700,7 @@
           "market_rank": 74.5,
           "rostered_pct": 0.6,
           "explain": "Averaging 12.0 ppg over 1 game(s) this season. Vegas has HOU at about 22 points against CLE.",
-          "rank": 46
+          "rank": 44
         },
         {
           "player_id": "00-0041013",
@@ -1754,7 +1718,25 @@
           "market_rank": 45.11,
           "rostered_pct": 27.2,
           "explain": "Averaging 7.7 ppg over 8 game(s) this season. Vegas has KC at about 24 points against ATL.",
-          "rank": 47
+          "rank": 45
+        },
+        {
+          "player_id": "00-0038098",
+          "name": "Pierre Strong",
+          "position": "RB",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 7.57,
+          "recent_ppg": 5.5,
+          "games_this_season": 4,
+          "matchup_adj": 0.01,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 65.58,
+          "rostered_pct": 1.9,
+          "explain": "Averaging 5.5 ppg over 4 game(s) this season. Vegas has GB at about 23 points against MIN.",
+          "rank": 46
         },
         {
           "player_id": "00-0033526",
@@ -1772,6 +1754,24 @@
           "market_rank": 45.03,
           "rostered_pct": 10.4,
           "explain": "Averaging 5.6 ppg over 8 game(s) this season. Vegas has CIN at about 26 points against PIT.",
+          "rank": 47
+        },
+        {
+          "player_id": "00-0037525",
+          "name": "Jordan Mason",
+          "position": "RB",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 7.37,
+          "recent_ppg": 6.73,
+          "games_this_season": 4,
+          "matchup_adj": -1.07,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 32.5,
+          "rostered_pct": 71.0,
+          "explain": "Averaging 6.7 ppg over 4 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for RBs, worth about -1.1.",
           "rank": 48
         },
         {
@@ -1962,16 +1962,16 @@
           "position": "WR",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 14.9,
+          "start_score": 14.81,
           "recent_ppg": 18.91,
           "games_this_season": 9,
-          "matchup_adj": -0.08,
+          "matchup_adj": -0.16,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 11.27,
           "rostered_pct": 96.3,
-          "explain": "Averaging 18.9 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 18.9 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 9
         },
         {
@@ -1980,16 +1980,16 @@
           "position": "WR",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 14.4,
+          "start_score": 14.31,
           "recent_ppg": 18.79,
           "games_this_season": 9,
-          "matchup_adj": -0.08,
+          "matchup_adj": -0.16,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 13.05,
           "rostered_pct": 96.5,
-          "explain": "Averaging 18.8 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 18.8 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 10
         },
         {
@@ -2245,24 +2245,6 @@
           "rank": 24
         },
         {
-          "player_id": "00-0036322",
-          "name": "Justin Jefferson",
-          "position": "WR",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 11.13,
-          "recent_ppg": 12.13,
-          "games_this_season": 7,
-          "matchup_adj": -0.43,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 7.11,
-          "rostered_pct": 99.8,
-          "explain": "Averaging 12.1 ppg over 7 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 25
-        },
-        {
           "player_id": "00-0031588",
           "name": "Stefon Diggs",
           "position": "WR",
@@ -2278,7 +2260,7 @@
           "market_rank": 19.86,
           "rostered_pct": 88.7,
           "explain": "Averaging 12.7 ppg over 7 game(s) this season. Vegas has WAS at about 20 points against NYG.",
-          "rank": 26
+          "rank": 25
         },
         {
           "player_id": "00-0035640",
@@ -2296,7 +2278,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 10.1 ppg over 8 game(s) this season. Vegas has PIT at about 22 points against CIN.",
-          "rank": 27
+          "rank": 26
         },
         {
           "player_id": "00-0038977",
@@ -2314,7 +2296,7 @@
           "market_rank": 89.8,
           "rostered_pct": 22.9,
           "explain": "Averaging 13.0 ppg over 2 game(s) this season. Vegas has HOU at about 22 points against CLE.",
-          "rank": 28
+          "rank": 27
         },
         {
           "player_id": "00-0030279",
@@ -2332,7 +2314,7 @@
           "market_rank": 32.11,
           "rostered_pct": 57.3,
           "explain": "Averaging 10.9 ppg over 8 game(s) this season. Vegas has IND at about 22 points against MIA.",
-          "rank": 29
+          "rank": 28
         },
         {
           "player_id": "00-0034827",
@@ -2350,7 +2332,7 @@
           "market_rank": 22.89,
           "rostered_pct": 93.2,
           "explain": "Averaging 9.9 ppg over 6 game(s) this season. Vegas has BUF at about 30 points against NYJ. That's a favorable spot for WRs, worth about +1.1.",
-          "rank": 30
+          "rank": 29
         },
         {
           "player_id": "00-0038621",
@@ -2368,25 +2350,25 @@
           "market_rank": 35.86,
           "rostered_pct": 35.5,
           "explain": "Averaging 12.2 ppg over 9 game(s) this season. Vegas has NE at about 24 points against DET.",
-          "rank": 31
+          "rank": 30
         },
         {
-          "player_id": "00-0037261",
-          "name": "Khalil Shakir",
+          "player_id": "00-0036322",
+          "name": "Justin Jefferson",
           "position": "WR",
-          "team": "BUF",
-          "opponent": "NYJ",
-          "start_score": 10.78,
-          "recent_ppg": 9.8,
-          "games_this_season": 8,
-          "matchup_adj": 1.07,
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 10.87,
+          "recent_ppg": 12.13,
+          "games_this_season": 7,
+          "matchup_adj": -0.69,
           "matchup_source": "current_season",
-          "implied_points": 29.5,
+          "implied_points": 17.5,
           "injury_status": null,
-          "market_rank": 42.68,
-          "rostered_pct": 59.4,
-          "explain": "Averaging 9.8 ppg over 8 game(s) this season. Vegas has BUF at about 30 points against NYJ. That's a favorable spot for WRs, worth about +1.1.",
-          "rank": 32
+          "market_rank": 7.11,
+          "rostered_pct": 99.8,
+          "explain": "Averaging 12.1 ppg over 7 game(s) this season. Vegas has MIN at about 18 points against GB.",
+          "rank": 31
         },
         {
           "player_id": "00-0035676",
@@ -2404,25 +2386,25 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 6.4 ppg over 3 game(s) this season. Vegas has NE at about 24 points against DET.",
-          "rank": 33
+          "rank": 32
         },
         {
-          "player_id": "00-0041438",
-          "name": "Carnell Tate",
+          "player_id": "00-0037261",
+          "name": "Khalil Shakir",
           "position": "WR",
-          "team": "TEN",
-          "opponent": "JAX",
-          "start_score": 10.71,
-          "recent_ppg": 11.31,
-          "games_this_season": 7,
-          "matchup_adj": -0.7,
+          "team": "BUF",
+          "opponent": "NYJ",
+          "start_score": 10.78,
+          "recent_ppg": 9.8,
+          "games_this_season": 8,
+          "matchup_adj": 1.07,
           "matchup_source": "current_season",
-          "implied_points": 18.0,
+          "implied_points": 29.5,
           "injury_status": null,
-          "market_rank": null,
-          "rostered_pct": null,
-          "explain": "Averaging 11.3 ppg over 7 game(s) this season. Vegas has TEN at about 18 points against JAX.",
-          "rank": 34
+          "market_rank": 42.68,
+          "rostered_pct": 59.4,
+          "explain": "Averaging 9.8 ppg over 8 game(s) this season. Vegas has BUF at about 30 points against NYJ. That's a favorable spot for WRs, worth about +1.1.",
+          "rank": 33
         },
         {
           "player_id": "00-0039491",
@@ -2440,6 +2422,24 @@
           "market_rank": 18.3,
           "rostered_pct": 91.0,
           "explain": "Averaging 10.8 ppg over 7 game(s) this season. Vegas has CAR at about 24 points against NO.",
+          "rank": 34
+        },
+        {
+          "player_id": "00-0041438",
+          "name": "Carnell Tate",
+          "position": "WR",
+          "team": "TEN",
+          "opponent": "JAX",
+          "start_score": 10.71,
+          "recent_ppg": 11.31,
+          "games_this_season": 7,
+          "matchup_adj": -0.7,
+          "matchup_source": "current_season",
+          "implied_points": 18.0,
+          "injury_status": null,
+          "market_rank": null,
+          "rostered_pct": null,
+          "explain": "Averaging 11.3 ppg over 7 game(s) this season. Vegas has TEN at about 18 points against JAX.",
           "rank": 35
         },
         {
@@ -2695,21 +2695,21 @@
           "rank": 49
         },
         {
-          "player_id": "00-0038994",
-          "name": "Jordan Addison",
+          "player_id": "00-0032775",
+          "name": "Demarcus Robinson",
           "position": "WR",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 8.95,
-          "recent_ppg": 8.34,
-          "games_this_season": 7,
-          "matchup_adj": -0.43,
+          "team": "SF",
+          "opponent": "DAL",
+          "start_score": 8.85,
+          "recent_ppg": 8.2,
+          "games_this_season": 3,
+          "matchup_adj": 1.41,
           "matchup_source": "current_season",
-          "implied_points": 19.0,
+          "implied_points": 30.0,
           "injury_status": null,
-          "market_rank": 41.3,
-          "rostered_pct": 76.4,
-          "explain": "Averaging 8.3 ppg over 7 game(s) this season. Vegas has MIN at about 19 points against GB.",
+          "market_rank": 54.48,
+          "rostered_pct": 7.8,
+          "explain": "Averaging 8.2 ppg over 3 game(s) this season. Vegas has SF at about 30 points against DAL. That's a favorable spot for WRs, worth about +1.4.",
           "rank": 50
         }
       ],
@@ -2859,24 +2859,6 @@
           "rank": 8
         },
         {
-          "player_id": "00-0038996",
-          "name": "Tucker Kraft",
-          "position": "TE",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 9.69,
-          "recent_ppg": 10.92,
-          "games_this_season": 9,
-          "matchup_adj": -0.34,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 10.94,
-          "rostered_pct": 95.6,
-          "explain": "Averaging 10.9 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
-          "rank": 9
-        },
-        {
           "player_id": "00-0038935",
           "name": "Brenton Strange",
           "position": "TE",
@@ -2892,6 +2874,24 @@
           "market_rank": 14.14,
           "rostered_pct": 54.2,
           "explain": "Averaging 9.3 ppg over 8 game(s) this season. Vegas has JAX at about 28 points against TEN.",
+          "rank": 9
+        },
+        {
+          "player_id": "00-0038996",
+          "name": "Tucker Kraft",
+          "position": "TE",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 9.6,
+          "recent_ppg": 10.92,
+          "games_this_season": 9,
+          "matchup_adj": -0.43,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 10.94,
+          "rostered_pct": 95.6,
+          "explain": "Averaging 10.9 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 10
         },
         {
@@ -2985,24 +2985,6 @@
           "rank": 15
         },
         {
-          "player_id": "00-0035229",
-          "name": "T.J. Hockenson",
-          "position": "TE",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 8.31,
-          "recent_ppg": 10.89,
-          "games_this_season": 8,
-          "matchup_adj": -1.09,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 10.39,
-          "rostered_pct": 68.5,
-          "explain": "Averaging 10.9 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for TEs, worth about -1.1.",
-          "rank": 16
-        },
-        {
           "player_id": "00-0041395",
           "name": "Eli Raridon",
           "position": "TE",
@@ -3018,7 +3000,7 @@
           "market_rank": 22.53,
           "rostered_pct": 3.0,
           "explain": "Averaging 6.4 ppg over 8 game(s) this season. Vegas has NE at about 24 points against DET. That's a favorable spot for TEs, worth about +1.6.",
-          "rank": 17
+          "rank": 16
         },
         {
           "player_id": "00-0036894",
@@ -3036,6 +3018,24 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 9.6 ppg over 8 game(s) this season. Vegas has PIT at about 22 points against CIN.",
+          "rank": 17
+        },
+        {
+          "player_id": "00-0035229",
+          "name": "T.J. Hockenson",
+          "position": "TE",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 8.04,
+          "recent_ppg": 10.89,
+          "games_this_season": 8,
+          "matchup_adj": -1.36,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 10.39,
+          "rostered_pct": 68.5,
+          "explain": "Averaging 10.9 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for TEs, worth about -1.4.",
           "rank": 18
         },
         {
@@ -3327,24 +3327,6 @@
           "rank": 34
         },
         {
-          "player_id": "00-0038394",
-          "name": "Will Mallory",
-          "position": "TE",
-          "team": "IND",
-          "opponent": "MIA",
-          "start_score": 5.25,
-          "recent_ppg": 2.0,
-          "games_this_season": 2,
-          "matchup_adj": 0.27,
-          "matchup_source": "current_season",
-          "implied_points": 21.5,
-          "injury_status": null,
-          "market_rank": null,
-          "rostered_pct": null,
-          "explain": "Averaging 2.0 ppg over 2 game(s) this season. Vegas has IND at about 22 points against MIA.",
-          "rank": 35
-        },
-        {
           "player_id": "00-0040189",
           "name": "Oronde Gadsden II",
           "position": "TE",
@@ -3360,6 +3342,24 @@
           "market_rank": 30.68,
           "rostered_pct": 6.2,
           "explain": "Averaging 4.9 ppg over 8 game(s) this season. Vegas has LAC at about 16 points against BAL. That's a tough spot for TEs, worth about -1.1.",
+          "rank": 35
+        },
+        {
+          "player_id": "00-0038394",
+          "name": "Will Mallory",
+          "position": "TE",
+          "team": "IND",
+          "opponent": "MIA",
+          "start_score": 5.25,
+          "recent_ppg": 2.0,
+          "games_this_season": 2,
+          "matchup_adj": 0.27,
+          "matchup_source": "current_season",
+          "implied_points": 21.5,
+          "injury_status": null,
+          "market_rank": null,
+          "rostered_pct": null,
+          "explain": "Averaging 2.0 ppg over 2 game(s) this season. Vegas has IND at about 22 points against MIA.",
           "rank": 36
         },
         {
@@ -3525,24 +3525,6 @@
           "rank": 45
         },
         {
-          "player_id": "00-0041116",
-          "name": "Jack Endries",
-          "position": "TE",
-          "team": "CIN",
-          "opponent": "PIT",
-          "start_score": 4.18,
-          "recent_ppg": 4.25,
-          "games_this_season": 2,
-          "matchup_adj": 0.49,
-          "matchup_source": "current_season",
-          "implied_points": 26.0,
-          "injury_status": null,
-          "market_rank": 61.45,
-          "rostered_pct": 2.4,
-          "explain": "Averaging 4.2 ppg over 2 game(s) this season. Vegas has CIN at about 26 points against PIT.",
-          "rank": 46
-        },
-        {
           "player_id": "00-0041084",
           "name": "Tanner Koziol",
           "position": "TE",
@@ -3558,6 +3540,24 @@
           "market_rank": 78.0,
           "rostered_pct": 1.4,
           "explain": "Averaging 2.6 ppg over 2 game(s) this season. Vegas has JAX at about 28 points against TEN.",
+          "rank": 46
+        },
+        {
+          "player_id": "00-0041116",
+          "name": "Jack Endries",
+          "position": "TE",
+          "team": "CIN",
+          "opponent": "PIT",
+          "start_score": 4.18,
+          "recent_ppg": 4.25,
+          "games_this_season": 2,
+          "matchup_adj": 0.49,
+          "matchup_source": "current_season",
+          "implied_points": 26.0,
+          "injury_status": null,
+          "market_rank": 61.45,
+          "rostered_pct": 2.4,
+          "explain": "Averaging 4.2 ppg over 2 game(s) this season. Vegas has CIN at about 26 points against PIT.",
           "rank": 47
         },
         {
@@ -3602,38 +3602,20 @@
           "position": "TE",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 3.96,
+          "start_score": 3.87,
           "recent_ppg": 3.85,
           "games_this_season": 4,
-          "matchup_adj": -0.34,
+          "matchup_adj": -0.43,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 70.3,
           "rostered_pct": 0.8,
-          "explain": "Averaging 3.9 ppg over 4 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 3.9 ppg over 4 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 50
         }
       ],
       "K": [
-        {
-          "player_id": "00-0039409",
-          "name": "Cam Little",
-          "position": "K",
-          "team": "JAX",
-          "opponent": "TEN",
-          "start_score": 8.68,
-          "recent_ppg": 9.79,
-          "games_this_season": 8,
-          "matchup_adj": 1.07,
-          "matchup_source": "current_season",
-          "implied_points": 28.5,
-          "injury_status": null,
-          "market_rank": 4.87,
-          "rostered_pct": 75.0,
-          "explain": "Averaging 9.8 ppg over 8 game(s) this season. Vegas has JAX at about 28 points against TEN. That's a favorable spot for Ks, worth about +1.1.",
-          "rank": 1
-        },
         {
           "player_id": "00-0036162",
           "name": "Tyler Bass",
@@ -3650,6 +3632,24 @@
           "market_rank": 12.38,
           "rostered_pct": 47.1,
           "explain": "Averaging 11.8 ppg over 8 game(s) this season. Vegas has BUF at about 30 points against NYJ.",
+          "rank": 1
+        },
+        {
+          "player_id": "00-0039409",
+          "name": "Cam Little",
+          "position": "K",
+          "team": "JAX",
+          "opponent": "TEN",
+          "start_score": 8.68,
+          "recent_ppg": 9.79,
+          "games_this_season": 8,
+          "matchup_adj": 1.07,
+          "matchup_source": "current_season",
+          "implied_points": 28.5,
+          "injury_status": null,
+          "market_rank": 4.87,
+          "rostered_pct": 75.0,
+          "explain": "Averaging 9.8 ppg over 8 game(s) this season. Vegas has JAX at about 28 points against TEN. That's a favorable spot for Ks, worth about +1.1.",
           "rank": 2
         },
         {
@@ -3707,24 +3707,6 @@
           "rank": 5
         },
         {
-          "player_id": "00-0032726",
-          "name": "Ka'imi Fairbairn",
-          "position": "K",
-          "team": "HOU",
-          "opponent": "CLE",
-          "start_score": 8.11,
-          "recent_ppg": 12.17,
-          "games_this_season": 8,
-          "matchup_adj": 0.02,
-          "matchup_source": "current_season",
-          "implied_points": 22.0,
-          "injury_status": null,
-          "market_rank": 3.97,
-          "rostered_pct": 88.2,
-          "explain": "Averaging 12.2 ppg over 8 game(s) this season. Vegas has HOU at about 22 points against CLE.",
-          "rank": 6
-        },
-        {
           "player_id": "00-0037692",
           "name": "Brandon Aubrey",
           "position": "K",
@@ -3740,6 +3722,24 @@
           "market_rank": 1.28,
           "rostered_pct": 98.1,
           "explain": "Averaging 8.8 ppg over 9 game(s) this season. Vegas has DAL at about 26 points against SF.",
+          "rank": 6
+        },
+        {
+          "player_id": "00-0032726",
+          "name": "Ka'imi Fairbairn",
+          "position": "K",
+          "team": "HOU",
+          "opponent": "CLE",
+          "start_score": 8.11,
+          "recent_ppg": 12.17,
+          "games_this_season": 8,
+          "matchup_adj": 0.02,
+          "matchup_source": "current_season",
+          "implied_points": 22.0,
+          "injury_status": null,
+          "market_rank": 3.97,
+          "rostered_pct": 88.2,
+          "explain": "Averaging 12.2 ppg over 8 game(s) this season. Vegas has HOU at about 22 points against CLE.",
           "rank": 7
         },
         {
@@ -3982,16 +3982,16 @@
           "position": "K",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 7.13,
+          "start_score": 7.06,
           "recent_ppg": 7.67,
           "games_this_season": 9,
-          "matchup_adj": -0.11,
+          "matchup_adj": -0.18,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 24.17,
           "rostered_pct": 16.6,
-          "explain": "Averaging 7.7 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 7.7 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 21
         },
         {
@@ -4085,24 +4085,6 @@
           "rank": 26
         },
         {
-          "player_id": "00-0039404",
-          "name": "Will Reichard",
-          "position": "K",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 6.82,
-          "recent_ppg": 11.71,
-          "games_this_season": 8,
-          "matchup_adj": -1.07,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 8.05,
-          "rostered_pct": 90.0,
-          "explain": "Averaging 11.7 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for Ks, worth about -1.1.",
-          "rank": 27
-        },
-        {
           "player_id": "00-0039750",
           "name": "Joshua Karty",
           "position": "K",
@@ -4118,7 +4100,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 0.0 ppg over 2 game(s) this season. Vegas has LA at about 25 points against ARI.",
-          "rank": 28
+          "rank": 27
         },
         {
           "player_id": "00-0038567",
@@ -4136,7 +4118,7 @@
           "market_rank": 27.17,
           "rostered_pct": 12.2,
           "explain": "Averaging 9.0 ppg over 9 game(s) this season. Vegas has ARI at about 16 points against LA.",
-          "rank": 29
+          "rank": 28
         },
         {
           "player_id": "00-0040200",
@@ -4154,7 +4136,7 @@
           "market_rank": 19.05,
           "rostered_pct": 6.3,
           "explain": "Averaging 6.0 ppg over 9 game(s) this season. Vegas has NE at about 24 points against DET.",
-          "rank": 30
+          "rank": 29
         },
         {
           "player_id": "00-0041182",
@@ -4172,6 +4154,24 @@
           "market_rank": 19.77,
           "rostered_pct": 9.7,
           "explain": "Averaging 9.0 ppg over 8 game(s) this season. Vegas has WAS at about 20 points against NYG.",
+          "rank": 30
+        },
+        {
+          "player_id": "00-0039404",
+          "name": "Will Reichard",
+          "position": "K",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 6.62,
+          "recent_ppg": 11.71,
+          "games_this_season": 8,
+          "matchup_adj": -1.27,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 8.05,
+          "rostered_pct": 90.0,
+          "explain": "Averaging 11.7 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for Ks, worth about -1.3.",
           "rank": 31
         },
         {
@@ -4285,6 +4285,24 @@
           "rank": 3
         },
         {
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "position": "DST",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 8.28,
+          "recent_ppg": 9.11,
+          "games_this_season": 9,
+          "matchup_adj": 2.09,
+          "matchup_source": null,
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 11.86,
+          "rostered_pct": 31.5,
+          "explain": "Averaging 9.1 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN. That's a favorable spot for DSTs, worth about +2.1.",
+          "rank": 4
+        },
+        {
           "player_id": "JAX_DST",
           "name": "JAX D/ST",
           "position": "DST",
@@ -4300,7 +4318,7 @@
           "market_rank": 1.14,
           "rostered_pct": 76.2,
           "explain": "Averaging 9.2 ppg over 8 game(s) this season. Vegas has JAX at about 28 points against TEN. That's a favorable spot for DSTs, worth about +1.9.",
-          "rank": 4
+          "rank": 5
         },
         {
           "player_id": "IND_DST",
@@ -4318,24 +4336,6 @@
           "market_rank": 28.57,
           "rostered_pct": 15.8,
           "explain": "Averaging 3.3 ppg over 9 game(s) this season. Vegas has IND at about 22 points against MIA. That's a favorable spot for DSTs, worth about +1.5.",
-          "rank": 5
-        },
-        {
-          "player_id": "GB_DST",
-          "name": "GB D/ST",
-          "position": "DST",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 7.65,
-          "recent_ppg": 9.11,
-          "games_this_season": 9,
-          "matchup_adj": 1.46,
-          "matchup_source": null,
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 11.86,
-          "rostered_pct": 31.5,
-          "explain": "Averaging 9.1 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN. That's a favorable spot for DSTs, worth about +1.5.",
           "rank": 6
         },
         {
@@ -4501,40 +4501,22 @@
           "rank": 15
         },
         {
-          "player_id": "LV_DST",
-          "name": "LV D/ST",
-          "position": "DST",
-          "team": "LV",
-          "opponent": "SEA",
-          "start_score": 5.77,
-          "recent_ppg": 3.33,
-          "games_this_season": 9,
-          "matchup_adj": -0.42,
-          "matchup_source": null,
-          "implied_points": 20.0,
-          "injury_status": null,
-          "market_rank": 28.17,
-          "rostered_pct": 9.0,
-          "explain": "Averaging 3.3 ppg over 9 game(s) this season. Vegas has LV at about 20 points against SEA.",
-          "rank": 16
-        },
-        {
           "player_id": "MIN_DST",
           "name": "MIN D/ST",
           "position": "DST",
           "team": "MIN",
           "opponent": "GB",
-          "start_score": 5.77,
+          "start_score": 5.98,
           "recent_ppg": 10.04,
           "games_this_season": 8,
-          "matchup_adj": -0.42,
+          "matchup_adj": -0.21,
           "matchup_source": null,
-          "implied_points": 19.0,
+          "implied_points": 17.5,
           "injury_status": null,
           "market_rank": 14.05,
           "rostered_pct": 68.6,
-          "explain": "Averaging 10.0 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 17
+          "explain": "Averaging 10.0 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB.",
+          "rank": 16
         },
         {
           "player_id": "NO_DST",
@@ -4552,25 +4534,25 @@
           "market_rank": 7.27,
           "rostered_pct": 49.5,
           "explain": "Averaging 4.3 ppg over 8 game(s) this season. Vegas has NO at about 25 points against CAR.",
-          "rank": 18
+          "rank": 17
         },
         {
-          "player_id": "ATL_DST",
-          "name": "ATL D/ST",
+          "player_id": "LV_DST",
+          "name": "LV D/ST",
           "position": "DST",
-          "team": "ATL",
-          "opponent": "KC",
-          "start_score": 5.35,
-          "recent_ppg": 4.44,
+          "team": "LV",
+          "opponent": "SEA",
+          "start_score": 5.77,
+          "recent_ppg": 3.33,
           "games_this_season": 9,
-          "matchup_adj": -0.84,
+          "matchup_adj": -0.42,
           "matchup_source": null,
-          "implied_points": 21.0,
+          "implied_points": 20.0,
           "injury_status": null,
-          "market_rank": 22.17,
-          "rostered_pct": 9.5,
-          "explain": "Averaging 4.4 ppg over 9 game(s) this season. Vegas has ATL at about 21 points against KC.",
-          "rank": 19
+          "market_rank": 28.17,
+          "rostered_pct": 9.0,
+          "explain": "Averaging 3.3 ppg over 9 game(s) this season. Vegas has LV at about 20 points against SEA.",
+          "rank": 18
         },
         {
           "player_id": "DET_DST",
@@ -4588,25 +4570,25 @@
           "market_rank": 9.84,
           "rostered_pct": 56.8,
           "explain": "Averaging 5.6 ppg over 8 game(s) this season. Vegas has DET at about 27 points against NE.",
-          "rank": 20
+          "rank": 19
         },
         {
-          "player_id": "ARI_DST",
-          "name": "ARI D/ST",
+          "player_id": "ATL_DST",
+          "name": "ATL D/ST",
           "position": "DST",
-          "team": "ARI",
-          "opponent": "LA",
-          "start_score": 5.14,
-          "recent_ppg": 2.39,
+          "team": "ATL",
+          "opponent": "KC",
+          "start_score": 5.35,
+          "recent_ppg": 4.44,
           "games_this_season": 9,
-          "matchup_adj": -1.04,
+          "matchup_adj": -0.84,
           "matchup_source": null,
-          "implied_points": 15.5,
+          "implied_points": 21.0,
           "injury_status": null,
-          "market_rank": 24.11,
-          "rostered_pct": 3.4,
-          "explain": "Averaging 2.4 ppg over 9 game(s) this season. Vegas has ARI at about 16 points against LA. That's a tough spot for DSTs, worth about -1.0.",
-          "rank": 21
+          "market_rank": 22.17,
+          "rostered_pct": 9.5,
+          "explain": "Averaging 4.4 ppg over 9 game(s) this season. Vegas has ATL at about 21 points against KC.",
+          "rank": 20
         },
         {
           "player_id": "CAR_DST",
@@ -4624,6 +4606,24 @@
           "market_rank": 22.97,
           "rostered_pct": 6.6,
           "explain": "Averaging 3.6 ppg over 8 game(s) this season. Vegas has CAR at about 24 points against NO. That's a tough spot for DSTs, worth about -1.0.",
+          "rank": 21
+        },
+        {
+          "player_id": "ARI_DST",
+          "name": "ARI D/ST",
+          "position": "DST",
+          "team": "ARI",
+          "opponent": "LA",
+          "start_score": 5.14,
+          "recent_ppg": 2.39,
+          "games_this_season": 9,
+          "matchup_adj": -1.04,
+          "matchup_source": null,
+          "implied_points": 15.5,
+          "injury_status": null,
+          "market_rank": 24.11,
+          "rostered_pct": 3.4,
+          "explain": "Averaging 2.4 ppg over 9 game(s) this season. Vegas has ARI at about 16 points against LA. That's a tough spot for DSTs, worth about -1.0.",
           "rank": 22
         },
         {
@@ -4922,24 +4922,6 @@
           "rank": 10
         },
         {
-          "player_id": "00-0036264",
-          "name": "Jordan Love",
-          "position": "QB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 16.57,
-          "recent_ppg": 21.49,
-          "games_this_season": 9,
-          "matchup_adj": -0.13,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 11.8,
-          "rostered_pct": 82.1,
-          "explain": "Averaging 21.5 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
-          "rank": 11
-        },
-        {
           "player_id": "00-0039163",
           "name": "C.J. Stroud",
           "position": "QB",
@@ -4955,7 +4937,7 @@
           "market_rank": 14.1,
           "rostered_pct": 61.3,
           "explain": "Averaging 21.4 ppg over 8 game(s) this season. Vegas has HOU at about 22 points against CLE.",
-          "rank": 12
+          "rank": 11
         },
         {
           "player_id": "00-0039150",
@@ -4973,6 +4955,24 @@
           "market_rank": 20.41,
           "rostered_pct": 53.6,
           "explain": "Averaging 17.3 ppg over 8 game(s) this season. Vegas has CAR at about 24 points against NO.",
+          "rank": 12
+        },
+        {
+          "player_id": "00-0036264",
+          "name": "Jordan Love",
+          "position": "QB",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 16.34,
+          "recent_ppg": 21.49,
+          "games_this_season": 9,
+          "matchup_adj": -0.36,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 11.8,
+          "rostered_pct": 82.1,
+          "explain": "Averaging 21.5 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 13
         },
         {
@@ -5179,16 +5179,16 @@
           "position": "QB",
           "team": "MIN",
           "opponent": "GB",
-          "start_score": 14.42,
+          "start_score": 13.72,
           "recent_ppg": 12.26,
           "games_this_season": 6,
-          "matchup_adj": -1.85,
+          "matchup_adj": -2.54,
           "matchup_source": "current_season",
-          "implied_points": 19.0,
+          "implied_points": 17.5,
           "injury_status": null,
           "market_rank": null,
           "rostered_pct": null,
-          "explain": "Averaging 12.3 ppg over 6 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for QBs, worth about -1.9.",
+          "explain": "Averaging 12.3 ppg over 6 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for QBs, worth about -2.5.",
           "rank": 25
         },
         {
@@ -5444,24 +5444,6 @@
           "rank": 39
         },
         {
-          "player_id": "00-0028118",
-          "name": "Tyrod Taylor",
-          "position": "QB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 1.16,
-          "recent_ppg": -0.2,
-          "games_this_season": 1,
-          "matchup_adj": -0.13,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": "Backup",
-          "market_rank": 55.25,
-          "rostered_pct": 0.6,
-          "explain": "Averaging -0.2 ppg over 1 game(s) this season. Vegas has GB at about 24 points against MIN. Not the starter on GB's depth chart.",
-          "rank": 40
-        },
-        {
           "player_id": "00-0038476",
           "name": "Tommy DeVito",
           "position": "QB",
@@ -5477,6 +5459,24 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 1.1 ppg over 2 game(s) this season. Vegas has NE at about 24 points against DET. That's a favorable spot for QBs, worth about +1.4. Not the starter on NE's depth chart.",
+          "rank": 40
+        },
+        {
+          "player_id": "00-0036898",
+          "name": "Davis Mills",
+          "position": "QB",
+          "team": "HOU",
+          "opponent": "CLE",
+          "start_score": 1.06,
+          "recent_ppg": 0.08,
+          "games_this_season": 1,
+          "matchup_adj": -0.41,
+          "matchup_source": "current_season",
+          "implied_points": 22.0,
+          "injury_status": "Backup",
+          "market_rank": 60.5,
+          "rostered_pct": 1.1,
+          "explain": "Averaging 0.1 ppg over 1 game(s) this season. Vegas has HOU at about 22 points against CLE. Not the starter on HOU's depth chart.",
           "rank": 41
         },
         {
@@ -5498,21 +5498,21 @@
           "rank": 42
         },
         {
-          "player_id": "00-0036898",
-          "name": "Davis Mills",
+          "player_id": "00-0028118",
+          "name": "Tyrod Taylor",
           "position": "QB",
-          "team": "HOU",
-          "opponent": "CLE",
-          "start_score": 1.06,
-          "recent_ppg": 0.08,
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 0.93,
+          "recent_ppg": -0.2,
           "games_this_season": 1,
-          "matchup_adj": -0.41,
+          "matchup_adj": -0.36,
           "matchup_source": "current_season",
-          "implied_points": 22.0,
+          "implied_points": 23.0,
           "injury_status": "Backup",
-          "market_rank": 60.5,
-          "rostered_pct": 1.1,
-          "explain": "Averaging 0.1 ppg over 1 game(s) this season. Vegas has HOU at about 22 points against CLE. Not the starter on HOU's depth chart.",
+          "market_rank": 55.25,
+          "rostered_pct": 0.6,
+          "explain": "Averaging -0.2 ppg over 1 game(s) this season. Vegas has GB at about 23 points against MIN. Not the starter on GB's depth chart.",
           "rank": 43
         },
         {
@@ -5534,24 +5534,6 @@
           "rank": 44
         },
         {
-          "player_id": "00-0032950",
-          "name": "Carson Wentz",
-          "position": "QB",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 0.43,
-          "recent_ppg": 7.59,
-          "games_this_season": 3,
-          "matchup_adj": -1.85,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": "Backup",
-          "market_rank": 22.66,
-          "rostered_pct": 3.9,
-          "explain": "Averaging 7.6 ppg over 3 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for QBs, worth about -1.9. Not the starter on MIN's depth chart.",
-          "rank": 45
-        },
-        {
           "player_id": "00-0034771",
           "name": "Mason Rudolph",
           "position": "QB",
@@ -5567,7 +5549,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 0.1 ppg over 2 game(s) this season. Vegas has PIT at about 22 points against CIN. Not the starter on PIT's depth chart.",
-          "rank": 46
+          "rank": 45
         },
         {
           "player_id": "00-0040981",
@@ -5585,7 +5567,7 @@
           "market_rank": 29.95,
           "rostered_pct": 0.7,
           "explain": "Averaging -0.2 ppg over 2 game(s) this season. Vegas has BAL at about 22 points against LAC. Not the starter on BAL's depth chart.",
-          "rank": 47
+          "rank": 46
         },
         {
           "player_id": "00-0040668",
@@ -5603,7 +5585,7 @@
           "market_rank": 26.71,
           "rostered_pct": 4.3,
           "explain": "Averaging 7.6 ppg over 3 game(s) this season. Vegas has CLE at about 18 points against HOU. That's a tough spot for QBs, worth about -2.2. Not the starter on CLE's depth chart.",
-          "rank": 48
+          "rank": 47
         },
         {
           "player_id": "00-0035993",
@@ -5621,7 +5603,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 11.3 ppg over 5 game(s) this season. Vegas has BAL at about 22 points against LAC. On a reserve list, so not expected to play.",
-          "rank": 49
+          "rank": 48
         },
         {
           "player_id": "00-0036212",
@@ -5639,6 +5621,24 @@
           "market_rank": 47.8,
           "rostered_pct": 4.8,
           "explain": "Averaging -0.6 ppg over 1 game(s) this season. Vegas has ATL at about 21 points against KC. That's a tough spot for QBs, worth about -1.0. Not the starter on ATL's depth chart.",
+          "rank": 49
+        },
+        {
+          "player_id": "00-0032950",
+          "name": "Carson Wentz",
+          "position": "QB",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": -0.26,
+          "recent_ppg": 7.59,
+          "games_this_season": 3,
+          "matchup_adj": -2.54,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": "Backup",
+          "market_rank": 22.66,
+          "rostered_pct": 3.9,
+          "explain": "Averaging 7.6 ppg over 3 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for QBs, worth about -2.5. Not the starter on MIN's depth chart.",
           "rank": 50
         }
       ],
@@ -5878,24 +5878,6 @@
           "rank": 13
         },
         {
-          "player_id": "00-0035700",
-          "name": "Josh Jacobs",
-          "position": "RB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 10.97,
-          "recent_ppg": 10.93,
-          "games_this_season": 3,
-          "matchup_adj": 0.15,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 15.06,
-          "rostered_pct": 96.3,
-          "explain": "Averaging 10.9 ppg over 3 game(s) this season. Vegas has GB at about 24 points against MIN.",
-          "rank": 14
-        },
-        {
           "player_id": "00-0038120",
           "name": "Breece Hall",
           "position": "RB",
@@ -5911,6 +5893,24 @@
           "market_rank": 26.42,
           "rostered_pct": 96.7,
           "explain": "Averaging 10.3 ppg over 4 game(s) this season. Vegas has NYJ at about 21 points against BUF.",
+          "rank": 14
+        },
+        {
+          "player_id": "00-0035700",
+          "name": "Josh Jacobs",
+          "position": "RB",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 10.85,
+          "recent_ppg": 10.93,
+          "games_this_season": 3,
+          "matchup_adj": 0.04,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 15.06,
+          "rostered_pct": 96.3,
+          "explain": "Averaging 10.9 ppg over 3 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 15
         },
         {
@@ -6112,24 +6112,6 @@
           "rank": 26
         },
         {
-          "player_id": "00-0033293",
-          "name": "Aaron Jones",
-          "position": "RB",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 8.86,
-          "recent_ppg": 8.05,
-          "games_this_season": 8,
-          "matchup_adj": -0.62,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 32.75,
-          "rostered_pct": 81.8,
-          "explain": "Averaging 8.1 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 27
-        },
-        {
           "player_id": "00-0040583",
           "name": "Woody Marks",
           "position": "RB",
@@ -6145,6 +6127,24 @@
           "market_rank": 18.0,
           "rostered_pct": 82.6,
           "explain": "Averaging 7.5 ppg over 8 game(s) this season. Vegas has HOU at about 22 points against CLE.",
+          "rank": 27
+        },
+        {
+          "player_id": "00-0033293",
+          "name": "Aaron Jones",
+          "position": "RB",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 8.52,
+          "recent_ppg": 8.05,
+          "games_this_season": 8,
+          "matchup_adj": -0.95,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 32.75,
+          "rostered_pct": 81.8,
+          "explain": "Averaging 8.1 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB.",
           "rank": 28
         },
         {
@@ -6328,24 +6328,6 @@
           "rank": 38
         },
         {
-          "player_id": "00-0037525",
-          "name": "Jordan Mason",
-          "position": "RB",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 6.84,
-          "recent_ppg": 6.23,
-          "games_this_season": 4,
-          "matchup_adj": -0.62,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 32.5,
-          "rostered_pct": 71.0,
-          "explain": "Averaging 6.2 ppg over 4 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 39
-        },
-        {
           "player_id": "00-0035250",
           "name": "Devin Singletary",
           "position": "RB",
@@ -6361,7 +6343,7 @@
           "market_rank": 21.42,
           "rostered_pct": 58.3,
           "explain": "Averaging 5.9 ppg over 5 game(s) this season. Vegas has NYG at about 22 points against WAS.",
-          "rank": 40
+          "rank": 39
         },
         {
           "player_id": "00-0040666",
@@ -6379,6 +6361,24 @@
           "market_rank": 35.69,
           "rostered_pct": 88.2,
           "explain": "Averaging 6.4 ppg over 8 game(s) this season. Vegas has LAC at about 16 points against BAL. That's a tough spot for RBs, worth about -1.4.",
+          "rank": 40
+        },
+        {
+          "player_id": "00-0037525",
+          "name": "Jordan Mason",
+          "position": "RB",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 6.5,
+          "recent_ppg": 6.23,
+          "games_this_season": 4,
+          "matchup_adj": -0.95,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 32.5,
+          "rostered_pct": 71.0,
+          "explain": "Averaging 6.2 ppg over 4 game(s) this season. Vegas has MIN at about 18 points against GB.",
           "rank": 41
         },
         {
@@ -6400,21 +6400,21 @@
           "rank": 42
         },
         {
-          "player_id": "00-0039811",
-          "name": "MarShawn Lloyd",
+          "player_id": "00-0033526",
+          "name": "Samaje Perine",
           "position": "RB",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 6.28,
-          "recent_ppg": 4.8,
+          "team": "CIN",
+          "opponent": "PIT",
+          "start_score": 6.27,
+          "recent_ppg": 4.78,
           "games_this_season": 8,
-          "matchup_adj": 0.15,
+          "matchup_adj": 0.64,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 26.0,
           "injury_status": null,
-          "market_rank": null,
-          "rostered_pct": null,
-          "explain": "Averaging 4.8 ppg over 8 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "market_rank": 45.03,
+          "rostered_pct": 10.4,
+          "explain": "Averaging 4.8 ppg over 8 game(s) this season. Vegas has CIN at about 26 points against PIT.",
           "rank": 43
         },
         {
@@ -6436,21 +6436,21 @@
           "rank": 44
         },
         {
-          "player_id": "00-0033526",
-          "name": "Samaje Perine",
+          "player_id": "00-0039811",
+          "name": "MarShawn Lloyd",
           "position": "RB",
-          "team": "CIN",
-          "opponent": "PIT",
-          "start_score": 6.27,
-          "recent_ppg": 4.78,
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 6.17,
+          "recent_ppg": 4.8,
           "games_this_season": 8,
-          "matchup_adj": 0.64,
+          "matchup_adj": 0.04,
           "matchup_source": "current_season",
-          "implied_points": 26.0,
+          "implied_points": 23.0,
           "injury_status": null,
-          "market_rank": 45.03,
-          "rostered_pct": 10.4,
-          "explain": "Averaging 4.8 ppg over 8 game(s) this season. Vegas has CIN at about 26 points against PIT.",
+          "market_rank": null,
+          "rostered_pct": null,
+          "explain": "Averaging 4.8 ppg over 8 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 45
         },
         {
@@ -6495,16 +6495,16 @@
           "position": "RB",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 5.94,
+          "start_score": 5.83,
           "recent_ppg": 3.0,
           "games_this_season": 4,
-          "matchup_adj": 0.15,
+          "matchup_adj": 0.04,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 65.58,
           "rostered_pct": 1.9,
-          "explain": "Averaging 3.0 ppg over 4 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 3.0 ppg over 4 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 48
         },
         {
@@ -6526,21 +6526,21 @@
           "rank": 49
         },
         {
-          "player_id": "00-0039391",
-          "name": "Kimani Vidal",
+          "player_id": "00-0040878",
+          "name": "Mike Washington Jr.",
           "position": "RB",
-          "team": "LAC",
-          "opponent": "BAL",
+          "team": "LV",
+          "opponent": "SEA",
           "start_score": 5.17,
-          "recent_ppg": 5.23,
-          "games_this_season": 7,
-          "matchup_adj": -1.43,
+          "recent_ppg": 3.46,
+          "games_this_season": 9,
+          "matchup_adj": -0.65,
           "matchup_source": "current_season",
-          "implied_points": 16.5,
+          "implied_points": 20.0,
           "injury_status": null,
-          "market_rank": 45.25,
-          "rostered_pct": 14.9,
-          "explain": "Averaging 5.2 ppg over 7 game(s) this season. Vegas has LAC at about 16 points against BAL. That's a tough spot for RBs, worth about -1.4.",
+          "market_rank": 36.89,
+          "rostered_pct": 47.0,
+          "explain": "Averaging 3.5 ppg over 9 game(s) this season. Vegas has LV at about 20 points against SEA.",
           "rank": 50
         }
       ],
@@ -6654,24 +6654,6 @@
           "rank": 6
         },
         {
-          "player_id": "00-0040667",
-          "name": "Matthew Golden",
-          "position": "WR",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 9.99,
-          "recent_ppg": 12.79,
-          "games_this_season": 9,
-          "matchup_adj": 0.04,
-          "matchup_source": "current_season",
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 11.27,
-          "rostered_pct": 96.3,
-          "explain": "Averaging 12.8 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
-          "rank": 7
-        },
-        {
           "player_id": "00-0039337",
           "name": "Malik Nabers",
           "position": "WR",
@@ -6687,6 +6669,24 @@
           "market_rank": 8.59,
           "rostered_pct": 99.1,
           "explain": "Averaging 10.6 ppg over 8 game(s) this season. Vegas has NYG at about 22 points against WAS.",
+          "rank": 7
+        },
+        {
+          "player_id": "00-0040667",
+          "name": "Matthew Golden",
+          "position": "WR",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 9.92,
+          "recent_ppg": 12.79,
+          "games_this_season": 9,
+          "matchup_adj": -0.03,
+          "matchup_source": "current_season",
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 11.27,
+          "rostered_pct": 96.3,
+          "explain": "Averaging 12.8 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 8
         },
         {
@@ -6713,16 +6713,16 @@
           "position": "WR",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 9.33,
+          "start_score": 9.26,
           "recent_ppg": 13.4,
           "games_this_season": 9,
-          "matchup_adj": 0.04,
+          "matchup_adj": -0.03,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 13.05,
           "rostered_pct": 96.5,
-          "explain": "Averaging 13.4 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 13.4 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 10
         },
         {
@@ -7068,24 +7068,6 @@
           "rank": 29
         },
         {
-          "player_id": "00-0036322",
-          "name": "Justin Jefferson",
-          "position": "WR",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 7.02,
-          "recent_ppg": 8.0,
-          "games_this_season": 7,
-          "matchup_adj": -0.45,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 7.11,
-          "rostered_pct": 99.8,
-          "explain": "Averaging 8.0 ppg over 7 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 30
-        },
-        {
           "player_id": "00-0031588",
           "name": "Stefon Diggs",
           "position": "WR",
@@ -7101,7 +7083,7 @@
           "market_rank": 19.86,
           "rostered_pct": 88.7,
           "explain": "Averaging 8.4 ppg over 7 game(s) this season. Vegas has WAS at about 20 points against NYG.",
-          "rank": 31
+          "rank": 30
         },
         {
           "player_id": "00-0039491",
@@ -7119,7 +7101,7 @@
           "market_rank": 18.3,
           "rostered_pct": 91.0,
           "explain": "Averaging 6.7 ppg over 7 game(s) this season. Vegas has CAR at about 24 points against NO.",
-          "rank": 32
+          "rank": 31
         },
         {
           "player_id": "00-0035676",
@@ -7137,7 +7119,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 3.4 ppg over 3 game(s) this season. Vegas has NE at about 24 points against DET.",
-          "rank": 33
+          "rank": 32
         },
         {
           "player_id": "00-0030279",
@@ -7155,7 +7137,7 @@
           "market_rank": 32.11,
           "rostered_pct": 57.3,
           "explain": "Averaging 5.7 ppg over 8 game(s) this season. Vegas has IND at about 22 points against MIA.",
-          "rank": 34
+          "rank": 33
         },
         {
           "player_id": "00-0037261",
@@ -7173,7 +7155,7 @@
           "market_rank": 42.68,
           "rostered_pct": 59.4,
           "explain": "Averaging 5.9 ppg over 8 game(s) this season. Vegas has BUF at about 30 points against NYJ.",
-          "rank": 35
+          "rank": 34
         },
         {
           "player_id": "00-0041037",
@@ -7191,6 +7173,24 @@
           "market_rank": 31.73,
           "rostered_pct": 67.4,
           "explain": "Averaging 7.0 ppg over 9 game(s) this season. Vegas has CLE at about 18 points against HOU.",
+          "rank": 35
+        },
+        {
+          "player_id": "00-0036322",
+          "name": "Justin Jefferson",
+          "position": "WR",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 6.82,
+          "recent_ppg": 8.0,
+          "games_this_season": 7,
+          "matchup_adj": -0.65,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 7.11,
+          "rostered_pct": 99.8,
+          "explain": "Averaging 8.0 ppg over 7 game(s) this season. Vegas has MIN at about 18 points against GB.",
           "rank": 36
         },
         {
@@ -7428,21 +7428,21 @@
           "rank": 49
         },
         {
-          "player_id": "00-0038994",
-          "name": "Jordan Addison",
+          "player_id": "00-0038618",
+          "name": "Xavier Hutchinson",
           "position": "WR",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 5.82,
-          "recent_ppg": 5.56,
-          "games_this_season": 7,
-          "matchup_adj": -0.45,
+          "team": "HOU",
+          "opponent": "CLE",
+          "start_score": 5.7,
+          "recent_ppg": 5.59,
+          "games_this_season": 8,
+          "matchup_adj": -0.1,
           "matchup_source": "current_season",
-          "implied_points": 19.0,
+          "implied_points": 22.0,
           "injury_status": null,
-          "market_rank": 41.3,
-          "rostered_pct": 76.4,
-          "explain": "Averaging 5.6 ppg over 7 game(s) this season. Vegas has MIN at about 19 points against GB.",
+          "market_rank": 64.03,
+          "rostered_pct": 1.8,
+          "explain": "Averaging 5.6 ppg over 8 game(s) this season. Vegas has HOU at about 22 points against CLE.",
           "rank": 50
         }
       ],
@@ -7597,16 +7597,16 @@
           "position": "TE",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 5.89,
+          "start_score": 5.82,
           "recent_ppg": 6.67,
           "games_this_season": 9,
-          "matchup_adj": -0.2,
+          "matchup_adj": -0.27,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 10.94,
           "rostered_pct": 95.6,
-          "explain": "Averaging 6.7 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 6.7 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 9
         },
         {
@@ -7790,24 +7790,6 @@
           "rank": 19
         },
         {
-          "player_id": "00-0035229",
-          "name": "T.J. Hockenson",
-          "position": "TE",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 4.6,
-          "recent_ppg": 6.37,
-          "games_this_season": 8,
-          "matchup_adj": -0.81,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 10.39,
-          "rostered_pct": 68.5,
-          "explain": "Averaging 6.4 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 20
-        },
-        {
           "player_id": "00-0039793",
           "name": "AJ Barner",
           "position": "TE",
@@ -7823,6 +7805,24 @@
           "market_rank": 25.42,
           "rostered_pct": 11.2,
           "explain": "Averaging 4.3 ppg over 9 game(s) this season. Vegas has SEA at about 24 points against LV.",
+          "rank": 20
+        },
+        {
+          "player_id": "00-0035229",
+          "name": "T.J. Hockenson",
+          "position": "TE",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 4.39,
+          "recent_ppg": 6.37,
+          "games_this_season": 8,
+          "matchup_adj": -1.02,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 10.39,
+          "rostered_pct": 68.5,
+          "explain": "Averaging 6.4 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for TEs, worth about -1.0.",
           "rank": 21
         },
         {
@@ -8330,21 +8330,21 @@
           "rank": 49
         },
         {
-          "player_id": "00-0033858",
-          "name": "Jonnu Smith",
+          "player_id": "00-0040887",
+          "name": "Josh Cuevas",
           "position": "TE",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 2.14,
-          "recent_ppg": 2.35,
-          "games_this_season": 4,
-          "matchup_adj": -0.2,
+          "team": "BAL",
+          "opponent": "LAC",
+          "start_score": 2.13,
+          "recent_ppg": 2.89,
+          "games_this_season": 7,
+          "matchup_adj": -0.38,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 22.0,
           "injury_status": null,
-          "market_rank": 70.3,
-          "rostered_pct": 0.8,
-          "explain": "Averaging 2.4 ppg over 4 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "market_rank": 46.74,
+          "rostered_pct": 0.6,
+          "explain": "Averaging 2.9 ppg over 7 game(s) this season. Vegas has BAL at about 22 points against LAC.",
           "rank": 50
         }
       ],
@@ -8715,16 +8715,16 @@
           "position": "K",
           "team": "GB",
           "opponent": "MIN",
-          "start_score": 7.14,
+          "start_score": 7.08,
           "recent_ppg": 7.67,
           "games_this_season": 9,
-          "matchup_adj": -0.1,
+          "matchup_adj": -0.17,
           "matchup_source": "current_season",
-          "implied_points": 23.5,
+          "implied_points": 23.0,
           "injury_status": null,
           "market_rank": 24.17,
           "rostered_pct": 16.6,
-          "explain": "Averaging 7.7 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN.",
+          "explain": "Averaging 7.7 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN.",
           "rank": 21
         },
         {
@@ -8818,24 +8818,6 @@
           "rank": 26
         },
         {
-          "player_id": "00-0039404",
-          "name": "Will Reichard",
-          "position": "K",
-          "team": "MIN",
-          "opponent": "GB",
-          "start_score": 6.83,
-          "recent_ppg": 11.71,
-          "games_this_season": 8,
-          "matchup_adj": -1.06,
-          "matchup_source": "current_season",
-          "implied_points": 19.0,
-          "injury_status": null,
-          "market_rank": 8.05,
-          "rostered_pct": 90.0,
-          "explain": "Averaging 11.7 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB. That's a tough spot for Ks, worth about -1.1.",
-          "rank": 27
-        },
-        {
           "player_id": "00-0039750",
           "name": "Joshua Karty",
           "position": "K",
@@ -8851,7 +8833,7 @@
           "market_rank": null,
           "rostered_pct": null,
           "explain": "Averaging 0.0 ppg over 2 game(s) this season. Vegas has LA at about 25 points against ARI.",
-          "rank": 28
+          "rank": 27
         },
         {
           "player_id": "00-0040200",
@@ -8869,7 +8851,7 @@
           "market_rank": 19.05,
           "rostered_pct": 6.3,
           "explain": "Averaging 6.0 ppg over 9 game(s) this season. Vegas has NE at about 24 points against DET.",
-          "rank": 29
+          "rank": 28
         },
         {
           "player_id": "00-0038567",
@@ -8887,7 +8869,7 @@
           "market_rank": 27.17,
           "rostered_pct": 12.2,
           "explain": "Averaging 9.0 ppg over 9 game(s) this season. Vegas has ARI at about 16 points against LA.",
-          "rank": 30
+          "rank": 29
         },
         {
           "player_id": "00-0041182",
@@ -8905,6 +8887,24 @@
           "market_rank": 19.77,
           "rostered_pct": 9.7,
           "explain": "Averaging 9.0 ppg over 8 game(s) this season. Vegas has WAS at about 20 points against NYG.",
+          "rank": 30
+        },
+        {
+          "player_id": "00-0039404",
+          "name": "Will Reichard",
+          "position": "K",
+          "team": "MIN",
+          "opponent": "GB",
+          "start_score": 6.63,
+          "recent_ppg": 11.71,
+          "games_this_season": 8,
+          "matchup_adj": -1.26,
+          "matchup_source": "current_season",
+          "implied_points": 17.5,
+          "injury_status": null,
+          "market_rank": 8.05,
+          "rostered_pct": 90.0,
+          "explain": "Averaging 11.7 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB. That's a tough spot for Ks, worth about -1.3.",
           "rank": 31
         },
         {
@@ -9018,6 +9018,24 @@
           "rank": 3
         },
         {
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "position": "DST",
+          "team": "GB",
+          "opponent": "MIN",
+          "start_score": 8.29,
+          "recent_ppg": 9.11,
+          "games_this_season": 9,
+          "matchup_adj": 2.1,
+          "matchup_source": null,
+          "implied_points": 23.0,
+          "injury_status": null,
+          "market_rank": 11.86,
+          "rostered_pct": 31.5,
+          "explain": "Averaging 9.1 ppg over 9 game(s) this season. Vegas has GB at about 23 points against MIN. That's a favorable spot for DSTs, worth about +2.1.",
+          "rank": 4
+        },
+        {
           "player_id": "JAX_DST",
           "name": "JAX D/ST",
           "position": "DST",
@@ -9033,7 +9051,7 @@
           "market_rank": 1.14,
           "rostered_pct": 76.2,
           "explain": "Averaging 9.2 ppg over 8 game(s) this season. Vegas has JAX at about 28 points against TEN. That's a favorable spot for DSTs, worth about +1.9.",
-          "rank": 4
+          "rank": 5
         },
         {
           "player_id": "IND_DST",
@@ -9051,24 +9069,6 @@
           "market_rank": 28.57,
           "rostered_pct": 15.8,
           "explain": "Averaging 3.3 ppg over 9 game(s) this season. Vegas has IND at about 22 points against MIA. That's a favorable spot for DSTs, worth about +1.5.",
-          "rank": 5
-        },
-        {
-          "player_id": "GB_DST",
-          "name": "GB D/ST",
-          "position": "DST",
-          "team": "GB",
-          "opponent": "MIN",
-          "start_score": 7.66,
-          "recent_ppg": 9.11,
-          "games_this_season": 9,
-          "matchup_adj": 1.47,
-          "matchup_source": null,
-          "implied_points": 23.5,
-          "injury_status": null,
-          "market_rank": 11.86,
-          "rostered_pct": 31.5,
-          "explain": "Averaging 9.1 ppg over 9 game(s) this season. Vegas has GB at about 24 points against MIN. That's a favorable spot for DSTs, worth about +1.5.",
           "rank": 6
         },
         {
@@ -9234,40 +9234,22 @@
           "rank": 15
         },
         {
-          "player_id": "LV_DST",
-          "name": "LV D/ST",
-          "position": "DST",
-          "team": "LV",
-          "opponent": "SEA",
-          "start_score": 5.77,
-          "recent_ppg": 3.33,
-          "games_this_season": 9,
-          "matchup_adj": -0.42,
-          "matchup_source": null,
-          "implied_points": 20.0,
-          "injury_status": null,
-          "market_rank": 28.17,
-          "rostered_pct": 9.0,
-          "explain": "Averaging 3.3 ppg over 9 game(s) this season. Vegas has LV at about 20 points against SEA.",
-          "rank": 16
-        },
-        {
           "player_id": "MIN_DST",
           "name": "MIN D/ST",
           "position": "DST",
           "team": "MIN",
           "opponent": "GB",
-          "start_score": 5.77,
+          "start_score": 5.98,
           "recent_ppg": 10.04,
           "games_this_season": 8,
-          "matchup_adj": -0.42,
+          "matchup_adj": -0.21,
           "matchup_source": null,
-          "implied_points": 19.0,
+          "implied_points": 17.5,
           "injury_status": null,
           "market_rank": 14.05,
           "rostered_pct": 68.6,
-          "explain": "Averaging 10.0 ppg over 8 game(s) this season. Vegas has MIN at about 19 points against GB.",
-          "rank": 17
+          "explain": "Averaging 10.0 ppg over 8 game(s) this season. Vegas has MIN at about 18 points against GB.",
+          "rank": 16
         },
         {
           "player_id": "NO_DST",
@@ -9285,25 +9267,25 @@
           "market_rank": 7.27,
           "rostered_pct": 49.5,
           "explain": "Averaging 4.3 ppg over 8 game(s) this season. Vegas has NO at about 25 points against CAR.",
-          "rank": 18
+          "rank": 17
         },
         {
-          "player_id": "ATL_DST",
-          "name": "ATL D/ST",
+          "player_id": "LV_DST",
+          "name": "LV D/ST",
           "position": "DST",
-          "team": "ATL",
-          "opponent": "KC",
-          "start_score": 5.35,
-          "recent_ppg": 4.44,
+          "team": "LV",
+          "opponent": "SEA",
+          "start_score": 5.77,
+          "recent_ppg": 3.33,
           "games_this_season": 9,
-          "matchup_adj": -0.84,
+          "matchup_adj": -0.42,
           "matchup_source": null,
-          "implied_points": 21.0,
+          "implied_points": 20.0,
           "injury_status": null,
-          "market_rank": 22.17,
-          "rostered_pct": 9.5,
-          "explain": "Averaging 4.4 ppg over 9 game(s) this season. Vegas has ATL at about 21 points against KC.",
-          "rank": 19
+          "market_rank": 28.17,
+          "rostered_pct": 9.0,
+          "explain": "Averaging 3.3 ppg over 9 game(s) this season. Vegas has LV at about 20 points against SEA.",
+          "rank": 18
         },
         {
           "player_id": "DET_DST",
@@ -9321,25 +9303,25 @@
           "market_rank": 9.84,
           "rostered_pct": 56.8,
           "explain": "Averaging 5.6 ppg over 8 game(s) this season. Vegas has DET at about 27 points against NE.",
-          "rank": 20
+          "rank": 19
         },
         {
-          "player_id": "ARI_DST",
-          "name": "ARI D/ST",
+          "player_id": "ATL_DST",
+          "name": "ATL D/ST",
           "position": "DST",
-          "team": "ARI",
-          "opponent": "LA",
-          "start_score": 5.14,
-          "recent_ppg": 2.39,
+          "team": "ATL",
+          "opponent": "KC",
+          "start_score": 5.35,
+          "recent_ppg": 4.44,
           "games_this_season": 9,
-          "matchup_adj": -1.05,
+          "matchup_adj": -0.84,
           "matchup_source": null,
-          "implied_points": 15.5,
+          "implied_points": 21.0,
           "injury_status": null,
-          "market_rank": 24.11,
-          "rostered_pct": 3.4,
-          "explain": "Averaging 2.4 ppg over 9 game(s) this season. Vegas has ARI at about 16 points against LA. That's a tough spot for DSTs, worth about -1.1.",
-          "rank": 21
+          "market_rank": 22.17,
+          "rostered_pct": 9.5,
+          "explain": "Averaging 4.4 ppg over 9 game(s) this season. Vegas has ATL at about 21 points against KC.",
+          "rank": 20
         },
         {
           "player_id": "CAR_DST",
@@ -9357,6 +9339,24 @@
           "market_rank": 22.97,
           "rostered_pct": 6.6,
           "explain": "Averaging 3.6 ppg over 8 game(s) this season. Vegas has CAR at about 24 points against NO. That's a tough spot for DSTs, worth about -1.1.",
+          "rank": 21
+        },
+        {
+          "player_id": "ARI_DST",
+          "name": "ARI D/ST",
+          "position": "DST",
+          "team": "ARI",
+          "opponent": "LA",
+          "start_score": 5.14,
+          "recent_ppg": 2.39,
+          "games_this_season": 9,
+          "matchup_adj": -1.05,
+          "matchup_source": null,
+          "implied_points": 15.5,
+          "injury_status": null,
+          "market_rank": 24.11,
+          "rostered_pct": 3.4,
+          "explain": "Averaging 2.4 ppg over 9 game(s) this season. Vegas has ARI at about 16 points against LA. That's a tough spot for DSTs, worth about -1.1.",
           "rank": 22
         },
         {
@@ -9483,19 +9483,19 @@
         "opponent_total": 15.5
       },
       {
+        "team": "GB",
+        "opponent": "MIN",
+        "start_score": 8.28,
+        "market_rank": 11.86,
+        "rostered_pct": 31.5,
+        "opponent_total": 17.5
+      },
+      {
         "team": "IND",
         "opponent": "MIA",
         "start_score": 7.65,
         "market_rank": 28.57,
         "rostered_pct": 15.8,
-        "opponent_total": 19.0
-      },
-      {
-        "team": "GB",
-        "opponent": "MIN",
-        "start_score": 7.65,
-        "market_rank": 11.86,
-        "rostered_pct": 31.5,
         "opponent_total": 19.0
       }
     ],
