@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-10T13:43:32.817165+00:00"
+    "generated_at": "2026-11-10T16:35:11.420703+00:00"
   },
   "weeks_graded": 10,
   "ats": {
@@ -2148,7 +2148,7 @@
       "season": 2026,
       "week": 10,
       "model_version": "v2",
-      "locked_at": "2026-11-10T13:43:32.811051+00:00",
+      "locked_at": "2026-11-10T16:35:11.413363+00:00",
       "ats": {
         "graded": 0,
         "correct": 0,
@@ -2308,8 +2308,8 @@
           "home_team": "DAL",
           "away_team": "SF",
           "model_margin_home": -3.8,
-          "spread_home": -3.5,
-          "our_pick": "away",
+          "spread_home": -4.5,
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,
