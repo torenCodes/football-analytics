@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-10T13:24:03.684324+00:00"
+    "generated_at": "2026-11-10T16:22:00.202088+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -583,7 +583,7 @@
           "player_id": "00-0033119",
           "name": "Jacoby Brissett",
           "position": "QB",
-          "team": "ARI",
+          "team": "BAL",
           "baseline_ppg": 17.07,
           "season_ppg": 16.82,
           "last6_ppg": 17.33,
@@ -592,13 +592,13 @@
           "line_continuity_type": "oline",
           "same_head_coach": false,
           "same_coordinator": false,
-          "coordinator_name": "Nathaniel Hackett",
+          "coordinator_name": "Declan Doyle",
           "coordinator_role": "OC",
           "edge_score": 13.74,
           "market_rank": 26.8,
           "model_rank": 20,
           "market_gap": 6.8,
-          "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Playing under a new head coach this season adds scheme uncertainty. New OC (Nathaniel Hackett) means a new scheme to learn too. We have Jacoby Brissett 7 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Playing under a new head coach this season adds scheme uncertainty. New OC (Declan Doyle) means a new scheme to learn too. We have Jacoby Brissett 7 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 27
         },
         {
@@ -1374,28 +1374,6 @@
           "our_rank": 12
         },
         {
-          "player_id": "00-0032764",
-          "name": "Derrick Henry",
-          "position": "RB",
-          "team": "BAL",
-          "baseline_ppg": 18.19,
-          "season_ppg": 16.44,
-          "last6_ppg": 19.93,
-          "games_played_2025": 17,
-          "line_continuity_pct": 0.4,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Declan Doyle",
-          "coordinator_role": "OC",
-          "edge_score": 14.97,
-          "market_rank": 16.83,
-          "model_rank": 7,
-          "market_gap": 9.8,
-          "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Playing under a new head coach this season adds scheme uncertainty. New OC (Declan Doyle) means a new scheme to learn too. We have Derrick Henry 10 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
-          "our_rank": 13
-        },
-        {
           "player_id": "00-0039361",
           "name": "Bucky Irving",
           "position": "RB",
@@ -1410,11 +1388,33 @@
           "same_coordinator": false,
           "coordinator_name": "Zac Robinson",
           "coordinator_role": "OC",
-          "edge_score": 14.91,
+          "edge_score": 14.97,
           "market_rank": 11.67,
-          "model_rank": 23,
-          "market_gap": -11.3,
-          "explain": "O-line continuity is elite (100%), a real tailwind here. New OC (Zac Robinson) means a new scheme to learn too. The market ranks Bucky Irving 11 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 22,
+          "market_gap": -10.3,
+          "explain": "O-line continuity is elite (100%), a real tailwind here. New OC (Zac Robinson) means a new scheme to learn too. The market ranks Bucky Irving 10 spots higher than we do \u2014 our model is more cautious here.",
+          "our_rank": 13
+        },
+        {
+          "player_id": "00-0032764",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "team": "BAL",
+          "baseline_ppg": 18.19,
+          "season_ppg": 16.44,
+          "last6_ppg": 19.93,
+          "games_played_2025": 17,
+          "line_continuity_pct": 0.4,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Declan Doyle",
+          "coordinator_role": "OC",
+          "edge_score": 14.91,
+          "market_rank": 16.83,
+          "model_rank": 7,
+          "market_gap": 9.8,
+          "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Playing under a new head coach this season adds scheme uncertainty. New OC (Declan Doyle) means a new scheme to learn too. We have Derrick Henry 10 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 14
         },
         {
@@ -1808,9 +1808,9 @@
           "coordinator_role": "OC",
           "edge_score": 10.09,
           "market_rank": 39.67,
-          "model_rank": 22,
-          "market_gap": 17.7,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. New OC (Brian Fleury) means a new scheme to learn too. We have Zach Charbonnet 18 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "model_rank": 23,
+          "market_gap": 16.7,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. New OC (Brian Fleury) means a new scheme to learn too. We have Zach Charbonnet 17 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 32
         },
         {
@@ -2536,9 +2536,9 @@
           "coordinator_role": "OC",
           "edge_score": 14.64,
           "market_rank": 14.83,
-          "model_rank": 21,
-          "market_gap": -6.2,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. New OC (Frank Reich) means a new scheme to learn too. The market ranks Garrett Wilson 6 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 22,
+          "market_gap": -7.2,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. New OC (Frank Reich) means a new scheme to learn too. The market ranks Garrett Wilson 7 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 15
         },
         {
@@ -2866,9 +2866,9 @@
           "coordinator_role": "OC",
           "edge_score": 11.5,
           "market_rank": 31.33,
-          "model_rank": 43,
-          "market_gap": -11.7,
-          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 12 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 42,
+          "market_gap": -10.7,
+          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 11 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 30
         },
         {
@@ -2910,9 +2910,9 @@
           "coordinator_role": "OC",
           "edge_score": 11.43,
           "market_rank": 10.67,
-          "model_rank": 108,
-          "market_gap": -97.3,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Adam Stenavich) returning, so scheme continuity holds. The market ranks Matthew Golden 97 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 107,
+          "market_gap": -96.3,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. Same OC (Adam Stenavich) returning, so scheme continuity holds. The market ranks Matthew Golden 96 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 32
         },
         {
@@ -2954,9 +2954,9 @@
           "coordinator_role": "OC",
           "edge_score": 10.77,
           "market_rank": 44.0,
-          "model_rank": 22,
-          "market_gap": 22.0,
-          "explain": "Playing under a new head coach this season adds scheme uncertainty. New OC (Brian Daboll) means a new scheme to learn too. We have Wan'Dale Robinson 22 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "model_rank": 21,
+          "market_gap": 23.0,
+          "explain": "Playing under a new head coach this season adds scheme uncertainty. New OC (Brian Daboll) means a new scheme to learn too. We have Wan'Dale Robinson 23 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 34
         },
         {
@@ -5446,9 +5446,9 @@
           "coordinator_role": "DC",
           "edge_score": 7.41,
           "market_rank": 6.63,
-          "model_rank": 16,
-          "market_gap": -9.4,
-          "explain": "Same DC (Steve Spagnuolo) returning, so scheme continuity holds. The market ranks KC D/ST 9 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 17,
+          "market_gap": -10.4,
+          "explain": "Same DC (Steve Spagnuolo) returning, so scheme continuity holds. The market ranks KC D/ST 10 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 7
         },
         {
@@ -5534,8 +5534,8 @@
           "coordinator_role": "DC",
           "edge_score": 6.69,
           "market_rank": 12.5,
-          "model_rank": 17,
-          "market_gap": -4.5,
+          "model_rank": 16,
+          "market_gap": -3.5,
           "explain": "Playing under a new head coach this season adds scheme uncertainty. New DC (Mike Rutenberg) means a new scheme to learn too.",
           "our_rank": 11
         },
@@ -6585,7 +6585,7 @@
           "player_id": "00-0033119",
           "name": "Jacoby Brissett",
           "position": "QB",
-          "team": "ARI",
+          "team": "BAL",
           "baseline_ppg": 17.07,
           "season_ppg": 16.82,
           "last6_ppg": 17.33,
@@ -6594,13 +6594,13 @@
           "line_continuity_type": "oline",
           "same_head_coach": false,
           "same_coordinator": false,
-          "coordinator_name": "Nathaniel Hackett",
+          "coordinator_name": "Declan Doyle",
           "coordinator_role": "OC",
           "edge_score": 13.74,
           "market_rank": 26.8,
           "model_rank": 20,
           "market_gap": 6.8,
-          "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Playing under a new head coach this season adds scheme uncertainty. New OC (Nathaniel Hackett) means a new scheme to learn too. We have Jacoby Brissett 7 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Playing under a new head coach this season adds scheme uncertainty. New OC (Declan Doyle) means a new scheme to learn too. We have Jacoby Brissett 7 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 27
         },
         {
@@ -7876,9 +7876,9 @@
           "coordinator_role": "OC",
           "edge_score": 7.86,
           "market_rank": 20.33,
-          "model_rank": 92,
-          "market_gap": -71.7,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Bobby Slowik) means a new scheme to learn too. The market ranks Ollie Gordon II 72 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 91,
+          "market_gap": -70.7,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Bobby Slowik) means a new scheme to learn too. The market ranks Ollie Gordon II 71 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 35
         },
         {
@@ -8604,9 +8604,9 @@
           "coordinator_role": "OC",
           "edge_score": 9.83,
           "market_rank": 12.0,
-          "model_rank": 48,
-          "market_gap": -36.0,
-          "explain": "Same OC (Wes Phillips) returning, so scheme continuity holds. The market ranks Justin Jefferson 36 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 49,
+          "market_gap": -37.0,
+          "explain": "Same OC (Wes Phillips) returning, so scheme continuity holds. The market ranks Justin Jefferson 37 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 18
         },
         {
@@ -8912,9 +8912,9 @@
           "coordinator_role": "OC",
           "edge_score": 7.27,
           "market_rank": 31.33,
-          "model_rank": 49,
-          "market_gap": -17.7,
-          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 18 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 48,
+          "market_gap": -16.7,
+          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 17 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 32
         },
         {
@@ -9800,28 +9800,6 @@
           "our_rank": 22
         },
         {
-          "player_id": "00-0036894",
-          "name": "Pat Freiermuth",
-          "position": "TE",
-          "team": "PIT",
-          "baseline_ppg": 4.65,
-          "season_ppg": 4.84,
-          "last6_ppg": 4.45,
-          "games_played_2025": 15,
-          "line_continuity_pct": 0.6,
-          "line_continuity_type": "oline",
-          "same_head_coach": false,
-          "same_coordinator": false,
-          "coordinator_name": "Brian Angelichio",
-          "coordinator_role": "OC",
-          "edge_score": 5.12,
-          "market_rank": 22.33,
-          "model_rank": 35,
-          "market_gap": -12.7,
-          "explain": "Playing under a new head coach this season adds scheme uncertainty. New OC (Brian Angelichio) means a new scheme to learn too. The market ranks Pat Freiermuth 13 spots higher than we do \u2014 our model is more cautious here.",
-          "our_rank": 23
-        },
-        {
           "player_id": "00-0037252",
           "name": "Greg Dulcich",
           "position": "TE",
@@ -9836,12 +9814,12 @@
           "same_coordinator": false,
           "coordinator_name": "Bobby Slowik",
           "coordinator_role": "OC",
-          "edge_score": 4.93,
+          "edge_score": 5.12,
           "market_rank": 23.17,
           "model_rank": 33,
           "market_gap": -9.8,
           "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Bobby Slowik) means a new scheme to learn too. The market ranks Greg Dulcich 10 spots higher than we do \u2014 our model is more cautious here.",
-          "our_rank": 24
+          "our_rank": 23
         },
         {
           "player_id": "00-0033110",
@@ -9863,6 +9841,28 @@
           "model_rank": 18,
           "market_gap": 10.2,
           "explain": "O-line continuity is elite (100%), a real tailwind here. New OC (Nathan Scheelhaase) means a new scheme to learn too. We have Tyler Higbee 10 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "our_rank": 24
+        },
+        {
+          "player_id": "00-0036894",
+          "name": "Pat Freiermuth",
+          "position": "TE",
+          "team": "PIT",
+          "baseline_ppg": 4.65,
+          "season_ppg": 4.84,
+          "last6_ppg": 4.45,
+          "games_played_2025": 15,
+          "line_continuity_pct": 0.6,
+          "line_continuity_type": "oline",
+          "same_head_coach": false,
+          "same_coordinator": false,
+          "coordinator_name": "Brian Angelichio",
+          "coordinator_role": "OC",
+          "edge_score": 4.93,
+          "market_rank": 22.33,
+          "model_rank": 36,
+          "market_gap": -13.7,
+          "explain": "Playing under a new head coach this season adds scheme uncertainty. New OC (Brian Angelichio) means a new scheme to learn too. The market ranks Pat Freiermuth 14 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 25
         },
         {
@@ -10080,7 +10080,7 @@
           "coordinator_role": "OC",
           "edge_score": 3.65,
           "market_rank": null,
-          "model_rank": 36,
+          "model_rank": 35,
           "market_gap": null,
           "explain": "O-line continuity is elite (100%), a real tailwind here. Same OC (Dan Pitcher) returning, so scheme continuity holds.",
           "our_rank": 35
@@ -11448,9 +11448,9 @@
           "coordinator_role": "DC",
           "edge_score": 7.41,
           "market_rank": 6.63,
-          "model_rank": 16,
-          "market_gap": -9.4,
-          "explain": "Same DC (Steve Spagnuolo) returning, so scheme continuity holds. The market ranks KC D/ST 9 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 17,
+          "market_gap": -10.4,
+          "explain": "Same DC (Steve Spagnuolo) returning, so scheme continuity holds. The market ranks KC D/ST 10 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 7
         },
         {
@@ -11536,8 +11536,8 @@
           "coordinator_role": "DC",
           "edge_score": 6.69,
           "market_rank": 12.5,
-          "model_rank": 17,
-          "market_gap": -4.5,
+          "model_rank": 16,
+          "market_gap": -3.5,
           "explain": "Playing under a new head coach this season adds scheme uncertainty. New DC (Mike Rutenberg) means a new scheme to learn too.",
           "our_rank": 11
         },

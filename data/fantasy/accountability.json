@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-10T13:24:03.684324+00:00"
+    "generated_at": "2026-11-10T16:22:00.202088+00:00"
   },
   "available": true,
   "season": 2026,
@@ -116,8 +116,8 @@
         "hit_rate_within_5": 0.293,
         "vs_consensus": {
           "players": 41,
-          "ours_rho": 0.577,
-          "market_rho": 0.7
+          "ours_rho": 0.579,
+          "market_rho": 0.701
         },
         "biggest_steals": [
           {
@@ -151,8 +151,8 @@
             "player_id": "00-0039361",
             "name": "Bucky Irving",
             "preseason_rank": 24,
-            "actual_rank": 8,
-            "rank_error": -16,
+            "actual_rank": 9,
+            "rank_error": -15,
             "games": 9,
             "ppg": 17.7
           },
@@ -428,8 +428,8 @@
         "hit_rate_within_5": 0.259,
         "vs_consensus": {
           "players": 27,
-          "ours_rho": 0.305,
-          "market_rho": 0.239
+          "ours_rho": 0.31,
+          "market_rho": 0.246
         },
         "biggest_steals": [
           {
@@ -445,8 +445,8 @@
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 15,
-            "rank_error": -21,
+            "actual_rank": 16,
+            "rank_error": -20,
             "games": 9,
             "ppg": 8.9
           },
@@ -454,8 +454,8 @@
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
-            "actual_rank": 10,
-            "rank_error": -17,
+            "actual_rank": 9,
+            "rank_error": -18,
             "games": 8,
             "ppg": 9.6
           },
@@ -1020,6 +1020,15 @@
             "ppg": 1.7
           },
           {
+            "player_id": "00-0040194",
+            "name": "Jackson Hawes",
+            "preseason_rank": 47,
+            "actual_rank": 81,
+            "rank_error": 34,
+            "games": 5,
+            "ppg": 0.3
+          },
+          {
             "player_id": "00-0037004",
             "name": "Hunter Long",
             "preseason_rank": 42,
@@ -1027,15 +1036,6 @@
             "rank_error": 34,
             "games": 4,
             "ppg": 0.4
-          },
-          {
-            "player_id": "00-0040194",
-            "name": "Jackson Hawes",
-            "preseason_rank": 47,
-            "actual_rank": 80,
-            "rank_error": 33,
-            "games": 5,
-            "ppg": 0.3
           },
           {
             "player_id": "00-0038129",
@@ -1054,8 +1054,8 @@
         "hit_rate_within_5": 0.259,
         "vs_consensus": {
           "players": 27,
-          "ours_rho": 0.305,
-          "market_rho": 0.239
+          "ours_rho": 0.31,
+          "market_rho": 0.246
         },
         "biggest_steals": [
           {
@@ -1071,8 +1071,8 @@
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 15,
-            "rank_error": -21,
+            "actual_rank": 16,
+            "rank_error": -20,
             "games": 9,
             "ppg": 8.9
           },
@@ -1080,8 +1080,8 @@
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
-            "actual_rank": 10,
-            "rank_error": -17,
+            "actual_rank": 9,
+            "rank_error": -18,
             "games": 8,
             "ppg": 9.6
           },
