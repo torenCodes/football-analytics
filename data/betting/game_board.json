@@ -1,54 +1,195 @@
 {
   "meta": {
-    "generated_at": "2026-11-07T07:45:11.758696+00:00"
+    "generated_at": "2026-11-10T13:43:32.817165+00:00"
   },
   "season": 2026,
-  "week": 9,
+  "week": 10,
   "games": [
     {
-      "game_id": "2026_09_CIN_ATL",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "09:30",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "ATL",
-      "away_team": "CIN",
-      "div_game": false,
-      "model_margin_home": -4.3,
+      "game_id": "2026_10_WAS_NYG",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-12",
+      "weekday": "Thursday",
+      "gametime": "20:15",
+      "primetime": true,
+      "home_team": "NYG",
+      "away_team": "WAS",
+      "div_game": true,
+      "model_margin_home": 1.5,
       "margin_breakdown": [
         {
           "kind": "offense",
-          "team": "ATL",
-          "opp": "CIN",
-          "pts_home": -2.3
+          "team": "NYG",
+          "opp": "WAS",
+          "pts_home": 1.3
         },
         {
           "kind": "offense",
-          "team": "CIN",
-          "opp": "ATL",
-          "pts_home": -2.0
+          "team": "WAS",
+          "opp": "NYG",
+          "pts_home": 0.8
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -0.4,
+          "away_pd": -3.6,
+          "pts_home": 0.8
+        },
+        {
+          "kind": "new_qb",
+          "team": "NYG",
+          "pts_home": -0.8
+        },
+        {
+          "kind": "home_field",
+          "team": "NYG",
+          "pts_home": 2.0
+        },
+        {
+          "kind": "qb_out",
+          "team": "NYG",
+          "pts_home": -2.6
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 26,
+          "off": 19,
           "def": 12
         },
         "away": {
-          "off": 9,
-          "def": 18
+          "off": 15,
+          "def": 26
         }
       },
       "current_season_weight": {
         "home": {
-          "off": 0.49,
+          "off": 0.51,
+          "def": 0.49
+        },
+        "away": {
+          "off": 0.5,
+          "def": 0.51
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Brian Daboll",
+          "coach_current": "John Harbaugh",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Dan Quinn",
+          "coach_current": "Dan Quinn",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": {
+          "gsis_id": "00-0031503",
+          "status": "Backup starting"
+        },
+        "away": null
+      },
+      "qb_change": {
+        "home": true,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": {
+        "home": false,
+        "away": false,
+        "last_season": 2026
+      },
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Light Rain",
+        "temperature_f": 60,
+        "wind": "5 to 10 mph"
+      },
+      "storyline": "On paper these two grade out close \u2014 home field does most of the work for NYG. The model's NYG by 1.5 lands inside the 2.5-point spread, so WAS +2.5 gets the lean. NYG's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 50% of these ratings now come from 2026 games. Forecast for kickoff: Light Rain, 60\u00b0F, wind 5 to 10 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "On paper these two grade out close \u2014 home field does most of the work for NYG. The model's NYG by 1.5 lands inside the 2.5-point spread, so WAS +2.5 gets the lean.",
+      "market": {
+        "spread_home": 2.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -135,
+        "moneyline_away": 114,
+        "total": 41.5,
+        "over_odds": -112,
+        "under_odds": -108,
+        "market_favorite": "home",
+        "edge_vs_market": -1.0
+      }
+    },
+    {
+      "game_id": "2026_10_NE_DET",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "09:30",
+      "primetime": false,
+      "home_team": "DET",
+      "away_team": "NE",
+      "div_game": false,
+      "model_margin_home": -0.5,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "DET",
+          "opp": "NE",
+          "pts_home": 3.5
+        },
+        {
+          "kind": "offense",
+          "team": "NE",
+          "opp": "DET",
+          "pts_home": -4.1
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": 3.3,
+          "away_pd": 3.1,
+          "pts_home": 0.1
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 7,
+          "def": 25
+        },
+        "away": {
+          "off": 5,
+          "def": 20
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.51,
           "def": 0.51
         },
         "away": {
-          "off": 0.47,
-          "def": 0.47
+          "off": 0.53,
+          "def": 0.52
         }
       },
       "our_pick": "away",
@@ -57,25 +198,25 @@
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
-          "returning_starters": 4,
+          "returning_starters": 3,
           "total_starters": 5,
-          "continuity_pct": 0.8
+          "continuity_pct": 0.6
         },
         "away": {
-          "returning_starters": 5,
+          "returning_starters": 3,
           "total_starters": 5,
-          "continuity_pct": 1.0
+          "continuity_pct": 0.6
         }
       },
       "coach_continuity": {
         "home": {
-          "coach_prior": "Raheem Morris",
-          "coach_current": "Raheem Morris",
+          "coach_prior": "Dan Campbell",
+          "coach_current": "Dan Campbell",
           "same_coach": true
         },
         "away": {
-          "coach_prior": "Zac Taylor",
-          "coach_current": "Zac Taylor",
+          "coach_prior": "Mike Vrabel",
+          "coach_current": "Mike Vrabel",
           "same_coach": true
         }
       },
@@ -83,50 +224,188 @@
         "home": null,
         "away": null
       },
+      "qb_change": {
+        "home": false,
+        "away": false
+      },
+      "playoff_race": null,
       "revenge_game": null,
       "former_coach": null,
-      "roof": null,
+      "roof": "dome",
       "international_site": true,
       "weather": null,
-      "storyline": "ATL's #26 offense is the weak link the model keys on, even against CIN's #18 defense. The model is even higher on CIN than Vegas is: 4.3 points to the market's 3. Early-season read: only about 48% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. CIN brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. This one's at an international neutral site, so the model gives neither team home-field points.",
-      "storyline_short": "ATL's #26 offense is the weak link the model keys on, even against CIN's #18 defense. The model is even higher on CIN than Vegas is: 4.3 points to the market's 3.",
+      "storyline": "By the model's ratings, this is about as even as matchups get. Vegas has DET; the model has NE, by 0.5. That flips the lean to NE +2.5. About 52% of these ratings now come from 2026 games. This one's at an international neutral site, so the model gives neither team home-field points.",
+      "storyline_short": "By the model's ratings, this is about as even as matchups get. Vegas has DET; the model has NE, by 0.5. That flips the lean to NE +2.5.",
       "market": {
-        "spread_home": -3.0,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
-        "moneyline_home": 136,
-        "moneyline_away": -162,
-        "total": 52.5,
+        "spread_home": 2.5,
+        "spread_home_odds": -120,
+        "spread_away_odds": 100,
+        "moneyline_home": -148,
+        "moneyline_away": 124,
+        "total": 51.5,
         "over_odds": 100,
         "under_odds": -120,
-        "market_favorite": "away",
-        "edge_vs_market": -1.3
+        "market_favorite": "home",
+        "edge_vs_market": -3.0
       }
     },
     {
-      "game_id": "2026_09_CLE_NO",
-      "week": 9,
-      "gameday": "2026-11-08",
+      "game_id": "2026_10_BUF_NYJ",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
       "weekday": "Sunday",
       "gametime": "13:00",
       "primetime": false,
-      "juice_score": 0,
+      "home_team": "NYJ",
+      "away_team": "BUF",
+      "div_game": true,
+      "model_margin_home": -8.1,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "NYJ",
+          "opp": "BUF",
+          "pts_home": -1.9
+        },
+        {
+          "kind": "offense",
+          "team": "BUF",
+          "opp": "NYJ",
+          "pts_home": -5.3
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -5.8,
+          "away_pd": 6.4,
+          "pts_home": -3.0
+        },
+        {
+          "kind": "new_qb",
+          "team": "NYJ",
+          "pts_home": 0.1
+        },
+        {
+          "kind": "home_field",
+          "team": "NYJ",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 21,
+          "def": 22
+        },
+        "away": {
+          "off": 2,
+          "def": 16
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.51,
+          "def": 0.53
+        },
+        "away": {
+          "off": 0.51,
+          "def": 0.5
+        }
+      },
+      "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 1,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Aaron Glenn",
+          "coach_current": "Aaron Glenn",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Sean McDermott",
+          "coach_current": "Joe Brady",
+          "same_coach": false
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "qb_change": {
+        "home": true,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": {
+        "home": true,
+        "away": false,
+        "last_season": 2025
+      },
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 52,
+        "wind": "10 to 14 mph"
+      },
+      "storyline": "It starts with BUF's offense, #2 in the model's ratings, against a NYJ defense that ranks #22. Vegas and the model agree BUF should win; the model just expects NYJ to keep it closer than 8.5. NYJ does get 2 points of home field back. About 51% of these ratings now come from 2026 games. NYJ brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. NYJ comes in with 1 extra day of rest \u2014 context, not something the model scores. NYJ lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 52\u00b0F, wind 10 to 14 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "It starts with BUF's offense, #2 in the model's ratings, against a NYJ defense that ranks #22. Vegas and the model agree BUF should win; the model just expects NYJ to keep it closer than 8.5.",
+      "market": {
+        "spread_home": -8.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": 400,
+        "moneyline_away": -535,
+        "total": 50.5,
+        "over_odds": -105,
+        "under_odds": -115,
+        "market_favorite": "away",
+        "edge_vs_market": 0.4
+      }
+    },
+    {
+      "game_id": "2026_10_CAR_NO",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
       "home_team": "NO",
-      "away_team": "CLE",
-      "div_game": false,
-      "model_margin_home": 2.2,
+      "away_team": "CAR",
+      "div_game": true,
+      "model_margin_home": 0.7,
       "margin_breakdown": [
         {
           "kind": "offense",
           "team": "NO",
-          "opp": "CLE",
-          "pts_home": -3.0
+          "opp": "CAR",
+          "pts_home": -0.2
         },
         {
           "kind": "offense",
-          "team": "CLE",
+          "team": "CAR",
           "opp": "NO",
-          "pts_home": 3.2
+          "pts_home": -0.9
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -3.3,
+          "away_pd": -2.5,
+          "pts_home": -0.2
         },
         {
           "kind": "home_field",
@@ -136,38 +415,38 @@
       ],
       "unit_ranks": {
         "home": {
-          "off": 24,
-          "def": 25
+          "off": 20,
+          "def": 19
         },
         "away": {
-          "off": 31,
-          "def": 11
+          "off": 13,
+          "def": 21
         }
       },
       "current_season_weight": {
         "home": {
-          "off": 0.48,
-          "def": 0.47
+          "off": 0.52,
+          "def": 0.51
         },
         "away": {
-          "off": 0.48,
-          "def": 0.5
+          "off": 0.51,
+          "def": 0.51
         }
       },
       "our_pick": "away",
       "pick_status": "pick",
       "neutral_site": false,
-      "rest_days_edge_home": 7,
+      "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
-          "returning_starters": 3,
+          "returning_starters": 4,
           "total_starters": 5,
-          "continuity_pct": 0.6
+          "continuity_pct": 0.8
         },
         "away": {
-          "returning_starters": 0,
+          "returning_starters": 2,
           "total_starters": 5,
-          "continuity_pct": 0.0
+          "continuity_pct": 0.4
         }
       },
       "coach_continuity": {
@@ -177,746 +456,115 @@
           "same_coach": true
         },
         "away": {
-          "coach_prior": "Kevin Stefanski",
-          "coach_current": "Todd Monken",
-          "same_coach": false
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "dome",
-      "international_site": false,
-      "weather": null,
-      "storyline": "The model doesn't trust CLE's offense (#31) to move the ball, even against NO's #25 defense \u2014 worth about 3 points by its math. Asking NO to win by more than 2.5 is a lot when the model has them by 2.2. Lean CLE +2.5. NO's #24 offense is the question mark, facing CLE's #11 defense. Early-season read: only about 48% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. CLE is breaking in a mostly new offensive line (0% continuity) \u2014 a real wildcard this early in the year. CLE is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. NO comes in with 7 extra days of rest \u2014 context, not something the model scores. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "The model doesn't trust CLE's offense (#31) to move the ball, even against NO's #25 defense \u2014 worth about 3 points by its math. Asking NO to win by more than 2.5 is a lot when the model has them by 2.2. Lean CLE +2.5.",
-      "market": {
-        "spread_home": 2.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": -142,
-        "moneyline_away": 120,
-        "total": 43.5,
-        "over_odds": -108,
-        "under_odds": -112,
-        "market_favorite": "home",
-        "edge_vs_market": -0.3
-      }
-    },
-    {
-      "game_id": "2026_09_DAL_IND",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "13:00",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "IND",
-      "away_team": "DAL",
-      "div_game": false,
-      "model_margin_home": -0.6,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "IND",
-          "opp": "DAL",
-          "pts_home": 2.3
-        },
-        {
-          "kind": "offense",
-          "team": "DAL",
-          "opp": "IND",
-          "pts_home": -4.9
-        },
-        {
-          "kind": "home_field",
-          "team": "IND",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 23,
-          "def": 21
-        },
-        "away": {
-          "off": 5,
-          "def": 32
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.51,
-          "def": 0.48
-        },
-        "away": {
-          "off": 0.51,
-          "def": 0.51
-        }
-      },
-      "our_pick": "home",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 0,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 3,
-          "total_starters": 5,
-          "continuity_pct": 0.6
-        },
-        "away": {
-          "returning_starters": 5,
-          "total_starters": 5,
-          "continuity_pct": 1.0
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Shane Steichen",
-          "coach_current": "Shane Steichen",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Brian Schottenheimer",
-          "coach_current": "Brian Schottenheimer",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": null,
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 57,
-        "wind": "2 to 9 mph"
-      },
-      "storyline": "By the model's ratings, this is about as even as matchups get. Vegas and the model agree DAL should win; the model just expects IND to keep it closer than 6. About 50% of these ratings now come from 2026 games. Forecast for kickoff: Mostly Sunny, 57\u00b0F, wind 2 to 9 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "By the model's ratings, this is about as even as matchups get. Vegas and the model agree DAL should win; the model just expects IND to keep it closer than 6.",
-      "market": {
-        "spread_home": -6.0,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": 225,
-        "moneyline_away": -278,
-        "total": 51.5,
-        "over_odds": -110,
-        "under_odds": -110,
-        "market_favorite": "away",
-        "edge_vs_market": 5.4
-      }
-    },
-    {
-      "game_id": "2026_09_DEN_CAR",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "13:00",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "CAR",
-      "away_team": "DEN",
-      "div_game": false,
-      "model_margin_home": -0.8,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "CAR",
-          "opp": "DEN",
-          "pts_home": -1.7
-        },
-        {
-          "kind": "offense",
-          "team": "DEN",
-          "opp": "CAR",
-          "pts_home": -1.1
-        },
-        {
-          "kind": "home_field",
-          "team": "CAR",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 17,
-          "def": 23
-        },
-        "away": {
-          "off": 16,
-          "def": 9
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.48,
-          "def": 0.48
-        },
-        "away": {
-          "off": 0.48,
-          "def": 0.53
-        }
-      },
-      "our_pick": "home",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 3,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 2,
-          "total_starters": 5,
-          "continuity_pct": 0.4
-        },
-        "away": {
-          "returning_starters": 5,
-          "total_starters": 5,
-          "continuity_pct": 1.0
-        }
-      },
-      "coach_continuity": {
-        "home": {
           "coach_prior": "Dave Canales",
           "coach_current": "Dave Canales",
           "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Sean Payton",
-          "coach_current": "Sean Payton",
-          "same_coach": true
         }
       },
       "qb_injury": {
         "home": null,
         "away": null
       },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "outdoors",
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 70,
-        "wind": "6 mph"
+      "qb_change": {
+        "home": false,
+        "away": false
       },
-      "storyline": "The model can barely separate these two. Asking DEN to win by more than 2.5 is a lot when the model has them by 0.8. Lean CAR +2.5. Early-season read: only about 49% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. CAR is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. CAR comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny, 70\u00b0F, wind 6 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model can barely separate these two. Asking DEN to win by more than 2.5 is a lot when the model has them by 0.8. Lean CAR +2.5.",
-      "market": {
-        "spread_home": -2.5,
-        "spread_home_odds": -102,
-        "spread_away_odds": -118,
-        "moneyline_home": 120,
-        "moneyline_away": -142,
-        "total": 43.5,
-        "over_odds": -115,
-        "under_odds": -105,
-        "market_favorite": "away",
-        "edge_vs_market": 1.7
-      }
-    },
-    {
-      "game_id": "2026_09_DET_MIA",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "13:00",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "MIA",
-      "away_team": "DET",
-      "div_game": false,
-      "model_margin_home": -4.1,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "MIA",
-          "opp": "DET",
-          "pts_home": 0.9
-        },
-        {
-          "kind": "offense",
-          "team": "DET",
-          "opp": "MIA",
-          "pts_home": -7.0
-        },
-        {
-          "kind": "home_field",
-          "team": "MIA",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 20,
-          "def": 31
-        },
-        "away": {
-          "off": 6,
-          "def": 29
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.44,
-          "def": 0.46
-        },
-        "away": {
-          "off": 0.48,
-          "def": 0.48
-        }
-      },
-      "our_pick": "home",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 0,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 4,
-          "total_starters": 5,
-          "continuity_pct": 0.8
-        },
-        "away": {
-          "returning_starters": 3,
-          "total_starters": 5,
-          "continuity_pct": 0.6
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Mike McDaniel",
-          "coach_current": "Jeff Hafley",
-          "same_coach": false
-        },
-        "away": {
-          "coach_prior": "Dan Campbell",
-          "coach_current": "Dan Campbell",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "outdoors",
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Sunny then Slight Chance Showers And Thunderstorms",
-        "temperature_f": 84,
-        "wind": "2 to 6 mph"
-      },
-      "storyline": "The soft spot is MIA's defense, #31 in the model's ratings, and DET's #6 offense gets to face it. The model likes DET too, just not by 7 \u2014 it has them by 4.1, so the lean is MIA +7. MIA does get 2 points of home field back. Early-season read: only about 46% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. MIA brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. MIA is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Sunny then Slight Chance Showers And Thunderstorms, 84\u00b0F, wind 2 to 6 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The soft spot is MIA's defense, #31 in the model's ratings, and DET's #6 offense gets to face it. The model likes DET too, just not by 7 \u2014 it has them by 4.1, so the lean is MIA +7.",
-      "market": {
-        "spread_home": -7.0,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": 285,
-        "moneyline_away": -360,
-        "total": 50.5,
-        "over_odds": -110,
-        "under_odds": -110,
-        "market_favorite": "away",
-        "edge_vs_market": 2.9
-      }
-    },
-    {
-      "game_id": "2026_09_LA_WAS",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "13:00",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "WAS",
-      "away_team": "LA",
-      "div_game": false,
-      "model_margin_home": -5.6,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "WAS",
-          "opp": "LA",
-          "pts_home": -3.1
-        },
-        {
-          "kind": "offense",
-          "team": "LA",
-          "opp": "WAS",
-          "pts_home": -4.5
-        },
-        {
-          "kind": "home_field",
-          "team": "WAS",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 15,
-          "def": 24
-        },
-        "away": {
-          "off": 8,
-          "def": 3
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.47,
-          "def": 0.47
-        },
-        "away": {
-          "off": 0.52,
-          "def": 0.5
-        }
-      },
-      "our_pick": "away",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 0,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 3,
-          "total_starters": 5,
-          "continuity_pct": 0.6
-        },
-        "away": {
-          "returning_starters": 5,
-          "total_starters": 5,
-          "continuity_pct": 1.0
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Dan Quinn",
-          "coach_current": "Dan Quinn",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Sean McVay",
-          "coach_current": "Sean McVay",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "outdoors",
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 64,
-        "wind": "6 mph"
-      },
-      "storyline": "The matchup doing the most work: LA's #8 offense vs. WAS's #24 defense, worth about 4.5 points by the model's math. Vegas has LA by 5.5; the model goes a hair past that, to 5.6. Lean LA \u22125.5. WAS does get 2 points of home field back. Early-season read: only about 49% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. LA brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Mostly Sunny, 64\u00b0F, wind 6 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The matchup doing the most work: LA's #8 offense vs. WAS's #24 defense, worth about 4.5 points by the model's math. Vegas has LA by 5.5; the model goes a hair past that, to 5.6. Lean LA \u22125.5.",
-      "market": {
-        "spread_home": -5.5,
-        "spread_home_odds": -102,
-        "spread_away_odds": -118,
-        "moneyline_home": 200,
-        "moneyline_away": -245,
-        "total": 47.5,
-        "over_odds": -108,
-        "under_odds": -112,
-        "market_favorite": "away",
-        "edge_vs_market": -0.1
-      }
-    },
-    {
-      "game_id": "2026_09_NYG_PHI",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "13:00",
-      "primetime": false,
-      "juice_score": 4,
-      "home_team": "PHI",
-      "away_team": "NYG",
-      "div_game": true,
-      "model_margin_home": -3.5,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "PHI",
-          "opp": "NYG",
-          "pts_home": -2.7
-        },
-        {
-          "kind": "offense",
-          "team": "NYG",
-          "opp": "PHI",
-          "pts_home": -1.8
-        },
-        {
-          "kind": "home_field",
-          "team": "PHI",
-          "pts_home": 2.0
-        },
-        {
-          "kind": "revenge",
-          "team": "NYG",
-          "pts_home": -1.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 27,
-          "def": 26
-        },
-        "away": {
-          "off": 13,
-          "def": 17
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.49,
-          "def": 0.52
-        },
-        "away": {
-          "off": 0.48,
-          "def": 0.46
-        }
-      },
-      "our_pick": null,
-      "pick_status": "no_lean",
-      "neutral_site": false,
-      "rest_days_edge_home": -7,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 3,
-          "total_starters": 5,
-          "continuity_pct": 0.6
-        },
-        "away": {
-          "returning_starters": 3,
-          "total_starters": 5,
-          "continuity_pct": 0.6
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Nick Sirianni",
-          "coach_current": "Nick Sirianni",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Brian Daboll",
-          "coach_current": "John Harbaugh",
-          "same_coach": false
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
+      "playoff_race": null,
       "revenge_game": {
         "home": false,
         "away": true,
         "last_season": 2025
       },
       "former_coach": null,
-      "roof": "outdoors",
+      "roof": "dome",
       "international_site": false,
-      "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 63,
-        "wind": "5 mph"
-      },
-      "storyline": "PHI's offense ranks #27 in the model's ratings, and it runs into a NYG defense ranked #17. The model lands exactly on the NYG 3.5-point spread \u2014 no lean either way. PHI does get 2 points of home field back. Early-season read: only about 49% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. NYG is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. NYG comes in with 7 extra days of rest \u2014 context, not something the model scores. NYG lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Mostly Sunny, 63\u00b0F, wind 5 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "PHI's offense ranks #27 in the model's ratings, and it runs into a NYG defense ranked #17. The model lands exactly on the NYG 3.5-point spread \u2014 no lean either way.",
+      "weather": null,
+      "storyline": "The model sees close to a coin flip here. Asking NO to win by more than 1.5 is a lot when the model has them by 0.7. Lean CAR +1.5. About 51% of these ratings now come from 2026 games. CAR is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. CAR lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "The model sees close to a coin flip here. Asking NO to win by more than 1.5 is a lot when the model has them by 0.7. Lean CAR +1.5.",
       "market": {
-        "spread_home": -3.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": 142,
-        "moneyline_away": -170,
-        "total": 39.5,
-        "over_odds": -115,
-        "under_odds": -105,
-        "market_favorite": "away",
-        "edge_vs_market": 0.0
-      }
-    },
-    {
-      "game_id": "2026_09_NYJ_KC",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "13:00",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "KC",
-      "away_team": "NYJ",
-      "div_game": false,
-      "model_margin_home": 8.5,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "KC",
-          "opp": "NYJ",
-          "pts_home": 4.0
-        },
-        {
-          "kind": "offense",
-          "team": "NYJ",
-          "opp": "KC",
-          "pts_home": 2.5
-        },
-        {
-          "kind": "home_field",
-          "team": "KC",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 7,
-          "def": 10
-        },
-        "away": {
-          "off": 22,
-          "def": 19
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.46,
-          "def": 0.47
-        },
-        "away": {
-          "off": 0.48,
-          "def": 0.5
-        }
-      },
-      "our_pick": "away",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 0,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 2,
-          "total_starters": 5,
-          "continuity_pct": 0.4
-        },
-        "away": {
-          "returning_starters": 4,
-          "total_starters": 5,
-          "continuity_pct": 0.8
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Andy Reid",
-          "coach_current": "Andy Reid",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Aaron Glenn",
-          "coach_current": "Aaron Glenn",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "outdoors",
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Sunny",
-        "temperature_f": 61,
-        "wind": "5 to 9 mph"
-      },
-      "storyline": "It starts with KC's offense, #7 in the model's ratings, against a NYJ defense that ranks #19. The model's KC by 8.5 lands inside the 9.5-point spread, so NYJ +9.5 gets the lean. Early-season read: only about 48% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. NYJ brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Sunny, 61\u00b0F, wind 5 to 9 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "It starts with KC's offense, #7 in the model's ratings, against a NYJ defense that ranks #19. The model's KC by 8.5 lands inside the 9.5-point spread, so NYJ +9.5 gets the lean.",
-      "market": {
-        "spread_home": 9.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": -500,
-        "moneyline_away": 380,
-        "total": 46.5,
+        "spread_home": 1.5,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": -120,
+        "moneyline_away": 100,
+        "total": 47.5,
         "over_odds": -115,
         "under_odds": -105,
         "market_favorite": "home",
-        "edge_vs_market": -1.0
+        "edge_vs_market": -0.8
       }
     },
     {
-      "game_id": "2026_09_HOU_LAC",
-      "week": 9,
-      "gameday": "2026-11-08",
+      "game_id": "2026_10_HOU_CLE",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
       "weekday": "Sunday",
-      "gametime": "16:05",
+      "gametime": "13:00",
       "primetime": false,
-      "juice_score": 0,
-      "home_team": "LAC",
+      "home_team": "CLE",
       "away_team": "HOU",
       "div_game": false,
-      "model_margin_home": -2.6,
+      "model_margin_home": -3.7,
       "margin_breakdown": [
         {
           "kind": "offense",
-          "team": "LAC",
+          "team": "CLE",
           "opp": "HOU",
-          "pts_home": -6.4
+          "pts_home": -3.9
         },
         {
           "kind": "offense",
           "team": "HOU",
-          "opp": "LAC",
-          "pts_home": 1.8
+          "opp": "CLE",
+          "pts_home": -0.2
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -3.7,
+          "away_pd": 3.0,
+          "pts_home": -1.7
+        },
+        {
+          "kind": "new_qb",
+          "team": "CLE",
+          "pts_home": 0.1
         },
         {
           "kind": "home_field",
-          "team": "LAC",
+          "team": "CLE",
           "pts_home": 2.0
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 32,
-          "def": 6
+          "off": 30,
+          "def": 13
         },
         "away": {
-          "off": 14,
+          "off": 12,
           "def": 15
         }
       },
       "current_season_weight": {
         "home": {
-          "off": 0.46,
-          "def": 0.46
+          "off": 0.52,
+          "def": 0.53
         },
         "away": {
-          "off": 0.46,
-          "def": 0.47
+          "off": 0.5,
+          "def": 0.5
         }
       },
       "our_pick": "home",
       "pick_status": "pick",
       "neutral_site": false,
-      "rest_days_edge_home": -7,
+      "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
-          "returning_starters": 1,
+          "returning_starters": 0,
           "total_starters": 5,
-          "continuity_pct": 0.2
+          "continuity_pct": 0.0
         },
         "away": {
           "returning_starters": 3,
@@ -926,9 +574,9 @@
       },
       "coach_continuity": {
         "home": {
-          "coach_prior": "Jim Harbaugh",
-          "coach_current": "Jim Harbaugh",
-          "same_coach": true
+          "coach_prior": "Kevin Stefanski",
+          "coach_current": "Todd Monken",
+          "same_coach": false
         },
         "away": {
           "coach_prior": "DeMeco Ryans",
@@ -940,304 +588,96 @@
         "home": null,
         "away": null
       },
-      "revenge_game": null,
-      "former_coach": null,
-      "roof": "dome",
-      "international_site": false,
-      "weather": null,
-      "storyline": "LAC's #32 offense is the weak link the model keys on, up against HOU's #15 defense. Vegas and the model agree HOU should win; the model just expects LAC to keep it closer than 4.5. LAC does get 2 points of home field back. Early-season read: only about 46% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. LAC is breaking in a mostly new offensive line (20% continuity) \u2014 a real wildcard this early in the year. HOU comes in with 7 extra days of rest \u2014 context, not something the model scores. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "LAC's #32 offense is the weak link the model keys on, up against HOU's #15 defense. Vegas and the model agree HOU should win; the model just expects LAC to keep it closer than 4.5.",
-      "market": {
-        "spread_home": -4.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": 170,
-        "moneyline_away": -205,
-        "total": 40.5,
-        "over_odds": -118,
-        "under_odds": -102,
-        "market_favorite": "away",
-        "edge_vs_market": 1.9
-      }
-    },
-    {
-      "game_id": "2026_09_LV_SF",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "16:05",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "SF",
-      "away_team": "LV",
-      "div_game": false,
-      "model_margin_home": 13.5,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "SF",
-          "opp": "LV",
-          "pts_home": 7.6
-        },
-        {
-          "kind": "offense",
-          "team": "LV",
-          "opp": "SF",
-          "pts_home": 3.9
-        },
-        {
-          "kind": "home_field",
-          "team": "SF",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 2,
-          "def": 13
-        },
-        "away": {
-          "off": 28,
-          "def": 28
-        }
+      "qb_change": {
+        "home": true,
+        "away": false
       },
-      "current_season_weight": {
-        "home": {
-          "off": 0.46,
-          "def": 0.47
-        },
-        "away": {
-          "off": 0.51,
-          "def": 0.5
-        }
-      },
-      "our_pick": "home",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": 7,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 5,
-          "total_starters": 5,
-          "continuity_pct": 1.0
-        },
-        "away": {
-          "returning_starters": 2,
-          "total_starters": 5,
-          "continuity_pct": 0.4
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Kyle Shanahan",
-          "coach_current": "Kyle Shanahan",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Pete Carroll",
-          "coach_current": "Klint Kubliak",
-          "same_coach": false
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
+      "playoff_race": null,
       "revenge_game": null,
       "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 73,
-        "wind": "1 to 6 mph"
+        "short_forecast": "Slight Chance Light Rain then Mostly Cloudy",
+        "temperature_f": 47,
+        "wind": "12 mph"
       },
-      "storyline": "SF brings the #2 offense in the model's ratings and draws a LV defense ranked #28. SF is a 10-point favorite, and the model thinks that's not enough \u2014 it has them by 13.5. Early-season read: only about 48% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. SF brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. SF comes in with 7 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny, 73\u00b0F, wind 1 to 6 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "SF brings the #2 offense in the model's ratings and draws a LV defense ranked #28. SF is a 10-point favorite, and the model thinks that's not enough \u2014 it has them by 13.5.",
+      "storyline": "The model doesn't trust CLE's offense (#30) to move the ball, up against HOU's #15 defense \u2014 worth about 4 points by its math. The model likes HOU too, just not by 4.5 \u2014 it has them by 3.7, so the lean is CLE +4.5. CLE does get 2 points of home field back. About 51% of these ratings now come from 2026 games. CLE is breaking in a mostly new offensive line (0% continuity) \u2014 a real wildcard this early in the year. CLE is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Slight Chance Light Rain then Mostly Cloudy, 47\u00b0F, wind 12 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model doesn't trust CLE's offense (#30) to move the ball, up against HOU's #15 defense \u2014 worth about 4 points by its math. The model likes HOU too, just not by 4.5 \u2014 it has them by 3.7, so the lean is CLE +4.5.",
       "market": {
-        "spread_home": 10.0,
-        "spread_home_odds": -108,
-        "spread_away_odds": -112,
-        "moneyline_home": -550,
-        "moneyline_away": 410,
-        "total": 51.5,
-        "over_odds": -115,
-        "under_odds": -105,
-        "market_favorite": "home",
-        "edge_vs_market": 3.5
+        "spread_home": -4.5,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": 185,
+        "moneyline_away": -225,
+        "total": 39.5,
+        "over_odds": -112,
+        "under_odds": -108,
+        "market_favorite": "away",
+        "edge_vs_market": 0.8
       }
     },
     {
-      "game_id": "2026_09_ARI_SEA",
-      "week": 9,
-      "gameday": "2026-11-08",
+      "game_id": "2026_10_JAX_TEN",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
       "weekday": "Sunday",
-      "gametime": "16:25",
+      "gametime": "13:00",
       "primetime": false,
-      "juice_score": 4,
-      "home_team": "SEA",
-      "away_team": "ARI",
+      "home_team": "TEN",
+      "away_team": "JAX",
       "div_game": true,
-      "model_margin_home": 5.9,
+      "model_margin_home": -12.6,
       "margin_breakdown": [
         {
           "kind": "offense",
-          "team": "SEA",
-          "opp": "ARI",
-          "pts_home": 0.8
+          "team": "TEN",
+          "opp": "JAX",
+          "pts_home": -5.9
         },
         {
           "kind": "offense",
-          "team": "ARI",
-          "opp": "SEA",
-          "pts_home": 4.1
+          "team": "JAX",
+          "opp": "TEN",
+          "pts_home": -4.7
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -6.9,
+          "away_pd": 9.2,
+          "pts_home": -4.0
         },
         {
           "kind": "home_field",
-          "team": "SEA",
+          "team": "TEN",
           "pts_home": 2.0
-        },
-        {
-          "kind": "revenge",
-          "team": "ARI",
-          "pts_home": -1.0
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 21,
-          "def": 5
+          "off": 28,
+          "def": 28
         },
         "away": {
-          "off": 19,
-          "def": 30
+          "off": 4,
+          "def": 3
         }
       },
       "current_season_weight": {
         "home": {
-          "off": 0.5,
-          "def": 0.49
+          "off": 0.48,
+          "def": 0.52
         },
         "away": {
-          "off": 0.53,
+          "off": 0.49,
           "def": 0.49
         }
       },
       "our_pick": "away",
       "pick_status": "pick",
       "neutral_site": false,
-      "rest_days_edge_home": -1,
-      "oline_continuity": {
-        "home": {
-          "returning_starters": 4,
-          "total_starters": 5,
-          "continuity_pct": 0.8
-        },
-        "away": {
-          "returning_starters": 1,
-          "total_starters": 5,
-          "continuity_pct": 0.2
-        }
-      },
-      "coach_continuity": {
-        "home": {
-          "coach_prior": "Mike Macdonald",
-          "coach_current": "Mike Macdonald",
-          "same_coach": true
-        },
-        "away": {
-          "coach_prior": "Jonathan Gannon",
-          "coach_current": "Jonathan Gannon",
-          "same_coach": true
-        }
-      },
-      "qb_injury": {
-        "home": null,
-        "away": null
-      },
-      "revenge_game": {
-        "home": false,
-        "away": true,
-        "last_season": 2025
-      },
-      "former_coach": null,
-      "roof": "outdoors",
-      "international_site": false,
-      "weather": {
-        "short_forecast": "Light Rain Likely",
-        "temperature_f": 57,
-        "wind": "6 to 15 mph"
-      },
-      "storyline": "The model trusts SEA's defense (#5) to slow ARI's #19 offense \u2014 worth about 4 points by its math. The model's SEA by 5.9 lands inside the 10.5-point spread, so ARI +10.5 gets the lean. About 50% of these ratings now come from 2026 games. ARI is breaking in a mostly new offensive line (20% continuity) \u2014 a real wildcard this early in the year. ARI comes in with 1 extra day of rest \u2014 context, not something the model scores. ARI lost the last meeting between these division rivals \u2014 worth a 1-point nudge in the model. Forecast for kickoff: Light Rain Likely, 57\u00b0F, wind 6 to 15 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model trusts SEA's defense (#5) to slow ARI's #19 offense \u2014 worth about 4 points by its math. The model's SEA by 5.9 lands inside the 10.5-point spread, so ARI +10.5 gets the lean.",
-      "market": {
-        "spread_home": 10.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": -600,
-        "moneyline_away": 440,
-        "total": 42.5,
-        "over_odds": -108,
-        "under_odds": -112,
-        "market_favorite": "home",
-        "edge_vs_market": -4.6
-      }
-    },
-    {
-      "game_id": "2026_09_GB_NE",
-      "week": 9,
-      "gameday": "2026-11-08",
-      "weekday": "Sunday",
-      "gametime": "16:25",
-      "primetime": false,
-      "juice_score": 0,
-      "home_team": "NE",
-      "away_team": "GB",
-      "div_game": false,
-      "model_margin_home": 2.7,
-      "margin_breakdown": [
-        {
-          "kind": "offense",
-          "team": "NE",
-          "opp": "GB",
-          "pts_home": 2.4
-        },
-        {
-          "kind": "offense",
-          "team": "GB",
-          "opp": "NE",
-          "pts_home": -1.7
-        },
-        {
-          "kind": "home_field",
-          "team": "NE",
-          "pts_home": 2.0
-        }
-      ],
-      "unit_ranks": {
-        "home": {
-          "off": 3,
-          "def": 16
-        },
-        "away": {
-          "off": 11,
-          "def": 7
-        }
-      },
-      "current_season_weight": {
-        "home": {
-          "off": 0.5,
-          "def": 0.48
-        },
-        "away": {
-          "off": 0.5,
-          "def": 0.52
-        }
-      },
-      "our_pick": "home",
-      "pick_status": "pick",
-      "neutral_site": false,
-      "rest_days_edge_home": -3,
+      "rest_days_edge_home": 4,
       "oline_continuity": {
         "home": {
           "returning_starters": 3,
@@ -1252,13 +692,13 @@
       },
       "coach_continuity": {
         "home": {
-          "coach_prior": "Mike Vrabel",
-          "coach_current": "Mike Vrabel",
-          "same_coach": true
+          "coach_prior": "Brian Callahan",
+          "coach_current": "Robert Saleh",
+          "same_coach": false
         },
         "away": {
-          "coach_prior": "Matt LaFleur",
-          "coach_current": "Matt LaFleur",
+          "coach_prior": "Liam Coen",
+          "coach_current": "Liam Coen",
           "same_coach": true
         }
       },
@@ -1266,85 +706,100 @@
         "home": null,
         "away": null
       },
-      "revenge_game": null,
+      "qb_change": {
+        "home": false,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": {
+        "home": true,
+        "away": false,
+        "last_season": 2025
+      },
       "former_coach": null,
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Light Rain",
-        "temperature_f": 60,
-        "wind": "6 mph"
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 55,
+        "wind": "0 to 5 mph"
       },
-      "storyline": "Follow NE's #3 offense into GB's #7 defense \u2014 that's where the model finds its edge. The model is even higher on NE than Vegas is: 2.7 points to the market's 2.5. GB's best counter: its #11 offense against NE's #16 defense, worth about 1.5 points back. About 50% of these ratings now come from 2026 games. GB comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Chance Light Rain, 60\u00b0F, wind 6 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "Follow NE's #3 offense into GB's #7 defense \u2014 that's where the model finds its edge. The model is even higher on NE than Vegas is: 2.7 points to the market's 2.5.",
+      "storyline": "JAX's #3 defense against TEN's #28 offense is where the model sees this one tilting. Vegas has JAX by 10.5; the model goes a bit past that, to 12.6. Lean JAX \u221210.5. TEN does get 2 points of home field back. About 50% of these ratings now come from 2026 games. JAX brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. TEN comes in with 4 extra days of rest \u2014 context, not something the model scores. TEN lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 55\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "JAX's #3 defense against TEN's #28 offense is where the model sees this one tilting. Vegas has JAX by 10.5; the model goes a bit past that, to 12.6. Lean JAX \u221210.5.",
       "market": {
-        "spread_home": 2.5,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
-        "moneyline_home": -148,
-        "moneyline_away": 124,
+        "spread_home": -10.5,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 425,
+        "moneyline_away": -575,
         "total": 46.5,
-        "over_odds": -115,
-        "under_odds": -105,
-        "market_favorite": "home",
-        "edge_vs_market": 0.2
+        "over_odds": -112,
+        "under_odds": -108,
+        "market_favorite": "away",
+        "edge_vs_market": -2.1
       }
     },
     {
-      "game_id": "2026_09_TB_CHI",
-      "week": 9,
-      "gameday": "2026-11-08",
+      "game_id": "2026_10_KC_ATL",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
       "weekday": "Sunday",
-      "gametime": "20:20",
-      "primetime": true,
-      "juice_score": 4,
-      "home_team": "CHI",
-      "away_team": "TB",
+      "gametime": "13:00",
+      "primetime": false,
+      "home_team": "ATL",
+      "away_team": "KC",
       "div_game": false,
-      "model_margin_home": 3.5,
+      "model_margin_home": -5.3,
       "margin_breakdown": [
         {
           "kind": "offense",
-          "team": "CHI",
-          "opp": "TB",
-          "pts_home": -1.7
+          "team": "ATL",
+          "opp": "KC",
+          "pts_home": -3.0
         },
         {
           "kind": "offense",
-          "team": "TB",
-          "opp": "CHI",
-          "pts_home": 3.2
+          "team": "KC",
+          "opp": "ATL",
+          "pts_home": -2.5
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -2.9,
+          "away_pd": 4.3,
+          "pts_home": -1.8
         },
         {
           "kind": "home_field",
-          "team": "CHI",
+          "team": "ATL",
           "pts_home": 2.0
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 10,
-          "def": 14
+          "off": 25,
+          "def": 17
         },
         "away": {
-          "off": 25,
-          "def": 2
+          "off": 8,
+          "def": 6
         }
       },
       "current_season_weight": {
         "home": {
-          "off": 0.54,
-          "def": 0.45
+          "off": 0.52,
+          "def": 0.54
         },
         "away": {
           "off": 0.5,
-          "def": 0.48
+          "def": 0.51
         }
       },
       "our_pick": "away",
       "pick_status": "pick",
       "neutral_site": false,
-      "rest_days_edge_home": -1,
+      "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
           "returning_starters": 4,
@@ -1352,20 +807,20 @@
           "continuity_pct": 0.8
         },
         "away": {
-          "returning_starters": 5,
+          "returning_starters": 3,
           "total_starters": 5,
-          "continuity_pct": 1.0
+          "continuity_pct": 0.6
         }
       },
       "coach_continuity": {
         "home": {
-          "coach_prior": "Ben Johnson",
-          "coach_current": "Ben Johnson",
-          "same_coach": true
+          "coach_prior": "Raheem Morris",
+          "coach_current": "Kevin Stefanski",
+          "same_coach": false
         },
         "away": {
-          "coach_prior": "Todd Bowles",
-          "coach_current": "Todd Bowles",
+          "coach_prior": "Andy Reid",
+          "coach_current": "Andy Reid",
           "same_coach": true
         }
       },
@@ -1373,79 +828,95 @@
         "home": null,
         "away": null
       },
+      "qb_change": {
+        "home": false,
+        "away": false
+      },
+      "playoff_race": null,
       "revenge_game": null,
       "former_coach": null,
-      "roof": "outdoors",
+      "roof": null,
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
-        "temperature_f": 55,
-        "wind": "10 mph"
+        "short_forecast": "Sunny",
+        "temperature_f": 57,
+        "wind": "0 to 5 mph"
       },
-      "storyline": "The model doesn't trust TB's offense (#25) to move the ball, up against CHI's #14 defense \u2014 worth about 3 points by its math. The model likes CHI too, just not by 6 \u2014 it has them by 3.5, so the lean is TB +6. TB's best counter is its #2 defense, which should make life hard on CHI's #10 offense. Early-season read: only about 49% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. TB brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. TB comes in with 1 extra day of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny, 55\u00b0F, wind 10 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model doesn't trust TB's offense (#25) to move the ball, up against CHI's #14 defense \u2014 worth about 3 points by its math. The model likes CHI too, just not by 6 \u2014 it has them by 3.5, so the lean is TB +6.",
+      "storyline": "This projection is built on defense: KC's #6 unit against ATL's #25 offense. Vegas has KC by 3.5; the model goes a bit past that, to 5.3. Lean KC \u22123.5. ATL does get 2 points of home field back. About 52% of these ratings now come from 2026 games. Forecast for kickoff: Sunny, 57\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "This projection is built on defense: KC's #6 unit against ATL's #25 offense. Vegas has KC by 3.5; the model goes a bit past that, to 5.3. Lean KC \u22123.5.",
       "market": {
-        "spread_home": 6.0,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": -270,
-        "moneyline_away": 220,
-        "total": 46.5,
-        "over_odds": -108,
-        "under_odds": -112,
-        "market_favorite": "home",
-        "edge_vs_market": -2.5
+        "spread_home": -3.5,
+        "spread_home_odds": -118,
+        "spread_away_odds": -102,
+        "moneyline_home": 150,
+        "moneyline_away": -180,
+        "total": 45.5,
+        "over_odds": -105,
+        "under_odds": -115,
+        "market_favorite": "away",
+        "edge_vs_market": -1.8
       }
     },
     {
-      "game_id": "2026_09_BUF_MIN",
-      "week": 9,
-      "gameday": "2026-11-09",
-      "weekday": "Monday",
-      "gametime": "20:15",
-      "primetime": true,
-      "juice_score": 4,
-      "home_team": "MIN",
-      "away_team": "BUF",
+      "game_id": "2026_10_MIA_IND",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "home_team": "IND",
+      "away_team": "MIA",
       "div_game": false,
-      "model_margin_home": -2.7,
+      "model_margin_home": 3.6,
       "margin_breakdown": [
         {
           "kind": "offense",
-          "team": "MIN",
-          "opp": "BUF",
-          "pts_home": -3.3
+          "team": "IND",
+          "opp": "MIA",
+          "pts_home": 0.6
         },
         {
           "kind": "offense",
-          "team": "BUF",
-          "opp": "MIN",
-          "pts_home": -1.4
+          "team": "MIA",
+          "opp": "IND",
+          "pts_home": -0.0
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -2.9,
+          "away_pd": -6.0,
+          "pts_home": 0.8
+        },
+        {
+          "kind": "new_qb",
+          "team": "MIA",
+          "pts_home": 0.3
         },
         {
           "kind": "home_field",
-          "team": "MIN",
-          "pts_home": 2.0
+          "team": "IND",
+          "pts_home": 1.9
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 30,
-          "def": 1
+          "off": 24,
+          "def": 27
         },
         "away": {
-          "off": 1,
-          "def": 22
+          "off": 22,
+          "def": 31
         }
       },
       "current_season_weight": {
         "home": {
-          "off": 0.45,
-          "def": 0.44
+          "off": 0.54,
+          "def": 0.52
         },
         "away": {
           "off": 0.47,
-          "def": 0.48
+          "def": 0.49
         }
       },
       "our_pick": "home",
@@ -1466,13 +937,136 @@
       },
       "coach_continuity": {
         "home": {
-          "coach_prior": "Kevin O'Connell",
-          "coach_current": "Kevin O'Connell",
+          "coach_prior": "Shane Steichen",
+          "coach_current": "Shane Steichen",
           "same_coach": true
         },
         "away": {
-          "coach_prior": "Sean McDermott",
-          "coach_current": "Sean McDermott",
+          "coach_prior": "Mike McDaniel",
+          "coach_current": "Jeff Hafley",
+          "same_coach": false
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "qb_change": {
+        "home": false,
+        "away": true
+      },
+      "playoff_race": null,
+      "revenge_game": null,
+      "former_coach": null,
+      "roof": null,
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Sunny",
+        "temperature_f": 50,
+        "wind": "0 to 3 mph"
+      },
+      "storyline": "Take away home field and the model has this one nearly even; the 2-point home edge tips it to IND. The model is even higher on IND than Vegas is: 3.6 points to the market's 2.5. About 50% of these ratings now come from 2026 games. Forecast for kickoff: Sunny, 50\u00b0F, wind 0 to 3 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "Take away home field and the model has this one nearly even; the 2-point home edge tips it to IND. The model is even higher on IND than Vegas is: 3.6 points to the market's 2.5.",
+      "market": {
+        "spread_home": 2.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -135,
+        "moneyline_away": 114,
+        "total": 40.5,
+        "over_odds": -108,
+        "under_odds": -112,
+        "market_favorite": "home",
+        "edge_vs_market": 1.1
+      }
+    },
+    {
+      "game_id": "2026_10_MIN_GB",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "13:00",
+      "primetime": false,
+      "home_team": "GB",
+      "away_team": "MIN",
+      "div_game": true,
+      "model_margin_home": 5.0,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "GB",
+          "opp": "MIN",
+          "pts_home": -1.4
+        },
+        {
+          "kind": "offense",
+          "team": "MIN",
+          "opp": "GB",
+          "pts_home": 5.7
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": 2.0,
+          "away_pd": 2.1,
+          "pts_home": -0.0
+        },
+        {
+          "kind": "new_qb",
+          "team": "MIN",
+          "pts_home": -1.3
+        },
+        {
+          "kind": "home_field",
+          "team": "GB",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 10,
+          "def": 7
+        },
+        "away": {
+          "off": 29,
+          "def": 1
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.53,
+          "def": 0.54
+        },
+        "away": {
+          "off": 0.48,
+          "def": 0.49
+        }
+      },
+      "our_pick": "home",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 1,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Matt LaFleur",
+          "coach_current": "Matt LaFleur",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Kevin O'Connell",
+          "coach_current": "Kevin O'Connell",
           "same_coach": true
         }
       },
@@ -1480,26 +1074,663 @@
         "home": null,
         "away": null
       },
+      "qb_change": {
+        "home": false,
+        "away": true
+      },
+      "playoff_race": null,
+      "revenge_game": {
+        "home": true,
+        "away": false,
+        "last_season": 2026
+      },
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 47,
+        "wind": "2 mph"
+      },
+      "storyline": "MIN's offense ranks #29 in the model's ratings, and it runs into a GB defense ranked #7. GB is a 4.5-point favorite, and the model thinks that's not enough \u2014 it has them by 5.0. About 51% of these ratings now come from 2026 games. GB brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. GB comes in with 1 extra day of rest \u2014 context, not something the model scores. GB lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 47\u00b0F, wind 2 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "MIN's offense ranks #29 in the model's ratings, and it runs into a GB defense ranked #7. GB is a 4.5-point favorite, and the model thinks that's not enough \u2014 it has them by 5.0.",
+      "market": {
+        "spread_home": 4.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -205,
+        "moneyline_away": 170,
+        "total": 41.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "edge_vs_market": 0.5
+      }
+    },
+    {
+      "game_id": "2026_10_LA_ARI",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "16:05",
+      "primetime": false,
+      "home_team": "ARI",
+      "away_team": "LA",
+      "div_game": true,
+      "model_margin_home": -11.3,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "ARI",
+          "opp": "LA",
+          "pts_home": -3.4
+        },
+        {
+          "kind": "offense",
+          "team": "LA",
+          "opp": "ARI",
+          "pts_home": -4.0
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -6.7,
+          "away_pd": 4.8,
+          "pts_home": -2.9
+        },
+        {
+          "kind": "new_qb",
+          "team": "ARI",
+          "pts_home": -0.5
+        },
+        {
+          "kind": "home_field",
+          "team": "ARI",
+          "pts_home": 2.0
+        },
+        {
+          "kind": "qb_out",
+          "team": "ARI",
+          "pts_home": -2.5
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 23,
+          "def": 29
+        },
+        "away": {
+          "off": 9,
+          "def": 5
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.55,
+          "def": 0.52
+        },
+        "away": {
+          "off": 0.55,
+          "def": 0.52
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        },
+        "away": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Jonathan Gannon",
+          "coach_current": "Mike LaFleur",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Sean McVay",
+          "coach_current": "Sean McVay",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": {
+          "gsis_id": "00-0033119",
+          "status": "Backup starting"
+        },
+        "away": null
+      },
+      "qb_change": {
+        "home": true,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": {
+        "home": false,
+        "away": true,
+        "last_season": 2026
+      },
+      "former_coach": null,
+      "roof": null,
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Sunny",
+        "temperature_f": 77,
+        "wind": "0 to 5 mph"
+      },
+      "storyline": "Look at ARI's #29 defense: that's the hole the model sees LA's #9 offense getting through. LA is a 9.5-point favorite, and the model thinks that's not enough \u2014 it has them by 11.3. ARI does get 2 points of home field back. ARI's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 54% of these ratings now come from 2026 games. LA brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. LA lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 77\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "Look at ARI's #29 defense: that's the hole the model sees LA's #9 offense getting through. LA is a 9.5-point favorite, and the model thinks that's not enough \u2014 it has them by 11.3.",
+      "market": {
+        "spread_home": -9.5,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": 350,
+        "moneyline_away": -455,
+        "total": 40.5,
+        "over_odds": -105,
+        "under_odds": -115,
+        "market_favorite": "away",
+        "edge_vs_market": -1.8
+      }
+    },
+    {
+      "game_id": "2026_10_SEA_LV",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "16:05",
+      "primetime": false,
+      "home_team": "LV",
+      "away_team": "SEA",
+      "div_game": false,
+      "model_margin_home": -6.2,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "LV",
+          "opp": "SEA",
+          "pts_home": -4.7
+        },
+        {
+          "kind": "offense",
+          "team": "SEA",
+          "opp": "LV",
+          "pts_home": -1.3
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -4.9,
+          "away_pd": 5.5,
+          "pts_home": -2.6
+        },
+        {
+          "kind": "new_qb",
+          "team": "LV",
+          "pts_home": 0.4
+        },
+        {
+          "kind": "home_field",
+          "team": "LV",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 26,
+          "def": 30
+        },
+        "away": {
+          "off": 17,
+          "def": 4
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.53,
+          "def": 0.53
+        },
+        "away": {
+          "off": 0.53,
+          "def": 0.52
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        },
+        "away": {
+          "returning_starters": 4,
+          "total_starters": 5,
+          "continuity_pct": 0.8
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Pete Carroll",
+          "coach_current": "Klint Kubiak",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Mike Macdonald",
+          "coach_current": "Mike Macdonald",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "qb_change": {
+        "home": true,
+        "away": false
+      },
+      "playoff_race": null,
       "revenge_game": null,
       "former_coach": null,
       "roof": "dome",
       "international_site": false,
       "weather": null,
-      "storyline": "MIN's offense ranks #30 in the model's ratings, and it runs into a BUF defense ranked #22. Asking BUF to win by more than 3.5 is a lot when the model has them by 2.7. Lean MIN +3.5. MIN does get 2 points of home field back. Early-season read: only about 46% of these ratings come from 2026 games so far \u2014 the rest is 2025's tape, shrunk toward average, so expect it to move. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "MIN's offense ranks #30 in the model's ratings, and it runs into a BUF defense ranked #22. Asking BUF to win by more than 3.5 is a lot when the model has them by 2.7. Lean MIN +3.5.",
+      "storyline": "The model trusts SEA's defense (#4) to slow LV's #26 offense \u2014 worth about 4.5 points by its math. The model is even higher on SEA than Vegas is: 6.2 points to the market's 3.5. LV does get 2 points of home field back. About 53% of these ratings now come from 2026 games. SEA brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "The model trusts SEA's defense (#4) to slow LV's #26 offense \u2014 worth about 4.5 points by its math. The model is even higher on SEA than Vegas is: 6.2 points to the market's 3.5.",
       "market": {
         "spread_home": -3.5,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
+        "spread_home_odds": -115,
+        "spread_away_odds": -105,
         "moneyline_home": 150,
         "moneyline_away": -180,
-        "total": 45.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "total": 43.5,
+        "over_odds": -102,
+        "under_odds": -118,
         "market_favorite": "away",
-        "edge_vs_market": 0.8
+        "edge_vs_market": -2.7
+      }
+    },
+    {
+      "game_id": "2026_10_SF_DAL",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "16:25",
+      "primetime": false,
+      "home_team": "DAL",
+      "away_team": "SF",
+      "div_game": false,
+      "model_margin_home": -3.8,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "DAL",
+          "opp": "SF",
+          "pts_home": 2.7
+        },
+        {
+          "kind": "offense",
+          "team": "SF",
+          "opp": "DAL",
+          "pts_home": -7.0
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -0.1,
+          "away_pd": 6.1,
+          "pts_home": -1.5
+        },
+        {
+          "kind": "home_field",
+          "team": "DAL",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 3,
+          "def": 32
+        },
+        "away": {
+          "off": 1,
+          "def": 11
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.54,
+          "def": 0.54
+        },
+        "away": {
+          "off": 0.49,
+          "def": 0.5
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 0,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Brian Schottenheimer",
+          "coach_current": "Brian Schottenheimer",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Kyle Shanahan",
+          "coach_current": "Kyle Shanahan",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "qb_change": {
+        "home": false,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": null,
+      "former_coach": null,
+      "roof": null,
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Chance Rain Showers",
+        "temperature_f": 67,
+        "wind": "10 to 15 mph"
+      },
+      "storyline": "The matchup doing the most work: SF's #1 offense vs. DAL's #32 defense, worth about 7 points by the model's math. Vegas has SF by 3.5; the model goes a hair past that, to 3.8. Lean SF \u22123.5. DAL isn't without answers \u2014 its #3 offense should find room against SF's #11 defense. About 52% of these ratings now come from 2026 games. SF brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Chance Rain Showers, 67\u00b0F, wind 10 to 15 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The matchup doing the most work: SF's #1 offense vs. DAL's #32 defense, worth about 7 points by the model's math. Vegas has SF by 3.5; the model goes a hair past that, to 3.8. Lean SF \u22123.5.",
+      "market": {
+        "spread_home": -3.5,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": 170,
+        "moneyline_away": -205,
+        "total": 55.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "away",
+        "edge_vs_market": -0.3
+      }
+    },
+    {
+      "game_id": "2026_10_PIT_CIN",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-15",
+      "weekday": "Sunday",
+      "gametime": "20:20",
+      "primetime": true,
+      "home_team": "CIN",
+      "away_team": "PIT",
+      "div_game": true,
+      "model_margin_home": 3.3,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "CIN",
+          "opp": "PIT",
+          "pts_home": 1.5
+        },
+        {
+          "kind": "offense",
+          "team": "PIT",
+          "opp": "CIN",
+          "pts_home": -0.3
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": 2.7,
+          "away_pd": 2.4,
+          "pts_home": 0.1
+        },
+        {
+          "kind": "home_field",
+          "team": "CIN",
+          "pts_home": 2.0
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 6,
+          "def": 18
+        },
+        "away": {
+          "off": 16,
+          "def": 8
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.5,
+          "def": 0.5
+        },
+        "away": {
+          "off": 0.5,
+          "def": 0.49
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": -7,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 5,
+          "total_starters": 5,
+          "continuity_pct": 1.0
+        },
+        "away": {
+          "returning_starters": 3,
+          "total_starters": 5,
+          "continuity_pct": 0.6
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "Zac Taylor",
+          "coach_current": "Zac Taylor",
+          "same_coach": true
+        },
+        "away": {
+          "coach_prior": "Mike Tomlin",
+          "coach_current": "Mike McCarthy",
+          "same_coach": false
+        }
+      },
+      "qb_injury": {
+        "home": null,
+        "away": null
+      },
+      "qb_change": {
+        "home": false,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": {
+        "home": true,
+        "away": false,
+        "last_season": 2026
+      },
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Sunny",
+        "temperature_f": 51,
+        "wind": "0 to 5 mph"
+      },
+      "storyline": "On paper these two grade out close \u2014 home field does most of the work for CIN. The model's CIN by 3.3 lands inside the 3.5-point spread, so PIT +3.5 gets the lean. About 50% of these ratings now come from 2026 games. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. PIT comes in with 7 extra days of rest \u2014 context, not something the model scores. CIN lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 51\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "On paper these two grade out close \u2014 home field does most of the work for CIN. The model's CIN by 3.3 lands inside the 3.5-point spread, so PIT +3.5 gets the lean.",
+      "market": {
+        "spread_home": 3.5,
+        "spread_home_odds": -110,
+        "spread_away_odds": -110,
+        "moneyline_home": -180,
+        "moneyline_away": 150,
+        "total": 48.5,
+        "over_odds": -108,
+        "under_odds": -112,
+        "market_favorite": "home",
+        "edge_vs_market": -0.2
+      }
+    },
+    {
+      "game_id": "2026_10_LAC_BAL",
+      "model_version": "v2",
+      "week": 10,
+      "gameday": "2026-11-16",
+      "weekday": "Monday",
+      "gametime": "20:15",
+      "primetime": true,
+      "home_team": "BAL",
+      "away_team": "LAC",
+      "div_game": false,
+      "model_margin_home": 2.8,
+      "margin_breakdown": [
+        {
+          "kind": "offense",
+          "team": "BAL",
+          "opp": "LAC",
+          "pts_home": -0.3
+        },
+        {
+          "kind": "offense",
+          "team": "LAC",
+          "opp": "BAL",
+          "pts_home": 3.8
+        },
+        {
+          "kind": "point_diff",
+          "home_pd": -2.3,
+          "away_pd": -5.6,
+          "pts_home": 0.8
+        },
+        {
+          "kind": "new_qb",
+          "team": "BAL",
+          "pts_home": -1.0
+        },
+        {
+          "kind": "home_field",
+          "team": "BAL",
+          "pts_home": 2.0
+        },
+        {
+          "kind": "qb_out",
+          "team": "BAL",
+          "pts_home": -2.5
+        }
+      ],
+      "unit_ranks": {
+        "home": {
+          "off": 18,
+          "def": 23
+        },
+        "away": {
+          "off": 32,
+          "def": 10
+        }
+      },
+      "current_season_weight": {
+        "home": {
+          "off": 0.52,
+          "def": 0.53
+        },
+        "away": {
+          "off": 0.49,
+          "def": 0.5
+        }
+      },
+      "our_pick": "away",
+      "pick_status": "pick",
+      "neutral_site": false,
+      "rest_days_edge_home": 3,
+      "oline_continuity": {
+        "home": {
+          "returning_starters": 2,
+          "total_starters": 5,
+          "continuity_pct": 0.4
+        },
+        "away": {
+          "returning_starters": 1,
+          "total_starters": 5,
+          "continuity_pct": 0.2
+        }
+      },
+      "coach_continuity": {
+        "home": {
+          "coach_prior": "John Harbaugh",
+          "coach_current": "Jesse Minter",
+          "same_coach": false
+        },
+        "away": {
+          "coach_prior": "Jim Harbaugh",
+          "coach_current": "Jim Harbaugh",
+          "same_coach": true
+        }
+      },
+      "qb_injury": {
+        "home": {
+          "gsis_id": "00-0034796",
+          "status": "Backup starting"
+        },
+        "away": null
+      },
+      "qb_change": {
+        "home": true,
+        "away": false
+      },
+      "playoff_race": null,
+      "revenge_game": null,
+      "former_coach": null,
+      "roof": "outdoors",
+      "international_site": false,
+      "weather": {
+        "short_forecast": "Mostly Sunny",
+        "temperature_f": 54,
+        "wind": "8 mph"
+      },
+      "storyline": "LAC's #32 offense is the weak link the model keys on, even against BAL's #23 defense. The model likes BAL too, just not by 5.5 \u2014 it has them by 2.8, so the lean is LAC +5.5. BAL's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 51% of these ratings now come from 2026 games. LAC is breaking in a mostly new offensive line (20% continuity) \u2014 a real wildcard this early in the year. BAL comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny, 54\u00b0F, wind 8 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "LAC's #32 offense is the weak link the model keys on, even against BAL's #23 defense. The model likes BAL too, just not by 5.5 \u2014 it has them by 2.8, so the lean is LAC +5.5.",
+      "market": {
+        "spread_home": 5.5,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": -225,
+        "moneyline_away": 185,
+        "total": 38.5,
+        "over_odds": -110,
+        "under_odds": -110,
+        "market_favorite": "home",
+        "edge_vs_market": -2.7
       }
     }
-  ],
-  "model_version": "v1"
+  ]
 }
