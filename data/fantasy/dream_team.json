@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-10T17:37:25.394041+00:00"
+    "generated_at": "2026-11-12T02:48:23.661426+00:00"
   },
   "league_sizes": [
     10,
@@ -443,14 +443,14 @@
                 "drafted_at_pick": 2
               },
               {
-                "player_id": "00-0036875",
-                "name": "Rhamondre Stevenson",
-                "team": "NE",
+                "player_id": "00-0038134",
+                "name": "Kenneth Walker III",
+                "team": "KC",
                 "position": "RB",
-                "edge_score": 14.67,
-                "vor": 1.5,
-                "overall_vor_rank": 39,
-                "drafted_at_pick": 39
+                "edge_score": 16.31,
+                "vor": 3.14,
+                "overall_vor_rank": 22,
+                "drafted_at_pick": 22
               }
             ],
             "WR": [
@@ -462,29 +462,29 @@
                 "edge_score": 14.7,
                 "vor": 0.95,
                 "overall_vor_rank": 42,
-                "drafted_at_pick": 42
+                "drafted_at_pick": 39
               },
               {
-                "player_id": "00-0040735",
-                "name": "Luther Burden III",
-                "team": "CHI",
+                "player_id": "00-0037740",
+                "name": "Garrett Wilson",
+                "team": "NYJ",
                 "position": "WR",
-                "edge_score": 13.75,
-                "vor": 0.0,
-                "overall_vor_rank": 59,
-                "drafted_at_pick": 59
+                "edge_score": 14.64,
+                "vor": 0.89,
+                "overall_vor_rank": 43,
+                "drafted_at_pick": 42
               }
             ],
             "TE": [
               {
-                "player_id": "00-0040126",
-                "name": "Colston Loveland",
-                "team": "CHI",
+                "player_id": "00-0034351",
+                "name": "Dallas Goedert",
+                "team": "PHI",
                 "position": "TE",
-                "edge_score": 14.66,
-                "vor": 3.19,
-                "overall_vor_rank": 22,
-                "drafted_at_pick": 22
+                "edge_score": 11.47,
+                "vor": 0.0,
+                "overall_vor_rank": 60,
+                "drafted_at_pick": 59
               }
             ],
             "FLEX": [
@@ -555,9 +555,9 @@
                 "drafted_at_pick": 99
               },
               {
-                "player_id": "00-0038128",
-                "name": "Malik Willis",
-                "team": "MIA",
+                "player_id": "00-0039917",
+                "name": "Michael Penix Jr.",
+                "team": "ATL",
                 "position": "QB",
                 "edge_score": 15.3,
                 "vor": -2.63,
@@ -817,8 +817,8 @@
                 "name": "Bijan Robinson",
                 "team": "ATL",
                 "position": "RB",
-                "edge_score": 22.39,
-                "vor": 9.22,
+                "edge_score": 22.09,
+                "vor": 8.92,
                 "overall_vor_rank": 3,
                 "drafted_at_pick": 3
               },
@@ -835,16 +835,6 @@
             ],
             "WR": [
               {
-                "player_id": "00-0038124",
-                "name": "Christian Watson",
-                "team": "GB",
-                "position": "WR",
-                "edge_score": 16.63,
-                "vor": 2.88,
-                "overall_vor_rank": 25,
-                "drafted_at_pick": 23
-              },
-              {
                 "player_id": "00-0038606",
                 "name": "Parker Washington",
                 "team": "JAX",
@@ -853,18 +843,28 @@
                 "vor": 1.54,
                 "overall_vor_rank": 38,
                 "drafted_at_pick": 38
+              },
+              {
+                "player_id": "00-0037740",
+                "name": "Garrett Wilson",
+                "team": "NYJ",
+                "position": "WR",
+                "edge_score": 14.64,
+                "vor": 0.89,
+                "overall_vor_rank": 43,
+                "drafted_at_pick": 43
               }
             ],
             "TE": [
               {
-                "player_id": "00-0039065",
-                "name": "Sam LaPorta",
-                "team": "DET",
+                "player_id": "00-0040126",
+                "name": "Colston Loveland",
+                "team": "CHI",
                 "position": "TE",
-                "edge_score": 12.31,
-                "vor": 0.84,
-                "overall_vor_rank": 44,
-                "drafted_at_pick": 43
+                "edge_score": 14.36,
+                "vor": 2.89,
+                "overall_vor_rank": 24,
+                "drafted_at_pick": 23
               }
             ],
             "FLEX": [
@@ -1050,8 +1050,8 @@
                 "name": "Colston Loveland",
                 "team": "CHI",
                 "position": "TE",
-                "edge_score": 8.82,
-                "vor": 1.2,
+                "edge_score": 8.52,
+                "vor": 0.9,
                 "overall_vor_rank": 38,
                 "drafted_at_pick": 38
               }
@@ -1124,9 +1124,9 @@
                 "drafted_at_pick": 98
               },
               {
-                "player_id": "00-0039917",
-                "name": "Michael Penix Jr.",
-                "team": "ATL",
+                "player_id": "00-0035228",
+                "name": "Kyler Murray",
+                "team": "MIN",
                 "position": "QB",
                 "edge_score": 15.77,
                 "vor": -2.16,
@@ -1134,9 +1134,9 @@
                 "drafted_at_pick": 103
               },
               {
-                "player_id": "00-0036894",
-                "name": "Pat Freiermuth",
-                "team": "PIT",
+                "player_id": "00-0033110",
+                "name": "Tyler Higbee",
+                "team": "LA",
                 "position": "TE",
                 "edge_score": 4.93,
                 "vor": -2.69,
@@ -1203,14 +1203,14 @@
                 "drafted_at_pick": 4
               },
               {
-                "player_id": "00-0037840",
-                "name": "Kyren Williams",
-                "team": "LA",
+                "player_id": "00-0036555",
+                "name": "Chuba Hubbard",
+                "team": "CAR",
                 "position": "RB",
-                "edge_score": 16.22,
-                "vor": 3.05,
-                "overall_vor_rank": 24,
-                "drafted_at_pick": 24
+                "edge_score": 14.75,
+                "vor": 1.58,
+                "overall_vor_rank": 37,
+                "drafted_at_pick": 37
               }
             ],
             "WR": [
@@ -1225,26 +1225,26 @@
                 "drafted_at_pick": 17
               },
               {
-                "player_id": "00-0038606",
-                "name": "Parker Washington",
-                "team": "JAX",
+                "player_id": "00-0039067",
+                "name": "Rashee Rice",
+                "team": "KC",
                 "position": "WR",
-                "edge_score": 15.29,
-                "vor": 1.54,
-                "overall_vor_rank": 38,
-                "drafted_at_pick": 37
+                "edge_score": 14.4,
+                "vor": 0.65,
+                "overall_vor_rank": 46,
+                "drafted_at_pick": 44
               }
             ],
             "TE": [
               {
-                "player_id": "00-0039065",
-                "name": "Sam LaPorta",
-                "team": "DET",
+                "player_id": "00-0040126",
+                "name": "Colston Loveland",
+                "team": "CHI",
                 "position": "TE",
-                "edge_score": 12.31,
-                "vor": 0.84,
-                "overall_vor_rank": 44,
-                "drafted_at_pick": 44
+                "edge_score": 14.36,
+                "vor": 2.89,
+                "overall_vor_rank": 24,
+                "drafted_at_pick": 24
               }
             ],
             "FLEX": [
@@ -1386,8 +1386,8 @@
                 "name": "Jahmyr Gibbs",
                 "team": "DET",
                 "position": "RB",
-                "edge_score": 17.57,
-                "vor": 6.36,
+                "edge_score": 17.27,
+                "vor": 6.06,
                 "overall_vor_rank": 4,
                 "drafted_at_pick": 4
               },
@@ -1430,8 +1430,8 @@
                 "name": "Colston Loveland",
                 "team": "CHI",
                 "position": "TE",
-                "edge_score": 8.82,
-                "vor": 1.2,
+                "edge_score": 8.52,
+                "vor": 0.9,
                 "overall_vor_rank": 38,
                 "drafted_at_pick": 37
               }
@@ -1514,9 +1514,9 @@
                 "drafted_at_pick": 104
               },
               {
-                "player_id": "00-0033110",
-                "name": "Tyler Higbee",
-                "team": "LA",
+                "player_id": "00-0037252",
+                "name": "Greg Dulcich",
+                "team": "MIA",
                 "position": "TE",
                 "edge_score": 4.93,
                 "vor": -2.69,
@@ -1567,7 +1567,7 @@
                 "position": "QB",
                 "edge_score": 20.7,
                 "vor": 2.77,
-                "overall_vor_rank": 26,
+                "overall_vor_rank": 25,
                 "drafted_at_pick": 25
               }
             ],
@@ -1953,24 +1953,24 @@
             ],
             "RB": [
               {
-                "player_id": "00-0038597",
-                "name": "Chase Brown",
-                "team": "CIN",
-                "position": "RB",
-                "edge_score": 15.7,
-                "vor": 2.53,
-                "overall_vor_rank": 27,
-                "drafted_at_pick": 26
-              },
-              {
-                "player_id": "00-0032764",
-                "name": "Derrick Henry",
-                "team": "BAL",
+                "player_id": "00-0039361",
+                "name": "Bucky Irving",
+                "team": "TB",
                 "position": "RB",
                 "edge_score": 14.91,
                 "vor": 1.74,
                 "overall_vor_rank": 35,
                 "drafted_at_pick": 35
+              },
+              {
+                "player_id": "00-0040122",
+                "name": "Ashton Jeanty",
+                "team": "LV",
+                "position": "RB",
+                "edge_score": 13.74,
+                "vor": 0.57,
+                "overall_vor_rank": 47,
+                "drafted_at_pick": 46
               }
             ],
             "WR": [
@@ -1985,14 +1985,14 @@
                 "drafted_at_pick": 15
               },
               {
-                "player_id": "00-0039067",
-                "name": "Rashee Rice",
-                "team": "KC",
+                "player_id": "00-0038124",
+                "name": "Christian Watson",
+                "team": "GB",
                 "position": "WR",
-                "edge_score": 14.4,
-                "vor": 0.65,
-                "overall_vor_rank": 46,
-                "drafted_at_pick": 46
+                "edge_score": 16.33,
+                "vor": 2.58,
+                "overall_vor_rank": 26,
+                "drafted_at_pick": 26
               }
             ],
             "TE": [
@@ -2168,9 +2168,9 @@
                 "name": "Christian Watson",
                 "team": "GB",
                 "position": "WR",
-                "edge_score": 11.3,
-                "vor": 1.89,
-                "overall_vor_rank": 27,
+                "edge_score": 11.14,
+                "vor": 1.73,
+                "overall_vor_rank": 29,
                 "drafted_at_pick": 26
               },
               {
@@ -2532,27 +2532,17 @@
                 "drafted_at_pick": 7
               },
               {
-                "player_id": "00-0040719",
-                "name": "Bhayshul Tuten",
-                "team": "JAX",
+                "player_id": "00-0037228",
+                "name": "Jaylen Warren",
+                "team": "PIT",
                 "position": "RB",
-                "edge_score": 11.23,
-                "vor": 0.02,
-                "overall_vor_rank": 56,
-                "drafted_at_pick": 54
+                "edge_score": 13.06,
+                "vor": 1.85,
+                "overall_vor_rank": 27,
+                "drafted_at_pick": 27
               }
             ],
             "WR": [
-              {
-                "player_id": "00-0038124",
-                "name": "Christian Watson",
-                "team": "GB",
-                "position": "WR",
-                "edge_score": 11.3,
-                "vor": 1.89,
-                "overall_vor_rank": 27,
-                "drafted_at_pick": 27
-              },
               {
                 "player_id": "00-0038606",
                 "name": "Parker Washington",
@@ -2562,6 +2552,16 @@
                 "vor": 1.33,
                 "overall_vor_rank": 35,
                 "drafted_at_pick": 34
+              },
+              {
+                "player_id": "00-0037240",
+                "name": "Jameson Williams",
+                "team": "DET",
+                "position": "WR",
+                "edge_score": 9.55,
+                "vor": 0.14,
+                "overall_vor_rank": 54,
+                "drafted_at_pick": 54
               }
             ],
             "TE": [
@@ -2634,9 +2634,9 @@
                 "drafted_at_pick": 87
               },
               {
-                "player_id": "00-0035228",
-                "name": "Kyler Murray",
-                "team": "MIN",
+                "player_id": "00-0038128",
+                "name": "Malik Willis",
+                "team": "MIA",
                 "position": "QB",
                 "edge_score": 15.96,
                 "vor": -1.97,
@@ -2815,9 +2815,9 @@
                 "drafted_at_pick": 73
               },
               {
-                "player_id": "00-0035228",
-                "name": "Kyler Murray",
-                "team": "MIN",
+                "player_id": "00-0038128",
+                "name": "Malik Willis",
+                "team": "MIA",
                 "position": "QB",
                 "edge_score": 15.96,
                 "vor": -1.97,
@@ -2825,9 +2825,9 @@
                 "drafted_at_pick": 88
               },
               {
-                "player_id": "00-0039917",
-                "name": "Michael Penix Jr.",
-                "team": "ATL",
+                "player_id": "00-0035228",
+                "name": "Kyler Murray",
+                "team": "MIN",
                 "position": "QB",
                 "edge_score": 15.77,
                 "vor": -2.16,
@@ -2912,25 +2912,25 @@
                 "drafted_at_pick": 13
               },
               {
-                "player_id": "00-0037228",
-                "name": "Jaylen Warren",
-                "team": "PIT",
+                "player_id": "00-0032764",
+                "name": "Derrick Henry",
+                "team": "BAL",
                 "position": "RB",
-                "edge_score": 13.06,
-                "vor": 1.85,
+                "edge_score": 12.98,
+                "vor": 1.77,
                 "overall_vor_rank": 28,
                 "drafted_at_pick": 28
               }
             ],
             "WR": [
               {
-                "player_id": "00-0038606",
-                "name": "Parker Washington",
-                "team": "JAX",
+                "player_id": "00-0036554",
+                "name": "Nico Collins",
+                "team": "HOU",
                 "position": "WR",
-                "edge_score": 10.74,
-                "vor": 1.33,
-                "overall_vor_rank": 35,
+                "edge_score": 11.0,
+                "vor": 1.59,
+                "overall_vor_rank": 33,
                 "drafted_at_pick": 33
               },
               {
@@ -3034,9 +3034,9 @@
                 "drafted_at_pick": 108
               },
               {
-                "player_id": "00-0038128",
-                "name": "Malik Willis",
-                "team": "MIA",
+                "player_id": "00-0039917",
+                "name": "Michael Penix Jr.",
+                "team": "ATL",
                 "position": "QB",
                 "edge_score": 15.3,
                 "vor": -2.63,
@@ -3103,9 +3103,9 @@
                 "drafted_at_pick": 29
               },
               {
-                "player_id": "00-0039361",
-                "name": "Bucky Irving",
-                "team": "TB",
+                "player_id": "00-0032764",
+                "name": "Derrick Henry",
+                "team": "BAL",
                 "position": "RB",
                 "edge_score": 14.97,
                 "vor": 1.8,
@@ -3282,14 +3282,14 @@
             ],
             "RB": [
               {
-                "player_id": "00-0032764",
-                "name": "Derrick Henry",
-                "team": "BAL",
+                "player_id": "00-0039361",
+                "name": "Bucky Irving",
+                "team": "TB",
                 "position": "RB",
-                "edge_score": 12.98,
-                "vor": 1.77,
-                "overall_vor_rank": 29,
-                "drafted_at_pick": 29
+                "edge_score": 12.86,
+                "vor": 1.65,
+                "overall_vor_rank": 32,
+                "drafted_at_pick": 32
               },
               {
                 "player_id": "00-0034844",
@@ -3304,14 +3304,14 @@
             ],
             "WR": [
               {
-                "player_id": "00-0036554",
-                "name": "Nico Collins",
-                "team": "HOU",
+                "player_id": "00-0038124",
+                "name": "Christian Watson",
+                "team": "GB",
                 "position": "WR",
-                "edge_score": 11.09,
-                "vor": 1.68,
-                "overall_vor_rank": 32,
-                "drafted_at_pick": 32
+                "edge_score": 11.14,
+                "vor": 1.73,
+                "overall_vor_rank": 29,
+                "drafted_at_pick": 29
               },
               {
                 "player_id": "00-0037240",
@@ -3404,9 +3404,9 @@
                 "drafted_at_pick": 92
               },
               {
-                "player_id": "00-0037252",
-                "name": "Greg Dulcich",
-                "team": "MIA",
+                "player_id": "00-0036894",
+                "name": "Pat Freiermuth",
+                "team": "PIT",
                 "position": "TE",
                 "edge_score": 5.12,
                 "vor": -2.5,
@@ -3678,7 +3678,7 @@
                 "position": "RB",
                 "edge_score": 12.86,
                 "vor": 1.65,
-                "overall_vor_rank": 33,
+                "overall_vor_rank": 32,
                 "drafted_at_pick": 31
               }
             ],
@@ -3698,8 +3698,8 @@
                 "name": "Tee Higgins",
                 "team": "CIN",
                 "position": "WR",
-                "edge_score": 11.14,
-                "vor": 1.73,
+                "edge_score": 11.1,
+                "vor": 1.69,
                 "overall_vor_rank": 30,
                 "drafted_at_pick": 30
               }
@@ -3850,19 +3850,19 @@
                 "edge_score": 18.22,
                 "vor": 0.65,
                 "overall_vor_rank": 52,
-                "drafted_at_pick": 48
+                "drafted_at_pick": 49
               }
             ],
             "RB": [
               {
-                "player_id": "00-0040715",
-                "name": "Cam Skattebo",
-                "team": "NYG",
+                "player_id": "00-0038597",
+                "name": "Chase Brown",
+                "team": "CIN",
                 "position": "RB",
-                "edge_score": 13.17,
-                "vor": 0.63,
-                "overall_vor_rank": 53,
-                "drafted_at_pick": 49
+                "edge_score": 15.7,
+                "vor": 3.16,
+                "overall_vor_rank": 24,
+                "drafted_at_pick": 24
               },
               {
                 "player_id": "00-0040666",
@@ -3887,14 +3887,14 @@
                 "drafted_at_pick": 1
               },
               {
-                "player_id": "00-0038124",
-                "name": "Christian Watson",
-                "team": "GB",
+                "player_id": "00-0036322",
+                "name": "Justin Jefferson",
+                "team": "MIN",
                 "position": "WR",
-                "edge_score": 16.63,
-                "vor": 3.35,
-                "overall_vor_rank": 25,
-                "drafted_at_pick": 25
+                "edge_score": 14.27,
+                "vor": 0.99,
+                "overall_vor_rank": 48,
+                "drafted_at_pick": 48
               }
             ],
             "TE": [
@@ -3903,10 +3903,10 @@
                 "name": "Colston Loveland",
                 "team": "CHI",
                 "position": "TE",
-                "edge_score": 14.66,
-                "vor": 3.44,
-                "overall_vor_rank": 24,
-                "drafted_at_pick": 24
+                "edge_score": 14.36,
+                "vor": 3.14,
+                "overall_vor_rank": 25,
+                "drafted_at_pick": 25
               }
             ],
             "FLEX": [
@@ -3957,9 +3957,9 @@
                 "drafted_at_pick": 96
               },
               {
-                "player_id": "00-0039917",
-                "name": "Michael Penix Jr.",
-                "team": "ATL",
+                "player_id": "00-0035228",
+                "name": "Kyler Murray",
+                "team": "MIN",
                 "position": "QB",
                 "edge_score": 15.77,
                 "vor": -1.8,
@@ -3987,12 +3987,12 @@
                 "drafted_at_pick": 121
               },
               {
-                "player_id": "00-0039890",
-                "name": "Adonai Mitchell",
-                "team": "NYJ",
-                "position": "WR",
-                "edge_score": 9.28,
-                "vor": -4.0,
+                "player_id": "00-0033119",
+                "name": "Jacoby Brissett",
+                "team": "BAL",
+                "position": "QB",
+                "edge_score": 13.5,
+                "vor": -4.07,
                 "overall_vor_rank": 145,
                 "drafted_at_pick": 144
               },
@@ -4032,14 +4032,14 @@
           "roster": {
             "QB": [
               {
-                "player_id": "00-0039910",
-                "name": "Jayden Daniels",
-                "team": "WAS",
+                "player_id": "00-0036971",
+                "name": "Trevor Lawrence",
+                "team": "JAX",
                 "position": "QB",
-                "edge_score": 17.26,
-                "vor": -0.31,
-                "overall_vor_rank": 79,
-                "drafted_at_pick": 72
+                "edge_score": 20.7,
+                "vor": 3.13,
+                "overall_vor_rank": 25,
+                "drafted_at_pick": 25
               }
             ],
             "RB": [
@@ -4050,18 +4050,18 @@
                 "position": "RB",
                 "edge_score": 13.13,
                 "vor": 3.18,
-                "overall_vor_rank": 25,
-                "drafted_at_pick": 25
+                "overall_vor_rank": 24,
+                "drafted_at_pick": 24
               },
               {
-                "player_id": "00-0040719",
-                "name": "Bhayshul Tuten",
-                "team": "JAX",
+                "player_id": "00-0039738",
+                "name": "Blake Corum",
+                "team": "LA",
                 "position": "RB",
-                "edge_score": 11.23,
-                "vor": 1.28,
-                "overall_vor_rank": 50,
-                "drafted_at_pick": 49
+                "edge_score": 9.94,
+                "vor": -0.01,
+                "overall_vor_rank": 73,
+                "drafted_at_pick": 72
               }
             ],
             "WR": [
@@ -4076,14 +4076,14 @@
                 "drafted_at_pick": 1
               },
               {
-                "player_id": "00-0038124",
-                "name": "Christian Watson",
-                "team": "GB",
+                "player_id": "00-0040735",
+                "name": "Luther Burden III",
+                "team": "CHI",
                 "position": "WR",
-                "edge_score": 11.3,
-                "vor": 3.2,
-                "overall_vor_rank": 24,
-                "drafted_at_pick": 24
+                "edge_score": 9.41,
+                "vor": 1.31,
+                "overall_vor_rank": 49,
+                "drafted_at_pick": 49
               }
             ],
             "TE": [
@@ -4229,7 +4229,7 @@
                 "position": "QB",
                 "edge_score": 20.7,
                 "vor": 3.13,
-                "overall_vor_rank": 27,
+                "overall_vor_rank": 26,
                 "drafted_at_pick": 26
               }
             ],
@@ -4367,12 +4367,12 @@
                 "drafted_at_pick": 122
               },
               {
-                "player_id": "00-0036244",
-                "name": "Colby Parkinson",
-                "team": "LA",
-                "position": "TE",
-                "edge_score": 7.25,
-                "vor": -3.97,
+                "player_id": "00-0039890",
+                "name": "Adonai Mitchell",
+                "team": "NYJ",
+                "position": "WR",
+                "edge_score": 9.28,
+                "vor": -4.0,
                 "overall_vor_rank": 144,
                 "drafted_at_pick": 143
               },
@@ -4412,14 +4412,14 @@
           "roster": {
             "QB": [
               {
-                "player_id": "00-0036971",
-                "name": "Trevor Lawrence",
-                "team": "JAX",
+                "player_id": "00-0039910",
+                "name": "Jayden Daniels",
+                "team": "WAS",
                 "position": "QB",
-                "edge_score": 20.7,
-                "vor": 3.13,
-                "overall_vor_rank": 26,
-                "drafted_at_pick": 26
+                "edge_score": 17.26,
+                "vor": -0.31,
+                "overall_vor_rank": 79,
+                "drafted_at_pick": 71
               }
             ],
             "RB": [
@@ -4434,14 +4434,14 @@
                 "drafted_at_pick": 2
               },
               {
-                "player_id": "00-0034844",
-                "name": "Saquon Barkley",
-                "team": "PHI",
+                "player_id": "00-0037228",
+                "name": "Jaylen Warren",
+                "team": "PIT",
                 "position": "RB",
-                "edge_score": 11.39,
-                "vor": 1.44,
-                "overall_vor_rank": 47,
-                "drafted_at_pick": 47
+                "edge_score": 13.06,
+                "vor": 3.11,
+                "overall_vor_rank": 26,
+                "drafted_at_pick": 26
               }
             ],
             "WR": [
@@ -4456,37 +4456,37 @@
                 "drafted_at_pick": 23
               },
               {
-                "player_id": "00-0031588",
-                "name": "Stefon Diggs",
-                "team": "WAS",
+                "player_id": "00-0031408",
+                "name": "Mike Evans",
+                "team": "SF",
                 "position": "WR",
-                "edge_score": 8.1,
-                "vor": 0.0,
-                "overall_vor_rank": 71,
-                "drafted_at_pick": 71
+                "edge_score": 9.15,
+                "vor": 1.05,
+                "overall_vor_rank": 53,
+                "drafted_at_pick": 50
               }
             ],
             "TE": [
               {
-                "player_id": "00-0039065",
-                "name": "Sam LaPorta",
-                "team": "DET",
+                "player_id": "00-0038996",
+                "name": "Tucker Kraft",
+                "team": "GB",
                 "position": "TE",
-                "edge_score": 7.93,
-                "vor": 1.06,
-                "overall_vor_rank": 52,
-                "drafted_at_pick": 50
+                "edge_score": 8.28,
+                "vor": 1.41,
+                "overall_vor_rank": 48,
+                "drafted_at_pick": 47
               }
             ],
             "FLEX": [
               {
-                "player_id": "00-0034827",
-                "name": "DJ Moore",
-                "team": "BUF",
-                "position": "WR",
-                "edge_score": 8.03,
-                "vor": -0.07,
-                "overall_vor_rank": 74,
+                "player_id": "00-0039738",
+                "name": "Blake Corum",
+                "team": "LA",
+                "position": "RB",
+                "edge_score": 9.94,
+                "vor": -0.01,
+                "overall_vor_rank": 73,
                 "drafted_at_pick": 74
               }
             ],
@@ -4536,9 +4536,9 @@
                 "drafted_at_pick": 98
               },
               {
-                "player_id": "00-0039917",
-                "name": "Michael Penix Jr.",
-                "team": "ATL",
+                "player_id": "00-0035228",
+                "name": "Kyler Murray",
+                "team": "MIN",
                 "position": "QB",
                 "edge_score": 15.77,
                 "vor": -1.8,
@@ -4546,9 +4546,9 @@
                 "drafted_at_pick": 119
               },
               {
-                "player_id": "00-0033110",
-                "name": "Tyler Higbee",
-                "team": "LA",
+                "player_id": "00-0037252",
+                "name": "Greg Dulcich",
+                "team": "MIA",
                 "position": "TE",
                 "edge_score": 4.93,
                 "vor": -1.94,
@@ -4603,14 +4603,14 @@
           "roster": {
             "QB": [
               {
-                "player_id": "00-0036971",
-                "name": "Trevor Lawrence",
-                "team": "JAX",
+                "player_id": "00-0033106",
+                "name": "Jared Goff",
+                "team": "DET",
                 "position": "QB",
-                "edge_score": 20.7,
-                "vor": 3.13,
-                "overall_vor_rank": 27,
-                "drafted_at_pick": 27
+                "edge_score": 18.22,
+                "vor": 0.65,
+                "overall_vor_rank": 52,
+                "drafted_at_pick": 51
               }
             ],
             "RB": [
@@ -4619,32 +4619,32 @@
                 "name": "Bijan Robinson",
                 "team": "ATL",
                 "position": "RB",
-                "edge_score": 22.39,
-                "vor": 9.85,
+                "edge_score": 22.09,
+                "vor": 9.55,
                 "overall_vor_rank": 3,
                 "drafted_at_pick": 3
               },
               {
-                "player_id": "00-0034844",
-                "name": "Saquon Barkley",
-                "team": "PHI",
+                "player_id": "00-0036275",
+                "name": "D'Andre Swift",
+                "team": "CHI",
                 "position": "RB",
-                "edge_score": 13.65,
-                "vor": 1.11,
-                "overall_vor_rank": 46,
-                "drafted_at_pick": 46
+                "edge_score": 15.65,
+                "vor": 3.11,
+                "overall_vor_rank": 27,
+                "drafted_at_pick": 27
               }
             ],
             "WR": [
               {
-                "player_id": "00-0037240",
-                "name": "Jameson Williams",
-                "team": "DET",
+                "player_id": "00-0036322",
+                "name": "Justin Jefferson",
+                "team": "MIN",
                 "position": "WR",
-                "edge_score": 13.78,
-                "vor": 0.5,
-                "overall_vor_rank": 57,
-                "drafted_at_pick": 51
+                "edge_score": 14.27,
+                "vor": 0.99,
+                "overall_vor_rank": 48,
+                "drafted_at_pick": 46
               },
               {
                 "player_id": "00-0035659",
@@ -4747,12 +4747,12 @@
                 "drafted_at_pick": 123
               },
               {
-                "player_id": "00-0038994",
-                "name": "Jordan Addison",
-                "team": "MIN",
-                "position": "WR",
-                "edge_score": 9.39,
-                "vor": -3.89,
+                "player_id": "00-0036244",
+                "name": "Colby Parkinson",
+                "team": "LA",
+                "position": "TE",
+                "edge_score": 7.25,
+                "vor": -3.97,
                 "overall_vor_rank": 143,
                 "drafted_at_pick": 142
               },
@@ -4808,20 +4808,20 @@
                 "name": "Jahmyr Gibbs",
                 "team": "DET",
                 "position": "RB",
-                "edge_score": 17.57,
-                "vor": 7.62,
+                "edge_score": 17.27,
+                "vor": 7.32,
                 "overall_vor_rank": 3,
                 "drafted_at_pick": 3
               },
               {
-                "player_id": "00-0037228",
-                "name": "Jaylen Warren",
-                "team": "PIT",
+                "player_id": "00-0040122",
+                "name": "Ashton Jeanty",
+                "team": "LV",
                 "position": "RB",
-                "edge_score": 13.06,
-                "vor": 3.11,
-                "overall_vor_rank": 27,
-                "drafted_at_pick": 27
+                "edge_score": 11.21,
+                "vor": 1.26,
+                "overall_vor_rank": 51,
+                "drafted_at_pick": 51
               }
             ],
             "WR": [
@@ -4848,14 +4848,14 @@
             ],
             "TE": [
               {
-                "player_id": "00-0039065",
-                "name": "Sam LaPorta",
-                "team": "DET",
+                "player_id": "00-0039338",
+                "name": "Brock Bowers",
+                "team": "LV",
                 "position": "TE",
-                "edge_score": 7.93,
-                "vor": 1.06,
-                "overall_vor_rank": 52,
-                "drafted_at_pick": 51
+                "edge_score": 9.97,
+                "vor": 3.1,
+                "overall_vor_rank": 27,
+                "drafted_at_pick": 27
               }
             ],
             "FLEX": [
@@ -4926,9 +4926,9 @@
                 "drafted_at_pick": 118
               },
               {
-                "player_id": "00-0036894",
-                "name": "Pat Freiermuth",
-                "team": "PIT",
+                "player_id": "00-0033110",
+                "name": "Tyler Higbee",
+                "team": "LA",
                 "position": "TE",
                 "edge_score": 4.93,
                 "vor": -1.94,
@@ -5017,13 +5017,13 @@
             ],
             "WR": [
               {
-                "player_id": "00-0039337",
-                "name": "Malik Nabers",
-                "team": "NYG",
+                "player_id": "00-0038124",
+                "name": "Christian Watson",
+                "team": "GB",
                 "position": "WR",
-                "edge_score": 15.84,
-                "vor": 2.56,
-                "overall_vor_rank": 30,
+                "edge_score": 16.33,
+                "vor": 3.05,
+                "overall_vor_rank": 28,
                 "drafted_at_pick": 28
               },
               {
@@ -5127,12 +5127,12 @@
                 "drafted_at_pick": 124
               },
               {
-                "player_id": "00-0039849",
-                "name": "Marvin Harrison Jr.",
-                "team": "HOU",
+                "player_id": "00-0038994",
+                "name": "Jordan Addison",
+                "team": "MIN",
                 "position": "WR",
-                "edge_score": 9.4,
-                "vor": -3.88,
+                "edge_score": 9.39,
+                "vor": -3.89,
                 "overall_vor_rank": 142,
                 "drafted_at_pick": 141
               },
@@ -5184,14 +5184,14 @@
             ],
             "RB": [
               {
-                "player_id": "00-0036555",
-                "name": "Chuba Hubbard",
-                "team": "CAR",
+                "player_id": "00-0038120",
+                "name": "Breece Hall",
+                "team": "NYJ",
                 "position": "RB",
-                "edge_score": 11.64,
-                "vor": 1.69,
-                "overall_vor_rank": 45,
-                "drafted_at_pick": 45
+                "edge_score": 10.43,
+                "vor": 0.48,
+                "overall_vor_rank": 61,
+                "drafted_at_pick": 52
               },
               {
                 "player_id": "00-0040784",
@@ -5216,26 +5216,26 @@
                 "drafted_at_pick": 21
               },
               {
-                "player_id": "00-0031408",
-                "name": "Mike Evans",
-                "team": "SF",
+                "player_id": "00-0038124",
+                "name": "Christian Watson",
+                "team": "GB",
                 "position": "WR",
-                "edge_score": 9.15,
-                "vor": 1.05,
-                "overall_vor_rank": 53,
-                "drafted_at_pick": 52
+                "edge_score": 11.14,
+                "vor": 3.04,
+                "overall_vor_rank": 28,
+                "drafted_at_pick": 28
               }
             ],
             "TE": [
               {
-                "player_id": "00-0039338",
-                "name": "Brock Bowers",
-                "team": "LV",
+                "player_id": "00-0040126",
+                "name": "Colston Loveland",
+                "team": "CHI",
                 "position": "TE",
-                "edge_score": 9.97,
-                "vor": 3.1,
-                "overall_vor_rank": 28,
-                "drafted_at_pick": 28
+                "edge_score": 8.52,
+                "vor": 1.65,
+                "overall_vor_rank": 45,
+                "drafted_at_pick": 45
               }
             ],
             "FLEX": [
@@ -5296,9 +5296,9 @@
                 "drafted_at_pick": 100
               },
               {
-                "player_id": "00-0037252",
-                "name": "Greg Dulcich",
-                "team": "MIA",
+                "player_id": "00-0036894",
+                "name": "Pat Freiermuth",
+                "team": "PIT",
                 "position": "TE",
                 "edge_score": 5.12,
                 "vor": -1.75,
@@ -5507,12 +5507,12 @@
                 "drafted_at_pick": 125
               },
               {
-                "player_id": "00-0033119",
-                "name": "Jacoby Brissett",
-                "team": "BAL",
-                "position": "QB",
-                "edge_score": 13.74,
-                "vor": -3.83,
+                "player_id": "00-0039849",
+                "name": "Marvin Harrison Jr.",
+                "team": "HOU",
+                "position": "WR",
+                "edge_score": 9.4,
+                "vor": -3.88,
                 "overall_vor_rank": 141,
                 "drafted_at_pick": 140
               },
@@ -5552,14 +5552,14 @@
           "roster": {
             "QB": [
               {
-                "player_id": "00-0039918",
-                "name": "Caleb Williams",
-                "team": "CHI",
+                "player_id": "00-0036264",
+                "name": "Jordan Love",
+                "team": "GB",
                 "position": "QB",
-                "edge_score": 19.29,
-                "vor": 1.72,
-                "overall_vor_rank": 44,
-                "drafted_at_pick": 44
+                "edge_score": 17.62,
+                "vor": 0.05,
+                "overall_vor_rank": 68,
+                "drafted_at_pick": 68
               }
             ],
             "RB": [
@@ -5590,9 +5590,9 @@
                 "name": "Tee Higgins",
                 "team": "CIN",
                 "position": "WR",
-                "edge_score": 11.14,
-                "vor": 3.04,
-                "overall_vor_rank": 29,
+                "edge_score": 11.1,
+                "vor": 3.0,
+                "overall_vor_rank": 30,
                 "drafted_at_pick": 29
               },
               {
@@ -5608,14 +5608,14 @@
             ],
             "TE": [
               {
-                "player_id": "00-0040128",
-                "name": "Tyler Warren",
-                "team": "IND",
+                "player_id": "00-0040126",
+                "name": "Colston Loveland",
+                "team": "CHI",
                 "position": "TE",
-                "edge_score": 6.87,
-                "vor": 0.0,
-                "overall_vor_rank": 72,
-                "drafted_at_pick": 68
+                "edge_score": 8.52,
+                "vor": 1.65,
+                "overall_vor_rank": 45,
+                "drafted_at_pick": 44
               }
             ],
             "FLEX": [
@@ -5847,9 +5847,9 @@
             ],
             "BENCH": [
               {
-                "player_id": "00-0035228",
-                "name": "Kyler Murray",
-                "team": "MIN",
+                "player_id": "00-0038128",
+                "name": "Malik Willis",
+                "team": "MIA",
                 "position": "QB",
                 "edge_score": 15.96,
                 "vor": -1.61,
@@ -5891,8 +5891,8 @@
                 "name": "Geno Smith",
                 "team": "NYJ",
                 "position": "QB",
-                "edge_score": 13.8,
-                "vor": -3.77,
+                "edge_score": 13.74,
+                "vor": -3.83,
                 "overall_vor_rank": 140,
                 "drafted_at_pick": 139
               },
@@ -5932,14 +5932,14 @@
           "roster": {
             "QB": [
               {
-                "player_id": "00-0036264",
-                "name": "Jordan Love",
-                "team": "GB",
+                "player_id": "00-0039918",
+                "name": "Caleb Williams",
+                "team": "CHI",
                 "position": "QB",
-                "edge_score": 17.62,
-                "vor": 0.05,
-                "overall_vor_rank": 68,
-                "drafted_at_pick": 67
+                "edge_score": 19.29,
+                "vor": 1.72,
+                "overall_vor_rank": 43,
+                "drafted_at_pick": 43
               }
             ],
             "RB": [
@@ -5966,24 +5966,24 @@
             ],
             "WR": [
               {
-                "player_id": "00-0039337",
-                "name": "Malik Nabers",
-                "team": "NYG",
+                "player_id": "00-0036410",
+                "name": "Tee Higgins",
+                "team": "CIN",
                 "position": "WR",
                 "edge_score": 11.1,
                 "vor": 3.0,
-                "overall_vor_rank": 31,
+                "overall_vor_rank": 30,
                 "drafted_at_pick": 30
               },
               {
-                "player_id": "00-0036322",
-                "name": "Justin Jefferson",
-                "team": "MIN",
+                "player_id": "00-0031588",
+                "name": "Stefon Diggs",
+                "team": "WAS",
                 "position": "WR",
-                "edge_score": 9.83,
-                "vor": 1.73,
-                "overall_vor_rank": 43,
-                "drafted_at_pick": 43
+                "edge_score": 8.1,
+                "vor": 0.0,
+                "overall_vor_rank": 71,
+                "drafted_at_pick": 67
               }
             ],
             "TE": [
@@ -6237,9 +6237,9 @@
                 "drafted_at_pick": 90
               },
               {
-                "player_id": "00-0038128",
-                "name": "Malik Willis",
-                "team": "MIA",
+                "player_id": "00-0039917",
+                "name": "Michael Penix Jr.",
+                "team": "ATL",
                 "position": "QB",
                 "edge_score": 15.3,
                 "vor": -2.27,
@@ -6350,18 +6350,18 @@
                 "name": "Malik Nabers",
                 "team": "NYG",
                 "position": "WR",
-                "edge_score": 11.1,
-                "vor": 3.0,
+                "edge_score": 11.09,
+                "vor": 2.99,
                 "overall_vor_rank": 31,
                 "drafted_at_pick": 31
               },
               {
-                "player_id": "00-0039067",
-                "name": "Rashee Rice",
-                "team": "KC",
+                "player_id": "00-0036322",
+                "name": "Justin Jefferson",
+                "team": "MIN",
                 "position": "WR",
-                "edge_score": 9.88,
-                "vor": 1.78,
+                "edge_score": 9.83,
+                "vor": 1.73,
                 "overall_vor_rank": 42,
                 "drafted_at_pick": 42
               }
@@ -6436,9 +6436,9 @@
                 "drafted_at_pick": 103
               },
               {
-                "player_id": "00-0035228",
-                "name": "Kyler Murray",
-                "team": "MIN",
+                "player_id": "00-0038128",
+                "name": "Malik Willis",
+                "team": "MIA",
                 "position": "QB",
                 "edge_score": 15.96,
                 "vor": -1.61,
@@ -6515,9 +6515,9 @@
             ],
             "RB": [
               {
-                "player_id": "00-0039361",
-                "name": "Bucky Irving",
-                "team": "TB",
+                "player_id": "00-0032764",
+                "name": "Derrick Henry",
+                "team": "BAL",
                 "position": "RB",
                 "edge_score": 14.97,
                 "vor": 2.43,
@@ -6714,36 +6714,36 @@
                 "drafted_at_pick": 8
               },
               {
-                "player_id": "00-0040715",
-                "name": "Cam Skattebo",
-                "team": "NYG",
+                "player_id": "00-0039361",
+                "name": "Bucky Irving",
+                "team": "TB",
                 "position": "RB",
-                "edge_score": 10.09,
-                "vor": 0.14,
-                "overall_vor_rank": 67,
-                "drafted_at_pick": 65
+                "edge_score": 12.86,
+                "vor": 2.91,
+                "overall_vor_rank": 32,
+                "drafted_at_pick": 32
               }
             ],
             "WR": [
               {
-                "player_id": "00-0036554",
-                "name": "Nico Collins",
-                "team": "HOU",
+                "player_id": "00-0039067",
+                "name": "Rashee Rice",
+                "team": "KC",
                 "position": "WR",
-                "edge_score": 11.09,
-                "vor": 2.99,
-                "overall_vor_rank": 32,
-                "drafted_at_pick": 32
-              },
-              {
-                "player_id": "00-0040124",
-                "name": "Tetairoa McMillan",
-                "team": "CAR",
-                "position": "WR",
-                "edge_score": 9.9,
-                "vor": 1.8,
+                "edge_score": 9.88,
+                "vor": 1.78,
                 "overall_vor_rank": 41,
                 "drafted_at_pick": 41
+              },
+              {
+                "player_id": "00-0031588",
+                "name": "Stefon Diggs",
+                "team": "WAS",
+                "position": "WR",
+                "edge_score": 8.1,
+                "vor": 0.0,
+                "overall_vor_rank": 71,
+                "drafted_at_pick": 65
               }
             ],
             "TE": [
@@ -6895,9 +6895,9 @@
             ],
             "RB": [
               {
-                "player_id": "00-0032764",
-                "name": "Derrick Henry",
-                "team": "BAL",
+                "player_id": "00-0039361",
+                "name": "Bucky Irving",
+                "team": "TB",
                 "position": "RB",
                 "edge_score": 14.91,
                 "vor": 2.37,
@@ -7072,36 +7072,36 @@
           "roster": {
             "QB": [
               {
-                "player_id": "00-0033873",
-                "name": "Patrick Mahomes",
-                "team": "KC",
+                "player_id": "00-0039918",
+                "name": "Caleb Williams",
+                "team": "CHI",
                 "position": "QB",
-                "edge_score": 17.93,
-                "vor": 0.36,
-                "overall_vor_rank": 65,
-                "drafted_at_pick": 64
+                "edge_score": 19.29,
+                "vor": 1.72,
+                "overall_vor_rank": 43,
+                "drafted_at_pick": 40
               }
             ],
             "RB": [
               {
-                "player_id": "00-0039361",
-                "name": "Bucky Irving",
-                "team": "TB",
+                "player_id": "00-0038120",
+                "name": "Breece Hall",
+                "team": "NYJ",
                 "position": "RB",
-                "edge_score": 12.86,
-                "vor": 2.91,
-                "overall_vor_rank": 33,
-                "drafted_at_pick": 33
+                "edge_score": 10.43,
+                "vor": 0.48,
+                "overall_vor_rank": 61,
+                "drafted_at_pick": 57
               },
               {
-                "player_id": "00-0036875",
-                "name": "Rhamondre Stevenson",
-                "team": "NE",
+                "player_id": "00-0035261",
+                "name": "Tony Pollard",
+                "team": "TEN",
                 "position": "RB",
-                "edge_score": 11.79,
-                "vor": 1.84,
-                "overall_vor_rank": 40,
-                "drafted_at_pick": 40
+                "edge_score": 10.35,
+                "vor": 0.4,
+                "overall_vor_rank": 64,
+                "drafted_at_pick": 64
               }
             ],
             "WR": [
@@ -7116,14 +7116,14 @@
                 "drafted_at_pick": 9
               },
               {
-                "player_id": "00-0038559",
-                "name": "Michael Wilson",
-                "team": "ARI",
+                "player_id": "00-0036554",
+                "name": "Nico Collins",
+                "team": "HOU",
                 "position": "WR",
-                "edge_score": 8.78,
-                "vor": 0.68,
-                "overall_vor_rank": 58,
-                "drafted_at_pick": 57
+                "edge_score": 11.0,
+                "vor": 2.9,
+                "overall_vor_rank": 33,
+                "drafted_at_pick": 33
               }
             ],
             "TE": [
@@ -7474,12 +7474,12 @@
                 "drafted_at_pick": 10
               },
               {
-                "player_id": "00-0035700",
-                "name": "Josh Jacobs",
-                "team": "GB",
+                "player_id": "00-0036875",
+                "name": "Rhamondre Stevenson",
+                "team": "NE",
                 "position": "RB",
-                "edge_score": 11.84,
-                "vor": 1.89,
+                "edge_score": 11.79,
+                "vor": 1.84,
                 "overall_vor_rank": 39,
                 "drafted_at_pick": 39
               }
@@ -7854,14 +7854,14 @@
                 "drafted_at_pick": 11
               },
               {
-                "player_id": "00-0035261",
-                "name": "Tony Pollard",
-                "team": "TEN",
+                "player_id": "00-0035700",
+                "name": "Josh Jacobs",
+                "team": "GB",
                 "position": "RB",
-                "edge_score": 10.35,
-                "vor": 0.4,
-                "overall_vor_rank": 64,
-                "drafted_at_pick": 62
+                "edge_score": 11.84,
+                "vor": 1.89,
+                "overall_vor_rank": 38,
+                "drafted_at_pick": 38
               }
             ],
             "WR": [
@@ -7888,14 +7888,14 @@
             ],
             "TE": [
               {
-                "player_id": "00-0040126",
-                "name": "Colston Loveland",
-                "team": "CHI",
+                "player_id": "00-0034351",
+                "name": "Dallas Goedert",
+                "team": "PHI",
                 "position": "TE",
-                "edge_score": 8.82,
-                "vor": 1.95,
-                "overall_vor_rank": 38,
-                "drafted_at_pick": 38
+                "edge_score": 7.23,
+                "vor": 0.36,
+                "overall_vor_rank": 66,
+                "drafted_at_pick": 62
               }
             ],
             "FLEX": [
@@ -7966,9 +7966,9 @@
                 "drafted_at_pick": 110
               },
               {
-                "player_id": "00-0038128",
-                "name": "Malik Willis",
-                "team": "MIA",
+                "player_id": "00-0039917",
+                "name": "Michael Penix Jr.",
+                "team": "ATL",
                 "position": "QB",
                 "edge_score": 15.3,
                 "vor": -2.27,
@@ -8230,7 +8230,7 @@
                 "position": "RB",
                 "edge_score": 11.84,
                 "vor": 1.89,
-                "overall_vor_rank": 39,
+                "overall_vor_rank": 38,
                 "drafted_at_pick": 37
               },
               {
