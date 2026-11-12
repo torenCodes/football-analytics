@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 10,
-  "locked_at": "2026-11-10T18:10:00.577665+00:00",
+  "locked_at": "2026-11-12T03:19:49.103921+00:00",
   "pick_rule": "ats",
   "model_version": "v2",
   "games": [
@@ -249,7 +249,7 @@
         "market_favorite": "home",
         "edge_vs_market": -3.0
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_BUF_NYJ",
@@ -359,25 +359,25 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Mostly Sunny",
+        "short_forecast": "Sunny",
         "temperature_f": 52,
-        "wind": "10 to 14 mph"
+        "wind": "8 to 12 mph"
       },
-      "storyline": "It starts with BUF's offense, #2 in the model's ratings, against a NYJ defense that ranks #22. The model's BUF by 8.1 lands inside the 8.5-point spread, so NYJ +8.5 gets the lean. NYJ does get 2 points of home field back. About 51% of these ratings now come from 2026 games. NYJ brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. NYJ comes in with 1 extra day of rest \u2014 context, not something the model scores. NYJ lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 52\u00b0F, wind 10 to 14 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "It starts with BUF's offense, #2 in the model's ratings, against a NYJ defense that ranks #22. The model's BUF by 8.1 lands inside the 8.5-point spread, so NYJ +8.5 gets the lean.",
+      "storyline": "It starts with BUF's offense, #2 in the model's ratings, against a NYJ defense that ranks #22. Vegas and the model agree BUF should win; the model just expects NYJ to keep it closer than 8.5. NYJ does get 2 points of home field back. About 51% of these ratings now come from 2026 games. NYJ brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. NYJ comes in with 1 extra day of rest \u2014 context, not something the model scores. NYJ lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 52\u00b0F, wind 8 to 12 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "It starts with BUF's offense, #2 in the model's ratings, against a NYJ defense that ranks #22. Vegas and the model agree BUF should win; the model just expects NYJ to keep it closer than 8.5.",
       "market": {
         "spread_home": -8.5,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": 370,
-        "moneyline_away": -485,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 340,
+        "moneyline_away": -440,
         "total": 50.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "away",
         "edge_vs_market": 0.4
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_CAR_NO",
@@ -482,21 +482,21 @@
       "roof": "dome",
       "international_site": false,
       "weather": null,
-      "storyline": "The model sees close to a coin flip here. Vegas and the model agree NO should win; the model just expects CAR to keep it closer than 1.5. About 51% of these ratings now come from 2026 games. CAR is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. CAR lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "The model sees close to a coin flip here. Vegas and the model agree NO should win; the model just expects CAR to keep it closer than 1.5.",
+      "storyline": "The model sees close to a coin flip here. Asking NO to win by more than 2.5 is a lot when the model has them by 0.7. Lean CAR +2.5. About 51% of these ratings now come from 2026 games. CAR is breaking in a mostly new offensive line (40% continuity) \u2014 a real wildcard this early in the year. CAR lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "The model sees close to a coin flip here. Asking NO to win by more than 2.5 is a lot when the model has them by 0.7. Lean CAR +2.5.",
       "market": {
-        "spread_home": 1.5,
-        "spread_home_odds": -105,
-        "spread_away_odds": -115,
-        "moneyline_home": -120,
-        "moneyline_away": 100,
+        "spread_home": 2.5,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": -135,
+        "moneyline_away": 114,
         "total": 48.5,
-        "over_odds": -105,
-        "under_odds": -115,
+        "over_odds": -115,
+        "under_odds": -105,
         "market_favorite": "home",
-        "edge_vs_market": -0.8
+        "edge_vs_market": -1.8
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_HOU_CLE",
@@ -542,7 +542,7 @@
       ],
       "unit_ranks": {
         "home": {
-          "off": 30,
+          "off": 29,
           "def": 13
         },
         "away": {
@@ -602,25 +602,25 @@
       "roof": "outdoors",
       "international_site": false,
       "weather": {
-        "short_forecast": "Slight Chance Light Rain then Mostly Cloudy",
-        "temperature_f": 47,
-        "wind": "12 mph"
+        "short_forecast": "Chance Light Rain",
+        "temperature_f": 48,
+        "wind": "10 mph"
       },
-      "storyline": "The model doesn't trust CLE's offense (#30) to move the ball, up against HOU's #15 defense \u2014 worth about 4 points by its math. The model likes HOU too, just not by 4.5 \u2014 it has them by 3.7, so the lean is CLE +4.5. CLE does get 2 points of home field back. About 51% of these ratings now come from 2026 games. CLE is breaking in a mostly new offensive line (0% continuity) \u2014 a real wildcard this early in the year. CLE is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Slight Chance Light Rain then Mostly Cloudy, 47\u00b0F, wind 12 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The model doesn't trust CLE's offense (#30) to move the ball, up against HOU's #15 defense \u2014 worth about 4 points by its math. The model likes HOU too, just not by 4.5 \u2014 it has them by 3.7, so the lean is CLE +4.5.",
+      "storyline": "The model doesn't trust CLE's offense (#29) to move the ball, up against HOU's #15 defense \u2014 worth about 4 points by its math. The model likes HOU too, just not by 4.5 \u2014 it has them by 3.7, so the lean is CLE +4.5. CLE does get 2 points of home field back. About 51% of these ratings now come from 2026 games. CLE is breaking in a mostly new offensive line (0% continuity) \u2014 a real wildcard this early in the year. CLE is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. Forecast for kickoff: Chance Light Rain, 48\u00b0F, wind 10 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The model doesn't trust CLE's offense (#29) to move the ball, up against HOU's #15 defense \u2014 worth about 4 points by its math. The model likes HOU too, just not by 4.5 \u2014 it has them by 3.7, so the lean is CLE +4.5.",
       "market": {
         "spread_home": -4.5,
         "spread_home_odds": -105,
         "spread_away_odds": -115,
-        "moneyline_home": 185,
-        "moneyline_away": -225,
-        "total": 39.5,
-        "over_odds": -112,
-        "under_odds": -108,
+        "moneyline_home": 190,
+        "moneyline_away": -230,
+        "total": 41.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "away",
         "edge_vs_market": 0.8
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_JAX_TEN",
@@ -726,24 +726,24 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Mostly Sunny",
-        "temperature_f": 55,
+        "temperature_f": 54,
         "wind": "0 to 5 mph"
       },
-      "storyline": "JAX's #3 defense against TEN's #28 offense is where the model sees this one tilting. The model is even higher on JAX than Vegas is: 12.6 points to the market's 10.5. TEN does get 2 points of home field back. About 50% of these ratings now come from 2026 games. JAX brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. TEN comes in with 4 extra days of rest \u2014 context, not something the model scores. TEN lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 55\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "JAX's #3 defense against TEN's #28 offense is where the model sees this one tilting. The model is even higher on JAX than Vegas is: 12.6 points to the market's 10.5.",
+      "storyline": "JAX's #3 defense against TEN's #28 offense is where the model sees this one tilting. Vegas has JAX by 10.5; the model goes a bit past that, to 12.6. Lean JAX \u221210.5. TEN does get 2 points of home field back. About 50% of these ratings now come from 2026 games. JAX brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. TEN comes in with 4 extra days of rest \u2014 context, not something the model scores. TEN lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 54\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "JAX's #3 defense against TEN's #28 offense is where the model sees this one tilting. Vegas has JAX by 10.5; the model goes a bit past that, to 12.6. Lean JAX \u221210.5.",
       "market": {
         "spread_home": -10.5,
-        "spread_home_odds": -112,
-        "spread_away_odds": -108,
-        "moneyline_home": 455,
-        "moneyline_away": -625,
+        "spread_home_odds": -108,
+        "spread_away_odds": -112,
+        "moneyline_home": 400,
+        "moneyline_away": -535,
         "total": 46.5,
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "away",
         "edge_vs_market": -2.1
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_KC_ATL",
@@ -784,7 +784,7 @@
       ],
       "unit_ranks": {
         "home": {
-          "off": 25,
+          "off": 24,
           "def": 17
         },
         "away": {
@@ -808,9 +808,9 @@
       "rest_days_edge_home": 0,
       "oline_continuity": {
         "home": {
-          "returning_starters": 4,
+          "returning_starters": 3,
           "total_starters": 5,
-          "continuity_pct": 0.8
+          "continuity_pct": 0.6
         },
         "away": {
           "returning_starters": 3,
@@ -848,21 +848,21 @@
         "temperature_f": 57,
         "wind": "0 to 5 mph"
       },
-      "storyline": "This projection is built on defense: KC's #6 unit against ATL's #25 offense. Vegas has KC by 3.5; the model goes a bit past that, to 5.3. Lean KC \u22123.5. ATL does get 2 points of home field back. About 52% of these ratings now come from 2026 games. Forecast for kickoff: Sunny, 57\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "This projection is built on defense: KC's #6 unit against ATL's #25 offense. Vegas has KC by 3.5; the model goes a bit past that, to 5.3. Lean KC \u22123.5.",
+      "storyline": "This projection is built on defense: KC's #6 unit against ATL's #24 offense. Vegas has KC by 3; the model goes a bit past that, to 5.3. Lean KC \u22123. ATL does get 2 points of home field back. About 52% of these ratings now come from 2026 games. Forecast for kickoff: Sunny, 57\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "This projection is built on defense: KC's #6 unit against ATL's #24 offense. Vegas has KC by 3; the model goes a bit past that, to 5.3. Lean KC \u22123.",
       "market": {
-        "spread_home": -3.5,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
-        "moneyline_home": 150,
-        "moneyline_away": -180,
-        "total": 45.5,
-        "over_odds": -105,
-        "under_odds": -115,
+        "spread_home": -3.0,
+        "spread_home_odds": 100,
+        "spread_away_odds": -120,
+        "moneyline_home": 154,
+        "moneyline_away": -185,
+        "total": 46.5,
+        "over_odds": -110,
+        "under_odds": -110,
         "market_favorite": "away",
-        "edge_vs_market": -1.8
+        "edge_vs_market": -2.3
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_MIA_IND",
@@ -875,7 +875,7 @@
       "home_team": "IND",
       "away_team": "MIA",
       "div_game": false,
-      "model_margin_home": 3.6,
+      "model_margin_home": 7.0,
       "margin_breakdown": [
         {
           "kind": "offense",
@@ -898,21 +898,26 @@
         {
           "kind": "new_qb",
           "team": "MIA",
-          "pts_home": 0.3
+          "pts_home": 1.3
         },
         {
           "kind": "home_field",
           "team": "IND",
-          "pts_home": 1.9
+          "pts_home": 2.0
+        },
+        {
+          "kind": "qb_out",
+          "team": "MIA",
+          "pts_home": 2.3
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 24,
+          "off": 23,
           "def": 27
         },
         "away": {
-          "off": 22,
+          "off": 26,
           "def": 31
         }
       },
@@ -956,7 +961,10 @@
       },
       "qb_injury": {
         "home": null,
-        "away": null
+        "away": {
+          "gsis_id": "00-0038128",
+          "status": "Backup starting"
+        }
       },
       "qb_change": {
         "home": false,
@@ -969,24 +977,24 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Sunny",
-        "temperature_f": 50,
+        "temperature_f": 49,
         "wind": "0 to 3 mph"
       },
-      "storyline": "Take away home field and the model has this one nearly even; the 2-point home edge tips it to IND. IND is a 2.5-point favorite, and the model thinks that's not enough \u2014 it has them by 3.6. About 50% of these ratings now come from 2026 games. Forecast for kickoff: Sunny, 50\u00b0F, wind 0 to 3 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "Take away home field and the model has this one nearly even; the 2-point home edge tips it to IND. IND is a 2.5-point favorite, and the model thinks that's not enough \u2014 it has them by 3.6.",
+      "storyline": "MIA's starting QB is out of the lineup for a lower-rated replacement, and that 2.5-point adjustment is the biggest single piece of the model's number. The model is even higher on IND than Vegas is: 7.0 points to the market's 3.5. About 50% of these ratings now come from 2026 games. Forecast for kickoff: Sunny, 49\u00b0F, wind 0 to 3 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "MIA's starting QB is out of the lineup for a lower-rated replacement, and that 2.5-point adjustment is the biggest single piece of the model's number. The model is even higher on IND than Vegas is: 7.0 points to the market's 3.5.",
       "market": {
-        "spread_home": 2.5,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": -142,
-        "moneyline_away": 120,
-        "total": 40.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "spread_home": 3.5,
+        "spread_home_odds": -118,
+        "spread_away_odds": -102,
+        "moneyline_home": -205,
+        "moneyline_away": 170,
+        "total": 38.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "home",
-        "edge_vs_market": 1.1
+        "edge_vs_market": 3.5
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_MIN_GB",
@@ -999,7 +1007,7 @@
       "home_team": "GB",
       "away_team": "MIN",
       "div_game": true,
-      "model_margin_home": 5.0,
+      "model_margin_home": 7.8,
       "margin_breakdown": [
         {
           "kind": "offense",
@@ -1022,12 +1030,17 @@
         {
           "kind": "new_qb",
           "team": "MIN",
-          "pts_home": -1.3
+          "pts_home": -1.0
         },
         {
           "kind": "home_field",
           "team": "GB",
           "pts_home": 2.0
+        },
+        {
+          "kind": "qb_out",
+          "team": "MIN",
+          "pts_home": 2.5
         }
       ],
       "unit_ranks": {
@@ -1036,7 +1049,7 @@
           "def": 7
         },
         "away": {
-          "off": 29,
+          "off": 30,
           "def": 1
         }
       },
@@ -1050,7 +1063,7 @@
           "def": 0.49
         }
       },
-      "our_pick": "away",
+      "our_pick": "home",
       "pick_status": "pick",
       "neutral_site": false,
       "rest_days_edge_home": 1,
@@ -1080,7 +1093,10 @@
       },
       "qb_injury": {
         "home": null,
-        "away": null
+        "away": {
+          "gsis_id": "00-0035228",
+          "status": "Backup starting"
+        }
       },
       "qb_change": {
         "home": false,
@@ -1100,21 +1116,21 @@
         "temperature_f": 46,
         "wind": "2 mph"
       },
-      "storyline": "MIN's offense ranks #29 in the model's ratings, and it runs into a GB defense ranked #7. Asking GB to win by more than 5.5 is a lot when the model has them by 5.0. Lean MIN +5.5. About 51% of these ratings now come from 2026 games. GB comes in with 1 extra day of rest \u2014 context, not something the model scores. GB lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 46\u00b0F, wind 2 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "MIN's offense ranks #29 in the model's ratings, and it runs into a GB defense ranked #7. Asking GB to win by more than 5.5 is a lot when the model has them by 5.0. Lean MIN +5.5.",
+      "storyline": "MIN's offense ranks #30 in the model's ratings, and it runs into a GB defense ranked #7. GB is a 3-point favorite, and the model thinks that's not enough \u2014 it has them by 7.8. MIN's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 51% of these ratings now come from 2026 games. GB brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. GB comes in with 1 extra day of rest \u2014 context, not something the model scores. GB lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Mostly Sunny, 46\u00b0F, wind 2 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "MIN's offense ranks #30 in the model's ratings, and it runs into a GB defense ranked #7. GB is a 3-point favorite, and the model thinks that's not enough \u2014 it has them by 7.8.",
       "market": {
-        "spread_home": 5.5,
-        "spread_home_odds": -110,
-        "spread_away_odds": -110,
-        "moneyline_home": -230,
-        "moneyline_away": 190,
-        "total": 40.5,
-        "over_odds": -110,
-        "under_odds": -110,
+        "spread_home": 3.0,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": -162,
+        "moneyline_away": 136,
+        "total": 42.5,
+        "over_odds": -105,
+        "under_odds": -115,
         "market_favorite": "home",
-        "edge_vs_market": -0.5
+        "edge_vs_market": 4.8
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_LA_ARI",
@@ -1165,7 +1181,7 @@
       ],
       "unit_ranks": {
         "home": {
-          "off": 23,
+          "off": 22,
           "def": 29
         },
         "away": {
@@ -1233,24 +1249,24 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Sunny",
-        "temperature_f": 77,
+        "temperature_f": 76,
         "wind": "0 to 5 mph"
       },
-      "storyline": "Look at ARI's #29 defense: that's the hole the model sees LA's #9 offense getting through. Vegas has LA by 9.5; the model goes a bit past that, to 11.3. Lean LA \u22129.5. ARI does get 2 points of home field back. ARI's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 54% of these ratings now come from 2026 games. LA brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. LA lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 77\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "Look at ARI's #29 defense: that's the hole the model sees LA's #9 offense getting through. Vegas has LA by 9.5; the model goes a bit past that, to 11.3. Lean LA \u22129.5.",
+      "storyline": "Look at ARI's #29 defense: that's the hole the model sees LA's #9 offense getting through. LA is a 9.5-point favorite, and the model thinks that's not enough \u2014 it has them by 11.3. ARI does get 2 points of home field back. ARI's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 54% of these ratings now come from 2026 games. LA brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. LA lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 76\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "Look at ARI's #29 defense: that's the hole the model sees LA's #9 offense getting through. LA is a 9.5-point favorite, and the model thinks that's not enough \u2014 it has them by 11.3.",
       "market": {
         "spread_home": -9.5,
         "spread_home_odds": -108,
         "spread_away_odds": -112,
-        "moneyline_home": 350,
-        "moneyline_away": -455,
-        "total": 40.5,
-        "over_odds": -105,
-        "under_odds": -115,
+        "moneyline_home": 390,
+        "moneyline_away": -520,
+        "total": 39.5,
+        "over_odds": -108,
+        "under_odds": -112,
         "market_favorite": "away",
         "edge_vs_market": -1.8
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_SEA_LV",
@@ -1263,13 +1279,13 @@
       "home_team": "LV",
       "away_team": "SEA",
       "div_game": false,
-      "model_margin_home": -6.2,
+      "model_margin_home": -9.4,
       "margin_breakdown": [
         {
           "kind": "offense",
           "team": "LV",
           "opp": "SEA",
-          "pts_home": -4.7
+          "pts_home": -4.6
         },
         {
           "kind": "offense",
@@ -1286,17 +1302,22 @@
         {
           "kind": "new_qb",
           "team": "LV",
-          "pts_home": 0.4
+          "pts_home": -0.4
         },
         {
           "kind": "home_field",
           "team": "LV",
           "pts_home": 2.0
+        },
+        {
+          "kind": "qb_out",
+          "team": "LV",
+          "pts_home": -2.5
         }
       ],
       "unit_ranks": {
         "home": {
-          "off": 26,
+          "off": 27,
           "def": 30
         },
         "away": {
@@ -1343,7 +1364,10 @@
         }
       },
       "qb_injury": {
-        "home": null,
+        "home": {
+          "gsis_id": "00-0029604",
+          "status": "Backup starting"
+        },
         "away": null
       },
       "qb_change": {
@@ -1356,21 +1380,21 @@
       "roof": "dome",
       "international_site": false,
       "weather": null,
-      "storyline": "The model trusts SEA's defense (#4) to slow LV's #26 offense \u2014 worth about 4.5 points by its math. SEA is a 3.5-point favorite, and the model thinks that's not enough \u2014 it has them by 6.2. LV does get 2 points of home field back. About 53% of these ratings now come from 2026 games. SEA brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Played indoors, so weather isn't a factor here.",
-      "storyline_short": "The model trusts SEA's defense (#4) to slow LV's #26 offense \u2014 worth about 4.5 points by its math. SEA is a 3.5-point favorite, and the model thinks that's not enough \u2014 it has them by 6.2.",
+      "storyline": "The model trusts SEA's defense (#4) to slow LV's #27 offense \u2014 worth about 4.5 points by its math. The model is even higher on SEA than Vegas is: 9.4 points to the market's 6.5. LV does get 2 points of home field back. LV's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 53% of these ratings now come from 2026 games. SEA brings back most of last year's offensive line (80% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Played indoors, so weather isn't a factor here.",
+      "storyline_short": "The model trusts SEA's defense (#4) to slow LV's #27 offense \u2014 worth about 4.5 points by its math. The model is even higher on SEA than Vegas is: 9.4 points to the market's 6.5.",
       "market": {
-        "spread_home": -3.5,
-        "spread_home_odds": -115,
-        "spread_away_odds": -105,
-        "moneyline_home": 150,
-        "moneyline_away": -180,
-        "total": 43.5,
-        "over_odds": -102,
-        "under_odds": -118,
+        "spread_home": -6.5,
+        "spread_home_odds": -112,
+        "spread_away_odds": -108,
+        "moneyline_home": 235,
+        "moneyline_away": -290,
+        "total": 40.5,
+        "over_odds": -112,
+        "under_odds": -108,
         "market_favorite": "away",
-        "edge_vs_market": -2.7
+        "edge_vs_market": -2.9
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_SF_DAL",
@@ -1429,7 +1453,7 @@
           "def": 0.5
         }
       },
-      "our_pick": "home",
+      "our_pick": "away",
       "pick_status": "pick",
       "neutral_site": false,
       "rest_days_edge_home": 0,
@@ -1471,25 +1495,25 @@
       "roof": null,
       "international_site": false,
       "weather": {
-        "short_forecast": "Chance Rain Showers",
-        "temperature_f": 67,
-        "wind": "10 to 15 mph"
+        "short_forecast": "Showers And Thunderstorms",
+        "temperature_f": 64,
+        "wind": "15 mph"
       },
-      "storyline": "The matchup doing the most work: SF's #1 offense vs. DAL's #32 defense, worth about 7 points by the model's math. The model likes SF too, just not by 4.5 \u2014 it has them by 3.8, so the lean is DAL +4.5. DAL isn't without answers \u2014 its #3 offense should find room against SF's #11 defense. About 52% of these ratings now come from 2026 games. DAL brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Chance Rain Showers, 67\u00b0F, wind 10 to 15 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "The matchup doing the most work: SF's #1 offense vs. DAL's #32 defense, worth about 7 points by the model's math. The model likes SF too, just not by 4.5 \u2014 it has them by 3.8, so the lean is DAL +4.5.",
+      "storyline": "The matchup doing the most work: SF's #1 offense vs. DAL's #32 defense, worth about 7 points by the model's math. Vegas has SF by 3.5; the model goes a hair past that, to 3.8. Lean SF \u22123.5. DAL isn't without answers \u2014 its #3 offense should find room against SF's #11 defense. About 52% of these ratings now come from 2026 games. SF brings back most of last year's offensive line (100% continuity) \u2014 context only, since a returning line hasn't predicted a better offense in our backtests. Forecast for kickoff: Showers And Thunderstorms, 64\u00b0F, wind 15 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "The matchup doing the most work: SF's #1 offense vs. DAL's #32 defense, worth about 7 points by the model's math. Vegas has SF by 3.5; the model goes a hair past that, to 3.8. Lean SF \u22123.5.",
       "market": {
-        "spread_home": -4.5,
-        "spread_home_odds": -118,
-        "spread_away_odds": -102,
-        "moneyline_home": 180,
-        "moneyline_away": -218,
+        "spread_home": -3.5,
+        "spread_home_odds": -105,
+        "spread_away_odds": -115,
+        "moneyline_home": 170,
+        "moneyline_away": -205,
         "total": 55.5,
-        "over_odds": -115,
-        "under_odds": -105,
+        "over_odds": -118,
+        "under_odds": -102,
         "market_favorite": "away",
-        "edge_vs_market": 0.7
+        "edge_vs_market": -0.3
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_PIT_CIN",
@@ -1595,24 +1619,24 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Sunny",
-        "temperature_f": 51,
-        "wind": "0 to 5 mph"
+        "temperature_f": 50,
+        "wind": "0 to 3 mph"
       },
-      "storyline": "On paper these two grade out close \u2014 home field does most of the work for CIN. Asking CIN to win by more than 3.5 is a lot when the model has them by 3.3. Lean PIT +3.5. About 50% of these ratings now come from 2026 games. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. PIT comes in with 7 extra days of rest \u2014 context, not something the model scores. CIN lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 51\u00b0F, wind 0 to 5 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "On paper these two grade out close \u2014 home field does most of the work for CIN. Asking CIN to win by more than 3.5 is a lot when the model has them by 3.3. Lean PIT +3.5.",
+      "storyline": "Take away home field and the model has this one nearly even; the 2-point home edge tips it to CIN. The model's CIN by 3.3 lands inside the 3.5-point spread, so PIT +3.5 gets the lean. About 50% of these ratings now come from 2026 games. PIT is also playing under a new head coach this season, adding scheme uncertainty no efficiency stat fully captures yet. PIT comes in with 7 extra days of rest \u2014 context, not something the model scores. CIN lost the last meeting between these division rivals \u2014 a good storyline, but revenge spots haven't paid off in 20 years of results, so the model doesn't score it. Forecast for kickoff: Sunny, 50\u00b0F, wind 0 to 3 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "Take away home field and the model has this one nearly even; the 2-point home edge tips it to CIN. The model's CIN by 3.3 lands inside the 3.5-point spread, so PIT +3.5 gets the lean.",
       "market": {
         "spread_home": 3.5,
         "spread_home_odds": -110,
         "spread_away_odds": -110,
-        "moneyline_home": -175,
-        "moneyline_away": 145,
-        "total": 48.5,
+        "moneyline_home": -180,
+        "moneyline_away": 150,
+        "total": 49.5,
         "over_odds": -108,
         "under_odds": -112,
         "market_favorite": "home",
         "edge_vs_market": -0.2
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     },
     {
       "game_id": "2026_10_LAC_BAL",
@@ -1727,24 +1751,24 @@
       "international_site": false,
       "weather": {
         "short_forecast": "Mostly Sunny",
-        "temperature_f": 54,
-        "wind": "8 mph"
+        "temperature_f": 53,
+        "wind": "5 to 8 mph"
       },
-      "storyline": "LAC's #32 offense is the weak link the model keys on, even against BAL's #23 defense. Vegas and the model agree BAL should win; the model just expects LAC to keep it closer than 5.5. BAL's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 51% of these ratings now come from 2026 games. LAC is breaking in a mostly new offensive line (20% continuity) \u2014 a real wildcard this early in the year. BAL comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny, 54\u00b0F, wind 8 mph \u2014 something to watch if it turns into a run-heavy day.",
-      "storyline_short": "LAC's #32 offense is the weak link the model keys on, even against BAL's #23 defense. Vegas and the model agree BAL should win; the model just expects LAC to keep it closer than 5.5.",
+      "storyline": "LAC's #32 offense is the weak link the model keys on, even against BAL's #23 defense. The model likes BAL too, just not by 4.5 \u2014 it has them by 2.8, so the lean is LAC +4.5. BAL's starting QB is out of the lineup for a lower-rated replacement \u2014 the model already docks them 2.5 points for it. About 51% of these ratings now come from 2026 games. LAC is breaking in a mostly new offensive line (20% continuity) \u2014 a real wildcard this early in the year. BAL comes in with 3 extra days of rest \u2014 context, not something the model scores. Forecast for kickoff: Mostly Sunny, 53\u00b0F, wind 5 to 8 mph \u2014 something to watch if it turns into a run-heavy day.",
+      "storyline_short": "LAC's #32 offense is the weak link the model keys on, even against BAL's #23 defense. The model likes BAL too, just not by 4.5 \u2014 it has them by 2.8, so the lean is LAC +4.5.",
       "market": {
-        "spread_home": 5.5,
+        "spread_home": 4.5,
         "spread_home_odds": -108,
         "spread_away_odds": -112,
-        "moneyline_home": -218,
-        "moneyline_away": 180,
+        "moneyline_home": -225,
+        "moneyline_away": 185,
         "total": 38.5,
         "over_odds": -110,
         "under_odds": -110,
         "market_favorite": "home",
-        "edge_vs_market": -2.7
+        "edge_vs_market": -1.7
       },
-      "locked_at": "2026-11-10T18:10:00.577665+00:00"
+      "locked_at": "2026-11-12T03:19:49.103921+00:00"
     }
   ]
 }
