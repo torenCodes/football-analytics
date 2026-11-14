@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-12T02:48:23.661426+00:00"
+  "generated_at": "2026-11-14T02:12:51.052040+00:00"
  },
  "available": true,
  "season": 2026,
@@ -955,6 +955,14 @@
     "fp_points": 13.0,
     "pool_average": 7.0
    }
+  },
+  {
+   "week": 10,
+   "start_score_version": "v2",
+   "by_format": {
+    "ppr": {},
+    "standard": {}
+   }
   }
  ],
  "season_by_format": {
@@ -1197,7 +1205,8 @@
   },
   "v2": {
    "weeks": [
-    9
+    9,
+    10
    ],
    "ppr": {
     "QB": {

@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 10,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039910",
+          "name": "Jayden Daniels",
+          "team": "WAS",
+          "points": 20.8
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0040715",
+          "name": "Cam Skattebo",
+          "team": "NYG",
+          "points": 27.2
+        },
+        {
+          "player_id": "00-0033699",
+          "name": "Austin Ekeler",
+          "team": "WAS",
+          "points": 9.2
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0031588",
+          "name": "Stefon Diggs",
+          "team": "WAS",
+          "points": 20.3
+        },
+        {
+          "player_id": "00-0041040",
+          "name": "Antonio Williams",
+          "team": "WAS",
+          "points": 12.2
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "points": 27.7
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039912",
+          "name": "Ben Sinnott",
+          "team": "WAS",
+          "points": 14.2
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0041182",
+          "name": "Drew Stevens",
+          "team": "WAS",
+          "points": 7.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "NYG_DST",
+          "name": "NYG D/ST",
+          "team": "NYG",
+          "points": 5.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 143.6,
+    "bench": [
+      {
+        "player_id": "00-0039923",
+        "name": "J.J. McCarthy",
+        "team": "NYG",
+        "position": "QB",
+        "points": 17.1
+      },
+      {
+        "player_id": "00-0041042",
+        "name": "Malachi Fields",
+        "team": "NYG",
+        "position": "WR",
+        "points": 9.2
+      },
+      {
+        "player_id": "00-0039337",
+        "name": "Malik Nabers",
+        "team": "NYG",
+        "position": "WR",
+        "points": 7.4
+      },
+      {
+        "player_id": "00-0037809",
+        "name": "Chig Okonkwo",
+        "team": "WAS",
+        "position": "TE",
+        "points": 6.4
+      },
+      {
+        "player_id": "00-0037256",
+        "name": "Rachaad White",
+        "team": "WAS",
+        "position": "RB",
+        "points": 6.2
+      },
+      {
+        "player_id": "00-0037742",
+        "name": "Treylon Burks",
+        "team": "WAS",
+        "position": "WR",
+        "points": 4.7
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 10,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039910",
+          "name": "Jayden Daniels",
+          "team": "WAS",
+          "points": 20.8
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0040715",
+          "name": "Cam Skattebo",
+          "team": "NYG",
+          "points": 24.2
+        },
+        {
+          "player_id": "00-0037256",
+          "name": "Rachaad White",
+          "team": "WAS",
+          "points": 5.2
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0031588",
+          "name": "Stefon Diggs",
+          "team": "WAS",
+          "points": 14.3
+        },
+        {
+          "player_id": "00-0041040",
+          "name": "Antonio Williams",
+          "team": "WAS",
+          "points": 10.2
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0037838",
+          "name": "Isaiah Likely",
+          "team": "NYG",
+          "points": 18.7
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039912",
+          "name": "Ben Sinnott",
+          "team": "WAS",
+          "points": 10.2
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0041182",
+          "name": "Drew Stevens",
+          "team": "WAS",
+          "points": 7.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "NYG_DST",
+          "name": "NYG D/ST",
+          "team": "NYG",
+          "points": 5.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 115.6,
+    "bench": [
+      {
+        "player_id": "00-0039923",
+        "name": "J.J. McCarthy",
+        "team": "NYG",
+        "position": "QB",
+        "points": 17.1
+      },
+      {
+        "player_id": "00-0041042",
+        "name": "Malachi Fields",
+        "team": "NYG",
+        "position": "WR",
+        "points": 6.2
+      },
+      {
+        "player_id": "00-0033699",
+        "name": "Austin Ekeler",
+        "team": "WAS",
+        "position": "RB",
+        "points": 5.2
+      },
+      {
+        "player_id": "00-0037742",
+        "name": "Treylon Burks",
+        "team": "WAS",
+        "position": "WR",
+        "points": 2.7
+      },
+      {
+        "player_id": "00-0039337",
+        "name": "Malik Nabers",
+        "team": "NYG",
+        "position": "WR",
+        "points": 2.4
+      },
+      {
+        "player_id": "00-0037809",
+        "name": "Chig Okonkwo",
+        "team": "WAS",
+        "position": "TE",
+        "points": 2.4
+      }
+    ]
+  }
+}
