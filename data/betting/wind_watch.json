@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-13T01:52:16.274059+00:00"
+  "generated_at": "2026-11-14T02:40:49.733374+00:00"
  },
  "season": 2026,
  "week": 10,
@@ -8,21 +8,6 @@
  "live": true,
  "rule_mph": 10,
  "spots": [
-  {
-   "game_id": "2026_10_WAS_NYG",
-   "week": 10,
-   "gameday": "2026-11-12",
-   "gametime": "20:15",
-   "weekday": "Thursday",
-   "kickoff_utc": "2026-11-13T01:15:00+00:00",
-   "away_team": "WAS",
-   "home_team": "NYG",
-   "forecast_mph": 11.8,
-   "gust_mph": 31.5,
-   "total": 40.5,
-   "spot": true,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
-  },
   {
    "game_id": "2026_10_HOU_CLE",
    "week": 10,
@@ -57,10 +42,21 @@
  "outdoor_games": 7,
  "record": {
   "under": 0,
-  "over": 0,
+  "over": 1,
   "push": 0
  },
- "past": [],
+ "past": [
+  {
+   "game_id": "2026_10_WAS_NYG",
+   "week": 10,
+   "away_team": "WAS",
+   "home_team": "NYG",
+   "forecast_mph": 11.8,
+   "total": 40.5,
+   "final": 45,
+   "result": "over"
+  }
+ ],
  "backtest": {
   "forecast": {
    "games": 797,

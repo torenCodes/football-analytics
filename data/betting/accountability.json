@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-11-12T03:19:49.109981+00:00"
+    "generated_at": "2026-11-14T02:40:49.084496+00:00"
   },
   "weeks_graded": 10,
   "ats": {
-    "graded": 128,
-    "correct": 67,
-    "accuracy": 0.523
+    "graded": 129,
+    "correct": 68,
+    "accuracy": 0.527
   },
   "outright": {
-    "graded": 134,
+    "graded": 135,
     "correct": 81,
-    "accuracy": 0.604
+    "accuracy": 0.6
   },
   "by_model": {
     "v0": {
@@ -62,16 +62,16 @@
         10
       ],
       "ats": {
-        "graded": 0,
-        "correct": 0,
-        "accuracy": null
+        "graded": 1,
+        "correct": 1,
+        "accuracy": 1.0
       },
       "outright": {
-        "graded": 0,
+        "graded": 1,
         "correct": 0,
-        "accuracy": null
+        "accuracy": 0.0
       },
-      "games": 0,
+      "games": 1,
       "model_corr": null,
       "vegas_corr": null
     }
@@ -211,6 +211,21 @@
       "vegas_mae": 9.49,
       "model_winners": 0.604,
       "vegas_winners": 0.681
+    },
+    {
+      "week": 10,
+      "games": 137,
+      "ats": {
+        "graded": 129,
+        "correct": 68,
+        "accuracy": 0.527
+      },
+      "model_corr": 0.218,
+      "vegas_corr": 0.434,
+      "model_mae": 10.43,
+      "vegas_mae": 9.46,
+      "model_winners": 0.6,
+      "vegas_winners": 0.676
     }
   ],
   "weeks": [
@@ -2148,16 +2163,16 @@
       "season": 2026,
       "week": 10,
       "model_version": "v2",
-      "locked_at": "2026-11-12T03:19:49.103921+00:00",
+      "locked_at": "2026-11-14T02:40:49.077012+00:00",
       "ats": {
-        "graded": 0,
-        "correct": 0,
-        "accuracy": null
+        "graded": 1,
+        "correct": 1,
+        "accuracy": 1.0
       },
       "outright": {
-        "graded": 0,
+        "graded": 1,
         "correct": 0,
-        "accuracy": null
+        "accuracy": 0.0
       },
       "games": [
         {
@@ -2168,10 +2183,10 @@
           "spread_home": 2.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -3,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
         },
         {
           "game_id": "2026_10_NE_DET",
@@ -2269,7 +2284,7 @@
           "home_team": "GB",
           "away_team": "MIN",
           "model_margin_home": 7.8,
-          "spread_home": 3.0,
+          "spread_home": 2.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2308,8 +2323,8 @@
           "home_team": "DAL",
           "away_team": "SF",
           "model_margin_home": -3.8,
-          "spread_home": -3.5,
-          "our_pick": "away",
+          "spread_home": -4.5,
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,

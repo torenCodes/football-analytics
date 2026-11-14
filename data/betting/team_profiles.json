@@ -1,22 +1,22 @@
 {
  "meta": {
-  "generated_at": "2026-11-12T03:19:53.428162+00:00"
+  "generated_at": "2026-11-14T02:42:51.628292+00:00"
  },
  "season": 2026,
  "available": true,
- "through_week": 9,
+ "through_week": 10,
  "period": "mid",
  "teams": {
   "ARI": {
    "record": "3-6",
-   "story": "3-6, \u22128.6 a game, and the underlying numbers agree. 58% of teams in this spot stayed bottom 10 from here. So far this season: offense #20; defense #29.",
+   "story": "3-6, \u22128.6 a game, and the underlying numbers agree. 58% of teams in this spot stayed bottom 10 from here. So far this season: offense #21; defense #29.",
    "margin": -8.6,
    "margin_rank": 30,
    "forecast": -3.4,
    "forecast_rank": 27,
    "verdict": "real_problems",
    "verdict_label": "Real problems",
-   "offense_rank": 20,
+   "offense_rank": 21,
    "defense_rank": 29,
    "offense_epa": -0.019,
    "defense_epa": 0.084,
@@ -49,7 +49,7 @@
     "pass": 28,
     "rush": 5,
     "success": 15,
-    "explosive": 8,
+    "explosive": 9,
     "def_pass": 15,
     "def_rush": 20,
     "hits": 6,
@@ -59,14 +59,14 @@
   },
   "BAL": {
    "record": "4-5",
-   "story": "4-5, \u22125.2 a game, but the numbers rank them #20 going forward, not #26. Teams with this kind of gap have climbed about 5 spots from here. So far this season: offense #19; defense #19.",
+   "story": "4-5, \u22125.2 a game, but the numbers rank them #20 going forward, not #26. Teams with this kind of gap have climbed about 5 spots from here. So far this season: offense #20; defense #19.",
    "margin": -5.2,
    "margin_rank": 26,
    "forecast": -1.7,
    "forecast_rank": 20,
    "verdict": "better_than_record",
    "verdict_label": "Better than the record",
-   "offense_rank": 19,
+   "offense_rank": 20,
    "defense_rank": 19,
    "offense_epa": -0.018,
    "defense_epa": 0.024,
@@ -78,7 +78,7 @@
     "def_pass": 20,
     "def_rush": 18,
     "hits": 15,
-    "sacks": 22,
+    "sacks": 21,
     "takeaways": 22
    }
   },
@@ -103,8 +103,8 @@
     "def_pass": 16,
     "def_rush": 17,
     "hits": 3,
-    "sacks": 21,
-    "takeaways": 8
+    "sacks": 20,
+    "takeaways": 9
    }
   },
   "CAR": {
@@ -123,10 +123,10 @@
    "ranks": {
     "pass": 17,
     "rush": 14,
-    "success": 18,
+    "success": 19,
     "explosive": 11,
     "def_pass": 23,
-    "def_rush": 25,
+    "def_rush": 24,
     "hits": 32,
     "sacks": 32,
     "takeaways": 21
@@ -159,7 +159,7 @@
   },
   "CIN": {
    "record": "6-2",
-   "story": "6-2, +8.1 a game, and the underlying numbers agree. Teams in this spot have averaged +4.8 a game from here, and 58% stayed top 10. So far this season: offense #2, built on passing (#2) and staying on schedule (#2); defense #16, built on takeaways (#7) and sacks (#9). Top-5 offenses at this point have stayed top 10 66% of the time.",
+   "story": "6-2, +8.1 a game, and the underlying numbers agree. Teams in this spot have averaged +4.8 a game from here, and 58% stayed top 10. So far this season: offense #2, built on passing (#2) and staying on schedule (#2); defense #16, built on takeaways (#8) and sacks (#9). Top-5 offenses at this point have stayed top 10 66% of the time.",
    "margin": 8.1,
    "margin_rank": 4,
    "forecast": 4.3,
@@ -179,7 +179,7 @@
     "def_rush": 27,
     "hits": 20,
     "sacks": 9,
-    "takeaways": 7
+    "takeaways": 8
    }
   },
   "CLE": {
@@ -198,20 +198,20 @@
    "ranks": {
     "pass": 22,
     "rush": 29,
-    "success": 22,
-    "explosive": 13,
+    "success": 23,
+    "explosive": 14,
     "def_pass": 9,
     "def_rush": 29,
     "hits": 7,
     "sacks": 6,
-    "takeaways": 17
+    "takeaways": 18
    }
   },
   "DAL": {
    "record": "4-5",
-   "story": "4-5, +1.1 a game, but the numbers rank them #10 going forward, not #17. Teams with this kind of gap have climbed about 5 spots from here. So far this season: offense #6, built on passing (#8) and staying on schedule (#8); defense #31. Offenses top 10 both passing and running have stayed top 10 63% of the time, against 51% for other top-10 offenses.",
+   "story": "4-5, +1.1 a game, but the numbers rank them #10 going forward, not #16. Teams with this kind of gap have climbed about 5 spots from here. So far this season: offense #6, built on passing (#8) and staying on schedule (#8); defense #31. Offenses top 10 both passing and running have stayed top 10 63% of the time, against 51% for other top-10 offenses.",
    "margin": 1.1,
-   "margin_rank": 17,
+   "margin_rank": 16,
    "forecast": 2.6,
    "forecast_rank": 10,
    "verdict": "better_than_record",
@@ -227,7 +227,7 @@
     "explosive": 19,
     "def_pass": 29,
     "def_rush": 30,
-    "hits": 24,
+    "hits": 25,
     "sacks": 23,
     "takeaways": 29
    }
@@ -254,7 +254,7 @@
     "def_rush": 26,
     "hits": 2,
     "sacks": 12,
-    "takeaways": 16
+    "takeaways": 17
    }
   },
   "DET": {
@@ -276,7 +276,7 @@
     "success": 3,
     "explosive": 21,
     "def_pass": 27,
-    "def_rush": 13,
+    "def_rush": 12,
     "hits": 5,
     "sacks": 7,
     "takeaways": 26
@@ -325,7 +325,7 @@
     "rush": 25,
     "success": 13,
     "explosive": 6,
-    "def_pass": 19,
+    "def_pass": 18,
     "def_rush": 19,
     "hits": 10,
     "sacks": 2,
@@ -348,7 +348,7 @@
    "ranks": {
     "pass": 32,
     "rush": 6,
-    "success": 19,
+    "success": 20,
     "explosive": 29,
     "def_pass": 21,
     "def_rush": 32,
@@ -378,7 +378,7 @@
     "def_pass": 3,
     "def_rush": 3,
     "hits": 14,
-    "sacks": 20,
+    "sacks": 19,
     "takeaways": 3
    }
   },
@@ -404,7 +404,7 @@
     "def_rush": 5,
     "hits": 27,
     "sacks": 31,
-    "takeaways": 15
+    "takeaways": 16
    }
   },
   "LA": {
@@ -428,7 +428,7 @@
     "def_pass": 6,
     "def_rush": 4,
     "hits": 30,
-    "sacks": 29,
+    "sacks": 28,
     "takeaways": 19
    }
   },
@@ -453,19 +453,19 @@
     "def_pass": 17,
     "def_rush": 21,
     "hits": 8,
-    "sacks": 25,
+    "sacks": 24,
     "takeaways": 10
    }
   },
   "LV": {
    "record": "4-5",
-   "story": "4-5, \u22123.3 a game, and the numbers land about there. So far this season: offense #16, built on passing (#10); defense #28.",
+   "story": "4-5, \u22123.3 a game, and the underlying numbers agree. 58% of teams in this spot stayed bottom 10 from here. So far this season: offense #16, built on passing (#10); defense #28.",
    "margin": -3.3,
-   "margin_rank": 20,
+   "margin_rank": 21,
    "forecast": -3.2,
    "forecast_rank": 25,
-   "verdict": "middle",
-   "verdict_label": "About what it looks like",
+   "verdict": "real_problems",
+   "verdict_label": "Real problems",
    "offense_rank": 16,
    "defense_rank": 28,
    "offense_epa": 0.012,
@@ -474,9 +474,9 @@
     "pass": 10,
     "rush": 30,
     "success": 16,
-    "explosive": 14,
+    "explosive": 15,
     "def_pass": 28,
-    "def_rush": 24,
+    "def_rush": 23,
     "hits": 9,
     "sacks": 17,
     "takeaways": 6
@@ -501,9 +501,9 @@
     "success": 29,
     "explosive": 22,
     "def_pass": 31,
-    "def_rush": 23,
+    "def_rush": 22,
     "hits": 17,
-    "sacks": 28,
+    "sacks": 27,
     "takeaways": 25
    }
   },
@@ -573,7 +573,7 @@
    "ranks": {
     "pass": 21,
     "rush": 23,
-    "success": 20,
+    "success": 21,
     "explosive": 28,
     "def_pass": 22,
     "def_rush": 28,
@@ -583,28 +583,28 @@
    }
   },
   "NYG": {
-   "record": "5-2-1",
-   "story": "5-2-1, +1.2 a game, and the numbers land about there. So far this season: offense #14; defense #12.",
-   "margin": 1.2,
-   "margin_rank": 16,
-   "forecast": 0.9,
+   "record": "5-3-1",
+   "story": "5-3-1, +0.8 a game, and the numbers land about there. So far this season: offense #14; defense #12.",
+   "margin": 0.8,
+   "margin_rank": 17,
+   "forecast": 0.8,
    "forecast_rank": 15,
    "verdict": "middle",
    "verdict_label": "About what it looks like",
    "offense_rank": 14,
    "defense_rank": 12,
-   "offense_epa": 0.017,
-   "defense_epa": -0.017,
+   "offense_epa": 0.026,
+   "defense_epa": -0.01,
    "ranks": {
     "pass": 12,
     "rush": 19,
-    "success": 24,
-    "explosive": 15,
+    "success": 25,
+    "explosive": 13,
     "def_pass": 14,
-    "def_rush": 12,
-    "hits": 28,
-    "sacks": 19,
-    "takeaways": 18
+    "def_rush": 13,
+    "hits": 29,
+    "sacks": 22,
+    "takeaways": 15
    }
   },
   "NYJ": {
@@ -622,7 +622,7 @@
    "defense_epa": 0.058,
    "ranks": {
     "pass": 15,
-    "rush": 20,
+    "rush": 21,
     "success": 11,
     "explosive": 17,
     "def_pass": 30,
@@ -673,7 +673,7 @@
    "ranks": {
     "pass": 26,
     "rush": 1,
-    "success": 17,
+    "success": 18,
     "explosive": 10,
     "def_pass": 7,
     "def_rush": 6,
@@ -698,7 +698,7 @@
    "ranks": {
     "pass": 14,
     "rush": 28,
-    "success": 23,
+    "success": 24,
     "explosive": 24,
     "def_pass": 4,
     "def_rush": 9,
@@ -728,7 +728,7 @@
     "def_pass": 12,
     "def_rush": 1,
     "hits": 22,
-    "sacks": 27,
+    "sacks": 26,
     "takeaways": 11
    }
   },
@@ -752,8 +752,8 @@
     "explosive": 23,
     "def_pass": 2,
     "def_rush": 2,
-    "hits": 29,
-    "sacks": 26,
+    "hits": 28,
+    "sacks": 25,
     "takeaways": 1
    }
   },
@@ -773,7 +773,7 @@
    "ranks": {
     "pass": 25,
     "rush": 18,
-    "success": 21,
+    "success": 22,
     "explosive": 26,
     "def_pass": 26,
     "def_rush": 15,
@@ -783,28 +783,28 @@
    }
   },
   "WAS": {
-   "record": "2-5-1",
-   "story": "2-5-1, \u22123.8 a game, and the numbers land about there. So far this season: offense #21; defense #20.",
-   "margin": -3.8,
-   "margin_rank": 21,
-   "forecast": -1.4,
+   "record": "3-5-1",
+   "story": "3-5-1, \u22123.0 a game, and the numbers land about there. So far this season: offense #19; defense #20.",
+   "margin": -3.0,
+   "margin_rank": 20,
+   "forecast": -1.1,
    "forecast_rank": 19,
    "verdict": "middle",
    "verdict_label": "About what it looks like",
-   "offense_rank": 21,
+   "offense_rank": 19,
    "defense_rank": 20,
-   "offense_epa": -0.02,
-   "defense_epa": 0.029,
+   "offense_epa": -0.012,
+   "defense_epa": 0.037,
    "ranks": {
     "pass": 19,
-    "rush": 21,
-    "success": 25,
-    "explosive": 9,
-    "def_pass": 18,
-    "def_rush": 22,
-    "hits": 25,
-    "sacks": 24,
-    "takeaways": 9
+    "rush": 20,
+    "success": 17,
+    "explosive": 8,
+    "def_pass": 19,
+    "def_rush": 25,
+    "hits": 24,
+    "sacks": 29,
+    "takeaways": 7
    }
   }
  },
