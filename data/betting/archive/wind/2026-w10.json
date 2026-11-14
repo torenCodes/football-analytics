@@ -27,11 +27,11 @@
    "kickoff_utc": "2026-11-15T18:00:00+00:00",
    "away_team": "HOU",
    "home_team": "CLE",
-   "forecast_mph": 10.3,
-   "gust_mph": 13.0,
-   "total": 41.5,
+   "forecast_mph": 12.6,
+   "gust_mph": 17.4,
+   "total": 40.5,
    "spot": true,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
+   "locked_at": "2026-11-14T07:59:35.379633+00:00"
   },
   {
    "game_id": "2026_10_MIN_GB",
@@ -42,11 +42,11 @@
    "kickoff_utc": "2026-11-15T18:00:00+00:00",
    "away_team": "MIN",
    "home_team": "GB",
-   "forecast_mph": 4.9,
-   "gust_mph": 4.9,
+   "forecast_mph": 2.4,
+   "gust_mph": 3.8,
    "total": 42.5,
    "spot": false,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
+   "locked_at": "2026-11-14T07:59:35.379633+00:00"
   },
   {
    "game_id": "2026_10_BUF_NYJ",
@@ -57,11 +57,11 @@
    "kickoff_utc": "2026-11-15T18:00:00+00:00",
    "away_team": "BUF",
    "home_team": "NYJ",
-   "forecast_mph": 13.7,
-   "gust_mph": 18.6,
+   "forecast_mph": 8.7,
+   "gust_mph": 20.1,
    "total": 50.5,
-   "spot": true,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
+   "spot": false,
+   "locked_at": "2026-11-14T07:59:35.379633+00:00"
   },
   {
    "game_id": "2026_10_JAX_TEN",
@@ -72,11 +72,11 @@
    "kickoff_utc": "2026-11-15T18:00:00+00:00",
    "away_team": "JAX",
    "home_team": "TEN",
-   "forecast_mph": 5.2,
-   "gust_mph": 7.8,
+   "forecast_mph": 7.8,
+   "gust_mph": 11.6,
    "total": 46.5,
    "spot": false,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
+   "locked_at": "2026-11-14T07:59:35.379633+00:00"
   },
   {
    "game_id": "2026_10_PIT_CIN",
@@ -87,11 +87,11 @@
    "kickoff_utc": "2026-11-16T01:20:00+00:00",
    "away_team": "PIT",
    "home_team": "CIN",
-   "forecast_mph": 3.5,
-   "gust_mph": 5.8,
+   "forecast_mph": 0.9,
+   "gust_mph": 1.6,
    "total": 49.5,
    "spot": false,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
+   "locked_at": "2026-11-14T07:59:35.379633+00:00"
   },
   {
    "game_id": "2026_10_LAC_BAL",
@@ -103,10 +103,10 @@
    "away_team": "LAC",
    "home_team": "BAL",
    "forecast_mph": 4.5,
-   "gust_mph": 13.4,
+   "gust_mph": 14.1,
    "total": 38.5,
    "spot": false,
-   "locked_at": "2026-11-12T03:19:49.781586+00:00"
+   "locked_at": "2026-11-14T07:59:35.379633+00:00"
   }
  ]
 }
