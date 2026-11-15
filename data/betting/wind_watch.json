@@ -1,36 +1,30 @@
 {
  "meta": {
-  "generated_at": "2026-11-15T20:25:58.320038+00:00"
+  "generated_at": "2026-11-15T23:23:47.504948+00:00"
  },
  "season": 2026,
  "week": 10,
  "first_week": 9,
  "live": true,
  "rule_mph": 10,
- "spots": [
-  {
-   "game_id": "2026_10_HOU_CLE",
-   "week": 10,
-   "gameday": "2026-11-15",
-   "gametime": "13:00",
-   "weekday": "Sunday",
-   "kickoff_utc": "2026-11-15T18:00:00+00:00",
-   "away_team": "HOU",
-   "home_team": "CLE",
-   "forecast_mph": 12.9,
-   "gust_mph": 17.4,
-   "total": 40.5,
-   "spot": true,
-   "locked_at": "2026-11-14T21:32:09.267104+00:00"
-  }
- ],
+ "spots": [],
  "outdoor_games": 7,
  "record": {
   "under": 0,
-  "over": 1,
+  "over": 2,
   "push": 0
  },
  "past": [
+  {
+   "game_id": "2026_10_HOU_CLE",
+   "week": 10,
+   "away_team": "HOU",
+   "home_team": "CLE",
+   "forecast_mph": 12.9,
+   "total": 40.5,
+   "final": 51,
+   "result": "over"
+  },
   {
    "game_id": "2026_10_WAS_NYG",
    "week": 10,
