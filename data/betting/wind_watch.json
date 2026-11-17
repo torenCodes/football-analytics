@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-17T17:50:55.722630+00:00"
+  "generated_at": "2026-11-17T19:18:39.110558+00:00"
  },
  "season": 2026,
  "week": 11,
@@ -17,11 +17,41 @@
    "kickoff_utc": "2026-11-22T18:00:00+00:00",
    "away_team": "ARI",
    "home_team": "KC",
-   "forecast_mph": 15.1,
-   "gust_mph": 21.3,
+   "forecast_mph": 16.5,
+   "gust_mph": 26.8,
    "total": 41.5,
    "spot": true,
-   "locked_at": "2026-11-17T17:50:55.722630+00:00"
+   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+  },
+  {
+   "game_id": "2026_11_JAX_NYG",
+   "week": 11,
+   "gameday": "2026-11-22",
+   "gametime": "13:00",
+   "weekday": "Sunday",
+   "kickoff_utc": "2026-11-22T18:00:00+00:00",
+   "away_team": "JAX",
+   "home_team": "NYG",
+   "forecast_mph": 10.0,
+   "gust_mph": 25.9,
+   "total": 46.5,
+   "spot": true,
+   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+  },
+  {
+   "game_id": "2026_11_CIN_WAS",
+   "week": 11,
+   "gameday": "2026-11-23",
+   "gametime": "20:15",
+   "weekday": "Monday",
+   "kickoff_utc": "2026-11-24T01:15:00+00:00",
+   "away_team": "CIN",
+   "home_team": "WAS",
+   "forecast_mph": 13.2,
+   "gust_mph": 29.3,
+   "total": 52.5,
+   "spot": true,
+   "locked_at": "2026-11-17T19:18:39.110558+00:00"
   }
  ],
  "outdoor_games": 8,
