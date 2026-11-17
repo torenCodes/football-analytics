@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-17T14:15:55.253652+00:00"
+    "generated_at": "2026-11-17T17:33:54.218178+00:00"
   },
   "available": true,
   "season": 2026,
@@ -220,8 +220,8 @@
         "hit_rate_within_5": 0.348,
         "vs_consensus": {
           "players": 46,
-          "ours_rho": 0.568,
-          "market_rho": 0.657
+          "ours_rho": 0.569,
+          "market_rho": 0.654
         },
         "biggest_steals": [
           {
@@ -425,11 +425,11 @@
       "K": {
         "players_graded": 29,
         "mean_abs_rank_error": 11.1,
-        "hit_rate_within_5": 0.241,
+        "hit_rate_within_5": 0.276,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.259,
-          "market_rho": 0.289
+          "ours_rho": 0.247,
+          "market_rho": 0.277
         },
         "biggest_steals": [
           {
@@ -528,12 +528,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.2,
+        "mean_abs_rank_error": 8.1,
         "hit_rate_within_5": 0.438,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.377,
-          "market_rho": 0.321
+          "ours_rho": 0.39,
+          "market_rho": 0.332
         },
         "biggest_steals": [
           {
@@ -555,6 +555,15 @@
             "ppg": 8.9
           },
           {
+            "player_id": "NYG_DST",
+            "name": "NYG D/ST",
+            "preseason_rank": 26,
+            "actual_rank": 13,
+            "rank_error": -13,
+            "games": 9,
+            "ppg": 6.0
+          },
+          {
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
@@ -571,15 +580,6 @@
             "rank_error": -11,
             "games": 9,
             "ppg": 6.7
-          },
-          {
-            "player_id": "NYG_DST",
-            "name": "NYG D/ST",
-            "preseason_rank": 26,
-            "actual_rank": 15,
-            "rank_error": -11,
-            "games": 9,
-            "ppg": 6.0
           }
         ],
         "biggest_busts": [
@@ -611,15 +611,6 @@
             "ppg": 3.5
           },
           {
-            "player_id": "BAL_DST",
-            "name": "BAL D/ST",
-            "preseason_rank": 18,
-            "actual_rank": 29,
-            "rank_error": 11,
-            "games": 10,
-            "ppg": 3.2
-          },
-          {
             "player_id": "LAC_DST",
             "name": "LAC D/ST",
             "preseason_rank": 13,
@@ -627,6 +618,15 @@
             "rank_error": 11,
             "games": 9,
             "ppg": 4.3
+          },
+          {
+            "player_id": "NE_DST",
+            "name": "NE D/ST",
+            "preseason_rank": 11,
+            "actual_rank": 22,
+            "rank_error": 11,
+            "games": 10,
+            "ppg": 4.8
           }
         ]
       }
@@ -847,7 +847,7 @@
         "vs_consensus": {
           "players": 46,
           "ours_rho": 0.599,
-          "market_rho": 0.669
+          "market_rho": 0.667
         },
         "biggest_steals": [
           {
@@ -1051,11 +1051,11 @@
       "K": {
         "players_graded": 29,
         "mean_abs_rank_error": 11.1,
-        "hit_rate_within_5": 0.241,
+        "hit_rate_within_5": 0.276,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.259,
-          "market_rho": 0.289
+          "ours_rho": 0.247,
+          "market_rho": 0.277
         },
         "biggest_steals": [
           {
@@ -1154,12 +1154,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 8.2,
+        "mean_abs_rank_error": 8.1,
         "hit_rate_within_5": 0.438,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.377,
-          "market_rho": 0.321
+          "ours_rho": 0.39,
+          "market_rho": 0.332
         },
         "biggest_steals": [
           {
@@ -1181,6 +1181,15 @@
             "ppg": 8.9
           },
           {
+            "player_id": "NYG_DST",
+            "name": "NYG D/ST",
+            "preseason_rank": 26,
+            "actual_rank": 13,
+            "rank_error": -13,
+            "games": 9,
+            "ppg": 6.0
+          },
+          {
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
@@ -1197,15 +1206,6 @@
             "rank_error": -11,
             "games": 9,
             "ppg": 6.7
-          },
-          {
-            "player_id": "NYG_DST",
-            "name": "NYG D/ST",
-            "preseason_rank": 26,
-            "actual_rank": 15,
-            "rank_error": -11,
-            "games": 9,
-            "ppg": 6.0
           }
         ],
         "biggest_busts": [
@@ -1237,15 +1237,6 @@
             "ppg": 3.5
           },
           {
-            "player_id": "BAL_DST",
-            "name": "BAL D/ST",
-            "preseason_rank": 18,
-            "actual_rank": 29,
-            "rank_error": 11,
-            "games": 10,
-            "ppg": 3.2
-          },
-          {
             "player_id": "LAC_DST",
             "name": "LAC D/ST",
             "preseason_rank": 13,
@@ -1253,6 +1244,15 @@
             "rank_error": 11,
             "games": 9,
             "ppg": 4.3
+          },
+          {
+            "player_id": "NE_DST",
+            "name": "NE D/ST",
+            "preseason_rank": 11,
+            "actual_rank": 22,
+            "rank_error": 11,
+            "games": 10,
+            "ppg": 4.8
           }
         ]
       }
