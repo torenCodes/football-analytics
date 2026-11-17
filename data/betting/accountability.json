@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-11-14T07:59:34.849999+00:00"
+    "generated_at": "2026-11-17T14:50:14.980719+00:00"
   },
-  "weeks_graded": 10,
+  "weeks_graded": 11,
   "ats": {
-    "graded": 129,
-    "correct": 68,
-    "accuracy": 0.527
+    "graded": 142,
+    "correct": 75,
+    "accuracy": 0.528
   },
   "outright": {
-    "graded": 135,
-    "correct": 81,
-    "accuracy": 0.6
+    "graded": 148,
+    "correct": 89,
+    "accuracy": 0.601
   },
   "by_model": {
     "v0": {
@@ -59,21 +59,22 @@
     },
     "v2": {
       "weeks": [
-        10
+        10,
+        11
       ],
       "ats": {
-        "graded": 1,
-        "correct": 1,
-        "accuracy": 1.0
+        "graded": 14,
+        "correct": 8,
+        "accuracy": 0.571
       },
       "outright": {
-        "graded": 1,
-        "correct": 0,
-        "accuracy": 0.0
+        "graded": 14,
+        "correct": 8,
+        "accuracy": 0.571
       },
-      "games": 1,
-      "model_corr": null,
-      "vegas_corr": null
+      "games": 14,
+      "model_corr": 0.474,
+      "vegas_corr": 0.603
     }
   },
   "season_to_date": [
@@ -214,18 +215,18 @@
     },
     {
       "week": 10,
-      "games": 137,
+      "games": 150,
       "ats": {
-        "graded": 129,
-        "correct": 68,
-        "accuracy": 0.527
+        "graded": 142,
+        "correct": 75,
+        "accuracy": 0.528
       },
-      "model_corr": 0.218,
-      "vegas_corr": 0.434,
-      "model_mae": 10.43,
-      "vegas_mae": 9.46,
-      "model_winners": 0.6,
-      "vegas_winners": 0.676
+      "model_corr": 0.255,
+      "vegas_corr": 0.464,
+      "model_mae": 10.48,
+      "vegas_mae": 9.58,
+      "model_winners": 0.601,
+      "vegas_winners": 0.678
     }
   ],
   "weeks": [
@@ -2165,14 +2166,14 @@
       "model_version": "v2",
       "locked_at": "2026-11-14T07:59:34.842458+00:00",
       "ats": {
-        "graded": 1,
-        "correct": 1,
-        "accuracy": 1.0
+        "graded": 14,
+        "correct": 8,
+        "accuracy": 0.571
       },
       "outright": {
-        "graded": 1,
-        "correct": 0,
-        "accuracy": 0.0
+        "graded": 14,
+        "correct": 8,
+        "accuracy": 0.571
       },
       "games": [
         {
@@ -2196,10 +2197,10 @@
           "spread_home": 2.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 25,
+          "push": false,
+          "correct": false,
+          "winner_correct": false
         },
         {
           "game_id": "2026_10_BUF_NYJ",
@@ -2209,10 +2210,10 @@
           "spread_home": -8.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -19,
+          "push": false,
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_CAR_NO",
@@ -2222,10 +2223,10 @@
           "spread_home": 2.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -3,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
         },
         {
           "game_id": "2026_10_HOU_CLE",
@@ -2235,10 +2236,10 @@
           "spread_home": -4.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 3,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
         },
         {
           "game_id": "2026_10_JAX_TEN",
@@ -2248,10 +2249,10 @@
           "spread_home": -10.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -17,
+          "push": false,
+          "correct": true,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_KC_ATL",
@@ -2261,10 +2262,10 @@
           "spread_home": -3.0,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -22,
+          "push": false,
+          "correct": true,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_MIA_IND",
@@ -2274,10 +2275,10 @@
           "spread_home": 3.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 2,
+          "push": false,
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_MIN_GB",
@@ -2287,10 +2288,10 @@
           "spread_home": 2.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -20,
+          "push": false,
+          "correct": false,
+          "winner_correct": false
         },
         {
           "game_id": "2026_10_LA_ARI",
@@ -2300,10 +2301,10 @@
           "spread_home": -9.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -28,
+          "push": false,
+          "correct": true,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_SEA_LV",
@@ -2313,10 +2314,10 @@
           "spread_home": -6.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -8,
+          "push": false,
+          "correct": true,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_SF_DAL",
@@ -2326,10 +2327,10 @@
           "spread_home": -4.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -6,
+          "push": false,
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_PIT_CIN",
@@ -2339,10 +2340,10 @@
           "spread_home": 3.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 20,
+          "push": false,
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_10_LAC_BAL",
@@ -2351,6 +2352,193 @@
           "model_margin_home": 2.8,
           "spread_home": 4.5,
           "our_pick": "away",
+          "no_lean": false,
+          "result": -3,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
+        }
+      ]
+    },
+    {
+      "season": 2026,
+      "week": 11,
+      "model_version": "v2",
+      "locked_at": "2026-11-17T14:50:14.976171+00:00",
+      "ats": {
+        "graded": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "outright": {
+        "graded": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "games": [
+        {
+          "game_id": "2026_11_IND_HOU",
+          "home_team": "HOU",
+          "away_team": "IND",
+          "model_margin_home": 6.4,
+          "spread_home": 12.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_ARI_KC",
+          "home_team": "KC",
+          "away_team": "ARI",
+          "model_margin_home": 15.9,
+          "spread_home": 16.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_BAL_CAR",
+          "home_team": "CAR",
+          "away_team": "BAL",
+          "model_margin_home": 5.2,
+          "spread_home": 2.5,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_JAX_NYG",
+          "home_team": "NYG",
+          "away_team": "JAX",
+          "model_margin_home": -8.7,
+          "spread_home": -6.0,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_MIA_BUF",
+          "home_team": "BUF",
+          "away_team": "MIA",
+          "model_margin_home": 15.8,
+          "spread_home": 16.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_NO_CHI",
+          "home_team": "CHI",
+          "away_team": "NO",
+          "model_margin_home": 7.4,
+          "spread_home": 11.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_TB_DET",
+          "home_team": "DET",
+          "away_team": "TB",
+          "model_margin_home": 4.6,
+          "spread_home": 6.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_TEN_DAL",
+          "home_team": "DAL",
+          "away_team": "TEN",
+          "model_margin_home": 8.5,
+          "spread_home": 8.5,
+          "our_pick": null,
+          "no_lean": true,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_NYJ_LAC",
+          "home_team": "LAC",
+          "away_team": "NYJ",
+          "model_margin_home": 2.1,
+          "spread_home": 3.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_LV_DEN",
+          "home_team": "DEN",
+          "away_team": "LV",
+          "model_margin_home": 11.6,
+          "spread_home": 10.0,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_PIT_PHI",
+          "home_team": "PHI",
+          "away_team": "PIT",
+          "model_margin_home": -5.3,
+          "spread_home": -4.5,
+          "our_pick": "away",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_MIN_SF",
+          "home_team": "SF",
+          "away_team": "MIN",
+          "model_margin_home": 7.4,
+          "spread_home": 3.0,
+          "our_pick": "home",
+          "no_lean": false,
+          "result": null,
+          "push": null,
+          "correct": null,
+          "winner_correct": null
+        },
+        {
+          "game_id": "2026_11_CIN_WAS",
+          "home_team": "WAS",
+          "away_team": "CIN",
+          "model_margin_home": -3.7,
+          "spread_home": -6.5,
+          "our_pick": "home",
           "no_lean": false,
           "result": null,
           "push": null,
