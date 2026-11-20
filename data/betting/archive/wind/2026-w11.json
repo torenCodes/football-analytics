@@ -12,11 +12,11 @@
    "kickoff_utc": "2026-11-22T18:00:00+00:00",
    "away_team": "MIA",
    "home_team": "BUF",
-   "forecast_mph": 4.0,
-   "gust_mph": 14.8,
-   "total": 45.5,
+   "forecast_mph": 9.3,
+   "gust_mph": 18.8,
+   "total": 44.5,
    "spot": false,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_BAL_CAR",
@@ -27,11 +27,11 @@
    "kickoff_utc": "2026-11-22T18:00:00+00:00",
    "away_team": "BAL",
    "home_team": "CAR",
-   "forecast_mph": 6.6,
-   "gust_mph": 20.1,
+   "forecast_mph": 9.0,
+   "gust_mph": 29.8,
    "total": 43.5,
    "spot": false,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_NO_CHI",
@@ -42,11 +42,11 @@
    "kickoff_utc": "2026-11-22T18:00:00+00:00",
    "away_team": "NO",
    "home_team": "CHI",
-   "forecast_mph": 7.3,
-   "gust_mph": 20.4,
+   "forecast_mph": 11.3,
+   "gust_mph": 26.2,
    "total": 48.5,
-   "spot": false,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "spot": true,
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_ARI_KC",
@@ -57,11 +57,11 @@
    "kickoff_utc": "2026-11-22T18:00:00+00:00",
    "away_team": "ARI",
    "home_team": "KC",
-   "forecast_mph": 16.5,
-   "gust_mph": 26.8,
-   "total": 41.5,
+   "forecast_mph": 15.2,
+   "gust_mph": 19.5,
+   "total": 40.5,
    "spot": true,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_JAX_NYG",
@@ -72,11 +72,11 @@
    "kickoff_utc": "2026-11-22T18:00:00+00:00",
    "away_team": "JAX",
    "home_team": "NYG",
-   "forecast_mph": 10.0,
-   "gust_mph": 25.9,
+   "forecast_mph": 6.8,
+   "gust_mph": 18.1,
    "total": 46.5,
-   "spot": true,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "spot": false,
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_LV_DEN",
@@ -87,11 +87,11 @@
    "kickoff_utc": "2026-11-22T21:25:00+00:00",
    "away_team": "LV",
    "home_team": "DEN",
-   "forecast_mph": 5.4,
-   "gust_mph": 10.5,
+   "forecast_mph": 3.8,
+   "gust_mph": 7.2,
    "total": 40.5,
    "spot": false,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_PIT_PHI",
@@ -102,11 +102,11 @@
    "kickoff_utc": "2026-11-22T21:25:00+00:00",
    "away_team": "PIT",
    "home_team": "PHI",
-   "forecast_mph": 9.3,
-   "gust_mph": 26.6,
+   "forecast_mph": 9.1,
+   "gust_mph": 24.6,
    "total": 38.5,
    "spot": false,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   },
   {
    "game_id": "2026_11_CIN_WAS",
@@ -117,11 +117,11 @@
    "kickoff_utc": "2026-11-24T01:15:00+00:00",
    "away_team": "CIN",
    "home_team": "WAS",
-   "forecast_mph": 13.2,
-   "gust_mph": 29.3,
-   "total": 52.5,
+   "forecast_mph": 10.8,
+   "gust_mph": 26.6,
+   "total": 53.5,
    "spot": true,
-   "locked_at": "2026-11-17T19:18:39.110558+00:00"
+   "locked_at": "2026-11-20T02:22:00.435276+00:00"
   }
  ]
 }
