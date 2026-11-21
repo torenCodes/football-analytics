@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-11-19T03:49:26.865330+00:00"
+    "generated_at": "2026-11-21T03:27:19.027386+00:00"
   },
   "weeks_graded": 11,
   "ats": {
-    "graded": 142,
+    "graded": 143,
     "correct": 75,
-    "accuracy": 0.528
+    "accuracy": 0.524
   },
   "outright": {
-    "graded": 148,
-    "correct": 89,
-    "accuracy": 0.601
+    "graded": 149,
+    "correct": 90,
+    "accuracy": 0.604
   },
   "by_model": {
     "v0": {
@@ -63,18 +63,18 @@
         11
       ],
       "ats": {
-        "graded": 14,
+        "graded": 15,
         "correct": 8,
-        "accuracy": 0.571
+        "accuracy": 0.533
       },
       "outright": {
-        "graded": 14,
-        "correct": 8,
-        "accuracy": 0.571
+        "graded": 15,
+        "correct": 9,
+        "accuracy": 0.6
       },
-      "games": 14,
-      "model_corr": 0.474,
-      "vegas_corr": 0.603
+      "games": 15,
+      "model_corr": 0.55,
+      "vegas_corr": 0.699
     }
   },
   "season_to_date": [
@@ -227,6 +227,21 @@
       "vegas_mae": 9.58,
       "model_winners": 0.601,
       "vegas_winners": 0.678
+    },
+    {
+      "week": 11,
+      "games": 151,
+      "ats": {
+        "graded": 143,
+        "correct": 75,
+        "accuracy": 0.524
+      },
+      "model_corr": 0.26,
+      "vegas_corr": 0.476,
+      "model_mae": 10.52,
+      "vegas_mae": 9.58,
+      "model_winners": 0.604,
+      "vegas_winners": 0.68
     }
   ],
   "weeks": [
@@ -2364,16 +2379,16 @@
       "season": 2026,
       "week": 11,
       "model_version": "v2",
-      "locked_at": "2026-11-19T03:49:26.858550+00:00",
+      "locked_at": "2026-11-21T03:27:19.019513+00:00",
       "ats": {
-        "graded": 0,
+        "graded": 1,
         "correct": 0,
-        "accuracy": null
+        "accuracy": 0.0
       },
       "outright": {
-        "graded": 0,
-        "correct": 0,
-        "accuracy": null
+        "graded": 1,
+        "correct": 1,
+        "accuracy": 1.0
       },
       "games": [
         {
@@ -2384,18 +2399,18 @@
           "spread_home": 12.5,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 23,
+          "push": false,
+          "correct": false,
+          "winner_correct": true
         },
         {
           "game_id": "2026_11_ARI_KC",
           "home_team": "KC",
           "away_team": "ARI",
           "model_margin_home": 15.9,
-          "spread_home": 15.5,
-          "our_pick": "home",
+          "spread_home": 16.5,
+          "our_pick": "away",
           "no_lean": false,
           "result": null,
           "push": null,
@@ -2407,7 +2422,7 @@
           "home_team": "CAR",
           "away_team": "BAL",
           "model_margin_home": 5.2,
-          "spread_home": 2.5,
+          "spread_home": 3.0,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2459,7 +2474,7 @@
           "home_team": "DET",
           "away_team": "TB",
           "model_margin_home": 4.6,
-          "spread_home": 7.0,
+          "spread_home": 5.5,
           "our_pick": "away",
           "no_lean": false,
           "result": null,
@@ -2498,7 +2513,7 @@
           "home_team": "DEN",
           "away_team": "LV",
           "model_margin_home": 11.6,
-          "spread_home": 10.0,
+          "spread_home": 10.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2511,7 +2526,7 @@
           "home_team": "PHI",
           "away_team": "PIT",
           "model_margin_home": -5.3,
-          "spread_home": -4.5,
+          "spread_home": -3.5,
           "our_pick": "away",
           "no_lean": false,
           "result": null,
@@ -2537,7 +2552,7 @@
           "home_team": "WAS",
           "away_team": "CIN",
           "model_margin_home": -3.7,
-          "spread_home": -6.5,
+          "spread_home": -6.0,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
