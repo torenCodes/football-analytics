@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-21T03:05:35.601243+00:00"
+    "generated_at": "2026-11-21T08:14:15.887692+00:00"
   },
   "available": true,
   "season": 2026,
@@ -428,8 +428,8 @@
         "hit_rate_within_5": 0.241,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.248,
-          "market_rho": 0.304
+          "ours_rho": 0.244,
+          "market_rho": 0.297
         },
         "biggest_steals": [
           {
@@ -532,8 +532,8 @@
         "hit_rate_within_5": 0.469,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.405,
-          "market_rho": 0.354
+          "ours_rho": 0.412,
+          "market_rho": 0.364
         },
         "biggest_steals": [
           {
@@ -567,19 +567,19 @@
             "player_id": "NYG_DST",
             "name": "NYG D/ST",
             "preseason_rank": 26,
-            "actual_rank": 14,
-            "rank_error": -12,
+            "actual_rank": 16,
+            "rank_error": -10,
             "games": 9,
             "ppg": 6.0
           },
           {
-            "player_id": "CIN_DST",
-            "name": "CIN D/ST",
-            "preseason_rank": 21,
-            "actual_rank": 11,
+            "player_id": "TEN_DST",
+            "name": "TEN D/ST",
+            "preseason_rank": 29,
+            "actual_rank": 19,
             "rank_error": -10,
             "games": 9,
-            "ppg": 6.7
+            "ppg": 5.3
           }
         ],
         "biggest_busts": [
@@ -1054,8 +1054,8 @@
         "hit_rate_within_5": 0.241,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.248,
-          "market_rho": 0.304
+          "ours_rho": 0.244,
+          "market_rho": 0.297
         },
         "biggest_steals": [
           {
@@ -1158,8 +1158,8 @@
         "hit_rate_within_5": 0.469,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.405,
-          "market_rho": 0.354
+          "ours_rho": 0.412,
+          "market_rho": 0.364
         },
         "biggest_steals": [
           {
@@ -1193,19 +1193,19 @@
             "player_id": "NYG_DST",
             "name": "NYG D/ST",
             "preseason_rank": 26,
-            "actual_rank": 14,
-            "rank_error": -12,
+            "actual_rank": 16,
+            "rank_error": -10,
             "games": 9,
             "ppg": 6.0
           },
           {
-            "player_id": "CIN_DST",
-            "name": "CIN D/ST",
-            "preseason_rank": 21,
-            "actual_rank": 11,
+            "player_id": "TEN_DST",
+            "name": "TEN D/ST",
+            "preseason_rank": 29,
+            "actual_rank": 19,
             "rank_error": -10,
             "games": 9,
-            "ppg": 6.7
+            "ppg": 5.3
           }
         ],
         "biggest_busts": [
