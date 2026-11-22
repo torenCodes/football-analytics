@@ -67,16 +67,16 @@
    "game_id": "2026_11_JAX_NYG",
    "week": 11,
    "gameday": "2026-11-22",
-   "gametime": "13:00",
+   "gametime": "16:25",
    "weekday": "Sunday",
-   "kickoff_utc": "2026-11-22T18:00:00+00:00",
+   "kickoff_utc": "2026-11-22T21:25:00+00:00",
    "away_team": "JAX",
    "home_team": "NYG",
-   "forecast_mph": 6.8,
-   "gust_mph": 18.1,
-   "total": 46.5,
+   "forecast_mph": 5.2,
+   "gust_mph": 15.9,
+   "total": 45.5,
    "spot": false,
-   "locked_at": "2026-11-20T02:22:00.435276+00:00"
+   "locked_at": "2026-11-22T21:06:02.859553+00:00"
   },
   {
    "game_id": "2026_11_LV_DEN",
@@ -87,11 +87,11 @@
    "kickoff_utc": "2026-11-22T21:25:00+00:00",
    "away_team": "LV",
    "home_team": "DEN",
-   "forecast_mph": 3.8,
-   "gust_mph": 7.2,
+   "forecast_mph": 6.8,
+   "gust_mph": 10.7,
    "total": 40.5,
    "spot": false,
-   "locked_at": "2026-11-20T02:22:00.435276+00:00"
+   "locked_at": "2026-11-22T21:06:02.859553+00:00"
   },
   {
    "game_id": "2026_11_PIT_PHI",
@@ -117,11 +117,11 @@
    "kickoff_utc": "2026-11-24T01:15:00+00:00",
    "away_team": "CIN",
    "home_team": "WAS",
-   "forecast_mph": 7.5,
-   "gust_mph": 19.0,
-   "total": 53.5,
-   "spot": false,
-   "locked_at": "2026-11-21T03:27:19.526846+00:00"
+   "forecast_mph": 13.5,
+   "gust_mph": 30.9,
+   "total": 54.5,
+   "spot": true,
+   "locked_at": "2026-11-22T21:06:02.859553+00:00"
   }
  ]
 }
