@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-22T21:06:02.859553+00:00"
+  "generated_at": "2026-11-23T00:19:29.756015+00:00"
  },
  "season": 2026,
  "week": 11,
@@ -8,21 +8,6 @@
  "live": true,
  "rule_mph": 10,
  "spots": [
-  {
-   "game_id": "2026_11_NO_CHI",
-   "week": 11,
-   "gameday": "2026-11-22",
-   "gametime": "13:00",
-   "weekday": "Sunday",
-   "kickoff_utc": "2026-11-22T18:00:00+00:00",
-   "away_team": "NO",
-   "home_team": "CHI",
-   "forecast_mph": 11.3,
-   "gust_mph": 26.2,
-   "total": 48.5,
-   "spot": true,
-   "locked_at": "2026-11-20T02:22:00.435276+00:00"
-  },
   {
    "game_id": "2026_11_CIN_WAS",
    "week": 11,
@@ -36,12 +21,12 @@
    "gust_mph": 30.9,
    "total": 54.5,
    "spot": true,
-   "locked_at": "2026-11-22T21:06:02.859553+00:00"
+   "locked_at": "2026-11-23T00:19:29.756015+00:00"
   }
  ],
  "outdoor_games": 8,
  "record": {
-  "under": 0,
+  "under": 1,
   "over": 3,
   "push": 0
  },
@@ -55,6 +40,16 @@
    "total": 40.5,
    "final": 41,
    "result": "over"
+  },
+  {
+   "game_id": "2026_11_NO_CHI",
+   "week": 11,
+   "away_team": "NO",
+   "home_team": "CHI",
+   "forecast_mph": 11.3,
+   "total": 48.5,
+   "final": 34,
+   "result": "under"
   },
   {
    "game_id": "2026_10_HOU_CLE",
