@@ -1,36 +1,91 @@
 {
  "meta": {
-  "generated_at": "2026-11-23T03:45:03.212990+00:00"
+  "generated_at": "2026-11-24T06:07:46.877032+00:00"
  },
  "season": 2026,
- "week": 11,
+ "week": 12,
  "first_week": 9,
  "live": true,
  "rule_mph": 10,
  "spots": [
   {
-   "game_id": "2026_11_CIN_WAS",
-   "week": 11,
-   "gameday": "2026-11-23",
+   "game_id": "2026_12_KC_BUF",
+   "week": 12,
+   "gameday": "2026-11-26",
+   "gametime": "20:20",
+   "weekday": "Thursday",
+   "kickoff_utc": "2026-11-27T01:20:00+00:00",
+   "away_team": "KC",
+   "home_team": "BUF",
+   "forecast_mph": 11.2,
+   "gust_mph": 26.8,
+   "total": 47.5,
+   "spot": true,
+   "locked_at": "2026-11-24T06:07:46.877032+00:00"
+  },
+  {
+   "game_id": "2026_12_DEN_PIT",
+   "week": 12,
+   "gameday": "2026-11-27",
+   "gametime": "15:00",
+   "weekday": "Friday",
+   "kickoff_utc": "2026-11-27T20:00:00+00:00",
+   "away_team": "DEN",
+   "home_team": "PIT",
+   "forecast_mph": 15.9,
+   "gust_mph": 38.5,
+   "total": 38.5,
+   "spot": true,
+   "locked_at": "2026-11-24T06:07:46.877032+00:00"
+  },
+  {
+   "game_id": "2026_12_NYJ_MIA",
+   "week": 12,
+   "gameday": "2026-11-29",
+   "gametime": "13:00",
+   "weekday": "Sunday",
+   "kickoff_utc": "2026-11-29T18:00:00+00:00",
+   "away_team": "NYJ",
+   "home_team": "MIA",
+   "forecast_mph": 11.1,
+   "gust_mph": 13.4,
+   "total": 40.5,
+   "spot": true,
+   "locked_at": "2026-11-24T06:07:46.877032+00:00"
+  },
+  {
+   "game_id": "2026_12_CAR_TB",
+   "week": 12,
+   "gameday": "2026-11-30",
    "gametime": "20:15",
    "weekday": "Monday",
-   "kickoff_utc": "2026-11-24T01:15:00+00:00",
-   "away_team": "CIN",
-   "home_team": "WAS",
-   "forecast_mph": 11.6,
-   "gust_mph": 28.4,
-   "total": 54.5,
+   "kickoff_utc": "2026-12-01T01:15:00+00:00",
+   "away_team": "CAR",
+   "home_team": "TB",
+   "forecast_mph": 10.8,
+   "gust_mph": 28.2,
+   "total": 43.5,
    "spot": true,
-   "locked_at": "2026-11-23T03:45:03.212990+00:00"
+   "locked_at": "2026-11-24T06:07:46.877032+00:00"
   }
  ],
  "outdoor_games": 8,
  "record": {
-  "under": 1,
+  "under": 2,
   "over": 3,
   "push": 0
  },
  "past": [
+  {
+   "game_id": "2026_11_CIN_WAS",
+   "week": 11,
+   "away_team": "CIN",
+   "home_team": "WAS",
+   "forecast_mph": 11.6,
+   "total": 54.5,
+   "final": 42,
+   "result": "under"
+  },
   {
    "game_id": "2026_11_ARI_KC",
    "week": 11,
