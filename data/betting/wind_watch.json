@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-24T16:15:47.698259+00:00"
+  "generated_at": "2026-11-24T19:41:09.385562+00:00"
  },
  "season": 2026,
  "week": 12,
@@ -17,11 +17,11 @@
    "kickoff_utc": "2026-11-27T01:20:00+00:00",
    "away_team": "KC",
    "home_team": "BUF",
-   "forecast_mph": 14.8,
-   "gust_mph": 34.2,
+   "forecast_mph": 14.6,
+   "gust_mph": 40.5,
    "total": 47.5,
    "spot": true,
-   "locked_at": "2026-11-24T16:15:47.698259+00:00"
+   "locked_at": "2026-11-24T19:41:09.385562+00:00"
   },
   {
    "game_id": "2026_12_DEN_PIT",
@@ -32,26 +32,11 @@
    "kickoff_utc": "2026-11-27T20:00:00+00:00",
    "away_team": "DEN",
    "home_team": "PIT",
-   "forecast_mph": 14.4,
-   "gust_mph": 32.4,
+   "forecast_mph": 13.9,
+   "gust_mph": 32.7,
    "total": 38.5,
    "spot": true,
-   "locked_at": "2026-11-24T16:15:47.698259+00:00"
-  },
-  {
-   "game_id": "2026_12_SEA_SF",
-   "week": 12,
-   "gameday": "2026-11-29",
-   "gametime": "16:25",
-   "weekday": "Sunday",
-   "kickoff_utc": "2026-11-29T21:25:00+00:00",
-   "away_team": "SEA",
-   "home_team": "SF",
-   "forecast_mph": 11.0,
-   "gust_mph": 21.9,
-   "total": 46.5,
-   "spot": true,
-   "locked_at": "2026-11-24T16:15:47.698259+00:00"
+   "locked_at": "2026-11-24T19:41:09.385562+00:00"
   },
   {
    "game_id": "2026_12_LV_CLE",
@@ -62,11 +47,26 @@
    "kickoff_utc": "2026-11-30T01:20:00+00:00",
    "away_team": "LV",
    "home_team": "CLE",
-   "forecast_mph": 14.9,
-   "gust_mph": 26.4,
+   "forecast_mph": 13.9,
+   "gust_mph": 28.4,
    "total": 41.5,
    "spot": true,
-   "locked_at": "2026-11-24T16:15:47.698259+00:00"
+   "locked_at": "2026-11-24T19:41:09.385562+00:00"
+  },
+  {
+   "game_id": "2026_12_CAR_TB",
+   "week": 12,
+   "gameday": "2026-11-30",
+   "gametime": "20:15",
+   "weekday": "Monday",
+   "kickoff_utc": "2026-12-01T01:15:00+00:00",
+   "away_team": "CAR",
+   "home_team": "TB",
+   "forecast_mph": 12.1,
+   "gust_mph": 29.3,
+   "total": 43.5,
+   "spot": true,
+   "locked_at": "2026-11-24T19:41:09.385562+00:00"
   }
  ],
  "outdoor_games": 8,
