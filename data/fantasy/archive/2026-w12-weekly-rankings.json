@@ -2,7 +2,7 @@
  "season": 2026,
  "week": 12,
  "start_score_version": "v2",
- "locked_at": "2026-11-24T15:42:27.901512+00:00",
+ "locked_at": "2026-11-24T19:28:10.284569+00:00",
  "rankings": {
   "ppr": {
    "QB": [
@@ -181,9 +181,9 @@
      "position": "QB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 15.87,
+     "start_score": 16.1,
      "recent_ppg": 16.54,
-     "matchup_adj": 0.0,
+     "matchup_adj": 0.23,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -233,9 +233,9 @@
      "position": "QB",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 15.35,
+     "start_score": 15.58,
      "recent_ppg": 20.81,
-     "matchup_adj": -1.1,
+     "matchup_adj": -0.87,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -748,6 +748,19 @@
      "rostered_pct": null
     },
     {
+     "player_id": "00-0039107",
+     "name": "Stetson Bennett",
+     "position": "QB",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 0.16,
+     "recent_ppg": 1.42,
+     "matchup_adj": 0.23,
+     "injury_status": "Backup",
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0035710",
      "name": "Daniel Jones",
      "position": "QB",
@@ -761,14 +774,14 @@
      "rostered_pct": 11.9
     },
     {
-     "player_id": "00-0039107",
-     "name": "Stetson Bennett",
+     "player_id": "00-0028118",
+     "name": "Tyrod Taylor",
      "position": "QB",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": -0.07,
-     "recent_ppg": 1.42,
-     "matchup_adj": 0.0,
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": -0.22,
+     "recent_ppg": -0.04,
+     "matchup_adj": -0.87,
      "injury_status": "Backup",
      "market_rank": null,
      "rostered_pct": null
@@ -785,19 +798,6 @@
      "injury_status": "Backup",
      "market_rank": 25.72,
      "rostered_pct": 1.5
-    },
-    {
-     "player_id": "00-0028118",
-     "name": "Tyrod Taylor",
-     "position": "QB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": -0.45,
-     "recent_ppg": -0.04,
-     "matchup_adj": -1.1,
-     "injury_status": "Backup",
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0038128",
@@ -1080,9 +1080,9 @@
      "position": "RB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 14.16,
+     "start_score": 14.28,
      "recent_ppg": 14.43,
-     "matchup_adj": 0.24,
+     "matchup_adj": 0.36,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -1127,17 +1127,17 @@
      "rostered_pct": 93.4
     },
     {
-     "player_id": "00-0041496",
-     "name": "Jonah Coleman",
+     "player_id": "00-0035700",
+     "name": "Josh Jacobs",
      "position": "RB",
-     "team": "DEN",
-     "opponent": "PIT",
-     "start_score": 12.93,
-     "recent_ppg": 16.3,
-     "matchup_adj": -0.43,
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 13.03,
+     "recent_ppg": 14.6,
+     "matchup_adj": -0.54,
      "injury_status": null,
-     "market_rank": 7.32,
-     "rostered_pct": 91.1
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0037228",
@@ -1153,17 +1153,17 @@
      "rostered_pct": 96.9
     },
     {
-     "player_id": "00-0035700",
-     "name": "Josh Jacobs",
+     "player_id": "00-0041496",
+     "name": "Jonah Coleman",
      "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 12.9,
-     "recent_ppg": 14.6,
-     "matchup_adj": -0.66,
+     "team": "DEN",
+     "opponent": "PIT",
+     "start_score": 12.93,
+     "recent_ppg": 16.3,
+     "matchup_adj": -0.43,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 7.32,
+     "rostered_pct": 91.1
     },
     {
      "player_id": "00-0036223",
@@ -1218,19 +1218,6 @@
      "rostered_pct": 90.8
     },
     {
-     "player_id": "00-0032764",
-     "name": "Derrick Henry",
-     "position": "RB",
-     "team": "BAL",
-     "opponent": "HOU",
-     "start_score": 12.13,
-     "recent_ppg": 13.91,
-     "matchup_adj": -0.65,
-     "injury_status": null,
-     "market_rank": 16.19,
-     "rostered_pct": 99.4
-    },
-    {
      "player_id": "00-0040236",
      "name": "Kyle Monangai",
      "position": "RB",
@@ -1244,14 +1231,27 @@
      "rostered_pct": 78.9
     },
     {
+     "player_id": "00-0032764",
+     "name": "Derrick Henry",
+     "position": "RB",
+     "team": "BAL",
+     "opponent": "HOU",
+     "start_score": 12.13,
+     "recent_ppg": 13.91,
+     "matchup_adj": -0.65,
+     "injury_status": null,
+     "market_rank": 16.19,
+     "rostered_pct": 99.4
+    },
+    {
      "player_id": "00-0039738",
      "name": "Blake Corum",
      "position": "RB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 11.57,
+     "start_score": 11.69,
      "recent_ppg": 13.55,
-     "matchup_adj": 0.24,
+     "matchup_adj": 0.36,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -1320,6 +1320,19 @@
      "injury_status": null,
      "market_rank": 18.68,
      "rostered_pct": 89.8
+    },
+    {
+     "player_id": "00-0040242",
+     "name": "Jacory Croskey-Merritt",
+     "position": "RB",
+     "team": "WAS",
+     "opponent": "ARI",
+     "start_score": 10.88,
+     "recent_ppg": 10.1,
+     "matchup_adj": 0.63,
+     "injury_status": null,
+     "market_rank": 33.89,
+     "rostered_pct": 54.4
     },
     {
      "player_id": "00-0036973",
@@ -1673,6 +1686,19 @@
      "rostered_pct": 2.9
     },
     {
+     "player_id": "00-0039811",
+     "name": "MarShawn Lloyd",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 7.19,
+     "recent_ppg": 6.81,
+     "matchup_adj": -0.54,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0035250",
      "name": "Devin Singletary",
      "position": "RB",
@@ -1684,19 +1710,6 @@
      "injury_status": null,
      "market_rank": 46.92,
      "rostered_pct": 17.3
-    },
-    {
-     "player_id": "00-0039811",
-     "name": "MarShawn Lloyd",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 7.07,
-     "recent_ppg": 6.81,
-     "matchup_adj": -0.66,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0037410",
@@ -1712,6 +1725,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0038098",
+     "name": "Pierre Strong",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 7.02,
+     "recent_ppg": 5.5,
+     "matchup_adj": -0.54,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0039391",
      "name": "Kimani Vidal",
      "position": "RB",
@@ -1723,19 +1749,6 @@
      "injury_status": null,
      "market_rank": 40.62,
      "rostered_pct": 11.0
-    },
-    {
-     "player_id": "00-0038098",
-     "name": "Pierre Strong",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 6.89,
-     "recent_ppg": 5.5,
-     "matchup_adj": -0.66,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0038705",
@@ -1803,6 +1816,19 @@
      "rostered_pct": 26.0
     },
     {
+     "player_id": "00-0037557",
+     "name": "Ronnie Rivers",
+     "position": "RB",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 5.38,
+     "recent_ppg": 3.83,
+     "matchup_adj": 0.36,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0036893",
      "name": "Najee Harris",
      "position": "RB",
@@ -1827,19 +1853,6 @@
      "injury_status": null,
      "market_rank": 62.36,
      "rostered_pct": 0.1
-    },
-    {
-     "player_id": "00-0037557",
-     "name": "Ronnie Rivers",
-     "position": "RB",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 5.26,
-     "recent_ppg": 3.83,
-     "matchup_adj": 0.24,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0038389",
@@ -1907,6 +1920,19 @@
      "rostered_pct": 0.3
     },
     {
+     "player_id": "00-0040142",
+     "name": "Kaleb Johnson",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 4.96,
+     "recent_ppg": 3.73,
+     "matchup_adj": -0.54,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041125",
      "name": "Seth McGowan",
      "position": "RB",
@@ -1918,19 +1944,6 @@
      "injury_status": null,
      "market_rank": 38.08,
      "rostered_pct": 28.3
-    },
-    {
-     "player_id": "00-0040142",
-     "name": "Kaleb Johnson",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 4.84,
-     "recent_ppg": 3.73,
-     "matchup_adj": -0.66,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0039299",
@@ -1985,6 +1998,19 @@
      "rostered_pct": 2.3
     },
     {
+     "player_id": "00-0040556",
+     "name": "Corey Kiner",
+     "position": "RB",
+     "team": "NE",
+     "opponent": "LAC",
+     "start_score": 4.41,
+     "recent_ppg": 4.2,
+     "matchup_adj": -1.28,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0038738",
      "name": "Hunter Luepke",
      "position": "RB",
@@ -1998,14 +2024,14 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0040556",
-     "name": "Corey Kiner",
+     "player_id": "00-0038685",
+     "name": "Chris Brooks",
      "position": "RB",
-     "team": "NE",
-     "opponent": "LAC",
-     "start_score": 4.41,
-     "recent_ppg": 4.2,
-     "matchup_adj": -1.28,
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 4.1,
+     "recent_ppg": 2.74,
+     "matchup_adj": -0.54,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -2022,19 +2048,6 @@
      "injury_status": null,
      "market_rank": 64.2,
      "rostered_pct": 0.1
-    },
-    {
-     "player_id": "00-0038685",
-     "name": "Chris Brooks",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 3.98,
-     "recent_ppg": 2.74,
-     "matchup_adj": -0.66,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0039798",
@@ -2141,19 +2154,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0041376",
-     "name": "Gregory Desrosiers",
-     "position": "RB",
-     "team": "NYG",
-     "opponent": "IND",
-     "start_score": 3.36,
-     "recent_ppg": 1.0,
-     "matchup_adj": 0.47,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0040644",
      "name": "Trevor Etienne",
      "position": "RB",
@@ -2165,6 +2165,19 @@
      "injury_status": null,
      "market_rank": 55.36,
      "rostered_pct": 1.2
+    },
+    {
+     "player_id": "00-0041376",
+     "name": "Gregory Desrosiers",
+     "position": "RB",
+     "team": "NYG",
+     "opponent": "IND",
+     "start_score": 3.36,
+     "recent_ppg": 1.0,
+     "matchup_adj": 0.47,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0036906",
@@ -2219,19 +2232,6 @@
      "rostered_pct": 1.0
     },
     {
-     "player_id": "00-0037745",
-     "name": "Velus Jones Jr.",
-     "position": "RB",
-     "team": "SEA",
-     "opponent": "SF",
-     "start_score": 3.19,
-     "recent_ppg": 1.23,
-     "matchup_adj": -0.27,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0041081",
      "name": "Max Bredeson",
      "position": "RB",
@@ -2240,6 +2240,19 @@
      "start_score": 3.19,
      "recent_ppg": 0.0,
      "matchup_adj": 0.69,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
+     "player_id": "00-0037745",
+     "name": "Velus Jones Jr.",
+     "position": "RB",
+     "team": "SEA",
+     "opponent": "SF",
+     "start_score": 3.19,
+     "recent_ppg": 1.23,
+     "matchup_adj": -0.27,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -2635,19 +2648,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0040242",
-     "name": "Jacory Croskey-Merritt",
-     "position": "RB",
-     "team": "WAS",
-     "opponent": "ARI",
-     "start_score": -0.73,
-     "recent_ppg": 10.1,
-     "matchup_adj": 0.63,
-     "injury_status": "Reserve",
-     "market_rank": 33.89,
-     "rostered_pct": 54.4
-    },
-    {
      "player_id": "00-0040730",
      "name": "RJ Harvey",
      "position": "RB",
@@ -2861,9 +2861,9 @@
      "position": "RB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -9.25,
+     "start_score": -9.12,
      "recent_ppg": 0.0,
-     "matchup_adj": 0.24,
+     "matchup_adj": 0.36,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -2980,9 +2980,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 14.52,
+     "start_score": 14.61,
      "recent_ppg": 18.62,
-     "matchup_adj": -0.58,
+     "matchup_adj": -0.49,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -3006,9 +3006,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 13.79,
+     "start_score": 13.87,
      "recent_ppg": 18.05,
-     "matchup_adj": -0.58,
+     "matchup_adj": -0.49,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -3404,6 +3404,19 @@
      "rostered_pct": 39.8
     },
     {
+     "player_id": "00-0039075",
+     "name": "Puka Nacua",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 9.73,
+     "recent_ppg": 25.83,
+     "matchup_adj": 0.34,
+     "injury_status": "Reserve",
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041523",
      "name": "Caleb Douglas",
      "position": "WR",
@@ -3415,19 +3428,6 @@
      "injury_status": null,
      "market_rank": 26.24,
      "rostered_pct": 46.8
-    },
-    {
-     "player_id": "00-0039075",
-     "name": "Puka Nacua",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 9.64,
-     "recent_ppg": 25.83,
-     "matchup_adj": 0.25,
-     "injury_status": "Reserve",
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0040867",
@@ -3495,19 +3495,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0041029",
-     "name": "Jordyn Tyson",
-     "position": "WR",
-     "team": "NO",
-     "opponent": "CIN",
-     "start_score": 9.36,
-     "recent_ppg": 8.67,
-     "matchup_adj": -0.45,
-     "injury_status": null,
-     "market_rank": 17.95,
-     "rostered_pct": 77.6
-    },
-    {
      "player_id": "00-0039491",
      "name": "Jalen Coker",
      "position": "WR",
@@ -3519,6 +3506,19 @@
      "injury_status": null,
      "market_rank": 26.16,
      "rostered_pct": 83.8
+    },
+    {
+     "player_id": "00-0041029",
+     "name": "Jordyn Tyson",
+     "position": "WR",
+     "team": "NO",
+     "opponent": "CIN",
+     "start_score": 9.36,
+     "recent_ppg": 8.67,
+     "matchup_adj": -0.45,
+     "injury_status": null,
+     "market_rank": 17.95,
+     "rostered_pct": 77.6
     },
     {
      "player_id": "00-0035640",
@@ -4093,6 +4093,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0040009",
+     "name": "Savion Williams",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 6.49,
+     "recent_ppg": 7.4,
+     "matchup_adj": -0.49,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041051",
      "name": "Zavion Thomas",
      "position": "WR",
@@ -4119,19 +4132,6 @@
      "rostered_pct": 12.1
     },
     {
-     "player_id": "00-0040009",
-     "name": "Savion Williams",
-     "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 6.41,
-     "recent_ppg": 7.4,
-     "matchup_adj": -0.58,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0041069",
      "name": "Colbie Young",
      "position": "WR",
@@ -4145,6 +4145,19 @@
      "rostered_pct": 0.1
     },
     {
+     "player_id": "00-0040590",
+     "name": "Konata Mumpfield",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 6.3,
+     "recent_ppg": 4.36,
+     "matchup_adj": 0.34,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0032385",
      "name": "Sterling Shepard",
      "position": "WR",
@@ -4156,19 +4169,6 @@
      "injury_status": null,
      "market_rank": 102.13,
      "rostered_pct": 0.0
-    },
-    {
-     "player_id": "00-0040590",
-     "name": "Konata Mumpfield",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 6.21,
-     "recent_ppg": 4.36,
-     "matchup_adj": 0.25,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0039342",
@@ -4228,9 +4228,9 @@
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 5.94,
+     "start_score": 6.03,
      "recent_ppg": 3.5,
-     "matchup_adj": 0.25,
+     "matchup_adj": 0.34,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -4288,19 +4288,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0037614",
-     "name": "John Metchie III",
-     "position": "WR",
-     "team": "CAR",
-     "opponent": "TB",
-     "start_score": 5.68,
-     "recent_ppg": 4.13,
-     "matchup_adj": -0.45,
-     "injury_status": null,
-     "market_rank": 86.93,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0038976",
      "name": "Marvin Mims Jr.",
      "position": "WR",
@@ -4314,14 +4301,27 @@
      "rostered_pct": 1.6
     },
     {
+     "player_id": "00-0037614",
+     "name": "John Metchie III",
+     "position": "WR",
+     "team": "CAR",
+     "opponent": "TB",
+     "start_score": 5.68,
+     "recent_ppg": 4.13,
+     "matchup_adj": -0.45,
+     "injury_status": null,
+     "market_rank": 86.93,
+     "rostered_pct": 0.1
+    },
+    {
      "player_id": "00-0041399",
      "name": "CJ Daniels",
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 5.55,
+     "start_score": 5.63,
      "recent_ppg": 3.2,
-     "matchup_adj": 0.25,
+     "matchup_adj": 0.34,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -4457,19 +4457,6 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0039792",
-     "name": "Devontez Walker",
-     "position": "WR",
-     "team": "BAL",
-     "opponent": "HOU",
-     "start_score": 5.15,
-     "recent_ppg": 3.65,
-     "matchup_adj": -0.34,
-     "injury_status": null,
-     "market_rank": 120.33,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0032398",
      "name": "Chris Moore",
      "position": "WR",
@@ -4483,6 +4470,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0039792",
+     "name": "Devontez Walker",
+     "position": "WR",
+     "team": "BAL",
+     "opponent": "HOU",
+     "start_score": 5.15,
+     "recent_ppg": 3.65,
+     "matchup_adj": -0.34,
+     "injury_status": null,
+     "market_rank": 120.33,
+     "rostered_pct": 0.1
+    },
+    {
      "player_id": "00-0036271",
      "name": "Quez Watkins",
      "position": "WR",
@@ -4494,6 +4494,19 @@
      "injury_status": null,
      "market_rank": 130.0,
      "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0038359",
+     "name": "Xavier Smith",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 5.03,
+     "recent_ppg": 3.0,
+     "matchup_adj": 0.34,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0041070",
@@ -4522,17 +4535,17 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0038359",
-     "name": "Xavier Smith",
+     "player_id": "00-0041525",
+     "name": "Chris Bell",
      "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 4.94,
-     "recent_ppg": 3.0,
-     "matchup_adj": 0.25,
+     "team": "MIA",
+     "opponent": "NYJ",
+     "start_score": 4.91,
+     "recent_ppg": 3.12,
+     "matchup_adj": -0.83,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 79.83,
+     "rostered_pct": 2.2
     },
     {
      "player_id": "00-0035891",
@@ -4546,19 +4559,6 @@
      "injury_status": null,
      "market_rank": 106.08,
      "rostered_pct": 0.1
-    },
-    {
-     "player_id": "00-0041525",
-     "name": "Chris Bell",
-     "position": "WR",
-     "team": "MIA",
-     "opponent": "NYJ",
-     "start_score": 4.91,
-     "recent_ppg": 3.12,
-     "matchup_adj": -0.83,
-     "injury_status": null,
-     "market_rank": 79.83,
-     "rostered_pct": 2.2
     },
     {
      "player_id": "00-0041550",
@@ -4886,14 +4886,14 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0037380",
-     "name": "Kaden Davis",
+     "player_id": "00-0038090",
+     "name": "Skyy Moore",
      "position": "WR",
-     "team": "CHI",
-     "opponent": "DET",
-     "start_score": 4.11,
-     "recent_ppg": 0.0,
-     "matchup_adj": 1.16,
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 4.14,
+     "recent_ppg": 1.75,
+     "matchup_adj": -0.49,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -4912,14 +4912,14 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0038090",
-     "name": "Skyy Moore",
+     "player_id": "00-0037380",
+     "name": "Kaden Davis",
      "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 4.06,
-     "recent_ppg": 1.75,
-     "matchup_adj": -0.58,
+     "team": "CHI",
+     "opponent": "DET",
+     "start_score": 4.11,
+     "recent_ppg": 0.0,
+     "matchup_adj": 1.16,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -5003,19 +5003,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0036775",
-     "name": "Brandon Smith",
-     "position": "WR",
-     "team": "PIT",
-     "opponent": "DEN",
-     "start_score": 3.92,
-     "recent_ppg": 2.63,
-     "matchup_adj": -0.96,
-     "injury_status": null,
-     "market_rank": 110.75,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0041099",
      "name": "Barion Brown",
      "position": "WR",
@@ -5029,17 +5016,30 @@
      "rostered_pct": 0.6
     },
     {
-     "player_id": "00-0040522",
-     "name": "Xavier Restrepo",
+     "player_id": "00-0036775",
+     "name": "Brandon Smith",
      "position": "WR",
-     "team": "TEN",
-     "opponent": "JAX",
-     "start_score": 3.88,
-     "recent_ppg": 2.53,
-     "matchup_adj": -1.02,
+     "team": "PIT",
+     "opponent": "DEN",
+     "start_score": 3.92,
+     "recent_ppg": 2.63,
+     "matchup_adj": -0.96,
      "injury_status": null,
-     "market_rank": 88.24,
-     "rostered_pct": 0.1
+     "market_rank": 110.75,
+     "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0040948",
+     "name": "J. Michael Sturdivant",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 3.88,
+     "recent_ppg": 2.27,
+     "matchup_adj": -0.49,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0031235",
@@ -5053,6 +5053,19 @@
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
+    },
+    {
+     "player_id": "00-0040522",
+     "name": "Xavier Restrepo",
+     "position": "WR",
+     "team": "TEN",
+     "opponent": "JAX",
+     "start_score": 3.88,
+     "recent_ppg": 2.53,
+     "matchup_adj": -1.02,
+     "injury_status": null,
+     "market_rank": 88.24,
+     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0038576",
@@ -5076,19 +5089,6 @@
      "start_score": 3.86,
      "recent_ppg": 2.52,
      "matchup_adj": -0.97,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0040948",
-     "name": "J. Michael Sturdivant",
-     "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 3.8,
-     "recent_ppg": 2.27,
-     "matchup_adj": -0.58,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -5250,6 +5250,19 @@
      "rostered_pct": 0.1
     },
     {
+     "player_id": "00-0037091",
+     "name": "Bo Melton",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 3.39,
+     "recent_ppg": 0.95,
+     "matchup_adj": -0.49,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0039589",
      "name": "Kameron Johnson",
      "position": "WR",
@@ -5263,14 +5276,14 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0037091",
-     "name": "Bo Melton",
+     "player_id": "00-0035602",
+     "name": "Alex Bachman",
      "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 3.31,
-     "recent_ppg": 0.95,
-     "matchup_adj": -0.58,
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 3.33,
+     "recent_ppg": 0.0,
+     "matchup_adj": 0.34,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -5289,15 +5302,28 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0035602",
-     "name": "Alex Bachman",
+     "player_id": "00-0040597",
+     "name": "Brennan Presley",
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 3.24,
+     "start_score": 3.29,
      "recent_ppg": 0.0,
-     "matchup_adj": 0.25,
+     "matchup_adj": 0.34,
      "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
+     "player_id": "00-0031381",
+     "name": "Davante Adams",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 3.26,
+     "recent_ppg": 17.0,
+     "matchup_adj": 0.34,
+     "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
     },
@@ -5339,32 +5365,6 @@
      "injury_status": null,
      "market_rank": 107.53,
      "rostered_pct": 0.1
-    },
-    {
-     "player_id": "00-0040597",
-     "name": "Brennan Presley",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 3.2,
-     "recent_ppg": 0.0,
-     "matchup_adj": 0.25,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0031381",
-     "name": "Davante Adams",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 3.17,
-     "recent_ppg": 17.0,
-     "matchup_adj": 0.25,
-     "injury_status": "Reserve",
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0040431",
@@ -5523,19 +5523,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0040405",
-     "name": "Jamaal Pritchett",
-     "position": "WR",
-     "team": "NYJ",
-     "opponent": "MIA",
-     "start_score": 2.66,
-     "recent_ppg": 0.0,
-     "matchup_adj": -0.29,
-     "injury_status": null,
-     "market_rank": 149.0,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0041267",
      "name": "Malik McClain",
      "position": "WR",
@@ -5546,6 +5533,19 @@
      "matchup_adj": -0.29,
      "injury_status": null,
      "market_rank": 127.43,
+     "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0040405",
+     "name": "Jamaal Pritchett",
+     "position": "WR",
+     "team": "NYJ",
+     "opponent": "MIA",
+     "start_score": 2.66,
+     "recent_ppg": 0.0,
+     "matchup_adj": -0.29,
+     "injury_status": null,
+     "market_rank": 149.0,
      "rostered_pct": 0.0
     },
     {
@@ -5606,9 +5606,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 2.37,
+     "start_score": 2.46,
      "recent_ppg": 0.0,
-     "matchup_adj": -0.58,
+     "matchup_adj": -0.49,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -5762,9 +5762,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": -4.25,
+     "start_score": -4.17,
      "recent_ppg": 3.2,
-     "matchup_adj": -0.58,
+     "matchup_adj": -0.49,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -5853,9 +5853,9 @@
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -7.38,
+     "start_score": -7.29,
      "recent_ppg": 0.53,
-     "matchup_adj": 0.25,
+     "matchup_adj": 0.34,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -6089,9 +6089,9 @@
      "position": "TE",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 8.47,
+     "start_score": 8.56,
      "recent_ppg": 9.43,
-     "matchup_adj": -0.66,
+     "matchup_adj": -0.57,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -6245,9 +6245,9 @@
      "position": "TE",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 6.47,
+     "start_score": 6.56,
      "recent_ppg": 6.88,
-     "matchup_adj": -0.29,
+     "matchup_adj": -0.21,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -6344,6 +6344,19 @@
      "rostered_pct": 5.5
     },
     {
+     "player_id": "00-0036244",
+     "name": "Colby Parkinson",
+     "position": "TE",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 5.84,
+     "recent_ppg": 5.22,
+     "matchup_adj": -0.21,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0033881",
      "name": "Evan Engram",
      "position": "TE",
@@ -6368,19 +6381,6 @@
      "injury_status": null,
      "market_rank": 10.76,
      "rostered_pct": 65.9
-    },
-    {
-     "player_id": "00-0036244",
-     "name": "Colby Parkinson",
-     "position": "TE",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 5.75,
-     "recent_ppg": 5.22,
-     "matchup_adj": -0.29,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0039530",
@@ -6591,6 +6591,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0039074",
+     "name": "Davis Allen",
+     "position": "TE",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 4.44,
+     "recent_ppg": 5.17,
+     "matchup_adj": -0.21,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0030061",
      "name": "Zach Ertz",
      "position": "TE",
@@ -6602,19 +6615,6 @@
      "injury_status": null,
      "market_rank": 67.75,
      "rostered_pct": 0.2
-    },
-    {
-     "player_id": "00-0039074",
-     "name": "Davis Allen",
-     "position": "TE",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 4.35,
-     "recent_ppg": 5.17,
-     "matchup_adj": -0.29,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0040187",
@@ -6739,9 +6739,9 @@
      "position": "TE",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 3.64,
+     "start_score": 3.73,
      "recent_ppg": 3.85,
-     "matchup_adj": -0.66,
+     "matchup_adj": -0.57,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -6890,19 +6890,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0036590",
-     "name": "Quintin Morris",
-     "position": "TE",
-     "team": "JAX",
-     "opponent": "TEN",
-     "start_score": 2.93,
-     "recent_ppg": 0.26,
-     "matchup_adj": 1.44,
-     "injury_status": null,
-     "market_rank": 80.13,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0036628",
      "name": "John Bates",
      "position": "TE",
@@ -6913,6 +6900,19 @@
      "matchup_adj": 0.89,
      "injury_status": null,
      "market_rank": 60.0,
+     "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0036590",
+     "name": "Quintin Morris",
+     "position": "TE",
+     "team": "JAX",
+     "opponent": "TEN",
+     "start_score": 2.93,
+     "recent_ppg": 0.26,
+     "matchup_adj": 1.44,
+     "injury_status": null,
+     "market_rank": 80.13,
      "rostered_pct": 0.0
     },
     {
@@ -6942,19 +6942,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0040509",
-     "name": "Ben Yurosek",
-     "position": "TE",
-     "team": "MIN",
-     "opponent": "ATL",
-     "start_score": 2.66,
-     "recent_ppg": 1.78,
-     "matchup_adj": 0.29,
-     "injury_status": null,
-     "market_rank": 57.09,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0038115",
      "name": "Daniel Bellinger",
      "position": "TE",
@@ -6966,6 +6953,19 @@
      "injury_status": null,
      "market_rank": 37.13,
      "rostered_pct": 0.1
+    },
+    {
+     "player_id": "00-0040509",
+     "name": "Ben Yurosek",
+     "position": "TE",
+     "team": "MIN",
+     "opponent": "ATL",
+     "start_score": 2.66,
+     "recent_ppg": 1.78,
+     "matchup_adj": 0.29,
+     "injury_status": null,
+     "market_rank": 57.09,
+     "rostered_pct": 0.0
     },
     {
      "player_id": "00-0037004",
@@ -7072,6 +7072,19 @@
      "rostered_pct": 0.1
     },
     {
+     "player_id": "00-0040598",
+     "name": "Mark Redman",
+     "position": "TE",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 2.06,
+     "recent_ppg": 1.47,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0040081",
      "name": "Jake Briningstool",
      "position": "TE",
@@ -7083,19 +7096,6 @@
      "injury_status": null,
      "market_rank": 56.33,
      "rostered_pct": 0.0
-    },
-    {
-     "player_id": "00-0040598",
-     "name": "Mark Redman",
-     "position": "TE",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 1.97,
-     "recent_ppg": 1.47,
-     "matchup_adj": -0.66,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0037340",
@@ -7124,19 +7124,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0041041",
-     "name": "Oscar Delp",
-     "position": "TE",
-     "team": "NO",
-     "opponent": "CIN",
-     "start_score": 1.81,
-     "recent_ppg": 1.03,
-     "matchup_adj": -0.2,
-     "injury_status": null,
-     "market_rank": 66.08,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0033246",
      "name": "Johnny Mundt",
      "position": "TE",
@@ -7147,6 +7134,19 @@
      "matchup_adj": -0.65,
      "injury_status": null,
      "market_rank": 88.67,
+     "rostered_pct": 0.1
+    },
+    {
+     "player_id": "00-0041041",
+     "name": "Oscar Delp",
+     "position": "TE",
+     "team": "NO",
+     "opponent": "CIN",
+     "start_score": 1.81,
+     "recent_ppg": 1.03,
+     "matchup_adj": -0.2,
+     "injury_status": null,
+     "market_rank": 66.08,
      "rostered_pct": 0.1
     },
     {
@@ -7254,19 +7254,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0038643",
-     "name": "Brayden Willis",
-     "position": "TE",
-     "team": "SF",
-     "opponent": "SEA",
-     "start_score": 1.22,
-     "recent_ppg": 0.0,
-     "matchup_adj": 0.09,
-     "injury_status": null,
-     "market_rank": 80.63,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0039489",
      "name": "Hayden Rucci",
      "position": "TE",
@@ -7277,6 +7264,19 @@
      "matchup_adj": -0.65,
      "injury_status": null,
      "market_rank": 85.8,
+     "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0038643",
+     "name": "Brayden Willis",
+     "position": "TE",
+     "team": "SF",
+     "opponent": "SEA",
+     "start_score": 1.22,
+     "recent_ppg": 0.0,
+     "matchup_adj": 0.09,
+     "injury_status": null,
+     "market_rank": 80.63,
      "rostered_pct": 0.0
     },
     {
@@ -7480,9 +7480,9 @@
      "position": "TE",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -2.39,
+     "start_score": -2.3,
      "recent_ppg": 6.43,
-     "matchup_adj": -0.29,
+     "matchup_adj": -0.21,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -7581,19 +7581,6 @@
      "rostered_pct": 88.7
     },
     {
-     "player_id": "00-0032726",
-     "name": "Ka'imi Fairbairn",
-     "position": "K",
-     "team": "HOU",
-     "opponent": "BAL",
-     "start_score": 8.73,
-     "recent_ppg": 11.0,
-     "matchup_adj": 0.82,
-     "injury_status": null,
-     "market_rank": 1.39,
-     "rostered_pct": 90.7
-    },
-    {
      "player_id": "00-0037692",
      "name": "Brandon Aubrey",
      "position": "K",
@@ -7605,6 +7592,19 @@
      "injury_status": null,
      "market_rank": 2.21,
      "rostered_pct": 98.3
+    },
+    {
+     "player_id": "00-0032726",
+     "name": "Ka'imi Fairbairn",
+     "position": "K",
+     "team": "HOU",
+     "opponent": "BAL",
+     "start_score": 8.73,
+     "recent_ppg": 11.0,
+     "matchup_adj": 0.82,
+     "injury_status": null,
+     "market_rank": 1.39,
+     "rostered_pct": 90.7
     },
     {
      "player_id": "00-0036854",
@@ -7776,6 +7776,19 @@
      "rostered_pct": null
     },
     {
+     "player_id": "00-0040899",
+     "name": "Trey Smack",
+     "position": "K",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 7.14,
+     "recent_ppg": 7.23,
+     "matchup_adj": -0.01,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0033303",
      "name": "Harrison Butker",
      "position": "K",
@@ -7787,19 +7800,6 @@
      "injury_status": null,
      "market_rank": 14.08,
      "rostered_pct": 34.1
-    },
-    {
-     "player_id": "00-0040899",
-     "name": "Trey Smack",
-     "position": "K",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 7.08,
-     "recent_ppg": 7.23,
-     "matchup_adj": -0.08,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0040279",
@@ -7854,6 +7854,19 @@
      "rostered_pct": 41.6
     },
     {
+     "player_id": "00-0029822",
+     "name": "Brandon McManus",
+     "position": "K",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 6.87,
+     "recent_ppg": 7.5,
+     "matchup_adj": -0.35,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0031136",
      "name": "Chris Boswell",
      "position": "K",
@@ -7891,19 +7904,6 @@
      "injury_status": null,
      "market_rank": 24.26,
      "rostered_pct": 2.6
-    },
-    {
-     "player_id": "00-0029822",
-     "name": "Brandon McManus",
-     "position": "K",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 6.8,
-     "recent_ppg": 7.5,
-     "matchup_adj": -0.42,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0038567",
@@ -8028,9 +8028,9 @@
      "position": "K",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 5.92,
+     "start_score": 5.99,
      "recent_ppg": 0.0,
-     "matchup_adj": -0.42,
+     "matchup_adj": -0.35,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -8054,9 +8054,9 @@
      "position": "K",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -0.23,
+     "start_score": -0.16,
      "recent_ppg": 4.0,
-     "matchup_adj": -0.42,
+     "matchup_adj": -0.35,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -8116,6 +8116,19 @@
      "rostered_pct": 19.7
     },
     {
+     "player_id": "DEN_DST",
+     "name": "DEN D/ST",
+     "position": "DST",
+     "team": "DEN",
+     "opponent": "PIT",
+     "start_score": 8.17,
+     "recent_ppg": 7.92,
+     "matchup_adj": 1.99,
+     "injury_status": null,
+     "market_rank": 4.08,
+     "rostered_pct": 91.6
+    },
+    {
      "player_id": "MIN_DST",
      "name": "MIN D/ST",
      "position": "DST",
@@ -8129,17 +8142,17 @@
      "rostered_pct": 76.5
     },
     {
-     "player_id": "DEN_DST",
-     "name": "DEN D/ST",
+     "player_id": "NYJ_DST",
+     "name": "NYJ D/ST",
      "position": "DST",
-     "team": "DEN",
-     "opponent": "PIT",
-     "start_score": 8.17,
-     "recent_ppg": 7.92,
-     "matchup_adj": 1.99,
+     "team": "NYJ",
+     "opponent": "MIA",
+     "start_score": 7.86,
+     "recent_ppg": 3.48,
+     "matchup_adj": 1.67,
      "injury_status": null,
-     "market_rank": 4.08,
-     "rostered_pct": 91.6
+     "market_rank": 11.5,
+     "rostered_pct": 14.0
     },
     {
      "player_id": "CLE_DST",
@@ -8168,19 +8181,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "NYJ_DST",
-     "name": "NYJ D/ST",
-     "position": "DST",
-     "team": "NYJ",
-     "opponent": "MIA",
-     "start_score": 7.86,
-     "recent_ppg": 3.48,
-     "matchup_adj": 1.67,
-     "injury_status": null,
-     "market_rank": 11.5,
-     "rostered_pct": 14.0
-    },
-    {
      "player_id": "DAL_DST",
      "name": "DAL D/ST",
      "position": "DST",
@@ -8207,19 +8207,6 @@
      "rostered_pct": 94.0
     },
     {
-     "player_id": "CIN_DST",
-     "name": "CIN D/ST",
-     "position": "DST",
-     "team": "CIN",
-     "opponent": "NO",
-     "start_score": 7.13,
-     "recent_ppg": 5.9,
-     "matchup_adj": 0.94,
-     "injury_status": null,
-     "market_rank": 11.67,
-     "rostered_pct": 32.2
-    },
-    {
      "player_id": "TB_DST",
      "name": "TB D/ST",
      "position": "DST",
@@ -8233,17 +8220,17 @@
      "rostered_pct": 38.2
     },
     {
-     "player_id": "LA_DST",
-     "name": "LA D/ST",
+     "player_id": "CIN_DST",
+     "name": "CIN D/ST",
      "position": "DST",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 7.02,
-     "recent_ppg": 6.87,
-     "matchup_adj": 0.84,
+     "team": "CIN",
+     "opponent": "NO",
+     "start_score": 7.13,
+     "recent_ppg": 5.9,
+     "matchup_adj": 0.94,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 11.67,
+     "rostered_pct": 32.2
     },
     {
      "player_id": "PIT_DST",
@@ -8257,6 +8244,19 @@
      "injury_status": null,
      "market_rank": 4.31,
      "rostered_pct": 78.2
+    },
+    {
+     "player_id": "LA_DST",
+     "name": "LA D/ST",
+     "position": "DST",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 6.81,
+     "recent_ppg": 6.87,
+     "matchup_adj": 0.63,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "SF_DST",
@@ -8298,19 +8298,6 @@
      "rostered_pct": 78.3
     },
     {
-     "player_id": "GB_DST",
-     "name": "GB D/ST",
-     "position": "DST",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 5.98,
-     "recent_ppg": 8.6,
-     "matchup_adj": -0.21,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "LV_DST",
      "name": "LV D/ST",
      "position": "DST",
@@ -8337,6 +8324,19 @@
      "rostered_pct": 16.6
     },
     {
+     "player_id": "GB_DST",
+     "name": "GB D/ST",
+     "position": "DST",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 5.77,
+     "recent_ppg": 8.6,
+     "matchup_adj": -0.42,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "IND_DST",
      "name": "IND D/ST",
      "position": "DST",
@@ -8350,19 +8350,6 @@
      "rostered_pct": 29.4
     },
     {
-     "player_id": "SEA_DST",
-     "name": "SEA D/ST",
-     "position": "DST",
-     "team": "SEA",
-     "opponent": "SF",
-     "start_score": 5.25,
-     "recent_ppg": 7.43,
-     "matchup_adj": -0.94,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "ATL_DST",
      "name": "ATL D/ST",
      "position": "DST",
@@ -8370,6 +8357,19 @@
      "opponent": "MIN",
      "start_score": 5.25,
      "recent_ppg": 3.5,
+     "matchup_adj": -0.94,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
+     "player_id": "SEA_DST",
+     "name": "SEA D/ST",
+     "position": "DST",
+     "team": "SEA",
+     "opponent": "SF",
+     "start_score": 5.25,
+     "recent_ppg": 7.43,
      "matchup_adj": -0.94,
      "injury_status": null,
      "market_rank": null,
@@ -8658,9 +8658,9 @@
      "position": "QB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 15.86,
+     "start_score": 16.09,
      "recent_ppg": 16.54,
-     "matchup_adj": -0.0,
+     "matchup_adj": 0.23,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -8710,9 +8710,9 @@
      "position": "QB",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 15.35,
+     "start_score": 15.58,
      "recent_ppg": 20.81,
-     "matchup_adj": -1.1,
+     "matchup_adj": -0.87,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -9225,6 +9225,19 @@
      "rostered_pct": null
     },
     {
+     "player_id": "00-0039107",
+     "name": "Stetson Bennett",
+     "position": "QB",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 0.16,
+     "recent_ppg": 1.42,
+     "matchup_adj": 0.23,
+     "injury_status": "Backup",
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0035710",
      "name": "Daniel Jones",
      "position": "QB",
@@ -9238,14 +9251,14 @@
      "rostered_pct": 11.9
     },
     {
-     "player_id": "00-0039107",
-     "name": "Stetson Bennett",
+     "player_id": "00-0028118",
+     "name": "Tyrod Taylor",
      "position": "QB",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": -0.07,
-     "recent_ppg": 1.42,
-     "matchup_adj": -0.0,
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": -0.22,
+     "recent_ppg": -0.04,
+     "matchup_adj": -0.87,
      "injury_status": "Backup",
      "market_rank": null,
      "rostered_pct": null
@@ -9262,19 +9275,6 @@
      "injury_status": "Backup",
      "market_rank": 25.72,
      "rostered_pct": 1.5
-    },
-    {
-     "player_id": "00-0028118",
-     "name": "Tyrod Taylor",
-     "position": "QB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": -0.45,
-     "recent_ppg": -0.04,
-     "matchup_adj": -1.1,
-     "injury_status": "Backup",
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0038128",
@@ -9570,9 +9570,9 @@
      "position": "RB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 11.49,
+     "start_score": 11.6,
      "recent_ppg": 11.12,
-     "matchup_adj": 0.26,
+     "matchup_adj": 0.37,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -9669,6 +9669,19 @@
      "rostered_pct": 96.9
     },
     {
+     "player_id": "00-0035700",
+     "name": "Josh Jacobs",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 10.24,
+     "recent_ppg": 10.93,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0032764",
      "name": "Derrick Henry",
      "position": "RB",
@@ -9682,14 +9695,14 @@
      "rostered_pct": 99.4
     },
     {
-     "player_id": "00-0035700",
-     "name": "Josh Jacobs",
+     "player_id": "00-0039738",
+     "name": "Blake Corum",
      "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 10.13,
-     "recent_ppg": 10.93,
-     "matchup_adj": -0.68,
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 10.03,
+     "recent_ppg": 12.15,
+     "matchup_adj": 0.37,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -9703,19 +9716,6 @@
      "start_score": 9.98,
      "recent_ppg": 10.62,
      "matchup_adj": -0.35,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0039738",
-     "name": "Blake Corum",
-     "position": "RB",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 9.92,
-     "recent_ppg": 12.15,
-     "matchup_adj": 0.26,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -9784,6 +9784,19 @@
      "injury_status": null,
      "market_rank": 29.59,
      "rostered_pct": 74.0
+    },
+    {
+     "player_id": "00-0040242",
+     "name": "Jacory Croskey-Merritt",
+     "position": "RB",
+     "team": "WAS",
+     "opponent": "ARI",
+     "start_score": 9.56,
+     "recent_ppg": 8.93,
+     "matchup_adj": 0.63,
+     "injury_status": null,
+     "market_rank": 33.89,
+     "rostered_pct": 54.4
     },
     {
      "player_id": "00-0040122",
@@ -10163,6 +10176,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0039811",
+     "name": "MarShawn Lloyd",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 5.6,
+     "recent_ppg": 4.92,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0036567",
      "name": "Elijah Mitchell",
      "position": "RB",
@@ -10187,19 +10213,6 @@
      "injury_status": null,
      "market_rank": 40.62,
      "rostered_pct": 11.0
-    },
-    {
-     "player_id": "00-0039811",
-     "name": "MarShawn Lloyd",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 5.49,
-     "recent_ppg": 4.92,
-     "matchup_adj": -0.68,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0035537",
@@ -10228,6 +10241,19 @@
      "rostered_pct": 13.0
     },
     {
+     "player_id": "00-0038098",
+     "name": "Pierre Strong",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 5.22,
+     "recent_ppg": 3.0,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0040878",
      "name": "Mike Washington Jr.",
      "position": "RB",
@@ -10239,19 +10265,6 @@
      "injury_status": null,
      "market_rank": 40.0,
      "rostered_pct": 26.0
-    },
-    {
-     "player_id": "00-0038098",
-     "name": "Pierre Strong",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 5.1,
-     "recent_ppg": 3.0,
-     "matchup_adj": -0.68,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0039364",
@@ -10267,6 +10280,19 @@
      "rostered_pct": 2.4
     },
     {
+     "player_id": "00-0037557",
+     "name": "Ronnie Rivers",
+     "position": "RB",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 4.94,
+     "recent_ppg": 3.5,
+     "matchup_adj": 0.37,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0036893",
      "name": "Najee Harris",
      "position": "RB",
@@ -10275,19 +10301,6 @@
      "start_score": 4.84,
      "recent_ppg": 2.08,
      "matchup_adj": 0.48,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0037557",
-     "name": "Ronnie Rivers",
-     "position": "RB",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 4.83,
-     "recent_ppg": 3.5,
-     "matchup_adj": 0.26,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -10332,6 +10345,19 @@
      "rostered_pct": 1.3
     },
     {
+     "player_id": "00-0040142",
+     "name": "Kaleb Johnson",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 4.45,
+     "recent_ppg": 3.58,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0040238",
      "name": "LeQuint Allen Jr.",
      "position": "RB",
@@ -10353,19 +10379,6 @@
      "start_score": 4.38,
      "recent_ppg": 2.92,
      "matchup_adj": 0.37,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0040142",
-     "name": "Kaleb Johnson",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 4.34,
-     "recent_ppg": 3.58,
-     "matchup_adj": -0.68,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -10514,6 +10527,19 @@
      "rostered_pct": 1.0
     },
     {
+     "player_id": "00-0038685",
+     "name": "Chris Brooks",
+     "position": "RB",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 3.3,
+     "recent_ppg": 1.94,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041178",
      "name": "Robert Henry Jr.",
      "position": "RB",
@@ -10522,19 +10548,6 @@
      "start_score": 3.19,
      "recent_ppg": 0.4,
      "matchup_adj": 0.63,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0038685",
-     "name": "Chris Brooks",
-     "position": "RB",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 3.18,
-     "recent_ppg": 1.94,
-     "matchup_adj": -0.68,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -10631,6 +10644,19 @@
      "rostered_pct": 0.4
     },
     {
+     "player_id": "00-0041081",
+     "name": "Max Bredeson",
+     "position": "RB",
+     "team": "MIN",
+     "opponent": "ATL",
+     "start_score": 2.85,
+     "recent_ppg": 0.0,
+     "matchup_adj": 0.66,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0038896",
      "name": "Jacob Saylors",
      "position": "RB",
@@ -10644,14 +10670,14 @@
      "rostered_pct": 0.4
     },
     {
-     "player_id": "00-0041081",
-     "name": "Max Bredeson",
+     "player_id": "00-0036265",
+     "name": "AJ Dillon",
      "position": "RB",
-     "team": "MIN",
-     "opponent": "ATL",
-     "start_score": 2.85,
-     "recent_ppg": 0.0,
-     "matchup_adj": 0.66,
+     "team": "CAR",
+     "opponent": "TB",
+     "start_score": 2.84,
+     "recent_ppg": 1.15,
+     "matchup_adj": -0.75,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -10668,19 +10694,6 @@
      "injury_status": null,
      "market_rank": 73.61,
      "rostered_pct": 1.0
-    },
-    {
-     "player_id": "00-0036265",
-     "name": "AJ Dillon",
-     "position": "RB",
-     "team": "CAR",
-     "opponent": "TB",
-     "start_score": 2.84,
-     "recent_ppg": 1.15,
-     "matchup_adj": -0.75,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0037745",
@@ -10787,19 +10800,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0040568",
-     "name": "Lan Larison",
-     "position": "RB",
-     "team": "NE",
-     "opponent": "LAC",
-     "start_score": 2.46,
-     "recent_ppg": 2.4,
-     "matchup_adj": -1.15,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0040429",
      "name": "Josh Williams",
      "position": "RB",
@@ -10808,6 +10808,19 @@
      "start_score": 2.46,
      "recent_ppg": 0.0,
      "matchup_adj": 0.43,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
+     "player_id": "00-0040568",
+     "name": "Lan Larison",
+     "position": "RB",
+     "team": "NE",
+     "opponent": "LAC",
+     "start_score": 2.46,
+     "recent_ppg": 2.4,
+     "matchup_adj": -1.15,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -11099,19 +11112,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0040242",
-     "name": "Jacory Croskey-Merritt",
-     "position": "RB",
-     "team": "WAS",
-     "opponent": "ARI",
-     "start_score": 0.27,
-     "recent_ppg": 8.93,
-     "matchup_adj": 0.63,
-     "injury_status": "Reserve",
-     "market_rank": 33.89,
-     "rostered_pct": 54.4
-    },
-    {
      "player_id": "00-0039040",
      "name": "De'Von Achane",
      "position": "RB",
@@ -11338,9 +11338,9 @@
      "position": "RB",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -7.12,
+     "start_score": -7.01,
      "recent_ppg": 0.0,
-     "matchup_adj": 0.26,
+     "matchup_adj": 0.37,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -11457,9 +11457,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 9.69,
+     "start_score": 9.76,
      "recent_ppg": 12.39,
-     "matchup_adj": -0.34,
+     "matchup_adj": -0.28,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -11483,9 +11483,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 8.95,
+     "start_score": 9.02,
      "recent_ppg": 12.79,
-     "matchup_adj": -0.34,
+     "matchup_adj": -0.28,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -11595,19 +11595,6 @@
      "rostered_pct": 98.6
     },
     {
-     "player_id": "00-0031588",
-     "name": "Stefon Diggs",
-     "position": "WR",
-     "team": "WAS",
-     "opponent": "ARI",
-     "start_score": 8.06,
-     "recent_ppg": 8.36,
-     "matchup_adj": 0.38,
-     "injury_status": null,
-     "market_rank": 17.63,
-     "rostered_pct": 90.8
-    },
-    {
      "player_id": "00-0037740",
      "name": "Garrett Wilson",
      "position": "WR",
@@ -11619,6 +11606,19 @@
      "injury_status": null,
      "market_rank": 10.66,
      "rostered_pct": 97.5
+    },
+    {
+     "player_id": "00-0031588",
+     "name": "Stefon Diggs",
+     "position": "WR",
+     "team": "WAS",
+     "opponent": "ARI",
+     "start_score": 8.06,
+     "recent_ppg": 8.36,
+     "matchup_adj": 0.38,
+     "injury_status": null,
+     "market_rank": 17.63,
+     "rostered_pct": 90.8
     },
     {
      "player_id": "00-0037238",
@@ -11660,19 +11660,6 @@
      "rostered_pct": 94.6
     },
     {
-     "player_id": "00-0041511",
-     "name": "Omar Cooper Jr.",
-     "position": "WR",
-     "team": "NYJ",
-     "opponent": "MIA",
-     "start_score": 7.83,
-     "recent_ppg": 10.65,
-     "matchup_adj": -0.14,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0040124",
      "name": "Tetairoa McMillan",
      "position": "WR",
@@ -11684,6 +11671,19 @@
      "injury_status": null,
      "market_rank": 15.42,
      "rostered_pct": 98.2
+    },
+    {
+     "player_id": "00-0041511",
+     "name": "Omar Cooper Jr.",
+     "position": "WR",
+     "team": "NYJ",
+     "opponent": "MIA",
+     "start_score": 7.83,
+     "recent_ppg": 10.65,
+     "matchup_adj": -0.14,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0039067",
@@ -11933,6 +11933,19 @@
      "rostered_pct": 89.6
     },
     {
+     "player_id": "00-0039075",
+     "name": "Puka Nacua",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 6.07,
+     "recent_ppg": 15.42,
+     "matchup_adj": 0.17,
+     "injury_status": "Reserve",
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0040867",
      "name": "Makai Lemon",
      "position": "WR",
@@ -11970,19 +11983,6 @@
      "injury_status": null,
      "market_rank": 43.16,
      "rostered_pct": 50.3
-    },
-    {
-     "player_id": "00-0039075",
-     "name": "Puka Nacua",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 6.0,
-     "recent_ppg": 15.42,
-     "matchup_adj": 0.1,
-     "injury_status": "Reserve",
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0038621",
@@ -12128,19 +12128,6 @@
      "rostered_pct": 34.8
     },
     {
-     "player_id": "00-0039849",
-     "name": "Marvin Harrison Jr.",
-     "position": "WR",
-     "team": "HOU",
-     "opponent": "BAL",
-     "start_score": 5.49,
-     "recent_ppg": 3.83,
-     "matchup_adj": 0.55,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0039915",
      "name": "Ladd McConkey",
      "position": "WR",
@@ -12152,6 +12139,19 @@
      "injury_status": null,
      "market_rank": 46.92,
      "rostered_pct": 82.3
+    },
+    {
+     "player_id": "00-0039849",
+     "name": "Marvin Harrison Jr.",
+     "position": "WR",
+     "team": "HOU",
+     "opponent": "BAL",
+     "start_score": 5.49,
+     "recent_ppg": 3.83,
+     "matchup_adj": 0.55,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0039901",
@@ -12167,19 +12167,6 @@
      "rostered_pct": 25.2
     },
     {
-     "player_id": "00-0033555",
-     "name": "Mack Hollins",
-     "position": "WR",
-     "team": "NE",
-     "opponent": "LAC",
-     "start_score": 5.37,
-     "recent_ppg": 5.88,
-     "matchup_adj": -0.69,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0032464",
      "name": "Kalif Raymond",
      "position": "WR",
@@ -12191,6 +12178,19 @@
      "injury_status": null,
      "market_rank": 61.27,
      "rostered_pct": 7.4
+    },
+    {
+     "player_id": "00-0033555",
+     "name": "Mack Hollins",
+     "position": "WR",
+     "team": "NE",
+     "opponent": "LAC",
+     "start_score": 5.37,
+     "recent_ppg": 5.88,
+     "matchup_adj": -0.69,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0039880",
@@ -12206,19 +12206,6 @@
      "rostered_pct": 47.6
     },
     {
-     "player_id": "00-0034348",
-     "name": "Courtland Sutton",
-     "position": "WR",
-     "team": "DEN",
-     "opponent": "PIT",
-     "start_score": 5.18,
-     "recent_ppg": 4.43,
-     "matchup_adj": -0.29,
-     "injury_status": null,
-     "market_rank": 42.03,
-     "rostered_pct": 60.2
-    },
-    {
      "player_id": "00-0040669",
      "name": "Isaac TeSlaa",
      "position": "WR",
@@ -12230,6 +12217,19 @@
      "injury_status": null,
      "market_rank": 71.35,
      "rostered_pct": 2.5
+    },
+    {
+     "player_id": "00-0034348",
+     "name": "Courtland Sutton",
+     "position": "WR",
+     "team": "DEN",
+     "opponent": "PIT",
+     "start_score": 5.18,
+     "recent_ppg": 4.43,
+     "matchup_adj": -0.29,
+     "injury_status": null,
+     "market_rank": 42.03,
+     "rostered_pct": 60.2
     },
     {
      "player_id": "00-0039739",
@@ -12531,19 +12531,6 @@
      "rostered_pct": 0.8
     },
     {
-     "player_id": "00-0041069",
-     "name": "Colbie Young",
-     "position": "WR",
-     "team": "CIN",
-     "opponent": "NO",
-     "start_score": 4.34,
-     "recent_ppg": 2.43,
-     "matchup_adj": 1.03,
-     "injury_status": null,
-     "market_rank": 97.23,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0040237",
      "name": "Tez Johnson",
      "position": "WR",
@@ -12555,6 +12542,19 @@
      "injury_status": null,
      "market_rank": 67.24,
      "rostered_pct": 1.7
+    },
+    {
+     "player_id": "00-0041069",
+     "name": "Colbie Young",
+     "position": "WR",
+     "team": "CIN",
+     "opponent": "NO",
+     "start_score": 4.34,
+     "recent_ppg": 2.43,
+     "matchup_adj": 1.03,
+     "injury_status": null,
+     "market_rank": 97.23,
+     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0038544",
@@ -12601,9 +12601,22 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 4.13,
+     "start_score": 4.19,
      "recent_ppg": 4.8,
-     "matchup_adj": -0.34,
+     "matchup_adj": -0.28,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
+     "player_id": "00-0040590",
+     "name": "Konata Mumpfield",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 4.11,
+     "recent_ppg": 2.83,
+     "matchup_adj": 0.17,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -12635,19 +12648,6 @@
      "rostered_pct": 2.1
     },
     {
-     "player_id": "00-0040590",
-     "name": "Konata Mumpfield",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 4.04,
-     "recent_ppg": 2.83,
-     "matchup_adj": 0.1,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0041368",
      "name": "Harrison Wallace III",
      "position": "WR",
@@ -12674,6 +12674,19 @@
      "rostered_pct": 0.6
     },
     {
+     "player_id": "00-0036849",
+     "name": "Tutu Atwell",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 3.98,
+     "recent_ppg": 2.17,
+     "matchup_adj": 0.17,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0040184",
      "name": "KeAndre Lambert-Smith",
      "position": "WR",
@@ -12682,19 +12695,6 @@
      "start_score": 3.92,
      "recent_ppg": 2.07,
      "matchup_adj": -0.43,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0036849",
-     "name": "Tutu Atwell",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 3.91,
-     "recent_ppg": 2.17,
-     "matchup_adj": 0.1,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -12765,6 +12765,19 @@
      "rostered_pct": 16.0
     },
     {
+     "player_id": "00-0041399",
+     "name": "CJ Daniels",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 3.69,
+     "recent_ppg": 2.2,
+     "matchup_adj": 0.17,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0038679",
      "name": "Tyrell Shavers",
      "position": "WR",
@@ -12799,19 +12812,6 @@
      "start_score": 3.62,
      "recent_ppg": 3.39,
      "matchup_adj": -0.69,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0041399",
-     "name": "CJ Daniels",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 3.62,
-     "recent_ppg": 2.2,
-     "matchup_adj": 0.1,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -12869,19 +12869,6 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0041070",
-     "name": "Reggie Virgil",
-     "position": "WR",
-     "team": "ARI",
-     "opponent": "WAS",
-     "start_score": 3.41,
-     "recent_ppg": 1.8,
-     "matchup_adj": -0.7,
-     "injury_status": null,
-     "market_rank": 69.72,
-     "rostered_pct": 1.5
-    },
-    {
      "player_id": "00-0034837",
      "name": "Calvin Ridley",
      "position": "WR",
@@ -12893,6 +12880,19 @@
      "injury_status": null,
      "market_rank": 92.47,
      "rostered_pct": 2.5
+    },
+    {
+     "player_id": "00-0041070",
+     "name": "Reggie Virgil",
+     "position": "WR",
+     "team": "ARI",
+     "opponent": "WAS",
+     "start_score": 3.41,
+     "recent_ppg": 1.8,
+     "matchup_adj": -0.7,
+     "injury_status": null,
+     "market_rank": 69.72,
+     "rostered_pct": 1.5
     },
     {
      "player_id": "00-0036271",
@@ -12908,19 +12908,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0039792",
-     "name": "Devontez Walker",
-     "position": "WR",
-     "team": "BAL",
-     "opponent": "HOU",
-     "start_score": 3.36,
-     "recent_ppg": 2.82,
-     "matchup_adj": -0.31,
-     "injury_status": null,
-     "market_rank": 120.33,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0032398",
      "name": "Chris Moore",
      "position": "WR",
@@ -12932,6 +12919,19 @@
      "injury_status": null,
      "market_rank": 132.0,
      "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0039792",
+     "name": "Devontez Walker",
+     "position": "WR",
+     "team": "BAL",
+     "opponent": "HOU",
+     "start_score": 3.36,
+     "recent_ppg": 2.82,
+     "matchup_adj": -0.31,
+     "injury_status": null,
+     "market_rank": 120.33,
+     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0039451",
@@ -12986,19 +12986,6 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0035891",
-     "name": "Cody White",
-     "position": "WR",
-     "team": "LV",
-     "opponent": "CLE",
-     "start_score": 3.27,
-     "recent_ppg": 2.91,
-     "matchup_adj": -0.57,
-     "injury_status": null,
-     "market_rank": 106.08,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0040782",
      "name": "Isaiah Bond",
      "position": "WR",
@@ -13010,6 +12997,19 @@
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
+    },
+    {
+     "player_id": "00-0035891",
+     "name": "Cody White",
+     "position": "WR",
+     "team": "LV",
+     "opponent": "CLE",
+     "start_score": 3.27,
+     "recent_ppg": 2.91,
+     "matchup_adj": -0.57,
+     "injury_status": null,
+     "market_rank": 106.08,
+     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0039868",
@@ -13051,6 +13051,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0038359",
+     "name": "Xavier Smith",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 3.19,
+     "recent_ppg": 2.5,
+     "matchup_adj": 0.17,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0035021",
      "name": "Ashton Dulin",
      "position": "WR",
@@ -13075,19 +13088,6 @@
      "injury_status": null,
      "market_rank": 141.5,
      "rostered_pct": 0.0
-    },
-    {
-     "player_id": "00-0038359",
-     "name": "Xavier Smith",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 3.12,
-     "recent_ppg": 2.5,
-     "matchup_adj": 0.1,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0040131",
@@ -13155,19 +13155,6 @@
      "rostered_pct": 2.7
     },
     {
-     "player_id": "00-0039365",
-     "name": "Jacob Cowing",
-     "position": "WR",
-     "team": "SF",
-     "opponent": "SEA",
-     "start_score": 2.95,
-     "recent_ppg": 0.84,
-     "matchup_adj": 0.15,
-     "injury_status": null,
-     "market_rank": 104.9,
-     "rostered_pct": 0.2
-    },
-    {
      "player_id": "00-0038824",
      "name": "Ryan Miller",
      "position": "WR",
@@ -13179,6 +13166,19 @@
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
+    },
+    {
+     "player_id": "00-0039365",
+     "name": "Jacob Cowing",
+     "position": "WR",
+     "team": "SF",
+     "opponent": "SEA",
+     "start_score": 2.95,
+     "recent_ppg": 0.84,
+     "matchup_adj": 0.15,
+     "injury_status": null,
+     "market_rank": 104.9,
+     "rostered_pct": 0.2
     },
     {
      "player_id": "00-0038938",
@@ -13285,6 +13285,19 @@
      "rostered_pct": null
     },
     {
+     "player_id": "00-0038090",
+     "name": "Skyy Moore",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 2.87,
+     "recent_ppg": 0.58,
+     "matchup_adj": -0.28,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041443",
      "name": "Skyler Bell",
      "position": "WR",
@@ -13337,19 +13350,6 @@
      "rostered_pct": 0.4
     },
     {
-     "player_id": "00-0038090",
-     "name": "Skyy Moore",
-     "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 2.8,
-     "recent_ppg": 0.58,
-     "matchup_adj": -0.34,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0040930",
      "name": "Camden Brown",
      "position": "WR",
@@ -13363,19 +13363,6 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0031235",
-     "name": "Odell Beckham Jr.",
-     "position": "WR",
-     "team": "MIN",
-     "opponent": "ATL",
-     "start_score": 2.74,
-     "recent_ppg": 0.0,
-     "matchup_adj": 0.35,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0039710",
      "name": "Jeshaun Jones",
      "position": "WR",
@@ -13387,6 +13374,19 @@
      "injury_status": null,
      "market_rank": 114.57,
      "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0031235",
+     "name": "Odell Beckham Jr.",
+     "position": "WR",
+     "team": "MIN",
+     "opponent": "ATL",
+     "start_score": 2.74,
+     "recent_ppg": 0.0,
+     "matchup_adj": 0.35,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0036630",
@@ -13493,6 +13493,19 @@
      "rostered_pct": null
     },
     {
+     "player_id": "00-0040948",
+     "name": "J. Michael Sturdivant",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 2.58,
+     "recent_ppg": 1.69,
+     "matchup_adj": -0.28,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0034854",
      "name": "KhaDarel Hodge",
      "position": "WR",
@@ -13545,19 +13558,6 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0040948",
-     "name": "J. Michael Sturdivant",
-     "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 2.51,
-     "recent_ppg": 1.69,
-     "matchup_adj": -0.34,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "00-0035500",
      "name": "Greg Dortch",
      "position": "WR",
@@ -13597,6 +13597,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0031381",
+     "name": "Davante Adams",
+     "position": "WR",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 2.43,
+     "recent_ppg": 12.0,
+     "matchup_adj": 0.17,
+     "injury_status": "Reserve",
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0036775",
      "name": "Brandon Smith",
      "position": "WR",
@@ -13608,19 +13621,6 @@
      "injury_status": null,
      "market_rank": 110.75,
      "rostered_pct": 0.0
-    },
-    {
-     "player_id": "00-0031381",
-     "name": "Davante Adams",
-     "position": "WR",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 2.36,
-     "recent_ppg": 12.0,
-     "matchup_adj": 0.1,
-     "injury_status": "Reserve",
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0034272",
@@ -13688,6 +13688,19 @@
      "rostered_pct": 0.1
     },
     {
+     "player_id": "00-0037091",
+     "name": "Bo Melton",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 2.29,
+     "recent_ppg": 0.37,
+     "matchup_adj": -0.28,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0039589",
      "name": "Kameron Johnson",
      "position": "WR",
@@ -13699,19 +13712,6 @@
      "injury_status": null,
      "market_rank": 130.4,
      "rostered_pct": 0.0
-    },
-    {
-     "player_id": "00-0037091",
-     "name": "Bo Melton",
-     "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 2.22,
-     "recent_ppg": 0.37,
-     "matchup_adj": -0.34,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0040432",
@@ -13797,9 +13797,9 @@
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 2.06,
+     "start_score": 2.13,
      "recent_ppg": 0.0,
-     "matchup_adj": 0.1,
+     "matchup_adj": 0.17,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -13810,9 +13810,9 @@
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 2.05,
+     "start_score": 2.12,
      "recent_ppg": 0.0,
-     "matchup_adj": 0.1,
+     "matchup_adj": 0.17,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -13896,19 +13896,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0040075",
-     "name": "LaJohntay Wester",
-     "position": "WR",
-     "team": "BAL",
-     "opponent": "HOU",
-     "start_score": 1.93,
-     "recent_ppg": 0.51,
-     "matchup_adj": -0.31,
-     "injury_status": null,
-     "market_rank": 121.89,
-     "rostered_pct": 0.1
-    },
-    {
      "player_id": "00-0040967",
      "name": "Jacob De Jesus",
      "position": "WR",
@@ -13920,6 +13907,19 @@
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
+    },
+    {
+     "player_id": "00-0040075",
+     "name": "LaJohntay Wester",
+     "position": "WR",
+     "team": "BAL",
+     "opponent": "HOU",
+     "start_score": 1.93,
+     "recent_ppg": 0.51,
+     "matchup_adj": -0.31,
+     "injury_status": null,
+     "market_rank": 121.89,
+     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0040894",
@@ -13974,19 +13974,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0040405",
-     "name": "Jamaal Pritchett",
-     "position": "WR",
-     "team": "NYJ",
-     "opponent": "MIA",
-     "start_score": 1.81,
-     "recent_ppg": 0.0,
-     "matchup_adj": -0.14,
-     "injury_status": null,
-     "market_rank": 149.0,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0041267",
      "name": "Malik McClain",
      "position": "WR",
@@ -13997,6 +13984,19 @@
      "matchup_adj": -0.14,
      "injury_status": null,
      "market_rank": 127.43,
+     "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0040405",
+     "name": "Jamaal Pritchett",
+     "position": "WR",
+     "team": "NYJ",
+     "opponent": "MIA",
+     "start_score": 1.81,
+     "recent_ppg": 0.0,
+     "matchup_adj": -0.14,
+     "injury_status": null,
+     "market_rank": 149.0,
      "rostered_pct": 0.0
     },
     {
@@ -14013,6 +14013,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0040352",
+     "name": "Coleman Owen",
+     "position": "WR",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 1.68,
+     "recent_ppg": 0.0,
+     "matchup_adj": -0.28,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041292",
      "name": "Kolbe Katsis",
      "position": "WR",
@@ -14026,19 +14039,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0036182",
-     "name": "Nick Westbrook-Ikhine",
-     "position": "WR",
-     "team": "IND",
-     "opponent": "NYG",
-     "start_score": 1.65,
-     "recent_ppg": 0.0,
-     "matchup_adj": -0.67,
-     "injury_status": null,
-     "market_rank": 95.58,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0037132",
      "name": "Britain Covey",
      "position": "WR",
@@ -14049,6 +14049,19 @@
      "matchup_adj": -0.32,
      "injury_status": null,
      "market_rank": 134.4,
+     "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0036182",
+     "name": "Nick Westbrook-Ikhine",
+     "position": "WR",
+     "team": "IND",
+     "opponent": "NYG",
+     "start_score": 1.65,
+     "recent_ppg": 0.0,
+     "matchup_adj": -0.67,
+     "injury_status": null,
+     "market_rank": 95.58,
      "rostered_pct": 0.0
     },
     {
@@ -14073,19 +14086,6 @@
      "start_score": 1.62,
      "recent_ppg": 0.0,
      "matchup_adj": -0.33,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
-     "player_id": "00-0040352",
-     "name": "Coleman Owen",
-     "position": "WR",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 1.61,
-     "recent_ppg": 0.0,
-     "matchup_adj": -0.34,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -14252,9 +14252,9 @@
      "position": "WR",
      "team": "GB",
      "opponent": "LA",
-     "start_score": -2.58,
+     "start_score": -2.51,
      "recent_ppg": 1.2,
-     "matchup_adj": -0.34,
+     "matchup_adj": -0.28,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -14343,9 +14343,9 @@
      "position": "WR",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -4.56,
+     "start_score": -4.49,
      "recent_ppg": 0.2,
-     "matchup_adj": 0.1,
+     "matchup_adj": 0.17,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -14553,9 +14553,9 @@
      "position": "TE",
      "team": "GB",
      "opponent": "LA",
-     "start_score": 4.94,
+     "start_score": 5.01,
      "recent_ppg": 5.75,
-     "matchup_adj": -0.57,
+     "matchup_adj": -0.51,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -14704,19 +14704,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "00-0035631",
-     "name": "Drew Sample",
-     "position": "TE",
-     "team": "CIN",
-     "opponent": "NO",
-     "start_score": 3.75,
-     "recent_ppg": 3.2,
-     "matchup_adj": 1.29,
-     "injury_status": null,
-     "market_rank": 38.86,
-     "rostered_pct": 0.2
-    },
-    {
      "player_id": "00-0041116",
      "name": "Jack Endries",
      "position": "TE",
@@ -14728,6 +14715,19 @@
      "injury_status": null,
      "market_rank": 48.0,
      "rostered_pct": 0.0
+    },
+    {
+     "player_id": "00-0035631",
+     "name": "Drew Sample",
+     "position": "TE",
+     "team": "CIN",
+     "opponent": "NO",
+     "start_score": 3.75,
+     "recent_ppg": 3.2,
+     "matchup_adj": 1.29,
+     "injury_status": null,
+     "market_rank": 38.86,
+     "rostered_pct": 0.2
     },
     {
      "player_id": "00-0033090",
@@ -14761,9 +14761,9 @@
      "position": "TE",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 3.61,
+     "start_score": 3.68,
      "recent_ppg": 3.83,
-     "matchup_adj": -0.18,
+     "matchup_adj": -0.12,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -14795,19 +14795,6 @@
      "rostered_pct": 42.2
     },
     {
-     "player_id": "00-0037252",
-     "name": "Greg Dulcich",
-     "position": "TE",
-     "team": "MIA",
-     "opponent": "NYJ",
-     "start_score": 3.4,
-     "recent_ppg": 3.44,
-     "matchup_adj": -0.54,
-     "injury_status": null,
-     "market_rank": 21.62,
-     "rostered_pct": 4.3
-    },
-    {
      "player_id": "00-0034981",
      "name": "Foster Moreau",
      "position": "TE",
@@ -14819,6 +14806,19 @@
      "injury_status": null,
      "market_rank": 44.13,
      "rostered_pct": 0.1
+    },
+    {
+     "player_id": "00-0037252",
+     "name": "Greg Dulcich",
+     "position": "TE",
+     "team": "MIA",
+     "opponent": "NYJ",
+     "start_score": 3.4,
+     "recent_ppg": 3.44,
+     "matchup_adj": -0.54,
+     "injury_status": null,
+     "market_rank": 21.62,
+     "rostered_pct": 4.3
     },
     {
      "player_id": "00-0039530",
@@ -14860,17 +14860,17 @@
      "rostered_pct": 1.6
     },
     {
-     "player_id": "00-0033881",
-     "name": "Evan Engram",
+     "player_id": "00-0036244",
+     "name": "Colby Parkinson",
      "position": "TE",
-     "team": "DEN",
-     "opponent": "PIT",
-     "start_score": 3.12,
-     "recent_ppg": 2.99,
-     "matchup_adj": -0.32,
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 3.17,
+     "recent_ppg": 2.55,
+     "matchup_adj": -0.12,
      "injury_status": null,
-     "market_rank": 28.17,
-     "rostered_pct": 2.4
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "00-0038129",
@@ -14886,17 +14886,17 @@
      "rostered_pct": 5.5
     },
     {
-     "player_id": "00-0036244",
-     "name": "Colby Parkinson",
+     "player_id": "00-0033881",
+     "name": "Evan Engram",
      "position": "TE",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 3.1,
-     "recent_ppg": 2.55,
-     "matchup_adj": -0.18,
+     "team": "DEN",
+     "opponent": "PIT",
+     "start_score": 3.12,
+     "recent_ppg": 2.99,
+     "matchup_adj": -0.32,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 28.17,
+     "rostered_pct": 2.4
     },
     {
      "player_id": "00-0035689",
@@ -15008,9 +15008,9 @@
      "position": "TE",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 2.61,
+     "start_score": 2.68,
      "recent_ppg": 3.7,
-     "matchup_adj": -0.18,
+     "matchup_adj": -0.12,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -15029,19 +15029,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0037277",
-     "name": "Teagan Quitoriano",
-     "position": "TE",
-     "team": "ARI",
-     "opponent": "WAS",
-     "start_score": 2.55,
-     "recent_ppg": 7.15,
-     "matchup_adj": -0.09,
-     "injury_status": null,
-     "market_rank": 68.64,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0036637",
      "name": "Noah Gray",
      "position": "TE",
@@ -15053,6 +15040,19 @@
      "injury_status": null,
      "market_rank": 32.06,
      "rostered_pct": 0.3
+    },
+    {
+     "player_id": "00-0037277",
+     "name": "Teagan Quitoriano",
+     "position": "TE",
+     "team": "ARI",
+     "opponent": "WAS",
+     "start_score": 2.55,
+     "recent_ppg": 7.15,
+     "matchup_adj": -0.09,
+     "injury_status": null,
+     "market_rank": 68.64,
+     "rostered_pct": 0.0
     },
     {
      "player_id": "00-0040189",
@@ -15146,19 +15146,6 @@
      "rostered_pct": 0.0
     },
     {
-     "player_id": "00-0037282",
-     "name": "James Mitchell",
-     "position": "TE",
-     "team": "DAL",
-     "opponent": "PHI",
-     "start_score": 2.1,
-     "recent_ppg": 2.0,
-     "matchup_adj": 0.52,
-     "injury_status": null,
-     "market_rank": 76.44,
-     "rostered_pct": 0.0
-    },
-    {
      "player_id": "00-0036754",
      "name": "Brock Wright",
      "position": "TE",
@@ -15170,6 +15157,19 @@
      "injury_status": null,
      "market_rank": 50.06,
      "rostered_pct": 0.1
+    },
+    {
+     "player_id": "00-0037282",
+     "name": "James Mitchell",
+     "position": "TE",
+     "team": "DAL",
+     "opponent": "PHI",
+     "start_score": 2.1,
+     "recent_ppg": 2.0,
+     "matchup_adj": 0.52,
+     "injury_status": null,
+     "market_rank": 76.44,
+     "rostered_pct": 0.0
     },
     {
      "player_id": "00-0037805",
@@ -15250,6 +15250,19 @@
      "rostered_pct": 0.1
     },
     {
+     "player_id": "00-0033858",
+     "name": "Jonnu Smith",
+     "position": "TE",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 1.83,
+     "recent_ppg": 2.35,
+     "matchup_adj": -0.51,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0034365",
      "name": "Ian Thomas",
      "position": "TE",
@@ -15261,19 +15274,6 @@
      "injury_status": null,
      "market_rank": 60.0,
      "rostered_pct": 0.1
-    },
-    {
-     "player_id": "00-0036590",
-     "name": "Quintin Morris",
-     "position": "TE",
-     "team": "JAX",
-     "opponent": "TEN",
-     "start_score": 1.8,
-     "recent_ppg": 0.11,
-     "matchup_adj": 1.18,
-     "injury_status": null,
-     "market_rank": 80.13,
-     "rostered_pct": 0.0
     },
     {
      "player_id": "00-0038046",
@@ -15289,17 +15289,17 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0033858",
-     "name": "Jonnu Smith",
+     "player_id": "00-0036590",
+     "name": "Quintin Morris",
      "position": "TE",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 1.76,
-     "recent_ppg": 2.35,
-     "matchup_adj": -0.57,
+     "team": "JAX",
+     "opponent": "TEN",
+     "start_score": 1.8,
+     "recent_ppg": 0.11,
+     "matchup_adj": 1.18,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 80.13,
+     "rostered_pct": 0.0
     },
     {
      "player_id": "00-0036422",
@@ -15640,6 +15640,19 @@
      "rostered_pct": 0.0
     },
     {
+     "player_id": "00-0040598",
+     "name": "Mark Redman",
+     "position": "TE",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 0.64,
+     "recent_ppg": 0.47,
+     "matchup_adj": -0.51,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0041041",
      "name": "Oscar Delp",
      "position": "TE",
@@ -15666,17 +15679,17 @@
      "rostered_pct": 0.1
     },
     {
-     "player_id": "00-0040598",
-     "name": "Mark Redman",
+     "player_id": "00-0033246",
+     "name": "Johnny Mundt",
      "position": "TE",
-     "team": "GB",
-     "opponent": "LA",
+     "team": "PHI",
+     "opponent": "DAL",
      "start_score": 0.58,
-     "recent_ppg": 0.47,
-     "matchup_adj": -0.57,
+     "recent_ppg": 0.32,
+     "matchup_adj": -0.53,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 88.67,
+     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0033757",
@@ -15690,19 +15703,6 @@
      "injury_status": null,
      "market_rank": 82.25,
      "rostered_pct": 0.0
-    },
-    {
-     "player_id": "00-0033246",
-     "name": "Johnny Mundt",
-     "position": "TE",
-     "team": "PHI",
-     "opponent": "DAL",
-     "start_score": 0.58,
-     "recent_ppg": 0.32,
-     "matchup_adj": -0.53,
-     "injury_status": null,
-     "market_rank": 88.67,
-     "rostered_pct": 0.1
     },
     {
      "player_id": "00-0036429",
@@ -15957,9 +15957,9 @@
      "position": "TE",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -1.18,
+     "start_score": -1.11,
      "recent_ppg": 4.1,
-     "matchup_adj": -0.18,
+     "matchup_adj": -0.12,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -16058,19 +16058,6 @@
      "rostered_pct": 88.7
     },
     {
-     "player_id": "00-0032726",
-     "name": "Ka'imi Fairbairn",
-     "position": "K",
-     "team": "HOU",
-     "opponent": "BAL",
-     "start_score": 8.73,
-     "recent_ppg": 11.0,
-     "matchup_adj": 0.83,
-     "injury_status": null,
-     "market_rank": 1.39,
-     "rostered_pct": 90.7
-    },
-    {
      "player_id": "00-0037692",
      "name": "Brandon Aubrey",
      "position": "K",
@@ -16082,6 +16069,19 @@
      "injury_status": null,
      "market_rank": 2.21,
      "rostered_pct": 98.3
+    },
+    {
+     "player_id": "00-0032726",
+     "name": "Ka'imi Fairbairn",
+     "position": "K",
+     "team": "HOU",
+     "opponent": "BAL",
+     "start_score": 8.73,
+     "recent_ppg": 11.0,
+     "matchup_adj": 0.83,
+     "injury_status": null,
+     "market_rank": 1.39,
+     "rostered_pct": 90.7
     },
     {
      "player_id": "00-0036854",
@@ -16253,6 +16253,19 @@
      "rostered_pct": null
     },
     {
+     "player_id": "00-0040899",
+     "name": "Trey Smack",
+     "position": "K",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 7.14,
+     "recent_ppg": 7.23,
+     "matchup_adj": -0.03,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0033303",
      "name": "Harrison Butker",
      "position": "K",
@@ -16264,19 +16277,6 @@
      "injury_status": null,
      "market_rank": 14.08,
      "rostered_pct": 34.1
-    },
-    {
-     "player_id": "00-0040899",
-     "name": "Trey Smack",
-     "position": "K",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 7.07,
-     "recent_ppg": 7.23,
-     "matchup_adj": -0.09,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0034173",
@@ -16331,6 +16331,19 @@
      "rostered_pct": 41.6
     },
     {
+     "player_id": "00-0029822",
+     "name": "Brandon McManus",
+     "position": "K",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 6.89,
+     "recent_ppg": 7.5,
+     "matchup_adj": -0.33,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "00-0031136",
      "name": "Chris Boswell",
      "position": "K",
@@ -16342,19 +16355,6 @@
      "injury_status": null,
      "market_rank": 8.92,
      "rostered_pct": 46.1
-    },
-    {
-     "player_id": "00-0029822",
-     "name": "Brandon McManus",
-     "position": "K",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 6.82,
-     "recent_ppg": 7.5,
-     "matchup_adj": -0.4,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
     },
     {
      "player_id": "00-0039498",
@@ -16383,19 +16383,6 @@
      "rostered_pct": 2.6
     },
     {
-     "player_id": "00-0038567",
-     "name": "Chad Ryland",
-     "position": "K",
-     "team": "ARI",
-     "opponent": "WAS",
-     "start_score": 6.68,
-     "recent_ppg": 8.52,
-     "matchup_adj": -0.68,
-     "injury_status": null,
-     "market_rank": 24.46,
-     "rostered_pct": 10.2
-    },
-    {
      "player_id": "00-0036816",
      "name": "Riley Patterson",
      "position": "K",
@@ -16407,6 +16394,19 @@
      "injury_status": null,
      "market_rank": 21.89,
      "rostered_pct": 1.0
+    },
+    {
+     "player_id": "00-0038567",
+     "name": "Chad Ryland",
+     "position": "K",
+     "team": "ARI",
+     "opponent": "WAS",
+     "start_score": 6.68,
+     "recent_ppg": 8.52,
+     "matchup_adj": -0.68,
+     "injury_status": null,
+     "market_rank": 24.46,
+     "rostered_pct": 10.2
     },
     {
      "player_id": "00-0035192",
@@ -16422,19 +16422,6 @@
      "rostered_pct": 3.2
     },
     {
-     "player_id": "00-0039576",
-     "name": "Spencer Shrader",
-     "position": "K",
-     "team": "IND",
-     "opponent": "NYG",
-     "start_score": 6.49,
-     "recent_ppg": 8.43,
-     "matchup_adj": -0.97,
-     "injury_status": null,
-     "market_rank": 14.24,
-     "rostered_pct": 85.2
-    },
-    {
      "player_id": "00-0033862",
      "name": "Zane Gonzalez",
      "position": "K",
@@ -16446,6 +16433,19 @@
      "injury_status": null,
      "market_rank": 26.25,
      "rostered_pct": 0.1
+    },
+    {
+     "player_id": "00-0039576",
+     "name": "Spencer Shrader",
+     "position": "K",
+     "team": "IND",
+     "opponent": "NYG",
+     "start_score": 6.49,
+     "recent_ppg": 8.43,
+     "matchup_adj": -0.97,
+     "injury_status": null,
+     "market_rank": 14.24,
+     "rostered_pct": 85.2
     },
     {
      "player_id": "00-0040200",
@@ -16505,9 +16505,9 @@
      "position": "K",
      "team": "LA",
      "opponent": "GB",
-     "start_score": 5.94,
+     "start_score": 6.01,
      "recent_ppg": 0.0,
-     "matchup_adj": -0.4,
+     "matchup_adj": -0.33,
      "injury_status": null,
      "market_rank": null,
      "rostered_pct": null
@@ -16531,9 +16531,9 @@
      "position": "K",
      "team": "LA",
      "opponent": "GB",
-     "start_score": -0.22,
+     "start_score": -0.15,
      "recent_ppg": 4.0,
-     "matchup_adj": -0.4,
+     "matchup_adj": -0.33,
      "injury_status": "Reserve",
      "market_rank": null,
      "rostered_pct": null
@@ -16593,6 +16593,19 @@
      "rostered_pct": 19.7
     },
     {
+     "player_id": "DEN_DST",
+     "name": "DEN D/ST",
+     "position": "DST",
+     "team": "DEN",
+     "opponent": "PIT",
+     "start_score": 8.18,
+     "recent_ppg": 7.92,
+     "matchup_adj": 1.99,
+     "injury_status": null,
+     "market_rank": 4.08,
+     "rostered_pct": 91.6
+    },
+    {
      "player_id": "MIN_DST",
      "name": "MIN D/ST",
      "position": "DST",
@@ -16606,17 +16619,17 @@
      "rostered_pct": 76.5
     },
     {
-     "player_id": "DEN_DST",
-     "name": "DEN D/ST",
+     "player_id": "NYJ_DST",
+     "name": "NYJ D/ST",
      "position": "DST",
-     "team": "DEN",
-     "opponent": "PIT",
-     "start_score": 8.18,
-     "recent_ppg": 7.92,
-     "matchup_adj": 1.99,
+     "team": "NYJ",
+     "opponent": "MIA",
+     "start_score": 7.87,
+     "recent_ppg": 3.48,
+     "matchup_adj": 1.68,
      "injury_status": null,
-     "market_rank": 4.08,
-     "rostered_pct": 91.6
+     "market_rank": 11.5,
+     "rostered_pct": 14.0
     },
     {
      "player_id": "CLE_DST",
@@ -16645,19 +16658,6 @@
      "rostered_pct": null
     },
     {
-     "player_id": "NYJ_DST",
-     "name": "NYJ D/ST",
-     "position": "DST",
-     "team": "NYJ",
-     "opponent": "MIA",
-     "start_score": 7.87,
-     "recent_ppg": 3.48,
-     "matchup_adj": 1.68,
-     "injury_status": null,
-     "market_rank": 11.5,
-     "rostered_pct": 14.0
-    },
-    {
      "player_id": "DAL_DST",
      "name": "DAL D/ST",
      "position": "DST",
@@ -16684,19 +16684,6 @@
      "rostered_pct": 94.0
     },
     {
-     "player_id": "CIN_DST",
-     "name": "CIN D/ST",
-     "position": "DST",
-     "team": "CIN",
-     "opponent": "NO",
-     "start_score": 7.13,
-     "recent_ppg": 5.9,
-     "matchup_adj": 0.94,
-     "injury_status": null,
-     "market_rank": 11.67,
-     "rostered_pct": 32.2
-    },
-    {
      "player_id": "TB_DST",
      "name": "TB D/ST",
      "position": "DST",
@@ -16710,17 +16697,17 @@
      "rostered_pct": 38.2
     },
     {
-     "player_id": "LA_DST",
-     "name": "LA D/ST",
+     "player_id": "CIN_DST",
+     "name": "CIN D/ST",
      "position": "DST",
-     "team": "LA",
-     "opponent": "GB",
-     "start_score": 7.03,
-     "recent_ppg": 6.87,
-     "matchup_adj": 0.84,
+     "team": "CIN",
+     "opponent": "NO",
+     "start_score": 7.13,
+     "recent_ppg": 5.9,
+     "matchup_adj": 0.94,
      "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
+     "market_rank": 11.67,
+     "rostered_pct": 32.2
     },
     {
      "player_id": "PIT_DST",
@@ -16734,6 +16721,19 @@
      "injury_status": null,
      "market_rank": 4.31,
      "rostered_pct": 78.2
+    },
+    {
+     "player_id": "LA_DST",
+     "name": "LA D/ST",
+     "position": "DST",
+     "team": "LA",
+     "opponent": "GB",
+     "start_score": 6.82,
+     "recent_ppg": 6.87,
+     "matchup_adj": 0.63,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
     },
     {
      "player_id": "SF_DST",
@@ -16775,19 +16775,6 @@
      "rostered_pct": 78.3
     },
     {
-     "player_id": "GB_DST",
-     "name": "GB D/ST",
-     "position": "DST",
-     "team": "GB",
-     "opponent": "LA",
-     "start_score": 5.98,
-     "recent_ppg": 8.6,
-     "matchup_adj": -0.21,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "LV_DST",
      "name": "LV D/ST",
      "position": "DST",
@@ -16814,6 +16801,19 @@
      "rostered_pct": 16.6
     },
     {
+     "player_id": "GB_DST",
+     "name": "GB D/ST",
+     "position": "DST",
+     "team": "GB",
+     "opponent": "LA",
+     "start_score": 5.77,
+     "recent_ppg": 8.6,
+     "matchup_adj": -0.42,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
      "player_id": "IND_DST",
      "name": "IND D/ST",
      "position": "DST",
@@ -16827,19 +16827,6 @@
      "rostered_pct": 29.4
     },
     {
-     "player_id": "SEA_DST",
-     "name": "SEA D/ST",
-     "position": "DST",
-     "team": "SEA",
-     "opponent": "SF",
-     "start_score": 5.24,
-     "recent_ppg": 7.43,
-     "matchup_adj": -0.94,
-     "injury_status": null,
-     "market_rank": null,
-     "rostered_pct": null
-    },
-    {
      "player_id": "ATL_DST",
      "name": "ATL D/ST",
      "position": "DST",
@@ -16847,6 +16834,19 @@
      "opponent": "MIN",
      "start_score": 5.24,
      "recent_ppg": 3.5,
+     "matchup_adj": -0.94,
+     "injury_status": null,
+     "market_rank": null,
+     "rostered_pct": null
+    },
+    {
+     "player_id": "SEA_DST",
+     "name": "SEA D/ST",
+     "position": "DST",
+     "team": "SEA",
+     "opponent": "SF",
+     "start_score": 5.24,
+     "recent_ppg": 7.43,
      "matchup_adj": -0.94,
      "injury_status": null,
      "market_rank": null,

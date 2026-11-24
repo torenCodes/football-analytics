@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-24T15:42:27.978164+00:00"
+  "generated_at": "2026-11-24T19:28:10.370837+00:00"
  },
  "season": 2026,
  "week": 12,
@@ -247,11 +247,11 @@
     "name": "Matthew Stafford",
     "team": "LA",
     "opponent": "GB",
-    "score": 15.87,
+    "score": 16.1,
     "status": null,
     "inputs": {
      "form": 17.26,
-     "team_total": 0.5,
+     "team_total": 1.0,
      "matchup": -3.06,
      "carries": 1.0
     }
@@ -299,11 +299,11 @@
     "name": "Jordan Love",
     "team": "GB",
     "opponent": "LA",
-    "score": 15.35,
+    "score": 15.58,
     "status": null,
     "inputs": {
      "form": 20.0,
-     "team_total": -2.0,
+     "team_total": -1.5,
      "matchup": -2.36,
      "carries": 1.17
     }
@@ -761,11 +761,11 @@
     "name": "Kyren Williams",
     "team": "LA",
     "opponent": "GB",
-    "score": 14.16,
+    "score": 14.28,
     "status": null,
     "inputs": {
      "form": 14.61,
-     "team_total": 0.5,
+     "team_total": 1.0,
      "matchup": 2.9,
      "targets": 4.33,
      "carries": 14.17
@@ -814,17 +814,17 @@
     }
    },
    {
-    "name": "Jonah Coleman",
-    "team": "DEN",
-    "opponent": "PIT",
-    "score": 12.93,
+    "name": "Josh Jacobs",
+    "team": "GB",
+    "opponent": "LA",
+    "score": 13.03,
     "status": null,
     "inputs": {
-     "form": 16.3,
-     "team_total": -1.75,
-     "matchup": -0.05,
-     "targets": 3.17,
-     "carries": 11.83
+     "form": 15.08,
+     "team_total": -1.5,
+     "matchup": -4.5,
+     "targets": 4.33,
+     "carries": 12.0
     }
    },
    {
@@ -842,17 +842,17 @@
     }
    },
    {
-    "name": "Josh Jacobs",
-    "team": "GB",
-    "opponent": "LA",
-    "score": 12.9,
+    "name": "Jonah Coleman",
+    "team": "DEN",
+    "opponent": "PIT",
+    "score": 12.93,
     "status": null,
     "inputs": {
-     "form": 15.08,
-     "team_total": -2.0,
-     "matchup": -4.5,
-     "targets": 4.33,
-     "carries": 12.0
+     "form": 16.3,
+     "team_total": -1.75,
+     "matchup": -0.05,
+     "targets": 3.17,
+     "carries": 11.83
     }
    },
    {
@@ -912,20 +912,6 @@
     }
    },
    {
-    "name": "Derrick Henry",
-    "team": "BAL",
-    "opponent": "HOU",
-    "score": 12.13,
-    "status": null,
-    "inputs": {
-     "form": 14.3,
-     "team_total": -2.5,
-     "matchup": -0.95,
-     "targets": 2.5,
-     "carries": 14.17
-    }
-   },
-   {
     "name": "Kyle Monangai",
     "team": "CHI",
     "opponent": "DET",
@@ -940,14 +926,28 @@
     }
    },
    {
+    "name": "Derrick Henry",
+    "team": "BAL",
+    "opponent": "HOU",
+    "score": 12.13,
+    "status": null,
+    "inputs": {
+     "form": 14.3,
+     "team_total": -2.5,
+     "matchup": -0.95,
+     "targets": 2.5,
+     "carries": 14.17
+    }
+   },
+   {
     "name": "Blake Corum",
     "team": "LA",
     "opponent": "GB",
-    "score": 11.57,
+    "score": 11.69,
     "status": null,
     "inputs": {
      "form": 12.49,
-     "team_total": 0.5,
+     "team_total": 1.0,
      "matchup": 2.9,
      "targets": 2.33,
      "carries": 11.67
@@ -1021,6 +1021,20 @@
      "matchup": 1.57,
      "targets": 2.17,
      "carries": 18.17
+    }
+   },
+   {
+    "name": "Jacory Croskey-Merritt",
+    "team": "WAS",
+    "opponent": "ARI",
+    "score": 10.88,
+    "status": null,
+    "inputs": {
+     "form": 9.64,
+     "team_total": 2.5,
+     "matchup": 0.56,
+     "targets": 1.67,
+     "carries": 13.33
     }
    },
    {
@@ -1148,20 +1162,6 @@
      "targets": 1.17,
      "carries": 11.17
     }
-   },
-   {
-    "name": "Dameon Pierce",
-    "team": "PHI",
-    "opponent": "DAL",
-    "score": 9.27,
-    "status": null,
-    "inputs": {
-     "form": 6.29,
-     "team_total": -3.0,
-     "matchup": 5.86,
-     "targets": 3.67,
-     "carries": 12.33
-    }
    }
   ],
   "WR": [
@@ -1273,11 +1273,11 @@
     "name": "Matthew Golden",
     "team": "GB",
     "opponent": "LA",
-    "score": 14.52,
+    "score": 14.61,
     "status": null,
     "inputs": {
      "form": 16.35,
-     "team_total": -2.0,
+     "team_total": -1.5,
      "matchup": -6.03,
      "targets": 10.67
     }
@@ -1299,11 +1299,11 @@
     "name": "Christian Watson",
     "team": "GB",
     "opponent": "LA",
-    "score": 13.79,
+    "score": 13.87,
     "status": null,
     "inputs": {
      "form": 17.25,
-     "team_total": -2.0,
+     "team_total": -1.5,
      "matchup": -6.03,
      "targets": 7.83
     }
@@ -1873,11 +1873,11 @@
     "name": "Tucker Kraft",
     "team": "GB",
     "opponent": "LA",
-    "score": 8.47,
+    "score": 8.56,
     "status": null,
     "inputs": {
      "form": 10.3,
-     "team_total": -2.0,
+     "team_total": -1.5,
      "matchup": -2.64,
      "targets": 5.33
     }
@@ -2029,11 +2029,11 @@
     "name": "Tyler Higbee",
     "team": "LA",
     "opponent": "GB",
-    "score": 6.47,
+    "score": 6.56,
     "status": null,
     "inputs": {
      "form": 6.92,
-     "team_total": 0.5,
+     "team_total": 1.0,
      "matchup": -3.33,
      "targets": 4.0
     }
@@ -2130,6 +2130,19 @@
     }
    },
    {
+    "name": "Colby Parkinson",
+    "team": "LA",
+    "opponent": "GB",
+    "score": 5.84,
+    "status": null,
+    "inputs": {
+     "form": 6.03,
+     "team_total": 1.0,
+     "matchup": -3.33,
+     "targets": 3.5
+    }
+   },
+   {
     "name": "Evan Engram",
     "team": "DEN",
     "opponent": "PIT",
@@ -2153,19 +2166,6 @@
      "team_total": -2.5,
      "matchup": -3.47,
      "targets": 4.0
-    }
-   },
-   {
-    "name": "Colby Parkinson",
-    "team": "LA",
-    "opponent": "GB",
-    "score": 5.75,
-    "status": null,
-    "inputs": {
-     "form": 6.03,
-     "team_total": 0.5,
-     "matchup": -3.33,
-     "targets": 3.5
     }
    },
    {
@@ -2222,18 +2222,6 @@
     }
    },
    {
-    "name": "Ka'imi Fairbairn",
-    "team": "HOU",
-    "opponent": "BAL",
-    "score": 8.73,
-    "status": null,
-    "inputs": {
-     "form": 11.29,
-     "team_total": 4.0,
-     "matchup": 1.63
-    }
-   },
-   {
     "name": "Brandon Aubrey",
     "team": "DAL",
     "opponent": "PHI",
@@ -2243,6 +2231,18 @@
      "form": 9.69,
      "team_total": 5.5,
      "matchup": 2.15
+    }
+   },
+   {
+    "name": "Ka'imi Fairbairn",
+    "team": "HOU",
+    "opponent": "BAL",
+    "score": 8.73,
+    "status": null,
+    "inputs": {
+     "form": 11.29,
+     "team_total": 4.0,
+     "matchup": 1.63
     }
    },
    {
@@ -2402,6 +2402,18 @@
     }
    },
    {
+    "name": "Trey Smack",
+    "team": "GB",
+    "opponent": "LA",
+    "score": 7.14,
+    "status": null,
+    "inputs": {
+     "form": 7.23,
+     "team_total": -1.5,
+     "matchup": 1.05
+    }
+   },
+   {
     "name": "Harrison Butker",
     "team": "KC",
     "opponent": "BUF",
@@ -2411,18 +2423,6 @@
      "form": 7.5,
      "team_total": -0.25,
      "matchup": -0.35
-    }
-   },
-   {
-    "name": "Trey Smack",
-    "team": "GB",
-    "opponent": "LA",
-    "score": 7.08,
-    "status": null,
-    "inputs": {
-     "form": 7.23,
-     "team_total": -2.0,
-     "matchup": 1.05
     }
    },
    {
@@ -2474,6 +2474,18 @@
     }
    },
    {
+    "name": "Brandon McManus",
+    "team": "LA",
+    "opponent": "GB",
+    "score": 6.87,
+    "status": null,
+    "inputs": {
+     "form": 7.57,
+     "team_total": 1.0,
+     "matchup": -2.75
+    }
+   },
+   {
     "name": "Chris Boswell",
     "team": "PIT",
     "opponent": "DEN",
@@ -2507,18 +2519,6 @@
      "form": 6.22,
      "team_total": -3.0,
      "matchup": 1.36
-    }
-   },
-   {
-    "name": "Brandon McManus",
-    "team": "LA",
-    "opponent": "GB",
-    "score": 6.8,
-    "status": null,
-    "inputs": {
-     "form": 7.57,
-     "team_total": 0.5,
-     "matchup": -2.75
     }
    },
    {
@@ -2633,11 +2633,11 @@
     "name": "Joshua Karty",
     "team": "LA",
     "opponent": "GB",
-    "score": 5.92,
+    "score": 5.99,
     "status": null,
     "inputs": {
      "form": 2.75,
-     "team_total": 0.5,
+     "team_total": 1.0,
      "matchup": -2.75
     }
    },
@@ -2658,11 +2658,11 @@
     "name": "Blake Grupe",
     "team": "LA",
     "opponent": "GB",
-    "score": -0.23,
+    "score": -0.16,
     "status": "Reserve",
     "inputs": {
      "form": 6.38,
-     "team_total": 0.5,
+     "team_total": 1.0,
      "matchup": -2.75,
      "reserve": 1.0
     }
@@ -2710,6 +2710,16 @@
     }
    },
    {
+    "name": "DEN D/ST",
+    "team": "DEN",
+    "opponent": "PIT",
+    "score": 8.17,
+    "status": null,
+    "inputs": {
+     "team_total": 4.75
+    }
+   },
+   {
     "name": "MIN D/ST",
     "team": "MIN",
     "opponent": "ATL",
@@ -2720,13 +2730,13 @@
     }
    },
    {
-    "name": "DEN D/ST",
-    "team": "DEN",
-    "opponent": "PIT",
-    "score": 8.17,
+    "name": "NYJ D/ST",
+    "team": "NYJ",
+    "opponent": "MIA",
+    "score": 7.86,
     "status": null,
     "inputs": {
-     "team_total": 4.75
+     "team_total": 4.0
     }
    },
    {
@@ -2743,16 +2753,6 @@
     "name": "NE D/ST",
     "team": "NE",
     "opponent": "LAC",
-    "score": 7.86,
-    "status": null,
-    "inputs": {
-     "team_total": 4.0
-    }
-   },
-   {
-    "name": "NYJ D/ST",
-    "team": "NYJ",
-    "opponent": "MIA",
     "score": 7.86,
     "status": null,
     "inputs": {
@@ -2780,16 +2780,6 @@
     }
    },
    {
-    "name": "CIN D/ST",
-    "team": "CIN",
-    "opponent": "NO",
-    "score": 7.13,
-    "status": null,
-    "inputs": {
-     "team_total": 2.25
-    }
-   },
-   {
     "name": "TB D/ST",
     "team": "TB",
     "opponent": "CAR",
@@ -2800,13 +2790,13 @@
     }
    },
    {
-    "name": "LA D/ST",
-    "team": "LA",
-    "opponent": "GB",
-    "score": 7.02,
+    "name": "CIN D/ST",
+    "team": "CIN",
+    "opponent": "NO",
+    "score": 7.13,
     "status": null,
     "inputs": {
-     "team_total": 2.0
+     "team_total": 2.25
     }
    },
    {
@@ -2817,6 +2807,16 @@
     "status": null,
     "inputs": {
      "team_total": 1.75
+    }
+   },
+   {
+    "name": "LA D/ST",
+    "team": "LA",
+    "opponent": "GB",
+    "score": 6.81,
+    "status": null,
+    "inputs": {
+     "team_total": 1.5
     }
    },
    {
@@ -2850,16 +2850,6 @@
     }
    },
    {
-    "name": "GB D/ST",
-    "team": "GB",
-    "opponent": "LA",
-    "score": 5.98,
-    "status": null,
-    "inputs": {
-     "team_total": -0.5
-    }
-   },
-   {
     "name": "LV D/ST",
     "team": "LV",
     "opponent": "CLE",
@@ -2880,6 +2870,16 @@
     }
    },
    {
+    "name": "GB D/ST",
+    "team": "GB",
+    "opponent": "LA",
+    "score": 5.77,
+    "status": null,
+    "inputs": {
+     "team_total": -1.0
+    }
+   },
+   {
     "name": "IND D/ST",
     "team": "IND",
     "opponent": "NYG",
@@ -2890,9 +2890,9 @@
     }
    },
    {
-    "name": "SEA D/ST",
-    "team": "SEA",
-    "opponent": "SF",
+    "name": "ATL D/ST",
+    "team": "ATL",
+    "opponent": "MIN",
     "score": 5.25,
     "status": null,
     "inputs": {
@@ -2900,9 +2900,9 @@
     }
    },
    {
-    "name": "ATL D/ST",
-    "team": "ATL",
-    "opponent": "MIN",
+    "name": "SEA D/ST",
+    "team": "SEA",
+    "opponent": "SF",
     "score": 5.25,
     "status": null,
     "inputs": {
