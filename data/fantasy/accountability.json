@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-24T19:28:10.370837+00:00"
+    "generated_at": "2026-11-24T20:34:05.807592+00:00"
   },
   "available": true,
   "season": 2026,
@@ -216,7 +216,7 @@
       },
       "WR": {
         "players_graded": 46,
-        "mean_abs_rank_error": 18.1,
+        "mean_abs_rank_error": 18.0,
         "hit_rate_within_5": 0.37,
         "vs_consensus": {
           "players": 46,
@@ -424,12 +424,12 @@
       },
       "K": {
         "players_graded": 29,
-        "mean_abs_rank_error": 11.2,
+        "mean_abs_rank_error": 11.1,
         "hit_rate_within_5": 0.276,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.198,
-          "market_rho": 0.286
+          "ours_rho": 0.205,
+          "market_rho": 0.3
         },
         "biggest_steals": [
           {
@@ -528,12 +528,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.9,
-        "hit_rate_within_5": 0.469,
+        "mean_abs_rank_error": 7.8,
+        "hit_rate_within_5": 0.5,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.415,
-          "market_rho": 0.35
+          "ours_rho": 0.428,
+          "market_rho": 0.354
         },
         "biggest_steals": [
           {
@@ -567,8 +567,8 @@
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
-            "actual_rank": 4,
-            "rank_error": -12,
+            "actual_rank": 5,
+            "rank_error": -11,
             "games": 10,
             "ppg": 7.8
           },
@@ -605,8 +605,8 @@
             "player_id": "NO_DST",
             "name": "NO D/ST",
             "preseason_rank": 9,
-            "actual_rank": 24,
-            "rank_error": 15,
+            "actual_rank": 23,
+            "rank_error": 14,
             "games": 10,
             "ppg": 4.4
           },
@@ -1050,12 +1050,12 @@
       },
       "K": {
         "players_graded": 29,
-        "mean_abs_rank_error": 11.2,
+        "mean_abs_rank_error": 11.1,
         "hit_rate_within_5": 0.276,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.198,
-          "market_rho": 0.286
+          "ours_rho": 0.205,
+          "market_rho": 0.3
         },
         "biggest_steals": [
           {
@@ -1154,12 +1154,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.9,
-        "hit_rate_within_5": 0.469,
+        "mean_abs_rank_error": 7.8,
+        "hit_rate_within_5": 0.5,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.415,
-          "market_rho": 0.35
+          "ours_rho": 0.428,
+          "market_rho": 0.354
         },
         "biggest_steals": [
           {
@@ -1193,8 +1193,8 @@
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
-            "actual_rank": 4,
-            "rank_error": -12,
+            "actual_rank": 5,
+            "rank_error": -11,
             "games": 10,
             "ppg": 7.8
           },
@@ -1231,8 +1231,8 @@
             "player_id": "NO_DST",
             "name": "NO D/ST",
             "preseason_rank": 9,
-            "actual_rank": 24,
-            "rank_error": 15,
+            "actual_rank": 23,
+            "rank_error": 14,
             "games": 10,
             "ppg": 4.4
           },
