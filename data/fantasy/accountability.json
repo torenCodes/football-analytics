@@ -1,36 +1,36 @@
 {
   "meta": {
-    "generated_at": "2026-11-21T08:14:15.887692+00:00"
+    "generated_at": "2026-11-24T15:42:27.978164+00:00"
   },
   "available": true,
   "season": 2026,
   "by_format": {
     "ppr": {
       "QB": {
-        "players_graded": 32,
+        "players_graded": 33,
         "mean_abs_rank_error": 9.6,
-        "hit_rate_within_5": 0.281,
+        "hit_rate_within_5": 0.303,
         "vs_consensus": {
-          "players": 32,
-          "ours_rho": 0.488,
-          "market_rho": 0.5
+          "players": 33,
+          "ours_rho": 0.504,
+          "market_rho": 0.574
         },
         "biggest_steals": [
           {
             "player_id": "00-0029604",
             "name": "Kirk Cousins",
             "preseason_rank": 39,
-            "actual_rank": 10,
-            "rank_error": -29,
-            "games": 10,
-            "ppg": 18.8
+            "actual_rank": 13,
+            "rank_error": -26,
+            "games": 11,
+            "ppg": 17.7
           },
           {
             "player_id": "00-0039163",
             "name": "C.J. Stroud",
             "preseason_rank": 24,
-            "actual_rank": 4,
-            "rank_error": -20,
+            "actual_rank": 5,
+            "rank_error": -19,
             "games": 10,
             "ppg": 20.9
           },
@@ -38,10 +38,19 @@
             "player_id": "00-0035993",
             "name": "Tyler Huntley",
             "preseason_rank": 49,
-            "actual_rank": 30,
-            "rank_error": -19,
+            "actual_rank": 31,
+            "rank_error": -18,
             "games": 5,
             "ppg": 11.3
+          },
+          {
+            "player_id": "00-0040676",
+            "name": "Cam Ward",
+            "preseason_rank": 37,
+            "actual_rank": 22,
+            "rank_error": -15,
+            "games": 10,
+            "ppg": 14.6
           },
           {
             "player_id": "00-0036264",
@@ -51,15 +60,6 @@
             "rank_error": -14,
             "games": 10,
             "ppg": 19.8
-          },
-          {
-            "player_id": "00-0030565",
-            "name": "Geno Smith",
-            "preseason_rank": 36,
-            "actual_rank": 23,
-            "rank_error": -13,
-            "games": 10,
-            "ppg": 14.0
           }
         ],
         "biggest_busts": [
@@ -73,22 +73,31 @@
             "ppg": 8.8
           },
           {
-            "player_id": "00-0034855",
-            "name": "Baker Mayfield",
-            "preseason_rank": 19,
-            "actual_rank": 34,
-            "rank_error": 15,
-            "games": 6,
-            "ppg": 9.1
-          },
-          {
             "player_id": "00-0039732",
             "name": "Bo Nix",
             "preseason_rank": 7,
-            "actual_rank": 22,
-            "rank_error": 15,
-            "games": 9,
-            "ppg": 14.8
+            "actual_rank": 24,
+            "rank_error": 17,
+            "games": 10,
+            "ppg": 14.4
+          },
+          {
+            "player_id": "00-0034855",
+            "name": "Baker Mayfield",
+            "preseason_rank": 19,
+            "actual_rank": 33,
+            "rank_error": 14,
+            "games": 7,
+            "ppg": 10.6
+          },
+          {
+            "player_id": "00-0035228",
+            "name": "Kyler Murray",
+            "preseason_rank": 17,
+            "actual_rank": 30,
+            "rank_error": 13,
+            "games": 6,
+            "ppg": 12.3
           },
           {
             "player_id": "00-0026498",
@@ -98,26 +107,17 @@
             "rank_error": 13,
             "games": 10,
             "ppg": 16.3
-          },
-          {
-            "player_id": "00-0035228",
-            "name": "Kyler Murray",
-            "preseason_rank": 17,
-            "actual_rank": 29,
-            "rank_error": 12,
-            "games": 6,
-            "ppg": 12.3
           }
         ]
       },
       "RB": {
         "players_graded": 42,
         "mean_abs_rank_error": 12.7,
-        "hit_rate_within_5": 0.286,
+        "hit_rate_within_5": 0.238,
         "vs_consensus": {
           "players": 42,
-          "ours_rho": 0.564,
-          "market_rho": 0.692
+          "ours_rho": 0.566,
+          "market_rho": 0.716
         },
         "biggest_steals": [
           {
@@ -126,8 +126,8 @@
             "preseason_rank": 41,
             "actual_rank": 4,
             "rank_error": -37,
-            "games": 9,
-            "ppg": 20.1
+            "games": 10,
+            "ppg": 20.7
           },
           {
             "player_id": "00-0038134",
@@ -139,51 +139,51 @@
             "ppg": 24.6
           },
           {
-            "player_id": "00-0040236",
-            "name": "Kyle Monangai",
-            "preseason_rank": 37,
-            "actual_rank": 17,
-            "rank_error": -20,
-            "games": 4,
-            "ppg": 14.8
-          },
-          {
             "player_id": "00-0039361",
             "name": "Bucky Irving",
             "preseason_rank": 24,
             "actual_rank": 7,
             "rank_error": -17,
-            "games": 9,
-            "ppg": 17.7
+            "games": 10,
+            "ppg": 17.8
           },
           {
-            "player_id": "00-0037228",
-            "name": "Jaylen Warren",
-            "preseason_rank": 22,
-            "actual_rank": 10,
+            "player_id": "00-0040236",
+            "name": "Kyle Monangai",
+            "preseason_rank": 37,
+            "actual_rank": 21,
+            "rank_error": -16,
+            "games": 5,
+            "ppg": 12.2
+          },
+          {
+            "player_id": "00-0040784",
+            "name": "Quinshon Judkins",
+            "preseason_rank": 34,
+            "actual_rank": 22,
             "rank_error": -12,
             "games": 9,
-            "ppg": 16.7
+            "ppg": 12.0
           }
         ],
         "biggest_busts": [
           {
-            "player_id": "00-0040734",
-            "name": "TreVeyon Henderson",
-            "preseason_rank": 19,
-            "actual_rank": 57,
-            "rank_error": 38,
-            "games": 6,
-            "ppg": 5.6
-          },
-          {
             "player_id": "00-0039384",
             "name": "Tyrone Tracy Jr.",
             "preseason_rank": 25,
-            "actual_rank": 62,
-            "rank_error": 37,
+            "actual_rank": 63,
+            "rank_error": 38,
             "games": 7,
             "ppg": 4.6
+          },
+          {
+            "player_id": "00-0040734",
+            "name": "TreVeyon Henderson",
+            "preseason_rank": 19,
+            "actual_rank": 56,
+            "rank_error": 37,
+            "games": 6,
+            "ppg": 5.6
           },
           {
             "player_id": "00-0036919",
@@ -191,83 +191,83 @@
             "preseason_rank": 16,
             "actual_rank": 45,
             "rank_error": 29,
-            "games": 9,
-            "ppg": 7.1
+            "games": 10,
+            "ppg": 7.3
           },
           {
             "player_id": "00-0036973",
             "name": "Travis Etienne",
             "preseason_rank": 11,
-            "actual_rank": 35,
-            "rank_error": 24,
-            "games": 4,
-            "ppg": 9.3
+            "actual_rank": 36,
+            "rank_error": 25,
+            "games": 5,
+            "ppg": 9.0
           },
           {
-            "player_id": "00-0034844",
-            "name": "Saquon Barkley",
-            "preseason_rank": 18,
-            "actual_rank": 41,
-            "rank_error": 23,
-            "games": 7,
-            "ppg": 8.4
+            "player_id": "00-0036158",
+            "name": "J.K. Dobbins",
+            "preseason_rank": 29,
+            "actual_rank": 51,
+            "rank_error": 22,
+            "games": 10,
+            "ppg": 6.2
           }
         ]
       },
       "WR": {
         "players_graded": 46,
-        "mean_abs_rank_error": 18.0,
-        "hit_rate_within_5": 0.348,
+        "mean_abs_rank_error": 18.1,
+        "hit_rate_within_5": 0.37,
         "vs_consensus": {
           "players": 46,
-          "ours_rho": 0.571,
-          "market_rho": 0.654
+          "ours_rho": 0.585,
+          "market_rho": 0.656
         },
         "biggest_steals": [
-          {
-            "player_id": "00-0036912",
-            "name": "DeVonta Smith",
-            "preseason_rank": 37,
-            "actual_rank": 9,
-            "rank_error": -28,
-            "games": 4,
-            "ppg": 17.2
-          },
           {
             "player_id": "00-0035719",
             "name": "Deebo Samuel Sr.",
             "preseason_rank": 49,
-            "actual_rank": 21,
-            "rank_error": -28,
-            "games": 6,
-            "ppg": 14.4
-          },
-          {
-            "player_id": "00-0040735",
-            "name": "Luther Burden III",
-            "preseason_rank": 36,
-            "actual_rank": 18,
-            "rank_error": -18,
-            "games": 9,
-            "ppg": 15.1
-          },
-          {
-            "player_id": "00-0034827",
-            "name": "DJ Moore",
-            "preseason_rank": 48,
-            "actual_rank": 30,
-            "rank_error": -18,
+            "actual_rank": 24,
+            "rank_error": -25,
             "games": 7,
-            "ppg": 11.3
+            "ppg": 13.4
+          },
+          {
+            "player_id": "00-0036912",
+            "name": "DeVonta Smith",
+            "preseason_rank": 37,
+            "actual_rank": 15,
+            "rank_error": -22,
+            "games": 5,
+            "ppg": 15.6
           },
           {
             "player_id": "00-0031408",
             "name": "Mike Evans",
             "preseason_rank": 32,
-            "actual_rank": 19,
-            "rank_error": -13,
-            "games": 6,
-            "ppg": 14.8
+            "actual_rank": 13,
+            "rank_error": -19,
+            "games": 7,
+            "ppg": 16.0
+          },
+          {
+            "player_id": "00-0034827",
+            "name": "DJ Moore",
+            "preseason_rank": 48,
+            "actual_rank": 29,
+            "rank_error": -19,
+            "games": 8,
+            "ppg": 12.8
+          },
+          {
+            "player_id": "00-0040735",
+            "name": "Luther Burden III",
+            "preseason_rank": 36,
+            "actual_rank": 20,
+            "rank_error": -16,
+            "games": 10,
+            "ppg": 14.0
           }
         ],
         "biggest_busts": [
@@ -275,17 +275,17 @@
             "player_id": "00-0036259",
             "name": "Jauan Jennings",
             "preseason_rank": 21,
-            "actual_rank": 136,
-            "rank_error": 115,
-            "games": 6,
-            "ppg": 1.9
+            "actual_rank": 128,
+            "rank_error": 107,
+            "games": 7,
+            "ppg": 2.3
           },
           {
             "player_id": "00-0035676",
             "name": "A.J. Brown",
             "preseason_rank": 6,
-            "actual_rank": 81,
-            "rank_error": 75,
+            "actual_rank": 83,
+            "rank_error": 77,
             "games": 4,
             "ppg": 6.0
           },
@@ -293,58 +293,58 @@
             "player_id": "00-0034348",
             "name": "Courtland Sutton",
             "preseason_rank": 19,
-            "actual_rank": 75,
-            "rank_error": 56,
-            "games": 9,
-            "ppg": 7.1
-          },
-          {
-            "player_id": "00-0039893",
-            "name": "Brian Thomas Jr.",
-            "preseason_rank": 44,
-            "actual_rank": 95,
-            "rank_error": 51,
-            "games": 8,
-            "ppg": 5.0
+            "actual_rank": 80,
+            "rank_error": 61,
+            "games": 10,
+            "ppg": 6.4
           },
           {
             "player_id": "00-0038544",
             "name": "Quentin Johnston",
             "preseason_rank": 33,
-            "actual_rank": 82,
-            "rank_error": 49,
-            "games": 8,
-            "ppg": 5.9
+            "actual_rank": 89,
+            "rank_error": 56,
+            "games": 9,
+            "ppg": 5.5
+          },
+          {
+            "player_id": "00-0039849",
+            "name": "Marvin Harrison Jr.",
+            "preseason_rank": 45,
+            "actual_rank": 92,
+            "rank_error": 47,
+            "games": 7,
+            "ppg": 5.4
           }
         ]
       },
       "TE": {
         "players_graded": 43,
         "mean_abs_rank_error": 12.0,
-        "hit_rate_within_5": 0.302,
+        "hit_rate_within_5": 0.326,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.572,
-          "market_rho": 0.756
+          "ours_rho": 0.583,
+          "market_rho": 0.764
         },
         "biggest_steals": [
           {
             "player_id": "00-0037838",
             "name": "Isaiah Likely",
             "preseason_rank": 42,
-            "actual_rank": 2,
-            "rank_error": -40,
-            "games": 9,
-            "ppg": 17.4
+            "actual_rank": 3,
+            "rank_error": -39,
+            "games": 10,
+            "ppg": 16.1
           },
           {
             "player_id": "00-0039066",
             "name": "Michael Mayer",
             "preseason_rank": 46,
-            "actual_rank": 19,
-            "rank_error": -27,
-            "games": 10,
-            "ppg": 8.6
+            "actual_rank": 21,
+            "rank_error": -25,
+            "games": 11,
+            "ppg": 7.9
           },
           {
             "player_id": "00-0036894",
@@ -352,8 +352,17 @@
             "preseason_rank": 35,
             "actual_rank": 12,
             "rank_error": -23,
+            "games": 10,
+            "ppg": 9.9
+          },
+          {
+            "player_id": "00-0034829",
+            "name": "Mike Gesicki",
+            "preseason_rank": 27,
+            "actual_rank": 8,
+            "rank_error": -19,
             "games": 9,
-            "ppg": 10.1
+            "ppg": 10.5
           },
           {
             "player_id": "00-0035229",
@@ -361,17 +370,8 @@
             "preseason_rank": 25,
             "actual_rank": 7,
             "rank_error": -18,
-            "games": 8,
-            "ppg": 10.7
-          },
-          {
-            "player_id": "00-0034753",
-            "name": "Mark Andrews",
-            "preseason_rank": 43,
-            "actual_rank": 25,
-            "rank_error": -18,
-            "games": 10,
-            "ppg": 7.5
+            "games": 9,
+            "ppg": 10.8
           }
         ],
         "biggest_busts": [
@@ -381,101 +381,101 @@
             "preseason_rank": 23,
             "actual_rank": 60,
             "rank_error": 37,
-            "games": 9,
-            "ppg": 3.2
+            "games": 10,
+            "ppg": 3.4
           },
           {
             "player_id": "00-0037004",
             "name": "Hunter Long",
             "preseason_rank": 45,
-            "actual_rank": 81,
-            "rank_error": 36,
-            "games": 5,
-            "ppg": 1.0
-          },
-          {
-            "player_id": "00-0036244",
-            "name": "Colby Parkinson",
-            "preseason_rank": 10,
-            "actual_rank": 42,
+            "actual_rank": 77,
             "rank_error": 32,
-            "games": 8,
-            "ppg": 4.8
+            "games": 6,
+            "ppg": 1.2
           },
           {
             "player_id": "00-0039847",
             "name": "Theo Johnson",
             "preseason_rank": 29,
-            "actual_rank": 57,
-            "rank_error": 28,
-            "games": 5,
-            "ppg": 3.5
+            "actual_rank": 61,
+            "rank_error": 32,
+            "games": 6,
+            "ppg": 3.3
           },
           {
-            "player_id": "00-0036970",
-            "name": "Kyle Pitts",
-            "preseason_rank": 3,
-            "actual_rank": 22,
-            "rank_error": 19,
-            "games": 10,
-            "ppg": 7.8
+            "player_id": "00-0036244",
+            "name": "Colby Parkinson",
+            "preseason_rank": 10,
+            "actual_rank": 41,
+            "rank_error": 31,
+            "games": 8,
+            "ppg": 4.8
+          },
+          {
+            "player_id": "00-0036290",
+            "name": "Cole Kmet",
+            "preseason_rank": 37,
+            "actual_rank": 58,
+            "rank_error": 21,
+            "games": 7,
+            "ppg": 3.5
           }
         ]
       },
       "K": {
         "players_graded": 29,
-        "mean_abs_rank_error": 11.2,
-        "hit_rate_within_5": 0.241,
+        "mean_abs_rank_error": 11.1,
+        "hit_rate_within_5": 0.276,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.244,
-          "market_rho": 0.297
+          "ours_rho": 0.201,
+          "market_rho": 0.293
         },
         "biggest_steals": [
           {
             "player_id": "00-0035269",
             "name": "Matt Gay",
             "preseason_rank": 37,
-            "actual_rank": 8,
-            "rank_error": -29,
-            "games": 10,
-            "ppg": 9.6
+            "actual_rank": 12,
+            "rank_error": -25,
+            "games": 11,
+            "ppg": 9.3
           },
           {
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 14,
-            "rank_error": -22,
+            "actual_rank": 15,
+            "rank_error": -21,
             "games": 10,
             "ppg": 8.9
-          },
-          {
-            "player_id": "00-0040279",
-            "name": "Ryan Fitzgerald",
-            "preseason_rank": 34,
-            "actual_rank": 18,
-            "rank_error": -16,
-            "games": 9,
-            "ppg": 8.3
           },
           {
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
-            "actual_rank": 12,
-            "rank_error": -15,
-            "games": 9,
-            "ppg": 9.1
+            "actual_rank": 8,
+            "rank_error": -19,
+            "games": 10,
+            "ppg": 9.5
           },
           {
-            "player_id": "00-0038567",
-            "name": "Chad Ryland",
-            "preseason_rank": 28,
-            "actual_rank": 13,
-            "rank_error": -15,
+            "player_id": "00-0040279",
+            "name": "Ryan Fitzgerald",
+            "preseason_rank": 34,
+            "actual_rank": 17,
+            "rank_error": -17,
             "games": 10,
-            "ppg": 9.1
+            "ppg": 8.4
+          },
+          {
+            "player_id": "00-0035192",
+            "name": "Joey Slye",
+            "preseason_rank": 32,
+            "actual_rank": 19,
+            "rank_error": -13,
+            "games": 10,
+            "ppg": 8.3
           }
         ],
         "biggest_busts": [
@@ -483,8 +483,8 @@
             "player_id": "00-0040200",
             "name": "Andy Borregales",
             "preseason_rank": 9,
-            "actual_rank": 31,
-            "rank_error": 22,
+            "actual_rank": 32,
+            "rank_error": 23,
             "games": 10,
             "ppg": 5.9
           },
@@ -492,8 +492,8 @@
             "player_id": "00-0039498",
             "name": "Harrison Mevis",
             "preseason_rank": 11,
-            "actual_rank": 32,
-            "rank_error": 21,
+            "actual_rank": 33,
+            "rank_error": 22,
             "games": 5,
             "ppg": 5.8
           },
@@ -501,8 +501,8 @@
             "player_id": "00-0033862",
             "name": "Zane Gonzalez",
             "preseason_rank": 6,
-            "actual_rank": 27,
-            "rank_error": 21,
+            "actual_rank": 28,
+            "rank_error": 22,
             "games": 4,
             "ppg": 6.5
           },
@@ -510,8 +510,8 @@
             "player_id": "00-0031492",
             "name": "Jason Myers",
             "preseason_rank": 2,
-            "actual_rank": 22,
-            "rank_error": 20,
+            "actual_rank": 23,
+            "rank_error": 21,
             "games": 10,
             "ppg": 7.8
           },
@@ -519,10 +519,10 @@
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 28,
-            "rank_error": 15,
-            "games": 9,
-            "ppg": 6.4
+            "actual_rank": 30,
+            "rank_error": 17,
+            "games": 10,
+            "ppg": 6.3
           }
         ]
       },
@@ -532,54 +532,54 @@
         "hit_rate_within_5": 0.469,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.412,
-          "market_rho": 0.364
+          "ours_rho": 0.42,
+          "market_rho": 0.35
         },
         "biggest_steals": [
           {
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 7,
-            "rank_error": -21,
+            "actual_rank": 8,
+            "rank_error": -20,
             "games": 10,
             "ppg": 7.2
+          },
+          {
+            "player_id": "SF_DST",
+            "name": "SF D/ST",
+            "preseason_rank": 23,
+            "actual_rank": 10,
+            "rank_error": -13,
+            "games": 10,
+            "ppg": 6.9
           },
           {
             "player_id": "TB_DST",
             "name": "TB D/ST",
             "preseason_rank": 15,
-            "actual_rank": 2,
-            "rank_error": -13,
-            "games": 9,
-            "ppg": 8.9
+            "actual_rank": 3,
+            "rank_error": -12,
+            "games": 10,
+            "ppg": 8.0
           },
           {
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
-            "actual_rank": 4,
-            "rank_error": -12,
-            "games": 9,
-            "ppg": 8.0
+            "actual_rank": 5,
+            "rank_error": -11,
+            "games": 10,
+            "ppg": 7.8
           },
           {
             "player_id": "NYG_DST",
             "name": "NYG D/ST",
             "preseason_rank": 26,
-            "actual_rank": 16,
-            "rank_error": -10,
-            "games": 9,
-            "ppg": 6.0
-          },
-          {
-            "player_id": "TEN_DST",
-            "name": "TEN D/ST",
-            "preseason_rank": 29,
-            "actual_rank": 19,
-            "rank_error": -10,
-            "games": 9,
-            "ppg": 5.3
+            "actual_rank": 15,
+            "rank_error": -11,
+            "games": 10,
+            "ppg": 6.2
           }
         ],
         "biggest_busts": [
@@ -589,74 +589,74 @@
             "preseason_rank": 4,
             "actual_rank": 31,
             "rank_error": 27,
-            "games": 9,
-            "ppg": 2.8
-          },
-          {
-            "player_id": "NO_DST",
-            "name": "NO D/ST",
-            "preseason_rank": 9,
-            "actual_rank": 25,
-            "rank_error": 16,
-            "games": 9,
-            "ppg": 4.2
+            "games": 10,
+            "ppg": 3.1
           },
           {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
-            "actual_rank": 27,
-            "rank_error": 15,
+            "actual_rank": 28,
+            "rank_error": 16,
             "games": 10,
             "ppg": 3.5
+          },
+          {
+            "player_id": "NO_DST",
+            "name": "NO D/ST",
+            "preseason_rank": 9,
+            "actual_rank": 24,
+            "rank_error": 15,
+            "games": 10,
+            "ppg": 4.4
           },
           {
             "player_id": "LAC_DST",
             "name": "LAC D/ST",
             "preseason_rank": 13,
-            "actual_rank": 24,
-            "rank_error": 11,
-            "games": 9,
-            "ppg": 4.3
+            "actual_rank": 26,
+            "rank_error": 13,
+            "games": 10,
+            "ppg": 4.0
           },
           {
-            "player_id": "NE_DST",
-            "name": "NE D/ST",
-            "preseason_rank": 11,
-            "actual_rank": 22,
-            "rank_error": 11,
-            "games": 10,
-            "ppg": 4.8
+            "player_id": "BAL_DST",
+            "name": "BAL D/ST",
+            "preseason_rank": 18,
+            "actual_rank": 27,
+            "rank_error": 9,
+            "games": 11,
+            "ppg": 3.7
           }
         ]
       }
     },
     "standard": {
       "QB": {
-        "players_graded": 32,
-        "mean_abs_rank_error": 9.6,
-        "hit_rate_within_5": 0.281,
+        "players_graded": 33,
+        "mean_abs_rank_error": 9.7,
+        "hit_rate_within_5": 0.273,
         "vs_consensus": {
-          "players": 32,
-          "ours_rho": 0.482,
-          "market_rho": 0.502
+          "players": 33,
+          "ours_rho": 0.498,
+          "market_rho": 0.576
         },
         "biggest_steals": [
           {
             "player_id": "00-0029604",
             "name": "Kirk Cousins",
             "preseason_rank": 39,
-            "actual_rank": 10,
-            "rank_error": -29,
-            "games": 10,
-            "ppg": 18.8
+            "actual_rank": 13,
+            "rank_error": -26,
+            "games": 11,
+            "ppg": 17.7
           },
           {
             "player_id": "00-0039163",
             "name": "C.J. Stroud",
             "preseason_rank": 24,
-            "actual_rank": 4,
-            "rank_error": -20,
+            "actual_rank": 5,
+            "rank_error": -19,
             "games": 10,
             "ppg": 20.9
           },
@@ -664,10 +664,19 @@
             "player_id": "00-0035993",
             "name": "Tyler Huntley",
             "preseason_rank": 49,
-            "actual_rank": 30,
-            "rank_error": -19,
+            "actual_rank": 31,
+            "rank_error": -18,
             "games": 5,
             "ppg": 11.3
+          },
+          {
+            "player_id": "00-0040676",
+            "name": "Cam Ward",
+            "preseason_rank": 37,
+            "actual_rank": 22,
+            "rank_error": -15,
+            "games": 10,
+            "ppg": 14.6
           },
           {
             "player_id": "00-0036264",
@@ -677,15 +686,6 @@
             "rank_error": -14,
             "games": 10,
             "ppg": 19.8
-          },
-          {
-            "player_id": "00-0030565",
-            "name": "Geno Smith",
-            "preseason_rank": 36,
-            "actual_rank": 23,
-            "rank_error": -13,
-            "games": 10,
-            "ppg": 14.0
           }
         ],
         "biggest_busts": [
@@ -699,22 +699,31 @@
             "ppg": 8.8
           },
           {
-            "player_id": "00-0034855",
-            "name": "Baker Mayfield",
-            "preseason_rank": 19,
-            "actual_rank": 34,
-            "rank_error": 15,
-            "games": 6,
-            "ppg": 9.1
-          },
-          {
             "player_id": "00-0039732",
             "name": "Bo Nix",
             "preseason_rank": 7,
-            "actual_rank": 22,
-            "rank_error": 15,
-            "games": 9,
-            "ppg": 14.8
+            "actual_rank": 24,
+            "rank_error": 17,
+            "games": 10,
+            "ppg": 14.4
+          },
+          {
+            "player_id": "00-0034855",
+            "name": "Baker Mayfield",
+            "preseason_rank": 19,
+            "actual_rank": 33,
+            "rank_error": 14,
+            "games": 7,
+            "ppg": 10.6
+          },
+          {
+            "player_id": "00-0035228",
+            "name": "Kyler Murray",
+            "preseason_rank": 17,
+            "actual_rank": 30,
+            "rank_error": 13,
+            "games": 6,
+            "ppg": 12.3
           },
           {
             "player_id": "00-0026498",
@@ -724,45 +733,36 @@
             "rank_error": 13,
             "games": 10,
             "ppg": 16.3
-          },
-          {
-            "player_id": "00-0035228",
-            "name": "Kyler Murray",
-            "preseason_rank": 17,
-            "actual_rank": 29,
-            "rank_error": 12,
-            "games": 6,
-            "ppg": 12.3
           }
         ]
       },
       "RB": {
         "players_graded": 42,
-        "mean_abs_rank_error": 13.0,
-        "hit_rate_within_5": 0.286,
+        "mean_abs_rank_error": 13.2,
+        "hit_rate_within_5": 0.238,
         "vs_consensus": {
           "players": 42,
-          "ours_rho": 0.438,
-          "market_rho": 0.652
+          "ours_rho": 0.448,
+          "market_rho": 0.668
         },
         "biggest_steals": [
           {
             "player_id": "00-0036555",
             "name": "Chuba Hubbard",
             "preseason_rank": 42,
-            "actual_rank": 5,
-            "rank_error": -37,
-            "games": 9,
-            "ppg": 16.6
+            "actual_rank": 4,
+            "rank_error": -38,
+            "games": 10,
+            "ppg": 17.6
           },
           {
             "player_id": "00-0040719",
             "name": "Bhayshul Tuten",
             "preseason_rank": 44,
-            "actual_rank": 10,
-            "rank_error": -34,
-            "games": 9,
-            "ppg": 14.4
+            "actual_rank": 11,
+            "rank_error": -33,
+            "games": 10,
+            "ppg": 13.5
           },
           {
             "player_id": "00-0038134",
@@ -777,10 +777,10 @@
             "player_id": "00-0040236",
             "name": "Kyle Monangai",
             "preseason_rank": 36,
-            "actual_rank": 12,
-            "rank_error": -24,
-            "games": 4,
-            "ppg": 13.6
+            "actual_rank": 19,
+            "rank_error": -17,
+            "games": 5,
+            "ppg": 11.2
           },
           {
             "player_id": "00-0039361",
@@ -788,8 +788,8 @@
             "preseason_rank": 22,
             "actual_rank": 7,
             "rank_error": -15,
-            "games": 9,
-            "ppg": 15.2
+            "games": 10,
+            "ppg": 15.3
           }
         ],
         "biggest_busts": [
@@ -806,10 +806,10 @@
             "player_id": "00-0036973",
             "name": "Travis Etienne",
             "preseason_rank": 9,
-            "actual_rank": 44,
-            "rank_error": 35,
-            "games": 4,
-            "ppg": 5.8
+            "actual_rank": 41,
+            "rank_error": 32,
+            "games": 5,
+            "ppg": 6.2
           },
           {
             "player_id": "00-0039384",
@@ -821,79 +821,79 @@
             "ppg": 3.8
           },
           {
-            "player_id": "00-0036919",
-            "name": "Kenny Gainwell",
-            "preseason_rank": 24,
-            "actual_rank": 46,
-            "rank_error": 22,
-            "games": 9,
-            "ppg": 5.4
-          },
-          {
             "player_id": "00-0038597",
             "name": "Chase Brown",
             "preseason_rank": 4,
-            "actual_rank": 25,
-            "rank_error": 21,
-            "games": 9,
-            "ppg": 9.2
+            "actual_rank": 30,
+            "rank_error": 26,
+            "games": 10,
+            "ppg": 8.6
+          },
+          {
+            "player_id": "00-0036158",
+            "name": "J.K. Dobbins",
+            "preseason_rank": 23,
+            "actual_rank": 47,
+            "rank_error": 24,
+            "games": 10,
+            "ppg": 5.3
           }
         ]
       },
       "WR": {
         "players_graded": 46,
         "mean_abs_rank_error": 20.9,
-        "hit_rate_within_5": 0.391,
+        "hit_rate_within_5": 0.413,
         "vs_consensus": {
           "players": 46,
-          "ours_rho": 0.6,
-          "market_rho": 0.671
+          "ours_rho": 0.625,
+          "market_rho": 0.676
         },
         "biggest_steals": [
           {
             "player_id": "00-0036912",
             "name": "DeVonta Smith",
             "preseason_rank": 42,
-            "actual_rank": 14,
-            "rank_error": -28,
-            "games": 4,
-            "ppg": 10.8
+            "actual_rank": 20,
+            "rank_error": -22,
+            "games": 5,
+            "ppg": 9.4
           },
           {
             "player_id": "00-0036322",
             "name": "Justin Jefferson",
             "preseason_rank": 46,
-            "actual_rank": 23,
-            "rank_error": -23,
-            "games": 8,
-            "ppg": 9.0
-          },
-          {
-            "player_id": "00-0040735",
-            "name": "Luther Burden III",
-            "preseason_rank": 38,
-            "actual_rank": 19,
-            "rank_error": -19,
+            "actual_rank": 26,
+            "rank_error": -20,
             "games": 9,
-            "ppg": 9.7
+            "ppg": 8.7
           },
           {
             "player_id": "00-0036358",
             "name": "CeeDee Lamb",
             "preseason_rank": 18,
-            "actual_rank": 3,
-            "rank_error": -15,
-            "games": 10,
-            "ppg": 14.5
+            "actual_rank": 2,
+            "rank_error": -16,
+            "games": 11,
+            "ppg": 14.9
           },
           {
-            "player_id": "00-0038124",
-            "name": "Christian Watson",
-            "preseason_rank": 15,
-            "actual_rank": 5,
-            "rank_error": -10,
+            "player_id": "00-0034827",
+            "name": "DJ Moore",
+            "preseason_rank": 37,
+            "actual_rank": 22,
+            "rank_error": -15,
+            "games": 8,
+            "ppg": 8.9
+          },
+          {
+            "player_id": "00-0040735",
+            "name": "Luther Burden III",
+            "preseason_rank": 38,
+            "actual_rank": 23,
+            "rank_error": -15,
             "games": 10,
-            "ppg": 13.2
+            "ppg": 8.9
           }
         ],
         "biggest_busts": [
@@ -901,17 +901,17 @@
             "player_id": "00-0036259",
             "name": "Jauan Jennings",
             "preseason_rank": 17,
-            "actual_rank": 141,
-            "rank_error": 124,
-            "games": 6,
-            "ppg": 0.9
+            "actual_rank": 140,
+            "rank_error": 123,
+            "games": 7,
+            "ppg": 1.1
           },
           {
             "player_id": "00-0035676",
             "name": "A.J. Brown",
             "preseason_rank": 6,
-            "actual_rank": 97,
-            "rank_error": 91,
+            "actual_rank": 96,
+            "rank_error": 90,
             "games": 4,
             "ppg": 3.2
           },
@@ -919,39 +919,39 @@
             "player_id": "00-0039868",
             "name": "Troy Franklin",
             "preseason_rank": 50,
-            "actual_rank": 132,
-            "rank_error": 82,
-            "games": 8,
-            "ppg": 1.3
+            "actual_rank": 135,
+            "rank_error": 85,
+            "games": 9,
+            "ppg": 1.2
           },
           {
             "player_id": "00-0033921",
             "name": "Chris Godwin Jr.",
             "preseason_rank": 39,
-            "actual_rank": 96,
-            "rank_error": 57,
-            "games": 9,
-            "ppg": 3.2
+            "actual_rank": 103,
+            "rank_error": 64,
+            "games": 10,
+            "ppg": 3.0
           },
           {
             "player_id": "00-0034348",
             "name": "Courtland Sutton",
             "preseason_rank": 21,
-            "actual_rank": 76,
-            "rank_error": 55,
-            "games": 9,
-            "ppg": 4.3
+            "actual_rank": 81,
+            "rank_error": 60,
+            "games": 10,
+            "ppg": 3.9
           }
         ]
       },
       "TE": {
         "players_graded": 43,
-        "mean_abs_rank_error": 14.1,
-        "hit_rate_within_5": 0.186,
+        "mean_abs_rank_error": 14.0,
+        "hit_rate_within_5": 0.233,
         "vs_consensus": {
           "players": 43,
-          "ours_rho": 0.552,
-          "market_rho": 0.741
+          "ours_rho": 0.57,
+          "market_rho": 0.757
         },
         "biggest_steals": [
           {
@@ -960,8 +960,8 @@
             "preseason_rank": 45,
             "actual_rank": 2,
             "rank_error": -43,
-            "games": 9,
-            "ppg": 11.3
+            "games": 10,
+            "ppg": 10.5
           },
           {
             "player_id": "00-0036894",
@@ -969,35 +969,35 @@
             "preseason_rank": 35,
             "actual_rank": 8,
             "rank_error": -27,
-            "games": 9,
-            "ppg": 7.1
+            "games": 10,
+            "ppg": 6.8
           },
           {
             "player_id": "00-0034829",
             "name": "Mike Gesicki",
             "preseason_rank": 24,
-            "actual_rank": 5,
-            "rank_error": -19,
-            "games": 8,
+            "actual_rank": 6,
+            "rank_error": -18,
+            "games": 9,
             "ppg": 7.8
           },
           {
             "player_id": "00-0030506",
             "name": "Travis Kelce",
             "preseason_rank": 22,
-            "actual_rank": 6,
-            "rank_error": -16,
-            "games": 9,
-            "ppg": 7.7
+            "actual_rank": 5,
+            "rank_error": -17,
+            "games": 10,
+            "ppg": 8.9
           },
           {
-            "player_id": "00-0037005",
-            "name": "Tommy Tremble",
-            "preseason_rank": 38,
-            "actual_rank": 22,
+            "player_id": "00-0034753",
+            "name": "Mark Andrews",
+            "preseason_rank": 50,
+            "actual_rank": 34,
             "rank_error": -16,
-            "games": 9,
-            "ppg": 4.5
+            "games": 11,
+            "ppg": 3.4
           }
         ],
         "biggest_busts": [
@@ -1005,8 +1005,8 @@
             "player_id": "00-0036244",
             "name": "Colby Parkinson",
             "preseason_rank": 8,
-            "actual_rank": 52,
-            "rank_error": 44,
+            "actual_rank": 53,
+            "rank_error": 45,
             "games": 8,
             "ppg": 2.3
           },
@@ -1014,17 +1014,17 @@
             "player_id": "00-0035689",
             "name": "Dawson Knox",
             "preseason_rank": 20,
-            "actual_rank": 62,
-            "rank_error": 42,
-            "games": 9,
-            "ppg": 1.6
+            "actual_rank": 63,
+            "rank_error": 43,
+            "games": 10,
+            "ppg": 1.8
           },
           {
             "player_id": "00-0040194",
             "name": "Jackson Hawes",
             "preseason_rank": 47,
-            "actual_rank": 87,
-            "rank_error": 40,
+            "actual_rank": 89,
+            "rank_error": 42,
             "games": 6,
             "ppg": 0.2
           },
@@ -1034,74 +1034,74 @@
             "preseason_rank": 42,
             "actual_rank": 79,
             "rank_error": 37,
-            "games": 5,
-            "ppg": 0.4
+            "games": 6,
+            "ppg": 0.6
           },
           {
             "player_id": "00-0039847",
             "name": "Theo Johnson",
             "preseason_rank": 28,
-            "actual_rank": 50,
-            "rank_error": 22,
-            "games": 5,
-            "ppg": 2.5
+            "actual_rank": 55,
+            "rank_error": 27,
+            "games": 6,
+            "ppg": 2.3
           }
         ]
       },
       "K": {
         "players_graded": 29,
-        "mean_abs_rank_error": 11.2,
-        "hit_rate_within_5": 0.241,
+        "mean_abs_rank_error": 11.1,
+        "hit_rate_within_5": 0.276,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.244,
-          "market_rho": 0.297
+          "ours_rho": 0.201,
+          "market_rho": 0.293
         },
         "biggest_steals": [
           {
             "player_id": "00-0035269",
             "name": "Matt Gay",
             "preseason_rank": 37,
-            "actual_rank": 8,
-            "rank_error": -29,
-            "games": 10,
-            "ppg": 9.6
+            "actual_rank": 12,
+            "rank_error": -25,
+            "games": 11,
+            "ppg": 9.3
           },
           {
             "player_id": "00-0038428",
             "name": "Andre Szmyt",
             "preseason_rank": 36,
-            "actual_rank": 14,
-            "rank_error": -22,
+            "actual_rank": 15,
+            "rank_error": -21,
             "games": 10,
             "ppg": 8.9
-          },
-          {
-            "player_id": "00-0040279",
-            "name": "Ryan Fitzgerald",
-            "preseason_rank": 34,
-            "actual_rank": 18,
-            "rank_error": -16,
-            "games": 9,
-            "ppg": 8.3
           },
           {
             "player_id": "00-0031136",
             "name": "Chris Boswell",
             "preseason_rank": 27,
-            "actual_rank": 12,
-            "rank_error": -15,
-            "games": 9,
-            "ppg": 9.1
+            "actual_rank": 8,
+            "rank_error": -19,
+            "games": 10,
+            "ppg": 9.5
           },
           {
-            "player_id": "00-0038567",
-            "name": "Chad Ryland",
-            "preseason_rank": 28,
-            "actual_rank": 13,
-            "rank_error": -15,
+            "player_id": "00-0040279",
+            "name": "Ryan Fitzgerald",
+            "preseason_rank": 34,
+            "actual_rank": 17,
+            "rank_error": -17,
             "games": 10,
-            "ppg": 9.1
+            "ppg": 8.4
+          },
+          {
+            "player_id": "00-0035192",
+            "name": "Joey Slye",
+            "preseason_rank": 32,
+            "actual_rank": 19,
+            "rank_error": -13,
+            "games": 10,
+            "ppg": 8.3
           }
         ],
         "biggest_busts": [
@@ -1109,8 +1109,8 @@
             "player_id": "00-0040200",
             "name": "Andy Borregales",
             "preseason_rank": 9,
-            "actual_rank": 31,
-            "rank_error": 22,
+            "actual_rank": 32,
+            "rank_error": 23,
             "games": 10,
             "ppg": 5.9
           },
@@ -1118,8 +1118,8 @@
             "player_id": "00-0039498",
             "name": "Harrison Mevis",
             "preseason_rank": 11,
-            "actual_rank": 32,
-            "rank_error": 21,
+            "actual_rank": 33,
+            "rank_error": 22,
             "games": 5,
             "ppg": 5.8
           },
@@ -1127,8 +1127,8 @@
             "player_id": "00-0033862",
             "name": "Zane Gonzalez",
             "preseason_rank": 6,
-            "actual_rank": 27,
-            "rank_error": 21,
+            "actual_rank": 28,
+            "rank_error": 22,
             "games": 4,
             "ppg": 6.5
           },
@@ -1136,8 +1136,8 @@
             "player_id": "00-0031492",
             "name": "Jason Myers",
             "preseason_rank": 2,
-            "actual_rank": 22,
-            "rank_error": 20,
+            "actual_rank": 23,
+            "rank_error": 21,
             "games": 10,
             "ppg": 7.8
           },
@@ -1145,10 +1145,10 @@
             "player_id": "00-0034173",
             "name": "Eddy Pineiro",
             "preseason_rank": 13,
-            "actual_rank": 28,
-            "rank_error": 15,
-            "games": 9,
-            "ppg": 6.4
+            "actual_rank": 30,
+            "rank_error": 17,
+            "games": 10,
+            "ppg": 6.3
           }
         ]
       },
@@ -1158,54 +1158,54 @@
         "hit_rate_within_5": 0.469,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.412,
-          "market_rho": 0.364
+          "ours_rho": 0.42,
+          "market_rho": 0.35
         },
         "biggest_steals": [
           {
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 7,
-            "rank_error": -21,
+            "actual_rank": 8,
+            "rank_error": -20,
             "games": 10,
             "ppg": 7.2
+          },
+          {
+            "player_id": "SF_DST",
+            "name": "SF D/ST",
+            "preseason_rank": 23,
+            "actual_rank": 10,
+            "rank_error": -13,
+            "games": 10,
+            "ppg": 6.9
           },
           {
             "player_id": "TB_DST",
             "name": "TB D/ST",
             "preseason_rank": 15,
-            "actual_rank": 2,
-            "rank_error": -13,
-            "games": 9,
-            "ppg": 8.9
+            "actual_rank": 3,
+            "rank_error": -12,
+            "games": 10,
+            "ppg": 8.0
           },
           {
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
-            "actual_rank": 4,
-            "rank_error": -12,
-            "games": 9,
-            "ppg": 8.0
+            "actual_rank": 5,
+            "rank_error": -11,
+            "games": 10,
+            "ppg": 7.8
           },
           {
             "player_id": "NYG_DST",
             "name": "NYG D/ST",
             "preseason_rank": 26,
-            "actual_rank": 16,
-            "rank_error": -10,
-            "games": 9,
-            "ppg": 6.0
-          },
-          {
-            "player_id": "TEN_DST",
-            "name": "TEN D/ST",
-            "preseason_rank": 29,
-            "actual_rank": 19,
-            "rank_error": -10,
-            "games": 9,
-            "ppg": 5.3
+            "actual_rank": 15,
+            "rank_error": -11,
+            "games": 10,
+            "ppg": 6.2
           }
         ],
         "biggest_busts": [
@@ -1215,44 +1215,44 @@
             "preseason_rank": 4,
             "actual_rank": 31,
             "rank_error": 27,
-            "games": 9,
-            "ppg": 2.8
-          },
-          {
-            "player_id": "NO_DST",
-            "name": "NO D/ST",
-            "preseason_rank": 9,
-            "actual_rank": 25,
-            "rank_error": 16,
-            "games": 9,
-            "ppg": 4.2
+            "games": 10,
+            "ppg": 3.1
           },
           {
             "player_id": "ATL_DST",
             "name": "ATL D/ST",
             "preseason_rank": 12,
-            "actual_rank": 27,
-            "rank_error": 15,
+            "actual_rank": 28,
+            "rank_error": 16,
             "games": 10,
             "ppg": 3.5
+          },
+          {
+            "player_id": "NO_DST",
+            "name": "NO D/ST",
+            "preseason_rank": 9,
+            "actual_rank": 24,
+            "rank_error": 15,
+            "games": 10,
+            "ppg": 4.4
           },
           {
             "player_id": "LAC_DST",
             "name": "LAC D/ST",
             "preseason_rank": 13,
-            "actual_rank": 24,
-            "rank_error": 11,
-            "games": 9,
-            "ppg": 4.3
+            "actual_rank": 26,
+            "rank_error": 13,
+            "games": 10,
+            "ppg": 4.0
           },
           {
-            "player_id": "NE_DST",
-            "name": "NE D/ST",
-            "preseason_rank": 11,
-            "actual_rank": 22,
-            "rank_error": 11,
-            "games": 10,
-            "ppg": 4.8
+            "player_id": "BAL_DST",
+            "name": "BAL D/ST",
+            "preseason_rank": 18,
+            "actual_rank": 27,
+            "rank_error": 9,
+            "games": 11,
+            "ppg": 3.7
           }
         ]
       }

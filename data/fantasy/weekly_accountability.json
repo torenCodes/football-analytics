@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-21T08:14:15.887692+00:00"
+  "generated_at": "2026-11-24T15:42:27.978164+00:00"
  },
  "available": true,
  "season": 2026,
@@ -1085,122 +1085,239 @@
    "week": 11,
    "start_score_version": "v2",
    "by_format": {
-    "ppr": {},
-    "standard": {}
+    "ppr": {
+     "QB": {
+      "players": 30,
+      "start_score": 0.744,
+      "recent_ppg": 0.584,
+      "start_score_rho": 0.636,
+      "recent_ppg_rho": 0.179,
+      "market": 0.746,
+      "market_rho": 0.648
+     },
+     "RB": {
+      "players": 47,
+      "start_score": 0.705,
+      "recent_ppg": 0.643,
+      "start_score_rho": 0.528,
+      "recent_ppg_rho": 0.417,
+      "market": 0.763,
+      "market_rho": 0.673
+     },
+     "WR": {
+      "players": 60,
+      "start_score": 0.711,
+      "recent_ppg": 0.653,
+      "start_score_rho": 0.565,
+      "recent_ppg_rho": 0.414,
+      "market": 0.73,
+      "market_rho": 0.619
+     },
+     "TE": {
+      "players": 24,
+      "start_score": 0.77,
+      "recent_ppg": 0.688,
+      "start_score_rho": 0.663,
+      "recent_ppg_rho": 0.457,
+      "market": 0.736,
+      "market_rho": 0.65
+     },
+     "K": {
+      "players": 21,
+      "start_score": 0.612,
+      "recent_ppg": 0.492,
+      "start_score_rho": 0.234,
+      "recent_ppg_rho": -0.034,
+      "market": 0.594,
+      "market_rho": 0.197
+     },
+     "DST": {
+      "players": 23,
+      "start_score": 0.647,
+      "recent_ppg": 0.477,
+      "start_score_rho": 0.335,
+      "recent_ppg_rho": -0.091,
+      "market": 0.586,
+      "market_rho": 0.152
+     }
+    },
+    "standard": {
+     "QB": {
+      "players": 30,
+      "start_score": 0.746,
+      "recent_ppg": 0.584,
+      "start_score_rho": 0.639,
+      "recent_ppg_rho": 0.179,
+      "market": 0.746,
+      "market_rho": 0.648
+     },
+     "RB": {
+      "players": 46,
+      "start_score": 0.675,
+      "recent_ppg": 0.651,
+      "start_score_rho": 0.461,
+      "recent_ppg_rho": 0.444,
+      "market": 0.761,
+      "market_rho": 0.675
+     },
+     "WR": {
+      "players": 63,
+      "start_score": 0.7,
+      "recent_ppg": 0.645,
+      "start_score_rho": 0.507,
+      "recent_ppg_rho": 0.387,
+      "market": 0.72,
+      "market_rho": 0.573
+     },
+     "TE": {
+      "players": 27,
+      "start_score": 0.733,
+      "recent_ppg": 0.596,
+      "start_score_rho": 0.606,
+      "recent_ppg_rho": 0.233,
+      "market": 0.695,
+      "market_rho": 0.544
+     },
+     "K": {
+      "players": 21,
+      "start_score": 0.607,
+      "recent_ppg": 0.492,
+      "start_score_rho": 0.234,
+      "recent_ppg_rho": -0.034,
+      "market": 0.594,
+      "market_rho": 0.197
+     },
+     "DST": {
+      "players": 23,
+      "start_score": 0.647,
+      "recent_ppg": 0.477,
+      "start_score_rho": 0.335,
+      "recent_ppg_rho": -0.091,
+      "market": 0.586,
+      "market_rho": 0.152
+     }
+    }
+   },
+   "streaming": {
+    "pick": "LAC",
+    "points": 1.0,
+    "fp_pick": "NYJ",
+    "fp_points": 6.0,
+    "pool_average": 4.3
    }
   }
  ],
  "season_by_format": {
   "ppr": {
    "QB": {
-    "start_score": 0.603,
-    "recent_ppg": 0.591,
-    "market": 0.716,
-    "start_score_rho": 0.281,
-    "recent_ppg_rho": 0.258,
-    "market_rho": 0.57,
-    "weeks": 9
+    "start_score": 0.617,
+    "recent_ppg": 0.59,
+    "market": 0.719,
+    "start_score_rho": 0.317,
+    "recent_ppg_rho": 0.25,
+    "market_rho": 0.578,
+    "weeks": 10
    },
    "RB": {
-    "start_score": 0.661,
+    "start_score": 0.665,
     "recent_ppg": 0.642,
-    "market": 0.745,
-    "start_score_rho": 0.433,
-    "recent_ppg_rho": 0.403,
-    "market_rho": 0.644,
-    "weeks": 9
+    "market": 0.747,
+    "start_score_rho": 0.442,
+    "recent_ppg_rho": 0.404,
+    "market_rho": 0.647,
+    "weeks": 10
    },
    "WR": {
-    "start_score": 0.647,
-    "recent_ppg": 0.627,
-    "market": 0.713,
-    "start_score_rho": 0.383,
-    "recent_ppg_rho": 0.341,
-    "market_rho": 0.562,
-    "weeks": 9
+    "start_score": 0.654,
+    "recent_ppg": 0.629,
+    "market": 0.715,
+    "start_score_rho": 0.401,
+    "recent_ppg_rho": 0.348,
+    "market_rho": 0.568,
+    "weeks": 10
    },
    "TE": {
-    "start_score": 0.54,
-    "recent_ppg": 0.55,
-    "market": 0.674,
-    "start_score_rho": 0.116,
-    "recent_ppg_rho": 0.14,
-    "market_rho": 0.478,
-    "weeks": 9
+    "start_score": 0.563,
+    "recent_ppg": 0.563,
+    "market": 0.68,
+    "start_score_rho": 0.171,
+    "recent_ppg_rho": 0.172,
+    "market_rho": 0.495,
+    "weeks": 10
    },
    "K": {
-    "start_score": 0.498,
-    "recent_ppg": 0.53,
-    "market": 0.539,
-    "start_score_rho": -0.051,
-    "recent_ppg_rho": 0.044,
-    "market_rho": 0.087,
-    "weeks": 9
+    "start_score": 0.51,
+    "recent_ppg": 0.526,
+    "market": 0.544,
+    "start_score_rho": -0.023,
+    "recent_ppg_rho": 0.036,
+    "market_rho": 0.098,
+    "weeks": 10
    },
    "DST": {
-    "start_score": 0.55,
-    "recent_ppg": 0.511,
-    "market": 0.591,
-    "start_score_rho": 0.069,
-    "recent_ppg_rho": -0.021,
-    "market_rho": 0.224,
-    "weeks": 9
+    "start_score": 0.559,
+    "recent_ppg": 0.508,
+    "market": 0.59,
+    "start_score_rho": 0.095,
+    "recent_ppg_rho": -0.028,
+    "market_rho": 0.216,
+    "weeks": 10
    }
   },
   "standard": {
    "QB": {
-    "start_score": 0.602,
-    "recent_ppg": 0.591,
-    "market": 0.716,
-    "start_score_rho": 0.282,
-    "recent_ppg_rho": 0.259,
-    "market_rho": 0.57,
-    "weeks": 9
+    "start_score": 0.617,
+    "recent_ppg": 0.59,
+    "market": 0.719,
+    "start_score_rho": 0.317,
+    "recent_ppg_rho": 0.251,
+    "market_rho": 0.578,
+    "weeks": 10
    },
    "RB": {
-    "start_score": 0.65,
-    "recent_ppg": 0.634,
-    "market": 0.75,
-    "start_score_rho": 0.395,
-    "recent_ppg_rho": 0.372,
-    "market_rho": 0.651,
-    "weeks": 9
+    "start_score": 0.652,
+    "recent_ppg": 0.635,
+    "market": 0.751,
+    "start_score_rho": 0.402,
+    "recent_ppg_rho": 0.379,
+    "market_rho": 0.654,
+    "weeks": 10
    },
    "WR": {
-    "start_score": 0.631,
-    "recent_ppg": 0.609,
+    "start_score": 0.638,
+    "recent_ppg": 0.613,
     "market": 0.717,
-    "start_score_rho": 0.331,
-    "recent_ppg_rho": 0.285,
+    "start_score_rho": 0.349,
+    "recent_ppg_rho": 0.295,
     "market_rho": 0.567,
-    "weeks": 9
+    "weeks": 10
    },
    "TE": {
-    "start_score": 0.535,
-    "recent_ppg": 0.538,
-    "market": 0.681,
-    "start_score_rho": 0.07,
-    "recent_ppg_rho": 0.091,
-    "market_rho": 0.488,
-    "weeks": 9
+    "start_score": 0.555,
+    "recent_ppg": 0.544,
+    "market": 0.682,
+    "start_score_rho": 0.124,
+    "recent_ppg_rho": 0.105,
+    "market_rho": 0.494,
+    "weeks": 10
    },
    "K": {
-    "start_score": 0.498,
-    "recent_ppg": 0.53,
-    "market": 0.539,
-    "start_score_rho": -0.053,
-    "recent_ppg_rho": 0.044,
-    "market_rho": 0.087,
-    "weeks": 9
+    "start_score": 0.509,
+    "recent_ppg": 0.526,
+    "market": 0.544,
+    "start_score_rho": -0.024,
+    "recent_ppg_rho": 0.036,
+    "market_rho": 0.098,
+    "weeks": 10
    },
    "DST": {
-    "start_score": 0.55,
-    "recent_ppg": 0.511,
-    "market": 0.591,
-    "start_score_rho": 0.069,
-    "recent_ppg_rho": -0.021,
-    "market_rho": 0.224,
-    "weeks": 9
+    "start_score": 0.559,
+    "recent_ppg": 0.508,
+    "market": 0.59,
+    "start_score_rho": 0.095,
+    "recent_ppg_rho": -0.028,
+    "market_rho": 0.216,
+    "weeks": 10
    }
   }
  },
@@ -1336,114 +1453,114 @@
    ],
    "ppr": {
     "QB": {
-     "start_score": 0.728,
-     "recent_ppg": 0.69,
-     "market": 0.766,
-     "start_score_rho": 0.627,
-     "recent_ppg_rho": 0.522,
-     "market_rho": 0.704,
-     "weeks": 2
+     "start_score": 0.733,
+     "recent_ppg": 0.655,
+     "market": 0.76,
+     "start_score_rho": 0.63,
+     "recent_ppg_rho": 0.408,
+     "market_rho": 0.686,
+     "weeks": 3
     },
     "RB": {
-     "start_score": 0.74,
-     "recent_ppg": 0.635,
-     "market": 0.784,
-     "start_score_rho": 0.604,
-     "recent_ppg_rho": 0.381,
-     "market_rho": 0.709,
-     "weeks": 2
+     "start_score": 0.728,
+     "recent_ppg": 0.638,
+     "market": 0.777,
+     "start_score_rho": 0.579,
+     "recent_ppg_rho": 0.393,
+     "market_rho": 0.697,
+     "weeks": 3
     },
     "WR": {
-     "start_score": 0.754,
-     "recent_ppg": 0.604,
-     "market": 0.75,
-     "start_score_rho": 0.639,
-     "recent_ppg_rho": 0.277,
-     "market_rho": 0.645,
-     "weeks": 2
+     "start_score": 0.739,
+     "recent_ppg": 0.62,
+     "market": 0.743,
+     "start_score_rho": 0.615,
+     "recent_ppg_rho": 0.323,
+     "market_rho": 0.637,
+     "weeks": 3
     },
     "TE": {
-     "start_score": 0.594,
-     "recent_ppg": 0.547,
-     "market": 0.643,
-     "start_score_rho": 0.302,
-     "recent_ppg_rho": 0.137,
-     "market_rho": 0.404,
-     "weeks": 2
+     "start_score": 0.653,
+     "recent_ppg": 0.594,
+     "market": 0.674,
+     "start_score_rho": 0.422,
+     "recent_ppg_rho": 0.244,
+     "market_rho": 0.486,
+     "weeks": 3
     },
     "K": {
-     "start_score": 0.573,
-     "recent_ppg": 0.653,
-     "market": 0.674,
-     "start_score_rho": 0.131,
-     "recent_ppg_rho": 0.404,
-     "market_rho": 0.39,
-     "weeks": 2
+     "start_score": 0.586,
+     "recent_ppg": 0.599,
+     "market": 0.648,
+     "start_score_rho": 0.165,
+     "recent_ppg_rho": 0.258,
+     "market_rho": 0.325,
+     "weeks": 3
     },
     "DST": {
-     "start_score": 0.694,
-     "recent_ppg": 0.52,
-     "market": 0.611,
-     "start_score_rho": 0.45,
-     "recent_ppg_rho": 0.044,
-     "market_rho": 0.276,
-     "weeks": 2
+     "start_score": 0.678,
+     "recent_ppg": 0.505,
+     "market": 0.603,
+     "start_score_rho": 0.411,
+     "recent_ppg_rho": -0.001,
+     "market_rho": 0.235,
+     "weeks": 3
     }
    },
    "standard": {
     "QB": {
-     "start_score": 0.726,
-     "recent_ppg": 0.688,
-     "market": 0.766,
-     "start_score_rho": 0.621,
-     "recent_ppg_rho": 0.519,
-     "market_rho": 0.704,
-     "weeks": 2
+     "start_score": 0.732,
+     "recent_ppg": 0.653,
+     "market": 0.76,
+     "start_score_rho": 0.627,
+     "recent_ppg_rho": 0.406,
+     "market_rho": 0.686,
+     "weeks": 3
     },
     "RB": {
-     "start_score": 0.707,
-     "recent_ppg": 0.597,
-     "market": 0.76,
-     "start_score_rho": 0.532,
-     "recent_ppg_rho": 0.279,
-     "market_rho": 0.653,
-     "weeks": 2
+     "start_score": 0.696,
+     "recent_ppg": 0.615,
+     "market": 0.761,
+     "start_score_rho": 0.508,
+     "recent_ppg_rho": 0.334,
+     "market_rho": 0.66,
+     "weeks": 3
     },
     "WR": {
-     "start_score": 0.74,
-     "recent_ppg": 0.568,
-     "market": 0.736,
-     "start_score_rho": 0.61,
-     "recent_ppg_rho": 0.177,
-     "market_rho": 0.621,
-     "weeks": 2
+     "start_score": 0.727,
+     "recent_ppg": 0.594,
+     "market": 0.731,
+     "start_score_rho": 0.576,
+     "recent_ppg_rho": 0.247,
+     "market_rho": 0.605,
+     "weeks": 3
     },
     "TE": {
-     "start_score": 0.617,
-     "recent_ppg": 0.509,
-     "market": 0.663,
-     "start_score_rho": 0.318,
-     "recent_ppg_rho": 0.052,
-     "market_rho": 0.438,
-     "weeks": 2
+     "start_score": 0.655,
+     "recent_ppg": 0.538,
+     "market": 0.674,
+     "start_score_rho": 0.414,
+     "recent_ppg_rho": 0.113,
+     "market_rho": 0.473,
+     "weeks": 3
     },
     "K": {
-     "start_score": 0.572,
-     "recent_ppg": 0.653,
-     "market": 0.674,
-     "start_score_rho": 0.126,
-     "recent_ppg_rho": 0.404,
-     "market_rho": 0.39,
-     "weeks": 2
+     "start_score": 0.584,
+     "recent_ppg": 0.599,
+     "market": 0.648,
+     "start_score_rho": 0.162,
+     "recent_ppg_rho": 0.258,
+     "market_rho": 0.325,
+     "weeks": 3
     },
     "DST": {
-     "start_score": 0.694,
-     "recent_ppg": 0.52,
-     "market": 0.611,
-     "start_score_rho": 0.45,
-     "recent_ppg_rho": 0.044,
-     "market_rho": 0.276,
-     "weeks": 2
+     "start_score": 0.678,
+     "recent_ppg": 0.505,
+     "market": 0.603,
+     "start_score_rho": 0.411,
+     "recent_ppg_rho": -0.001,
+     "market_rho": 0.235,
+     "weeks": 3
     }
    }
   }
