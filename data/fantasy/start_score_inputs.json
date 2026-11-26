@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-24T20:34:05.807592+00:00"
+  "generated_at": "2026-11-26T04:04:03.724593+00:00"
  },
  "season": 2026,
  "week": 12,
@@ -75,40 +75,40 @@
  "players": {
   "QB": [
    {
-    "name": "Joe Burrow",
-    "team": "CIN",
-    "opponent": "NO",
-    "score": 21.53,
-    "status": null,
-    "inputs": {
-     "form": 25.58,
-     "team_total": 7.75,
-     "matchup": -0.28,
-     "carries": 2.5
-    }
-   },
-   {
     "name": "Trevor Lawrence",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 21.18,
+    "score": 21.65,
     "status": null,
     "inputs": {
      "form": 19.8,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 4.14,
      "carries": 2.83
+    }
+   },
+   {
+    "name": "Joe Burrow",
+    "team": "CIN",
+    "opponent": "NO",
+    "score": 21.3,
+    "status": null,
+    "inputs": {
+     "form": 25.58,
+     "team_total": 7.25,
+     "matchup": -0.28,
+     "carries": 2.5
     }
    },
    {
     "name": "Dak Prescott",
     "team": "DAL",
     "opponent": "PHI",
-    "score": 20.31,
+    "score": 20.54,
     "status": null,
     "inputs": {
      "form": 22.37,
-     "team_total": 5.5,
+     "team_total": 6.0,
      "matchup": 1.46,
      "carries": 3.5
     }
@@ -117,11 +117,11 @@
     "name": "Caleb Williams",
     "team": "CHI",
     "opponent": "DET",
-    "score": 20.09,
+    "score": 19.86,
     "status": null,
     "inputs": {
      "form": 16.78,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": 4.25,
      "carries": 4.17
     }
@@ -140,40 +140,40 @@
     }
    },
    {
-    "name": "Jayden Daniels",
-    "team": "WAS",
-    "opponent": "ARI",
-    "score": 19.3,
-    "status": null,
-    "inputs": {
-     "form": 19.25,
-     "team_total": 2.5,
-     "matchup": 4.35,
-     "carries": 6.0
-    }
-   },
-   {
     "name": "Josh Allen",
     "team": "BUF",
     "opponent": "KC",
-    "score": 19.19,
+    "score": 18.96,
     "status": null,
     "inputs": {
      "form": 22.22,
-     "team_total": 2.75,
+     "team_total": 2.25,
      "matchup": -4.43,
      "carries": 5.5
+    }
+   },
+   {
+    "name": "Jayden Daniels",
+    "team": "WAS",
+    "opponent": "ARI",
+    "score": 18.96,
+    "status": null,
+    "inputs": {
+     "form": 19.25,
+     "team_total": 1.75,
+     "matchup": 4.35,
+     "carries": 6.0
     }
    },
    {
     "name": "Jared Goff",
     "team": "DET",
     "opponent": "CHI",
-    "score": 18.43,
+    "score": 18.66,
     "status": null,
     "inputs": {
      "form": 17.9,
-     "team_total": 4.0,
+     "team_total": 4.5,
      "matchup": 0.84,
      "carries": 2.67
     }
@@ -182,50 +182,50 @@
     "name": "Brock Purdy",
     "team": "SF",
     "opponent": "SEA",
-    "score": 18.06,
-    "status": null,
-    "inputs": {
-     "form": 21.4,
-     "team_total": 2.25,
-     "matchup": -5.84,
-     "carries": 3.5
-    }
-   },
-   {
-    "name": "Deshaun Watson",
-    "team": "CLE",
-    "opponent": "LV",
     "score": 17.48,
     "status": null,
     "inputs": {
-     "form": 15.41,
-     "team_total": 0.5,
-     "matchup": 3.06,
-     "carries": 5.83
+     "form": 21.4,
+     "team_total": 1.0,
+     "matchup": -5.84,
+     "carries": 3.5
     }
    },
    {
     "name": "Kirk Cousins",
     "team": "MIN",
     "opponent": "ATL",
-    "score": 17.3,
+    "score": 17.07,
     "status": null,
     "inputs": {
      "form": 16.32,
-     "team_total": 2.25,
+     "team_total": 1.75,
      "matchup": 2.13,
      "carries": 2.33
+    }
+   },
+   {
+    "name": "Deshaun Watson",
+    "team": "CLE",
+    "opponent": "LV",
+    "score": 17.01,
+    "status": null,
+    "inputs": {
+     "form": 15.41,
+     "team_total": -0.5,
+     "matchup": 3.06,
+     "carries": 5.83
     }
    },
    {
     "name": "Patrick Mahomes",
     "team": "KC",
     "opponent": "BUF",
-    "score": 16.59,
+    "score": 16.35,
     "status": null,
     "inputs": {
      "form": 20.3,
-     "team_total": -0.25,
+     "team_total": -0.75,
      "matchup": -1.68,
      "carries": 2.17
     }
@@ -234,11 +234,11 @@
     "name": "J.J. McCarthy",
     "team": "NYG",
     "opponent": "IND",
-    "score": 16.38,
+    "score": 16.27,
     "status": null,
     "inputs": {
      "form": 11.4,
-     "team_total": 1.5,
+     "team_total": 1.25,
      "matchup": 1.81,
      "carries": 3.67
     }
@@ -247,26 +247,13 @@
     "name": "Matthew Stafford",
     "team": "LA",
     "opponent": "GB",
-    "score": 16.1,
+    "score": 15.87,
     "status": null,
     "inputs": {
      "form": 17.26,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": -3.06,
      "carries": 1.0
-    }
-   },
-   {
-    "name": "Tyler Shough",
-    "team": "NO",
-    "opponent": "CIN",
-    "score": 15.69,
-    "status": null,
-    "inputs": {
-     "form": 15.63,
-     "team_total": -2.25,
-     "matchup": 1.16,
-     "carries": 4.5
     }
    },
    {
@@ -283,53 +270,52 @@
     }
    },
    {
-    "name": "Bo Nix",
-    "team": "DEN",
-    "opponent": "PIT",
-    "score": 15.59,
+    "name": "Tyler Shough",
+    "team": "NO",
+    "opponent": "CIN",
+    "score": 15.45,
     "status": null,
     "inputs": {
-     "form": 14.93,
-     "team_total": -1.75,
-     "matchup": -2.82,
-     "carries": 4.83
+     "form": 15.63,
+     "team_total": -2.75,
+     "matchup": 1.16,
+     "carries": 4.5
     }
    },
    {
     "name": "Jordan Love",
     "team": "GB",
     "opponent": "LA",
-    "score": 15.58,
+    "score": 15.35,
     "status": null,
     "inputs": {
      "form": 20.0,
-     "team_total": -1.5,
+     "team_total": -2.0,
      "matchup": -2.36,
      "carries": 1.17
     }
    },
    {
-    "name": "Sam Darnold",
-    "team": "SEA",
-    "opponent": "SF",
-    "score": 15.15,
+    "name": "Bo Nix",
+    "team": "DEN",
+    "opponent": "PIT",
+    "score": 15.24,
     "status": null,
     "inputs": {
-     "form": 14.29,
-     "team_total": -0.75,
-     "matchup": -0.57,
-     "carries": 1.83
+     "form": 14.93,
+     "team_total": -2.5,
+     "matchup": -2.82,
+     "carries": 4.83
     }
    },
    {
     "name": "Geno Smith",
     "team": "NYJ",
     "opponent": "MIA",
-    "score": 15.01,
+    "score": 15.24,
     "status": null,
     "inputs": {
      "form": 14.03,
-     "team_total": -0.5,
      "matchup": -0.56,
      "carries": 1.17
     }
@@ -348,27 +334,27 @@
     }
    },
    {
-    "name": "Justin Herbert",
-    "team": "LAC",
-    "opponent": "NE",
-    "score": 14.68,
+    "name": "Sam Darnold",
+    "team": "SEA",
+    "opponent": "SF",
+    "score": 14.81,
     "status": null,
     "inputs": {
-     "form": 13.56,
-     "team_total": -4.0,
-     "matchup": 1.1,
-     "carries": 5.17
+     "form": 14.29,
+     "team_total": -1.5,
+     "matchup": -0.57,
+     "carries": 1.83
     }
    },
    {
     "name": "Joe Milton III",
     "team": "PHI",
     "opponent": "DAL",
-    "score": 14.57,
+    "score": 14.8,
     "status": null,
     "inputs": {
      "form": 6.67,
-     "team_total": -3.0,
+     "team_total": -2.5,
      "matchup": 3.85,
      "carries": 7.0
     }
@@ -387,66 +373,66 @@
     }
    },
    {
+    "name": "Justin Herbert",
+    "team": "LAC",
+    "opponent": "NE",
+    "score": 13.98,
+    "status": null,
+    "inputs": {
+     "form": 13.56,
+     "team_total": -5.5,
+     "matchup": 1.1,
+     "carries": 5.17
+    }
+   },
+   {
     "name": "Fernando Mendoza",
     "team": "LV",
     "opponent": "CLE",
-    "score": 13.88,
+    "score": 13.41,
     "status": null,
     "inputs": {
      "form": 13.01,
-     "team_total": -4.0,
+     "team_total": -5.0,
      "matchup": -1.85,
      "carries": 3.67
-    }
-   },
-   {
-    "name": "Aaron Rodgers",
-    "team": "PIT",
-    "opponent": "DEN",
-    "score": 13.57,
-    "status": null,
-    "inputs": {
-     "form": 14.75,
-     "team_total": -4.75,
-     "matchup": 1.05,
-     "carries": 2.0
-    }
-   },
-   {
-    "name": "Michael Penix Jr.",
-    "team": "ATL",
-    "opponent": "MIN",
-    "score": 13.26,
-    "status": null,
-    "inputs": {
-     "form": 13.88,
-     "team_total": -4.75,
-     "matchup": -6.38,
-     "carries": 3.33
     }
    },
    {
     "name": "Cam Ward",
     "team": "TEN",
     "opponent": "JAX",
-    "score": 12.92,
+    "score": 13.39,
     "status": null,
     "inputs": {
      "form": 14.24,
-     "team_total": -6.0,
+     "team_total": -5.0,
      "matchup": -2.65,
      "carries": 3.0
+    }
+   },
+   {
+    "name": "Michael Penix Jr.",
+    "team": "ATL",
+    "opponent": "MIN",
+    "score": 13.02,
+    "status": null,
+    "inputs": {
+     "form": 13.88,
+     "team_total": -5.25,
+     "matchup": -6.38,
+     "carries": 3.33
     }
    },
    {
     "name": "Kyle McCord",
     "team": "MIA",
     "opponent": "NYJ",
-    "score": 12.83,
+    "score": 12.6,
     "status": null,
     "inputs": {
      "form": 8.87,
-     "team_total": -4.0,
+     "team_total": -4.5,
      "matchup": 1.98,
      "carries": 2.0
     }
@@ -455,11 +441,11 @@
     "name": "Tommy DeVito",
     "team": "NE",
     "opponent": "LAC",
-    "score": 10.72,
+    "score": 11.41,
     "status": null,
     "inputs": {
      "form": 3.13,
-     "team_total": -5.5,
+     "team_total": -4.0,
      "matchup": -0.54,
      "carries": 1.67
     }
@@ -468,11 +454,11 @@
     "name": "Anthony Richardson",
     "team": "IND",
     "opponent": "NYG",
-    "score": 10.61,
+    "score": 10.72,
     "status": null,
     "inputs": {
      "form": 0.77,
-     "team_total": -5.0,
+     "team_total": -4.75,
      "matchup": 1.74,
      "carries": 1.5
     }
@@ -481,24 +467,37 @@
     "name": "Carson Beck",
     "team": "ARI",
     "opponent": "WAS",
-    "score": 10.45,
+    "score": 10.33,
     "status": null,
     "inputs": {
      "form": 0.42,
-     "team_total": -5.0,
+     "team_total": -5.25,
      "matchup": 2.64,
      "carries": 1.0
+    }
+   },
+   {
+    "name": "Mason Rudolph",
+    "team": "PIT",
+    "opponent": "DEN",
+    "score": 10.2,
+    "status": null,
+    "inputs": {
+     "form": 1.58,
+     "team_total": -6.0,
+     "matchup": 1.05,
+     "carries": 1.33
     }
    },
    {
     "name": "Case Keenum",
     "team": "CHI",
     "opponent": "DET",
-    "score": 6.12,
+    "score": 5.88,
     "status": "Backup",
     "inputs": {
      "form": 13.6,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": 4.25,
      "carries": 2.5,
      "not_starter": 1.0
@@ -508,26 +507,12 @@
     "name": "Quinn Ewers",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 4.69,
+    "score": 5.15,
     "status": "Backup",
     "inputs": {
      "form": 5.64,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 4.14,
-     "not_starter": 1.0
-    }
-   },
-   {
-    "name": "Kyler Murray",
-    "team": "MIN",
-    "opponent": "ATL",
-    "score": 4.62,
-    "status": "Backup",
-    "inputs": {
-     "form": 13.09,
-     "team_total": 2.25,
-     "matchup": 2.13,
-     "carries": 4.83,
      "not_starter": 1.0
     }
    },
@@ -535,13 +520,27 @@
     "name": "Nick Mullens",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 4.5,
+    "score": 4.97,
     "status": "Backup",
     "inputs": {
      "form": -0.11,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 4.14,
      "carries": 3.0,
+     "not_starter": 1.0
+    }
+   },
+   {
+    "name": "Kyler Murray",
+    "team": "MIN",
+    "opponent": "ATL",
+    "score": 4.39,
+    "status": "Backup",
+    "inputs": {
+     "form": 13.09,
+     "team_total": 1.75,
+     "matchup": 2.13,
+     "carries": 4.83,
      "not_starter": 1.0
     }
    },
@@ -549,40 +548,12 @@
     "name": "Tyson Bagent",
     "team": "CHI",
     "opponent": "DET",
-    "score": 3.98,
+    "score": 3.74,
     "status": "Backup",
     "inputs": {
      "form": 2.95,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": 4.25,
-     "carries": 2.33,
-     "not_starter": 1.0
-    }
-   },
-   {
-    "name": "Athan Kaliakmanis",
-    "team": "WAS",
-    "opponent": "ARI",
-    "score": 3.93,
-    "status": "Backup",
-    "inputs": {
-     "form": 11.04,
-     "team_total": 2.5,
-     "matchup": 4.35,
-     "carries": 3.0,
-     "not_starter": 1.0
-    }
-   },
-   {
-    "name": "Marcus Mariota",
-    "team": "WAS",
-    "opponent": "ARI",
-    "score": 3.91,
-    "status": "Backup",
-    "inputs": {
-     "form": 12.0,
-     "team_total": 2.5,
-     "matchup": 4.35,
      "carries": 2.33,
      "not_starter": 1.0
     }
@@ -600,6 +571,34 @@
      "carries": 2.0,
      "not_starter": 1.0
     }
+   },
+   {
+    "name": "Athan Kaliakmanis",
+    "team": "WAS",
+    "opponent": "ARI",
+    "score": 3.58,
+    "status": "Backup",
+    "inputs": {
+     "form": 11.04,
+     "team_total": 1.75,
+     "matchup": 4.35,
+     "carries": 3.0,
+     "not_starter": 1.0
+    }
+   },
+   {
+    "name": "Marcus Mariota",
+    "team": "WAS",
+    "opponent": "ARI",
+    "score": 3.56,
+    "status": "Backup",
+    "inputs": {
+     "form": 12.0,
+     "team_total": 1.75,
+     "matchup": 4.35,
+     "carries": 2.33,
+     "not_starter": 1.0
+    }
    }
   ],
   "RB": [
@@ -607,11 +606,11 @@
     "name": "Jahmyr Gibbs",
     "team": "DET",
     "opponent": "CHI",
-    "score": 22.44,
+    "score": 22.56,
     "status": null,
     "inputs": {
      "form": 26.79,
-     "team_total": 4.0,
+     "team_total": 4.5,
      "matchup": -1.95,
      "targets": 5.0,
      "carries": 23.67
@@ -621,42 +620,14 @@
     "name": "Christian McCaffrey",
     "team": "SF",
     "opponent": "SEA",
-    "score": 18.25,
+    "score": 17.94,
     "status": null,
     "inputs": {
      "form": 24.19,
-     "team_total": 2.25,
+     "team_total": 1.0,
      "matchup": -2.14,
      "targets": 5.0,
      "carries": 12.83
-    }
-   },
-   {
-    "name": "Kenneth Walker III",
-    "team": "KC",
-    "opponent": "BUF",
-    "score": 17.14,
-    "status": null,
-    "inputs": {
-     "form": 21.31,
-     "team_total": -0.25,
-     "matchup": 0.81,
-     "targets": 3.33,
-     "carries": 18.67
-    }
-   },
-   {
-    "name": "James Cook",
-    "team": "BUF",
-    "opponent": "KC",
-    "score": 17.13,
-    "status": null,
-    "inputs": {
-     "form": 19.16,
-     "team_total": 2.75,
-     "matchup": -3.65,
-     "targets": 1.83,
-     "carries": 23.17
     }
    },
    {
@@ -674,6 +645,34 @@
     }
    },
    {
+    "name": "Kenneth Walker III",
+    "team": "KC",
+    "opponent": "BUF",
+    "score": 17.02,
+    "status": null,
+    "inputs": {
+     "form": 21.31,
+     "team_total": -0.75,
+     "matchup": 0.81,
+     "targets": 3.33,
+     "carries": 18.67
+    }
+   },
+   {
+    "name": "James Cook",
+    "team": "BUF",
+    "opponent": "KC",
+    "score": 17.01,
+    "status": null,
+    "inputs": {
+     "form": 19.16,
+     "team_total": 2.25,
+     "matchup": -3.65,
+     "targets": 1.83,
+     "carries": 23.17
+    }
+   },
+   {
     "name": "Chuba Hubbard",
     "team": "CAR",
     "opponent": "TB",
@@ -688,70 +687,70 @@
     }
    },
    {
-    "name": "D'Andre Swift",
-    "team": "CHI",
-    "opponent": "DET",
-    "score": 16.11,
-    "status": null,
-    "inputs": {
-     "form": 16.38,
-     "team_total": 6.5,
-     "matchup": -3.36,
-     "targets": 3.33,
-     "carries": 16.5
-    }
-   },
-   {
-    "name": "Chase Brown",
-    "team": "CIN",
-    "opponent": "NO",
-    "score": 15.95,
-    "status": null,
-    "inputs": {
-     "form": 14.11,
-     "team_total": 7.75,
-     "matchup": 5.94,
-     "targets": 6.33,
-     "carries": 10.17
-    }
-   },
-   {
     "name": "Javonte Williams",
     "team": "DAL",
     "opponent": "PHI",
-    "score": 15.89,
+    "score": 16.01,
     "status": null,
     "inputs": {
      "form": 16.42,
-     "team_total": 5.5,
+     "team_total": 6.0,
      "matchup": -2.78,
      "targets": 2.17,
      "carries": 19.0
     }
    },
    {
+    "name": "D'Andre Swift",
+    "team": "CHI",
+    "opponent": "DET",
+    "score": 15.99,
+    "status": null,
+    "inputs": {
+     "form": 16.38,
+     "team_total": 6.0,
+     "matchup": -3.36,
+     "targets": 3.33,
+     "carries": 16.5
+    }
+   },
+   {
     "name": "Bhayshul Tuten",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 15.65,
+    "score": 15.89,
     "status": null,
     "inputs": {
      "form": 14.68,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 0.27,
      "targets": 2.67,
      "carries": 16.33
     }
    },
    {
+    "name": "Chase Brown",
+    "team": "CIN",
+    "opponent": "NO",
+    "score": 15.83,
+    "status": null,
+    "inputs": {
+     "form": 14.11,
+     "team_total": 7.25,
+     "matchup": 5.94,
+     "targets": 6.33,
+     "carries": 10.17
+    }
+   },
+   {
     "name": "Bijan Robinson",
     "team": "ATL",
     "opponent": "MIN",
-    "score": 14.8,
+    "score": 14.68,
     "status": null,
     "inputs": {
      "form": 18.28,
-     "team_total": -4.75,
+     "team_total": -5.25,
      "matchup": -3.84,
      "targets": 4.5,
      "carries": 16.67
@@ -761,11 +760,11 @@
     "name": "Kyren Williams",
     "team": "LA",
     "opponent": "GB",
-    "score": 14.28,
+    "score": 14.16,
     "status": null,
     "inputs": {
      "form": 14.61,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": 2.9,
      "targets": 4.33,
      "carries": 14.17
@@ -775,11 +774,11 @@
     "name": "Cam Skattebo",
     "team": "NYG",
     "opponent": "IND",
-    "score": 14.09,
+    "score": 14.03,
     "status": null,
     "inputs": {
      "form": 13.68,
-     "team_total": 1.5,
+     "team_total": 1.25,
      "matchup": 2.57,
      "targets": 3.33,
      "carries": 16.67
@@ -789,11 +788,10 @@
     "name": "Breece Hall",
     "team": "NYJ",
     "opponent": "MIA",
-    "score": 13.81,
+    "score": 13.93,
     "status": null,
     "inputs": {
      "form": 14.24,
-     "team_total": -0.5,
      "matchup": 3.03,
      "targets": 3.5,
      "carries": 16.17
@@ -803,81 +801,67 @@
     "name": "Tony Pollard",
     "team": "TEN",
     "opponent": "JAX",
-    "score": 13.28,
+    "score": 13.52,
     "status": null,
     "inputs": {
      "form": 15.97,
-     "team_total": -6.0,
+     "team_total": -5.0,
      "matchup": -4.29,
      "targets": 3.33,
      "carries": 18.17
     }
    },
    {
-    "name": "Josh Jacobs",
-    "team": "GB",
-    "opponent": "LA",
-    "score": 13.03,
-    "status": null,
-    "inputs": {
-     "form": 15.08,
-     "team_total": -1.5,
-     "matchup": -4.5,
-     "targets": 4.33,
-     "carries": 12.0
-    }
-   },
-   {
-    "name": "Jaylen Warren",
-    "team": "PIT",
-    "opponent": "DEN",
-    "score": 12.93,
-    "status": null,
-    "inputs": {
-     "form": 15.56,
-     "team_total": -4.75,
-     "matchup": 2.43,
-     "targets": 4.17,
-     "carries": 13.33
-    }
-   },
-   {
-    "name": "Jonah Coleman",
-    "team": "DEN",
-    "opponent": "PIT",
-    "score": 12.93,
-    "status": null,
-    "inputs": {
-     "form": 16.3,
-     "team_total": -1.75,
-     "matchup": -0.05,
-     "targets": 3.17,
-     "carries": 11.83
-    }
-   },
-   {
     "name": "Jonathan Taylor",
     "team": "IND",
     "opponent": "NYG",
-    "score": 12.89,
+    "score": 12.95,
     "status": null,
     "inputs": {
      "form": 15.22,
-     "team_total": -5.0,
+     "team_total": -4.75,
      "matchup": -3.64,
      "targets": 4.33,
      "carries": 14.5
     }
    },
    {
+    "name": "Jonah Coleman",
+    "team": "DEN",
+    "opponent": "PIT",
+    "score": 12.75,
+    "status": null,
+    "inputs": {
+     "form": 16.3,
+     "team_total": -2.5,
+     "matchup": -0.05,
+     "targets": 3.17,
+     "carries": 11.83
+    }
+   },
+   {
+    "name": "Jaylen Warren",
+    "team": "PIT",
+    "opponent": "DEN",
+    "score": 12.63,
+    "status": null,
+    "inputs": {
+     "form": 15.56,
+     "team_total": -6.0,
+     "matchup": 2.43,
+     "targets": 4.17,
+     "carries": 13.33
+    }
+   },
+   {
     "name": "Quinshon Judkins",
     "team": "CLE",
     "opponent": "LV",
-    "score": 12.84,
+    "score": 12.6,
     "status": null,
     "inputs": {
      "form": 12.68,
-     "team_total": 0.5,
+     "team_total": -0.5,
      "matchup": 4.31,
      "targets": 3.33,
      "carries": 14.0
@@ -887,11 +871,11 @@
     "name": "Ashton Jeanty",
     "team": "LV",
     "opponent": "CLE",
-    "score": 12.67,
+    "score": 12.43,
     "status": null,
     "inputs": {
      "form": 15.61,
-     "team_total": -4.0,
+     "team_total": -5.0,
      "matchup": -1.55,
      "targets": 6.17,
      "carries": 7.67
@@ -915,11 +899,11 @@
     "name": "Emmett Johnson",
     "team": "KC",
     "opponent": "BUF",
-    "score": 12.23,
+    "score": 12.11,
     "status": null,
     "inputs": {
      "form": 14.53,
-     "team_total": -0.25,
+     "team_total": -0.75,
      "matchup": 0.81,
      "targets": 3.67,
      "carries": 9.17
@@ -929,28 +913,14 @@
     "name": "Kyle Monangai",
     "team": "CHI",
     "opponent": "DET",
-    "score": 12.13,
+    "score": 12.0,
     "status": null,
     "inputs": {
      "form": 11.19,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": -3.36,
      "targets": 1.2,
      "carries": 13.6
-    }
-   },
-   {
-    "name": "Blake Corum",
-    "team": "LA",
-    "opponent": "GB",
-    "score": 11.69,
-    "status": null,
-    "inputs": {
-     "form": 12.49,
-     "team_total": 1.0,
-     "matchup": 2.9,
-     "targets": 2.33,
-     "carries": 11.67
     }
    },
    {
@@ -965,6 +935,20 @@
      "matchup": -1.02,
      "targets": 2.33,
      "carries": 14.17
+    }
+   },
+   {
+    "name": "Blake Corum",
+    "team": "LA",
+    "opponent": "GB",
+    "score": 11.57,
+    "status": null,
+    "inputs": {
+     "form": 12.49,
+     "team_total": 0.5,
+     "matchup": 2.9,
+     "targets": 2.33,
+     "carries": 11.67
     }
    },
    {
@@ -985,11 +969,10 @@
     "name": "Braelon Allen",
     "team": "NYJ",
     "opponent": "MIA",
-    "score": 11.35,
+    "score": 11.47,
     "status": null,
     "inputs": {
      "form": 10.53,
-     "team_total": -0.5,
      "matchup": 3.03,
      "targets": 2.5,
      "carries": 14.5
@@ -999,11 +982,11 @@
     "name": "Emanuel Wilson",
     "team": "SEA",
     "opponent": "SF",
-    "score": 11.33,
+    "score": 11.15,
     "status": null,
     "inputs": {
      "form": 10.22,
-     "team_total": -0.75,
+     "team_total": -1.5,
      "matchup": -2.15,
      "targets": 1.5,
      "carries": 18.17
@@ -1013,11 +996,11 @@
     "name": "Ollie Gordon II",
     "team": "MIA",
     "opponent": "NYJ",
-    "score": 11.01,
+    "score": 10.89,
     "status": null,
     "inputs": {
      "form": 10.11,
-     "team_total": -4.0,
+     "team_total": -4.5,
      "matchup": 1.57,
      "targets": 2.17,
      "carries": 18.17
@@ -1027,11 +1010,11 @@
     "name": "Jacory Croskey-Merritt",
     "team": "WAS",
     "opponent": "ARI",
-    "score": 10.88,
+    "score": 10.69,
     "status": null,
     "inputs": {
      "form": 9.64,
-     "team_total": 2.5,
+     "team_total": 1.75,
      "matchup": 0.56,
      "targets": 1.67,
      "carries": 13.33
@@ -1041,11 +1024,11 @@
     "name": "Travis Etienne",
     "team": "NO",
     "opponent": "CIN",
-    "score": 10.52,
+    "score": 10.39,
     "status": null,
     "inputs": {
      "form": 10.68,
-     "team_total": -2.25,
+     "team_total": -2.75,
      "matchup": -1.22,
      "targets": 3.8,
      "carries": 10.4
@@ -1055,25 +1038,39 @@
     "name": "Samaje Perine",
     "team": "CIN",
     "opponent": "NO",
-    "score": 10.31,
+    "score": 10.19,
     "status": null,
     "inputs": {
      "form": 7.93,
-     "team_total": 7.75,
+     "team_total": 7.25,
      "matchup": 5.94,
      "targets": 1.83,
      "carries": 7.5
     }
    },
    {
+    "name": "Rhamondre Stevenson",
+    "team": "NE",
+    "opponent": "LAC",
+    "score": 10.13,
+    "status": null,
+    "inputs": {
+     "form": 11.92,
+     "team_total": -4.0,
+     "matchup": 1.66,
+     "targets": 2.67,
+     "carries": 10.67
+    }
+   },
+   {
     "name": "Zach Charbonnet",
     "team": "SEA",
     "opponent": "SF",
-    "score": 10.28,
+    "score": 10.1,
     "status": null,
     "inputs": {
      "form": 9.52,
-     "team_total": -0.75,
+     "team_total": -1.5,
      "matchup": -2.15,
      "targets": 2.0,
      "carries": 14.0
@@ -1083,28 +1080,14 @@
     "name": "Aaron Jones",
     "team": "MIN",
     "opponent": "ATL",
-    "score": 10.21,
+    "score": 10.08,
     "status": null,
     "inputs": {
      "form": 9.93,
-     "team_total": 2.25,
+     "team_total": 1.75,
      "matchup": 3.7,
      "targets": 1.5,
      "carries": 10.33
-    }
-   },
-   {
-    "name": "Rhamondre Stevenson",
-    "team": "NE",
-    "opponent": "LAC",
-    "score": 9.77,
-    "status": null,
-    "inputs": {
-     "form": 11.92,
-     "team_total": -5.5,
-     "matchup": 1.66,
-     "targets": 2.67,
-     "carries": 10.67
     }
    },
    {
@@ -1122,45 +1105,60 @@
     }
    },
    {
-    "name": "Omarion Hampton",
-    "team": "LAC",
-    "opponent": "NE",
-    "score": 9.5,
-    "status": null,
-    "inputs": {
-     "form": 10.08,
-     "team_total": -4.0,
-     "matchup": 0.1,
-     "targets": 1.83,
-     "carries": 13.17
-    }
-   },
-   {
     "name": "Kendre Miller",
     "team": "DAL",
     "opponent": "PHI",
-    "score": 9.35,
+    "score": 9.47,
     "status": null,
     "inputs": {
      "form": 6.01,
-     "team_total": 5.5,
+     "team_total": 6.0,
      "matchup": -2.78,
      "targets": 2.17,
      "carries": 9.5
     }
    },
    {
+    "name": "Dameon Pierce",
+    "team": "PHI",
+    "opponent": "DAL",
+    "score": 9.39,
+    "status": null,
+    "inputs": {
+     "form": 6.29,
+     "team_total": -2.5,
+     "matchup": 5.86,
+     "targets": 3.67,
+     "carries": 12.33
+    }
+   },
+   {
     "name": "Saquon Barkley",
     "team": "PHI",
     "opponent": "DAL",
-    "score": 9.27,
+    "score": 9.39,
     "status": null,
     "inputs": {
      "form": 10.53,
-     "team_total": -3.0,
+     "team_total": -2.5,
      "matchup": 5.86,
      "targets": 1.17,
      "carries": 11.17
+    }
+   },
+   {
+    "name": "Josh Jacobs",
+    "team": "GB",
+    "opponent": "LA",
+    "score": 9.29,
+    "status": "Questionable",
+    "inputs": {
+     "form": 15.08,
+     "team_total": -2.0,
+     "matchup": -4.5,
+     "targets": 4.33,
+     "carries": 12.0,
+     "questionable": 1.0
     }
    }
   ],
@@ -1169,11 +1167,11 @@
     "name": "CeeDee Lamb",
     "team": "DAL",
     "opponent": "PHI",
-    "score": 20.06,
+    "score": 20.14,
     "status": null,
     "inputs": {
      "form": 21.74,
-     "team_total": 5.5,
+     "team_total": 6.0,
      "matchup": 5.67,
      "targets": 13.67
     }
@@ -1182,11 +1180,11 @@
     "name": "Jaxon Smith-Njigba",
     "team": "SEA",
     "opponent": "SF",
-    "score": 19.21,
+    "score": 19.08,
     "status": null,
     "inputs": {
      "form": 24.67,
-     "team_total": -0.75,
+     "team_total": -1.5,
      "matchup": 2.07,
      "targets": 11.17
     }
@@ -1195,11 +1193,11 @@
     "name": "Ja'Marr Chase",
     "team": "CIN",
     "opponent": "NO",
-    "score": 19.02,
+    "score": 18.93,
     "status": null,
     "inputs": {
      "form": 21.52,
-     "team_total": 7.75,
+     "team_total": 7.25,
      "matchup": -3.49,
      "targets": 11.33
     }
@@ -1208,11 +1206,11 @@
     "name": "George Pickens",
     "team": "DAL",
     "opponent": "PHI",
-    "score": 17.44,
+    "score": 17.52,
     "status": null,
     "inputs": {
      "form": 19.12,
-     "team_total": 5.5,
+     "team_total": 6.0,
      "matchup": 5.67,
      "targets": 10.33
     }
@@ -1221,11 +1219,11 @@
     "name": "Parker Washington",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 16.08,
+    "score": 16.25,
     "status": null,
     "inputs": {
      "form": 15.59,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 12.85,
      "targets": 9.17
     }
@@ -1234,11 +1232,11 @@
     "name": "Amon-Ra St. Brown",
     "team": "DET",
     "opponent": "CHI",
-    "score": 16.03,
+    "score": 16.12,
     "status": null,
     "inputs": {
      "form": 18.85,
-     "team_total": 4.0,
+     "team_total": 4.5,
      "matchup": -1.24,
      "targets": 8.5
     }
@@ -1247,11 +1245,11 @@
     "name": "Malik Nabers",
     "team": "NYG",
     "opponent": "IND",
-    "score": 15.89,
+    "score": 15.85,
     "status": null,
     "inputs": {
      "form": 16.57,
-     "team_total": 1.5,
+     "team_total": 1.25,
      "matchup": -1.26,
      "targets": 11.83
     }
@@ -1260,11 +1258,11 @@
     "name": "Tee Higgins",
     "team": "CIN",
     "opponent": "NO",
-    "score": 15.14,
+    "score": 15.06,
     "status": null,
     "inputs": {
      "form": 17.82,
-     "team_total": 7.75,
+     "team_total": 7.25,
      "matchup": -3.49,
      "targets": 6.17
     }
@@ -1273,11 +1271,11 @@
     "name": "Matthew Golden",
     "team": "GB",
     "opponent": "LA",
-    "score": 14.61,
+    "score": 14.52,
     "status": null,
     "inputs": {
      "form": 16.35,
-     "team_total": -1.5,
+     "team_total": -2.0,
      "matchup": -6.03,
      "targets": 10.67
     }
@@ -1286,11 +1284,11 @@
     "name": "DeVonta Smith",
     "team": "PHI",
     "opponent": "DAL",
-    "score": 13.91,
+    "score": 14.0,
     "status": null,
     "inputs": {
      "form": 14.55,
-     "team_total": -3.0,
+     "team_total": -2.5,
      "matchup": 5.3,
      "targets": 10.6
     }
@@ -1299,26 +1297,13 @@
     "name": "Christian Watson",
     "team": "GB",
     "opponent": "LA",
-    "score": 13.87,
+    "score": 13.79,
     "status": null,
     "inputs": {
      "form": 17.25,
-     "team_total": -1.5,
+     "team_total": -2.0,
      "matchup": -6.03,
      "targets": 7.83
-    }
-   },
-   {
-    "name": "Justin Jefferson",
-    "team": "MIN",
-    "opponent": "ATL",
-    "score": 13.64,
-    "status": null,
-    "inputs": {
-     "form": 13.33,
-     "team_total": 2.25,
-     "matchup": 3.51,
-     "targets": 9.33
     }
    },
    {
@@ -1335,27 +1320,27 @@
     }
    },
    {
-    "name": "Max Hurleman",
-    "team": "PIT",
-    "opponent": "DEN",
-    "score": 13.46,
+    "name": "Justin Jefferson",
+    "team": "MIN",
+    "opponent": "ATL",
+    "score": 13.56,
     "status": null,
     "inputs": {
-     "form": 18.1,
-     "team_total": -4.75,
-     "matchup": -3.86,
-     "targets": 7.0
+     "form": 13.33,
+     "team_total": 1.75,
+     "matchup": 3.51,
+     "targets": 9.33
     }
    },
    {
     "name": "Luther Burden III",
     "team": "CHI",
     "opponent": "DET",
-    "score": 13.35,
+    "score": 13.26,
     "status": null,
     "inputs": {
      "form": 13.68,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": 1.28,
      "targets": 6.67
     }
@@ -1364,13 +1349,26 @@
     "name": "Chris Olave",
     "team": "NO",
     "opponent": "CIN",
-    "score": 13.34,
+    "score": 13.26,
     "status": null,
     "inputs": {
      "form": 15.05,
-     "team_total": -2.25,
+     "team_total": -2.75,
      "matchup": -1.71,
      "targets": 9.0
+    }
+   },
+   {
+    "name": "Max Hurleman",
+    "team": "PIT",
+    "opponent": "DEN",
+    "score": 13.25,
+    "status": null,
+    "inputs": {
+     "form": 18.1,
+     "team_total": -6.0,
+     "matchup": -3.86,
+     "targets": 7.0
     }
    },
    {
@@ -1387,40 +1385,14 @@
     }
    },
    {
-    "name": "Rashee Rice",
-    "team": "KC",
-    "opponent": "BUF",
-    "score": 12.66,
-    "status": null,
-    "inputs": {
-     "form": 14.45,
-     "team_total": -0.25,
-     "matchup": 0.29,
-     "targets": 7.0
-    }
-   },
-   {
-    "name": "Mike Evans",
-    "team": "SF",
-    "opponent": "SEA",
-    "score": 12.61,
-    "status": null,
-    "inputs": {
-     "form": 14.73,
-     "team_total": 2.25,
-     "matchup": -10.17,
-     "targets": 6.5
-    }
-   },
-   {
     "name": "Jameson Williams",
     "team": "DET",
     "opponent": "CHI",
-    "score": 12.59,
+    "score": 12.68,
     "status": null,
     "inputs": {
      "form": 14.34,
-     "team_total": 4.0,
+     "team_total": 4.5,
      "matchup": -1.24,
      "targets": 5.33
     }
@@ -1429,24 +1401,61 @@
     "name": "Omar Cooper Jr.",
     "team": "NYJ",
     "opponent": "MIA",
-    "score": 12.56,
+    "score": 12.65,
     "status": null,
     "inputs": {
      "form": 15.65,
-     "team_total": -0.5,
      "matchup": -5.22,
      "targets": 6.0
+    }
+   },
+   {
+    "name": "Rashee Rice",
+    "team": "KC",
+    "opponent": "BUF",
+    "score": 12.57,
+    "status": null,
+    "inputs": {
+     "form": 14.45,
+     "team_total": -0.75,
+     "matchup": 0.29,
+     "targets": 7.0
+    }
+   },
+   {
+    "name": "Garrett Wilson",
+    "team": "NYJ",
+    "opponent": "MIA",
+    "score": 12.48,
+    "status": null,
+    "inputs": {
+     "form": 13.13,
+     "matchup": -5.22,
+     "targets": 8.5
+    }
+   },
+   {
+    "name": "Mike Evans",
+    "team": "SF",
+    "opponent": "SEA",
+    "score": 12.39,
+    "status": null,
+    "inputs": {
+     "form": 14.73,
+     "team_total": 1.0,
+     "matchup": -10.17,
+     "targets": 6.5
     }
    },
    {
     "name": "Drake London",
     "team": "ATL",
     "opponent": "MIN",
-    "score": 12.42,
+    "score": 12.34,
     "status": null,
     "inputs": {
      "form": 14.21,
-     "team_total": -4.75,
+     "team_total": -5.25,
      "matchup": -4.15,
      "targets": 9.0
     }
@@ -1455,26 +1464,13 @@
     "name": "Stefon Diggs",
     "team": "WAS",
     "opponent": "ARI",
-    "score": 12.41,
+    "score": 12.28,
     "status": null,
     "inputs": {
      "form": 12.75,
-     "team_total": 2.5,
+     "team_total": 1.75,
      "matchup": 0.78,
      "targets": 7.17
-    }
-   },
-   {
-    "name": "Garrett Wilson",
-    "team": "NYJ",
-    "opponent": "MIA",
-    "score": 12.39,
-    "status": null,
-    "inputs": {
-     "form": 13.13,
-     "team_total": -0.5,
-     "matchup": -5.22,
-     "targets": 8.5
     }
    },
    {
@@ -1494,11 +1490,11 @@
     "name": "Jakobi Meyers",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 11.99,
+    "score": 12.16,
     "status": null,
     "inputs": {
      "form": 9.44,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 12.85,
      "targets": 6.33
     }
@@ -1507,26 +1503,13 @@
     "name": "DJ Moore",
     "team": "BUF",
     "opponent": "KC",
-    "score": 11.82,
+    "score": 11.73,
     "status": null,
     "inputs": {
      "form": 12.53,
-     "team_total": 2.75,
+     "team_total": 2.25,
      "matchup": -7.54,
      "targets": 6.67
-    }
-   },
-   {
-    "name": "Rome Odunze",
-    "team": "CHI",
-    "opponent": "DET",
-    "score": 11.38,
-    "status": null,
-    "inputs": {
-     "form": 10.25,
-     "team_total": 6.5,
-     "matchup": 1.28,
-     "targets": 5.83
     }
    },
    {
@@ -1543,79 +1526,105 @@
     }
    },
    {
-    "name": "Ryan Flournoy",
-    "team": "DAL",
-    "opponent": "PHI",
-    "score": 10.83,
+    "name": "Rome Odunze",
+    "team": "CHI",
+    "opponent": "DET",
+    "score": 11.29,
     "status": null,
     "inputs": {
-     "form": 10.12,
-     "team_total": 5.5,
-     "matchup": 5.67,
-     "targets": 4.67
+     "form": 10.25,
+     "team_total": 6.0,
+     "matchup": 1.28,
+     "targets": 5.83
     }
    },
    {
     "name": "Carnell Tate",
     "team": "TEN",
     "opponent": "JAX",
-    "score": 10.79,
+    "score": 10.96,
     "status": null,
     "inputs": {
      "form": 12.16,
-     "team_total": -6.0,
+     "team_total": -5.0,
      "matchup": 0.18,
      "targets": 7.5
+    }
+   },
+   {
+    "name": "Ryan Flournoy",
+    "team": "DAL",
+    "opponent": "PHI",
+    "score": 10.92,
+    "status": null,
+    "inputs": {
+     "form": 10.12,
+     "team_total": 6.0,
+     "matchup": 5.67,
+     "targets": 4.67
     }
    },
    {
     "name": "KC Concepcion",
     "team": "CLE",
     "opponent": "LV",
-    "score": 10.63,
+    "score": 10.46,
     "status": null,
     "inputs": {
      "form": 10.82,
-     "team_total": 0.5,
+     "team_total": -0.5,
      "matchup": 1.44,
      "targets": 5.83
-    }
-   },
-   {
-    "name": "Keenan Allen",
-    "team": "SF",
-    "opponent": "SEA",
-    "score": 10.48,
-    "status": null,
-    "inputs": {
-     "form": 10.12,
-     "team_total": 2.25,
-     "matchup": -10.17,
-     "targets": 6.67
     }
    },
    {
     "name": "Antonio Williams",
     "team": "WAS",
     "opponent": "ARI",
-    "score": 10.41,
+    "score": 10.28,
     "status": null,
     "inputs": {
      "form": 9.97,
-     "team_total": 2.5,
+     "team_total": 1.75,
      "matchup": 0.78,
      "targets": 5.5
+    }
+   },
+   {
+    "name": "Keenan Allen",
+    "team": "SF",
+    "opponent": "SEA",
+    "score": 10.27,
+    "status": null,
+    "inputs": {
+     "form": 10.12,
+     "team_total": 1.0,
+     "matchup": -10.17,
+     "targets": 6.67
+    }
+   },
+   {
+    "name": "Khalil Shakir",
+    "team": "BUF",
+    "opponent": "KC",
+    "score": 10.2,
+    "status": null,
+    "inputs": {
+     "form": 10.61,
+     "team_total": 2.25,
+     "matchup": -7.54,
+     "targets": 5.17
     }
    },
    {
     "name": "Deebo Samuel Sr.",
     "team": "SF",
     "opponent": "SEA",
-    "score": 10.37,
+    "score": 10.16,
     "status": null,
     "inputs": {
      "form": 12.76,
-     "team_total": 2.25,
+     "team_total": 1.0,
      "matchup": -10.17,
      "targets": 3.33
     }
@@ -1624,38 +1633,12 @@
     "name": "Denzel Boston",
     "team": "CLE",
     "opponent": "LV",
-    "score": 10.31,
+    "score": 10.14,
     "status": null,
     "inputs": {
      "form": 9.42,
-     "team_total": 0.5,
+     "team_total": -0.5,
      "matchup": 1.44,
-     "targets": 6.67
-    }
-   },
-   {
-    "name": "Khalil Shakir",
-    "team": "BUF",
-    "opponent": "KC",
-    "score": 10.29,
-    "status": null,
-    "inputs": {
-     "form": 10.61,
-     "team_total": 2.75,
-     "matchup": -7.54,
-     "targets": 5.17
-    }
-   },
-   {
-    "name": "Tre Tucker",
-    "team": "LV",
-    "opponent": "CLE",
-    "score": 10.05,
-    "status": null,
-    "inputs": {
-     "form": 10.69,
-     "team_total": -4.0,
-     "matchup": -0.82,
      "targets": 6.67
     }
    },
@@ -1673,16 +1656,29 @@
     }
    },
    {
-    "name": "Jordan Addison",
-    "team": "MIN",
-    "opponent": "ATL",
-    "score": 9.9,
+    "name": "Xavier Hutchinson",
+    "team": "HOU",
+    "opponent": "BAL",
+    "score": 9.89,
     "status": null,
     "inputs": {
-     "form": 8.63,
-     "team_total": 2.25,
-     "matchup": 3.51,
-     "targets": 5.67
+     "form": 8.5,
+     "team_total": 4.5,
+     "matchup": 0.21,
+     "targets": 5.17
+    }
+   },
+   {
+    "name": "Tre Tucker",
+    "team": "LV",
+    "opponent": "CLE",
+    "score": 9.88,
+    "status": null,
+    "inputs": {
+     "form": 10.69,
+     "team_total": -5.0,
+     "matchup": -0.82,
+     "targets": 6.67
     }
    }
   ],
@@ -1691,11 +1687,11 @@
     "name": "Trey McBride",
     "team": "ARI",
     "opponent": "WAS",
-    "score": 14.56,
+    "score": 14.52,
     "status": null,
     "inputs": {
      "form": 16.76,
-     "team_total": -5.0,
+     "team_total": -5.25,
      "matchup": 6.91,
      "targets": 9.5
     }
@@ -1704,11 +1700,11 @@
     "name": "Isaiah Likely",
     "team": "NYG",
     "opponent": "IND",
-    "score": 13.2,
+    "score": 13.16,
     "status": null,
     "inputs": {
      "form": 15.07,
-     "team_total": 1.5,
+     "team_total": 1.25,
      "matchup": -0.08,
      "targets": 8.0
     }
@@ -1717,11 +1713,11 @@
     "name": "Brock Bowers",
     "team": "LV",
     "opponent": "CLE",
-    "score": 13.19,
+    "score": 13.01,
     "status": null,
     "inputs": {
      "form": 17.2,
-     "team_total": -4.0,
+     "team_total": -5.0,
      "matchup": 0.67,
      "targets": 7.83
     }
@@ -1730,11 +1726,11 @@
     "name": "Colston Loveland",
     "team": "CHI",
     "opponent": "DET",
-    "score": 12.42,
+    "score": 12.34,
     "status": null,
     "inputs": {
      "form": 10.9,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": 7.35,
      "targets": 7.0
     }
@@ -1743,11 +1739,11 @@
     "name": "George Kittle",
     "team": "SF",
     "opponent": "SEA",
-    "score": 12.13,
+    "score": 11.91,
     "status": null,
     "inputs": {
      "form": 14.21,
-     "team_total": 2.25,
+     "team_total": 1.0,
      "matchup": -2.65,
      "targets": 7.17
     }
@@ -1756,11 +1752,11 @@
     "name": "Harold Fannin Jr.",
     "team": "CLE",
     "opponent": "LV",
-    "score": 10.89,
+    "score": 10.71,
     "status": null,
     "inputs": {
      "form": 11.6,
-     "team_total": 0.5,
+     "team_total": -0.5,
      "matchup": 3.11,
      "targets": 6.5
     }
@@ -1769,11 +1765,11 @@
     "name": "T.J. Hockenson",
     "team": "MIN",
     "opponent": "ATL",
-    "score": 10.3,
+    "score": 10.21,
     "status": null,
     "inputs": {
      "form": 10.88,
-     "team_total": 2.25,
+     "team_total": 1.75,
      "matchup": -0.95,
      "targets": 6.33
     }
@@ -1782,11 +1778,11 @@
     "name": "Travis Kelce",
     "team": "KC",
     "opponent": "BUF",
-    "score": 10.25,
+    "score": 10.16,
     "status": null,
     "inputs": {
      "form": 12.65,
-     "team_total": -0.25,
+     "team_total": -0.75,
      "matchup": -1.83,
      "targets": 5.83
     }
@@ -1795,11 +1791,11 @@
     "name": "Chig Okonkwo",
     "team": "WAS",
     "opponent": "ARI",
-    "score": 9.62,
+    "score": 9.48,
     "status": null,
     "inputs": {
      "form": 8.27,
-     "team_total": 2.5,
+     "team_total": 1.75,
      "matchup": 3.93,
      "targets": 6.17
     }
@@ -1808,91 +1804,91 @@
     "name": "Brenton Strange",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 9.04,
+    "score": 9.22,
     "status": null,
     "inputs": {
      "form": 8.55,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": -0.49,
      "targets": 4.17
-    }
-   },
-   {
-    "name": "Mike Gesicki",
-    "team": "CIN",
-    "opponent": "NO",
-    "score": 8.75,
-    "status": null,
-    "inputs": {
-     "form": 8.81,
-     "team_total": 7.75,
-     "matchup": 2.46,
-     "targets": 3.17
     }
    },
    {
     "name": "Sam LaPorta",
     "team": "DET",
     "opponent": "CHI",
-    "score": 8.73,
+    "score": 8.82,
     "status": null,
     "inputs": {
      "form": 9.69,
-     "team_total": 4.0,
+     "team_total": 4.5,
      "matchup": -2.64,
      "targets": 4.5
-    }
-   },
-   {
-    "name": "Dalton Kincaid",
-    "team": "BUF",
-    "opponent": "KC",
-    "score": 8.71,
-    "status": null,
-    "inputs": {
-     "form": 9.42,
-     "team_total": 2.75,
-     "matchup": 2.82,
-     "targets": 4.0
     }
    },
    {
     "name": "Dallas Goedert",
     "team": "PHI",
     "opponent": "DAL",
-    "score": 8.65,
+    "score": 8.74,
     "status": null,
     "inputs": {
      "form": 9.99,
-     "team_total": -3.0,
+     "team_total": -2.5,
      "matchup": -1.04,
      "targets": 5.83
     }
    },
    {
-    "name": "Tucker Kraft",
-    "team": "GB",
-    "opponent": "LA",
-    "score": 8.56,
+    "name": "Mike Gesicki",
+    "team": "CIN",
+    "opponent": "NO",
+    "score": 8.66,
     "status": null,
     "inputs": {
-     "form": 10.3,
-     "team_total": -1.5,
-     "matchup": -2.64,
-     "targets": 5.33
+     "form": 8.81,
+     "team_total": 7.25,
+     "matchup": 2.46,
+     "targets": 3.17
+    }
+   },
+   {
+    "name": "Dalton Kincaid",
+    "team": "BUF",
+    "opponent": "KC",
+    "score": 8.62,
+    "status": null,
+    "inputs": {
+     "form": 9.42,
+     "team_total": 2.25,
+     "matchup": 2.82,
+     "targets": 4.0
     }
    },
    {
     "name": "Tyler Warren",
     "team": "IND",
     "opponent": "NYG",
-    "score": 8.47,
+    "score": 8.51,
     "status": null,
     "inputs": {
      "form": 9.52,
-     "team_total": -5.0,
+     "team_total": -4.75,
      "matchup": -1.3,
      "targets": 6.5
+    }
+   },
+   {
+    "name": "Tucker Kraft",
+    "team": "GB",
+    "opponent": "LA",
+    "score": 8.47,
+    "status": null,
+    "inputs": {
+     "form": 10.3,
+     "team_total": -2.0,
+     "matchup": -2.64,
+     "targets": 5.33
     }
    },
    {
@@ -1912,11 +1908,11 @@
     "name": "Kyle Pitts",
     "team": "ATL",
     "opponent": "MIN",
-    "score": 7.79,
+    "score": 7.7,
     "status": null,
     "inputs": {
      "form": 9.92,
-     "team_total": -4.75,
+     "team_total": -5.25,
      "matchup": -3.77,
      "targets": 5.5
     }
@@ -1925,11 +1921,11 @@
     "name": "Pat Freiermuth",
     "team": "PIT",
     "opponent": "DEN",
-    "score": 7.71,
+    "score": 7.49,
     "status": null,
     "inputs": {
      "form": 9.62,
-     "team_total": -4.75,
+     "team_total": -6.0,
      "matchup": 4.87,
      "targets": 4.0
     }
@@ -1938,11 +1934,10 @@
     "name": "Mason Taylor",
     "team": "NYJ",
     "opponent": "MIA",
-    "score": 7.3,
+    "score": 7.39,
     "status": null,
     "inputs": {
      "form": 7.56,
-     "team_total": -0.5,
      "matchup": 2.0,
      "targets": 4.17
     }
@@ -1964,13 +1959,26 @@
     "name": "Jake Ferguson",
     "team": "DAL",
     "opponent": "PHI",
-    "score": 7.16,
+    "score": 7.25,
     "status": null,
     "inputs": {
      "form": 7.06,
-     "team_total": 5.5,
+     "team_total": 6.0,
      "matchup": -2.76,
      "targets": 3.5
+    }
+   },
+   {
+    "name": "Hunter Henry",
+    "team": "NE",
+    "opponent": "LAC",
+    "score": 7.0,
+    "status": null,
+    "inputs": {
+     "form": 9.36,
+     "team_total": -4.0,
+     "matchup": -2.32,
+     "targets": 4.17
     }
    },
    {
@@ -1990,37 +1998,24 @@
     "name": "AJ Barner",
     "team": "SEA",
     "opponent": "SF",
-    "score": 6.9,
+    "score": 6.77,
     "status": null,
     "inputs": {
      "form": 7.21,
-     "team_total": -0.75,
+     "team_total": -1.5,
      "matchup": -0.59,
      "targets": 4.33
-    }
-   },
-   {
-    "name": "Hunter Henry",
-    "team": "NE",
-    "opponent": "LAC",
-    "score": 6.74,
-    "status": null,
-    "inputs": {
-     "form": 9.36,
-     "team_total": -5.5,
-     "matchup": -2.32,
-     "targets": 4.17
     }
    },
    {
     "name": "Michael Mayer",
     "team": "LV",
     "opponent": "CLE",
-    "score": 6.7,
+    "score": 6.52,
     "status": null,
     "inputs": {
      "form": 7.24,
-     "team_total": -4.0,
+     "team_total": -5.0,
      "matchup": 0.67,
      "targets": 4.67
     }
@@ -2029,26 +2024,26 @@
     "name": "Tyler Higbee",
     "team": "LA",
     "opponent": "GB",
-    "score": 6.56,
+    "score": 6.47,
     "status": null,
     "inputs": {
      "form": 6.92,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": -3.33,
      "targets": 4.0
     }
    },
    {
-    "name": "Greg Dulcich",
-    "team": "MIA",
-    "opponent": "NYJ",
-    "score": 6.34,
+    "name": "Nate Boerkircher",
+    "team": "JAX",
+    "opponent": "TEN",
+    "score": 6.41,
     "status": null,
     "inputs": {
-     "form": 6.43,
-     "team_total": -4.0,
-     "matchup": -0.07,
-     "targets": 4.83
+     "form": 5.33,
+     "team_total": 9.5,
+     "matchup": -0.49,
+     "targets": 2.0
     }
    },
    {
@@ -2065,53 +2060,40 @@
     }
    },
    {
-    "name": "Nate Boerkircher",
-    "team": "JAX",
-    "opponent": "TEN",
-    "score": 6.23,
+    "name": "Greg Dulcich",
+    "team": "MIA",
+    "opponent": "NYJ",
+    "score": 6.26,
     "status": null,
     "inputs": {
-     "form": 5.33,
-     "team_total": 8.5,
-     "matchup": -0.49,
-     "targets": 2.0
+     "form": 6.43,
+     "team_total": -4.5,
+     "matchup": -0.07,
+     "targets": 4.83
     }
    },
    {
     "name": "Jack Endries",
     "team": "CIN",
     "opponent": "NO",
-    "score": 6.13,
+    "score": 6.04,
     "status": null,
     "inputs": {
      "form": 4.3,
-     "team_total": 7.75,
+     "team_total": 7.25,
      "matchup": 2.46,
      "targets": 2.25
-    }
-   },
-   {
-    "name": "Darnell Washington",
-    "team": "PIT",
-    "opponent": "DEN",
-    "score": 6.1,
-    "status": null,
-    "inputs": {
-     "form": 6.75,
-     "team_total": -4.75,
-     "matchup": 4.87,
-     "targets": 3.5
     }
    },
    {
     "name": "Drew Sample",
     "team": "CIN",
     "opponent": "NO",
-    "score": 6.04,
+    "score": 5.95,
     "status": null,
     "inputs": {
      "form": 4.44,
-     "team_total": 7.75,
+     "team_total": 7.25,
      "matchup": 2.46,
      "targets": 2.0
     }
@@ -2130,6 +2112,19 @@
     }
    },
    {
+    "name": "Darnell Washington",
+    "team": "PIT",
+    "opponent": "DEN",
+    "score": 5.88,
+    "status": null,
+    "inputs": {
+     "form": 6.75,
+     "team_total": -6.0,
+     "matchup": 4.87,
+     "targets": 3.5
+    }
+   },
+   {
     "name": "Mark Andrews",
     "team": "BAL",
     "opponent": "HOU",
@@ -2143,14 +2138,27 @@
     }
    },
    {
+    "name": "Brevyn Spann-Ford",
+    "team": "DAL",
+    "opponent": "PHI",
+    "score": 5.83,
+    "status": null,
+    "inputs": {
+     "form": 4.16,
+     "team_total": 6.0,
+     "matchup": -2.76,
+     "targets": 3.33
+    }
+   },
+   {
     "name": "Colby Parkinson",
     "team": "LA",
     "opponent": "GB",
-    "score": 5.84,
+    "score": 5.75,
     "status": null,
     "inputs": {
      "form": 6.03,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": -3.33,
      "targets": 3.5
     }
@@ -2159,37 +2167,24 @@
     "name": "Evan Engram",
     "team": "DEN",
     "opponent": "PIT",
-    "score": 5.84,
+    "score": 5.71,
     "status": null,
     "inputs": {
      "form": 5.7,
-     "team_total": -1.75,
+     "team_total": -2.5,
      "matchup": -1.42,
      "targets": 4.17
-    }
-   },
-   {
-    "name": "Brevyn Spann-Ford",
-    "team": "DAL",
-    "opponent": "PHI",
-    "score": 5.74,
-    "status": null,
-    "inputs": {
-     "form": 4.16,
-     "team_total": 5.5,
-     "matchup": -2.76,
-     "targets": 3.33
     }
    },
    {
     "name": "Juwan Johnson",
     "team": "NO",
     "opponent": "CIN",
-    "score": 5.71,
+    "score": 5.62,
     "status": null,
     "inputs": {
      "form": 6.88,
-     "team_total": -2.25,
+     "team_total": -2.75,
      "matchup": 1.67,
      "targets": 2.67
     }
@@ -2198,11 +2193,11 @@
     "name": "Gavin Bartholomew",
     "team": "MIN",
     "opponent": "ATL",
-    "score": 5.69,
+    "score": 5.6,
     "status": null,
     "inputs": {
      "form": 5.3,
-     "team_total": 2.25,
+     "team_total": 1.75,
      "matchup": -0.95,
      "targets": 3.0
     }
@@ -2213,12 +2208,24 @@
     "name": "Cam Little",
     "team": "JAX",
     "opponent": "TEN",
-    "score": 9.44,
+    "score": 9.58,
     "status": null,
     "inputs": {
      "form": 11.22,
-     "team_total": 8.5,
+     "team_total": 9.5,
      "matchup": 2.35
+    }
+   },
+   {
+    "name": "Brandon Aubrey",
+    "team": "DAL",
+    "opponent": "PHI",
+    "score": 8.79,
+    "status": null,
+    "inputs": {
+     "form": 9.69,
+     "team_total": 6.0,
+     "matchup": 2.15
     }
    },
    {
@@ -2234,26 +2241,14 @@
     }
    },
    {
-    "name": "Brandon Aubrey",
-    "team": "DAL",
-    "opponent": "PHI",
-    "score": 8.73,
-    "status": null,
-    "inputs": {
-     "form": 9.69,
-     "team_total": 5.5,
-     "matchup": 2.15
-    }
-   },
-   {
     "name": "Evan McPherson",
     "team": "CIN",
     "opponent": "NO",
-    "score": 8.7,
+    "score": 8.63,
     "status": null,
     "inputs": {
      "form": 8.48,
-     "team_total": 7.75,
+     "team_total": 7.25,
      "matchup": 1.55
     }
    },
@@ -2261,47 +2256,46 @@
     "name": "Tyler Bass",
     "team": "BUF",
     "opponent": "KC",
-    "score": 8.5,
+    "score": 8.43,
     "status": null,
     "inputs": {
      "form": 12.67,
-     "team_total": 2.75,
+     "team_total": 2.25,
      "matchup": -0.15
-    }
-   },
-   {
-    "name": "Drew Stevens",
-    "team": "WAS",
-    "opponent": "ARI",
-    "score": 8.09,
-    "status": null,
-    "inputs": {
-     "form": 9.95,
-     "team_total": 2.5,
-     "matchup": 0.54
     }
    },
    {
     "name": "Jason Sanders",
     "team": "NYJ",
     "opponent": "MIA",
-    "score": 7.99,
+    "score": 8.06,
     "status": null,
     "inputs": {
      "form": 11.21,
-     "team_total": -0.5,
      "matchup": 0.95
+    }
+   },
+   {
+    "name": "Drew Stevens",
+    "team": "WAS",
+    "opponent": "ARI",
+    "score": 7.99,
+    "status": null,
+    "inputs": {
+     "form": 9.95,
+     "team_total": 1.75,
+     "matchup": 0.54
     }
    },
    {
     "name": "Dominic Zvada",
     "team": "NYG",
     "opponent": "IND",
-    "score": 7.95,
+    "score": 7.92,
     "status": null,
     "inputs": {
      "form": 8.97,
-     "team_total": 1.5,
+     "team_total": 1.25,
      "matchup": 1.54
     }
    },
@@ -2309,11 +2303,11 @@
     "name": "Will Reichard",
     "team": "MIN",
     "opponent": "ATL",
-    "score": 7.78,
+    "score": 7.71,
     "status": null,
     "inputs": {
      "form": 9.59,
-     "team_total": 2.25,
+     "team_total": 1.75,
      "matchup": -0.65
     }
    },
@@ -2330,50 +2324,50 @@
     }
    },
    {
-    "name": "Wil Lutz",
-    "team": "DEN",
-    "opponent": "PIT",
-    "score": 7.63,
+    "name": "Jake Bates",
+    "team": "DET",
+    "opponent": "CHI",
+    "score": 7.61,
     "status": null,
     "inputs": {
-     "form": 8.53,
-     "team_total": -1.75,
-     "matchup": 2.65
+     "form": 8.96,
+     "team_total": 4.5,
+     "matchup": -2.65
     }
    },
    {
     "name": "Cairo Santos",
     "team": "CHI",
     "opponent": "DET",
-    "score": 7.61,
+    "score": 7.54,
     "status": null,
     "inputs": {
      "form": 8.56,
-     "team_total": 6.5,
+     "team_total": 6.0,
      "matchup": -3.75
     }
    },
    {
-    "name": "Jake Bates",
-    "team": "DET",
-    "opponent": "CHI",
-    "score": 7.54,
+    "name": "Wil Lutz",
+    "team": "DEN",
+    "opponent": "PIT",
+    "score": 7.53,
     "status": null,
     "inputs": {
-     "form": 8.96,
-     "team_total": 4.0,
-     "matchup": -2.65
+     "form": 8.53,
+     "team_total": -2.5,
+     "matchup": 2.65
     }
    },
    {
     "name": "Jason Myers",
     "team": "SEA",
     "opponent": "SF",
-    "score": 7.42,
+    "score": 7.32,
     "status": null,
     "inputs": {
      "form": 8.57,
-     "team_total": -0.75,
+     "team_total": -1.5,
      "matchup": 0.65
     }
    },
@@ -2381,47 +2375,47 @@
     "name": "Charlie Smyth",
     "team": "NO",
     "opponent": "CIN",
-    "score": 7.34,
+    "score": 7.27,
     "status": null,
     "inputs": {
      "form": 9.33,
-     "team_total": -2.25,
+     "team_total": -2.75,
      "matchup": 0.55
-    }
-   },
-   {
-    "name": "Andre Szmyt",
-    "team": "CLE",
-    "opponent": "LV",
-    "score": 7.22,
-    "status": null,
-    "inputs": {
-     "form": 8.32,
-     "team_total": 0.5,
-     "matchup": -1.19
     }
    },
    {
     "name": "Trey Smack",
     "team": "GB",
     "opponent": "LA",
-    "score": 7.14,
+    "score": 7.08,
     "status": null,
     "inputs": {
      "form": 7.23,
-     "team_total": -1.5,
+     "team_total": -2.0,
      "matchup": 1.05
+    }
+   },
+   {
+    "name": "Andre Szmyt",
+    "team": "CLE",
+    "opponent": "LV",
+    "score": 7.08,
+    "status": null,
+    "inputs": {
+     "form": 8.32,
+     "team_total": -0.5,
+     "matchup": -1.19
     }
    },
    {
     "name": "Harrison Butker",
     "team": "KC",
     "opponent": "BUF",
-    "score": 7.11,
+    "score": 7.05,
     "status": null,
     "inputs": {
      "form": 7.5,
-     "team_total": -0.25,
+     "team_total": -0.75,
      "matchup": -0.35
     }
    },
@@ -2438,39 +2432,27 @@
     }
    },
    {
+    "name": "Jake Elliott",
+    "team": "PHI",
+    "opponent": "DAL",
+    "score": 6.88,
+    "status": null,
+    "inputs": {
+     "form": 6.22,
+     "team_total": -2.5,
+     "matchup": 1.36
+    }
+   },
+   {
     "name": "Eddy Pineiro",
     "team": "SF",
     "opponent": "SEA",
-    "score": 7.04,
+    "score": 6.88,
     "status": null,
     "inputs": {
      "form": 6.64,
-     "team_total": 2.25,
+     "team_total": 1.0,
      "matchup": -1.75
-    }
-   },
-   {
-    "name": "Matt Gay",
-    "team": "LV",
-    "opponent": "CLE",
-    "score": 6.92,
-    "status": null,
-    "inputs": {
-     "form": 8.61,
-     "team_total": -4.0,
-     "matchup": 0.25
-    }
-   },
-   {
-    "name": "Cameron Dicker",
-    "team": "LAC",
-    "opponent": "NE",
-    "score": 6.91,
-    "status": null,
-    "inputs": {
-     "form": 8.75,
-     "team_total": -4.0,
-     "matchup": 0.05
     }
    },
    {
@@ -2489,36 +2471,36 @@
     "name": "Brandon McManus",
     "team": "LA",
     "opponent": "GB",
-    "score": 6.87,
+    "score": 6.8,
     "status": null,
     "inputs": {
      "form": 7.57,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": -2.75
     }
    },
    {
-    "name": "Chris Boswell",
-    "team": "PIT",
-    "opponent": "DEN",
-    "score": 6.84,
+    "name": "Joey Slye",
+    "team": "TEN",
+    "opponent": "JAX",
+    "score": 6.79,
     "status": null,
     "inputs": {
-     "form": 10.05,
-     "team_total": -4.75,
-     "matchup": -1.15
+     "form": 9.39,
+     "team_total": -5.0,
+     "matchup": -0.55
     }
    },
    {
-    "name": "Jake Elliott",
-    "team": "PHI",
-    "opponent": "DAL",
-    "score": 6.81,
+    "name": "Matt Gay",
+    "team": "LV",
+    "opponent": "CLE",
+    "score": 6.79,
     "status": null,
     "inputs": {
-     "form": 6.22,
-     "team_total": -3.0,
-     "matchup": 1.36
+     "form": 8.61,
+     "team_total": -5.0,
+     "matchup": 0.25
     }
    },
    {
@@ -2534,50 +2516,62 @@
     }
    },
    {
-    "name": "Chad Ryland",
-    "team": "ARI",
-    "opponent": "WAS",
-    "score": 6.7,
+    "name": "Cameron Dicker",
+    "team": "LAC",
+    "opponent": "NE",
+    "score": 6.71,
     "status": null,
     "inputs": {
-     "form": 8.32,
-     "team_total": -5.0,
+     "form": 8.75,
+     "team_total": -5.5,
      "matchup": 0.05
-    }
-   },
-   {
-    "name": "Joey Slye",
-    "team": "TEN",
-    "opponent": "JAX",
-    "score": 6.65,
-    "status": null,
-    "inputs": {
-     "form": 9.39,
-     "team_total": -6.0,
-     "matchup": -0.55
     }
    },
    {
     "name": "Andy Borregales",
     "team": "NE",
     "opponent": "LAC",
-    "score": 6.51,
+    "score": 6.71,
     "status": null,
     "inputs": {
      "form": 6.38,
-     "team_total": -5.5,
+     "team_total": -4.0,
      "matchup": 1.35
+    }
+   },
+   {
+    "name": "Chris Boswell",
+    "team": "PIT",
+    "opponent": "DEN",
+    "score": 6.67,
+    "status": null,
+    "inputs": {
+     "form": 10.05,
+     "team_total": -6.0,
+     "matchup": -1.15
+    }
+   },
+   {
+    "name": "Chad Ryland",
+    "team": "ARI",
+    "opponent": "WAS",
+    "score": 6.66,
+    "status": null,
+    "inputs": {
+     "form": 8.32,
+     "team_total": -5.25,
+     "matchup": 0.05
     }
    },
    {
     "name": "Spencer Shrader",
     "team": "IND",
     "opponent": "NYG",
-    "score": 6.5,
+    "score": 6.53,
     "status": null,
     "inputs": {
      "form": 8.86,
-     "team_total": -5.0,
+     "team_total": -4.75,
      "matchup": -1.65
     }
    },
@@ -2585,23 +2579,11 @@
     "name": "Zane Gonzalez",
     "team": "MIA",
     "opponent": "NYJ",
-    "score": 6.49,
+    "score": 6.43,
     "status": null,
     "inputs": {
      "form": 7.85,
-     "team_total": -4.0,
-     "matchup": -1.37
-    }
-   },
-   {
-    "name": "Daniel Carlson",
-    "team": "MIA",
-    "opponent": "NYJ",
-    "score": 6.25,
-    "status": null,
-    "inputs": {
-     "form": 6.5,
-     "team_total": -4.0,
+     "team_total": -4.5,
      "matchup": -1.37
     }
    },
@@ -2609,23 +2591,35 @@
     "name": "Jake Moody",
     "team": "ATL",
     "opponent": "MIN",
-    "score": 6.25,
+    "score": 6.19,
     "status": null,
     "inputs": {
      "form": 7.64,
-     "team_total": -4.75,
+     "team_total": -5.25,
      "matchup": -1.95
+    }
+   },
+   {
+    "name": "Daniel Carlson",
+    "team": "MIA",
+    "opponent": "NYJ",
+    "score": 6.18,
+    "status": null,
+    "inputs": {
+     "form": 6.5,
+     "team_total": -4.5,
+     "matchup": -1.37
     }
    },
    {
     "name": "Nick Folk",
     "team": "ATL",
     "opponent": "MIN",
-    "score": 6.04,
+    "score": 5.97,
     "status": null,
     "inputs": {
      "form": 6.48,
-     "team_total": -4.75,
+     "team_total": -5.25,
      "matchup": -1.95
     }
    },
@@ -2633,11 +2627,11 @@
     "name": "Joshua Karty",
     "team": "LA",
     "opponent": "GB",
-    "score": 5.99,
+    "score": 5.92,
     "status": null,
     "inputs": {
      "form": 2.75,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": -2.75
     }
    },
@@ -2658,11 +2652,11 @@
     "name": "Blake Grupe",
     "team": "LA",
     "opponent": "GB",
-    "score": -0.16,
+    "score": -0.23,
     "status": "Reserve",
     "inputs": {
      "form": 6.38,
-     "team_total": 1.0,
+     "team_total": 0.5,
      "matchup": -2.75,
      "reserve": 1.0
     }
@@ -2670,9 +2664,9 @@
   ],
   "DST": [
    {
-    "name": "JAX D/ST",
-    "team": "JAX",
-    "opponent": "TEN",
+    "name": "DEN D/ST",
+    "team": "DEN",
+    "opponent": "PIT",
     "score": 8.69,
     "status": null,
     "inputs": {
@@ -2680,9 +2674,9 @@
     }
    },
    {
-    "name": "LAC D/ST",
-    "team": "LAC",
-    "opponent": "NE",
+    "name": "NE D/ST",
+    "team": "NE",
+    "opponent": "LAC",
     "score": 8.48,
     "status": null,
     "inputs": {
@@ -2693,6 +2687,36 @@
     "name": "WAS D/ST",
     "team": "WAS",
     "opponent": "ARI",
+    "score": 8.38,
+    "status": null,
+    "inputs": {
+     "team_total": 5.25
+    }
+   },
+   {
+    "name": "MIN D/ST",
+    "team": "MIN",
+    "opponent": "ATL",
+    "score": 8.38,
+    "status": null,
+    "inputs": {
+     "team_total": 5.25
+    }
+   },
+   {
+    "name": "JAX D/ST",
+    "team": "JAX",
+    "opponent": "TEN",
+    "score": 8.28,
+    "status": null,
+    "inputs": {
+     "team_total": 5.0
+    }
+   },
+   {
+    "name": "CLE D/ST",
+    "team": "CLE",
+    "opponent": "LV",
     "score": 8.28,
     "status": null,
     "inputs": {
@@ -2703,80 +2727,60 @@
     "name": "NYG D/ST",
     "team": "NYG",
     "opponent": "IND",
-    "score": 8.28,
-    "status": null,
-    "inputs": {
-     "team_total": 5.0
-    }
-   },
-   {
-    "name": "MIN D/ST",
-    "team": "MIN",
-    "opponent": "ATL",
     "score": 8.17,
     "status": null,
     "inputs": {
      "team_total": 4.75
-    }
-   },
-   {
-    "name": "DEN D/ST",
-    "team": "DEN",
-    "opponent": "PIT",
-    "score": 8.17,
-    "status": null,
-    "inputs": {
-     "team_total": 4.75
-    }
-   },
-   {
-    "name": "NE D/ST",
-    "team": "NE",
-    "opponent": "LAC",
-    "score": 7.86,
-    "status": null,
-    "inputs": {
-     "team_total": 4.0
     }
    },
    {
     "name": "NYJ D/ST",
     "team": "NYJ",
     "opponent": "MIA",
+    "score": 8.07,
+    "status": null,
+    "inputs": {
+     "team_total": 4.5
+    }
+   },
+   {
+    "name": "LAC D/ST",
+    "team": "LAC",
+    "opponent": "NE",
     "score": 7.86,
     "status": null,
     "inputs": {
      "team_total": 4.0
-    }
-   },
-   {
-    "name": "CLE D/ST",
-    "team": "CLE",
-    "opponent": "LV",
-    "score": 7.86,
-    "status": null,
-    "inputs": {
-     "team_total": 4.0
-    }
-   },
-   {
-    "name": "DAL D/ST",
-    "team": "DAL",
-    "opponent": "PHI",
-    "score": 7.44,
-    "status": null,
-    "inputs": {
-     "team_total": 3.0
     }
    },
    {
     "name": "CIN D/ST",
     "team": "CIN",
     "opponent": "NO",
-    "score": 7.13,
+    "score": 7.34,
     "status": null,
     "inputs": {
-     "team_total": 2.25
+     "team_total": 2.75
+    }
+   },
+   {
+    "name": "PIT D/ST",
+    "team": "PIT",
+    "opponent": "DEN",
+    "score": 7.23,
+    "status": null,
+    "inputs": {
+     "team_total": 2.5
+    }
+   },
+   {
+    "name": "DAL D/ST",
+    "team": "DAL",
+    "opponent": "PHI",
+    "score": 7.23,
+    "status": null,
+    "inputs": {
+     "team_total": 2.5
     }
    },
    {
@@ -2790,6 +2794,16 @@
     }
    },
    {
+    "name": "LA D/ST",
+    "team": "LA",
+    "opponent": "GB",
+    "score": 7.02,
+    "status": null,
+    "inputs": {
+     "team_total": 2.0
+    }
+   },
+   {
     "name": "HOU D/ST",
     "team": "HOU",
     "opponent": "BAL",
@@ -2800,19 +2814,9 @@
     }
    },
    {
-    "name": "PIT D/ST",
-    "team": "PIT",
-    "opponent": "DEN",
-    "score": 6.92,
-    "status": null,
-    "inputs": {
-     "team_total": 1.75
-    }
-   },
-   {
-    "name": "LA D/ST",
-    "team": "LA",
-    "opponent": "GB",
+    "name": "SF D/ST",
+    "team": "SF",
+    "opponent": "SEA",
     "score": 6.81,
     "status": null,
     "inputs": {
@@ -2820,9 +2824,9 @@
     }
    },
    {
-    "name": "SF D/ST",
-    "team": "SF",
-    "opponent": "SEA",
+    "name": "BUF D/ST",
+    "team": "BUF",
+    "opponent": "KC",
     "score": 6.5,
     "status": null,
     "inputs": {
@@ -2830,9 +2834,9 @@
     }
    },
    {
-    "name": "MIA D/ST",
-    "team": "MIA",
-    "opponent": "NYJ",
+    "name": "LV D/ST",
+    "team": "LV",
+    "opponent": "CLE",
     "score": 6.39,
     "status": null,
     "inputs": {
@@ -2840,19 +2844,17 @@
     }
    },
    {
-    "name": "BUF D/ST",
-    "team": "BUF",
-    "opponent": "KC",
-    "score": 6.29,
+    "name": "MIA D/ST",
+    "team": "MIA",
+    "opponent": "NYJ",
+    "score": 6.19,
     "status": null,
-    "inputs": {
-     "team_total": 0.25
-    }
+    "inputs": {}
    },
    {
-    "name": "LV D/ST",
-    "team": "LV",
-    "opponent": "CLE",
+    "name": "GB D/ST",
+    "team": "GB",
+    "opponent": "LA",
     "score": 5.98,
     "status": null,
     "inputs": {
@@ -2870,9 +2872,9 @@
     }
    },
    {
-    "name": "GB D/ST",
-    "team": "GB",
-    "opponent": "LA",
+    "name": "SEA D/ST",
+    "team": "SEA",
+    "opponent": "SF",
     "score": 5.77,
     "status": null,
     "inputs": {
@@ -2883,26 +2885,36 @@
     "name": "IND D/ST",
     "team": "IND",
     "opponent": "NYG",
-    "score": 5.56,
+    "score": 5.66,
     "status": null,
     "inputs": {
-     "team_total": -1.5
-    }
-   },
-   {
-    "name": "SEA D/ST",
-    "team": "SEA",
-    "opponent": "SF",
-    "score": 5.25,
-    "status": null,
-    "inputs": {
-     "team_total": -2.25
+     "team_total": -1.25
     }
    },
    {
     "name": "ATL D/ST",
     "team": "ATL",
     "opponent": "MIN",
+    "score": 5.45,
+    "status": null,
+    "inputs": {
+     "team_total": -1.75
+    }
+   },
+   {
+    "name": "ARI D/ST",
+    "team": "ARI",
+    "opponent": "WAS",
+    "score": 5.45,
+    "status": null,
+    "inputs": {
+     "team_total": -1.75
+    }
+   },
+   {
+    "name": "KC D/ST",
+    "team": "KC",
+    "opponent": "BUF",
     "score": 5.25,
     "status": null,
     "inputs": {
@@ -2910,33 +2922,13 @@
     }
    },
    {
-    "name": "ARI D/ST",
-    "team": "ARI",
-    "opponent": "WAS",
-    "score": 5.14,
-    "status": null,
-    "inputs": {
-     "team_total": -2.5
-    }
-   },
-   {
-    "name": "KC D/ST",
-    "team": "KC",
-    "opponent": "BUF",
-    "score": 5.04,
-    "status": null,
-    "inputs": {
-     "team_total": -2.75
-    }
-   },
-   {
     "name": "CHI D/ST",
     "team": "CHI",
     "opponent": "DET",
-    "score": 4.51,
+    "score": 4.3,
     "status": null,
     "inputs": {
-     "team_total": -4.0
+     "team_total": -4.5
     }
    },
    {
@@ -2950,43 +2942,43 @@
     }
    },
    {
-    "name": "PHI D/ST",
-    "team": "PHI",
-    "opponent": "DAL",
-    "score": 3.89,
-    "status": null,
-    "inputs": {
-     "team_total": -5.5
-    }
-   },
-   {
     "name": "DET D/ST",
     "team": "DET",
     "opponent": "CHI",
-    "score": 3.47,
+    "score": 3.68,
     "status": null,
     "inputs": {
-     "team_total": -6.5
+     "team_total": -6.0
+    }
+   },
+   {
+    "name": "PHI D/ST",
+    "team": "PHI",
+    "opponent": "DAL",
+    "score": 3.68,
+    "status": null,
+    "inputs": {
+     "team_total": -6.0
     }
    },
    {
     "name": "NO D/ST",
     "team": "NO",
     "opponent": "CIN",
-    "score": 2.95,
+    "score": 3.16,
     "status": null,
     "inputs": {
-     "team_total": -7.75
+     "team_total": -7.25
     }
    },
    {
     "name": "TEN D/ST",
     "team": "TEN",
     "opponent": "JAX",
-    "score": 2.63,
+    "score": 2.22,
     "status": null,
     "inputs": {
-     "team_total": -8.5
+     "team_total": -9.5
     }
    }
   ]

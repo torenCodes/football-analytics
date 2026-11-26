@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-24T20:34:05.807592+00:00"
+    "generated_at": "2026-11-26T04:04:03.724593+00:00"
   },
   "available": true,
   "season": 2026,
@@ -113,10 +113,10 @@
       "RB": {
         "players_graded": 42,
         "mean_abs_rank_error": 12.7,
-        "hit_rate_within_5": 0.262,
+        "hit_rate_within_5": 0.238,
         "vs_consensus": {
           "players": 42,
-          "ours_rho": 0.564,
+          "ours_rho": 0.566,
           "market_rho": 0.716
         },
         "biggest_steals": [
@@ -207,8 +207,8 @@
             "player_id": "00-0036158",
             "name": "J.K. Dobbins",
             "preseason_rank": 29,
-            "actual_rank": 52,
-            "rank_error": 23,
+            "actual_rank": 51,
+            "rank_error": 22,
             "games": 10,
             "ppg": 6.2
           }
@@ -216,12 +216,12 @@
       },
       "WR": {
         "players_graded": 46,
-        "mean_abs_rank_error": 18.0,
+        "mean_abs_rank_error": 18.1,
         "hit_rate_within_5": 0.37,
         "vs_consensus": {
           "players": 46,
           "ours_rho": 0.585,
-          "market_rho": 0.656
+          "market_rho": 0.657
         },
         "biggest_steals": [
           {
@@ -275,8 +275,8 @@
             "player_id": "00-0036259",
             "name": "Jauan Jennings",
             "preseason_rank": 21,
-            "actual_rank": 127,
-            "rank_error": 106,
+            "actual_rank": 128,
+            "rank_error": 107,
             "games": 7,
             "ppg": 2.3
           },
@@ -528,12 +528,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.8,
-        "hit_rate_within_5": 0.5,
+        "mean_abs_rank_error": 7.9,
+        "hit_rate_within_5": 0.469,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.428,
-          "market_rho": 0.354
+          "ours_rho": 0.42,
+          "market_rho": 0.35
         },
         "biggest_steals": [
           {
@@ -605,8 +605,8 @@
             "player_id": "NO_DST",
             "name": "NO D/ST",
             "preseason_rank": 9,
-            "actual_rank": 23,
-            "rank_error": 14,
+            "actual_rank": 24,
+            "rank_error": 15,
             "games": 10,
             "ppg": 4.4
           },
@@ -901,8 +901,8 @@
             "player_id": "00-0036259",
             "name": "Jauan Jennings",
             "preseason_rank": 17,
-            "actual_rank": 139,
-            "rank_error": 122,
+            "actual_rank": 140,
+            "rank_error": 123,
             "games": 7,
             "ppg": 1.1
           },
@@ -1154,12 +1154,12 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.8,
-        "hit_rate_within_5": 0.5,
+        "mean_abs_rank_error": 7.9,
+        "hit_rate_within_5": 0.469,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.428,
-          "market_rho": 0.354
+          "ours_rho": 0.42,
+          "market_rho": 0.35
         },
         "biggest_steals": [
           {
@@ -1231,8 +1231,8 @@
             "player_id": "NO_DST",
             "name": "NO D/ST",
             "preseason_rank": 9,
-            "actual_rank": 23,
-            "rank_error": 14,
+            "actual_rank": 24,
+            "rank_error": 15,
             "games": 10,
             "ppg": 4.4
           },
