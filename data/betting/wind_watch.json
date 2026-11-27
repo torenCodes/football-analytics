@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-26T04:21:13.410185+00:00"
+  "generated_at": "2026-11-27T03:40:14.052249+00:00"
  },
  "season": 2026,
  "week": 12,
@@ -39,21 +39,6 @@
    "locked_at": "2026-11-24T20:50:17.957321+00:00"
   },
   {
-   "game_id": "2026_12_NO_CIN",
-   "week": 12,
-   "gameday": "2026-11-29",
-   "gametime": "13:00",
-   "weekday": "Sunday",
-   "kickoff_utc": "2026-11-29T18:00:00+00:00",
-   "away_team": "NO",
-   "home_team": "CIN",
-   "forecast_mph": 12.0,
-   "gust_mph": 37.8,
-   "total": 49.5,
-   "spot": true,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
-  },
-  {
    "game_id": "2026_12_LV_CLE",
    "week": 12,
    "gameday": "2026-11-29",
@@ -62,11 +47,11 @@
    "kickoff_utc": "2026-11-30T01:20:00+00:00",
    "away_team": "LV",
    "home_team": "CLE",
-   "forecast_mph": 10.9,
-   "gust_mph": 31.3,
-   "total": 39.5,
+   "forecast_mph": 15.0,
+   "gust_mph": 32.0,
+   "total": 40.5,
    "spot": true,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   }
  ],
  "outdoor_games": 8,

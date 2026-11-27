@@ -42,11 +42,11 @@
    "kickoff_utc": "2026-11-29T18:00:00+00:00",
    "away_team": "NO",
    "home_team": "CIN",
-   "forecast_mph": 12.0,
-   "gust_mph": 37.8,
+   "forecast_mph": 8.0,
+   "gust_mph": 36.9,
    "total": 49.5,
-   "spot": true,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "spot": false,
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   },
   {
    "game_id": "2026_12_NYJ_MIA",
@@ -57,11 +57,11 @@
    "kickoff_utc": "2026-11-29T18:00:00+00:00",
    "away_team": "NYJ",
    "home_team": "MIA",
-   "forecast_mph": 7.8,
-   "gust_mph": 9.4,
-   "total": 40.5,
+   "forecast_mph": 7.7,
+   "gust_mph": 10.1,
+   "total": 39.5,
    "spot": false,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   },
   {
    "game_id": "2026_12_TEN_JAX",
@@ -72,11 +72,11 @@
    "kickoff_utc": "2026-11-29T18:00:00+00:00",
    "away_team": "TEN",
    "home_team": "JAX",
-   "forecast_mph": 3.3,
-   "gust_mph": 8.1,
+   "forecast_mph": 4.4,
+   "gust_mph": 16.8,
    "total": 49.5,
    "spot": false,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   },
   {
    "game_id": "2026_12_SEA_SF",
@@ -87,11 +87,11 @@
    "kickoff_utc": "2026-11-29T21:25:00+00:00",
    "away_team": "SEA",
    "home_team": "SF",
-   "forecast_mph": 9.0,
-   "gust_mph": 21.3,
-   "total": 44.5,
+   "forecast_mph": 9.2,
+   "gust_mph": 23.0,
+   "total": 43.5,
    "spot": false,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   },
   {
    "game_id": "2026_12_LV_CLE",
@@ -102,11 +102,11 @@
    "kickoff_utc": "2026-11-30T01:20:00+00:00",
    "away_team": "LV",
    "home_team": "CLE",
-   "forecast_mph": 10.9,
-   "gust_mph": 31.3,
-   "total": 39.5,
+   "forecast_mph": 15.0,
+   "gust_mph": 32.0,
+   "total": 40.5,
    "spot": true,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   },
   {
    "game_id": "2026_12_CAR_TB",
@@ -117,11 +117,11 @@
    "kickoff_utc": "2026-12-01T01:15:00+00:00",
    "away_team": "CAR",
    "home_team": "TB",
-   "forecast_mph": 5.2,
-   "gust_mph": 11.9,
+   "forecast_mph": 7.2,
+   "gust_mph": 17.4,
    "total": 43.5,
    "spot": false,
-   "locked_at": "2026-11-26T04:21:13.410185+00:00"
+   "locked_at": "2026-11-27T03:40:14.052249+00:00"
   }
  ]
 }
