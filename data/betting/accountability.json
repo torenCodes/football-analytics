@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-28T04:13:53.156693+00:00"
+    "generated_at": "2026-11-28T09:25:23.677067+00:00"
   },
   "weeks_graded": 12,
   "ats": {
@@ -2582,7 +2582,7 @@
       "season": 2026,
       "week": 12,
       "model_version": "v2",
-      "locked_at": "2026-11-28T04:13:53.150059+00:00",
+      "locked_at": "2026-11-28T09:25:23.667796+00:00",
       "ats": {
         "graded": 4,
         "correct": 2,
@@ -2741,7 +2741,7 @@
           "game_id": "2026_12_NE_LAC",
           "home_team": "LAC",
           "away_team": "NE",
-          "model_margin_home": 0.2,
+          "model_margin_home": -2.3,
           "spread_home": -3.0,
           "our_pick": "home",
           "no_lean": false,
@@ -2754,7 +2754,7 @@
           "game_id": "2026_12_SEA_SF",
           "home_team": "SF",
           "away_team": "SEA",
-          "model_margin_home": 5.6,
+          "model_margin_home": 3.1,
           "spread_home": -1.5,
           "our_pick": "home",
           "no_lean": false,
