@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-11-26T04:21:12.886837+00:00"
+    "generated_at": "2026-11-28T04:13:53.156693+00:00"
   },
   "weeks_graded": 12,
   "ats": {
-    "graded": 154,
-    "correct": 80,
+    "graded": 158,
+    "correct": 82,
     "accuracy": 0.519
   },
   "outright": {
-    "graded": 161,
-    "correct": 98,
-    "accuracy": 0.609
+    "graded": 166,
+    "correct": 100,
+    "accuracy": 0.602
   },
   "by_model": {
     "v0": {
@@ -64,18 +64,18 @@
         12
       ],
       "ats": {
-        "graded": 26,
-        "correct": 13,
+        "graded": 30,
+        "correct": 15,
         "accuracy": 0.5
       },
       "outright": {
-        "graded": 27,
-        "correct": 17,
-        "accuracy": 0.63
+        "graded": 32,
+        "correct": 19,
+        "accuracy": 0.594
       },
-      "games": 27,
-      "model_corr": 0.66,
-      "vegas_corr": 0.705
+      "games": 32,
+      "model_corr": 0.596,
+      "vegas_corr": 0.63
     }
   },
   "season_to_date": [
@@ -243,6 +243,21 @@
       "vegas_mae": 9.43,
       "model_winners": 0.609,
       "vegas_winners": 0.679
+    },
+    {
+      "week": 12,
+      "games": 168,
+      "ats": {
+        "graded": 158,
+        "correct": 82,
+        "accuracy": 0.519
+      },
+      "model_corr": 0.298,
+      "vegas_corr": 0.482,
+      "model_mae": 10.26,
+      "vegas_mae": 9.43,
+      "model_winners": 0.602,
+      "vegas_winners": 0.677
     }
   ],
   "weeks": [
@@ -2567,16 +2582,16 @@
       "season": 2026,
       "week": 12,
       "model_version": "v2",
-      "locked_at": "2026-11-26T04:21:12.879584+00:00",
+      "locked_at": "2026-11-28T04:13:53.150059+00:00",
       "ats": {
-        "graded": 0,
-        "correct": 0,
-        "accuracy": null
+        "graded": 4,
+        "correct": 2,
+        "accuracy": 0.5
       },
       "outright": {
-        "graded": 0,
-        "correct": 0,
-        "accuracy": null
+        "graded": 5,
+        "correct": 2,
+        "accuracy": 0.4
       },
       "games": [
         {
@@ -2587,10 +2602,10 @@
           "spread_home": 2.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 13,
+          "push": false,
+          "correct": true,
+          "winner_correct": true
         },
         {
           "game_id": "2026_12_CHI_DET",
@@ -2600,10 +2615,10 @@
           "spread_home": -2.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -4,
+          "push": false,
+          "correct": false,
+          "winner_correct": false
         },
         {
           "game_id": "2026_12_PHI_DAL",
@@ -2613,10 +2628,10 @@
           "spread_home": 8.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": -1,
+          "push": false,
+          "correct": false,
+          "winner_correct": false
         },
         {
           "game_id": "2026_12_KC_BUF",
@@ -2626,10 +2641,10 @@
           "spread_home": 3.0,
           "our_pick": "away",
           "no_lean": false,
-          "result": null,
-          "push": null,
+          "result": 3,
+          "push": true,
           "correct": null,
-          "winner_correct": null
+          "winner_correct": true
         },
         {
           "game_id": "2026_12_DEN_PIT",
@@ -2639,10 +2654,10 @@
           "spread_home": -3.5,
           "our_pick": "home",
           "no_lean": false,
-          "result": null,
-          "push": null,
-          "correct": null,
-          "winner_correct": null
+          "result": 22,
+          "push": false,
+          "correct": true,
+          "winner_correct": false
         },
         {
           "game_id": "2026_12_ATL_MIN",
@@ -2675,7 +2690,7 @@
           "home_team": "CIN",
           "away_team": "NO",
           "model_margin_home": 7.7,
-          "spread_home": 10.0,
+          "spread_home": 9.5,
           "our_pick": "away",
           "no_lean": false,
           "result": null,
@@ -2688,7 +2703,7 @@
           "home_team": "IND",
           "away_team": "NYG",
           "model_margin_home": -1.9,
-          "spread_home": -6.0,
+          "spread_home": -5.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2701,7 +2716,7 @@
           "home_team": "MIA",
           "away_team": "NYJ",
           "model_margin_home": -2.2,
-          "spread_home": -4.5,
+          "spread_home": -5.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2714,7 +2729,7 @@
           "home_team": "JAX",
           "away_team": "TEN",
           "model_margin_home": 16.2,
-          "spread_home": 14.5,
+          "spread_home": 14.0,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2727,7 +2742,7 @@
           "home_team": "LAC",
           "away_team": "NE",
           "model_margin_home": 0.2,
-          "spread_home": -1.5,
+          "spread_home": -3.0,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2740,7 +2755,7 @@
           "home_team": "SF",
           "away_team": "SEA",
           "model_margin_home": 5.6,
-          "spread_home": 2.5,
+          "spread_home": -1.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
@@ -2753,7 +2768,7 @@
           "home_team": "ARI",
           "away_team": "WAS",
           "model_margin_home": -5.1,
-          "spread_home": -7.0,
+          "spread_home": -6.5,
           "our_pick": "home",
           "no_lean": false,
           "result": null,
