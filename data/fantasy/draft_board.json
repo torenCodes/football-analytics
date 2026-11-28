@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-28T03:49:25.581212+00:00"
+    "generated_at": "2026-11-28T08:52:42.513674+00:00"
   },
   "ppr": {
     "season_baseline": 2025,
@@ -1302,9 +1302,9 @@
           "coordinator_role": "OC",
           "edge_score": 16.22,
           "market_rank": 7.83,
-          "model_rank": 22,
-          "market_gap": -14.2,
-          "explain": "O-line continuity is elite (100%), a real tailwind here. New OC (Zac Robinson) means a new scheme to learn too. The market ranks Bucky Irving 14 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 21,
+          "market_gap": -13.2,
+          "explain": "O-line continuity is elite (100%), a real tailwind here. New OC (Zac Robinson) means a new scheme to learn too. The market ranks Bucky Irving 13 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 9
         },
         {
@@ -1610,8 +1610,8 @@
           "coordinator_role": "OC",
           "edge_score": 12.63,
           "market_rank": 25.33,
-          "model_rank": 21,
-          "market_gap": 4.3,
+          "model_rank": 22,
+          "market_gap": 3.3,
           "explain": "O-line continuity is elite (80%), a real tailwind here. New OC (Brian Fleury) means a new scheme to learn too.",
           "our_rank": 23
         },
@@ -2800,9 +2800,9 @@
           "coordinator_role": "OC",
           "edge_score": 11.75,
           "market_rank": 27.17,
-          "model_rank": 43,
-          "market_gap": -15.8,
-          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 16 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 42,
+          "market_gap": -14.8,
+          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 15 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 27
         },
         {
@@ -4276,8 +4276,8 @@
           "coordinator_role": "OC",
           "edge_score": 4.63,
           "market_rank": 42.33,
-          "model_rank": 46,
-          "market_gap": -3.7,
+          "model_rank": 47,
+          "market_gap": -4.7,
           "explain": "O-line continuity is shaky (40%), a drag on the Edge Score this early. Same OC (Brad Idzik) returning, so scheme continuity holds.",
           "our_rank": 44
         },
@@ -4342,7 +4342,7 @@
           "coordinator_role": "OC",
           "edge_score": 4.47,
           "market_rank": null,
-          "model_rank": 47,
+          "model_rank": 46,
           "market_gap": null,
           "explain": "Same OC (Adam Stenavich) returning, so scheme continuity holds.",
           "our_rank": 47
@@ -4900,14 +4900,14 @@
           "our_rank": 22
         },
         {
-          "player_id": "00-0039750",
-          "name": "Joshua Karty",
+          "player_id": "00-0034084",
+          "name": "Mike Badgley",
           "position": "K",
-          "team": "LA",
+          "team": "IND",
           "baseline_ppg": 7.1,
-          "season_ppg": 6.88,
-          "last6_ppg": 7.33,
-          "games_played_2025": 8,
+          "season_ppg": 7.86,
+          "last6_ppg": 6.33,
+          "games_played_2025": 7,
           "line_continuity_pct": null,
           "line_continuity_type": null,
           "same_head_coach": true,
@@ -4944,14 +4944,14 @@
           "our_rank": 24
         },
         {
-          "player_id": "00-0034084",
-          "name": "Mike Badgley",
+          "player_id": "00-0039750",
+          "name": "Joshua Karty",
           "position": "K",
-          "team": "IND",
+          "team": "LA",
           "baseline_ppg": 7.1,
-          "season_ppg": 7.86,
-          "last6_ppg": 6.33,
-          "games_played_2025": 7,
+          "season_ppg": 6.88,
+          "last6_ppg": 7.33,
+          "games_played_2025": 8,
           "line_continuity_pct": null,
           "line_continuity_type": null,
           "same_head_coach": true,
@@ -7898,9 +7898,9 @@
           "coordinator_role": "OC",
           "edge_score": 7.79,
           "market_rank": 20.5,
-          "model_rank": 91,
-          "market_gap": -70.5,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Bobby Slowik) means a new scheme to learn too. The market ranks Ollie Gordon II 70 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 92,
+          "market_gap": -71.5,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Bobby Slowik) means a new scheme to learn too. The market ranks Ollie Gordon II 72 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 36
         },
         {
@@ -8516,9 +8516,9 @@
           "coordinator_role": "OC",
           "edge_score": 10.44,
           "market_rank": 7.0,
-          "model_rank": 48,
-          "market_gap": -41.0,
-          "explain": "Same OC (Wes Phillips) returning, so scheme continuity holds. The market ranks Justin Jefferson 41 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 47,
+          "market_gap": -40.0,
+          "explain": "Same OC (Wes Phillips) returning, so scheme continuity holds. The market ranks Justin Jefferson 40 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 14
         },
         {
@@ -8846,9 +8846,9 @@
           "coordinator_role": "OC",
           "edge_score": 7.42,
           "market_rank": 27.17,
-          "model_rank": 47,
-          "market_gap": -19.8,
-          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 20 spots higher than we do \u2014 our model is more cautious here.",
+          "model_rank": 48,
+          "market_gap": -20.8,
+          "explain": "New OC (Sean Mannion) means a new scheme to learn too. The market ranks DeVonta Smith 21 spots higher than we do \u2014 our model is more cautious here.",
           "our_rank": 29
         },
         {
@@ -10388,9 +10388,9 @@
           "coordinator_role": "OC",
           "edge_score": 2.26,
           "market_rank": 53.0,
-          "model_rank": 25,
-          "market_gap": 28.0,
-          "explain": "New OC (Sean Mannion) means a new scheme to learn too. We have Zach Ertz 28 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "model_rank": 24,
+          "market_gap": 29.0,
+          "explain": "New OC (Sean Mannion) means a new scheme to learn too. We have Zach Ertz 29 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 49
         },
         {
@@ -10410,9 +10410,9 @@
           "coordinator_role": "OC",
           "edge_score": 2.26,
           "market_rank": 54.0,
-          "model_rank": 24,
-          "market_gap": 30.0,
-          "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Pete Carmichael Jr.) means a new scheme to learn too. We have Dawson Knox 30 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
+          "model_rank": 25,
+          "market_gap": 29.0,
+          "explain": "O-line continuity is elite (80%), a real tailwind here. Playing under a new head coach this season adds scheme uncertainty. New OC (Pete Carmichael Jr.) means a new scheme to learn too. We have Dawson Knox 29 spots higher than market consensus \u2014 a value the market hasn't priced in yet.",
           "our_rank": 50
         }
       ],
@@ -10902,14 +10902,14 @@
           "our_rank": 22
         },
         {
-          "player_id": "00-0039750",
-          "name": "Joshua Karty",
+          "player_id": "00-0034084",
+          "name": "Mike Badgley",
           "position": "K",
-          "team": "LA",
+          "team": "IND",
           "baseline_ppg": 7.1,
-          "season_ppg": 6.88,
-          "last6_ppg": 7.33,
-          "games_played_2025": 8,
+          "season_ppg": 7.86,
+          "last6_ppg": 6.33,
+          "games_played_2025": 7,
           "line_continuity_pct": null,
           "line_continuity_type": null,
           "same_head_coach": true,
@@ -10946,14 +10946,14 @@
           "our_rank": 24
         },
         {
-          "player_id": "00-0034084",
-          "name": "Mike Badgley",
+          "player_id": "00-0039750",
+          "name": "Joshua Karty",
           "position": "K",
-          "team": "IND",
+          "team": "LA",
           "baseline_ppg": 7.1,
-          "season_ppg": 7.86,
-          "last6_ppg": 6.33,
-          "games_played_2025": 7,
+          "season_ppg": 6.88,
+          "last6_ppg": 7.33,
+          "games_played_2025": 8,
           "line_continuity_pct": null,
           "line_continuity_type": null,
           "same_head_coach": true,

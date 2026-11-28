@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-28T03:49:25.581212+00:00"
+    "generated_at": "2026-11-28T08:52:42.513674+00:00"
   },
   "available": true,
   "season": 2026,
@@ -216,12 +216,12 @@
       },
       "WR": {
         "players_graded": 46,
-        "mean_abs_rank_error": 17.8,
+        "mean_abs_rank_error": 17.9,
         "hit_rate_within_5": 0.391,
         "vs_consensus": {
           "players": 46,
           "ours_rho": 0.577,
-          "market_rho": 0.663
+          "market_rho": 0.664
         },
         "biggest_steals": [
           {
@@ -275,8 +275,8 @@
             "player_id": "00-0036259",
             "name": "Jauan Jennings",
             "preseason_rank": 21,
-            "actual_rank": 127,
-            "rank_error": 106,
+            "actual_rank": 128,
+            "rank_error": 107,
             "games": 7,
             "ppg": 2.3
           },
@@ -424,20 +424,20 @@
       },
       "K": {
         "players_graded": 30,
-        "mean_abs_rank_error": 11.3,
+        "mean_abs_rank_error": 11.4,
         "hit_rate_within_5": 0.233,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.175,
-          "market_rho": 0.201
+          "ours_rho": 0.179,
+          "market_rho": 0.212
         },
         "biggest_steals": [
           {
             "player_id": "00-0035269",
             "name": "Matt Gay",
             "preseason_rank": 37,
-            "actual_rank": 13,
-            "rank_error": -24,
+            "actual_rank": 14,
+            "rank_error": -23,
             "games": 11,
             "ppg": 9.3
           },
@@ -528,20 +528,20 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.5,
-        "hit_rate_within_5": 0.469,
+        "mean_abs_rank_error": 7.6,
+        "hit_rate_within_5": 0.438,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.446,
-          "market_rho": 0.397
+          "ours_rho": 0.443,
+          "market_rho": 0.393
         },
         "biggest_steals": [
           {
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 11,
-            "rank_error": -17,
+            "actual_rank": 10,
+            "rank_error": -18,
             "games": 11,
             "ppg": 6.8
           },
@@ -567,8 +567,8 @@
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
-            "actual_rank": 3,
-            "rank_error": -13,
+            "actual_rank": 4,
+            "rank_error": -12,
             "games": 10,
             "ppg": 7.8
           },
@@ -605,8 +605,8 @@
             "player_id": "NO_DST",
             "name": "NO D/ST",
             "preseason_rank": 9,
-            "actual_rank": 23,
-            "rank_error": 14,
+            "actual_rank": 24,
+            "rank_error": 15,
             "games": 10,
             "ppg": 4.4
           },
@@ -846,8 +846,8 @@
         "hit_rate_within_5": 0.435,
         "vs_consensus": {
           "players": 46,
-          "ours_rho": 0.59,
-          "market_rho": 0.684
+          "ours_rho": 0.588,
+          "market_rho": 0.685
         },
         "biggest_steals": [
           {
@@ -901,8 +901,8 @@
             "player_id": "00-0036259",
             "name": "Jauan Jennings",
             "preseason_rank": 17,
-            "actual_rank": 140,
-            "rank_error": 123,
+            "actual_rank": 141,
+            "rank_error": 124,
             "games": 7,
             "ppg": 1.1
           },
@@ -950,8 +950,8 @@
         "hit_rate_within_5": 0.205,
         "vs_consensus": {
           "players": 44,
-          "ours_rho": 0.537,
-          "market_rho": 0.762
+          "ours_rho": 0.535,
+          "market_rho": 0.761
         },
         "biggest_steals": [
           {
@@ -1005,8 +1005,8 @@
             "player_id": "00-0030061",
             "name": "Zach Ertz",
             "preseason_rank": 25,
-            "actual_rank": 79,
-            "rank_error": 54,
+            "actual_rank": 80,
+            "rank_error": 55,
             "games": 4,
             "ppg": 0.6
           },
@@ -1041,8 +1041,8 @@
             "player_id": "00-0037004",
             "name": "Hunter Long",
             "preseason_rank": 42,
-            "actual_rank": 80,
-            "rank_error": 38,
+            "actual_rank": 79,
+            "rank_error": 37,
             "games": 6,
             "ppg": 0.6
           }
@@ -1050,20 +1050,20 @@
       },
       "K": {
         "players_graded": 30,
-        "mean_abs_rank_error": 11.3,
+        "mean_abs_rank_error": 11.4,
         "hit_rate_within_5": 0.233,
         "vs_consensus": {
           "players": 29,
-          "ours_rho": 0.175,
-          "market_rho": 0.201
+          "ours_rho": 0.179,
+          "market_rho": 0.212
         },
         "biggest_steals": [
           {
             "player_id": "00-0035269",
             "name": "Matt Gay",
             "preseason_rank": 37,
-            "actual_rank": 13,
-            "rank_error": -24,
+            "actual_rank": 14,
+            "rank_error": -23,
             "games": 11,
             "ppg": 9.3
           },
@@ -1154,20 +1154,20 @@
       },
       "DST": {
         "players_graded": 32,
-        "mean_abs_rank_error": 7.5,
-        "hit_rate_within_5": 0.469,
+        "mean_abs_rank_error": 7.6,
+        "hit_rate_within_5": 0.438,
         "vs_consensus": {
           "players": 31,
-          "ours_rho": 0.446,
-          "market_rho": 0.397
+          "ours_rho": 0.443,
+          "market_rho": 0.393
         },
         "biggest_steals": [
           {
             "player_id": "GB_DST",
             "name": "GB D/ST",
             "preseason_rank": 28,
-            "actual_rank": 11,
-            "rank_error": -17,
+            "actual_rank": 10,
+            "rank_error": -18,
             "games": 11,
             "ppg": 6.8
           },
@@ -1193,8 +1193,8 @@
             "player_id": "PIT_DST",
             "name": "PIT D/ST",
             "preseason_rank": 16,
-            "actual_rank": 3,
-            "rank_error": -13,
+            "actual_rank": 4,
+            "rank_error": -12,
             "games": 10,
             "ppg": 7.8
           },
@@ -1231,8 +1231,8 @@
             "player_id": "NO_DST",
             "name": "NO D/ST",
             "preseason_rank": 9,
-            "actual_rank": 23,
-            "rank_error": 14,
+            "actual_rank": 24,
+            "rank_error": 15,
             "games": 10,
             "ppg": 4.4
           },
