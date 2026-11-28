@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-26T04:04:03.724593+00:00"
+    "generated_at": "2026-11-28T03:49:25.581212+00:00"
   },
   "available": true,
   "season": 2026,
@@ -15,6 +15,15 @@
           "games": 9,
           "ppg": 19.1,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 39th at the position entering the season, and they're averaging 19.1 ppg over 9 games since."
+        },
+        {
+          "player_id": "00-0039398",
+          "name": "Joe Milton III",
+          "team": "PHI",
+          "preseason_rank": null,
+          "games": 3,
+          "ppg": 17.4,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 17.4 ppg over 3 games since."
         },
         {
           "player_id": "00-0035704",
@@ -132,15 +141,6 @@
           "games": 3,
           "ppg": 11.5,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 31st at the position entering the season, and they're averaging 11.5 ppg over 3 games since."
-        },
-        {
-          "player_id": "00-0029604",
-          "name": "Kirk Cousins",
-          "team": "MIN",
-          "preseason_rank": 39,
-          "games": 2,
-          "ppg": 11.4,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 39th at the position entering the season, and they're averaging 11.4 ppg over 2 games since."
         }
       ],
       "RB": [
@@ -167,9 +167,9 @@
           "name": "Emmett Johnson",
           "team": "KC",
           "preseason_rank": null,
-          "games": 10,
-          "ppg": 12.0,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 12.0 ppg over 10 games since."
+          "games": 11,
+          "ppg": 12.7,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 12.7 ppg over 11 games since."
         },
         {
           "player_id": "00-0040198",
@@ -295,9 +295,9 @@
           "name": "Matthew Golden",
           "team": "GB",
           "preseason_rank": null,
-          "games": 10,
-          "ppg": 17.6,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 17.6 ppg over 10 games since."
+          "games": 11,
+          "ppg": 16.4,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 16.4 ppg over 11 games since."
         },
         {
           "player_id": "00-0041511",
@@ -307,15 +307,6 @@
           "games": 4,
           "ppg": 15.7,
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 15.7 ppg over 4 games since."
-        },
-        {
-          "player_id": "00-0038997",
-          "name": "Josh Downs",
-          "team": "KC",
-          "preseason_rank": null,
-          "games": 2,
-          "ppg": 12.6,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 12.6 ppg over 2 games since."
         },
         {
           "player_id": "00-0041438",
@@ -415,6 +406,15 @@
           "games": 10,
           "ppg": 9.8,
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 9.8 ppg over 10 games since."
+        },
+        {
+          "player_id": "00-0039880",
+          "name": "Malik Washington",
+          "team": "MIA",
+          "preseason_rank": null,
+          "games": 10,
+          "ppg": 9.6,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 9.6 ppg over 10 games since."
         }
       ],
       "TE": [
@@ -569,9 +569,9 @@
           "name": "Tyler Bass",
           "team": "BUF",
           "preseason_rank": null,
-          "games": 10,
+          "games": 11,
           "ppg": 11.5,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 11.5 ppg over 10 games since."
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 11.5 ppg over 11 games since."
         },
         {
           "player_id": "00-0034794",
@@ -601,6 +601,15 @@
           "explain": "Likely available on waivers in most leagues \u2014 we had them 19th at the position entering the season, and they're averaging 9.4 ppg over 10 games since."
         },
         {
+          "player_id": "00-0029822",
+          "name": "Brandon McManus",
+          "team": "LA",
+          "preseason_rank": 20,
+          "games": 5,
+          "ppg": 9.4,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 20th at the position entering the season, and they're averaging 9.4 ppg over 5 games since."
+        },
+        {
           "player_id": "00-0041182",
           "name": "Drew Stevens",
           "team": "WAS",
@@ -610,6 +619,15 @@
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 9.4 ppg over 10 games since."
         },
         {
+          "player_id": "00-0039172",
+          "name": "Jake Bates",
+          "team": "DET",
+          "preseason_rank": 15,
+          "games": 11,
+          "ppg": 9.3,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 15th at the position entering the season, and they're averaging 9.3 ppg over 11 games since."
+        },
+        {
           "player_id": "00-0035269",
           "name": "Matt Gay",
           "team": "LV",
@@ -617,15 +635,6 @@
           "games": 11,
           "ppg": 9.3,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 37th at the position entering the season, and they're averaging 9.3 ppg over 11 games since."
-        },
-        {
-          "player_id": "00-0039172",
-          "name": "Jake Bates",
-          "team": "DET",
-          "preseason_rank": 15,
-          "games": 10,
-          "ppg": 9.2,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 15th at the position entering the season, and they're averaging 9.2 ppg over 10 games since."
         },
         {
           "player_id": "00-0041145",
@@ -650,9 +659,9 @@
           "name": "Cairo Santos",
           "team": "CHI",
           "preseason_rank": 18,
-          "games": 10,
-          "ppg": 8.8,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 18th at the position entering the season, and they're averaging 8.8 ppg over 10 games since."
+          "games": 11,
+          "ppg": 8.7,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 18th at the position entering the season, and they're averaging 8.7 ppg over 11 games since."
         },
         {
           "player_id": "00-0040279",
@@ -680,15 +689,6 @@
           "games": 10,
           "ppg": 8.3,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 32nd at the position entering the season, and they're averaging 8.3 ppg over 10 games since."
-        },
-        {
-          "player_id": "00-0040074",
-          "name": "Tyler Loop",
-          "team": "BAL",
-          "preseason_rank": 31,
-          "games": 8,
-          "ppg": 8.2,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 31st at the position entering the season, and they're averaging 8.2 ppg over 8 games since."
         }
       ],
       "DST": [
@@ -711,22 +711,13 @@
           "explain": "Likely available on waivers in most leagues \u2014 we had them 16th at the position entering the season, and they're averaging 7.8 ppg over 10 games since."
         },
         {
-          "player_id": "GB_DST",
-          "name": "GB D/ST",
-          "team": "GB",
-          "preseason_rank": 28,
-          "games": 10,
-          "ppg": 7.2,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 28th at the position entering the season, and they're averaging 7.2 ppg over 10 games since."
-        },
-        {
           "player_id": "KC_DST",
           "name": "KC D/ST",
           "team": "KC",
           "preseason_rank": 17,
-          "games": 10,
-          "ppg": 7.1,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 17th at the position entering the season, and they're averaging 7.1 ppg over 10 games since."
+          "games": 11,
+          "ppg": 7.4,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 17th at the position entering the season, and they're averaging 7.4 ppg over 11 games since."
         },
         {
           "player_id": "SF_DST",
@@ -736,6 +727,15 @@
           "games": 10,
           "ppg": 6.9,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 23rd at the position entering the season, and they're averaging 6.9 ppg over 10 games since."
+        },
+        {
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "team": "GB",
+          "preseason_rank": 28,
+          "games": 11,
+          "ppg": 6.8,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 28th at the position entering the season, and they're averaging 6.8 ppg over 11 games since."
         },
         {
           "player_id": "CIN_DST",
@@ -769,9 +769,9 @@
           "name": "DET D/ST",
           "team": "DET",
           "preseason_rank": 19,
-          "games": 10,
-          "ppg": 5.8,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 19th at the position entering the season, and they're averaging 5.8 ppg over 10 games since."
+          "games": 11,
+          "ppg": 5.6,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 19th at the position entering the season, and they're averaging 5.6 ppg over 11 games since."
         },
         {
           "player_id": "WAS_DST",
@@ -839,6 +839,15 @@
           "games": 9,
           "ppg": 19.1,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 39th at the position entering the season, and they're averaging 19.1 ppg over 9 games since."
+        },
+        {
+          "player_id": "00-0039398",
+          "name": "Joe Milton III",
+          "team": "PHI",
+          "preseason_rank": null,
+          "games": 3,
+          "ppg": 17.4,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 17.4 ppg over 3 games since."
         },
         {
           "player_id": "00-0035704",
@@ -956,15 +965,6 @@
           "games": 3,
           "ppg": 11.5,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 31st at the position entering the season, and they're averaging 11.5 ppg over 3 games since."
-        },
-        {
-          "player_id": "00-0029604",
-          "name": "Kirk Cousins",
-          "team": "MIN",
-          "preseason_rank": 39,
-          "games": 2,
-          "ppg": 11.4,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 39th at the position entering the season, and they're averaging 11.4 ppg over 2 games since."
         }
       ],
       "RB": [
@@ -976,6 +976,15 @@
           "games": 6,
           "ppg": 13.5,
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 13.5 ppg over 6 games since."
+        },
+        {
+          "player_id": "00-0041013",
+          "name": "Emmett Johnson",
+          "team": "KC",
+          "preseason_rank": null,
+          "games": 11,
+          "ppg": 10.2,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 10.2 ppg over 11 games since."
         },
         {
           "player_id": "00-0040198",
@@ -994,15 +1003,6 @@
           "games": 7,
           "ppg": 9.8,
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 9.8 ppg over 7 games since."
-        },
-        {
-          "player_id": "00-0041013",
-          "name": "Emmett Johnson",
-          "team": "KC",
-          "preseason_rank": null,
-          "games": 10,
-          "ppg": 9.6,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 9.6 ppg over 10 games since."
         },
         {
           "player_id": "00-0039794",
@@ -1119,9 +1119,9 @@
           "name": "Matthew Golden",
           "team": "GB",
           "preseason_rank": null,
-          "games": 10,
-          "ppg": 11.8,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 11.8 ppg over 10 games since."
+          "games": 11,
+          "ppg": 11.1,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 11.1 ppg over 11 games since."
         },
         {
           "player_id": "00-0041511",
@@ -1140,15 +1140,6 @@
           "games": 7,
           "ppg": 10.3,
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 10.3 ppg over 7 games since."
-        },
-        {
-          "player_id": "00-0038997",
-          "name": "Josh Downs",
-          "team": "KC",
-          "preseason_rank": null,
-          "games": 2,
-          "ppg": 8.6,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 8.6 ppg over 2 games since."
         },
         {
           "player_id": "00-0038104",
@@ -1239,6 +1230,15 @@
           "games": 10,
           "ppg": 6.3,
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 6.3 ppg over 10 games since."
+        },
+        {
+          "player_id": "00-0040134",
+          "name": "Pat Bryant",
+          "team": "DEN",
+          "preseason_rank": null,
+          "games": 6,
+          "ppg": 6.3,
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 6.3 ppg over 6 games since."
         }
       ],
       "TE": [
@@ -1393,9 +1393,9 @@
           "name": "Tyler Bass",
           "team": "BUF",
           "preseason_rank": null,
-          "games": 10,
+          "games": 11,
           "ppg": 11.5,
-          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 11.5 ppg over 10 games since."
+          "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 11.5 ppg over 11 games since."
         },
         {
           "player_id": "00-0034794",
@@ -1425,6 +1425,15 @@
           "explain": "Likely available on waivers in most leagues \u2014 we had them 19th at the position entering the season, and they're averaging 9.4 ppg over 10 games since."
         },
         {
+          "player_id": "00-0029822",
+          "name": "Brandon McManus",
+          "team": "LA",
+          "preseason_rank": 20,
+          "games": 5,
+          "ppg": 9.4,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 20th at the position entering the season, and they're averaging 9.4 ppg over 5 games since."
+        },
+        {
           "player_id": "00-0041182",
           "name": "Drew Stevens",
           "team": "WAS",
@@ -1434,6 +1443,15 @@
           "explain": "Likely available on waivers in most leagues \u2014 wasn't on our preseason board at all, and they're averaging 9.4 ppg over 10 games since."
         },
         {
+          "player_id": "00-0039172",
+          "name": "Jake Bates",
+          "team": "DET",
+          "preseason_rank": 15,
+          "games": 11,
+          "ppg": 9.3,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 15th at the position entering the season, and they're averaging 9.3 ppg over 11 games since."
+        },
+        {
           "player_id": "00-0035269",
           "name": "Matt Gay",
           "team": "LV",
@@ -1441,15 +1459,6 @@
           "games": 11,
           "ppg": 9.3,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 37th at the position entering the season, and they're averaging 9.3 ppg over 11 games since."
-        },
-        {
-          "player_id": "00-0039172",
-          "name": "Jake Bates",
-          "team": "DET",
-          "preseason_rank": 15,
-          "games": 10,
-          "ppg": 9.2,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 15th at the position entering the season, and they're averaging 9.2 ppg over 10 games since."
         },
         {
           "player_id": "00-0041145",
@@ -1474,9 +1483,9 @@
           "name": "Cairo Santos",
           "team": "CHI",
           "preseason_rank": 18,
-          "games": 10,
-          "ppg": 8.8,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 18th at the position entering the season, and they're averaging 8.8 ppg over 10 games since."
+          "games": 11,
+          "ppg": 8.7,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 18th at the position entering the season, and they're averaging 8.7 ppg over 11 games since."
         },
         {
           "player_id": "00-0040279",
@@ -1504,15 +1513,6 @@
           "games": 10,
           "ppg": 8.3,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 32nd at the position entering the season, and they're averaging 8.3 ppg over 10 games since."
-        },
-        {
-          "player_id": "00-0040074",
-          "name": "Tyler Loop",
-          "team": "BAL",
-          "preseason_rank": 31,
-          "games": 8,
-          "ppg": 8.2,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 31st at the position entering the season, and they're averaging 8.2 ppg over 8 games since."
         }
       ],
       "DST": [
@@ -1535,22 +1535,13 @@
           "explain": "Likely available on waivers in most leagues \u2014 we had them 16th at the position entering the season, and they're averaging 7.8 ppg over 10 games since."
         },
         {
-          "player_id": "GB_DST",
-          "name": "GB D/ST",
-          "team": "GB",
-          "preseason_rank": 28,
-          "games": 10,
-          "ppg": 7.2,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 28th at the position entering the season, and they're averaging 7.2 ppg over 10 games since."
-        },
-        {
           "player_id": "KC_DST",
           "name": "KC D/ST",
           "team": "KC",
           "preseason_rank": 17,
-          "games": 10,
-          "ppg": 7.1,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 17th at the position entering the season, and they're averaging 7.1 ppg over 10 games since."
+          "games": 11,
+          "ppg": 7.4,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 17th at the position entering the season, and they're averaging 7.4 ppg over 11 games since."
         },
         {
           "player_id": "SF_DST",
@@ -1560,6 +1551,15 @@
           "games": 10,
           "ppg": 6.9,
           "explain": "Likely available on waivers in most leagues \u2014 we had them 23rd at the position entering the season, and they're averaging 6.9 ppg over 10 games since."
+        },
+        {
+          "player_id": "GB_DST",
+          "name": "GB D/ST",
+          "team": "GB",
+          "preseason_rank": 28,
+          "games": 11,
+          "ppg": 6.8,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 28th at the position entering the season, and they're averaging 6.8 ppg over 11 games since."
         },
         {
           "player_id": "CIN_DST",
@@ -1593,9 +1593,9 @@
           "name": "DET D/ST",
           "team": "DET",
           "preseason_rank": 19,
-          "games": 10,
-          "ppg": 5.8,
-          "explain": "Likely available on waivers in most leagues \u2014 we had them 19th at the position entering the season, and they're averaging 5.8 ppg over 10 games since."
+          "games": 11,
+          "ppg": 5.6,
+          "explain": "Likely available on waivers in most leagues \u2014 we had them 19th at the position entering the season, and they're averaging 5.6 ppg over 11 games since."
         },
         {
           "player_id": "WAS_DST",

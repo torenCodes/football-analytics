@@ -1,0 +1,240 @@
+{
+  "ppr": {
+    "season": 2026,
+    "week": 12,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039398",
+          "name": "Joe Milton III",
+          "team": "PHI",
+          "points": 30.7
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 48.2
+        },
+        {
+          "player_id": "00-0036997",
+          "name": "Javonte Williams",
+          "team": "DAL",
+          "points": 33.3
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0036912",
+          "name": "DeVonta Smith",
+          "team": "PHI",
+          "points": 43.0
+        },
+        {
+          "player_id": "00-0039919",
+          "name": "Rome Odunze",
+          "team": "CHI",
+          "points": 26.7
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0039065",
+          "name": "Sam LaPorta",
+          "team": "DET",
+          "points": 14.4
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0036275",
+          "name": "D'Andre Swift",
+          "team": "CHI",
+          "points": 29.2
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0029822",
+          "name": "Brandon McManus",
+          "team": "LA",
+          "points": 17.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "LA_DST",
+          "name": "LA D/ST",
+          "team": "LA",
+          "points": 11.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 253.5,
+    "bench": [
+      {
+        "player_id": "00-0039738",
+        "name": "Blake Corum",
+        "team": "LA",
+        "position": "RB",
+        "points": 28.5
+      },
+      {
+        "player_id": "00-0033077",
+        "name": "Dak Prescott",
+        "team": "DAL",
+        "position": "QB",
+        "points": 25.5
+      },
+      {
+        "player_id": "00-0036963",
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "position": "WR",
+        "points": 21.6
+      },
+      {
+        "player_id": "00-0036358",
+        "name": "CeeDee Lamb",
+        "team": "DAL",
+        "position": "WR",
+        "points": 20.4
+      },
+      {
+        "player_id": "00-0041013",
+        "name": "Emmett Johnson",
+        "team": "KC",
+        "position": "RB",
+        "points": 19.6
+      },
+      {
+        "player_id": "00-0037248",
+        "name": "James Cook",
+        "team": "BUF",
+        "position": "RB",
+        "points": 19.5
+      }
+    ]
+  },
+  "standard": {
+    "season": 2026,
+    "week": 12,
+    "perfect_lineup": {
+      "QB": [
+        {
+          "player_id": "00-0039398",
+          "name": "Joe Milton III",
+          "team": "PHI",
+          "points": 30.7
+        }
+      ],
+      "RB": [
+        {
+          "player_id": "00-0039139",
+          "name": "Jahmyr Gibbs",
+          "team": "DET",
+          "points": 43.2
+        },
+        {
+          "player_id": "00-0036997",
+          "name": "Javonte Williams",
+          "team": "DAL",
+          "points": 30.3
+        }
+      ],
+      "WR": [
+        {
+          "player_id": "00-0036912",
+          "name": "DeVonta Smith",
+          "team": "PHI",
+          "points": 32.0
+        },
+        {
+          "player_id": "00-0039919",
+          "name": "Rome Odunze",
+          "team": "CHI",
+          "points": 20.7
+        }
+      ],
+      "TE": [
+        {
+          "player_id": "00-0039065",
+          "name": "Sam LaPorta",
+          "team": "DET",
+          "points": 10.4
+        }
+      ],
+      "FLEX": [
+        {
+          "player_id": "00-0039738",
+          "name": "Blake Corum",
+          "team": "LA",
+          "points": 26.5
+        }
+      ],
+      "K": [
+        {
+          "player_id": "00-0029822",
+          "name": "Brandon McManus",
+          "team": "LA",
+          "points": 17.0
+        }
+      ],
+      "DST": [
+        {
+          "player_id": "LA_DST",
+          "name": "LA D/ST",
+          "team": "LA",
+          "points": 11.0
+        }
+      ]
+    },
+    "perfect_lineup_total_points": 221.8,
+    "bench": [
+      {
+        "player_id": "00-0033077",
+        "name": "Dak Prescott",
+        "team": "DAL",
+        "position": "QB",
+        "points": 25.5
+      },
+      {
+        "player_id": "00-0036275",
+        "name": "D'Andre Swift",
+        "team": "CHI",
+        "position": "RB",
+        "points": 22.2
+      },
+      {
+        "player_id": "00-0037248",
+        "name": "James Cook",
+        "team": "BUF",
+        "position": "RB",
+        "points": 18.5
+      },
+      {
+        "player_id": "00-0041013",
+        "name": "Emmett Johnson",
+        "team": "KC",
+        "position": "RB",
+        "points": 15.6
+      },
+      {
+        "player_id": "00-0040236",
+        "name": "Kyle Monangai",
+        "team": "CHI",
+        "position": "RB",
+        "points": 14.9
+      },
+      {
+        "player_id": "00-0036963",
+        "name": "Amon-Ra St. Brown",
+        "team": "DET",
+        "position": "WR",
+        "points": 14.6
+      }
+    ]
+  }
+}
